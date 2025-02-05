@@ -6,6 +6,7 @@ function About1() {
     <div>
       <section className="about1">
         <div className="about">
+           <h5 data-scroll data-scroll-speed={0.1}>About</h5>
           <h1 data-scroll data-scroll-speed={0.1}>
             Creating symphony between digital functionality and aesthetics
           </h1>
