@@ -629,7 +629,7 @@ p {
   height: 19rem;
   width: 21rem;
   z-index: 2;
-  margin: auto;
+  margin:30px auto;
   top: 0;
   bottom: 0;
   left: 0;
@@ -713,7 +713,7 @@ p {
   }
 
   25% {
-    content: "a Lover of the Arts 🎨";
+    content: "a Lover of Arts 🎨";
   }
 
   50% {
@@ -725,7 +725,7 @@ p {
   }
 
   100% {
-    content: "a Book Worm 📚📚📖";
+    content: "a Book Worm 📚📖";
   }
 }
 
