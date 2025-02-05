@@ -498,6 +498,7 @@ p {
   text-decoration: none;
   box-shadow: 0 0 4px black;
   margin-bottom: 40px;
+  z-index: 5;
 }
 
 .btn2:hover {
@@ -623,13 +624,14 @@ p {
   position: absolute;
   content: "";
   background-color: transparent;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 5px black;
   border-radius: 30% 50% 20% 40%;
   opacity: 0.7;
   height: 19rem;
   width: 21rem;
   z-index: 2;
-  margin:30px auto;
+  margin: auto;
+  padding-bottom: 20px;
   top: 0;
   bottom: 0;
   left: 0;
