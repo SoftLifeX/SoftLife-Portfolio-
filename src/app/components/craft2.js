@@ -6,7 +6,7 @@ function Craft2() {
       <section className="craft2" data-scroll data-scroll-speed={0.1}>
         <div className="review">
           <div className="container">
-            <h2>Top Reviews</h2>
+            <h5>Top Reviews</h5>
             <div className="review-list">
               <div>
                 <p>
