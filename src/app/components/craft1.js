@@ -13,7 +13,7 @@ function Craft1() {
               Digital concepts given life
             </h1>
 
-            <h2>Craft</h2>
+            <h5>Craft</h5>
             <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
