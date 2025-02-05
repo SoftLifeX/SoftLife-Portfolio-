@@ -1267,6 +1267,7 @@ form textarea {
     border-radius: 10px;
    z-index: 40;
    margin-top: 5px;
+    align-content: center;
   }
 
   #check:checked~.navbar {
@@ -1387,6 +1388,7 @@ form textarea {
     transition: 0.3s ease;
     text-shadow: none;
     border-radius: 10px;
+    align-content: center;
   }
 
   h1 {
