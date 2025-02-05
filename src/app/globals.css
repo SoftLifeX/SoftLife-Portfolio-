@@ -603,7 +603,6 @@ p {
 .homepage {
   align-content: center;
   height: 100svh;
-  scale: 1.1;
 }
 
 .homepage h1 {
@@ -1349,6 +1348,13 @@ form textarea {
 }
 
 @media (max-width: 600px) {
+
+  .homepage {
+  align-content: center;
+  height: 100svh;
+    scale: 1.1;
+}
+    
 
   .icons {
     display: inline-flex;
