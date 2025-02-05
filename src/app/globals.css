@@ -1325,6 +1325,14 @@ form textarea {
   box-shadow: none;
   scale: 1.15;
 }
+
+    .tab-titles ul li a:hover {
+    border-radius: none;
+      width: 100%;
+      padding: 0;
+      box-shadow: none;
+      color: #ababab;
+  }
 }
 
 
@@ -1419,8 +1427,12 @@ form textarea {
     display: block;
   }
 
-  .tab-titles ul li a:hover::after {
-    display: none;
+   .tab-titles ul li a:hover {
+    border-radius: none;
+      width: 100%;
+      padding: 0;
+      box-shadow: none;
+      color: #ababab;
   }
 
   .section {
