@@ -502,6 +502,7 @@ h5::before {
   position: absolute;
   bottom: -15px;
   left: 0;
+  padding-bottom: 30px;
 }
 
 
