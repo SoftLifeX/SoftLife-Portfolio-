@@ -908,6 +908,11 @@ p {
 
 /*about page*/
 
+.about h1 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .about h2 {
   text-align: center;
 }
