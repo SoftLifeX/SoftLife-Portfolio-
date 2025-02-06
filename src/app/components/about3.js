@@ -6,7 +6,7 @@ function About3() {
       <section className="about3">
         <div className="services">
           <div className="container">
-            <h5 data-scroll data-scroll-speed={0.1>Our Services</h5>
+           <h5>Our Services</h5>
             <div className="services-list">
               <div>
                 <i className="bx bx-code-alt"></i>
