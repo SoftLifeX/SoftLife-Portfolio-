@@ -28,7 +28,7 @@ function Contactform() {
       <section>
         <div className="contact">
           <div className="container">
-            <h2>Get in Touch!</h2>
+            <h5>Get in Touch!</h5>
             <h1 data-scroll data-scroll-speed={0.1}>
               Let's collaborate
             </h1>
