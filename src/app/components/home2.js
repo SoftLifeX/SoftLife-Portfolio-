@@ -18,7 +18,7 @@ function Home2() {
               <span>We live it!</span>
             </h3>
 
-            <h2>Featured Projects</h2>
+            <h5>Featured Projects</h5>
             <div className="work-list">
               <div className="work">
                 <Image src={images.work1} alt="work1" />
