@@ -497,12 +497,12 @@ h5::after {
 h5::before {
   content: '';
   width:20px;
-  height: 2px;
+  height: 3px;
   background: black;
   position: absolute;
   bottom: -15px;
   left: 0;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 
