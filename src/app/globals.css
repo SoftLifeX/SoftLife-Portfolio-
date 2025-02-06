@@ -497,7 +497,7 @@ h5::after {
 h5::before {
   content: '';
   width:20px;
-  height: 3px;
+  height: 2px;
   background: black;
   position: absolute;
   bottom: -15px;
