@@ -1429,7 +1429,7 @@ form textarea {
   }
 
   #check:checked~.navbar {
-    height: 90svh;
+    height: 20rem;
     top: 100%;
   }
 
