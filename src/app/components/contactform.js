@@ -57,8 +57,8 @@ function Contactform() {
                   <a href="">
                     <i className="bx bxl-instagram"></i>
                   </a>
-                  <a href="https://github.com/SoftLifeDev">
-                    <i className="bx bxl-github"></i>
+                  <a href="">
+                     <i className="bx bxl-linkedin-square"></i>
                   </a>
                   <a href="https://github.com/SoftLifeDev">
                     <i className="bx bxl-github"></i>
