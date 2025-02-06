@@ -1417,7 +1417,7 @@ form textarea {
     text-shadow: none;
     border-radius: 10px;
     align-content: center;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(30px);
   }
 
   h1 {
