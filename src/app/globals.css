@@ -279,7 +279,6 @@ section {
   width: 10rem;
   height: 3rem;
   z-index: -1;
-   border: 1px solid black;
 }
 
 
@@ -289,7 +288,6 @@ section {
   width: 2rem;
   height: 1.5rem;
   z-index: 1;
-   border: 1px solid black;
 }
 
 .logo span:nth-child(1)::before {
@@ -308,7 +306,6 @@ section {
   left: -78%;
   right: 0;
   animation: transform 10s ease-in-out infinite both alternate, movement_one 20s ease-in-out infinite both;
-   border: 1px solid black;
 }
 
 
