@@ -644,9 +644,10 @@ p {
   font-weight: 500;
 }
 
-.homepage h2 {
+.homepage h3 {
   text-align: center;
   font-family: 'time';
+  color: gray;
 }
 
 /*moving bubble*/
