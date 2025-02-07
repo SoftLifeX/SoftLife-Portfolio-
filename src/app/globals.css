@@ -968,7 +968,7 @@ p {
 }
 
 .tab-titles ul li a:hover {
-  border-radius: 30px;
+  border-radius: 10px;
   width: fit-content;
   padding: 0.3rem 0.5rem;
   box-shadow: 0 0 2px black;
