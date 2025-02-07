@@ -716,7 +716,6 @@ p {
   white-space: pre-line;
   overflow: hidden;
   animation-iteration-count: infinite;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 @keyframes cursor {
