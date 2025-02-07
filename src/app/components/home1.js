@@ -10,7 +10,7 @@ function Home1() {
     <div>
       <section className="home1">
         <div className="homepage">
-          <h3 data-scroll data-scroll-speed={0.1}>
+          <h2 data-scroll data-scroll-speed={0.1}>
             Hello! I'm{" "}
             <span className="typed">
               <Typewriter
@@ -23,7 +23,7 @@ function Home1() {
               />
             </span>
             <br />a Front End Developer and <span id="hobby"></span>
-          </h3>
+          </h2>
           <h1 data-scroll data-scroll-speed={0.1}>
             Helping brands build superior, dynamic software.
           </h1>
