@@ -1,16 +1,59 @@
 import React from "react";
 import Link from "next/link";
 import NavLink from "./navlink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 
 function Header() {
-  const links = [
-    { url: "/", title: "Home" },
-    { url: "/about", title: "About" },
-    { url: "/craft", title: "Craft" },
-    { url: "/contact", title: "Contact" },
-  ];
+ const links = [
+   {
+     url: "/",
+     title: "Home",
+     icon: (
+       <FontAwesomeIcon
+         icon={faHouse}
+         style={{ paddingRight: "5px", scale: "0.8" }}
+       />
+     ),
+   },
 
+   {
+     url: "/about",
+     title: "About",
+     icon: (
+       <FontAwesomeIcon
+         icon={faUser}
+         style={{ paddingRight: "5px", scale: "0.8" }}
+       />
+     ),
+   },
+
+   {
+     url: "/craft",
+     title: "Craft",
+     icon: (
+       <FontAwesomeIcon
+         icon={faFolder}
+         style={{ paddingRight: "5px", scale: "0.8" }}
+       />
+     ),
+   },
+
+   {
+     url: "/contact",
+     title: "Contact",
+     icon: (
+       <FontAwesomeIcon
+         icon={faEnvelope}
+         style={{ paddingRight: "5px", scale: "0.8" }}
+       />
+     ),
+   },
+ ];
   return (
     <div>
       <header className="top">
