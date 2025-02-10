@@ -38,7 +38,7 @@ function Home2() {
 
   return (
     <div>
-      <section className="home2">
+      <section ref={secRef} className="home2">
         <div className="portfolio">
           <div className="container">
             <h3  data-scroll data-scroll-speed={0.1}>
