@@ -9,7 +9,32 @@ import { useInView } from "framer-motion";
 
 function Home2() {
 
+   const ref = useRef(null);
 
+   const isInView = useInView(ref, { once: true });
+
+   const secRef = useRef(null);
+
+   useLayoutEffect(() => {
+     gsap.registerPlugin(ScrollTrigger);
+
+     const tl = gsap.timeline({
+       scrollTrigger: {
+         trigger: secRef.current,
+
+         scrub: true,
+
+         start: isInView,
+
+         end: "100%",
+       },
+     });
+
+     tl.to(secRef.current, {
+       scale: 0.92,
+       filter: "blur(-6px)",
+     });
+   });
 
   return (
     <div>
