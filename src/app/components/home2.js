@@ -32,7 +32,7 @@ function Home2() {
 
      tl.to(secRef.current, {
        scale: 0.92,
-       filter: "blur(-6px)",
+       filter: "blur(-5px)",
      });
    });
 
