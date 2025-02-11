@@ -104,6 +104,9 @@ section {
 .home2 {
   scale: 0.85;
   box-shadow: 0 0 4px black;
+  will-change: transform ease-in-out;
+animation: ease-in-out;
+transition: ease-in-out;
 }
 
 .home3 {
