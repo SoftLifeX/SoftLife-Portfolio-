@@ -12,9 +12,9 @@ function About3() {
                 <i className="bx bx-code-alt"></i>
                 <h2>Web Development</h2>
                 <p>
-                  Want to <u>Captivate</u> your desired audience?
+                  Ready to <b>Captivate</b> your desired audience?
                   <br />
-                  Now you can! with ease, speed and reliability;
+                  Now you can! with ease, and efficiency;
                   <br />
                   Across ALL devices!
                   <br />
@@ -30,8 +30,8 @@ function About3() {
                 <p>
                   Unlock the vast potential of user-centric designs:
                   <br />
-                  With our intuitive and comprehensive templates, crafts and l
-                  user-experiences;
+                  From intuitive and comprehensive concepts, crafts; to fluid
+                  user-experience;
                   <br />
                   Your audience is sure to be delighted!
                   <br />
@@ -43,7 +43,6 @@ function About3() {
 
               <div>
                 <i className="bx bx-image"></i>
-                <i className="bx bx-pencil"></i>
                 <h2>Graphic Design</h2>
                 <p>
                   Your Brand is your Legacy;
@@ -55,7 +54,7 @@ function About3() {
                   <br />
                   Represent your Legacy with your own unique style;
                   <br />
-                  Tailored specifically, just for YOU!
+                  Tailored specifically, <b>just for YOU!</b>
                 </p>
               </div>
 
@@ -63,7 +62,7 @@ function About3() {
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>
-                  There's a thin line between vision and REALITY.
+                  There's a thin line between your visions and REALITY.
                   <br />
                   <br />
                   Let us aid you in bridging that gap.
