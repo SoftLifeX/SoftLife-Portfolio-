@@ -30,13 +30,7 @@ function Home2() {
        },
      });
 
-          ScrollTrigger.config({
-      limitCallbacks: true,
-      ignoreMobileResize: true,
-      normalizeScroll: true,
-    });
 
-    let normalizer = ScrollTrigger.normalizeScroll();
 
      tl.to(secRef.current, {
        scale: 0.92,
