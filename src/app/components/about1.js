@@ -34,24 +34,25 @@ function About1() {
               <div>
                 <p>
                   I'm an award-winning, detail-oriented professional.
-                  Specialized in React and Next js as my major frame-work.
+                  Specialized in <b>React</b> and <b>Next js</b> as my major frame-work.
                   <br />
                   <br />
-                  I Continously strive  towards being the <b>finest</b> version
+                  I continously strive towards being the <b>finest</b> version
                   of myself, my workflow is no exception.
                   <br />
                   <br />
-                  "As developers, we must bridge the recess where <b>
+                  "As developers, we bridge the recess where <b>
                     tech
                   </b>{" "}
-                  meets <b>standard</b>, for the purpose of impacting every-day
+                  meets <b>standard</b>,impacting every-day
                   life"
                   <br />
-                  This is a quote I live by, perfectly depicting my goals as a
+                  <br />
+                  A quote I live by, perfectly depicting my goals as a
                   developer.
                   <br />
                   <br />
-                  I'd be ecstatic to chat over coffee ☕ and discuss your
+                  I'd be ecstatic to chat over coffee ☕, reviewing your
                   digital needs; Alternatively feel free to reach out and say
                   Hello! 😉
                   <br />
