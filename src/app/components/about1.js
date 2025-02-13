@@ -8,7 +8,7 @@ function About1() {
         <div className="about">
            <h5 data-scroll data-scroll-speed={0.1}>About</h5>
           <h1 data-scroll data-scroll-speed={0.1}>
-            Creating symphony between digital functionality and aesthetics
+            Creating symphonies of digital functionality and aesthetics
           </h1>
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
@@ -44,7 +44,7 @@ function About1() {
                   "As developers, we bridge the recess where <b>
                     tech
                   </b>{" "}
-                  meets <b>standard</b>,impacting every-day
+                  meets <b>standard</b>, impacting every-day
                   life"
                   <br />
                   <br />
