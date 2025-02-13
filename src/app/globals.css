@@ -54,6 +54,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'time';
+  background: rgb(255, 255, 255);
+  background: linear-gradient(351deg, rgba(255, 255, 255, 1) 0%, rgba(237, 238, 237, 1) 0%, rgba(255, 255, 255, 1) 62%);
 }
 
   body::-webkit-scrollbar {
@@ -92,6 +94,7 @@ section {
   margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 1px;
+    background-color: #fff;
 }
 
 .home1 {
