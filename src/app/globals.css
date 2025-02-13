@@ -379,6 +379,10 @@ transition: ease-in-out;
   font-size: 18px;
 }
 
+    .navbar a span{
+      display: none;
+    }
+
 /*.navbar a::after {
   content: '';
   width: 0;
@@ -1490,8 +1494,16 @@ form textarea {
     margin-bottom: 0px;
   }
 
+    .home2{
+    scale: 0.92;
+  }
+
     .contact .btn2 {
       margin: 30px;
+    }
+
+      .navbar a span{
+      display: inline;
     }
   
     .navbar a.active {
