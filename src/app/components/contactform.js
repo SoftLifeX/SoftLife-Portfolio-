@@ -68,7 +68,7 @@ function Contactform() {
                   Home!<i className="bx bx-home-alt-2"></i>
                 </Link>
                 <a href="" download className="btn2">
-                  Download CV<i className="bx bx-download"></i>
+                  Download CV<i className="bx bx-download bx-tada"></i>
                 </a>
               </div>
               <div className="contact-right">
