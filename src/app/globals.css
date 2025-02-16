@@ -540,6 +540,14 @@ p {
   z-index: 5;
 }
 
+.bound {
+      width: fit-content;  
+      height: 70px;
+     transform: scale(4);
+     position: absolute;
+     margin: 30px auto;
+    }
+
 .btn2:hover {
   scale: 1.1;
   color: #fff;
