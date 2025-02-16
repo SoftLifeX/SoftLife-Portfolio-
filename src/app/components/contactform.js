@@ -42,7 +42,7 @@ function Contactform() {
                   <a href="mailto:softlife.dev001@gmail.com">
                     <i className="bx bxl-gmail"></i>
                   </a>
-                  <a href="">
+                  <a href="https://web.facebook.com/SoftLife.dev">
                     <i className="bx bxl-facebook"></i>
                   </a>
                   <a href="">
