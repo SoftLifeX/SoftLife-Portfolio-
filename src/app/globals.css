@@ -660,6 +660,10 @@ p {
   margin: 25px;
 }
 
+.homepage h2 span {
+  font-family: 'time';
+}
+
 /*moving bubble*/
 .blob {
   position: absolute;
