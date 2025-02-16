@@ -545,7 +545,7 @@ p {
       height: 70px;
      transform: scale(4);
      position: absolute;
-     margin: 30px auto;
+     margin: auto;
     }
 
 .btn2:hover {
