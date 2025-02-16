@@ -26,6 +26,7 @@ function Magnetic2({children}) {
      const { x, y } = position;
   return (
     <motion.div
+       className="bound"
       style={{ position: "relative" }}
       ref={ref}
       onMouseMove={handleMouse}
