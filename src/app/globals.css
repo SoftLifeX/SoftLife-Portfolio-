@@ -1373,10 +1373,6 @@ form textarea {
   transition: 0.5s ease-in-out;
   }
 
-  .navbar a:hover {
-  display: none;
-  }
-
   .navbar a:hover::after{
    width: 100%;
   left: 0;
@@ -1511,10 +1507,6 @@ form textarea {
   transition: 0.5s;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
-  }
-
-  .navbar a:hover {
-  display: none;
   }
 
   .navbar a:hover::after{
