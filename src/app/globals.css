@@ -1383,7 +1383,12 @@ form textarea {
   }
 
    .navbar a.active {
-    color: white;
+  border-radius: none;
+  color: white;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  scale: 1;
   }
 
   .navbar a.active::after {
@@ -1454,12 +1459,95 @@ form textarea {
     flex-direction: column;
   }
 
-
-
   .navbar {
     height: 20rem;
     width: unset;
+    position: absolute;
+    right: 2rem;
+    background: rgba(0, 0, 0, 0.924);
+    backdrop-filter: blur(50px);
+    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px black;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-shadow: none;
+    border-radius: 10px;
+    z-index: 40;
+    margin-top: 5px;
+    align-content: center;
+    scale: 0;
+     top: 100%;
   }
+
+    #check:checked~.navbar {
+    scale: 1;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    transform: scale(0);
+    transition: 0.3s ease;
+    opacity: 0;
+    text-shadow: none;
+    position: relative;
+  }
+
+  #check:checked~.navbar a {
+    transform: scale(1);
+    transition-delay: calc(0.15s * var(--i));
+    opacity: 1;
+  }
+
+  .navbar a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: gray;
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transition: 0.5s;
+  transition: scale, ease-in-out;
+  transition: 0.5s ease-in-out;
+  }
+
+  .navbar a:hover {
+  display: none;
+  }
+
+  .navbar a:hover::after{
+   width: 100%;
+  left: 0;
+  }
+
+   .navbar a.active {
+  border-radius: none;
+  color: white;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  scale: 1;
+  }
+
+  .navbar a.active::after {
+  content: '';
+    width: 100%;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+    transition: scale, ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+    .navbar a span {
+    display: inline;
+  }
+
 
   h1 {
     font-size: 50px;
@@ -1469,41 +1557,7 @@ form textarea {
   .layer {
     height: 100%;
   }
-
-  /*#check:checked~.navbar {
-    top: 100%;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    text-align: center;
-    transform: translateY(-50px);
-    transition: 0.3s ease;
-    opacity: 0;
-    text-shadow: none;
-  }
-
-  #check:checked~.navbar a {
-    transform: translateY(0);
-    transition-delay: calc(0.15s * var(--i));
-    opacity: 1;
-  }
-
-  .navbar a::after {
-    display: none;
-  }
-
-  .navbar a:hover {
-    content: '';
-    width: 100%;
-    scale: 0.9;
-    justify-content: center;
-    border-radius: 15px;
-    box-shadow: 0 0 2px white;
-  }*/
-
+  
   .tab-titles ul li a {
     display: block;
   }
@@ -1524,19 +1578,6 @@ form textarea {
   .contact .btn2 {
     margin: 30px;
   }
-
-  .navbar a span {
-    display: inline;
-  }
-
-  /*.navbar a.active {
-    border-radius: 15px;
-    color: white;
-    background-color: transparent;
-    padding: 0.05rem 1rem;
-    box-shadow: none;
-    scale: 1.15;
-  }*/
 
   .TransitionProvider3 {
     position: fixed;
