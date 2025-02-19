@@ -8,7 +8,7 @@ const NavLink = ({ link }) => {
 
   return (
     <Link className={pathName === link.url ? "active" : ""} href={link.url}>
-     <span> {link.icon}</span> <span id='title'>{link.title}</span>
+     <span> {link.icon}</span>{link.title}
     </Link>
   );
 };
