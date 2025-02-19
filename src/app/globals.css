@@ -1496,7 +1496,7 @@ form textarea {
     opacity: 1;
   }
 
-  .navbar a::after {
+  .navbar a #title::after {
   content: '';
   width: 0;
   height: 3px;
@@ -1509,7 +1509,11 @@ form textarea {
   transition: 0.5s ease-in-out;
   }
 
-  .navbar a:hover::after{
+  .navbar a #title{
+    position: relative;
+  }
+
+  .navbar a #title:hover::after{
    width: 100%;
   left: 0;
   }
@@ -1523,7 +1527,7 @@ form textarea {
   scale: 1;
   }
 
-  .navbar a.active::after {
+  .navbar a #title.active::after {
   content: '';
     width: 100%;
     height: 3px;
