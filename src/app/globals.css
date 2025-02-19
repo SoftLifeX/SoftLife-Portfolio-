@@ -1335,6 +1335,7 @@ form textarea {
     margin-top: 5px;
     align-content: center;
     scale: 0;
+     top: 100%;
   }
 
   #check:checked~.navbar {
