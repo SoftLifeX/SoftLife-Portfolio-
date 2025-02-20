@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
         ></script>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`} id="darkmode">
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
