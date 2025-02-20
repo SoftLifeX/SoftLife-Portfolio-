@@ -550,7 +550,6 @@ p {
   scale: 1.1;
   color: #fff;
   box-shadow: 0 0 4px black;
-  text-shadow: 0 0 2px;
   background-color: black;
 }
 
@@ -588,7 +587,6 @@ p {
 .btn4:hover {
   scale: 1.1;
   box-shadow: 0 0 4px black;
-  text-shadow: 0 0 2px;
 }
 
 
@@ -601,6 +599,10 @@ p {
 }
 
 .contact-left .btn2 {
+  margin: 30px;
+}
+
+.contact-left .btn4 {
   margin: 30px;
 }
 
@@ -617,13 +619,12 @@ p {
   margin: 30px auto;
   padding: 0.5rem 1rem;
   border: 2px solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
-  border-radius: 50%;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
-  width: 120px;
-  height: 120px;
+  width: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -638,7 +639,6 @@ p {
   color: #fff;
   scale: 1.1;
   box-shadow: 0 0 6px black;
-  text-shadow: 0 0 2px;
   background-color: black;
 }
 
