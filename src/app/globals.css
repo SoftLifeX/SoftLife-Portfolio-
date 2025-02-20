@@ -92,7 +92,8 @@ section {
   margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 1px;
-  background-color: #fff;
+  background: rgb(243,252,255);
+background: radial-gradient(circle, rgba(243,252,255,1) 19%, rgba(249,253,255,1) 55%);
 }
 
 .home1 {
