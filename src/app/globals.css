@@ -52,10 +52,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'time';
-/*background: rgb(243,252,255);
-background: radial-gradient(circle, rgba(243,252,255,1) 19%, rgba(249,253,255,1) 55%);*/
-  background: rgb(255,246,244);
-background: linear-gradient(112deg, rgba(255,246,244,1) 43%, rgba(237,249,255,1) 100%);
+  background: #fff;
 }
 
 body::-webkit-scrollbar {
@@ -94,8 +91,6 @@ section {
   margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 1px;
-background: rgb(255,246,244);
-background: linear-gradient(112deg, rgba(255,246,244,1) 43%, rgba(237,249,255,1) 100%);
 }
 
 .home1 {
@@ -565,7 +560,7 @@ p {
 }
 
 .homepage .btn2 {
-  display: block;
+  display: inline;
   margin: 30px auto;
 }
 
