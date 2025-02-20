@@ -1470,6 +1470,9 @@ form textarea {
     z-index: 40;
     margin-top: 5px;
     align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     scale: 0;
      top: 100%;
   }
