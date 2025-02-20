@@ -1459,7 +1459,7 @@ form textarea {
     height: 20rem;
     width: unset;
     position: absolute;
-    left: 2rem;
+    left: 3rem;
     background: rgba(0, 0, 0, 0.924);
     backdrop-filter: blur(50px);
     box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px black;
@@ -1481,7 +1481,7 @@ form textarea {
   .navbar a {
     display: block;
     font-size: 1.1rem;
-    margin: 1.5rem 3rem;
+    margin: 1.5rem;
     width: fit-content;
     padding: 0 0;
     text-align: center;
