@@ -902,10 +902,8 @@ p {
 
 .socials {
   margin-right: 50px;
-  margin-top: 30px;
+  margin: 30px;
   float: right;
-  bottom: 20px;
-  position: absolute;
 }
 
 .socials a {
