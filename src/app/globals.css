@@ -613,10 +613,10 @@ p {
 }
 
 .btn3 {
-  display: flex;
+  display: block;
   background-color: rgba(0, 0, 0, 0.16);
   color: #000000;
-  margin: 30px auto;
+  margin: 30px;
   padding: 0.5rem 1rem;
   border: 2px solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
   border-radius: 10px;
@@ -631,7 +631,7 @@ p {
   box-shadow: 0 0 6px black;
   margin-bottom: 40px;
   float: right;
-  right: 30px;
+  right: 60px;
   position: absolute;
 }
 
