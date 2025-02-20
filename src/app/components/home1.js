@@ -30,14 +30,13 @@ function Home1() {
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
             <Magnetic2>
-            <Link href="/about" className="btn4">
-              {" "}
-              About{" "}
-            </Link>
+                <a href="" download className="btn4">
+                  resume <i className="bx bx-download bx-tada"></i>
+                </a>
             </Magnetic2>
             <Magnetic2>
             <Link href="/contact" className="btn2">
-              Contact <i className="bx bx-arrow-to-top"></i>
+              Contact <i className="bx bx-arrow-to-top bx-tada"></i>
             </Link>
             </Magnetic2>
           </div>
