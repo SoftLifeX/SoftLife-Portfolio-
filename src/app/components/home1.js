@@ -31,7 +31,7 @@ function Home1() {
           <div data-scroll data-scroll-speed={0.1}>
             <Magnetic2>
                 <a href="" download className="btn4">
-                  resume <i className="bx bx-download bx-tada"></i>
+                  Resume <i className="bx bx-download bx-tada"></i>
                 </a>
             </Magnetic2>
             <Magnetic2>
