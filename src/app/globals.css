@@ -53,7 +53,7 @@
   --tertiary-text: white;
   --primary-color: transparent;
     --secondary-color: gray;
-  --accent-color: white;
+  --accent-color: transparent;
   --tertiary-color: white;
     --accent-color2: white;
     --border-color: rgba(255, 255, 255, 0.704);
@@ -123,7 +123,7 @@ section {
 .home1 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   width: 100svw;
   height: 100svh;
 }
@@ -131,7 +131,7 @@ section {
 .home2 {
   scale: 0.85;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   will-change: transform ease-in-out;
   animation: ease-in-out;
   transition: ease-in-out;
@@ -140,49 +140,49 @@ section {
 .home3 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .about1 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .about2 {
   scale: 0.9;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .about3 {
   scale: 0.9;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .about4 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .craft1 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .craft2 {
   scale: 0.9;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .craft3 {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .top {
@@ -396,7 +396,7 @@ section {
   align-items: center;
   text-decoration: none;
   box-shadow: 0 0 4px var(--accent-color);
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
 }
 
 .navbar ul li {
@@ -541,7 +541,7 @@ p {
   color: var(--text-color);
   margin: 30px auto;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -591,7 +591,7 @@ p {
   color: var(--base-color);
   margin: 30px auto;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -640,7 +640,7 @@ p {
   color: var(--text-color);
   margin: 30px;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -658,7 +658,7 @@ p {
 }
 
 .btn3:hover {
-  color: #fff;
+  color: var(--base-color);
   scale: 1.1;
   box-shadow: 0 0 6px var(--accent-color);
   background-color: var(--text-color);
