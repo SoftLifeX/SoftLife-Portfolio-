@@ -1334,12 +1334,13 @@ form textarea {
     z-index: 40;
     margin-top: 5px;
     align-content: center;
-    scale: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
      top: 100%;
   }
 
   #check:checked~.navbar {
-  scale: 1;
+   transform: scale(1);
   }
 
   .navbar a {
@@ -1352,6 +1353,7 @@ form textarea {
     opacity: 0;
     text-shadow: none;
     position: relative;
+    width: fit-content;
   }
 
   #check:checked~.navbar a {
@@ -1459,7 +1461,7 @@ form textarea {
     height: 20rem;
     width: unset;
     position: absolute;
-    left: 3rem;
+    left: 2rem;
     background: rgba(0, 0, 0, 0.924);
     backdrop-filter: blur(50px);
     box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px black;
@@ -1473,12 +1475,13 @@ form textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    scale: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
      top: 100%;
   }
 
     #check:checked~.navbar {
-    scale: 1;
+    transform: scale(1);
   }
 
   .navbar a {
