@@ -64,7 +64,7 @@ function Contactform() {
                     <i className="bx bxl-github"></i>
                   </a>
                 </div>
-                <Link href="/" className="btn2">
+                <Link href="/" className="btn4">
                   Home!<i className="bx bx-home-alt-2"></i>
                 </Link>
                 <a href="" download className="btn2">
