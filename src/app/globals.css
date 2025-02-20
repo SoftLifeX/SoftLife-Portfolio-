@@ -512,7 +512,7 @@ h5::after {
   content: '';
   width: 40px;
   height: 3px;
-  background: var(--accent-color);
+  background: var(--text-color);
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -522,7 +522,7 @@ h5::before {
   content: '';
   width: 20px;
   height: 3px;
-  background: var(--accent-color);
+  background: var(--text-color);
   position: absolute;
   bottom: -15px;
   left: 0;
@@ -697,7 +697,7 @@ p {
   position: absolute;
   content: "";
   background-color: transparent;
-  box-shadow: 0 0 5px var(--accent-color);
+  box-shadow: 0 0 5px var(--text-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 0.7;
   height: 20rem;
@@ -862,7 +862,8 @@ p {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   transition: transform 0.5s;
-  box-shadow: 0 0 5px var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color);
+  border: 1px solid var(--border-color);
 }
 
 .layer {
@@ -1160,7 +1161,8 @@ p {
   font-weight: 300;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 4px var(--accent-color);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   margin-bottom: 40px;
 }
@@ -1179,8 +1181,9 @@ p {
 .services-list div:hover {
   transform: translateY(-20px);
   color: var(--base-color);
-  text-shadow: 0 0 3px black;
-  box-shadow: 0 0 5px black;
+  text-shadow: 0 0 3px var(--text-color);
+  box-shadow: 0 0 4px var(--accent-color);
+  border: 1px solid var(--border-color);
   transition-duration: 1s;
   background-color: var(--text-color);
 }
@@ -1227,7 +1230,8 @@ p {
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
   background-color: transparent;
-  box-shadow: 0 0 5px var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color);
+  border: 1px solid var(--border-color);
   outline: 1.8px solid var(--base-color);
   outline-offset: -10px;
   color: var(--text-color);
