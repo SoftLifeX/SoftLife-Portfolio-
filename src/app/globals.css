@@ -37,10 +37,12 @@
   --base-color: white;
   --text-color: #000;
   --secondary-text: gray;
-  --tertiary-text: black;
+  --tertiary-text: rgba(0, 0, 0, 0.924);
   --primary-color: rgba(0, 0, 0, 0.16);
-    --secondary-color: white;
+  --secondary-color: white;
 --accent-color: black;
+  --tertiary-color: gray;
+   --accent-color2: rgba(0, 0, 0, 0.16);
 }
 
 #darkmode{
@@ -51,6 +53,8 @@
   --primary-color: transparent;
     --secondary-color: gray;
   --accent-color: white;
+  --tertiary-color: white;
+    --accent-color2: white;
 }
 
 * {
@@ -985,7 +989,7 @@ p {
 }
 
 .tab-titles ul li a {
-  color:   var(--secondary-text);
+  color: var(--tertiary-color);
   text-decoration: none;
   display: inline;
   text-align: center;
@@ -1027,7 +1031,7 @@ p {
 
 .tab-contents {
   font-size: 16px;
-  color: black;
+  color: var(--text-color);
   text-align: left;
   cursor: pointer;
   list-style: none;
@@ -1037,7 +1041,7 @@ p {
 
 .tab-contents-exp {
   font-size: 16px;
-  color: black;
+  color: var(--text-color);
   text-align: left;
   cursor: pointer;
   list-style: none;
@@ -1046,7 +1050,7 @@ p {
 }
 
 .tab-contents-exp h4 {
-  border-left: 2px solid #ababab;
+  border-left: 2px solid var(--tertiary-color);
   padding-left: 10px;
   margin: 10px;
   list-style: none;
@@ -1071,7 +1075,7 @@ p {
 }
 
 .tools {
-  color: #ababab;
+  color: var(--secondary-text);
   list-style: none;
   display: inline;
   font-size: 3rem;
@@ -1085,18 +1089,18 @@ p {
 
 .tools i:hover {
   transform: translateY(-5px);
-  color: black;
+  color:  var(--text-color);
 }
 
 .tools p {
-  color: #ababab;
+  color: var(--secondary-text);
   font-size: 13px;
   list-style: none;
   transition: 0.5s ease-in-out;
 }
 
 .tools i:hover p {
-  color: black;
+  color: var(--text-color);
 }
 
 .cert_cv {
@@ -1134,7 +1138,7 @@ p {
 }
 
 .services-list div {
-  background-color: rgba(0, 0, 0, 0.16);
+  background-color: var(--primary-color);
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
@@ -1144,7 +1148,7 @@ p {
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
   box-shadow: 0 0 5px black;
-  color: #000000;
+  color: var(--text-color);
   margin-bottom: 40px;
 }
 
@@ -1161,11 +1165,11 @@ p {
 
 .services-list div:hover {
   transform: translateY(-20px);
-  color: white;
+  color: var(--base-color);
   text-shadow: 0 0 3px black;
   box-shadow: 0 0 5px black;
   transition-duration: 1s;
-  background-color: black;
+  background-color: var(--text-color);
 }
 
 /*review list*/
@@ -1210,10 +1214,10 @@ p {
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
   background-color: transparent;
-  box-shadow: 0 0 5px black;
-  outline: 1.8px solid white;
+  box-shadow: 0 0 5px var(--accent-color);
+  outline: 1.8px solid var(--base-color);
   outline-offset: -10px;
-  color: black;
+  color: var(--text-color);
 }
 
 .review-list div:hover {
@@ -1237,7 +1241,7 @@ p {
 .social-icons a {
   text-decoration: none;
   font-size: 30px;
-  color: #ababab;
+  color: var(--secondary-text);
   display: inline-block;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -1246,7 +1250,7 @@ p {
 }
 
 .social-icons a:hover {
-  color: black;
+  color: var(--text-color);
   transform: translateY(-5px);
 }
 
@@ -1264,7 +1268,7 @@ form textarea {
   margin-left: 20px;
   border: 0;
   outline: none;
-  background: rgba(0, 0, 0, 0.1);
+  background:  var(--accent-color2);
   padding: 15px;
   margin-bottom: 10px;
   color: black;
@@ -1295,7 +1299,7 @@ form textarea {
 
   .icons>span {
     height: 2px;
-    background-color: black;
+    background-color: var(--text-color);
     transition: 0.5s;
   }
 
@@ -1327,9 +1331,9 @@ form textarea {
     right: 2rem;
     width: 240px;
     height: 17.7rem;
-     background: rgba(0, 0, 0, 0.924);
+     background: var(--tertiary-text);
     backdrop-filter: blur(50px);
-    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px black;
+    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px var(--tertiary-text);
     overflow: hidden;
     transition: 0.3s ease;
     text-shadow: none;
@@ -1372,7 +1376,7 @@ form textarea {
   content: '';
   width: 0;
   height: 3px;
-  background: gray;
+  background: var(--secondary-text);
   position: absolute;
   left: 50%;
   bottom: -6px;
@@ -1388,7 +1392,7 @@ form textarea {
 
    .navbar a.active {
   border-radius: none;
-  color: white;
+  color: var(--base-color);
   background-color: transparent;
   padding: 0;
   box-shadow: none;
@@ -1399,7 +1403,7 @@ form textarea {
   content: '';
     width: 100%;
     height: 3px;
-    background: white;
+    background: var(--base-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -1425,7 +1429,7 @@ form textarea {
     width: 100%;
     padding: 0;
     box-shadow: none;
-    color: #ababab;
+    color: var(--secondary-text);
   }
 }
 
@@ -1468,9 +1472,9 @@ form textarea {
     width: unset;
     position: absolute;
     left: 2rem;
-    background: rgba(0, 0, 0, 0.924);
+    background: var(--tertiary-text);
     backdrop-filter: blur(50px);
-    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px black;
+    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px var(--accent-color);
     overflow: hidden;
     transition: 0.3s ease;
     text-shadow: none;
@@ -1513,7 +1517,7 @@ form textarea {
   content: '';
   width: 0;
   height: 3px;
-  background: gray;
+  background: var(--secondary-text);
   position: absolute;
   left: 50%;
   bottom: -6px;
@@ -1529,18 +1533,17 @@ form textarea {
 
    .navbar a.active {
   border-radius: none;
-  color: white;
+  color: var(--base-color);
   background-color: transparent;
   padding: 0;
   box-shadow: none;
-  scale: 1;
   }
 
   .navbar a.active::after {
   content: '';
     width: 100%;
     height: 3px;
-    background: white;
+    background: var(--base-color);
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -1586,7 +1589,7 @@ form textarea {
 
   .TransitionProvider3 {
     position: fixed;
-    background: black;
+    background: var(--text-color);
     z-index: 990;
     height: 100%;
     width: 100%;
@@ -1601,7 +1604,7 @@ form textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    color: white;
+    color: var(--base-color);
     font-size: 4rem;
     cursor: default;
     z-index: 995;
@@ -1614,7 +1617,7 @@ form textarea {
     width: 100%;
     height: 100%;
     position: fixed;
-    background: black;
+    background: var(--text-color);
     border-radius: 30% 30% 0 0;
     bottom: 0;
     z-index: 990;
@@ -1627,7 +1630,7 @@ form textarea {
 
 .TransitionProvider3 {
   position: fixed;
-  background: black;
+  background: var(--text-color);
   z-index: 990;
   height: 100%;
   width: 100%;
@@ -1642,7 +1645,7 @@ form textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  color: white;
+  color: var(--base-color);
   font-size: 4rem;
   cursor: default;
   z-index: 995;
@@ -1655,7 +1658,7 @@ form textarea {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: black;
+  background: var(--text-color);
   border-radius: 50% 50% 0 0;
   bottom: 0;
   z-index: 990;
