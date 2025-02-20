@@ -546,6 +546,10 @@ p {
      margin: auto;
     }
 
+    .contact .bound {
+      margin: 30px;
+    }
+
 .btn2:hover {
   scale: 1.1;
   color: #fff;
