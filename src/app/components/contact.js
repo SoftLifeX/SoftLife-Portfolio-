@@ -11,12 +11,12 @@ function Contact() {
               Ready to elevate your brand?
             </h1>
             <Magnetic2>
-            <a href="mailto:softlife.dev001@gmail.com" className="btn3">
+            <a href="mailto:softlife.dev001@gmail.com" className="btn2">
               softlife.dev001@gmail.com
             </a>
             </Magnetic2>
             <Magnetic2>
-            <a href="tel:+234 813 933 1585" className="btn3">
+            <a href="tel:+234 813 933 1585" className="btn2">
               +234 813 933 1585
             </a>
             </Magnetic2>
