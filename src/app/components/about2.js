@@ -52,7 +52,7 @@ function About2() {
               <h2>Certification & CV</h2>
               <ul>
                 <div className="cert_cv">
-                  <a href="" className="btn2">
+                  <a href="" className="btn4">
                     Certificate!
                   </a>
                   <a href="" className="btn2">
