@@ -63,12 +63,19 @@
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: transparent;
  position: fixed;
  float: right;
  right: 90px;
+   cursor: pointer;
 }
- 
+
+#theme-switch:hover{
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
+
 #theme-switch svg {
  fill: var(--text-color);
 }
