@@ -271,11 +271,11 @@ section {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color:  var(--text-color);
   text-shadow: 0 0 10px var(--secondary-color), 6px 6px 9px var(--text-color);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .logo span {
@@ -522,7 +522,7 @@ h2 {
 
 h1 {
   display: block;
-  font-size: 70px;
+  font-size: 85px;
   font-weight: 700;
   text-align: left;
   margin: 40px;
@@ -729,7 +729,7 @@ p {
   text-align: center;
   font-family: 'penna';
   color: var(--text-color);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .homepage h2 {
@@ -741,7 +741,7 @@ p {
 }
 
 .homepage h2 span {
-  font-family: 'chillen';
+  font-family: 'time';
 }
 
 /*moving bubble*/
@@ -825,7 +825,7 @@ p {
 
 #hobby {
   color:  var(--text-color);
-  font-family: 'chillen', serif;
+  font-family: 'time', serif;
 }
 
 #hobby:after {
