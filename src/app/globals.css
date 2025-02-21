@@ -33,6 +33,57 @@
   src: url(public/fonts/Chillen.ttf);
 }
 
+:root{
+ --base-color: white;
+ --text-color: #000;
+ --secondary-text: gray;
+ --tertiary-text: rgba(0, 0, 0, 0.924);
+ --primary-color: rgba(0, 0, 0, 0.16);
+ --secondary-color: white;
+--accent-color: black;
+ --tertiary-color: gray;
+  --accent-color2: rgba(0, 0, 0, 0.16);
+ --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
+}
+ 
+[data-theme='dark']{
+ --base-color: rgba(0, 0, 0, 0.924);
+ --text-color: white;
+ --secondary-text: gray;
+ --tertiary-text: white;
+ --primary-color: transparent;
+   --secondary-color: gray;
+ --accent-color: transparent;
+ --tertiary-color: white;
+   --accent-color2: white;
+   --border-color: rgba(255, 255, 255, 0.704);
+}
+ 
+#theme-switch {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: transparent;
+ position: fixed;
+ float: right;
+ right: 90px;
+}
+ 
+#theme-switch svg {
+ fill: var(--text-color);
+}
+ 
+#theme-switch svg:last-child {
+ display: none;
+}
+ 
+[data-theme='dark'] #theme-switch svg:first-child {
+ display: none;
+}
+ 
+[data-theme='dark'] #theme-switch svg:last-child {
+ display: block;
+}
 
 * {
   margin: 0;
