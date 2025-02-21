@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: 'penna';
+  src: url(public/fonts/penna.otf);
+}
+
+@font-face {
+  font-family: 'audrey';
+  src: url(public/fonts/Audrey-Normal.otf);
+}
+
+@font-face {
   font-family: 'lemon';
   src: url(public/fonts/LEMONMILK-Light.otf);
 }
@@ -273,7 +283,7 @@ section {
   animation-name: fadein;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  font-family: 'memph', serif;
+  font-family: 'penna', serif;
   padding-left: 10px;
 }
 
@@ -518,7 +528,7 @@ h1 {
   margin: 40px;
   text-decoration: none;
   cursor: pointer;
-  font-family: 'time';
+  font-family: 'penna';
 }
 
 h3 {
@@ -717,7 +727,7 @@ p {
 .homepage h1 {
   text-shadow: 0 0 6px var(--base-color), 1px 1px 5px var(--text-color);
   text-align: center;
-  font-family: 'chillen';
+  font-family: 'penna';
   color: var(--text-color);
   font-weight: 500;
 }
@@ -731,7 +741,7 @@ p {
 }
 
 .homepage h2 span {
-  font-family: 'time';
+  font-family: 'chillen';
 }
 
 /*moving bubble*/
@@ -815,7 +825,7 @@ p {
 
 #hobby {
   color:  var(--text-color);
-  font-family: 'time', serif;
+  font-family: 'chillen', serif;
 }
 
 #hobby:after {
