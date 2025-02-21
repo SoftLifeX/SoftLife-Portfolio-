@@ -723,7 +723,7 @@ p {
   position: absolute;
   content: "";
   background-color: transparent;
-  box-shadow: 0 0 5px var(--text-color);
+  box-shadow: 0 0 5px var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 0.7;
   height: 20rem;
