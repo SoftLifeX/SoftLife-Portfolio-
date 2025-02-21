@@ -275,7 +275,7 @@ section {
   color:  var(--text-color);
   text-shadow: 0 0 10px var(--secondary-color), 6px 6px 9px var(--text-color);
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .logo span {
@@ -522,13 +522,13 @@ h2 {
 
 h1 {
   display: block;
-  font-size: 85px;
+  font-size: 80px;
   font-weight: 700;
   text-align: left;
   margin: 40px;
   text-decoration: none;
   cursor: pointer;
-  font-family: 'penna';
+  font-family: 'audrey';
 }
 
 h3 {
