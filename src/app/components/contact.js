@@ -16,7 +16,7 @@ function Contact() {
             </a>
             </Magnetic2>
             <Magnetic2>
-            <a href="tel:+234 813 933 1585" className="btn2">
+            <a href="tel:+234 813 933 1585" className="btn4">
               +234 813 933 1585
             </a>
             </Magnetic2>
