@@ -25,7 +25,7 @@ function Home1() {
             <br />a Front End Developer and <span id="hobby"></span>
           </h2>
           <h1 data-scroll data-scroll-speed={0.1}>
-            Helping brands strive in a digital era.
+            Helping brands strive in the digital era.
           </h1>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
