@@ -31,6 +31,12 @@ function Contact() {
             <a href="">
               <i className="bx bxl-linkedin-square"></i>
             </a>
+            <a href="">
+              <i className="bx bxl-instagram"></i>
+            </a>
+            <a href="">
+              <i className="fa-brands fa-square-x-twitter"></i>
+            </a>
           </div>
         </div>
         <div className="copyright">
