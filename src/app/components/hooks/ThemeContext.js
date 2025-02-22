@@ -10,12 +10,12 @@ export const ThemeProvider = ({ children }) => {
 const [theme, setTheme] = useState("");
 
   useEffect(() => {
+    const prevTheme = localStorage.getItem('theme');
     document.body.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const prevTheme = localStorage.getItem('theme')
-
+  
  const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
