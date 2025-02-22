@@ -1414,13 +1414,13 @@ form textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: scale(0), opacity(0);
+    transform: scale(0);
     transition: 0.3s ease;
      top: 100%;
   }
 
   #check:checked~.navbar {
-   transform: scale(1), opacity (1);
+   transform: scale(1);
   }
 
   .navbar a {
@@ -1555,13 +1555,13 @@ form textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: scale(0), opacity (0);
+    transform: scale(0);
     transition: 0.3s ease;
      top: 100%;
   }
 
     #check:checked~.navbar {
-    transform: scale(1), opacity (1);
+    transform: scale(1);
   }
 
   .navbar a {
