@@ -738,6 +738,7 @@ p {
   color: var(--secondary-text);
   font-size: 25px;
   margin: 25px;
+  font-weight: 400;
 }
 
 .homepage h2 span {
@@ -1629,6 +1630,10 @@ form textarea {
   h1 {
     font-size: 50px;
     margin: auto 0;
+  }
+
+  .homepage h2 {
+  font-size: 20px;
   }
 
   .layer {
