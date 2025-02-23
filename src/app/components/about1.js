@@ -54,7 +54,7 @@ function About1() {
                   <br />
                 </p>
                 <Magnetic2>
-                <Link href="/craft" className="btn2">
+                <Link href="/contact" className="btn2">
                   <i className="bx bxs-paper-plane"></i>Contact!
                 </Link>
                 </Magnetic2>
