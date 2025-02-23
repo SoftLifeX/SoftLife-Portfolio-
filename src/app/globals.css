@@ -551,7 +551,7 @@ h2 {
 h1 {
   display: block;
   font-size: 80px;
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
   margin: 40px;
   text-decoration: none;
@@ -562,6 +562,7 @@ h1 {
 h3 {
   font-size: 30px;
   margin: 25px;
+  font-weight: 400;
   cursor: text;
   text-align: left;
 }
@@ -677,14 +678,14 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color2);
   margin-bottom: 40px;
   z-index: 5;
 }
 
 .btn4:hover {
   scale: 1.1;
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color2);
 }
 
 
@@ -758,6 +759,7 @@ p {
   font-family: 'penna';
   color: var(--text-color);
   font-weight: 700;
+  margin: 35px;
 }
 
 .homepage h2 {
@@ -765,7 +767,7 @@ p {
   font-family: 'time';
   color: var(--secondary-text);
   font-size: 25px;
-  margin: 25px;
+  margin: 15px;
   font-weight: 400;
 }
 
@@ -791,6 +793,7 @@ p {
   right: 0;
   animation: transform 10s ease-in-out infinite both alternate, movement_one 20s ease-in-out infinite both;
   border: 1px solid var(--border-color);
+  padding-bottom: 15px;
 }
 
 
