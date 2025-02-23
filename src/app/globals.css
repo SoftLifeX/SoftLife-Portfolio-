@@ -1667,6 +1667,10 @@ form textarea {
   font-size: 20px;
   }
 
+  .blob {
+    padding-bottom: 15px;
+  }
+
   .layer {
     height: 100%;
   }
