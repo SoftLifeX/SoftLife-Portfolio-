@@ -81,7 +81,7 @@ function Header() {
           <span></span>
         </div>
 
-   <div onClick={toggleTheme} id="theme-switch" title='theme'>
+   <div onClick={() => setMode(mode === "light" ? "dark" : "light")} id="theme-switch" title='theme'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
