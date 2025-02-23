@@ -668,7 +668,6 @@ p {
   color: var(--base-color);
   margin: 30px auto;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
