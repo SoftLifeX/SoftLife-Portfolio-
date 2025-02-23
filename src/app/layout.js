@@ -4,7 +4,6 @@ import TransitionProvider from "./components/transitionProvider";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import { ThemeProvider } from "./components/hooks/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,11 +42,9 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider>
          <TransitionProvider>
            {children}
            </TransitionProvider>
-        </ThemeProvider>
       </body>
     </html>
   );
