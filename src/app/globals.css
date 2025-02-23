@@ -646,7 +646,7 @@ p {
     }
 
 .btn2:hover {
-  scale: 1.1;
+  scale: 1.05;
   color: var(--base-color);
   box-shadow: 0 0 4px var(--accent-color);
   background-color:  var(--text-color);
@@ -678,14 +678,14 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 4px var(--accent-color2);
+  box-shadow: 0 0 4px var(--accent-color);
   margin-bottom: 40px;
   z-index: 5;
 }
 
 .btn4:hover {
-  scale: 1.1;
-  box-shadow: 0 0 4px var(--accent-color2);
+  scale: 1.05;
+  box-shadow: 0 0 4px var(--accent-color);
 }
 
 
