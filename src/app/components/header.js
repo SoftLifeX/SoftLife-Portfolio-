@@ -6,10 +6,10 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
-import { useTheme } from "./hooks/ThemeContext";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 function Header() {
-  const {theme, toggleTheme} = useTheme();
+  const [mode, setMode] = useThemeSwitcher();
  
  const links = [
    {
