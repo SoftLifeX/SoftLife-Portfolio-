@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 import Magnetic2 from "./magnetic2";
 
 function About1() {
