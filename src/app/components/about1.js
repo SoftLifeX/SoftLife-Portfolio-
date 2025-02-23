@@ -33,7 +33,7 @@ function About1() {
               </div>
               <div>
                 <p>
-                  An award-winning, detail-oriented professional specialized in <b>React</b> and <b>Next js</b> as my major frame-work.
+                  An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
                   <br />
                    Continously striving to be the <b>finest</b> version
                   of myself, my workflow is no exception.
