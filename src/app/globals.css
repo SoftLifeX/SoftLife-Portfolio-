@@ -607,7 +607,7 @@ h5::before {
 
 
 p {
-  cursor: pointer;
+  cursor: text;
   font-size: 16px;
   margin: 10px;
 }
