@@ -54,7 +54,7 @@ function Contactform() {
                   <a href="">
                     <i className="bx bxl-discord-alt"></i>
                   </a>
-                  <a href="">
+                  <a href="https://www.instagram.com/softlifekid/">
                     <i className="bx bxl-instagram"></i>
                   </a>
                   <a href="">
