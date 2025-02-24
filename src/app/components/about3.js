@@ -42,7 +42,7 @@ function About3() {
               </div>
 
               <div>
-                <i className="bx bx-image"></i>
+                <i class="fa-solid fa-paintbrush"></i>
                 <h2>Graphic Design</h2>
                 <p>
                   Your Brand is your Legacy;
