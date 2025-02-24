@@ -26,7 +26,7 @@ function Home1() {
             <br />a Front End Developer and <span id="hobby"></span>
           </h2>
           <h1>
-            Helping brands stand out in the digital era.
+            Helping brands thrive in the digital era.
           </h1>
       </div>
           <div className="blob"></div>
