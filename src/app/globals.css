@@ -1619,7 +1619,7 @@ form textarea {
   height: 1.5px;
   background: var(--secondary-text);
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: -6px;
   transition: 0.5s;
   transition: scale, ease-in-out;
