@@ -753,7 +753,7 @@ p {
 }
 
 .homepage h1 {
-  text-shadow: 0 0 6px var(--base-color), 1px 1px 5px var(--text-color);
+  text-shadow: 0 0 3px var(--base-color), 1px 1px 3px var(--text-color);
   text-align: center;
   font-family: 'penna';
   color: var(--text-color);
@@ -779,14 +779,14 @@ p {
   position: fixed;
   content: "";
   background-color: transparent;
-  box-shadow: 0 0 5px var(--accent-color);
+  box-shadow: 0 0 3px var(--accent-color);
   border-radius: 30% 50% 20% 40%;
-  opacity: 0.7;
+  opacity: 1;
   height: 19rem;
   width: 19rem;
   z-index: 2;
   margin: auto;
-  top: -15%;
+  top: -17%;
   bottom: 0;
   left: 0;
   right: 0;
