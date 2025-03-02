@@ -34,7 +34,9 @@ function Magnetic2({children}) {
       animate={{ x, y }}
       transition={{ type: "spring", stiffness: 85, damping: 2.5, mass: 0.1 }}
     >
+     <div className="inbound>
       {children}
+     </div>
     </motion.div>
   );
 }
