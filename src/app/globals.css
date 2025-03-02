@@ -633,18 +633,7 @@ p {
   z-index: 5;
 }
 
-.home1 .bound{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.home1 .inbound{
-  margin: 30px;
-}
-
-.inbound {
+.bound {
       width: fit-content;  
       height: 70px;
      transform: scale(4);
