@@ -633,12 +633,24 @@ p {
   z-index: 5;
 }
 
-.bound {
+.home1 .bound{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.home1 .inbound{
+  margin: 30px;
+}
+
+.inbound {
       width: fit-content;  
       height: 70px;
      transform: scale(4);
      position: absolute;
-     margin: auto;
+  margin: auto;
+     
     }
 
     .contact .bound {
