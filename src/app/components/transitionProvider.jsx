@@ -9,17 +9,6 @@ import { usePathname } from "next/navigation";
 
 const TransitionProvider = ({ children }) => {
 
-  const paths = {
-
-    "/": "Home",
-
-    "/about": "About",
-
-    "/craft": "Craft",
-
-    "/contact": "Contact"
-
-  }
 
   const pathName = usePathname();
 
@@ -39,7 +28,7 @@ const TransitionProvider = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {paths[pathName.path]}
+          {pathName.substring(1)}
         </motion.div>
         <motion.div
           className="TransitionProvider3"
