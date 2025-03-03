@@ -1,13 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 function About2() {
+
+  const [action,  setAction] = useState("Tools");
   return (
     <div>
       <section className="about2">
         <div id="stacks">stacks</div>
         <div className="container">
-          <div className="row">
+         <div className="tab-titles">
+                <h4>
+                  <ul>
+                    <li>
+                      <a href="" className={action === "Tools" ? "active": "" }
+                        onClick={() => {
+                        setAction("Tools");
+                        }}
+                       >
+                        My Stack & Tools
+                      </a>
+                    </li>
+                    <li>
+                      <a href="" className={action === "Experience" ? "active": "" }
+                        onClick={() => {
+                        setAction("Experience");
+                        }}
+                       >
+                        Experience
+                      </a>
+                    </li>
+                  </ul>
+                </h4>
+              </div>
+
+          {action === "Tools" ? (
+            
             <div className="tab-col-1">
               <h2>My Stack & Tools</h2>
               <div className="tab-contents">
@@ -61,8 +89,11 @@ function About2() {
                 </div>
               </ul>
             </div>
-
-            <div className="tab-col-2">
+          ) : (
+            <div/>
+            )}
+            {action === "Experience" ? (
+                        <div className="tab-col-2">
               <h2>Experience</h2>
               <div className="tab-contents-exp">
                 <i className="fa-solid fa-laptop"></i>
@@ -110,7 +141,11 @@ function About2() {
                 <p className="fakemargin">margin</p>
               </div>
             </div>
-          </div>
+          ) : (
+            <div/>
+            )}
+
+
         </div>
       </section>
     </div>
