@@ -13,7 +13,7 @@ function About2() {
                 <h4>
                   <ul>
                     <li>
-                      <a href="stack" className={action === "Tools" ? "active": "" }
+                      <a href="#stack" className={action === "Tools" ? "active": "" }
                         onClick={() => {
                         setAction("Tools");
                         }}
@@ -22,7 +22,7 @@ function About2() {
                       </a>
                     </li>
                     <li>
-                      <a href="stack" className={action === "Experience" ? "active": "" }
+                      <a href="#stack" className={action === "Experience" ? "active": "" }
                         onClick={() => {
                         setAction("Experience");
                         }}
