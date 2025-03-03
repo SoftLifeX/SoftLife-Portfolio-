@@ -1115,7 +1115,7 @@ p {
   left: 0;
 }
 
-.tab-titles ul li a.active {
+.tab-titles ul li a.active::after {
   content: '';
   width: 70%;
   height: 3px;
