@@ -1115,6 +1115,10 @@ p {
   left: 0;
 }
 
+.tab-titles ul li a.active{
+  scale: 1.05;
+}
+
 .tab-titles ul li a.active::after {
   content: '';
   width: 70%;
@@ -1692,9 +1696,9 @@ form textarea {
     display: block;
   }*/
 
-     .tab-titles ul li a::after {
+   /*  .tab-titles ul li a::after {
        display: none;
-     }
+     }*/
 
   .section {
     margin-top: 0px;
