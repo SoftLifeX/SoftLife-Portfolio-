@@ -1115,6 +1115,19 @@ p {
   left: 0;
 }
 
+.tab-titles ul li a.active {
+  content: '';
+  width: 70%;
+  height: 3px;
+  background: var(--text-color);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+  transition: scale, ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
 .tab-col-1 {
   flex-basis: 40%;
 }
@@ -1675,9 +1688,9 @@ form textarea {
     height: 100%;
   }
   
-  .tab-titles ul li a {
+  /*.tab-titles ul li a {
     display: block;
-  }
+  }*/
 
      .tab-titles ul li a::after {
        display: none;
