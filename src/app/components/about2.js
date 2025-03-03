@@ -13,16 +13,16 @@ function About2() {
                 <h4>
                   <ul>
                     <li>
-                      <a href="" className={action === "Tools" ? "active": "" }
+                      <a href="stack" className={action === "Tools" ? "active": "" }
                         onClick={() => {
                         setAction("Tools");
                         }}
                        >
-                        My Stack & Tools
+                        Tools
                       </a>
                     </li>
                     <li>
-                      <a href="" className={action === "Experience" ? "active": "" }
+                      <a href="stack" className={action === "Experience" ? "active": "" }
                         onClick={() => {
                         setAction("Experience");
                         }}
@@ -138,14 +138,14 @@ function About2() {
                   programming practices through continuing education and
                   participation in professional conferences and workshops.
                 </li>
-                <p className="fakemargin">margin</p>
+                
               </div>
             </div>
           ) : (
             <div/>
             )}
 
-
+     <p className="fakemargin">margin</p>
         </div>
       </section>
     </div>
