@@ -17,21 +17,7 @@ function About1() {
               <img src="" data-scroll data-scroll-speed={0.1} />
             </div>
             <div className="about-col-2">
-              <div className="tab-titles">
-                <h4>
-                  <ul>
-                    <li>
-                      <a href="#stacks">My Stack & Tools</a>
-                    </li>
-                    <li>
-                      <a href="#stacks">Experience</a>
-                    </li>
-                    <li>
-                      <a href="#stacks">Certification & CV</a>
-                    </li>
-                  </ul>
-                </h4>
-              </div>
+              
               <div>
                 <p>
                   An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
