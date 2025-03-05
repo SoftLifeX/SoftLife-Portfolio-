@@ -383,7 +383,7 @@ section {
   }
 }
 
-/*logo bubble*/
+/*logo bubble
 .square {
   background-color: transparent;
   box-shadow: 0 0 4px  var(--primary-color);
@@ -457,7 +457,7 @@ section {
   50% {
     transform: rotateY('10deg') scale(1.2);
   }
-}
+}*/
 
 .navbar {
   padding: 0.5rem 1rem;
