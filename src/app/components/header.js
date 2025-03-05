@@ -71,9 +71,6 @@ function Header() {
           <span>e</span>
         </a>
 
-        <div className="square"></div>
-        <div className="rectangle"></div>
-
         <input className="icons" type="checkbox" id="check" />
         <div className="icons">
           <span></span>
