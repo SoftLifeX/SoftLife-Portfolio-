@@ -754,7 +754,7 @@ p {
 }
 
 .homepage h1 {
-  text-shadow: 0 0 3px var(--base-color), 1px 1px 3px var(--text-color);
+  text-shadow: 0 0 3px var(--accent-color);
   text-align: center;
   font-family: 'penna';
   color: var(--text-color);
