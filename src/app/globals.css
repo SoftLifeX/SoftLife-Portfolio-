@@ -42,20 +42,6 @@
   font-family: "chillen";
   src: url(public/fonts/Chillen.ttf);
 }
-
-.light{
- --base-color: white;
- --text-color: #000;
- --secondary-text: gray;
- --tertiary-text: rgba(0, 0, 0, 0.924);
- --primary-color: rgba(0, 0, 0, 0.16);
- --secondary-color: white;
---accent-color: black;
- --tertiary-color: gray;
-  --accent-color2: rgba(0, 0, 0, 0.16);
- --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
-   --text-color2: #000;
-}
  
 :root{
  --base-color: rgba(0, 0, 0, 0.924);
@@ -71,7 +57,21 @@
    --text-color2: gray;
 }
 
-@media (prefer-color-scheme : dark) {
+.light {
+ --base-color: white;
+ --text-color: #000;
+ --secondary-text: gray;
+ --tertiary-text: rgba(0, 0, 0, 0.924);
+ --primary-color: rgba(0, 0, 0, 0.16);
+ --secondary-color: white;
+--accent-color: black;
+ --tertiary-color: gray;
+  --accent-color2: rgba(0, 0, 0, 0.16);
+ --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
+   --text-color2: #000;
+}
+
+/*@media (prefer-color-scheme : dark) {
    --base-color: rgba(0, 0, 0, 0.924);
  --text-color: white;
  --secondary-text: gray;
@@ -97,7 +97,7 @@
   --accent-color2: rgba(0, 0, 0, 0.16);
  --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
    --text-color2: #000;
-} 
+} */
  
 #theme-switch {
  display: flex;
