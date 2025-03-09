@@ -43,7 +43,7 @@
   src: url(public/fonts/Chillen.ttf);
 }
 
-:root{
+.light{
  --base-color: white;
  --text-color: #000;
  --secondary-text: gray;
@@ -57,7 +57,7 @@
    --text-color2: #000;
 }
  
-.dark{
+:root{
  --base-color: rgba(0, 0, 0, 0.924);
  --text-color: white;
  --secondary-text: gray;
@@ -71,7 +71,7 @@
    --text-color2: gray;
 }
 
-@media (prefer-color-scheme : dark) {
+@media (prefer-color-scheme : light) {
    --base-color: rgba(0, 0, 0, 0.924);
  --text-color: white;
  --secondary-text: gray;
@@ -85,7 +85,7 @@
    --text-color2: gray;
 } 
 
-@media (prefer-color-scheme : light) {
+@media (prefer-color-scheme : dark) {
    --base-color: white;
  --text-color: #000;
  --secondary-text: gray;
@@ -127,11 +127,11 @@
  display: none;
 }
  
-.dark #theme-switch svg:first-child {
+.light #theme-switch svg:first-child {
  display: none;
 }
  
-.dark #theme-switch svg:last-child {
+.light #theme-switch svg:last-child {
  display: block;
 }
 
@@ -299,7 +299,7 @@ section {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color:  var(--text-color);
   text-shadow: 0 0 10px var(--secondary-color), 6px 6px 9px var(--text-color);
   text-decoration: none;
@@ -783,8 +783,8 @@ p {
   box-shadow: 0 0 3px var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 1;
-  height: 19rem;
-  width: 19rem;
+  height: 20rem;
+  width: 20rem;
   z-index: 2;
   margin: auto;
   top: -17%;
