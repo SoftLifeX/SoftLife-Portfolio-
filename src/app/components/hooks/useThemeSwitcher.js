@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 const  useThemeSwitcher = () => {
 
-    const preferDarkQuery = "(prefer-color-scheme: light)";
+    const preferLightQuery = "(prefer-color-scheme: light)";
     const [mode, setMode] = useState("");
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia(preferDarkQuery);
+        const mediaQuery = window.matchMedia(preferLightQuery);
         const userPref = window.localStorage.getItem("theme");
 
         const handleChange = () => {
