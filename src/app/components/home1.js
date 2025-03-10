@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2";
@@ -11,7 +12,11 @@ function Home1() {
       <section className="home1">
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
-          <h2>
+          <motion.h2
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+          >
             Hello! I'm{" "}
             <span className="typed">
               <Typewriter
@@ -24,10 +29,14 @@ function Home1() {
               />
             </span>
             <br />a Front End Developer and <span id="hobby"></span>
-          </h2>
-          <h1>
+          </motion.h2>
+          <motion.h1
+            initial={{ y: 60, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.75, ease: [0.16, 1, 0.3, 1] }} 
+          >
             Helping brands thrive in the digital era.
-          </h1>
+          </motion.h1>
       </div>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
