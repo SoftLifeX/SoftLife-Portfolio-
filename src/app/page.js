@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <motion.div
-      initial={{ y: "60vh" }}
+      initial={{ y: "50svh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
