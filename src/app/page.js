@@ -18,17 +18,15 @@ const Home = () => {
  }, []);
 
   return (
-    <motion.div
-      initial={{ y: "50svh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+    <div
+      
     >
       
       <Home1 />
       <Home2 />
       <Contact />
 
-    </motion.div>
+    </div>
   );
 };
 
