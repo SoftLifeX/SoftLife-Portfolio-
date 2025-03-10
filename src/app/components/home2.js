@@ -56,7 +56,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work1} alt="work1" />
                 <div className="layer">
@@ -70,7 +70,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work3} alt="work3" />
                 <div className="layer">
@@ -84,7 +84,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work1} alt="work1" />
                 <div className="layer">
@@ -98,7 +98,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work2} alt="work2" />
                 <div className="layer">
