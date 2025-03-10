@@ -58,7 +58,9 @@ function Home2() {
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
-                <Image src={images.work1} alt="work1" />
+                <Image 
+                 priority={true}
+                 src={images.work1} alt="work1" />
                 <div className="layer">
                   <p></p>
                   <a href="">
@@ -72,7 +74,9 @@ function Home2() {
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
-                <Image src={images.work3} alt="work3" />
+                <Image
+                 priority={true}
+                 src={images.work3} alt="work3" />
                 <div className="layer">
                   <p></p>
                   <a href="">
@@ -86,7 +90,7 @@ function Home2() {
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
-                <Image src={images.work1} alt="work1" />
+                <Image priority={true} src={images.work1} alt="work1" />
                 <div className="layer">
                   <p></p>
                   <a href="">
@@ -100,7 +104,7 @@ function Home2() {
                 whileInView={{ x: 0 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
-                <Image src={images.work2} alt="work2" />
+                <Image priority={true} src={images.work2} alt="work2" />
                 <div className="layer">
                   <p></p>
                   <a href="">
