@@ -9,18 +9,16 @@ import Contact from "./components/contact";
 
 const Home = () => {
 
- useEffect(() => {
+/*useEffect(() => {
    (async () => {
      const LocomotiveScroll = (await import("locomotive-scroll")).default;
 
      const locomotiveScroll = new LocomotiveScroll();
    })();
- }, []);
+ }, []);*/
 
   return (
-    <div
-      
-    >
+    <div>
       
       <Home1 />
       <Home2 />
