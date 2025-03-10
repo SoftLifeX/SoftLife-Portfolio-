@@ -33,7 +33,7 @@ function Home1() {
           <motion.h1
             initial={{ y: "60svh" }}
             animate={{ y: "0%", opacity: 1}}
-            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.35, duration: 1, ease: [0.16, 1, 0.3, 1] }} 
           >
             Helping brands thrive in the digital era.
           </motion.h1>
