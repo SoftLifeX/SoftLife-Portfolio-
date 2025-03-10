@@ -15,6 +15,7 @@ function Home1() {
           <motion.h2
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            animate={{ y: "0%", opacity: 1}}
             transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             Hello! I'm{" "}
@@ -33,6 +34,7 @@ function Home1() {
           <motion.h1
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+           animate={{ y: "0%", opacity: 1}}
             transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }} 
           >
             Helping brands thrive in the digital era.
