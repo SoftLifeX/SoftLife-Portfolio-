@@ -56,7 +56,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
-                transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image 
                  priority={true}
@@ -72,7 +72,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
-                transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image
                  priority={true}
@@ -88,7 +88,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
-                transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image priority={true} src={images.work1} alt="work1" />
                 <div className="layer">
@@ -102,7 +102,7 @@ function Home2() {
               <motion.div 
                initial={{ x: -100 }}
                 whileInView={{ x: 0 }}
-                transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image priority={true} src={images.work2} alt="work2" />
                 <div className="layer">
