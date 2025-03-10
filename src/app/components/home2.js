@@ -54,8 +54,8 @@ function Home2() {
             <h5>Featured Projects</h5>
             <div className="work-list">
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+               initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
                 transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work1} alt="work1" />
@@ -68,8 +68,8 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+               initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
                 transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work3} alt="work3" />
@@ -82,8 +82,8 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+               initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
                 transition={{ delay: 0.15, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work1} alt="work1" />
@@ -96,8 +96,8 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+               initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="work">
                 <Image src={images.work2} alt="work2" />
