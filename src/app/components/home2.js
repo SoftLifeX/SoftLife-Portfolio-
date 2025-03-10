@@ -5,7 +5,7 @@ import Link from "next/link";
 import Magnetic2 from './magnetic2';
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 function Home2() {
 
