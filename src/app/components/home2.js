@@ -54,9 +54,9 @@ function Home2() {
             <h5>Featured Projects</h5>
             <div className="work-list">
               <motion.div
-                initial={{ x: 200, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.5 }}className="work">
+                transition={{ delay: 0.05, duration: 0.4 }}className="work">
                 <Image 
                  priority={true}
                  src={images.work1} alt="work1" />
@@ -69,9 +69,9 @@ function Home2() {
               </motion.div>
 
               <motion.div
-                initial={{ x: 200, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.5 }} className="work">
+                transition={{ delay: 0.1, duration: 0.4 }} className="work">
                 <Image
                  priority={true}
                  src={images.work3} alt="work3" />
@@ -84,9 +84,9 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: 200, opacity: 0 }}
+               initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.5 }}
+                transition={{ delay: 0.15, duration: 0.4 }}
                 className="work">
                 <Image priority={true} src={images.work1} alt="work1" />
                 <div className="layer">
@@ -98,9 +98,9 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: 200, opacity: 0 }}
+               initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.5 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
                 className="work">
                 <Image priority={true} src={images.work2} alt="work2" />
                 <div className="layer">
