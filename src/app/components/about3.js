@@ -9,7 +9,7 @@ function About3() {
           <div className="container">
            <h5>Our Services</h5>
             <motion.div 
-              initial={{ y: "100svh", opacity: 0 }}
+              initial={{ y: "60svh", opacity: 0 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
              className="services-list">
