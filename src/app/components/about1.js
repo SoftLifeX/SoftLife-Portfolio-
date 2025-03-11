@@ -10,11 +10,11 @@ function About1() {
         <div className="about">
            <motion.h5 initial={{ y: "60svh", opacity: 0}}
             whileInView={{ y: "0%", opacity: 1}}
-            transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.3, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>About</motion.h5>
           <motion.h1 initial={{ y: "60svh", opacity: 0}}
             whileInView={{ y: "0%", opacity: 1}}
-            transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.3, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>
             Creating symphonies of digital functionality and aesthetics
           </motion.h1>
