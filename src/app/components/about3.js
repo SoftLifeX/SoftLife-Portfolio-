@@ -10,9 +10,9 @@ function About3() {
            <h5>Our Services</h5>
             <div className="services-list">
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.75 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
                >
                 <i className="bx bx-code-alt"></i>
                 <h2>Web Development</h2>
@@ -30,9 +30,9 @@ function About3() {
               </motion.div>
 
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.75 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                >
                 <i className="bx bx-devices"></i>
                 <h2>UI/UX</h2>
@@ -51,9 +51,9 @@ function About3() {
               </motion.div>
 
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.75 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
                >
                 <i class="fa-solid fa-paintbrush"></i>
                 <h2>Graphic Design</h2>
@@ -72,9 +72,9 @@ function About3() {
               </motion.div>
 
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: -200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.75 }}
+                transition={{ delay: 0.4, duration: 0.5 }}
                >
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
