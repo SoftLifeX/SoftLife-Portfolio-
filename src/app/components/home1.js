@@ -17,7 +17,7 @@ function Home1() {
             animate={{ y: "0%", opacity: 1}}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
-            Hello! I'm{" "}
+            Hello👋! I'm{" "}
             <span className="typed">
               <Typewriter
                 words={["Daniel! \n popularly known as SoftLife!"]}
