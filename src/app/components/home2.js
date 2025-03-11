@@ -52,12 +52,11 @@ function Home2() {
             </h3>
 
             <h5>Featured Projects</h5>
-            <motion.div 
-     initial={{ x: 200, opacity: 0 }}
+            <div className="work-list">
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.5 }}
-   className="work-list">
-              <div className="work">
+                transition={{ delay: 0.05, duration: 0.5 }}className="work">
                 <Image 
                  priority={true}
                  src={images.work1} alt="work1" />
@@ -67,9 +66,12 @@ function Home2() {
                     <i className="bx bx-link-external"></i>
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="work">
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.05, duration: 0.5 }} className="work">
                 <Image
                  priority={true}
                  src={images.work3} alt="work3" />
@@ -79,9 +81,13 @@ function Home2() {
                     <i className="bx bx-link-external"></i>
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="work">
+              <motion.div 
+               initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.05, duration: 0.5 }}
+                className="work">
                 <Image priority={true} src={images.work1} alt="work1" />
                 <div className="layer">
                   <p></p>
@@ -89,9 +95,13 @@ function Home2() {
                     <i className="bx bx-link-external"></i>
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="work">
+              <motion.div 
+               initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.05, duration: 0.5 }}
+                className="work">
                 <Image priority={true} src={images.work2} alt="work2" />
                 <div className="layer">
                   <p></p>
@@ -99,8 +109,8 @@ function Home2() {
                     <i className="bx bx-link-external"></i>
                   </a>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+             </div>
             <Magnetic2>
             <Link href="/craft" className="btn2">
               Intrigued?<i className="bx bx-arrow-to-top"></i>
