@@ -10,7 +10,7 @@ function About3() {
            <h5>Our Services</h5>
             <div className="services-list">
               <motion.div initial={{ y: "10svh", opacity: 0}}
-            whileInView={{ y: "0%", opacity: 1}}
+            whileInView={{ y: "0%"}}
             transition={{ delay: 0.05, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="bx bx-code-alt"></i>
                 <h2>Web Development</h2>
