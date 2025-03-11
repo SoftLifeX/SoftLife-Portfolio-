@@ -19,16 +19,12 @@ const About = () => {
       }, []);
 
   return (
-    <motion.div
-      initial={{ y: "60vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
-    >
+    <div>
       <About1 />
       <About2 />
       <About3 />
       <Contact />
-    </motion.div>
+    </div>
   );
 };
 
