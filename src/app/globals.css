@@ -145,9 +145,9 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 
 body {
   background-position: center;
@@ -1560,6 +1560,10 @@ form textarea {
 }
 
 @media (max-width: 600px) {
+
+  html {
+  scroll-behavior: smooth;
+  }
 
   .homepage {
     align-content: center;
