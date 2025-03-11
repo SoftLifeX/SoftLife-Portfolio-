@@ -9,12 +9,12 @@ function About1() {
       <section className="about1">
         <div className="about">
            <motion.h5 initial={{ y: "60svh", opacity: 0}}
-            animate={{ y: "0%", opacity: 1}}
-            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            whileInView={{ y: "0%", opacity: 1}}
+            transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>About</motion.h5>
           <motion.h1 initial={{ y: "60svh", opacity: 0}}
-            animate={{ y: "0%", opacity: 1}}
-            transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            whileInView={{ y: "0%", opacity: 1}}
+            transition={{ delay: 0.1, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>
             Creating symphonies of digital functionality and aesthetics
           </motion.h1>
@@ -36,7 +36,7 @@ function About1() {
                   "As developers, we bridge the recess where <b>
                     tech
                   </b>{" "}
-                  meets <b>standard</b>" - Vahalla
+                  meets <b>standard</b>" - Valhalla 
                   <br /> 
                   A quote I live by, perfectly depicting my goals as a
                   developer.
