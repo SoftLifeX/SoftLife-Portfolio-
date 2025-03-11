@@ -9,7 +9,7 @@ function About3() {
           <div className="container">
            <h5>Our Services</h5>
             <div className="services-list">
-              <motion.div initial={{ y: "60svh", opacity: 0 }}
+              <motion.div initial={{ y: "30svh", opacity: 0 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="bx bx-code-alt"></i>
@@ -27,7 +27,7 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "60svh", opacity: 0 }}
+              <motion.div initial={{ y: "30svh", opacity: 0 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="bx bx-devices"></i>
@@ -46,7 +46,7 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "60svh", opacity: 0 }}
+              <motion.div initial={{ y: "30svh", opacity: 0 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i class="fa-solid fa-paintbrush"></i>
@@ -65,7 +65,7 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "60svh", opacity: 0 }}
+              <motion.div initial={{ y: "30svh", opacity: 0 }}
                 whileInView={{ y: "0%", opacity: 1 }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="fa-brands fa-app-store"></i>
