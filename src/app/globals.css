@@ -920,7 +920,7 @@ p {
   overflow: hidden;
 }
 
-.work-list div:nth-child(1) {
+/*.work-list div:nth-child(1) {
   transition-delay: 0.1s;
 }
 
@@ -934,7 +934,7 @@ p {
 
 .work-list div:nth-child(4) {
   transition-delay: 0.7s;
-}
+}*/
 
 .work img {
   border-bottom: 20px;
