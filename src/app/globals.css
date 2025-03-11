@@ -1561,10 +1561,6 @@ form textarea {
 
 @media (max-width: 600px) {
 
-  html {
-  scroll-behavior: smooth;
-  }
-
   .homepage {
     align-content: center;
     height: 100svh;
