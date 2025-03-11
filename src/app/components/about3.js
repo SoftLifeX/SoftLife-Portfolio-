@@ -9,8 +9,8 @@ function About3() {
           <div className="container">
            <h5>Our Services</h5>
             <div className="services-list">
-              <motion.div initial={{ y: "30svh", opacity: 0 }}
-                whileInView={{ y: "0%", opacity: 1 }}
+              <motion.div initial={{ opacity: 0, y: "30svh" }}
+                whileInView={{ opacity: 1, y: "0%" }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="bx bx-code-alt"></i>
                 <h2>Web Development</h2>
@@ -27,8 +27,8 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "30svh", opacity: 0 }}
-                whileInView={{ y: "0%", opacity: 1 }}
+              <motion.div initial={{ opacity: 0, y: "10svh" }}
+                whileInView={{ opacity: 1, y: "0%"}}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="bx bx-devices"></i>
                 <h2>UI/UX</h2>
@@ -46,8 +46,8 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "30svh", opacity: 0 }}
-                whileInView={{ y: "0%", opacity: 1 }}
+              <motion.div initial={{ opacity: 0, y: "30svh" }}
+                whileInView={{ opacity: 1, y: "0%" }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i class="fa-solid fa-paintbrush"></i>
                 <h2>Graphic Design</h2>
@@ -65,8 +65,8 @@ function About3() {
                 </p>
               </motion.div>
 
-              <motion.div initial={{ y: "30svh", opacity: 0 }}
-                whileInView={{ y: "0%", opacity: 1 }}
+              <motion.div initial={{ opacity: 0, y: "30svh" }}
+                whileInView={{ opacity: 1, y: "0%" }}
                 transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
