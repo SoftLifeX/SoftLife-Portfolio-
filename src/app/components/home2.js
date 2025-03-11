@@ -54,9 +54,10 @@ function Home2() {
             <h5>Featured Projects</h5>
             <div className="work-list">
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.05, duration: 0.4 }}className="work">
+                initial={{ x: "-100vw", opacity: 0 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                transition={{ delay: 0.1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+               className="work">
                 <Image 
                  priority={true}
                  src={images.work1} alt="work1" />
@@ -69,9 +70,9 @@ function Home2() {
               </motion.div>
 
               <motion.div
-                initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.4 }} className="work">
+                initial={{ x: "-100vw", opacity: 0 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.75, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
                  src={images.work3} alt="work3" />
@@ -84,9 +85,9 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.15, duration: 0.4 }}
+               initial={{ x: "-100vw", opacity: 0 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                transition={{ delay: 0.5, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 className="work">
                 <Image priority={true} src={images.work1} alt="work1" />
                 <div className="layer">
@@ -98,9 +99,9 @@ function Home2() {
               </motion.div>
 
               <motion.div 
-               initial={{ x: -100, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.4 }}
+               initial={{ x: "-100vw", opacity: 0 }}
+                whileInView={{ x: "0%", opacity: 1 }}
+                transition={{ delay: 0.7, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                 className="work">
                 <Image priority={true} src={images.work2} alt="work2" />
                 <div className="layer">
