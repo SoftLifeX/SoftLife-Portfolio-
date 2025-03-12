@@ -13,7 +13,7 @@ function Home1() {
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
@@ -31,7 +31,7 @@ function Home1() {
             <br />a Front End Developer and <span id="hobby"></span>
           </motion.h2>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }} 
           >
