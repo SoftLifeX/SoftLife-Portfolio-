@@ -12,7 +12,7 @@ function Home1() {
       <section className="home1">
         <div className="homepage">
     <motion.div 
-            initial={{ opacity: 0, y: 60 }}
+            initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
            data-scroll data-scroll-speed={0.1}>
