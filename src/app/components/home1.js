@@ -14,8 +14,7 @@ function Home1() {
     <div data-scroll data-scroll-speed={0.1}>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           >
             Hello👋! I'm{" "}
@@ -33,8 +32,7 @@ function Home1() {
           </motion.h2>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1, ease: [0.16, 1, 0.3, 1] }} 
           >
             Helping brands thrive in the digital era.
