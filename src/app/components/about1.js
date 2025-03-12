@@ -8,14 +8,12 @@ function About1() {
     <div>
       <section className="about1">
         <div className="about">
-           <motion.h5 initial={{ opacity: 0, y: 20 }}
+           <motion.h5 initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>About</motion.h5>
-          <motion.h1 initial={{ opacity: 0, y: 20 }}
+          <motion.h1 initial={{ opacity: 0, y: 200 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
          data-scroll data-scroll-speed={0.1}>
             Creating symphonies of digital functionality and aesthetics
