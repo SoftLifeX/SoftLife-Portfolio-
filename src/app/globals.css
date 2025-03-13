@@ -769,10 +769,11 @@ p {
 .homepage h2 {
   text-align: center;
   font-family: 'time';
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+/*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    /*display: block;*/
+    display: block;*/
+  color: var(--text-color);
   font-size: 1.56rem;
   margin: 1rem;
   font-weight: 400;
