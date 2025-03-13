@@ -4,9 +4,9 @@ import React from "react";
 import { useEffect } from "react";
 import Contactform from "../components/contactform";
 
-export const metadata = {
+/*export const metadata = {
   title: "Contact Me",
-};
+};*/
 
 const Contact = () => {
 
