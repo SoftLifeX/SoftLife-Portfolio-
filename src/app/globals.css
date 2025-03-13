@@ -600,7 +600,7 @@ h5::before {
   height: 0.18rem;
   background: var(--text-color);
   position: absolute;
-  bottom: -0.5rem;
+  bottom: -0.75rem;
   left: 0;
 }
 
