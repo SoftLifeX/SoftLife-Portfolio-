@@ -842,10 +842,10 @@ p {
 }
 
 .typed {
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    display: block;
+    display: block;*/
   width: 100%;
   white-space: pre-line;
   overflow: hidden;
@@ -866,10 +866,10 @@ p {
 
 
 #hobby {
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    display: block;
+    display: block;*/
   font-family: 'time', serif;
 }
 
@@ -1012,7 +1012,10 @@ p {
 
 /*contact*/
 .contact h1 {
-  color:  var(--text-color);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+    color: transparent;
+    background-clip: text;
+    display: block;
   padding: 3.12rem;
 }
 
