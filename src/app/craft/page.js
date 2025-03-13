@@ -6,9 +6,9 @@ import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
 import Contact from "../components/contact";
 
-export const metadata = {
+/*export const metadata = {
   title: "My Craft",
-};
+};*/
 
 
 const Craft = () => {
