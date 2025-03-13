@@ -51,6 +51,23 @@ function Home1() {
             </Link>
             </Magnetic2>
           </div>
+          <div className="socials">
+            <a href="https://wa.link/wjns9h">
+              <i className="bx bxl-whatsapp"></i>
+            </a>
+            <a href="https://github.com/SoftLifeDev">
+              <i className="bx bxl-github"></i>
+            </a>
+            <a href="">
+              <i className="bx bxl-linkedin-square"></i>
+            </a>
+            <a href="https://www.instagram.com/softlifekid/">
+              <i className="bx bxl-instagram"></i>
+            </a>
+            <a href="">
+              <i className="fa-brands fa-square-x-twitter"></i>
+            </a>
+          </div>
         </div>
       </section>
     </div>
