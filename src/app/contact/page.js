@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useEffect } from "react";
 import Contactform from "../components/contactform";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Me",
+};
 
 
 
