@@ -781,11 +781,11 @@ p {
   box-shadow: 0 0 3px var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 1;
-  height: 19rem;
+  height: 18rem;
   width: 20rem;
   z-index: 2;
   margin: auto;
-  top: -22%;
+  top: -19%;
   bottom: 0;
   left: 0;
   right: 0;
