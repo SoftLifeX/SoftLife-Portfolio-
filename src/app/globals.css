@@ -200,7 +200,7 @@ section {
   scale: 0.98;
   box-shadow: 0 0 4px var(--accent-color);
   border: 1px solid var(--border-color);
-  min-height: 100svh;
+  height: 100svh;
 }
 
 .home2 {
