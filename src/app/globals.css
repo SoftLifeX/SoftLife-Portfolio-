@@ -769,7 +769,10 @@ p {
 .homepage h2 {
   text-align: center;
   font-family: 'time';
-  color: var(--secondary-text);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
   font-size: 1.56rem;
   margin: 1rem;
   font-weight: 400;
@@ -839,7 +842,10 @@ p {
 }
 
 .typed {
-  color:  var(--text-color);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
   width: 100%;
   white-space: pre-line;
   overflow: hidden;
@@ -860,7 +866,10 @@ p {
 
 
 #hobby {
-  color:  var(--text-color);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
   font-family: 'time', serif;
 }
 
