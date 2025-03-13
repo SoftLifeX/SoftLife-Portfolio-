@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Softlife Design",
     template: "%s - Softlife Design",
   },
-  description: "Come and read my awesome articles!",
+  description: "An award-winning, detail-oriented Front-end developer specialized in React, Motion design and Next js with expertise in web development, ui/ux design",
   twitter: {
     card: "summary_large_image",
   },
