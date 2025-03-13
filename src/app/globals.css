@@ -596,8 +596,8 @@ h5::after {
 
 h5::before {
   content: '';
-  width: 20px;
-  height: 3px;
+  width: 1.2rem;
+  height: 0.18rem;
   background: var(--text-color);
   position: absolute;
   bottom: -0.37rem;
