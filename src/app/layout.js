@@ -18,15 +18,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Softlife Design",
-    template: "%s - Softlife Design",
+    default: "SoftLife Design",
+    template: "%s - SoftLife Design",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Design', 'award-winning',  'React', 'Next js', 'Motion design'],
   twitter: {
     card: "summary_large_image",
   },
 };
+
+
+/*export const metadata: Metadata = {
+  title: {
+    default: "Softlife Design",
+    template: "%s - Softlife Design",
+  },
+  description: "",
+  keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Design', 'award-winning',  'React', 'Next js', 'Motion design'],
+  twitter: {
+    card: "summary_large_image",
+  },
+};*/
 
 export default function RootLayout({ children }) {
   return (
