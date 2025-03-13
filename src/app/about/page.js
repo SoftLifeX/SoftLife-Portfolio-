@@ -7,9 +7,9 @@ import About2 from "../components/about2";
 import About3 from "../components/about3";
 import Contact from "../components/contact";
 
-export const metadata = {
+/*export const metadata = {
   title: "About",
-};
+};*/
 
 const About = () => {
 
