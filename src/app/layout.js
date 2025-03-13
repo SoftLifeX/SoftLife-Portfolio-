@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 import TransitionProvider from "./components/transitionProvider";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -23,9 +23,6 @@ export const metadata: Metadata = {
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Design', 'award-winning',  'React', 'Next js', 'Motion design'],
-  authors: [{ name: 'Softlife Design' }],
-  creator: 'Softlife Design',
-  publisher: 'Softlife Design',
   twitter: {
     card: "summary_large_image",
   },
