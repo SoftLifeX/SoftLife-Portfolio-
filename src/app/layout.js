@@ -17,8 +17,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Softlife Design",
+  title: "",
   description: "",
+};
+
+export const metadata: Metadata = {
+  title: {
+    default: "Softlife Design",
+    template: "%s - Softlife Design",
+  },
+  description: "Come and read my awesome articles!",
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({ children }) {
