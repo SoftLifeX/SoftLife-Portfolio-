@@ -772,7 +772,7 @@ p {
   background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    display: block;
+    /*display: block;*/
   font-size: 1.56rem;
   margin: 1rem;
   font-weight: 400;
