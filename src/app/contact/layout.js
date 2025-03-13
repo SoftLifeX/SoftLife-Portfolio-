@@ -2,7 +2,7 @@ import Page from "./page"
 
 
 export const metadata = {
-  title: "About me",
+  title: "Contact Me",
   description: "",
 };
 
