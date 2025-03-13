@@ -5,7 +5,11 @@ import { useEffect } from "react";
 import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
 import Contact from "../components/contact";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "My Craft",
+};
 
 
 const Craft = () => {
