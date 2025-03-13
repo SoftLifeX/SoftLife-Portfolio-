@@ -193,20 +193,20 @@ section {
   bottom: 0;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  border-radius: 1px;
+  border-radius: 0.06rem;
 }
 
 .home1 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
   height: 100svh;
 }
 
 .home2 {
   scale: 0.85;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
   will-change: transform ease-in-out;
   animation: ease-in-out;
   transition: ease-in-out;
@@ -214,50 +214,50 @@ section {
 
 .home3 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .about1 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .about2 {
   scale: 0.9;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .about3 {
   scale: 0.9;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .about4 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .craft1 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .craft2 {
   scale: 0.9;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .craft3 {
   scale: 0.98;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .top {
@@ -300,7 +300,7 @@ section {
 .logo {
   font-size: 1.2rem;
   color:  var(--text-color);
-  text-shadow: 0 0 10px var(--secondary-color), 6px 6px 9px var(--text-color);
+  text-shadow: 0 0 0.6rem var(--secondary-color), 0.37rem 0.37rem 0.56rem var(--text-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -311,7 +311,7 @@ section {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   font-family: 'penna', serif;
-  padding-left: 10px;
+  padding-left: 0.6rem;
 }
 
 .logo span:nth-child(1) {
@@ -461,7 +461,7 @@ section {
 .navbar {
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
-  border: 2px solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
+  border: 0.12rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
   border-radius: 30px;
   cursor: pointer;
   transition: scale, ease-in-out;
@@ -470,8 +470,8 @@ section {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .navbar ul li {
@@ -498,7 +498,7 @@ section {
   border-radius: 30px;
   background: transparent;
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 2px var(--secondary-text);
+  box-shadow: 0 0 0.12rem var(--secondary-text);
 }
 
 .navbar a.active {
@@ -506,7 +506,7 @@ section {
   color: var(--base-color);
   background-color: var(--text-color);
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 2px var(--accent-color);
+  box-shadow: 0 0 0.12rem var(--accent-color);
   scale: 1.02;
 }
 
@@ -617,7 +617,7 @@ p {
   color: var(--text-color);
   margin: 1.87rem auto;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 0.06rem solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -627,7 +627,7 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
   margin-bottom: 2.5rem;
   z-index: 5;
 }
@@ -648,7 +648,7 @@ p {
 .btn2:hover {
   scale: 1.05;
   color: var(--base-color);
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
   background-color:  var(--text-color);
 }
 
@@ -677,14 +677,14 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
   margin-bottom: 2.5rem;
   z-index: 5;
 }
 
 .btn4:hover {
   scale: 1.05;
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
 }
 
 
@@ -720,7 +720,7 @@ p {
   color: var(--text-color);
   margin: 1.87rem;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 0.06rem solid var(--border-color);
   border-radius: 10px;
   cursor: pointer;
   font-weight: bold;
@@ -730,7 +730,7 @@ p {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 6px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
   margin-bottom: 2.5rem;
   float: right;
   right: 3.75rem;
@@ -740,7 +740,7 @@ p {
 .btn3:hover {
   color: var(--base-color);
   scale: 1.1;
-  box-shadow: 0 0 6px var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
   background-color: var(--text-color);
 }
 
@@ -778,7 +778,7 @@ p {
   position: fixed;
   content: "";
   background-color: transparent;
-  box-shadow: 0 0 3px var(--accent-color);
+  box-shadow: 0 0 0.18rem var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 1;
   height: 18rem;
@@ -790,7 +790,7 @@ p {
   left: 0;
   right: 0;
   animation: transform 10s ease-in-out infinite both alternate, movement_one 20s ease-in-out infinite both;
-  border: 1px solid var(--border-color);
+  border: 0.06rem solid var(--border-color);
   padding-bottom: 1rem;
 }
 
@@ -944,8 +944,8 @@ p {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   transition: transform 0.5s;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
 }
 
 .layer {
@@ -1071,8 +1071,8 @@ p {
 .about-col-2 {
   flex-basis: 65%;
   color:  var(--text-color);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   justify-content: center;
 }
 
@@ -1260,8 +1260,8 @@ p {
   font-weight: 300;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
   color: var(--text-color);
   margin-bottom: 2.5rem;
 }
@@ -1280,9 +1280,9 @@ p {
 .services-list div:hover {
   transform: translateY(-20px);
   color: var(--base-color);
-  text-shadow: 0 0 3px var(--text-color);
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  text-shadow: 0 0 0.18rem var(--text-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
   transition-duration: 1s;
   background-color: var(--text-color);
 }
@@ -1329,8 +1329,8 @@ p {
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
   background-color: transparent;
-  box-shadow: 0 0 4px var(--accent-color);
-  border: 1px solid var(--border-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
   outline: 1.8px solid var(--base-color);
   outline-offset: -10px;
   color: var(--text-color);
@@ -1477,6 +1477,8 @@ form textarea {
     transform: scale(0);
     transition: 0.3s ease;
     opacity: 0;
+    box-shadow: none;
+    border: none;
     text-shadow: none;
     position: relative;
     width: fit-content;
