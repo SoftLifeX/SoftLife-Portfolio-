@@ -590,7 +590,7 @@ h5::after {
   height: 0.18rem;
   background: var(--text-color);
   position: absolute;
-  bottom: -6px;
+  bottom: -0.37rem;
   left: 0;
 }
 
@@ -600,7 +600,7 @@ h5::before {
   height: 0.18rem;
   background: var(--text-color);
   position: absolute;
-  bottom: -0.37rem;
+  bottom: -0.5rem;
   left: 0;
 }
 
