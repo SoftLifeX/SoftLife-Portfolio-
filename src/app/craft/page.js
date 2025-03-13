@@ -7,7 +7,7 @@ import Craft2 from "../components/craft2";
 import Contact from "../components/contact";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "My Craft",
 };
 
