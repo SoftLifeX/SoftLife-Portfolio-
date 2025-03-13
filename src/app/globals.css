@@ -781,18 +781,17 @@ p {
   box-shadow: 0 0 3px var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 1;
-  height: 20rem;
+  height: 19rem;
   width: 20rem;
   z-index: 2;
   margin: auto;
-  top: -19%;
+  top: -22%;
   bottom: 0;
   left: 0;
   right: 0;
   animation: transform 10s ease-in-out infinite both alternate, movement_one 20s ease-in-out infinite both;
   border: 1px solid var(--border-color);
   padding-bottom: 15px;
-  margin-bottom: 20px;
 }
 
 
