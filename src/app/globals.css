@@ -761,7 +761,7 @@ p {
   background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    display: inline-block;
+    display: block;
   font-weight: 700;
   margin: 2.18rem auto;
 }
@@ -769,7 +769,7 @@ p {
 .homepage h2 {
   text-align: center;
   font-family: 'time';
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text));
     color: transparent;
     background-clip: text;
   font-size: 1.56rem;
