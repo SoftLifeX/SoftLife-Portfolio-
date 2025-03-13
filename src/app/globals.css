@@ -763,7 +763,7 @@ p {
     background-clip: text;
     display: inline-block;
   font-weight: 700;
-  margin: 2.18rem;
+  margin: 2.18rem auto;
 }
 
 .homepage h2 {
