@@ -107,6 +107,33 @@ function Header() {
           ))}
           </li>
          </ul>
+
+     <div className="social-icons">
+                  <a href="mailto:softlife.dev001@gmail.com">
+                    <i className="bx bxl-gmail"></i>
+                  </a>
+                  <a href="https://web.facebook.com/SoftLife.dev">
+                    <i className="bx bxl-facebook"></i>
+                  </a>
+                  <a href="">
+                    <i className="fa-brands fa-square-x-twitter"></i>
+                  </a>
+                  <a href="https://wa.link/wjns9h">
+                    <i className="bx bxl-whatsapp"></i>
+                  </a>
+                  <a href="">
+                    <i className="bx bxl-discord-alt"></i>
+                  </a>
+                  <a href="https://www.instagram.com/softlifekid/">
+                    <i className="bx bxl-instagram"></i>
+                  </a>
+                  <a href="">
+                     <i className="bx bxl-linkedin-square"></i>
+                  </a>
+                  <a href="https://github.com/SoftLifeDev">
+                    <i className="bx bxl-github"></i>
+                  </a>
+                </div>
           
         </nav>
       </header>
