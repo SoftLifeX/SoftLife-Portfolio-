@@ -46,7 +46,7 @@ function Craft1() {
           {action === "Project" ? (
             
             <div className="work-list">
-            <h3> A few of my digital crafts </h3>
+            <h2> My digital crafts </h2>
               <div className="work">
                 <Image src={images.work2} alt="work2" />
                 <div className="layer">
@@ -94,7 +94,7 @@ function Craft1() {
             )}
             {action === "Concept" ? (
           <div className="work-list">
-            <h3> Concepts in production!</h3>
+            <h2> Concepts in production!</h2>
               <div className="work">
                 <Image src={images.work2} alt="work2" />
                 <div className="layer">
