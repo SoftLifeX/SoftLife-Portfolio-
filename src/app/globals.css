@@ -1644,10 +1644,14 @@ form textarea {
   }
 
   .navbar .social-icons{
-  display: inline;
+  display: flex;
   justify-content: center;
   margin: 0.6rem auto;
   align-content: center;
+  }
+  
+  .navbar .social-icons::after{
+    display: none;
   }
   
   .navbar a {
