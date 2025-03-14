@@ -108,7 +108,7 @@ function Header() {
           </li>
          </ul>
 
-     <div className="social-icons">
+     <span className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com">
                     <i className="bx bxl-gmail"></i>
                   </a>
@@ -133,7 +133,7 @@ function Header() {
                   <a href="https://github.com/SoftLifeDev">
                     <i className="bx bxl-github"></i>
                   </a>
-                </div>
+                </span>
           
         </nav>
       </header>
