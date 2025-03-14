@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "SoftLife Design",
-    template: "%s - SoftLife Design",
+    default: "SoftLife Dev",
+    template: "%s - SoftLife Dev",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Design', 'award-winning',  'React', 'Next js', 'Motion design'],
+  keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel'],
   authors: [{ name: 'Daniel c. Daniel' }],
   creator: 'SoftLife Dev',
   publisher: 'SoftLife Dev',
