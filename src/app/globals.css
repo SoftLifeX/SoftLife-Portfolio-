@@ -1034,7 +1034,7 @@ p {
   text-decoration: none;
   font-size: 1.87rem;
   color:  var(--secondary-text);
-  display: inline-block;
+  display: flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
   margin-bottom: 1.87rem;
@@ -1574,11 +1574,15 @@ form textarea {
     color: var(--secondary-text);
   }
 
-.navbar .social-icons{
-  display: inline;
+  .navbar .social-icons{
+  display: flex;
   justify-content: center;
   margin: 0.6rem auto;
   align-content: center;
+  }
+  
+  .navbar span::after{
+    display: none;
   }
 }
 
@@ -1650,10 +1654,10 @@ form textarea {
   align-content: center;
   }
   
-  .navbar .social-icons::after{
+  .navbar span::after{
     display: none;
   }
-  
+    
   .navbar a {
     display: block;
     font-size: 1.1rem;
