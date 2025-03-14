@@ -84,7 +84,7 @@ function About2() {
                     Certificate!
                   </a>
                   <a href="" className="btn2">
-                    <i className="fa-solid fa-file-lines"></i>CV!
+                    <i className="fa-solid fa-file-lines"></i>Resume
                   </a>
                 </div>
               </ul>
