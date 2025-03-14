@@ -510,6 +510,10 @@ box-shadow: 0 0 0.25rem var(--accent-color);
   scale: 1.02;
 }
 
+.navbar .social-icons{
+  display: none;
+}
+
 #check {
   display: block;
   z-index: 5;
@@ -916,7 +920,7 @@ p {
 
 .portfolio h3 span {
   color:var(--base-color);
-  background-color: var(--secondary-text);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
   border-radius: 10px;
   padding: 0.2rem 0.5rem;
 }
@@ -1022,7 +1026,8 @@ p {
 
 .socials {
   margin: 1.87rem auto;
-
+  justify-content: center;
+  align-items: center;
 }
 
 .socials a {
@@ -1568,6 +1573,13 @@ form textarea {
     box-shadow: none;
     color: var(--secondary-text);
   }
+
+.navbar .social-icons{
+  display: inline;
+  justify-content: center;
+  margin: 0.6rem auto;
+  align-content: center;
+  }
 }
 
 
@@ -1631,6 +1643,13 @@ form textarea {
     transform: scale(1);
   }
 
+  .navbar .social-icons{
+  display: inline;
+  justify-content: center;
+  margin: 0.6rem auto;
+  align-content: center;
+  }
+  
   .navbar a {
     display: block;
     font-size: 1.1rem;
