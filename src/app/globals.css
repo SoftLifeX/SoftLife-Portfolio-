@@ -1034,7 +1034,7 @@ p {
   text-decoration: none;
   font-size: 1.87rem;
   color:  var(--secondary-text);
-  display: flex;
+  display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
   margin-bottom: 1.87rem;
@@ -1583,6 +1583,8 @@ form textarea {
   
   .navbar span::after{
     display: none;
+    width: 0;
+    height: 0;
   }
 }
 
@@ -1656,6 +1658,8 @@ form textarea {
   
   .navbar span::after{
     display: none;
+    width: 0;
+    height: 0;
   }
     
   .navbar a {
