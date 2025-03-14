@@ -44,6 +44,7 @@ function Craft1() {
               </div>
 
           {action === "Project" ? (
+            <div>
             <h5> My digital crafts </h5>
             
             <div className="work-list">
@@ -89,10 +90,12 @@ function Craft1() {
 
             <p className="fakemargin">margin</p>
             </div>
+          </div>
           ) : (
             <div/>
             )}
             {action === "Concept" ? (
+          <div>
             <h5> Concepts in production!</h5>
           <div className="work-list">
               <div className="work">
@@ -136,7 +139,7 @@ function Craft1() {
               </div>
             <p className="fakemargin">margin</p>
             </div>
-
+          </div>
             
           ) : (
             <div/>
