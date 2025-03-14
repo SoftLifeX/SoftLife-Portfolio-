@@ -141,8 +141,12 @@ function Craft1() {
           ) : (
             <div/>
             )}
+         </div>
         </div>
-           /* <div className="work-list">
+      </section>
+    </div>
+
+/* <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
                 <div className="layer">
@@ -186,9 +190,6 @@ function Craft1() {
 
             <p className="fakemargin">margin</p>
           </div>*/
-        </div>
-      </section>
-    </div>
   );
 }
 
