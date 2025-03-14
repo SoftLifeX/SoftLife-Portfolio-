@@ -920,7 +920,7 @@ p {
 
 .portfolio h3 span {
   color:var(--base-color);
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  background: linear-gradient(to right, var(--secondary-text), var(--text-color), var(--secondary-text));
   border-radius: 10px;
   padding: 0.2rem 0.5rem;
 }
@@ -1581,7 +1581,7 @@ form textarea {
   align-content: center;
   }
   
-  .navbar span::after{
+  .navbar span a::after{
     display: none;
     width: 0;
     height: 0;
@@ -1656,7 +1656,7 @@ form textarea {
   align-content: center;
   }
   
-  .navbar span::after{
+  .navbar span a::after{
     display: none;
     width: 0;
     height: 0;
