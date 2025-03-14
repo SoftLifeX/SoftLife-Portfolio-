@@ -80,11 +80,11 @@ function About2() {
               <h2>Certification & CV</h2>
               <ul>
                 <div className="cert_cv">
-                  <a href="" className="btn4">
-                    Certificate!
-                  </a>
+                  <a href="" download className="btn4">
+                  Resume <i className="bx bx-download bx-tada"></i>
+                </a>
                   <a href="" className="btn2">
-                    <i className="fa-solid fa-file-lines"></i>Resume
+                    <i className="fa-solid fa-file-lines"></i>Certificate 
                   </a>
                 </div>
               </ul>
