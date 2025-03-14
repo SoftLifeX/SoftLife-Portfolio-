@@ -1580,6 +1580,11 @@ form textarea {
   margin: 0.6rem auto;
   align-content: center;
   }
+
+  .navbar .social-icons a{
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
   
   .navbar span a::after{
     display: none;
@@ -1654,6 +1659,11 @@ form textarea {
   justify-content: center;
   margin: 0.6rem auto;
   align-content: center;
+  }
+
+  .navbar .social-icons a{
+    padding-left: 1rem;
+    font-size: 2rem;
   }
   
   .navbar span a::after{
