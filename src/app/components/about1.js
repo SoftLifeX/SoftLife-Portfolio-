@@ -28,7 +28,11 @@ function About1() {
             <div className="about-col-2">
               
               <div>
-                <p>
+                <motion.p
+               initial={{ opacity: 0, y: "60%" }}
+                animate={{ opacity: 1, y: "0%" }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+               >
                   An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
                   <br />
                    Continously striving to be the <b>finest</b> version
@@ -48,7 +52,7 @@ function About1() {
                   digital needs; Alternatively feel free to reach out and say
                   Hello! 😉
                   <br />
-                </p>
+                </motion.p>
                 <Magnetic2>
                 <Link href="/contact" className="btn2">
                   <i className="bx bxs-paper-plane"></i>Contact!
