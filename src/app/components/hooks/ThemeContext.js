@@ -8,7 +8,7 @@ export const useMode = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
 
-    const preferLightQuery = "(prefer-color-scheme: light)";
+    const preferLightQuery = "(prefer-color-scheme: dark)";
     const [mode, setMode] = useState("");
 
     useEffect(() => {
