@@ -13,9 +13,9 @@ function Home1() {
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
           <motion.h2
-            initial={{ opacity: 0, y: "100%" }}
+            initial={{ opacity: 0, y: "60%" }}
                 animate={{ opacity: 1, y: "0%" }}
-            transition={{ delay: 0.75, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
             >
             Hello👋! I'm{" "}
             <span className="typed">
@@ -31,9 +31,9 @@ function Home1() {
             <br />a Front End Developer and <span id="hobby"></span>
           </motion.h2>
           <motion.h1
-           initial={{ opacity: 0, y: "100%" }}
+           initial={{ opacity: 0, y: "60%" }}
                 animate={{ opacity: 1, y: "0%" }}
-            transition={{ delay: 0.75, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 1, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
                   >
             Helping brands thrive in the digital era.
           </motion.h1>
