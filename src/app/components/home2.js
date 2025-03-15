@@ -9,32 +9,6 @@ import { motion, useInView } from "framer-motion";
 
 function Home2() {
 
-   const anim = {
-
-    initial: {
-
-        opacity: 0, x: -100
-
-    },
-
-    open: {
-
-        opacity: 1, x: 0,
-
-        transition: {duration: 0.5}
-
-    },
-
-    closed: {
-
-        opacity: 0, x: -100,
-
-        transition: {duration: 0.5}
-
-    }
-
-   }
-
    const ref = useRef(null);
 
    const isInView = useInView(ref, { once: true });
@@ -80,8 +54,10 @@ function Home2() {
             <h5>Featured Projects</h5>
             <div className="work-list">
               <motion.div
-                variants={anim} animate={isInView ? "open" : "closed"}
-               className="work">
+                <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image 
                  priority={true}
                  src={images.work1} alt="work1" />
