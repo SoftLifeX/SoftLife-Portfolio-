@@ -13,8 +13,8 @@ function Home1() {
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
           <motion.h2
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: "100%" }}
+            animate={{ opacity: 1, y: "0%" }}
             transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             >
             Hello👋! I'm{" "}
