@@ -7,7 +7,7 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
-import ThemeProvider from "./hooks/ThemeProvider";
+import ThemeProvider from "./hooks/ThemeContext";
 
 function Header() {
   /*const [mode, setMode] = useThemeSwitcher();*/
