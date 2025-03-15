@@ -8,18 +8,11 @@ function About1() {
     <div>
       <section className="about1">
         <div className="about">
-        <motion.h5
-            initial={{ opacity: 0, y: "60%" }}
-                animate={{ opacity: 1, y: "0%" }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-             data-scroll data-scroll-speed={0.1}>About</motion.h5>
-          <motion.h1
-            initial={{ opacity: 0, y: "60%" }}
-                animate={{ opacity: 1, y: "0%" }}
-            transition={{ delay: 0.8, duration: 0.5 }}
+        <h5 data-scroll data-scroll-speed={0.1}>About</h5>
+          <h1
              data-scroll data-scroll-speed={0.1}>
             Creating symphonies of digital functionality and aesthetics
-          </motion.h1>
+          </h1>
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
             <div className="about-col-1">
@@ -31,7 +24,7 @@ function About1() {
                 <motion.p
                initial={{ opacity: 0, y: "60%" }}
                 animate={{ opacity: 1, y: "0%" }}
-            transition={{ delay: 0.8, duration: 0.5 }}
+            transition={{ delay: 0.75, duration: 0.5 }}
                >
                   An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
                   <br />
