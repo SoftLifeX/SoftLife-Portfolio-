@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "./components/hooks/ThemeContext";
 import TransitionProvider from "./components/transitionProvider";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
-import ThemeProvider from "./components/hooks/ThemeContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
