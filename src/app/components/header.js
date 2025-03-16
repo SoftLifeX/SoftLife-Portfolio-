@@ -12,7 +12,7 @@ import useTheme from "./hooks/ThemeContext";
 function Header() {
 /*const [mode, setMode] = useThemeSwitcher;*/
   
-const {theme, setTheme} = useTheme();
+const {theme, toggleTheme} = useTheme();
  
  const links = [
    {
@@ -81,7 +81,7 @@ const {theme, setTheme} = useTheme();
           <span></span>
         </div>
 
-   <div onClick={() => setMode(mode === "light" ? "dark" : "light")} id="theme-switch" title='theme'>
+   <div onClick={toggleTheme} id="theme-switch" title='theme'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="30"
