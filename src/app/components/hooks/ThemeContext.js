@@ -7,7 +7,40 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
+    const preferDarkQuery = "(prefer-color-scheme: dark)";
     const [theme, setTheme] = useState('');
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia(preferDarkQuery);
+        const userPref = window.localStorage.getItem("theme");
+
+        const handleChange = () => {
+            if(userPref){
+                let check = userPref === "light" ? "light" : "dark";
+                seTheme(check);
+
+                if(check==="light"){
+                    document.body.setAttribute('data-theme', 'light');
+                }
+                if(check==="dark"){
+                    document.body.setAttribute('data-theme', 'dark');
+                }
+            }else{
+                 let check = mediaQuery.matches ? "light" : "dark";
+                   setTheme(check);
+                
+                if(check==="light"){
+                    document.body.setAttribute('data-theme', 'light');
+                }
+                if(check==="dark"){
+                    document.body.setAttribute('data-theme', 'dark');
+                }
+            }
+        }
+        mediaQuery.addEventListener("change", handleChange)
+
+        return () => mediaQuery.removeEventListener("change", handleChange)
+    }, [])
             
   useEffect(() => {
     if(theme === 'light'){
