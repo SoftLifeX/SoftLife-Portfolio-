@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
-/*const  useThemeSwitcher = () => {
+const  useThemeSwitcher = () => {
 
-    const preferLightQuery = "(prefer-color-scheme: light)";
+    /*const preferLightQuery = "(prefer-color-scheme: light)";
     const [mode, setMode] = useState("");
 
     useEffect(() => {
@@ -44,8 +44,8 @@ import React, { useEffect, useState } from 'react'
             document.documentElement.classList.remove("light");
         }
     }, [mode])
-  return [mode, setMode]
+  return [mode, setMode]*/
 }
 
-export default useThemeSwitcher*/
+export default useThemeSwitcher
             
