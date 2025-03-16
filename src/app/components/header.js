@@ -10,8 +10,9 @@ import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import useMode from "./hooks/ThemeContext";
 
 function Header() {
-
-  const [mode, setMode] = useMode();
+/*const [mode, setMode] = useThemeSwitcher;*/
+  
+  const {mode, setMode} = useMode();
  
  const links = [
    {
