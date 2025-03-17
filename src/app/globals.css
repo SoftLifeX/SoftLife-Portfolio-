@@ -154,11 +154,11 @@
  display: none;
 }
  
-.light #theme-switch svg:first-child {
+[data-theme="light"] #theme-switch svg:first-child {
  display: none;
 }
  
-.light #theme-switch svg:last-child {
+[data-theme="light"] #theme-switch svg:last-child {
  display: block;
 }
 
@@ -794,7 +794,7 @@ p {
     color: transparent;
     background-clip: text;
     display: block;
-  font-weight: 500;
+  font-weight: bolder;
   margin: 2.18rem;
 }
 
