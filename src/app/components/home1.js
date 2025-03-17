@@ -16,7 +16,7 @@ function Home1() {
           <motion.h2
     initial={{ y: "60%" }}
     animate={{ y: "0%" }}
-    transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    transition={{ delay: 0.8, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             Hello👋! I'm{" "}
             <span className="typed">
@@ -34,7 +34,7 @@ function Home1() {
           <motion.h1
            initial={{ y: "60%" }}
     animate={{ y: "0%" }}
-    transition={{ delay: 0.8, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   >
             Helping brands thrive in the digital era.
           </motion.h1>
