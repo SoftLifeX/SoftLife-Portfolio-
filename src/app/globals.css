@@ -803,11 +803,11 @@ p {
   font-family: 'time';
 /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
-    background-clip: text;
-    display: block;*/
+    background-clip: text;*/
+    display: block;
   color: var(--text-color);
   font-size: 1.56rem;
-  margin: 1rem;
+  margin: 0.8rem;
   font-weight: 400;
 }
 
@@ -823,8 +823,8 @@ p {
   box-shadow: 0 0 0.18rem var(--accent-color);
   border-radius: 30% 50% 20% 40%;
   opacity: 1;
-  height: 18rem;
-  width: 19rem;
+  height: 17rem;
+  width: 18rem;
   z-index: 2;
   margin: auto;
   top: -30%;
