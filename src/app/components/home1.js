@@ -11,12 +11,13 @@ function Home1() {
     <div>
       <section className="home1">
         <div className="homepage">
-    <motion.div
+    <div
+  data-scroll data-scroll-speed={0.1}>
+          <motion.h2
     initial={{ y: "60%" }}
     animate={{ y: "0%" }}
-    transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-  data-scroll data-scroll-speed={0.1}>
-          <h2>
+    transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          >
             Hello👋! I'm{" "}
             <span className="typed">
               <Typewriter
@@ -29,11 +30,15 @@ function Home1() {
               />
             </span>
             <br />a Front End Developer and <span id="hobby"></span>
-          </h2>
-          <h1>
+          </motion.h2>
+          <motion.h1
+           initial={{ y: "60%" }}
+    animate={{ y: "0%" }}
+    transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                  >
             Helping brands thrive in the digital era.
-          </h1>
-      </motion.div>
+          </motion.h1>
+      </div>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
             <Magnetic2>
