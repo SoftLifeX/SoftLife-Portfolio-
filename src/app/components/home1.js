@@ -14,7 +14,7 @@ function Home1() {
     <motion.div
     initial={{ y: "60%" }}
     animate={{ y: "0%" }}
-    transition={{ delay: 0.79, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
   data-scroll data-scroll-speed={0.1}>
           <h2>
             Hello👋! I'm{" "}
