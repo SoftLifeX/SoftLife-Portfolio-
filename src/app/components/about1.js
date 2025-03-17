@@ -22,8 +22,8 @@ function About1() {
               
               <div>
                 <motion.p
-               initial={{ opacity: 0, y: "60%" }}
-                animate={{ opacity: 1, y: "0%" }}
+               initial={{ y: "60%" }}
+                animate={{ y: "0%" }}
             transition={{ delay: 0.75, duration: 0.5 }}
                >
                   An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
