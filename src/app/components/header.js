@@ -112,7 +112,7 @@ const {theme, toggleTheme} = useTheme();
           </li>
          </ul>
 
-     <span className="social-icons">
+    /* <span className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com">
                     <i className="bx bxl-gmail"></i>
                   </a>
@@ -137,7 +137,7 @@ const {theme, toggleTheme} = useTheme();
                   <a href="https://github.com/SoftLifeDev">
                     <i className="bx bxl-github"></i>
                   </a>
-                </span>
+                </span>*/
           
         </nav>
       </header>
