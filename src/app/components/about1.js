@@ -30,21 +30,19 @@ function About1() {
             <div className="about-col-2">
               
               <div>
-             
+             <p>
                {
-
                     phrase.split(" ").map( (word, index) => {
-
-                        return <motion.p
+                        return <motion.span
                initial={{ y: "60%" }}
                 animate={{ y: "0%" }}
             transition={{ delay: 0.75, duration: 0.5 }}
-            custom={index} key={index}>{word}</motion.p>
-
+            custom={index} key={index}>
+            {word}
+              </motion.span>
                     })
-
                     }
-                
+               </p>
                 <Magnetic2>
                 <Link href="/contact" className="btn2">
                   <i className="bx bxs-paper-plane"></i>Contact!
