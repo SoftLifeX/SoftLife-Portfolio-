@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState('');
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia(preferDarkQuery);
+        const mediaQuery = window.matchMedia(preferDarkQuery).matches;
         const userPref = window.localStorage.getItem("theme");
 
         const handleChange = () => {
