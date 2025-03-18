@@ -6,20 +6,19 @@ import Magnetic2 from "./magnetic2";
 function About1() {
 
   const phrase = "An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
-                  <br />
-                   Continously striving to be the <b>finest</b> version
+      
+                   Continously striving to be the finest version
                   of myself, my workflow is no exception.
-                  <br />
-                  <br />
-                  "As developers, we bridge the recess where <b>
+                  
+                  "As developers, we bridge the recess where
                     tech
-                  </b>{" "}
-                  meets <b>standard</b>" - Valhalla 
-                  <br /> 
+                  
+                  meets standard" - Valhalla 
+                  
                   A quote I live by, perfectly depicting my goals as a
                   developer.
-                  <br />
-                  <br />
+              
+                
                   I'd be ecstatic to chat over coffee ☕, reviewing your
                   digital needs; Alternatively feel free to reach out and say
                   Hello! 😉"
