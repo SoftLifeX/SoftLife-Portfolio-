@@ -103,7 +103,6 @@ const {theme, toggleTheme} = useTheme();
         </div>
 
         <nav className="navbar">
-              <p>NAVIGATION</p>
          <ul>
           <li>
             {links.map((link) => (
