@@ -5,15 +5,12 @@ import Magnetic2 from "./magnetic2";
 
 function About1() {
 
-  const phrase = "An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
+  const phrase = "An award-winning, detail-oriented professional specialized in React, Motion design and Next js as my major frame-work.
       
                    Continously striving to be the finest version
                   of myself, my workflow is no exception.
                   
-                  "As developers, we bridge the recess where
-                    tech
-                  
-                  meets standard" - Valhalla 
+                  "As developers, we bridge the recess where tech meets standard" - Valhalla 
                   
                   A quote I live by, perfectly depicting my goals as a
                   developer.
