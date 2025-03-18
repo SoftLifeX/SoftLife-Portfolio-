@@ -815,6 +815,22 @@ p {
   font-family: 'time';
 }
 
+.homepage .socials {
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage .socials a {
+  text-decoration: none;
+  font-size: 1.87rem;
+  color:  var(--secondary-text);
+  display: inline-flex;
+  transition: transform, ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin-left: 0 auto;
+}
+
 /*moving bubble*/
 .blob {
   position: fixed;
