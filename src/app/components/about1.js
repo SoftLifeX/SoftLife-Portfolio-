@@ -4,6 +4,25 @@ import Link from "next/link";
 import Magnetic2 from "./magnetic2";
 
 function About1() {
+
+  const phrase = "An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
+                  <br />
+                   Continously striving to be the <b>finest</b> version
+                  of myself, my workflow is no exception.
+                  <br />
+                  <br />
+                  "As developers, we bridge the recess where <b>
+                    tech
+                  </b>{" "}
+                  meets <b>standard</b>" - Valhalla 
+                  <br /> 
+                  A quote I live by, perfectly depicting my goals as a
+                  developer.
+                  <br />
+                  <br />
+                  I'd be ecstatic to chat over coffee ☕, reviewing your
+                  digital needs; Alternatively feel free to reach out and say
+                  Hello! 😉"
   return (
     <div>
       <section className="about1">
@@ -21,31 +40,21 @@ function About1() {
             <div className="about-col-2">
               
               <div>
-                <motion.p
+             
+               {
+
+                    phrase.split(" ").map( (word, index) => {
+
+                        return <motion.p
                initial={{ y: "60%" }}
                 animate={{ y: "0%" }}
             transition={{ delay: 0.75, duration: 0.5 }}
-               >
-                  An award-winning, detail-oriented professional specialized in <b>React</b>, <b>Motion design</b> and <b>Next js</b> as my major frame-work.
-                  <br />
-                   Continously striving to be the <b>finest</b> version
-                  of myself, my workflow is no exception.
-                  <br />
-                  <br />
-                  "As developers, we bridge the recess where <b>
-                    tech
-                  </b>{" "}
-                  meets <b>standard</b>" - Valhalla 
-                  <br /> 
-                  A quote I live by, perfectly depicting my goals as a
-                  developer.
-                  <br />
-                  <br />
-                  I'd be ecstatic to chat over coffee ☕, reviewing your
-                  digital needs; Alternatively feel free to reach out and say
-                  Hello! 😉
-                  <br />
-                </motion.p>
+            custom={index} key={index}>{word}</motion.p>
+
+                    })
+
+                    }
+                
                 <Magnetic2>
                 <Link href="/contact" className="btn2">
                   <i className="bx bxs-paper-plane"></i>Contact!
