@@ -227,10 +227,6 @@ section {
   scale: 0.98;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  height: 100svh;
-  position: relative;
-  display: flex;
-  overflow: hidden;
 }
 
 .home2 {
@@ -788,11 +784,14 @@ p {
 .homepage {
   align-content: center;
   height: 100svh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
 }
 
 .sliderContainer{
   position: absolute;
-/*  top: calc(100svh - 21.87rem);*/
+  top: calc(100svh - 21.87rem);
 }
 
 
@@ -808,11 +807,6 @@ p {
   position: relative;
   margin: 0px;
   font-family: 'penna';
- /* background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
-    color: transparent;
-    background-clip: text;
-    display: block;*/
-  color: white;
   font-size: 6rem;
   font-weight: bolder;
   padding-right: 3.12rem;
