@@ -8,6 +8,41 @@ import H1 from "./H1";
 
 
 function Home1() {
+
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: e => direction = e.direction * -1
+      },
+      x: "-500px",
+    })
+    requestAnimationFrame(animate);
+  }, [])
+
+  const animate = () => {
+    if(xPercent < -100){
+      xPercent = 0;
+    }
+    else if(xPercent > 0){
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, {xPercent: xPercent})
+    gsap.set(secondText.current, {xPercent: xPercent})
+    requestAnimationFrame(animate);
+    xPercent += 0.1 * direction;
+  }
+  
   return (
     <div>
       <section className="home1">
@@ -33,7 +68,12 @@ function Home1() {
             <br />a Front End Developer and <span id="hobby"></span>
           </motion.h2>
 
-        <H1/>
+        <div className="sliderContainer">
+        <div ref={slider} className="slider">
+          <h1 ref={firstText}>Freelance Developer -</h1>
+          <h1 ref={secondText}>Freelance Developer -</h1>
+        </div>
+      </div>
       </div>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
