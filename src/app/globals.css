@@ -797,9 +797,9 @@ p {
 
 .h2Container {
   position: absolute;
-  width: 18.5rem;
+  width: 19rem;
   height: 6.5rem;
-  top: 15svh;
+  top: 30svh;
 }
 
   .btnContainer {
