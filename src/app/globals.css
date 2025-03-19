@@ -694,6 +694,11 @@ p {
 .homepage .btn2 {
   display: inline;
   margin: 1.87rem auto;
+    position: absolute;
+}
+
+.homepage .btn4{
+  position: absolute;
 }
 
 .btn4 {
@@ -805,7 +810,7 @@ p {
   position: relative;
   margin: 0px;
   font-family: 'penna';
-  font-size: 15rem;
+  font-size: 14rem;
   font-weight: bolder;
   padding-right: 3.12rem;
 }
@@ -839,6 +844,7 @@ p {
   font-size: 1.56rem;
   margin: 0.8rem;
   font-weight: 400;
+    position: relative;
 }
 
 .homepage h2 span {
