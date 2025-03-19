@@ -52,6 +52,8 @@ function Home1() {
         <div className="homepage">
     <div
   data-scroll data-scroll-speed={0.1}>
+
+    <div className="h2Container">
           <motion.h2
     initial={{ y: "60%" }}
     animate={{ y: "0%" }}
@@ -70,6 +72,7 @@ function Home1() {
             </span>
             <br />a Front End Developer and <span id="hobby"></span>
           </motion.h2>
+       </div>
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
@@ -80,6 +83,7 @@ function Home1() {
       </div>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
+              <div className="btnContainer">
             <Magnetic2>
                 <a href="" download className="btn4">
                   Resume <i className="bx bx-download bx-tada"></i>
@@ -90,6 +94,7 @@ function Home1() {
               Contact <i className="bx bx-arrow-to-top bx-tada"></i>
             </Link>
             </Magnetic2>
+           </div>
           </div>
           <div className="socials">
             <a href="https://wa.link/wjns9h">
