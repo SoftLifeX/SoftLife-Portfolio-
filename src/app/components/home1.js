@@ -5,8 +5,7 @@ import { ScrollTrigger } from 'gsap/all';
 import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
-import Magnetic2 from "./magnetic2";
-import H1 from "./H1";
+import Magnetic2 from "./magnetic2"
 
 
 
@@ -50,9 +49,26 @@ function Home1() {
     <div>
       <section className="home1">
         <div className="homepage">
-    <div
-  data-scroll data-scroll-speed={0.1}>
-
+    <div data-scroll data-scroll-speed={0.1}>
+<div className="socialContainer">           
+          <div className="socials">
+            <a href="https://wa.link/wjns9h">
+              <i className="bx bxl-whatsapp"></i>
+            </a>
+            <a href="https://github.com/SoftLifeDev">
+              <i className="bx bxl-github"></i>
+            </a>
+            <a href="">
+              <i className="bx bxl-linkedin-square"></i>
+            </a>
+            <a href="https://www.instagram.com/softlifekid/">
+              <i className="bx bxl-instagram"></i>
+            </a>
+            <a href="">
+              <i className="fa-brands fa-square-x-twitter"></i>
+            </a>
+          </div>
+         </div>
     <div className="h2Container">
           <motion.h2
     initial={{ y: "60%" }}
@@ -81,7 +97,6 @@ function Home1() {
         </div>
       </div>
       </div>
-          <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
               <div className="btnContainer">
             <Magnetic2>
@@ -95,23 +110,6 @@ function Home1() {
             </Link>
             </Magnetic2>
            </div>
-          </div>
-          <div className="socials">
-            <a href="https://wa.link/wjns9h">
-              <i className="bx bxl-whatsapp"></i>
-            </a>
-            <a href="https://github.com/SoftLifeDev">
-              <i className="bx bxl-github"></i>
-            </a>
-            <a href="">
-              <i className="bx bxl-linkedin-square"></i>
-            </a>
-            <a href="https://www.instagram.com/softlifekid/">
-              <i className="bx bxl-instagram"></i>
-            </a>
-            <a href="">
-              <i className="fa-brands fa-square-x-twitter"></i>
-            </a>
           </div>
         </div>
       </section>
