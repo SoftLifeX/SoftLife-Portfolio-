@@ -228,6 +228,8 @@ section {
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   height: 100svh;
+  position: relative;
+  display: flex;
 }
 
 .home2 {
@@ -789,7 +791,7 @@ p {
 
 .sliderContainer{
   position: absolute;
-  top: calc(100vh - 350px);
+  top: calc(100svh - 21.87rem);
 }
 
 
@@ -809,9 +811,9 @@ p {
     color: transparent;
     background-clip: text;
     display: block;
-  font-size: 230px;
-  font-weight: 500;
-  padding-right: 50px;
+  font-size: 6rem;
+  font-weight: bolder;
+  padding-right: 3.12rem;
 }
 
 .slider h1:nth-of-type(2){
