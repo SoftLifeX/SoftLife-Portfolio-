@@ -40,13 +40,11 @@ export default function H1() {
   }
 
   return (
-    <main>
       <div className="sliderContainer">
         <div ref={slider} className="slider">
           <h1 ref={firstText}>Freelance Developer -</h1>
           <h1 ref={secondText}>Freelance Developer -</h1>
         </div>
       </div>
-    </main>
   )
         }
