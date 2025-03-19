@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2";
+import H1 from "./H1";
 
 
 
@@ -31,13 +32,8 @@ function Home1() {
             </span>
             <br />a Front End Developer and <span id="hobby"></span>
           </motion.h2>
-          <motion.h1
-           initial={{ y: "60%" }}
-    animate={{ y: "0%" }}
-    transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  >
-            Helping brands thrive in the digital era.
-          </motion.h1>
+
+        <H1/>
       </div>
           <div className="blob"></div>
           <div data-scroll data-scroll-speed={0.1}>
