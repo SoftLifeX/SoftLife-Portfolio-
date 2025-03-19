@@ -694,11 +694,13 @@ p {
 .homepage .btn2 {
   display: inline;
   margin: 1.87rem auto;
-    position: absolute;
+  position: absolute;
+  top: 40svh;
 }
 
 .homepage .btn4{
   position: absolute;
+  top: 40svh;
 }
 
 .btn4 {
@@ -844,7 +846,8 @@ p {
   font-size: 1.56rem;
   margin: 0.8rem;
   font-weight: 400;
-    position: relative;
+  position: absolute;
+  top: 40svh;
 }
 
 .homepage h2 span {
