@@ -694,13 +694,11 @@ p {
 .homepage .btn2 {
   display: inline;
   margin: 1.87rem auto;
-  position: absolute;
-  top: 40svh;
+  position: relative;
 }
 
 .homepage .btn4{
-  position: absolute;
-  top: 40svh;
+  position: relative;
 }
 
 .btn4 {
@@ -796,6 +794,16 @@ p {
   overflow: hidden;
 }
 
+.h2Container {
+  position: absolute;
+  top: 20svh;
+}
+
+  .btnContainer {
+  position: absolute;
+  top: 70svh;
+  }
+
 .sliderContainer{
   position: absolute;
   top: 40svh;
@@ -840,14 +848,12 @@ p {
   font-family: 'time';
 /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
-    background-clip: text;*/
-    display: block;
+    background-clip: text;
+    display: block;*/
   color: var(--text-color);
   font-size: 1.56rem;
   margin: 0.8rem;
   font-weight: 400;
-  position: absolute;
-  top: 40svh;
 }
 
 .homepage h2 span {
