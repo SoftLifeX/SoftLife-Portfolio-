@@ -796,6 +796,8 @@ p {
 
 .h2Container {
   position: absolute;
+  width: 18rem;
+  height: 7rem;
   top: 15svh;
 }
 
