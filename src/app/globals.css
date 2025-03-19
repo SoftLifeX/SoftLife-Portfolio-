@@ -1077,7 +1077,7 @@ p {
 .socials a {
   text-decoration: none;
   font-size: 1.87rem;
-  color:  var(--secondary-text);
+  color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -1086,7 +1086,6 @@ p {
 }
 
 .socials a:hover {
-  color: var(--text-color);
   transform: translateY(-0.31rem);
 }
 
