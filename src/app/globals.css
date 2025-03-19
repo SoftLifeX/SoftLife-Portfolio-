@@ -230,6 +230,8 @@ section {
   height: 100svh;
   position: relative;
   display: flex;
+  margin-bottom: 100vh;
+  overflow: hidden;
 }
 
 .home2 {
