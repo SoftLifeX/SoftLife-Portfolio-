@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
