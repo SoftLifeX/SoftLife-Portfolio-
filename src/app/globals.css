@@ -230,7 +230,6 @@ section {
   height: 100svh;
   position: relative;
   display: flex;
-  margin-bottom: 100vh;
   overflow: hidden;
 }
 
@@ -793,7 +792,7 @@ p {
 
 .sliderContainer{
   position: absolute;
-  top: calc(100svh - 21.87rem);
+/*  top: calc(100svh - 21.87rem);*/
 }
 
 
@@ -809,10 +808,11 @@ p {
   position: relative;
   margin: 0px;
   font-family: 'penna';
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+ /* background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
-    display: block;
+    display: block;*/
+  color: white;
   font-size: 6rem;
   font-weight: bolder;
   padding-right: 3.12rem;
