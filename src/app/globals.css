@@ -796,7 +796,7 @@ p {
 
 .h2Container {
   position: absolute;
-  top: 20svh;
+  top: 15svh;
 }
 
   .btnContainer {
@@ -844,7 +844,6 @@ p {
 }*/
 
 .homepage h2 {
-  text-align: center;
   font-family: 'time';
 /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
@@ -852,7 +851,7 @@ p {
     display: block;*/
   color: var(--text-color);
   font-size: 1.56rem;
-  margin: 0.8rem;
+  margin: 0rem;
   font-weight: 400;
 }
 
@@ -873,7 +872,7 @@ p {
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
-  margin-left: 0 auto;
+  margin-left: auto;
 }
 
 /*moving bubble*/
