@@ -791,10 +791,8 @@ p {
 
 .sliderContainer{
   position: absolute;
-  top: 50svh;
+  top: 40svh;
 }
-
-
 
 .slider{
   position: relative;
@@ -807,18 +805,18 @@ p {
   position: relative;
   margin: 0px;
   font-family: 'penna';
-  font-size: 10rem;
+  font-size: 15rem;
   font-weight: bolder;
   padding-right: 3.12rem;
 }
 
 .slider h1:nth-of-type(2){
   position: absolute;
-  left: 100svw;
-  top: -2%;
+  left: 100%;
+  top: 0;
 }
 
-.homepage h1 {
+/*.homepage h1 {
   text-align: center;
   font-family: 'penna';
   background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
@@ -828,7 +826,7 @@ p {
   font-weight: bolder;
   margin: 2.18rem;
   font-size: 5.5rem;
-}
+}*/
 
 .homepage h2 {
   text-align: center;
