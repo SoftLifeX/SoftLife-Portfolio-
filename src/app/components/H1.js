@@ -1,6 +1,4 @@
 'use client'
-import Image from 'next/image'
-import styles from './page.module.css'
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
@@ -45,8 +43,8 @@ export default function H1() {
     <main>
       <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <p ref={firstText}>Freelance Developer -</p>
-          <p ref={secondText}>Freelance Developer -</p>
+          <h1 ref={firstText}>Freelance Developer -</h1>
+          <h1 ref={secondText}>Freelance Developer -</h1>
         </div>
       </div>
     </main>
