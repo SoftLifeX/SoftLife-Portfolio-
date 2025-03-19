@@ -799,14 +799,14 @@ p {
   position: absolute;
   width: 19rem;
   height: 6.5rem;
-  top: 25svh;
+  top: 22svh;
   }
 
 .h2Container {
   position: absolute;
-  width: 19rem;
+  width: fit-content;
   height: 6.5rem;
-  top: 30svh;
+  top: 28svh;
 }
 
   .btnContainer {
@@ -882,11 +882,11 @@ position: relative;}
 .homepage .socials a {
   text-decoration: none;
   font-size: 1.87rem;
-  color:  var(--secondary-text);
+  color:  var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
-  margin-left: auto;
+  margin-left: 0.5rem;
 }
 
 /*moving bubble*/
