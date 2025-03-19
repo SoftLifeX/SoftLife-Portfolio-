@@ -73,8 +73,8 @@ function Home1() {
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 ref={firstText}>Freelance Developer -</h1>
-          <h1 ref={secondText}>Freelance Developer -</h1>
+          <h1 ref={firstText}>Helping brands thrive in our digital era </h1>
+          <h1 ref={secondText}>Helping brands thrive in our digital era </h1>
         </div>
       </div>
       </div>
