@@ -795,6 +795,13 @@ p {
   overflow: hidden;
 }
 
+  .socialContainer {
+  position: absolute;
+  width: 19rem;
+  height: 6.5rem;
+  top: 25svh;
+  }
+
 .h2Container {
   position: absolute;
   width: 19rem;
@@ -858,6 +865,7 @@ p {
   font-size: 1.56rem;
   margin: 1rem 1rem;
   font-weight: 400;
+  position: relative;
 }
 
 .homepage h2 span {
@@ -865,10 +873,11 @@ p {
 }
 
 .homepage .socials {
-  margin: 1rem auto;
+  margin: 1rem 1rem;
   justify-content: center;
   align-items: center;
-}
+  
+position: relative;}
 
 .homepage .socials a {
   text-decoration: none;
@@ -881,7 +890,7 @@ p {
 }
 
 /*moving bubble*/
-.blob {
+/*.blob {
   position: fixed;
   content: "";
   background-color: transparent;
@@ -937,7 +946,7 @@ p {
   50% {
     transform: rotateY('10deg') scale(1.2);
   }
-}
+}*/
 
 .typed {
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
