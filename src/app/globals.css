@@ -791,7 +791,7 @@ p {
 
 .sliderContainer{
   position: absolute;
-  top: calc(100svh - 21.87rem);
+  top: calc(50svh);
 }
 
 
