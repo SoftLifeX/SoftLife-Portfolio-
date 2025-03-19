@@ -693,12 +693,13 @@ p {
 
 .homepage .btn2 {
   display: inline;
-  margin: 1.87rem auto;
+  margin: 1rem 1rem;
   position: relative;
 }
 
 .homepage .btn4{
   position: relative;
+  margin: 1rem 1rem;
 }
 
 .btn4 {
@@ -796,14 +797,16 @@ p {
 
 .h2Container {
   position: absolute;
-  width: 18rem;
-  height: 7rem;
+  width: 18.5rem;
+  height: 6.5rem;
   top: 15svh;
 }
 
   .btnContainer {
   position: absolute;
   top: 70svh;
+    width: 18.5rem;
+  height: 6.5rem;
   }
 
 .sliderContainer{
@@ -853,7 +856,7 @@ p {
     display: block;*/
   color: var(--text-color);
   font-size: 1.56rem;
-  margin: 0rem;
+  margin: 1rem 1rem;
   font-weight: 400;
 }
 
