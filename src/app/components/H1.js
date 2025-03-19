@@ -43,8 +43,8 @@ export default function H1() {
 
   return (
     <main>
-      <div className= sliderContainer>
-        <div ref={slider} className= slider>
+      <div className="sliderContainer">
+        <div ref={slider} className="slider">
           <p ref={firstText}>Freelance Developer -</p>
           <p ref={secondText}>Freelance Developer -</p>
         </div>
