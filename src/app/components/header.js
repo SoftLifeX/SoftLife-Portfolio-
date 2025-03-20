@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import NavLink from "./navlink";
+import { motion as m } from "motion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
