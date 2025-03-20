@@ -985,11 +985,11 @@ position: relative;}
 
 @keyframes animate {
   0% {
-    content: "a Content-Creator 📷";
+    content: "a Content-Creator 📷 🤳🏼";
   }
 
   25% {
-    content: "a Lover of Arts 🎨";
+    content: "a Lover of the Arts 🎨 🍷";
   }
 
   50% {
@@ -997,11 +997,11 @@ position: relative;}
   }
 
   75% {
-    content: "a Travel Enthusiast ✈️";
+    content: "a Travel Enthusiast ✈️ 🌍";
   }
 
   100% {
-    content: "a Book Worm 📖";
+    content: "a Book Worm 📖 📚";
   }
 }
 
