@@ -176,7 +176,7 @@ const {theme, toggleTheme} = useTheme();
                     stroke: "yellow",
                     fill: "yellow",
                     fillOpacity: 0.35,
-                    strokeOpacity: 1,
+                    strokeOpacity: 0.8,
                     transition: { delay: 0.1 },
                   }
                   : {
@@ -186,28 +186,7 @@ const {theme, toggleTheme} = useTheme();
                     stroke: "blue",
                     fill: "blue",
                     fillOpacity: 0.35,
-                    strokeOpacity: 1,
-                  }
-                theme === "dark"
-                  ? {
-                    d: moonPath,
-                    rotate: -360,
-                    scale: 1.6,
-                    stroke: "blue",
-                    fill: "blue",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 1,
-                    transition: { delay: 0.1 },
-                  }
-                  : {
-                    d: sunPath,
-                    rotate: 0,
-                    scale: 1.6,
-                    stroke: "yellow",
-                    fill: "yellow",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 1,
-                    
+                    strokeOpacity: 0.8,
                   }
               }
             />
