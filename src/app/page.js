@@ -18,13 +18,17 @@ useEffect(() => {
  }, []);
 
   return (
-    <div>
+    <motion.div
+      initial={{ y: "60vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
       
       <Home1 />
       <Home2 />
       <Contact />
 
-    </div>
+    </motion.div>
   );
 };
 
