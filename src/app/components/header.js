@@ -185,8 +185,8 @@ const {theme, toggleTheme} = useTheme();
                     d: moonPath,
                     rotate: -360,
                     scale: 2,
-                    stroke: "var(--color-blue-400)",
-                    fill: "var(--color-blue-400)",
+                    stroke: "blue",
+                    fill: "blue",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
                     transition: { delay: 0.1 },
@@ -195,8 +195,8 @@ const {theme, toggleTheme} = useTheme();
 
                     d: sunPath,
                     rotate: 0,
-                    stroke: "var(--color-yellow-600)",
-                    fill: "var(--color-yellow-600)",
+                    stroke: "yellow",
+                    fill: "yellow",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
                   }
