@@ -172,7 +172,7 @@ const {theme, toggleTheme} = useTheme();
                   ? {
                     d: sunPath,
                     rotate: 360,
-                    scale: 1.8,
+                    scale: 1.6,
                     stroke: "yellow",
                     fill: "yellow",
                     fillOpacity: 0.35,
@@ -181,12 +181,33 @@ const {theme, toggleTheme} = useTheme();
                   }
                   : {
                     d: moonPath,
-                    rotate: 360,
-                    scale: 1.8,
+                    rotate: 0,
+                    scale: 1.6,
                     stroke: "blue",
                     fill: "blue",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
+                  }
+                theme === "dark"
+                  ? {
+                    d: moonPath,
+                    rotate: -360,
+                    scale: 1.6,
+                    stroke: "blue",
+                    fill: "blue",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 1,
+                    transition: { delay: 0.1 },
+                  }
+                  : {
+                    d: sunPath,
+                    rotate: 0,
+                    scale: 1.6,
+                    stroke: "yellow",
+                    fill: "yellow",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 1,
+                    
                   }
               }
             />
