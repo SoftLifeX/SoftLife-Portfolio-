@@ -86,7 +86,7 @@ function Home1() {
                 delaySpeed={1000}
               />
             </span>
-            <br />a Front End Developer and <span id="hobby"></span>
+            <br />a Front End Developer and <br/> <span id="hobby"></span>
           </motion.h2>
        </div>
 
