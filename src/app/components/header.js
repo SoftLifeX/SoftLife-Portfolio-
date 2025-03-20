@@ -163,7 +163,7 @@ const {theme, toggleTheme} = useTheme();
             <m.path variants={shineVariant} d={moonPath} className={'absolute top-0 left-0 stroke-blue-100 '} initial="hidden" animate={theme === 'dark' ? 'visible' : "hidden"} />
 
             <m.path
-              d={sunPath}
+              d={moonPath}
               fill="transparent"
               transition={{ duration: 1, type: "spring" }}
               initial={{ fillOpacity: 0, strokeOpacity: 0 }}
