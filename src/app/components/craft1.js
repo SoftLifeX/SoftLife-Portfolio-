@@ -27,7 +27,7 @@ function Craft1() {
                         setAction("Project");
                         }}
                        >
-                        Featured Projects
+                        Case Studies 
                       </a>
                     </li>
                     <li>
@@ -45,7 +45,7 @@ function Craft1() {
 
           {action === "Project" ? (
             <div>
-            <p> My digital crafts </p>
+            <h3> My digital crafts </h3>
             
             <div className="work-list">
               <div className="work">
@@ -96,7 +96,7 @@ function Craft1() {
             )}
             {action === "Concept" ? (
           <div>
-            <p> Concepts in production!</p>
+            <h3> Concepts in production!</h3>
           <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
