@@ -832,6 +832,7 @@ p {
 .slider h1{
   position: relative;
   margin: 0px;
+  color: var(--text-color);
   font-family: 'penna';
   font-size: 14rem;
   font-weight: bolder;
