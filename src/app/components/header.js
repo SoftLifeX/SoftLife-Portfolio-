@@ -164,14 +164,22 @@ const {theme, toggleTheme} = useTheme();
 
 
             <m.g variants={raysVariants} initial='hidden' animate={theme === "light" ? "visible" : "hidden"} className="stroke-6 stroke-yellow-600 " style={{ strokeLinecap: 'round' }}>
-              <m.path className="origin-center" variants={rayVariant} d="M50 2V11" />
-              <m.path variants={rayVariant} d="M85 15L78 22" />
-              <m.path variants={rayVariant} d="M98 50H89" />
-              <m.path variants={rayVariant} d="M85 85L78 78" />
-              <m.path variants={rayVariant} d="M50 98V89" />
-              <m.path variants={rayVariant} d="M23 78L16 84" />
-              <m.path variants={rayVariant} d="M11 50H2" />
-              <m.path variants={rayVariant} d="M23 23L16 16" />
+              <m.path className="origin-center" variants={rayVariant} d="M50 2V11" stroke: "yellow",
+                    fill: "yellow" />
+              <m.path variants={rayVariant} d="M85 15L78 22" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M98 50H89" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M85 85L78 78" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M50 98V89" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M23 78L16 84" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M11 50H2" stroke: "yellow",
+                    fill: "yellow"/>
+              <m.path variants={rayVariant} d="M23 23L16 16" stroke: "yellow",
+                    fill: "yellow"/>
             </m.g>
 
             <m.path
