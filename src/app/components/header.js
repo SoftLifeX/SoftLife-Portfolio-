@@ -172,6 +172,7 @@ const {theme, toggleTheme} = useTheme();
                   ? {
                     d: sunPath,
                     rotate: 360,
+                    scale: 1.8,
                     stroke: "yellow",
                     fill: "yellow",
                     fillOpacity: 0.35,
@@ -181,6 +182,7 @@ const {theme, toggleTheme} = useTheme();
                   : {
                     d: moonPath,
                     rotate: 360,
+                    scale: 1.8,
                     stroke: "blue",
                     fill: "blue",
                     fillOpacity: 0.35,
