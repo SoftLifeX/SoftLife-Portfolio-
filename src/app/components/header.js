@@ -171,21 +171,20 @@ const {theme, toggleTheme} = useTheme();
                 theme === "light"
                   ? {
                     d: sunPath,
-                    rotate: 0,
+                    rotate: 360,
                     stroke: "yellow",
                     fill: "yellow",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
+                    transition: { delay: 0.1 },
                   }
                   : {
                     d: moonPath,
-                    rotate: -360,
-                    scale: 2,
+                    rotate: 360,
                     stroke: "blue",
                     fill: "blue",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
-                    transition: { delay: 0.1 },
                   }
               }
             />
