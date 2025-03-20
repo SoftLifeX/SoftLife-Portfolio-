@@ -168,8 +168,16 @@ const {theme, toggleTheme} = useTheme();
               transition={{ duration: 1, type: "spring" }}
               initial={{ fillOpacity: 0, strokeOpacity: 0 }}
               animate={
-                theme === "dark"
+                theme === "light"
                   ? {
+                    d: sunPath,
+                    rotate: 0,
+                    stroke: "yellow",
+                    fill: "yellow",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 1,
+                  }
+                  : {
                     d: moonPath,
                     rotate: -360,
                     scale: 2,
@@ -178,15 +186,6 @@ const {theme, toggleTheme} = useTheme();
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
                     transition: { delay: 0.1 },
-                  }
-                  : {
-
-                    d: sunPath,
-                    rotate: 0,
-                    stroke: "yellow",
-                    fill: "yellow",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 1,
                   }
               }
             />
