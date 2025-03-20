@@ -800,19 +800,19 @@ p {
   position: absolute;
   width: 19rem;
   height: 6.5rem;
-  top: 22svh;
+  top: 20svh;
   }
 
 .h2Container {
   position: absolute;
   width: 20rem;
   height: 6.5rem;
-  top: 28svh;
+  top: 25svh;
 }
 
   .btnContainer {
   position: absolute;
-  top: 70svh;
+  top: 72svh;
     width: 18.5rem;
   height: 6.5rem;
   }
