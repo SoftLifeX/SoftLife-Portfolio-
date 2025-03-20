@@ -160,10 +160,10 @@ const {theme, toggleTheme} = useTheme();
             xmlns="http://www.w3.org/2000/svg"
             className='relative'
           >
-            <m.path variants={shineVariant} d={moonPath} initial="hidden" animate={theme === 'dark' ? 'visible' : "hidden"} />
+            <m.path variants={shineVariant} d={moonPath} className={'absolute top-0 left-0 stroke-blue-100 '} initial="hidden" animate={theme === 'dark' ? 'visible' : "hidden"} />
 
 
-            <m.g variants={raysVariants} initial='hidden' animate={theme === "light" ? "visible" : "hidden"} style={{ strokeLinecap: 'round' }}>
+            <m.g variants={raysVariants} initial='hidden' animate={theme === "light" ? "visible" : "hidden"} className="stroke-6 stroke-yellow-600 " style={{ strokeLinecap: 'round' }}>
               <m.path className="origin-center" variants={rayVariant} d="M50 2V11" />
               <m.path variants={rayVariant} d="M85 15L78 22" />
               <m.path variants={rayVariant} d="M98 50H89" />
@@ -185,6 +185,8 @@ const {theme, toggleTheme} = useTheme();
                     d: moonPath,
                     rotate: -360,
                     scale: 2,
+                    stroke: "var(--color-blue-400)",
+                    fill: "var(--color-blue-400)",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
                     transition: { delay: 0.1 },
@@ -193,12 +195,15 @@ const {theme, toggleTheme} = useTheme();
 
                     d: sunPath,
                     rotate: 0,
+                    stroke: "var(--color-yellow-600)",
+                    fill: "var(--color-yellow-600)",
                     fillOpacity: 0.35,
                     strokeOpacity: 1,
                   }
               }
             />
           </m.svg>
+
         </div>
 
         <nav className="navbar">
