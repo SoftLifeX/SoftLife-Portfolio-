@@ -4,8 +4,6 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./header";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { Typewriter, Cursor } from "nextjs-simple-typewriter";
-
 
 
 const TransitionProvider = ({ children }) => {
@@ -41,14 +39,7 @@ const TransitionProvider = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <Typewriter
-                words= {paths[pathName]}
-                cursor
-                cursorStyle=""
-                typeSpeed={5}
-                deleteSpeed={1000}
-                delaySpeed={1000}
-              />
+          {paths[pathName]}
         </motion.div>
         <motion.div
           className="TransitionProvider3"
