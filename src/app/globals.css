@@ -1902,6 +1902,22 @@ form textarea {
     bottom: 0;
     z-index: 990;
   }
+
+  .loader{
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--base-color);
+    font-size: 4rem;
+    cursor: default;
+    z-index: 999;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'time', sans-serif;
+  }
 }
 
 
@@ -1943,3 +1959,19 @@ form textarea {
   bottom: 0;
   z-index: 990;
 }
+
+  .loader{
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--base-color);
+    font-size: 4rem;
+    cursor: default;
+    z-index: 999;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'time', sans-serif;
+    }
