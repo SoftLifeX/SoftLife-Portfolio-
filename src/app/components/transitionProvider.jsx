@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./header";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 
 
 
