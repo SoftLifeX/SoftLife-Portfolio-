@@ -34,13 +34,13 @@ export default function loading() {
     return (
         <div>
             <motion.div
-          className="TransitionProvider2"
+          className="loader"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 1, ease: "easeOut" }}
         >
-          {paths[pathName]}
+          {words[index]}
         </motion.div>
         <motion.div
           className="TransitionProvider3"
