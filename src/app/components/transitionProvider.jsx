@@ -41,7 +41,14 @@ const TransitionProvider = ({ children }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {paths[pathName]}
+          <Typewriter
+                words= {paths[pathName]}
+                cursor
+                cursorStyle=""
+                typeSpeed={90}
+                deleteSpeed={1000}
+                delaySpeed={1000}
+              />
         </motion.div>
         <motion.div
           className="TransitionProvider3"
