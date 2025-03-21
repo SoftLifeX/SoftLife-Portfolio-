@@ -86,14 +86,14 @@ function Home1() {
                 delaySpeed={1000}
               />
             </span>
-            <br />an award-winning Software Developer, Designer and <br/> <span id="hobby"></span>
+            <br />an award-winning Developer, Designer and <br/> <span id="hobby"></span>
           </motion.h2>
        </div>
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 ref={firstText}>   Helping brands thrive in our digital era   </h1>
-          <h1 ref={secondText}>   Helping brands thrive in our digital era   </h1>
+          <h1 ref={firstText}>  Helping brands thrive in our digital era  </h1>
+          <h1 ref={secondText}>  Helping brands thrive in our digital era  </h1>
         </div>
       </div>
       </div>
