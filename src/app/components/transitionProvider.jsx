@@ -45,7 +45,7 @@ const TransitionProvider = ({ children }) => {
                 words= {paths[pathName]}
                 cursor
                 cursorStyle=""
-                typeSpeed={40}
+                typeSpeed={5}
                 deleteSpeed={1000}
                 delaySpeed={1000}
               />
