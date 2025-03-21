@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 const NavLink = ({ link }) => {
   const pathName = usePathname();
-  const numbers = [-1]
+  const numbers = [1]
 
   return (
     <div>
