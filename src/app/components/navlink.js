@@ -12,8 +12,7 @@ const NavLink = ({ link }) => {
   return (
     <div>
     
-    <Link className={pathName === link.url ? "active" : ""} href={link.url} 
-    style={{ "--i": 1 }}>
+    <Link className={pathName === link.url ? "active" : ""} href={link.url}>
      <span> {link.icon}</span>{link.title}
     </Link>
   
