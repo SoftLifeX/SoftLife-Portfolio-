@@ -4,19 +4,19 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 
-const numbers = [1,2,3,4]
+
 
 const NavLink = ({ link }) => {
   const pathName = usePathname();
 
   return (
     <div>
-    {numbers.map((num) => (
-    <Link key={num}  className={pathName === link.url ? "active" : ""} href={link.url} 
-    style={{ "--i": num }}>
+    
+    <Link className={pathName === link.url ? "active" : ""} href={link.url} 
+    style={{ "--i": 1 }}>
      <span> {link.icon}</span>{link.title}
     </Link>
-  ))}
+  
   </div>
   );
 };
