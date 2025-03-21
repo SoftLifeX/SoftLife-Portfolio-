@@ -7,7 +7,7 @@ const NavLink = ({ link }) => {
   const pathName = usePathname();
 
   return (
-    <Link className={pathName === link.url ? "active" : ""} href={link.url}>
+    <Link className={pathName === link.url ? "active" : ""} href={link.url} style={{ "--i": num }}>
      <span> {link.icon}</span>{link.title}
     </Link>
   );
