@@ -10,9 +10,10 @@ const NavLink = ({ link }) => {
   return (
     <div>
     {numbers.map((num) => (
-    <Link className={pathName === link.url ? "active" : ""} href={link.url} style={{ "--i": num }}>
+    <Link key={num} className={pathName === link.url ? "active" : ""} href={link.url} style={{ "--i": num }}>
      <span> {link.icon}</span>{link.title}
     </Link>
+  ))}
   </div>
   );
 };
