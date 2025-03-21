@@ -75,18 +75,18 @@ function Home1() {
     animate={{ y: "0%" }}
     transition={{ delay: 0.65, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            Hello👋! I'm{" "}
+            Hello 👋, I'm{" "}
             <span className="typed">
               <Typewriter
                 words={["Daniel c. Daniel, \n popularly known as SoftLife!"]}
                 cursor
-                cursorStyle="_"
+                cursorStyle=""
                 typeSpeed={90}
                 deleteSpeed={1000}
                 delaySpeed={1000}
               />
             </span>
-            <br />an award-winning Software Developer and <br/> <span id="hobby"></span>
+            <br />an award-winning Software Developer, Designer and <br/> <span id="hobby"></span>
           </motion.h2>
        </div>
 
