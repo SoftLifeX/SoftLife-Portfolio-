@@ -10,7 +10,7 @@ const NavLink = ({ link }) => {
     <div>
     
     <Link className={pathName === link.url ? "active" : ""} href={link.url} 
-    style={{ "--i": -1 }}>
+    style={{ "--i": 1 }}>
      <span> {link.icon}</span>{link.title}
     </Link>
   </div>
