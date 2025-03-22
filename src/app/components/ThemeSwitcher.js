@@ -79,7 +79,6 @@ export default function ThemeSwitcher() {
     "M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C39 45 49.5 59.5 70 49.5Z"
   return (
     <div onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
-      >
          id="theme-switch" title='theme'>
           <m.svg
             strokeWidth="4"
