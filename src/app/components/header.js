@@ -7,9 +7,11 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
-/*import { useTheme } from "./hooks/ThemeContext";*/
-import { useTheme } from 'next-themes';
+import ThemeSwitcher from "./ThemeSwitcher";
+
+/*import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useTheme } from "./hooks/ThemeContext";
+import { useTheme } from 'next-themes';*/
 
 function Header() {
 /*const [mode, setMode] = useThemeSwitcher;*/
@@ -152,53 +154,7 @@ function Header() {
           <span></span>
         </div>
 
-   <div onClick={() =>
-            theme === "dark" ? setTheme("light") : setTheme("dark")
-          } 
-id="theme-switch" title='theme'>
-          <m.svg
-            strokeWidth="4"
-            strokeLinecap="round"
-            width={100}
-            height={100}
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className='relative'
-          >
-            <m.path variants={shineVariant} d={moonPath} className={'absolute top-0 left-0 stroke-blue-100 '} initial="hidden" animate={theme === 'dark' ? 'visible' : "hidden"} />
-
-            <m.path
-              d={moonPath}
-              fill="transparent"
-              transition={{ duration: 1, type: "spring" }}
-              initial={{ fillOpacity: 0, strokeOpacity: 0 }}
-              animate={
-                theme === "light"
-                  ? {
-                    d: sunPath,
-                    rotate: 360,
-                    scale: 1.6,
-                    stroke: "yellow",
-                    fill: "yellow",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 0.8,
-                    transition: { delay: 0.1 },
-                  }
-                  : {
-                    d: moonPath,
-                    rotate: 0,
-                    scale: 1.6,
-                    stroke: "blue",
-                    fill: "blue",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 0.8,
-                  }
-              }
-            />
-          </m.svg>
-
-        </div>
+   <ThemeSwitcher/>
 
         <nav className="navbar">
          <ul>
