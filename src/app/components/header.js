@@ -167,7 +167,51 @@ function Header() {
           <span></span>
         </div>
 
-   <ThemeSwitcher/>
+   <div onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+         id="theme-switch" title='theme'>
+          <m.svg
+            strokeWidth="4"
+            strokeLinecap="round"
+            width={100}
+            height={100}
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className='relative'
+          >
+            <m.path variants={shineVariant} d={moonPath} initial="hidden" animate={resolvedTheme === 'dark' ? 'visible' : "hidden"} />
+
+            <m.path
+              d={moonPath}
+              fill="transparent"
+              transition={{ duration: 1, type: "spring" }}
+              initial={{ fillOpacity: 0, strokeOpacity: 0 }}
+              animate={
+                resolvedTheme === "light"
+                  ? {
+                    d: sunPath,
+                    rotate: 360,
+                    scale: 1.6,
+                    stroke: "yellow",
+                    fill: "yellow",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 0.8,
+                    transition: { delay: 0.1 },
+                  }
+                  : {
+                    d: moonPath,
+                    rotate: 0,
+                    scale: 1.6,
+                    stroke: "blue",
+                    fill: "blue",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 0.8,
+                  }
+              }
+            />
+          </m.svg>
+
+        </div>
 
         <nav className="navbar">
          <ul>
