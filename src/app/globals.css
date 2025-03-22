@@ -1993,8 +1993,7 @@ form textarea {
     position: fixed;
       background: var(--text-color);
       z-index: 9990;
-      height: 100%;
-      width: 100%;
-     border-radius: 0 0 50% 50%;
+      height: 100svh;
+      width: 100svh;
      top: 0;
 }
