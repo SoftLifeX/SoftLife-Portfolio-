@@ -1920,6 +1920,7 @@ form textarea {
   width: fit-content;
   height: fit-content;
   font-family: 'penna', serif;
+    font-weight: bold;
 }
 
 .introduction {
@@ -1987,6 +1988,7 @@ form textarea {
   width: fit-content;
   height: fit-content;
   font-family: 'penna', serif;
+    font-weight: bold;
 }
 
 .introduction {
