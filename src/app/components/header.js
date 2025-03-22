@@ -16,7 +16,6 @@ function Header() {
   
 /*const {theme, toggleTheme} = useTheme();*/
 
-  const ThemeChanger = () => {
   const { theme, setTheme } = useTheme();
  
  const links = [
@@ -153,7 +152,10 @@ function Header() {
           <span></span>
         </div>
 
-   <div onClick={toggleTheme} id="theme-switch" title='theme'>
+   <div onClick={() =>
+            theme === "dark" ? setTheme("light") : setTheme("dark")
+          } 
+id="theme-switch" title='theme'>
           <m.svg
             strokeWidth="4"
             strokeLinecap="round"
