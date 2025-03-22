@@ -39,7 +39,7 @@ export default function Index() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 2 }}
             className="loader"
           >
             {words[index]}
