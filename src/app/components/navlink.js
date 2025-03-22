@@ -10,13 +10,9 @@ const NavLink = ({ link }) => {
   const pathName = usePathname();
 
   return (
-    <div>
-    
     <Link className={pathName === link.url ? "active" : ""} href={link.url}>
      <span> {link.icon}</span>{link.title}
     </Link>
-  
-  </div>
   );
 };
 
