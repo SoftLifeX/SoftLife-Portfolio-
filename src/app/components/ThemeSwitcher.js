@@ -9,7 +9,9 @@ export default function ThemeSwitcher() {
 
   useEffect(() =>  setMounted(true), [])
 
-  if (!mounted) return (null);
+  if (!mounted) return (
+    <div />
+  );
 
   const raysVariants = {
     hidden: {
