@@ -70,7 +70,7 @@ export const ThemeProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
-};
+};*/
 
 
     /*const preferLightQuery = "(prefer-color-scheme: dark)";
@@ -102,7 +102,7 @@ export const ThemeProvider = ({ children }) => {
                     document.body.setAttribute('data-theme', 'dark');
                 }
             }
-        }*/
+        }
         mediaQuery.addEventListener("change", handleChange)
 
         return () => mediaQuery.removeEventListener("change", handleChange)
