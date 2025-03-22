@@ -34,10 +34,7 @@ export default function Index() {
 
 
   return (
-   <motion.div 
-      initial={{ height: "200vh" }}
-      animate={{ height: "0vh", transition: { duration: 0.5, delay: 0.2 } }}
-  className="introduction"> {dimension.width > 0 && (
+   <div className="introduction"> {dimension.width > 0 && (
         <>
           <motion.p
             initial={{ opacity: 0 }}
@@ -50,7 +47,7 @@ export default function Index() {
         </>
       )}
 
-    </motion.div>
+    </div>
      
   );
 }
