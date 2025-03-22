@@ -18,7 +18,7 @@ function Header() {
   
 /*const {theme, toggleTheme} = useTheme();*/
 
-  const { theme, setTheme } = useTheme();
+  /*const { theme, setTheme } = useTheme();*/
  
  const links = [
    {
