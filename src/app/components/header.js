@@ -1,4 +1,7 @@
-import React from "react";
+'use client'
+
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
 import Link from "next/link";
 import NavLink from "./navlink";
 import { motion as m } from "motion/react";
@@ -66,7 +69,16 @@ function Header() {
    },
  ];
 
-     const raysVariants = {
+  const [mounted, setMounted] = useState(false)
+  const { setTheme, resolvedTheme } = useTheme()
+
+  useEffect(() =>  setMounted(true), [])
+
+  if (!mounted) return (
+    <div />
+  );
+
+  const raysVariants = {
     hidden: {
       strokeOpacity: 0,
       transition: {
@@ -132,6 +144,7 @@ function Header() {
     "M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C60 29 69.5 38 70 49.5Z";
   const moonPath =
     "M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C39 45 49.5 59.5 70 49.5Z"
+
   return (
     <div>
       <header className="top">
