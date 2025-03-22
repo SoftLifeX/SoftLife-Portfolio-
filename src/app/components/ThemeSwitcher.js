@@ -11,12 +11,7 @@ export default function ThemeSwitcher() {
 
   if (!mounted) return (null);
 
-  if (resolvedTheme === 'dark') {
-    return <FiSun onClick={() => setTheme('light')} />
-  }
-
-  if (resolvedTheme === 'light') {
-    return <FiMoon onClick={() => setTheme('dark')} />
-  }
-
+  return (
+    
+  )
 }
