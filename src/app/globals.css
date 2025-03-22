@@ -1994,6 +1994,6 @@ form textarea {
       background: var(--text-color);
       z-index: 9990;
       height: 100svh;
-      width: 100svh;
+      width: 100svw;
      top: 0;
 }
