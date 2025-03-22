@@ -28,7 +28,7 @@ export default function Index() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 1000 : 1000
+      index == 0 ? 750 : 750
     );
   }, [index]);
 
@@ -39,7 +39,7 @@ export default function Index() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ ease: [0.76, 0, 0.24, 1], duration: 2 }}
+            transition={{ duration: 2 }}
             className="loader"
           >
             {words[index]}
