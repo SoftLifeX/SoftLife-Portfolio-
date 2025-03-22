@@ -796,14 +796,14 @@ p {
   position: absolute;
   width: 19rem;
   height: 6.5rem;
-  top: 20svh;
+  top: 15svh;
   }
 
 .h2Container {
   position: absolute;
-  width: 25rem;
+  width: 30rem;
   height: 6.5rem;
-  top: 25svh;
+  top: 20svh;
 }
 
   .btnContainer {
@@ -815,7 +815,7 @@ p {
 
 .sliderContainer{
   position: absolute;
-  top: 40svh;
+  top: 38svh;
 }
 
 .slider{
