@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-/*import { ThemeProvider } from "./components/hooks/ThemeContext";*/
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from "./components/hooks/ThemeContext";
 import TransitionProvider from "./components/transitionProvider";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
