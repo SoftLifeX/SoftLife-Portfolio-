@@ -1,6 +1,17 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+
+export function ThemeProvider({
+  children,
+  ...props
+}: React.ComponentProps<typeof NextThemesProvider>) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+      }
+
+
+/*import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext();
 
@@ -95,7 +106,7 @@ export const ThemeProvider = ({ children }) => {
                     document.body.setAttribute('data-theme', 'dark');
                 }
             }
-        }
+        }*/
         mediaQuery.addEventListener("change", handleChange)
 
         return () => mediaQuery.removeEventListener("change", handleChange)
