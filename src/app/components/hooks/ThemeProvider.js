@@ -2,7 +2,7 @@
 
 import { ThemeProvider } from 'next-themes'
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({ children }) {
     return <ThemeProvider defaultTheme='system' enableSystem>{children}</ThemeProvider>
 }
 
