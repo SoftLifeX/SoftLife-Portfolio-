@@ -40,8 +40,8 @@ const TransitionProvider = ({ children }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <div key={pathName}>
         {isLoading && <Preloader />}
+      <div key={pathName}>
         <motion.div
           className="TransitionProvider"
           animate={{ height: "0vh" }}
