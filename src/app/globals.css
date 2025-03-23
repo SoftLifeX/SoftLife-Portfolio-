@@ -85,7 +85,7 @@
   --text-color2: #000;
 }
 
-@media (prefer-color-scheme : dark) {
+/*@media (prefer-color-scheme : dark) {
   --base-color: rgba(0, 0, 0, 0.924);
   --text-color: white;
   --secondary-text: gray;
@@ -111,7 +111,7 @@
   --accent-color2: rgba(0, 0, 0, 0.16);
   --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
   --text-color2: #000;
-} 
+} */
 
 #theme-switch {
   display: flex;
