@@ -819,7 +819,7 @@ p {
     background-clip: text;
     display: block;*/
   color: var(--text-color);
-  font-size: 1.56rem;
+  font-size: 1.7rem;
   margin: 1rem 1rem;
   font-weight: 400;
   position: relative;
@@ -914,6 +914,7 @@ p {
   white-space: pre-line;
   overflow: hidden;
   animation-iteration-count: infinite;
+  font-family: 'audrey', serif;
 }
 
 @keyframes cursor {
