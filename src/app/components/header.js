@@ -183,7 +183,7 @@ function Header() {
                   ? {
                     d: sunPath,
                     rotate: 360,
-                    scale: 1.6,
+                    scale: 1.2,
                     stroke: "yellow",
                     fill: "yellow",
                     fillOpacity: 0.35,
@@ -193,7 +193,7 @@ function Header() {
                   : {
                     d: moonPath,
                     rotate: 0,
-                    scale: 1.6,
+                    scale: 1.2,
                     stroke: "purple",
                     fill: "purple",
                     fillOpacity: 0.35,
