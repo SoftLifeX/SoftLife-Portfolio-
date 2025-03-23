@@ -663,7 +663,7 @@ outline: none;
   cursor: pointer;
   font-weight: bold;
   transition: scale, ease-in-out;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
   width: fit-content;
 height: fit-content;
   justify-content: center;
@@ -681,11 +681,10 @@ position: relative;
 }
 
 .btn2:before{
-transition: 0.5s all ease;
+transition: 0.4s all ease;
 position: absolute;
 box-shadow: 0 0 0.25rem var(--accent-color);
   background-color: var(--text-color);
-  border-radius: 10px;
 top: 50%;
 bottom: 50%;
 left: 50%;
@@ -696,13 +695,29 @@ content: "";
 
 .btn2:hover:before {
   scale: 1.05;
-transition: 0.5s all ease;
+transition: 0.4s all ease;
 z-index: -1;
 top: 0;
 bottom: 0;
 left: 0;
 right: 0;
 opacity: 1;
+  animation: border 0.4s ease;
+}
+
+
+@keyframes border{
+  0%{
+    border-radius: 50%;
+  }
+
+  40%{
+    border-radius: 10px;
+  }
+
+  100%{
+    border-radius: 10px;
+  }
 }
 
 /*.btn2 {
@@ -776,7 +791,7 @@ outline: none;
   cursor: pointer;
   font-weight: bold;
   transition: scale, ease-in-out;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
   width: fit-content;
   justify-content: center;
   align-items: center;
