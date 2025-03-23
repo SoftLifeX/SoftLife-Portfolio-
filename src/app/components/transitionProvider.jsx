@@ -35,7 +35,7 @@ const TransitionProvider = ({ children }) => {
              document.body.style.cursor = "default";
     
              window.scrollTo(0, 0);
-           }, 2500);
+           }, 3000);
   },[]);
 
   return (
