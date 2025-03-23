@@ -10,19 +10,10 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
-import ThemeSwitcher from "./ThemeSwitcher";
 
-/*import useThemeSwitcher from "./hooks/useThemeSwitcher";
-import { useTheme } from "./hooks/ThemeContext";
-import { useTheme } from 'next-themes';*/
 
 function Header() {
-/*const [mode, setMode] = useThemeSwitcher;*/
-  
-/*const {theme, toggleTheme} = useTheme();*/
 
-  /*const { theme, setTheme } = useTheme();*/
- 
  const links = [
    {
      url: "/",
@@ -119,7 +110,7 @@ function Header() {
   const shineVariant = {
     hidden: {
       opacity: 0,
-      scale: 2,
+      scale: 1.6,
       strokeDasharray: "20, 1000",
       strokeDashoffset: 0,
       filter: "blur(0px)",
@@ -179,7 +170,7 @@ function Header() {
             xmlns="http://www.w3.org/2000/svg"
             className='relative'
           >
-            <m.path variants={shineVariant} d={moonPath} initial="hidden" animate={resolvedTheme === 'dark' ? 'visible' : "hidden"} />
+            <m.path variants={shineVariant} d={moonPath} initial="hidden" animate={resolvedTheme === 'dark' ? 'visible' : ""} />
 
             <m.path
               d={moonPath}
@@ -202,8 +193,8 @@ function Header() {
                     d: moonPath,
                     rotate: 0,
                     scale: 1.6,
-                    stroke: "blue",
-                    fill: "blue",
+                    stroke: "purple",
+                    fill: "purple",
                     fillOpacity: 0.35,
                     strokeOpacity: 0.8,
                   }
