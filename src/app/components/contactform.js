@@ -36,7 +36,12 @@ function Contactform() {
               <div className="contact-left">
                 <h3>
                   Feeling social? <br />
-                  Connect with me on any of these online spaces!
+                  Connect with me on any of these online spaces
+             <span> 
+          <div className="dot"></div>
+         <div className="dot"></div>
+        <div className="dot"></div>
+         </span>
                 </h3>
                 <div className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com">
