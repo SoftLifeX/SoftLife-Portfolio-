@@ -45,10 +45,15 @@ function Home2() {
           <div className="container">
             <h3  data-scroll data-scroll-speed={0.1}>
               Creativity is not just a skill
-              <br /> It's a life-style
+              <br /> It's a life-style 
+          <span> 
+          <div className="dot"></div>
+         <div className="dot"></div>
+        <div className="dot"></div>
+         </span>
               <br />
               <br />
-              <span>We live it!</span>
+              <span className="blocktext">We live it!</span>
             </h3>
 
             <h5>Case Studies</h5>
