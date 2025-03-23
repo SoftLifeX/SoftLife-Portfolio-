@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-   <ThemeProvider>
+   <ThemeProvider enableSystem={false}>
      <TransitionProvider>
            {children}
      </TransitionProvider>
