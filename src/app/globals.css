@@ -128,6 +128,11 @@
   background-color: rgba(0, 0, 0, 0.16);
 }
 
+[data-theme="dark"] #theme-switch{
+  background-color: purple;
+  opacity: 0.35;
+}
+
 
 * {
   margin: 0;
