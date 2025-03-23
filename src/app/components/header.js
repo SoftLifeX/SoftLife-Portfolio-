@@ -168,8 +168,6 @@ function Header() {
             xmlns="http://www.w3.org/2000/svg"
             className='relative'
           >
-            <m.path variants={shineVariant} d={moonPath} initial="hidden" animate={resolvedTheme === 'dark' ? 'visible' : ""} />
-
             <m.path
               d={moonPath}
               fill="transparent"
