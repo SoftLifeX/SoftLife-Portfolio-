@@ -61,11 +61,16 @@ function Header() {
  ];
 
   const [mounted, setMounted] = useState(false)
-  const { setTheme, resolvedTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
-  useEffect(() =>  setMounted(true), [])
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-  if (!mounted) return (null);
+  if (!mounted) {
+    return null
+      }
 
   const raysVariants = {
     hidden: {
@@ -156,7 +161,7 @@ function Header() {
           <span></span>
         </div>
 
-   <div onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
+   <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
          id="theme-switch" title='theme'>
           <m.svg
             strokeWidth="4"
@@ -174,7 +179,7 @@ function Header() {
               transition={{ duration: 1, type: "spring" }}
               initial={{ fillOpacity: 0, strokeOpacity: 0 }}
               animate={
-                resolvedTheme === "light"
+                theme === "light"
                   ? {
                     d: sunPath,
                     rotate: 360,
