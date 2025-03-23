@@ -179,23 +179,23 @@ function Header() {
               transition={{ duration: 1, type: "spring" }}
               initial={{ fillOpacity: 0, strokeOpacity: 0 }}
               animate={
-                theme === "light"
+                theme === "dark"
                   ? {
-                    d: sunPath,
-                    rotate: 360,
-                    scale: 1.2,
-                    stroke: "yellow",
-                    fill: "yellow",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 0.8,
-                    transition: { delay: 0.1 },
-                  }
-                  : {
                     d: moonPath,
-                    rotate: 0,
-                    scale: 1.2,
+                    rotate: -360,
+                    scale: 1.3,
                     stroke: "purple",
                     fill: "purple",
+                    fillOpacity: 0.35,
+                    strokeOpacity: 0.8,
+                   transition: { delay: 0.1 },
+                  }
+                  : {
+                    d: sunPath,
+                    rotate: 0,
+                    scale: 1.3,
+                    stroke: "yellow",
+                    fill: "yellow",
                     fillOpacity: 0.35,
                     strokeOpacity: 0.8,
                   }
