@@ -542,7 +542,7 @@ h2 {
   cursor: text;
   color: var(--secondary-text);
   text-align: left;
-  font-family: 'lemon';
+  font-family: 'lemon', serif;
 }
 
 h1 {
@@ -556,7 +556,7 @@ h1 {
   margin: 2.5rem;
   text-decoration: none;
   cursor: text;
-  font-family: 'audrey';
+  font-family: 'audrey', serif;
 }
 
 h3 {
@@ -565,7 +565,7 @@ h3 {
   font-weight: 400;
   cursor: text;
   text-align: left;
-  font-family: 'time';
+  font-family: 'time', serif;
 }
 
 h4 {
@@ -581,7 +581,7 @@ h5 {
   cursor: text;
   color: var(--secondary-text);
   text-align: left;
-  font-family: 'lemon';
+  font-family: 'lemon', serif;
   position: relative;
   padding-top: 3.12rem;
 }
@@ -813,7 +813,7 @@ p {
 }
 
 .homepage h2 {
-    font-family: 'audrey';
+    font-family: 'audrey', serif;
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
@@ -833,7 +833,6 @@ p {
   margin: 1rem 1rem;
   justify-content: center;
   align-items: center;
-
   position: relative;
 }
 
@@ -935,7 +934,7 @@ p {
     color: transparent;
     background-clip: text;
     display: block;*/
-  font-family: 'time', serif;
+  font-family: 'audrey', serif;
 }
 
 #hobby:after {
