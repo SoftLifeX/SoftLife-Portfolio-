@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Provider } from "./components/hooks/ThemeProvider";
+import { ThemeProvider } from 'next-themes'
+/*import { Provider } from "./components/hooks/ThemeProvider";*/
 import TransitionProvider from "./components/transitionProvider";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -71,11 +72,11 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-   <Provider>
+   <ThemeProvider>
      <TransitionProvider>
            {children}
      </TransitionProvider>
-  </Provider>
+   </ThemeProvider>
       </body>
     </html>
   );
