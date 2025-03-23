@@ -65,9 +65,7 @@ function Header() {
 
   useEffect(() =>  setMounted(true), [])
 
-  if (!mounted) return (
-    <div />
-  );
+  if (!mounted) return (null);
 
   const raysVariants = {
     hidden: {
