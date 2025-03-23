@@ -78,7 +78,7 @@ function Home1() {
             Hey 👋, I'm{" "}
             <span className="typed">
               <Typewriter
-                words={["Daniel c. Daniel, \n popularly known as SoftLife!"]}
+                words={["Daniel c. Daniel , \n popularly known as SoftLife!"]}
                 cursor
                 cursorStyle=""
                 typeSpeed={90}
