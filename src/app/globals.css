@@ -568,6 +568,8 @@ h3 {
   font-family: 'time', serif;
 }
 
+
+
 h4 {
   font-size: 1.12rem;
   cursor: text;
@@ -1035,7 +1037,7 @@ outline: none;
   margin-top: 9.37rem;
 }
 
-.portfolio h3 span {
+.portfolio .blocktext {
   color: var(--base-color);
   background: linear-gradient(to right, var(--secondary-text), var(--text-color));
   border-radius: 10px;
