@@ -826,7 +826,7 @@ p {
 }
 
 .homepage h2 span {
-  font-family: 'time';
+  font-family: 'audrey', serif;
 }
 
 .homepage .socials {
@@ -914,7 +914,6 @@ p {
   white-space: pre-line;
   overflow: hidden;
   animation-iteration-count: infinite;
-  font-family: 'audrey', serif;
 }
 
 @keyframes cursor {
@@ -1763,7 +1762,7 @@ form textarea {
   }
 
   .homepage h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .blob {
