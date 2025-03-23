@@ -186,9 +186,8 @@ function Header() {
                     scale: 1.3,
                     stroke: "purple",
                     fill: "purple",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 0.8,
-                   transition: { delay: 0.1 },
+                    fillOpacity: 0.5,
+                    strokeOpacity: 1,
                   }
                   : {
                     d: sunPath,
@@ -196,8 +195,8 @@ function Header() {
                     scale: 1.3,
                     stroke: "yellow",
                     fill: "yellow",
-                    fillOpacity: 0.35,
-                    strokeOpacity: 0.8,
+                    fillOpacity: 0.5,
+                    strokeOpacity: 1,
                   }
               }
             />
