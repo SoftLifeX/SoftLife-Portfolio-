@@ -569,14 +569,14 @@ h3 {
 }
 
 .dot {
-    height: 0.18rem;
-    width: 0.18rem;
+    height: 0.25rem;
+    width: 0.25rem;
     border-radius:50%;
     transform: scale(0);
     background-color:red;
     animation: scaling 2.5s ease-in-out infinite;
     display: inline-block;
-    margin-left: 0.18rem;
+    margin-left: 0.25rem;
 }
 
 @keyframes scaling{
