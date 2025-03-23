@@ -696,6 +696,7 @@ content: "";
 .btn2:hover:before {
   scale: 1.05;
 transition: 0.4s all ease;
+  border-radius: 10px;
 z-index: -1;
 top: 0;
 bottom: 0;
