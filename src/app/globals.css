@@ -43,7 +43,7 @@
   src: url(public/fonts/Chillen.ttf);
 }
 
-/*:root {
+:root {
   --base-color: rgba(0, 0, 0, 0.924);
   --text-color: white;
   --secondary-text: gray;
@@ -55,7 +55,7 @@
   --accent-color2: white;
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
-}*/
+}
 
 [data-theme="dark"] {
   --base-color: rgba(0, 0, 0, 0.924);
