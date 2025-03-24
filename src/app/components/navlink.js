@@ -7,11 +7,16 @@ import { usePathname } from 'next/navigation'
 
 
 const NavLink = ({ link }) => {
+
+  const numbers = [1,2,3,4]
   const pathName = usePathname();
 
   return (
     <Link className={pathName === link.url ? "active" : ""} href={link.url}>
-     <span> {link.icon}</span>{link.title}
+   {numbers.map((num) => (
+            <span key={num} style={{ "--i": num }}>{link.icon}</span>
+          ))}
+    {link.title}
     </Link>
   );
 };
