@@ -164,51 +164,6 @@ function Craft1() {
         </div>
       </section>
     </div>
-
-/* <div className="work-list">
-              <div className="work">
-                <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="work">
-                <Image src={images.work3} alt="work3" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="work">
-                <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-              </div>
-
-              <div className="work">
-                <Image src={images.work1} alt="work1" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <p className="fakemargin">margin</p>
-          </div>*/
   );
 }
 
