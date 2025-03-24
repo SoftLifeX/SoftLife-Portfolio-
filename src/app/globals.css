@@ -827,6 +827,10 @@ outline: none;
   margin: 1.87rem;
 }
 
+  .contact-left .btn4 i {
+  margin-left: 0.5rem;
+  }
+
 .contact-left .btn2 i {
   rotate: 0deg;
   margin-left: 0.5rem;
