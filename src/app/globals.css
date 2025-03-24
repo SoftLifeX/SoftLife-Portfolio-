@@ -1112,6 +1112,13 @@ outline: none;
   overflow: hidden;
 }
 
+.work-card{
+  position: relative;
+  overflow: hidden;
+  width: 815px;
+  height: 566px;
+}
+
 .work img {
   border-bottom: 1.25rem;
   width: 100%;
