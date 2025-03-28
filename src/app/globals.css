@@ -540,16 +540,16 @@ h2 {
   font-size: 1.2rem;
   margin: 1.87rem;
   cursor: text;
-  color: var(--secondary-text);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  color: transparent;
+  background-clip: text;
+  display: block;
   text-align: left;
   font-family: 'lemon', serif;
 }
 
 h1 {
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
-  color: transparent;
-  background-clip: text;
-  display: block;
+  color: var(--text-color);
   font-size: 5rem;
   font-weight: 500;
   text-align: left;
@@ -616,7 +616,10 @@ h5 {
   font-size: 1.25rem;
   margin: 1.87rem;
   cursor: text;
-  color: var(--secondary-text);
+  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  color: transparent;
+  background-clip: text;
+  display: block;
   text-align: left;
   font-family: 'lemon', serif;
   position: relative;
