@@ -1655,10 +1655,25 @@ form textarea {
 
   #check:checked~.navbar a {
     transform: scale(1);
-    transition-delay: calc(0.15s * var(--i));
     opacity: 1;
   }
 
+.navbar a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.navbar a:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.navbar a:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.navbar a:nth-child(4) {
+  transition-delay: 0.4s;
+}
+  
   .navbar a::after {
     content: '';
     width: 0;
@@ -1827,9 +1842,25 @@ form textarea {
 
   #check:checked~.navbar a {
     transform: scale(1);
-    transition-delay: calc(0.15s * var(--i));
     opacity: 1;
   }
+
+  .navbar a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.navbar a:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.navbar a:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.navbar a:nth-child(4) {
+  transition-delay: 0.4s;
+}
+  
 
   .navbar a::after {
     content: '';
