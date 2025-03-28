@@ -616,7 +616,7 @@ h5 {
   font-size: 1.25rem;
   margin: 1.87rem;
   cursor: text;
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text));
+ background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
   color: transparent;
   background-clip: text;
   display: block;
