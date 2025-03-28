@@ -1834,7 +1834,7 @@ form textarea {
   .navbar a::after {
     content: '';
     width: 100%;
-    height: 0.06rem;
+    height: 0.12rem;
     background: var(--secondary-text);
     position: absolute;
     left: 0;
@@ -1860,8 +1860,8 @@ form textarea {
   .navbar a.active::after {
     content: '';
     width: 100%;
-    height: 0.18rem;
-    background: var(--base-color);
+    height: 0.12rem;
+    /*background: var(--base-color);*/
     position: absolute;
     left: 0;
     bottom: -0.37rem;
