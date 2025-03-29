@@ -1116,6 +1116,10 @@ outline: none;
   background-color: #d7d7d8;
 }
 
+.work:nth-child(2){
+  background-color: #f4f4f5;
+}
+
 .work-card{
   position: relative;
   overflow: hidden;
