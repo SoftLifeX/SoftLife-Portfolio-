@@ -262,6 +262,7 @@ section {
   padding: 1.3rem 10%;
   display: flex;
   justify-content: space-between;
+  background: var(--base-color);
   align-items: center;
   z-index: 100;
 }
