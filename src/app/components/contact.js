@@ -42,7 +42,7 @@ function Contact() {
         <div className="copyright">
           <p>
             Copyright <i className="bx bx-copyright"></i> SoFTLife. All Rights
-            Reserved 2024
+            Reserved 2025
           </p>
         </div>
       </section>
