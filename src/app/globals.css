@@ -260,15 +260,13 @@ section {
   left: 0;
   width: 100%;
   padding: 1.3rem 10%;
-  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  backdrop-filter: blur(2px);
 }
 
-.top::before {
+/*.top::before {
   content: ' ';
   position: absolute;
   top: 0;
@@ -289,7 +287,15 @@ section {
   height: 100%;
   background: transparent;
   transition: 0.5s;
-}
+}*/
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+  }
 
 .logo {
   font-size: 1.2rem;
