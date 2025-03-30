@@ -64,7 +64,7 @@ function Home2() {
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
-                 src={images.work1} alt="work3" />
+                 src={images.work1} alt="Critique" />
                 <div className="layer">
                   <p></p>
                   <a href="">
@@ -79,21 +79,7 @@ function Home2() {
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
-                 src={images.work3} alt="work3" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-              </motion.div>
-
-              <motion.div 
-               initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="work">
-                <Image priority={true} src={images.work1} alt="work1" />
+                 src={images.work1} alt="work3" />
                 <div className="layer">
                   <p></p>
                   <a href="">
