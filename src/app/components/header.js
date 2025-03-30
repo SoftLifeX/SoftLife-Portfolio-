@@ -14,6 +14,13 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
 
+   const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
+ 
  const links = [
    {
      url: "/",
@@ -141,7 +148,7 @@ function Header() {
 
   return (
     <div>
-      <header className="top">
+      <header className={`top ${scroll ? "sticky" : ""}`}>
         <a href="" className="logo">
           <span>S</span>
           <span>o</span>
