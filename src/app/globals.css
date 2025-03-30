@@ -262,7 +262,6 @@ section {
   padding: 1.3rem 10%;
   display: flex;
   justify-content: space-between;
-  background: var(--base-color);
   align-items: center;
   z-index: 100;
 }
@@ -295,7 +294,8 @@ section {
     top: 0;
     width: 100%;
     background-color: transparent;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 0.25rem var(--accent-color);
   }
 
 .logo {
