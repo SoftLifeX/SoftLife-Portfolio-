@@ -1090,10 +1090,11 @@ outline: none;
 }
 
 .wave{
-  animation: wave 1s ease-in-out infinite;
+  animation: waving 0.5s ease-in-out infinite;
+  rotate: 90deg;
 }
 
-@keyframes wave{
+@keyframes waving{
   0% {
     rotate: 45deg;
   }
