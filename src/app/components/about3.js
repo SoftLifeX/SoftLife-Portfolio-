@@ -9,10 +9,8 @@ function About3() {
           <div className="container">
            <h5>Our Services</h5>
             <div className="services-list">
-              <motion.div initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
-                <i className="bx bx-code-alt"></i>
+              <div>
+               <i className="bx bx-code-alt"></i>
                 <h2>Web Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
@@ -25,11 +23,9 @@ function About3() {
                   We boast functonality, without the compromise of your
                   aesthetics.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
+              <div>
                 <i className="bx bx-devices"></i>
                 <h2>UI/UX</h2>
                 <p>
@@ -44,12 +40,10 @@ function About3() {
                   Endless customization and creative innovations in design,
                   guaranteed to elevate your digital products.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
-                <i class="fa-solid fa-paintbrush"></i>
+              <div>
+               <i class="fa-solid fa-paintbrush"></i>
                 <h2>Graphic Design</h2>
                 <p>
                   Your Brand is your Legacy;
@@ -63,11 +57,9 @@ function About3() {
                   <br />
                   Tailored specifically, <b>just for YOU!</b>
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}>
+              <div>
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>
@@ -84,7 +76,7 @@ function About3() {
                   <br />
                   seamlessly integrate you vision with top-tier algorithms.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
