@@ -1089,6 +1089,20 @@ outline: none;
   }
 }
 
+.wave{
+  animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave{
+  0% {
+    transform: rotateY('0deg');
+  }
+
+  100% {
+    transform: rotateY('30deg');
+  }
+}
+
 /*recent projects*/
 .portfolio h3 {
   padding: 3.75rem;
