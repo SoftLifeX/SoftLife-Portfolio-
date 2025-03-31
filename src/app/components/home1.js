@@ -75,7 +75,7 @@ function Home1() {
     animate={{ y: "0%" }}
     transition={{ delay: 0.65, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            Hey <span className="wave">👋</span>, I'm{" "}
+            Hey <span className="waving-hand">👋</span>, I'm{" "}
             <span className="typed">
               <Typewriter
                 words={["Daniel c. Daniel , \n popularly known as SoftLife!"]}
