@@ -8,7 +8,6 @@ const words = [
   "SoftLife",
   "Designer",
   "Developer",
-  "Average Noob",
   "Nice to meet you :)",
 ];
 
@@ -28,7 +27,7 @@ export default function Index() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 750 : 562
+      index == 0 ? 750 : 750
     );
   }, [index]);
 
