@@ -56,48 +56,31 @@ function Craft1() {
             <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
-                <h4>
-                Critique 
                 <a href="">
-                    <i className="bx bx-link-external"></i>
+                    Critique <i className="bx bx-link-external"></i>
                 </a>
-                </h4>
               </div>
 
               <div className="work">
                 <Image src={images.work3} alt="work3" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
+            <a href="">
+                    Critique <i className="bx bx-link-external"></i>
+                </a>
               </div>
 
               <div className="work">
                 <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
+            <a href="">
+                    Critique <i className="bx bx-link-external"></i>
+                </a>
               </div>
 
               <div className="work">
                 <Image src={images.work1} alt="work1" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
+            <a href="">
+                    Critique <i className="bx bx-link-external"></i>
+                </a>
               </div>
-
-            <div className="work-card">
-                
-              </div>
-
             <p className="fakemargin">margin</p>
             </div>
           </div>
@@ -116,42 +99,18 @@ function Craft1() {
           <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work3} alt="work3" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work1} alt="work1" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
               </div>
             <p className="fakemargin">margin</p>
             </div>
