@@ -56,17 +56,12 @@ function Craft1() {
             <div className="work-list">
               <div className="work">
                 <Image src={images.work2} alt="work2" />
-                <div className="layer">
-                  <p></p>
-                  <a href="">
+                <h4>
+                Critique 
+                <a href="">
                     <i className="bx bx-link-external"></i>
-                  </a>
-                </div>
-            <h4>
-            Critique <a href="">
-                    <i className="bx bx-link-external"></i>
-                  </a>
-            </h4>
+                </a>
+                </h4>
               </div>
 
               <div className="work">
