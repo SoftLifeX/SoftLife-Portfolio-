@@ -62,6 +62,11 @@ function Craft1() {
                     <i className="bx bx-link-external"></i>
                   </a>
                 </div>
+            <h4>
+            Critique <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+            </h4>
               </div>
 
               <div className="work">
