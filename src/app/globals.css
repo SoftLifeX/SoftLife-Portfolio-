@@ -1178,7 +1178,10 @@ left: 0;
   transition: transform, height, width 0.4s ease-in;
 }
 
-.layer a {
+.work a {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
   margin-top: 1.25rem;
   color: var(--text-color);
   text-decoration: none;
