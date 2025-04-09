@@ -926,7 +926,7 @@ outline: none;
   color: var(--text-color);
   font-family: 'penna';
   font-size: 14rem;
-  font-weight: bolder;
+  font-weight: normal;
   padding-right: 3.12rem;
 }
 
@@ -2095,7 +2095,7 @@ form textarea {
   width: fit-content;
   height: fit-content;
   font-family: 'penna', serif;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .introduction {
