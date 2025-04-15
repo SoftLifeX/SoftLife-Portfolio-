@@ -56,9 +56,9 @@ export const metadata = {
     template: "%s - SoftLife Dev",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-   siteId: '@dev.alexdgreat',
+ /*  siteId: '@dev.alexdgreat',
     creator: 'Ogbuagu Great Alexander',
-    creatorId: '@OgbuaguGreat',
+    creatorId: '@OgbuaguGreat',*/
   //  images: ['https://devalexdgreat.vercel.app/favicon.png'], // Must be an absolute URL
   },
   openGraph: {
