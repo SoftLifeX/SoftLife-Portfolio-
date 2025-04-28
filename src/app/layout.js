@@ -52,8 +52,8 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-    default: "SoftLife Dev",
-    template: "%s - SoftLife Dev",
+    default: "SoftLife Dev • Designer & Developer",
+    template: "%s - SoftLife Dev • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
  /*  siteId: '@dev.alexdgreat',
@@ -63,8 +63,8 @@ export const metadata = {
   },
   openGraph: {
     title: {
-    default: "SoftLife Dev",
-    template: "%s - SoftLife Dev",
+    default: "SoftLife Dev • Designer & Developer",
+    template: "%s - SoftLife Dev • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   url: "https://softlife-dev.vercel.app/",
@@ -99,8 +99,8 @@ export const metadata = {
     },
   },
   title: {
-    default: "SoftLife Dev",
-    template: "%s - SoftLife Dev",
+    default: "SoftLife Dev • Designer & Developer",
+    template: "%s - SoftLife Dev • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel'],
