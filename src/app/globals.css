@@ -760,7 +760,7 @@ opacity: 1;
 
 .bound {
   width: fit-content;
-  height: 3.6rem;
+  height: 3rem;
   transform: scale(4);
   position: absolute;
   margin: auto;
@@ -1160,7 +1160,6 @@ outline: none;
   border-bottom: 1.25rem;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   display: block;
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
@@ -1173,7 +1172,6 @@ outline: none;
   width: 100%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), var(--secondary-text));
-  border-radius: 10px;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1207,7 +1205,7 @@ outline: none;
 }
 
 .work:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .fakemargin {
