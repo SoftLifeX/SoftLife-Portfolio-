@@ -916,7 +916,7 @@ outline: none;
     background-clip: text;
     display: block;*/
   color: var(--text-color);
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin: 1rem 1rem;
   position: relative;
 }
