@@ -76,24 +76,44 @@ function Home1() {
           </div>
          </div>
     <div className="h2Container">
-          <motion.h2
-    initial={{ y: "60%" }}
-    animate={{ y: "0%" }}
-    transition={{ delay: 0.65, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          >
-            Hey <span className="waving-hand">👋</span>, I'm{" "}
-            <span className="typed">
-              <Typewriter
-                words={["Daniel c. Daniel , \n popularly known as SoftLife!"]}
-                cursor
-                cursorStyle=""
-                typeSpeed={90}
-                deleteSpeed={1000}
-                delaySpeed={1000}
-              />
-            </span>
-            <br />an award-winning Developer , Designer and <br/> <span id="hobby"></span>
-          </motion.h2>
+                       <motion.h2
+                initial={{ y: "60%" }}
+                animate={{ y: "0%" }}
+                transition={{
+                  delay: 0.65,
+                  duration: 0.5,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+              >
+                <span id="helloText"></span>
+                <span className="waving-hand">👋</span>, I'm{" "}
+                <span className="typed">
+                  <Typewriter
+                    words={[
+                      "Daniel c. Daniel , \n popularly known as SoftLife!",
+                    ]}
+                    cursor
+                    cursorStyle=""
+                    typeSpeed={90}
+                    deleteSpeed={1000}
+                    delaySpeed={1000}
+                  />
+                </span>
+                <br />
+                an award-winning Developer , Designer and <br />{" "}
+                <span className="slideUp" id="slide1">
+                  <span>a Content-Creator 📷 🤳🏼</span>
+                </span>
+                <span className="slideUp" id="slide2">
+                  <span>a Lover of the Arts 🎨 🍷</span>
+                </span>
+                <span className="slideUp" id="slide3">
+                  <span>a bit of a Gamer 🎮</span>
+                </span>
+                <span className="slideUp" id="slide4">
+                  <span>a Travel Enthusiast ✈️ 🌍</span>
+                </span>
+              </motion.h2>
        </div>
 
         <div className="sliderContainer">
