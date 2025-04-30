@@ -909,8 +909,8 @@ outline: none;
 
 .homepage h2 {
     font-family: 'time', serif;
-  font-weight: 200;
-  color: #ababab;
+  font-weight: 100;
+  color: gray;
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
