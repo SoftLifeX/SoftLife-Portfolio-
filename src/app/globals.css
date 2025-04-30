@@ -1085,6 +1085,10 @@ outline: none;
 }
 
 /*recent projects*/
+.portfolio{
+  overflow: hidden;
+}
+
 .portfolio h3 {
   padding: 3.75rem;
 }
@@ -1226,6 +1230,9 @@ outline: none;
 
 
 /*about page*/
+.about {
+  overflow: hidden;
+}
 
 .about h1 {
   padding: 3.12rem;
