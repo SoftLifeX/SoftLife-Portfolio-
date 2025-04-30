@@ -169,7 +169,7 @@ function Header() {
         </div>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-         id="theme-switch" title='theme'>
+         id="theme-switch" data-title="Theme">
           <m.svg
             strokeWidth="4"
             strokeLinecap="round"
