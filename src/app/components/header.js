@@ -148,8 +148,8 @@ function Header() {
 
   return (
     <div>
-      <header className={`top ${scroll ? "sticky" : ""}`}>
-        <a href="" className="logo">
+      <header className="top">
+         <a href="" className={`logo ${scroll ? "stickylogo" : ""}`}>
           <span>S</span>
           <span>o</span>
           <span>F</span>
@@ -211,7 +211,7 @@ function Header() {
 
         </div>
 
-        <nav className="navbar">
+        <nav className={`navbar ${scroll ? "sticky" : ""}`}>
          <ul>
           <li>
             {links.map((link) => (
