@@ -821,6 +821,10 @@ opacity: 1;
   position: relative;
 }
 
+.homepage .btn2 i{
+rotate: 0;
+}
+
 .homepage .btn4 {
   position: relative;
   margin: 1rem 1rem;
