@@ -50,8 +50,8 @@ function Contactform() {
                   <a href="https://web.facebook.com/SoftLife.dev">
                     <i className="bx bxl-facebook"></i>
                   </a>
-                  <a href="">
-                    <i className="fa-brands fa-square-x-twitter"></i>
+                  <a href="https://x.com/SoftLife_Dev">
+                    <i className="fa-brands fa-x-twitter"></i>
                   </a>
                   <a href="https://wa.link/wjns9h">
                     <i className="bx bxl-whatsapp"></i>
