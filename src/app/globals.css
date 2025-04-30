@@ -685,7 +685,7 @@ position: relative;
 }
 
 .btn2:hover {
-  scale: 1.05;
+  padding: 0.5rem 1.5rem;
   color: var(--base-color);
 }
 
@@ -703,7 +703,7 @@ content: "";
 }
 
 .btn2:hover:before {
-  scale: 1.05;
+padding: 0.5rem 1rem;
 transition: 0.4s all ease;
   border-radius: 10px;
 z-index: -1;
@@ -751,7 +751,6 @@ opacity: 1;
 }
 
 .homepage .btn2 {
-  /*display: inline;*/
   margin: 1rem 1rem;
   position: relative;
 }
@@ -784,7 +783,7 @@ outline: none;
 }
 
 .btn4:hover {
-  scale: 1.05;
+   padding: 0.5rem 1.5rem;
   box-shadow: 0 0 0.25rem var(--accent-color);
 }
 
@@ -896,7 +895,7 @@ outline: none;
   position: relative;
   margin: 0px;
   color: var(--text-color);
-  font-family: 'penna';
+  font-family: 'penna' , serif;
   font-size: 14rem;
   font-weight: normal;
   padding-right: 3.12rem;
@@ -910,13 +909,14 @@ outline: none;
 
 .homepage h2 {
     font-family: 'time', serif;
-  font-weight: 400;
+  font-weight: 300;
+  color: #ababab;
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
     display: block;*/
   color: var(--text-color);
-  font-size: 1.6rem;
+  font-size: 1.55rem;
   margin: 1rem 1rem;
   position: relative;
 }
