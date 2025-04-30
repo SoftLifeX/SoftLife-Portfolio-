@@ -915,7 +915,7 @@ outline: none;
     color: transparent;
     background-clip: text;
     display: block;*/
-  color: var(--text-color);
+  /*color: var(--text-color);*/
   font-size: 1.55rem;
   margin: 1rem 1rem;
   position: relative;
@@ -1002,10 +1002,6 @@ outline: none;
 }*/
 
 .typed {
-  /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
-    color: transparent;
-    background-clip: text;
-    display: block;*/
   width: 100%;
   white-space: pre-line;
   overflow: hidden;
@@ -1026,10 +1022,6 @@ outline: none;
 
 
 #hobby {
-  /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
-    color: transparent;
-    background-clip: text;
-    display: block;*/
   font-family: 'time', serif;
 }
 
