@@ -58,21 +58,21 @@ function Home1() {
        </div>
       <div className="socialContainer">           
           <div className="socials">
-            <a href="https://wa.link/wjns9h">
-              <i className="bx bxl-whatsapp"></i>
-            </a>
-            <a href="https://github.com/SoftLifeDev">
-              <i className="bx bxl-github"></i>
-            </a>
-            <a href="">
-              <i className="bx bxl-linkedin-square"></i>
-            </a>
-            <a href="https://www.instagram.com/softlifekid/">
-              <i className="bx bxl-instagram"></i>
-            </a>
-            <a href="https://x.com/SoftLife_Dev">
-             <i class="fa-brands fa-x-twitter"></i>
-            </a>
+                <a href="https://wa.link/wjns9h" data-title="WhatsApp">
+                  <i className="bx bxl-whatsapp"></i>
+                </a>
+                <a href="https://github.com/SoftLifeDev" data-title="Github">
+                  <i className="bx bxl-github"></i>
+                </a>
+                <a href="" data-title="linkedin">
+                  <i className="bx bxl-linkedin-square"></i>
+                </a>
+                <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
+                  <i className="bx bxl-instagram"></i>
+                </a>
+                <a href="https://x.com/SoftLife_Dev" data-title="X">
+                  <i className="fa-brands fa-x-twitter"></i>
+                </a>
           </div>
          </div>
     <div className="h2Container">
