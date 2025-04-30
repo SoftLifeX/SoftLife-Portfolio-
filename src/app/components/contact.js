@@ -34,8 +34,8 @@ function Contact() {
             <a href="https://www.instagram.com/softlifekid/">
               <i className="bx bxl-instagram"></i>
             </a>
-            <a href="">
-              <i className="fa-brands fa-square-x-twitter"></i>
+            <a href="https://x.com/SoftLife_Dev">
+              <i class="fa-brands fa-x-twitter"></i>
             </a>
           </div>
         </div>
