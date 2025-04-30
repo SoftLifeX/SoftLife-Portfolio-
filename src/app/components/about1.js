@@ -20,7 +20,9 @@ function About1() {
               <img src="" data-scroll data-scroll-speed={0.1} />
             </div>
             <div className="about-col-2">
-              
+              <div className="codeProp">
+                  <i class="fa-solid fa-code fa-flip"></i>
+              </div>
               <div>
              <motion.p
                initial={{ y: "60%" }}
