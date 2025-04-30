@@ -44,28 +44,28 @@ function Contactform() {
          </span>
                 </h3>
                 <div className="social-icons">
-                  <a href="mailto:softlife.dev001@gmail.com">
+                  <a href="mailto:softlife.dev001@gmail.com" data-title="Email Me">
                     <i className="bx bxl-gmail"></i>
                   </a>
-                  <a href="https://web.facebook.com/SoftLife.dev">
+                  <a href="https://web.facebook.com/SoftLife.dev" data-title="Facebook">
                     <i className="bx bxl-facebook"></i>
                   </a>
-                  <a href="https://x.com/SoftLife_Dev">
+                  <a href="https://x.com/SoftLife_Dev" data-title="X">
                     <i className="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a href="https://wa.link/wjns9h">
+                  <a href="https://wa.link/wjns9h" data-title="WhatsApp">
                     <i className="bx bxl-whatsapp"></i>
                   </a>
-                  <a href="">
+                  <a href="" data-title="Discord">
                     <i className="bx bxl-discord-alt"></i>
                   </a>
-                  <a href="https://www.instagram.com/softlifekid/">
+                  <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
                     <i className="bx bxl-instagram"></i>
                   </a>
-                  <a href="">
+                  <a href="" data-title="linkedin">
                      <i className="bx bxl-linkedin-square"></i>
                   </a>
-                  <a href="https://github.com/SoftLifeDev">
+                  <a href="https://github.com/SoftLifeDev" data-title="Github">
                     <i className="bx bxl-github"></i>
                   </a>
                 </div>
