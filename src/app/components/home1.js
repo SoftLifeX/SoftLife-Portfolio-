@@ -106,7 +106,7 @@ function Home1() {
             </Magnetic2>
             <Magnetic2>
             <Link href="/contact" className="btn2">
-              Hire me! <i className="bx bx-arrow-to-top bx-tada"></i>
+              Hire Me! <i className="bx bx-arrow-to-top bx-tada"></i>
             </Link>
             </Magnetic2>
            </div>
