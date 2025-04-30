@@ -195,6 +195,7 @@ section {
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
+  margin-top: 0;
 }
 
 .home2 {
@@ -216,6 +217,7 @@ section {
   scale: 0.98;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 0;
 }
 
 .about2 {
@@ -240,6 +242,7 @@ section {
   scale: 0.98;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 0;
 }
 
 .craft2 {
@@ -290,13 +293,20 @@ section {
   transition: 0.5s;
 }*/
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.sticky {
+  position: fixed;
+  top: 1.3rem;
+  width: 100%;
     background-color: transparent;
-    backdrop-filter: blur(5px);
-  }
+     backdrop-filter: blur(5px);
+}
+
+.stickylogo {
+  position: fixed;
+  top: 1.7rem;
+  width: 100%;
+  background-color: transparent;
+}
 
 .logo {
   font-size: 1.2rem;
