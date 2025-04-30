@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "../Preloader"
+import StickyCursor from "../components/stickyCursor"
 
 
 const TransitionProvider = ({ children }) => {
@@ -62,7 +63,7 @@ const TransitionProvider = ({ children }) => {
           initial={{ height: "200vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
-
+      <StickyCursor/>
         <Header />
         <div>{children}</div>
       </div>
