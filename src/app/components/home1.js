@@ -50,7 +50,13 @@ function Home1() {
       <section className="home1">
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
-<div className="socialContainer">           
+      <div className="pointer">
+        <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+      </div>
+       <div className="pointer2">
+          <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+       </div>
+      <div className="socialContainer">           
           <div className="socials">
             <a href="https://wa.link/wjns9h">
               <i className="bx bxl-whatsapp"></i>
