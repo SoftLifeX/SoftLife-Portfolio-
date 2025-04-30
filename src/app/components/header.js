@@ -149,7 +149,7 @@ function Header() {
   return (
     <div>
       <header className="top">
-         <a href="" className={`logo ${scroll ? "stickylogo" : ""}`}>
+         <a href="/" className={`logo ${scroll ? "stickylogo" : ""}`}>
           <span>S</span>
           <span>o</span>
           <span>F</span>
