@@ -127,12 +127,12 @@ function Home1() {
               <div className="btnContainer">
             <Magnetic2>
                 <a href="" download className="btn4">
-                  Resume <i className="bx bx-download bx-tada"></i>
+                  Resume <i class="fa-solid fa-download fa-bounce"></i>
                 </a>
             </Magnetic2>
             <Magnetic2>
             <Link href="/contact" className="btn2">
-              Hire Me! <i className="bx bx-arrow-to-top bx-tada"></i>
+              Hire Me! <i class="fa-solid fa-user-tie fa-beat"></i>
             </Link>
             </Magnetic2>
            </div>
