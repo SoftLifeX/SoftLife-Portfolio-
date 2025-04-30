@@ -27,12 +27,13 @@ function About1() {
                 animate={{ y: "0%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
             >
-          An award-winning, detail-oriented professional specialized in <b> React </b>, <b> Motion design </b> and <b> Next js </b> as my major frame-work.
+          An award-winning, detail-oriented web | mobile software engineer specialized in <b> React </b>, <b> Motion design </b>, <b> flutter </b>, <b> React Native </b> and <b> Next js </b> as my major frame-work.
             <br/> I continously strive to be the finest version of myself, my workflow is no exception. 
             <br/> "As developers, we bridge the recess where tech meets standard" - Valhalla. 
-            <br/> This is a quote I live by, perfectly depicting my goals as a developer. 
+            <br/> A quote perfectly aligning with my goals as a developer. 
             <br/><br/>
-            I'd be ecstatic to chat over coffee ☕, reviewing your digital needs; Alternatively feel free to reach out and say Hello! 😉";
+            I'd be ecstatic to chat over coffee ☕, reviewing your digital needs; Alternatively feel free to reach out and say Hello! 😉
+            <br/> I don't bite!;
 
               </motion.p>
                     
