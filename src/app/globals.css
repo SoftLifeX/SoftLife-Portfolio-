@@ -908,21 +908,20 @@ outline: none;
 }
 
 .homepage h2 {
-    font-family: serif;
+  font-family: 'time', serif;
   font-weight: 100;
-  color: gray;
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
     display: block;*/
-  /*color: var(--text-color);*/
+  color: var(--text-color);
   font-size: 1.4rem;
   margin: 1rem 1rem;
   position: relative;
 }
 
 .homepage h2 span {
-  font-family: serif;
+  font-family: 'time', serif;
 }
 
 .homepage .socials {
