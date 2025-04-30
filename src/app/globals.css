@@ -893,6 +893,27 @@ outline: none;
   margin-left: 3.12rem;
 }
 
+.pointer2 {
+  position: fixed;
+  top: 35svh;
+  left: 20rem;
+  rotate: 135deg;
+  margin: 1.87rem auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.pointer2 i {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  display: inline-flex;
+  transition: transform, ease-in-out;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 1.87rem;
+  margin-left: 3.12rem;
+}
+
 .socialContainer {
   position: absolute;
   width: 19rem;
