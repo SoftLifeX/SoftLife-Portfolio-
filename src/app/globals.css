@@ -909,14 +909,14 @@ outline: none;
 
 .homepage h2 {
     font-family: 'time', serif;
-  font-weight: 300;
+  font-weight: 200;
   color: #ababab;
   /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
     color: transparent;
     background-clip: text;
     display: block;*/
   /*color: var(--text-color);*/
-  font-size: 1.55rem;
+  font-size: 1.4rem;
   margin: 1rem 1rem;
   position: relative;
 }
