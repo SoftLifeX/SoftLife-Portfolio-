@@ -119,7 +119,7 @@
   align-items: center;
   position: fixed;
    top: 1.7rem;
-left: 65%;
+left: 50%;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -1518,8 +1518,8 @@ outline: none;
 
   .codeProp {
   position: fixed;
-  top: 53%;
-  left: 45%;
+  top: 50%;
+  left: 40%;
   margin: 1.87rem auto;
   justify-content: center;
   align-items: center;
@@ -2071,6 +2071,14 @@ form textarea {
 }
 
 @media (max-width: 600px) {
+
+  #theme-switch {
+left: 65%;
+}
+
+    .codeProp {
+  left: 80%;
+}
 
   .sticky {
     box-shadow: 0 0 0.25rem var(--accent-color);
