@@ -119,7 +119,7 @@
   align-items: center;
   position: fixed;
    top: 1.7rem;
-  right: 5.2rem;
+left: 65%;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -320,7 +320,6 @@ section {
   align-items: center;
   z-index: 100;
   background-color: transparent;
-  overflow: hidden;
 }
 
 /*.top::before {
