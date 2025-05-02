@@ -127,7 +127,7 @@ function Home1() {
               <div className="btnContainer">
             <Magnetic2>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
-                  Resume <i class="fa-solid fa-download fa-bounce"></i>
+                  Resume <i class='bx bxs-download bx-flashing' ></i>
                 </a>
             </Magnetic2>
             <Magnetic2>
