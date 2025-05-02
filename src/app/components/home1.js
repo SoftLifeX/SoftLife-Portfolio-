@@ -100,7 +100,8 @@ function Home1() {
                   />
                 </span>
                 <br />
-                an award-winning Front-end | Mobile <br /> Software Designer, Developer  & <br />{" "}
+                an award-winning <span className="marker-highlight">Front-end | Mobile</span>
+                  <br /> Software Engineer, Designer  & <br />{" "}
                 <span className="slideUp" id="slide1">
                   <span>a Content-Creator 📷 🤳🏼</span>
                 </span>
@@ -114,6 +115,14 @@ function Home1() {
                   <span>a Travel Enthusiast ✈️ 🌍</span>
                 </span>
               </motion.h2>
+            <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters" style={{display:"none"}}>
+  <defs>
+    <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+    </filter>
+  </defs>
+</svg>
        </div>
 
         <div className="sliderContainer">
