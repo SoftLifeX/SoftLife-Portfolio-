@@ -126,7 +126,7 @@ function Home1() {
           <div data-scroll data-scroll-speed={0.1}>
               <div className="btnContainer">
             <Magnetic2>
-                <a href="" download className="btn4">
+                <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
                   Resume <i class="fa-solid fa-download fa-bounce"></i>
                 </a>
             </Magnetic2>
