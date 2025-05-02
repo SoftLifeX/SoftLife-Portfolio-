@@ -1,46 +1,46 @@
 @font-face {
   font-family: 'dot';
-  src: url(public/fonts/LaradotSerif-Regular.ttf);
+  src: url(assets/fonts/LaradotSerif-Regular.ttf);
 }
 
 @font-face {
   font-family: 'time';
-  src: url(public/fonts/Timeless.ttf);
+  src: url(assets/fonts/Timeless.ttf);
 }
 
 @font-face {
   font-family: 'penna';
-  src: url(public/fonts/penna.otf);
+  src: url(assets/fonts/penna.otf);
 }
 
 @font-face {
   font-family: 'audrey';
-  src: url(public/fonts/Audrey-Normal.otf);
+  src: url(assets/fonts/Audrey-Normal.otf);
 }
 
 @font-face {
   font-family: 'lemon';
-  src: url(public/fonts/LEMONMILK-Light.otf);
+  src: url(assets/fonts/LEMONMILK-Light.otf);
 }
 
 @font-face {
   font-family: 'star';
-  src: url(public/fonts/The\ Star\ in\ the\ Midnight.ttf);
+  src: url(assets/fonts/The\ Star\ in\ the\ Midnight.ttf);
 }
 
 @font-face {
   font-family: 'memph';
-  src: url(public/fonts/Memphis\ River.otf);
+  src: url(assets/fonts/Memphis\ River.otf);
 }
 
 @font-face {
   font-family: 'aris';
-  src: url(public/fonts/Arista-Pro-Alternate-Bold-trial.ttf);
+  src: url(assets/fonts/Arista-Pro-Alternate-Bold-trial.ttf);
 }
 
 @font-face {
   font-family: "chillen";
-  src: url(public/fonts/Chillen.ttf);
+  src: url(assets/fonts/Chillen.ttf);
 }
 
 :root {
