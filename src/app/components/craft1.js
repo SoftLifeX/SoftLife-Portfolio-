@@ -22,7 +22,7 @@ function Craft1() {
                 <h4>
                   <ul>
                     <li>
-                      <a href="#stack" className={action === "Project" ? "active": "" }
+                      <a href="#projects" className={action === "Project" ? "active": "" }
                         onClick={() => {
                         setAction("Project");
                         }}
@@ -31,7 +31,7 @@ function Craft1() {
                       </a>
                     </li>
                     <li>
-                      <a href="#stack" className={action === "Concept" ? "active": "" }
+                      <a href="#concepts" className={action === "Concept" ? "active": "" }
                         onClick={() => {
                         setAction("Concept");
                         }}
