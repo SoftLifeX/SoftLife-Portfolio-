@@ -191,8 +191,8 @@ function Header() {
                     d: moonPath,
                     rotate: -360,
                     scale: 1.3,
-                    stroke: "purple",
-                    fill: "purple",
+                    stroke: "navy",
+                    fill: "navy",
                     fillOpacity: 0.5,
                     strokeOpacity: 1,
                   }
