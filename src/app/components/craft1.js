@@ -53,37 +53,49 @@ function Craft1() {
          </span>
             </h3>
             
-            <div className="work-list">
+           <div className="work-list">
               <div className="work">
-                <Image src={images.work2} alt="work2" />
-                <a href="">
-                    Critique <i className="bx bx-link-external"></i>
-                </a>
+                <Image src={images.work1} alt="work1" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work3} alt="work3" />
-            <a href="">
-                    Critique <i className="bx bx-link-external"></i>
-                </a>
-              </div>
-
-              <div className="work">
-                <Image src={images.work2} alt="work2" />
-            <a href="">
-                    Critique <i className="bx bx-link-external"></i>
-                </a>
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work1} alt="work1" />
-            <a href="">
-                    Critique <i className="bx bx-link-external"></i>
-                </a>
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
+
+              <div className="work">
+                <Image src={images.work2} alt="work2" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
             <p className="fakemargin">margin</p>
             </div>
           </div>
+
           ) : (
             <div/>
             )}
@@ -96,22 +108,45 @@ function Craft1() {
         <div className="dot"></div>
          </span>
             </h3>
-          <div className="work-list">
+           <div className="work-list">
               <div className="work">
-                <Image src={images.work2} alt="work2" />
+                <Image src={images.work1} alt="work1" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work3} alt="work3" />
-              </div>
-
-              <div className="work">
-                <Image src={images.work2} alt="work2" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
 
               <div className="work">
                 <Image src={images.work1} alt="work1" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
               </div>
+
+              <div className="work">
+                <Image src={images.work2} alt="work2" />
+                <div className="layer">
+                  <p></p>
+                  <a href="">
+                    <i className="bx bx-link-external"></i>
+                  </a>
+                </div>
             <p className="fakemargin">margin</p>
             </div>
           </div>
