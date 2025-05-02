@@ -182,18 +182,18 @@ body::-webkit-scrollbar {
 }
 
 [data-title]:after {
-  background-color: var(--primary-color);
-    border: none;
-    outline: none;
-    color: #fff;
-    margin: auto;
-    padding: 0.2rem 0.4rem;
-    border: 0.06rem solid var(--border-color);
-    border-radius: 1px;
-    box-shadow: 0 0 0.25rem var(--accent-color);
-    width: fit-content;
-    height: fit-content;
-    font-size: 1rem;
+  border: none;
+outline: none;
+  background-color: var(--text-color);
+  color: var(--base-color);
+  margin: 1.87rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  z-index: 5;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1rem;
   content: attr(data-title);
   position: absolute;
   bottom: 1rem;
