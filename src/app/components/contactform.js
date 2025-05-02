@@ -73,7 +73,7 @@ function Contactform() {
                   Home <i className="bx bx-home-alt-2"></i>
                 </Link>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn2">
-                 Resume <i className="bx bx-download bx-tada"></i>
+                 Resume <i class='bx bxs-download bx-flashing' ></i>
                 </a>
               </div>
               <div className="contact-right">
