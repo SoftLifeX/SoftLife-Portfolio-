@@ -100,7 +100,7 @@ function Home1() {
                   />
                 </span>
                 <br />
-                an award-winning Developer , Designer and <br />{" "}
+                an award-winning Front-end | Mobile <br /> Software Designer, Developer  & <br />{" "}
                 <span className="slideUp" id="slide1">
                   <span>a Content-Creator 📷 🤳🏼</span>
                 </span>
