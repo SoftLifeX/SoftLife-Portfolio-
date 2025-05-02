@@ -85,7 +85,7 @@ function Craft1() {
               </div>
 
               <div className="work">
-                <Image src={images.work2} 8alt="work2" />
+                <Image src={images.work2} alt="work2" />
                 <div className="layer">
                   <p></p>
                   <a href="">
