@@ -2095,6 +2095,10 @@ form textarea {
 left: 65%;
 }
 
+  .logo {
+   left: 2rem; 
+  }
+  
     .codeProp {
   left: 77%;
 }
