@@ -2098,6 +2098,9 @@ left: 50%;
   .logo {
    left: 2rem; 
   }
+
+  .icons {
+    right: 15%;
   
     .codeProp {
   left: 77%;
