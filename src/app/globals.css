@@ -283,7 +283,10 @@ section {
 }
 
 .sticky {
+  position: fixed;
   width: 100%;
+    background-color: transparent;
+     backdrop-filter: blur(5px);
 }
 
 .stickylogo {
@@ -381,7 +384,7 @@ section {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   right: 8rem;
     top: 1.3rem;
   padding: 0.5rem 1rem;
@@ -397,9 +400,9 @@ section {
   text-decoration: none;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  backdrop-filter: blur(5px);
   background-color: transparent;
-}
+     backdrop-filter: blur(5px);
+  }
 
 .navbar ul li {
   list-style: none;
