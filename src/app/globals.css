@@ -843,7 +843,7 @@ outline: none;
 .statusBar1{
   padding: 0.3rem 0.5rem;
   background-color: #98FB98;
-  color: #37FD12;
+  color: #006400;
   border-radius: 30px;
   width: fit-content;
   justify-content: center;
@@ -855,12 +855,13 @@ outline: none;
   height: 0.5rem;
     width: 0.5rem;
     border-radius:50%;
-    background-color:  #37FD12;
+    background-color:  #006400;
     margin-right: 0.25rem;
+  display: inline-block;
 }
 
 .statusBar p{
-  color:  #37FD12;
+  color:  #006400;
 }
 
 .socialContainer {
