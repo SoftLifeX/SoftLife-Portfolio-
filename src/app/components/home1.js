@@ -61,8 +61,8 @@ function Home1() {
     <div className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
-     <span className="indicator"/>
-     <p>Available</p>
+     
+     <p><span className="indicator"/>Available</p>
      </div>
     ) : (
       <div/>
