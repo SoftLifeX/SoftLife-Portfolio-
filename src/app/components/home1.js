@@ -62,7 +62,7 @@ function Home1() {
     {status === "Available" ? (
       <div className="statusBar1">
      
-     <p><span className="indicator"></span>Available :D</p>
+     <p><span className="indicator" />Available :D</p>
      </div>
     ) : (
       <div/>
@@ -70,8 +70,7 @@ function Home1() {
 
      {status === "Busy" ? (
       <div className="statusBar2">
-     <span className="indicator"/>
-     <p>Sorry we're currently unavailable :(</p>
+     <p><span className="indicator"/> Sorry! currently unavailable :(</p>
      </div>
     ) : (
       <div/>
