@@ -860,8 +860,24 @@ outline: none;
   display: inline-block;
 }
 
-.statusBar p{
-  color:  #006400;
+.statusBar2{
+  padding: 0.3rem 0.5rem;
+  background-color: #F0E68C;
+  color: #FFD700;
+  border-radius: 30px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.statusBar2 .indicator{
+  height: 0.5rem;
+    width: 0.5rem;
+    border-radius:50%;
+    background-color: #FFD700;
+    margin-right: 0.25rem;
+  display: inline-block;
 }
 
 .socialContainer {
