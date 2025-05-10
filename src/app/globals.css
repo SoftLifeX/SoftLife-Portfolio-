@@ -833,6 +833,23 @@ outline: none;
   margin-left: 3.12rem;
 }
 
+.statusContainer {
+  position: absolute;
+  width: 19rem;
+  height: 6.5rem;
+  top: 5svh;
+}
+
+.statusBar1{
+  padding: 0.5rem 1rem;
+  border: 0.12rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
+  border-radius: 30px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .socialContainer {
   position: absolute;
   width: 19rem;
