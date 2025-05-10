@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, useInView } from "framer-motion";
@@ -44,6 +44,8 @@ function Home1() {
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   }
+
+  const [status,  setStatus] = useState("Available");
   
   return (
     <div>
@@ -56,6 +58,25 @@ function Home1() {
        <div className="pointer2">
           <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
        </div>
+    <div className="statusContainer">
+    {status === "Available" ? (
+      <div className="statusBar1">
+     <span className="indicator"/>
+     <p>Available</p>
+     </div>
+    ) : (
+      <div/>
+     )}
+
+     {status === "Busy" ? (
+      <div className="statusBar2">
+     <span className="indicator"/>
+     <p>Sorry we're currently unavailable</p>
+     </div>
+    ) : (
+      <div/>
+     )}
+    </div>
       <div className="socialContainer">           
           <div className="socials">
                 <a href="https://wa.link/wjns9h" data-title="WhatsApp">
