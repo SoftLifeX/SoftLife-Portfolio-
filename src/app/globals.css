@@ -983,7 +983,7 @@ outline: none;
   position: absolute;
   top: 117%;
     color: transparent;
-  text-shadow: 0 0 0.0625rem var(--text-color);
+  text-shadow: 0 0 0.015625 var(--text-color);
   -webkit-animation: fadeslideUp 8s infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   -moz-animation: fadeslideUp 8s infinite;
