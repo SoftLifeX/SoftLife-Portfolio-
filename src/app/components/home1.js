@@ -45,7 +45,7 @@ function Home1() {
     xPercent += 0.1 * direction;
   }
 
-  const [status,  setStatus] = useState("Busy");
+  const [status,  setStatus] = useState("Available");
   
   return (
     <div>
