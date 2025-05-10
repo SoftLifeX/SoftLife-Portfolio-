@@ -105,7 +105,7 @@ function Home1() {
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                <span id="helloText"></span>
+                <span id="helloText" />
                 <span className="waving-hand">👋</span>, I'm{" "}
                 <span className="typed">
                   <Typewriter
