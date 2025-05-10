@@ -863,7 +863,7 @@ outline: none;
 .statusBar2{
   padding: 0.3rem 0.5rem;
   background-color: #F0E68C;
-  color: #FFD700;
+  color: #FEBE10;
   border-radius: 30px;
   width: fit-content;
   justify-content: center;
@@ -871,11 +871,11 @@ outline: none;
   text-decoration: none;
 }
 
-.statusBar2 .indicator{
+.statusBar2 p .indicator{
   height: 0.5rem;
     width: 0.5rem;
     border-radius:50%;
-    background-color: #FFD700;
+    background-color: #FEBE10;
     margin-right: 0.25rem;
   display: inline-block;
 }
