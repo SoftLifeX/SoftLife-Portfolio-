@@ -45,7 +45,7 @@ function Home1() {
     xPercent += 0.1 * direction;
   }
 
-  const [status,  setStatus] = useState("Available");
+  const [status,  setStatus] = useState("Busy");
   
   return (
     <div>
@@ -62,7 +62,7 @@ function Home1() {
     {status === "Available" ? (
       <div className="statusBar1">
      
-     <p><span className="indicator"></span>Available</p>
+     <p><span className="indicator"></span>Available :D</p>
      </div>
     ) : (
       <div/>
@@ -71,7 +71,7 @@ function Home1() {
      {status === "Busy" ? (
       <div className="statusBar2">
      <span className="indicator"/>
-     <p>Sorry we're currently unavailable</p>
+     <p>Sorry we're currently unavailable :(</p>
      </div>
     ) : (
       <div/>
