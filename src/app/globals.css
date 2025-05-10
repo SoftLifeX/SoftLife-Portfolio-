@@ -837,13 +837,13 @@ outline: none;
   position: absolute;
   width: 19rem;
   height: 6.5rem;
-  top: 5svh;
+  top: 10svh;
 }
 
 .statusBar1{
   padding: 0.3rem 0.5rem;
-  border: 0.12rem solid #228B22;
-  background-color: #37FD12;
+  background-color: #98FB98;
+  color: 1 #37FD12;
   border-radius: 30px;
   width: fit-content;
   justify-content: center;
@@ -852,16 +852,15 @@ outline: none;
 }
 
 .indicator{
-  border: 0.0625rem solid #228B22;
   height: 0.3rem;
     width: 0.3rem;
     border-radius:50%;
-    background-color: #228B22;
+    background-color:  #37FD12;
     margin-right: 0.25rem;
 }
 
 .statusBar p{
-  color: #228B22;
+  color:  #37FD12;
 }
 
 .socialContainer {
