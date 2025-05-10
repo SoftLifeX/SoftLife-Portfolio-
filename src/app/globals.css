@@ -982,7 +982,8 @@ outline: none;
 .slideUp {
   position: absolute;
   top: 117%;
-    color: var(--text-color);
+    color: transparent;
+  text-shadow: 0 0 0.0625rem var(--text-color);
   -webkit-animation: fadeslideUp 8s infinite;
   /* Chrome, Opera 15+, Safari 5+ */
   -moz-animation: fadeslideUp 8s infinite;
