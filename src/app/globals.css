@@ -509,7 +509,7 @@ h3 {
     width: 0.25rem;
     border-radius:50%;
     transform: scale(0);
-    background-color:red;
+    background-color: gray;
     animation: scaling 2.5s ease-in-out infinite;
     display: inline-block;
     margin-left: 0.25rem;
@@ -841,13 +841,29 @@ outline: none;
 }
 
 .statusBar1{
-  padding: 0.5rem 1rem;
-  border: 0.12rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
+  padding: 0.3rem 0.5rem;
+  border: 0.12rem solid #7FFF00;
+  background-color: #37FD12;
   border-radius: 30px;
   width: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
+}
+
+.statusBar1 .indicator{
+  border: 0.0625rem solid #7FFF00;
+  height: 0.3rem;
+    width: 0.3rem;
+    border-radius:50%;
+    background-color: #37FD12;
+    display: inline-block;
+    margin-right: 0.25rem;
+}
+
+.statusBar p{
+  display: inline;
+  color: #7FFF00
 }
 
 .socialContainer {
