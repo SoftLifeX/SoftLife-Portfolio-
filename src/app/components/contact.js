@@ -11,8 +11,8 @@ function Contact() {
               Ready to elevate your brand?
             </h1>
             <Magnetic2>
-            <a href="mailto:softlife.dev001@gmail.com" className="btn4">
-              softlife.dev001@gmail.com
+            <a href="mailto:daniel.c.daniel.dev@gmail.com" className="btn4">
+              daniel.c.daniel.dev@gmail.com
             </a>
             </Magnetic2>
             <Magnetic2>
@@ -23,17 +23,16 @@ function Contact() {
           </div>
           <div className="socials">
                <a href="https://wa.link/wjns9h" data-title="WhatsApp">
-                  <i className="bx bxl-whatsapp"></i>
+                  <i className="fa-brands fa-whatsapp"></i>
                 </a>
                 <a href="https://github.com/SoftLifeDev" data-title="Github">
-                  <i className="bx bxl-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="" data-title="linkedin">
-                  <i className="bx bxl-linkedin-square"></i>
+                  <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a
-                  href="https://www.instagram.com/softlifekid/" data-title="Instagram">
-                  <i className="bx bxl-instagram"></i>
+                <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="https://x.com/SoftLife_Dev" data-title="X">
                   <i className="fa-brands fa-x-twitter"></i>
