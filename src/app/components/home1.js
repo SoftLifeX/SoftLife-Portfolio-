@@ -53,16 +53,16 @@ function Home1() {
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
       <div className="pointer">
-        <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
       </div>
        <div className="pointer2">
-          <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+          <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
        </div>
     <div className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
      
-     <p><span className="indicator" />Available :D</p>
+     <p><span className="indicator" />Available</p>
      </div>
     ) : (
       <div/>
