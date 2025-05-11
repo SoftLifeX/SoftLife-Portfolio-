@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
 outline: none;
   background-color: var(--text-color);
   color: var(--base-color);
-  margin: auto;
+  margin:0.0625rem auto;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 0 0 0.25rem var(--accent-color);
@@ -951,8 +951,8 @@ outline: none;
 
 .homepage .socials a {
   text-decoration: none;
-  font-size: 1.87rem;
-  -webkit-text-stroke: 2px var(--base-color);
+  font-size: 1.7rem;
+  -webkit-text-stroke: 0.0625rem var(--base-color);
   color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
