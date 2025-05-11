@@ -1545,6 +1545,10 @@ outline: none;
   padding-top: 2.5rem;
 }
 
+.fa-brands .fa-figma{
+  -webkit-text-stroke: 0.0625rem var(--primary-color);
+}
+
 .services-list div {
   background-color: var(--primary-color);
   padding-left: 1.87rem;
