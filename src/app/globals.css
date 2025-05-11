@@ -1297,6 +1297,7 @@ outline: none;
 .socials a {
   text-decoration: none;
   font-size: 1.87rem;
+  -webkit-text-stroke: 0.0625rem var(--base-color);
   color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
