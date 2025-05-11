@@ -10,7 +10,7 @@ function About3() {
            <h5>Our Services</h5>
             <div className="services-list">
               <div>
-               <i class="fa-thin fa-code"></i>
+               <i className="fa-thin fa-code"></i>
                 <h2>Web Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
@@ -26,7 +26,7 @@ function About3() {
               </div>
 
               <div>
-                <i class="fa-brands fa-figma"></i>
+                <i className="fa-brands fa-figma"></i>
                 <h2>UI/UX</h2>
                 <p>
                   Unlock the vast potential of user-centric designs:
@@ -43,7 +43,7 @@ function About3() {
               </div>
 
               <div>
-               <i class="fa-thin fa-paintbrush"></i>
+               <i className="fa-thin fa-paintbrush"></i>
                 <h2>Graphic Design</h2>
                 <p>
                   Your Brand is your Legacy;
