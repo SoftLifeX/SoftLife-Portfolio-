@@ -952,7 +952,7 @@ outline: none;
 .homepage .socials a {
   text-decoration: none;
   font-size: 1.87rem;
-  font-weight: 100;
+  -webkit-text-stroke: 2px var(--base-color);
   color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
