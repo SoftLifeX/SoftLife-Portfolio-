@@ -85,7 +85,7 @@ function Home1() {
                   <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="" data-title="linkedin">
-                  <i className="fa-brands fa-linkedin-in"></i>
+                  <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
                   <i className="fa-brands fa-instagram"></i>
