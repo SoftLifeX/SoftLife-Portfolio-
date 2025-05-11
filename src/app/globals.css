@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
 outline: none;
   background-color: var(--text-color);
   color: var(--base-color);
-  margin: 1.87rem auto;
+  margin: auto;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 0 0 0.25rem var(--accent-color);
@@ -156,7 +156,7 @@ outline: none;
   font-size: 1rem;
   content: attr(data-title);
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.5rem;
   left: 100%;
   white-space: nowrap;
   opacity: 0;
@@ -861,7 +861,7 @@ outline: none;
 }
 
 .statusBar2{
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   background-color: #F0E68C;
   color: #FEBE10;
   border-radius: 30px;
@@ -952,6 +952,7 @@ outline: none;
 .homepage .socials a {
   text-decoration: none;
   font-size: 1.87rem;
+  font-weight: 100;
   color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
