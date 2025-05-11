@@ -21,7 +21,7 @@ function About1() {
             </div>
             <div className="about-col-2">
               <div className="codeProp">
-                  <i class="fa-solid fa-code fa-flip"></i>
+                  <i class="fa-thin fa-code fa-flip"></i>
               </div>
               <div>
              <motion.p
