@@ -79,16 +79,16 @@ function Home1() {
       <div className="socialContainer">           
           <div className="socials">
                 <a href="https://wa.link/wjns9h" data-title="WhatsApp">
-                  <i className="bx bxl-whatsapp"></i>
+                  <i className="fa-brands fa-whatsapp"></i>
                 </a>
                 <a href="https://github.com/SoftLifeDev" data-title="Github">
-                  <i className="bx bxl-github"></i>
+                  <i className="fa-brands fa-github"></i>
                 </a>
                 <a href="" data-title="linkedin">
-                  <i className="bx bxl-linkedin-square"></i>
+                  <i className="fa-brands fa-linkedin-in"></i>
                 </a>
                 <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
-                  <i className="bx bxl-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
                 <a href="https://x.com/SoftLife_Dev" data-title="X">
                   <i className="fa-brands fa-x-twitter"></i>
