@@ -1553,6 +1553,14 @@ outline: none;
   -webkit-text-stroke: 0.0625rem var(--base-color);
 }
 
+.services-list div:hover~.fa-brands.fa-figma{
+  -webkit-text-stroke: 0.0625rem var(--text-color);
+}
+
+.services-list div:hover~.fa-brands.fa-app-store{
+  -webkit-text-stroke: 0.0625rem var(--text-color);
+}
+
 .services-list div {
   background-color: var(--primary-color);
   padding-left: 1.87rem;
@@ -1626,7 +1634,6 @@ outline: none;
     border-radius: 5px;
   }
 }
-
 
 /*review list*/
 .review h2 {
