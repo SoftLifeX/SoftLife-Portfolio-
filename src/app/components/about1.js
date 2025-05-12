@@ -28,7 +28,7 @@ function About1() {
                initial={{ y: "60%" }}
                 animate={{ y: "0%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            >
+            className="circle-sketch-highlight">
           An award-winning, detail-oriented web | mobile software engineer specialized in <b> React </b>, <b> Motion design </b>, <b> flutter </b>, <b> React Native </b> and <b> Next js </b> as my major frame-work.
             <br/> I continously strive to be the finest version of myself, my workflow is no exception. 
             <br/> "As developers, we bridge the recess where tech meets standard" - Valhalla. 
