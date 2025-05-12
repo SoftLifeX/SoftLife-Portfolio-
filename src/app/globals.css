@@ -1799,7 +1799,7 @@ form textarea {
     text-align: center;
     transform: scale(0);
     transition: 0.3s ease;
-    top: 2.2rem;
+    top: 5rem;
   }
 
   #check:checked~.navbar {
@@ -1989,7 +1989,7 @@ left: 50%;
     text-align: center;
     transform: scale(0);
     transition: 0.3s ease;
-    top: 2.2rem;
+    top: 5rem;
   }
 
   #check:checked~.navbar {
