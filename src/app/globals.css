@@ -1551,6 +1551,7 @@ outline: none;
 
 .fa-brands.fa-app-store{
 -webkit-text-stroke: 0.0625rem var(--primary-color);
+  opacity: 0;
 }
 
 .services-list div {
