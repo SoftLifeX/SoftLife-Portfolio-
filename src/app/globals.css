@@ -204,7 +204,7 @@ section {
 
 .home1 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
   margin-top: 0;
@@ -212,7 +212,7 @@ section {
 
 .home2 {
   scale: 0.85;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   will-change: transform ease-in-out;
   animation: ease-in-out;
@@ -221,51 +221,51 @@ section {
 
 .home3 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about1 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   margin-top: 0;
 }
 
 .about2 {
   scale: 0.9;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about3 {
   scale: 0.9;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about4 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .craft1 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   margin-top: 0;
 }
 
 .craft2 {
   scale: 0.9;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .craft3 {
   scale: 0.98;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
@@ -398,7 +398,7 @@ section {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   background-color: transparent;
      backdrop-filter: blur(5px);
@@ -607,7 +607,7 @@ height: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   margin-bottom: 2.5rem;
 position: relative;
   z-index: 1;
@@ -621,7 +621,7 @@ position: relative;
 .btn2:before{
 transition: 0.4s all ease;
 position: absolute;
-box-shadow: 0 0 0.25rem var(--accent-color);
+box-shadow: 0 0 0.20rem var(--accent-color);
   background-color: var(--text-color);
 top: 50%;
 bottom: 50%;
@@ -709,7 +709,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   margin-bottom: 2.5rem;
   z-index: 5;
   position: relative;
@@ -717,7 +717,7 @@ outline: none;
 
 .btn4:hover {
    padding: 0.5rem 1.5rem;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
 }
 
 
@@ -1545,8 +1545,12 @@ outline: none;
   padding-top: 2.5rem;
 }
 
-.fa-brands fa-figma{
+.fa-figma{
   -webkit-text-stroke: 0.0625rem var(--primary-color);
+}
+
+.fa-app-store{
+-webkit-text-stroke: 0.0625rem var(--primary-color);
 }
 
 .services-list div {
@@ -1559,7 +1563,7 @@ outline: none;
   font-weight: 300;
   border-radius: 5px;
   transition: transform 0.5s ease-in-out;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   color: var(--text-color);
   margin-bottom: 2.5rem;
@@ -1586,7 +1590,7 @@ outline: none;
 .services-list div:before {
   transition: 0.4s all ease;
   position: absolute;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   background-color: var(--text-color);
   top: 50%;
   bottom: 50%;
@@ -1666,7 +1670,7 @@ outline: none;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
   background-color: transparent;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.20rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   outline: 1.8px solid var(--base-color);
   outline-offset: -10px;
