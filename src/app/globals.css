@@ -1546,12 +1546,11 @@ outline: none;
 }
 
 .fa-brands.fa-figma{
-  -webkit-text-stroke: 0.0625rem var(--primary-color);
+  -webkit-text-stroke: 0.0625rem var(--base-color);
 }
 
 .fa-brands.fa-app-store{
--webkit-text-stroke: 0.0625rem var(--primary-color);
-  opacity: 0;
+  -webkit-text-stroke: 0.0625rem var(--base-color);
 }
 
 .services-list div {
