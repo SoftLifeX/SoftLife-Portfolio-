@@ -1545,11 +1545,11 @@ outline: none;
   padding-top: 2.5rem;
 }
 
-.fa-figma{
+.fa-brands.fa-figma{
   -webkit-text-stroke: 0.0625rem var(--primary-color);
 }
 
-.fa-app-store{
+.fa-brands.fa-app-store{
 -webkit-text-stroke: 0.0625rem var(--primary-color);
 }
 
