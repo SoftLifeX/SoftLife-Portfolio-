@@ -841,7 +841,7 @@ outline: none;
 }
 
 .statusBar1{
-  padding: 0.3rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   background-color: #98FB98;
   color: #006400;
   border-radius: 30px;
@@ -1545,7 +1545,7 @@ outline: none;
   padding-top: 2.5rem;
 }
 
-.fa-brands .fa-figma{
+.fa-brands fa-figma{
   -webkit-text-stroke: 0.0625rem var(--primary-color);
 }
 
@@ -1799,7 +1799,7 @@ form textarea {
     text-align: center;
     transform: scale(0);
     transition: 0.3s ease;
-    top: 100%;
+    top: 2.2rem;
   }
 
   #check:checked~.navbar {
@@ -1989,7 +1989,7 @@ left: 50%;
     text-align: center;
     transform: scale(0);
     transition: 0.3s ease;
-    top: 100%;
+    top: 2.2rem;
   }
 
   #check:checked~.navbar {
