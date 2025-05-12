@@ -26,7 +26,7 @@ function About3() {
               </div>
 
               <div>
-                <i className="fa-thin-brands fa-figma"></i>
+                <i className="fa-brands fa-figma"></i>
                 <h2>UI/UX</h2>
                 <p>
                   Unlock the vast potential of user-centric designs:
@@ -60,7 +60,7 @@ function About3() {
               </div>
 
               <div>
-                <i className="fa-brands-thin fa-app-store"></i>
+                <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>
                   There's a thin line between your visions and REALITY.
