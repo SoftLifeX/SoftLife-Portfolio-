@@ -1012,6 +1012,7 @@ outline: none;
 
 .marker-highlight{
   position:relative;
+  color: black;
 }
 
 .marker-highlight:before{
