@@ -72,10 +72,10 @@ function About2() {
                       <p>GitHub</p>
                     </i>
                    <i className="fa-brands fa-flutter">
-                     <p>Flutter<p>
+                     <p>Flutter</p>
                    </i>
                    <i className="fa-brands fa-figma">
-                     <p>Figma<p>
+                     <p>Figma</p>
                    </i>
                   </div>
                 </ul>
