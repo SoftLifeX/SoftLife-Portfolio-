@@ -804,7 +804,7 @@ outline: none;
 .pointer i {
   text-decoration: none;
   font-size: 2.5rem;
-  color: var(--palette-color);
+  color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -825,7 +825,7 @@ outline: none;
 .pointer2 i {
   text-decoration: none;
   font-size: 2.5rem;
-  color: var(--palette-color);
+  color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
