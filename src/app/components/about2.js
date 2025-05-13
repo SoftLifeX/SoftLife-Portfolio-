@@ -71,9 +71,12 @@ function About2() {
                     <i className="bx bxl-github">
                       <p>GitHub</p>
                     </i>
-                    <i className="bx bx-devices">
-                      <p>Dynamic Websites</p>
-                    </i>
+                   <i className="fa-brands fa-flutter">
+                     <p>Flutter<p>
+                   </i>
+                   <i className="fa-brands fa-figma">
+                     <p>Figma<p>
+                   </i>
                   </div>
                 </ul>
               </div>
