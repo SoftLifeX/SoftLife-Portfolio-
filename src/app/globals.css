@@ -146,7 +146,7 @@ body::-webkit-scrollbar {
 outline: none;
   background-color: var(--text-color);
   color: var(--base-color);
-  margin:0.0625rem auto;
+  margin:0.01rem auto;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   box-shadow: 0 0 0.25rem var(--accent-color);
@@ -156,7 +156,7 @@ outline: none;
   font-size: 1rem;
   content: attr(data-title);
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 0.5rem;
   left: 100%;
   white-space: nowrap;
   opacity: 0;
@@ -1239,7 +1239,7 @@ outline: none;
   border: 0.06rem solid var(--border-color);
 }
 
-.layer {
+/*.layer {
   width: 100%;
   height: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), var(--secondary-text));
@@ -1251,35 +1251,35 @@ outline: none;
   align-items: center;
   justify-content: center;
   padding: 0 2.5rem;
- /* flex-direction: column;*/
+  flex-direction: column;
   text-align: center;
   font-size: 1.06rem;
   transition: transform, height 0.4s ease-in;
-}
+}*/
 
-.layer a {
+.layer {
   position: absolute;
   border: none;
   outline: none;
   background-color: var(--base-color);
   color: var(--text-color);
-  border-radius: 5px;
+  border-radius: 30px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   box-shadow: 0 0 0.20rem var(--accent-color);
   font-size: 1.25rem;
   line-height: 2.81rem;
-  width: 100%;
+  width: 80%;
   height: 2.5rem;
   bottom: 1.5rem;
 }
 
 
-.work:hover .layer {
+/*.work:hover .layer {
   height: 100%;
   transform: scale(1.5);
-}
+}*/
 
 .work:hover img {
   transform: scale(1.05);
