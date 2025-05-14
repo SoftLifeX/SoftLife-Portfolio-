@@ -1251,8 +1251,8 @@ outline: none;
   align-items: center;
   justify-content: center;
   padding: 0 2.5rem;
- /* flex-direction: column;
-  text-align: center;*/
+ /* flex-direction: column;*/
+  text-align: center;
   font-size: 1.06rem;
   transition: transform, height 0.4s ease-in;
 }
@@ -1261,9 +1261,8 @@ outline: none;
   position: absolute;
   border: none;
   outline: none;
-  background-color: var(--text-color);
-  color: var(--base-color);
-  padding: 0.5rem 1rem;
+  background-color: var(--base-color);
+  color: var(--text-color);
   border-radius: 5px;
   justify-content: center;
   align-items: center;
