@@ -1233,10 +1233,10 @@ outline: none;
   height: 100%;
   display: block;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(15px);
   transition: transform 0.5s;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  border-radius: 30px;
 }
 
  .layer {
@@ -1262,7 +1262,7 @@ outline: none;
   position: absolute;
   border: none;
   outline: none;
-  background-color: var(--base-color);
+  background-color: transparent;
   color: var(--text-color);
   border-radius: 30px;
   justify-content: center;
@@ -1271,9 +1271,10 @@ outline: none;
   box-shadow: 0 0 0.20rem var(--accent-color);
   font-size: 1.25rem;
   line-height: 2.81rem;
-  width: 80%;
-  height: 2.5rem;
+  width: 90%;
+  height: 4rem;
   bottom: 1.5rem;
+  backdrop-filter: blur(1rem); 
 }
 
 
