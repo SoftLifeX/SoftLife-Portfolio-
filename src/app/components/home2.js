@@ -69,7 +69,7 @@ function Home2() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="bx bx-link-external"></i>
+                    View Project<i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -84,9 +84,9 @@ function Home2() {
                  src={images.work1} alt="work3" />
                 <div className="layer">
                   <div className="work-info">  
-                  <p>CritiQue</p>
+                  <p>Upskill Africa</p>
                   <a href="">
-                    View Project<i className="bx bx-link-external"></i>
+                    View Project<i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
