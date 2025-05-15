@@ -100,9 +100,9 @@ function Craft1() {
                   </a>
                    </div> 
                 </div>
-            <p className="fakemargin">margin</p>
-            </div>
+             </div>
           </div>
+            <p className="fakemargin">margin</p>
          </div>
 
           ) : (
@@ -164,9 +164,9 @@ function Craft1() {
                   </a>
                    </div> 
                 </div>
-            <p className="fakemargin">margin</p>
             </div>
           </div>
+            <p className="fakemargin">margin</p>
         </div>
           ) : (
             <div/>
