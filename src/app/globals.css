@@ -1225,6 +1225,7 @@ outline: none;
 .work {
   position: relative;
   overflow: hidden;
+  border-radius: 30px;
 }
 
 .work img {
@@ -1236,7 +1237,6 @@ outline: none;
   transition: transform 0.5s;
   box-shadow: 0 0 0.25rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  border-radius: 30px;
 }
 
  .layer {
@@ -1258,17 +1258,19 @@ outline: none;
   transition: transform, height 0.4s ease-in;
 }
 
-.layer a{
+.work-info{
   position: absolute;
   border: none;
   outline: none;
   background-color: transparent;
   color: var(--text-color);
   border-radius: 30px;
-  justify-content: center;
+  display: flex;
+  justify-content:space-between;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.25rem var(--accent-color);
+  border: 0.06rem solid white;
   font-size: 1.25rem;
   line-height: 2.81rem;
   width: 90%;
@@ -1277,11 +1279,21 @@ outline: none;
   backdrop-filter: blur(1rem); 
 }
 
-
-/*.work:hover .layer {
-  height: 100%;
-  transform: scale(1.5);
-}*/
+.work-info a{
+   display: block;
+  border: none;
+  outline: none;
+  background-color: white;
+  margin: 0.015rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 0.20rem var(--accent-color);
+}
 
 .work:hover img {
   transform: scale(1.05);
