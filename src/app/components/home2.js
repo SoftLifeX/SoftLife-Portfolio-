@@ -66,10 +66,12 @@ function Home2() {
                  priority={true}
                  src={images.work1} alt="Critique" />
                 <div className="layer">
-                  <p></p>
+                  <div className="work-info">  
+                  <p>CritiQue</p>
                   <a href="">
-                    <i className="bx bx-link-external"></i>
+                    View Project<i className="bx bx-link-external"></i>
                   </a>
+                   </div> 
                 </div>
               </motion.div>
 
