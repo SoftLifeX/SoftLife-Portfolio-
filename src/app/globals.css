@@ -1270,23 +1270,24 @@ outline: none;
   text-decoration: none;
   box-shadow: 0 0 0.25rem white;
   border: 0.06rem solid white;
-  font-size: 1.25rem;
-  width: 90%;
+  font-size: 1rem;
+  width: 95%;
   height: 4rem;
-  bottom: 1.5rem;
+  bottom: 1rem;
   backdrop-filter: blur(1rem); 
 }
 
 .work-info a{
-   display: block;
+   display: flex;
   border: none;
   outline: none;
   background: white;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
+  margin: 0 0.2rem;
+  padding: 0.2rem 1rem;
   border-radius: 30px;
   cursor: pointer;
   width: fit-content;
+  height: 95%;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -1296,6 +1297,7 @@ outline: none;
 
 .work-info p{
   position: relative;
+  margin: 0 1rem;
 }
 
 .work:hover img {
