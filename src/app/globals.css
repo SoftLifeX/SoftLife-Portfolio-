@@ -1287,17 +1287,19 @@ outline: none;
   border-radius: 30px;
   cursor: pointer;
   width: fit-content;
-  height: 95%;
+  height: 94%;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   box-shadow: 0 0 0.20rem white;
   position: relative;
+  color: black;
 }
 
 .work-info p{
   position: relative;
   margin: 0 1rem;
+  font-size: 1.4rem;
 }
 
 .work:hover img {
