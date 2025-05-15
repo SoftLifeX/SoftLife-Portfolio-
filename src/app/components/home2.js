@@ -64,7 +64,7 @@ function Home2() {
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
-                 src={images.work1} alt="Critique" />
+                 src={images.work1} alt="Critique" title="CritiQue"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>CritiQue</p>
@@ -81,7 +81,7 @@ function Home2() {
                 transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
-                 src={images.work1} alt="work3" />
+                 src={images.work1} alt="Upskill Africa" title="Upskill Africa"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>Upskill Africa</p>
