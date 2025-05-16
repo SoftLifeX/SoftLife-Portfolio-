@@ -304,6 +304,7 @@ section {
   text-shadow: 0 0 0.6rem var(--secondary-color), 0.37rem 0.37rem 0.56rem var(--text-color);
   text-decoration: none;
   font-weight: 600;
+  rotate: -30deg;
 }
 
 .logo span {
@@ -841,7 +842,7 @@ outline: none;
 }
 
 .statusBar1{
-  padding: 0.2rem 0.5rem;
+  padding: 0.1rem 0.5rem;
   background-color: #98FB98;
   color: #006400;
   border-radius: 30px;
@@ -1225,7 +1226,7 @@ outline: none;
 .work {
   position: relative;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 
 .work img {
@@ -1252,7 +1253,7 @@ outline: none;
   justify-content: center;
   padding: 0 2.5rem;
   flex-direction: column;
-   border-radius: 30px;
+   border-radius: 5px;
   transition: transform, height 0.4s ease-in;
 }
 
@@ -1267,13 +1268,12 @@ outline: none;
   justify-content:space-between;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.25rem white;
-  border: 0.06rem solid white;
+  border: 0.08rem solid white;
   font-size: 1rem;
   width: 95%;
   height: 4rem;
   bottom: 1rem;
-  backdrop-filter: blur(1rem); 
+  backdrop-filter: blur(5px); 
 }
 
 .work-info a{
