@@ -17,26 +17,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-/*export const metadata = {
-  title: {
-    default: "SoftLife Dev",
-    template: "%s - SoftLife Dev",
-  },
-  description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel'],
-  authors: [{ name: 'Daniel c. Daniel' }],
-  creator: 'SoftLife Dev',
-  publisher: 'SoftLife Dev',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
-};*/
-
 export const metadata = {
   /*icons: {
     apple: '/apple-icon.png',
@@ -55,11 +35,7 @@ export const metadata = {
     default: "SoftLife Dev • Designer & Developer",
     template: "%s - SoftLife Dev • Designer & Developer",
   },
-  description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
- /*  siteId: '@dev.alexdgreat',
-    creator: 'Ogbuagu Great Alexander',
-    creatorId: '@OgbuaguGreat',*/
-  //  images: ['https://devalexdgreat.vercel.app/favicon.png'], // Must be an absolute URL
+  description: "An award-winning Front-end | Mobile Software engineer and designer specialized in React, Motion design, Typescript and Next js with expertise in Web Development, ui/ux design, App Development",
   },
   openGraph: {
     title: {
@@ -69,19 +45,6 @@ export const metadata = {
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   url: "https://softlife-dev.vercel.app/",
     siteName: "SoftLife Dev",
-   /* images: [
-      {
-        url: 'https://devalexdgreat.vercel.app/favicon.png', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://devalexdgreat.vercel.app/favicon.png', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'Alexander de Great (ADG)',
-      },
-    ], */
     locale: 'en_US',
     type: 'website',
   },
@@ -103,7 +66,7 @@ export const metadata = {
     template: "%s - SoftLife Dev • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel'],
+  keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel', 'software engineer', 'coding', 'TypeScript', 'Javascript'],
   authors: [{ name: 'Daniel Daniel Chimbu-okaaomee' }],
   creator: 'SoftLife Dev',
   publisher: 'SoftLife Dev',
@@ -117,10 +80,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-    <meta name="viewport" content="height=device-height, 
-                      width=device-width, initial-scale=1.0, 
-                      minimum-scale=1.0, maximum-scale=1.0, 
-                      user-scalable=no, target-densitydpi=device-dpi"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" 
+    content="height=device-height, 
+    width=device-width, initial-scale=1.0, 
+    minimum-scale=1.0, maximum-scale=1.0, 
+    user-scalable=no, target-densitydpi=device-dpi"/>
+    
     <link
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
