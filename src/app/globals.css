@@ -304,6 +304,7 @@ section {
   text-shadow: 0 0 0.6rem var(--secondary-color), 0.37rem 0.37rem 0.56rem var(--text-color);
   text-decoration: none;
   font-weight: 600;
+    rotate: -2deg;
 }
 
 .logo span {
@@ -1303,6 +1304,7 @@ outline: none;
   position: relative;
   margin: 0 1rem;
   font-size: 1.2rem;
+  color: var(--base-color);
 }
 
 .work:hover img {
