@@ -298,7 +298,7 @@ section {
 .logo {
   position: fixed;
   left: 8rem;
-  top: 1.3rem;
+  top: 1.7rem;
   font-size: 1.2rem;
   color: var(--text-color);
   text-shadow: 0 0 0.6rem var(--secondary-color), 0.37rem 0.37rem 0.56rem var(--text-color);
