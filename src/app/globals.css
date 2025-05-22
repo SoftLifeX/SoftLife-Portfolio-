@@ -293,6 +293,7 @@ section {
   position: fixed;
   width: 100%;
   background-color: transparent;
+  rotate: -2deg;
 }
 
 .logo {
