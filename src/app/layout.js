@@ -80,13 +80,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" 
-    content="height=device-height, 
-    width=device-width, initial-scale=1.0, 
-    minimum-scale=1.0, maximum-scale=1.0, 
-    user-scalable=no, target-densitydpi=device-dpi"/>
-    
     <link
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
