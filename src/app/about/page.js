@@ -22,13 +22,13 @@ const About = () => {
       }, []);
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait" >
       <motion.div
         key={pathName}
         initial={{ y: "20vh", opacity: 0, scale: 0.5 }}
         animate={{ y: "0%", opacity: 1, scale: 1 }}
         exit={{ y: "20vh", opacity: 0, scale: 0.5 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
       <About1 />
       <About2 />
