@@ -25,9 +25,9 @@ const About = () => {
     <AnimatePresence mode="wait" >
       <motion.div
         key={pathName}
-        initial={{ y: "20vh", opacity: 0, scale: 0.5 }}
-        animate={{ y: "0%", opacity: 1, scale: 1 }}
-        exit={{ y: "20vh", opacity: 0, scale: 0.5 }}
+        initial={{ y: "20vh", opacity: 0, scale: 0 }}
+        animate={{ y: "0%", opacity: 1, scale: 1, transformOrigin: 'top' }}
+        exit={{ y: "20vh", opacity: 0, scale: 0 }}
         transition={{ duration: 0.5 }}
       >
       <About1 />
