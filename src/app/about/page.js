@@ -1,4 +1,5 @@
 "use client";
+import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import React from "react";
 import { useEffect } from "react";
@@ -7,11 +8,9 @@ import About2 from "../components/about2";
 import About3 from "../components/about3";
 import Contact from "../components/contact";
 
-/*export const metadata = {
-  title: "About",
-};*/
-
 const About = () => {
+
+  const pathName = usePathname();
 
       useEffect(() => {
         (async () => {
@@ -22,16 +21,20 @@ const About = () => {
       }, []);
 
   return (
-    <motion.div
-      initial={{ y: "20vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 0.5 }}
-    >
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.div
+        key={pathName}
+        initial={{ y: "20vh", opacity: 0, scale: 0.5 }}
+        animate={{ y: "0%", opacity: 1, scale: 1 }}
+        exit={{ y: "20vh", opacity: 0, scale: 0.5 }}
+        transition={{ duration: 0.3 }}
+      >
       <About1 />
       <About2 />
       <About3 />
       <Contact />
     </motion.div>
+   </AnimatePresence>
   );
 };
 
