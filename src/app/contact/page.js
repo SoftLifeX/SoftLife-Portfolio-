@@ -20,9 +20,9 @@ const Contact = () => {
 
   return (
     <motion.div
-      initial={{ y: "60vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ duration: 0.5 }}
     >
      
      <Contactform />
