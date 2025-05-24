@@ -25,11 +25,12 @@ useEffect(() => {
     <AnimatePresence mode="wait" >
       <motion.div
         key={pathName}
-        initial={{ y: "20vh", opacity: 0, scale: 0 }}
-        animate={{ y: "0%", opacity: 1, scale: 1 }}
-        exit={{ y: "20vh", opacity: 0, scale: 0 }}
+        initial={{ opacity: 0, scale: 0, transformOrigin: 'top' }}
+        animate={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
+        exit={{ opacity: 0, scale: 0, transformOrigin: 'top'}}
         transition={{ duration: 0.5 }}
       >
+
       
       <Home1 />
       <Home2 />
