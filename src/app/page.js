@@ -19,8 +19,8 @@ useEffect(() => {
 
   return (
     <motion.div
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
+      initial={{ y: "20vh" }}
+      animate={{ y: "0%" }}
       transition={{ duration: 0.5 }}
     >
       
