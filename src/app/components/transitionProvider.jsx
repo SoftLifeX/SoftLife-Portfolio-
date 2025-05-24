@@ -40,7 +40,7 @@ const TransitionProvider = ({ children }) => {
   },[]);
 
   return (
-    <AnimatePresence mode="wait">
+   {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
         <motion.div
@@ -62,6 +62,45 @@ const TransitionProvider = ({ children }) => {
           className="TransitionProvider3"
           initial={{ height: "200vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
+        />
+      <StickyCursor/>
+        <Header />
+        <div>{children}</div>
+      </div>
+    </AnimatePresence>*/}
+     <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      <div key={pathName}>
+        <motion.div
+          className="TransitionProvider"
+          animate={{ width: "0vw", transformOrigin: 'left' }}
+          exit={{ width: "50vw", transformOrigin: 'left' }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        />
+       <motion.div
+          className="TransitionProvider1"
+          animate={{ width: "0vw", transformOrigin: 'right' }}
+          exit={{ width: "50vw", transformOrigin: 'right' }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        />
+        <motion.div
+          className="TransitionProvider2"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {paths[pathName]}
+        </motion.div>
+        <motion.div
+          className="TransitionProvider3"
+          initial={{ width: "50vw", transformOrigin: 'left' }}
+          animate={{ width: "0vw", transformOrigin: 'left', transition: { delay: 0.5 } }}
+        />
+       <motion.div
+          className="TransitionProvider4"
+          initial={{ width: "50vw", transformOrigin: 'right' }}
+          animate={{ width: "0vw", transformOrigin: 'right', transition: { delay: 0.5 } }}
         />
       <StickyCursor/>
         <Header />
