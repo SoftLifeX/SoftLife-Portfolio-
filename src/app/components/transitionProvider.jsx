@@ -47,32 +47,32 @@ const TransitionProvider = ({ children }) => {
           className="TransitionProvider"
           animate={{ width: "0vw", transformOrigin: 'left' }}
           exit={{ width: "50vw", transformOrigin: 'left' }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         />
        <motion.div
           className="TransitionProvider1"
           animate={{ width: "0vw", transformOrigin: 'right' }}
           exit={{ width: "50vw", transformOrigin: 'right' }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         />
         <motion.div
           className="TransitionProvider2"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           {paths[pathName]}
         </motion.div>
         <motion.div
           className="TransitionProvider3"
           initial={{ width: "50vw", transformOrigin: 'left' }}
-          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: "easeOut" } }}
+          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }}
         />
        <motion.div
           className="TransitionProvider4"
           initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: "easeOut" } }}
+          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }}
         />
       <StickyCursor/>
         <Header />
