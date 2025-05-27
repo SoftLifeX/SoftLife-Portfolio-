@@ -60,19 +60,19 @@ const TransitionProvider = ({ children }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           {paths[pathName]}
         </motion.div>
         <motion.div
           className="TransitionProvider3"
           initial={{ width: "50vw", transformOrigin: 'left' }}
-          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, delay: 1, ease: [0.16, 1, 0.3, 1] } }}
+          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: easeOut } }}
         />
        <motion.div
           className="TransitionProvider4"
           initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] } }}
+          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: easeOut } }}
         />
       <StickyCursor/>
         <Header />
