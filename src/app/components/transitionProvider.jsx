@@ -72,7 +72,7 @@ const TransitionProvider = ({ children }) => {
        <motion.div
           className="TransitionProvider4"
           initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }}
+          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] } }}
         />
       <StickyCursor/>
         <Header />
