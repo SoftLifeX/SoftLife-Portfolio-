@@ -189,6 +189,10 @@ outline: none;
   transform-origin: top;
 }
 
+.screen{
+  background-color: var(--text-color);
+}
+
 /*sections*/
 section {
   width: 100%;
