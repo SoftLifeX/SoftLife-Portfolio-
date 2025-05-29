@@ -26,8 +26,8 @@ const About = () => {
       <motion.div 
         initial={{ opacity: 0.5, scale: 0, transformOrigin: 'top' }}
         animate={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
+        exit={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
         transition={{ duration: 0.5 }}
-       className="screen"
       >
 
       <About1 />
