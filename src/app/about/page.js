@@ -22,12 +22,10 @@ const About = () => {
       }, []);
 
   return (
-    <AnimatePresence mode="wait" >
+    <AnimatePresence >
       <motion.div
-        key={pathName}
-        initial={{ opacity: 0, scale: 0, transformOrigin: 'top' }}
-        animate={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
-        exit={{ opacity: 0, scale: 0, transformOrigin: 'top'}}
+        initial={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
+        animate={{ opacity: 0, scale: 0, transformOrigin: 'top' }}
         transition={{ duration: 0.5 }}
       >
 
