@@ -23,10 +23,11 @@ const About = () => {
 
   return (
     <AnimatePresence >
-      <motion.div
-        initial={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
-        animate={{ opacity: 0, scale: 0, transformOrigin: 'top' }}
+      <motion.div 
+        initial={{ opacity: 0.5, scale: 0, transformOrigin: 'top' }}
+        animate={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
         transition={{ duration: 0.5 }}
+       className="screen"
       >
 
       <About1 />
