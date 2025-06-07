@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import TransitionProvider from "./components/transitionProvider";
+import Curve from "./components/curve";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -126,10 +127,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
-     <TransitionProvider>
+     <Curve>
            {children}
      </TransitionProvider>
-   </ThemeProvider>
+   </Curve>
       </body>
     </html>
   );
