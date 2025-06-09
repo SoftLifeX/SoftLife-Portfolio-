@@ -129,8 +129,8 @@ export default function RootLayout({ children }) {
    <ThemeProvider enableSystem={false}>
      <Curve>
            {children}
-     </TransitionProvider>
-   </Curve>
+     </Curve>
+  </ThemeProvider>
       </body>
     </html>
   );
