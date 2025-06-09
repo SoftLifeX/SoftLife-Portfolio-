@@ -64,7 +64,6 @@ export default function Curve({children, backgroundColor}) {
     
     return (
     <div className='page curve' style={{backgroundColor}}>
-      {isLoading && <Preloader />}
        <div style={{opacity: dimensions.width == null ? 1 : 0}} className='background'/>
        <motion.p className='route' {...anim(text)}>
             {paths[pathName]}
