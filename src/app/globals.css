@@ -842,12 +842,13 @@ outline: none;
 .statusContainer {
   position: absolute;
   width: 19rem;
-  height: 6.5rem;
-  top: 10svh;
+  height: 6rem;
+  top: 13svh;
+  left: 8rem;
 }
 
 .statusBar1{
-  padding: 0.1rem 0.5rem;
+  padding: 0.05rem 0.4rem;
   background-color: #98FB98;
   color: #006400;
   border-radius: 30px;
@@ -867,7 +868,7 @@ outline: none;
 }
 
 .statusBar2{
-  padding: 0.2rem 0.4rem;
+  padding: 0.05rem 0.4rem;
   background-color: #F0E68C;
   color: #FEBE10;
   border-radius: 30px;
@@ -890,14 +891,16 @@ outline: none;
   position: absolute;
   width: 19rem;
   height: 6.5rem;
-  top: 15svh;
+  top: 18svh;
+  left: 8rem;
 }
 
 .h2Container {
   position: absolute;
   width: 35rem;
   height: 6.5rem;
-  top: 20svh;
+  top: 23svh;
+  left: 8rem;
 }
 
 .btnContainer {
@@ -905,11 +908,12 @@ outline: none;
   top: 72svh;
   width: 18.5rem;
   height: 6.5rem;
+  left: 8rem;
 }
 
 .sliderContainer {
   position: absolute;
-  top: 38svh;
+  top: 41svh;
 }
 
 .slider {
