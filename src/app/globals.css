@@ -844,7 +844,7 @@ outline: none;
   width: 19rem;
   height: 6rem;
   top: 13svh;
-  left: 8rem;
+  left: 10svw;
 }
 
 .statusBar1{
@@ -892,7 +892,7 @@ outline: none;
   width: 19rem;
   height: 6.5rem;
   top: 18svh;
-  left: 8rem;
+  left: 10svw;
 }
 
 .h2Container {
@@ -900,7 +900,7 @@ outline: none;
   width: 35rem;
   height: 6.5rem;
   top: 23svh;
-  left: 8rem;
+  left: 10svw;
 }
 
 .btnContainer {
@@ -908,7 +908,7 @@ outline: none;
   top: 72svh;
   width: 18.5rem;
   height: 6.5rem;
-  left: 8rem;
+  left: 10svw;
 }
 
 .sliderContainer {
