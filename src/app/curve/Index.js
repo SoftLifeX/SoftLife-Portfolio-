@@ -1,5 +1,5 @@
 'use client';
-import Header from "./header";
+import Header from "../components/header";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
