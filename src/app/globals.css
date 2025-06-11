@@ -79,7 +79,7 @@
   align-items: center;
   position: fixed;
    top: 1.7rem;
-left: 50%;
+left: 48%;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -210,7 +210,7 @@ section {
 
 .home1 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
   margin-top: 0;
@@ -218,7 +218,7 @@ section {
 
 .home2 {
   scale: 0.85;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   will-change: transform ease-in-out;
   animation: ease-in-out;
@@ -227,51 +227,51 @@ section {
 
 .home3 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about1 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   margin-top: 0;
 }
 
 .about2 {
   scale: 0.9;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about3 {
   scale: 0.9;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about4 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .craft1 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   margin-top: 0;
 }
 
 .craft2 {
   scale: 0.9;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .craft3 {
   scale: 0.98;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
@@ -613,7 +613,7 @@ height: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   margin-bottom: 2.5rem;
 position: relative;
   z-index: 1;
@@ -627,7 +627,7 @@ position: relative;
 .btn2:before{
 transition: 0.4s all ease;
 position: absolute;
-box-shadow: 0 0 0.20rem var(--accent-color);
+box-shadow: 0 0 0.10rem var(--accent-color);
   background-color: var(--text-color);
 top: 50%;
 bottom: 50%;
@@ -715,7 +715,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   margin-bottom: 2.5rem;
   z-index: 5;
   position: relative;
@@ -723,7 +723,7 @@ outline: none;
 
 .btn4:hover {
    padding: 0.5rem 1.5rem;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
 }
 
 
@@ -772,7 +772,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   margin-bottom: 2.5rem;
   float: right;
   right: 3.75rem;
