@@ -150,7 +150,7 @@ function Header() {
     <div>
       <header className="top">
          <a href="/" className={`logo ${scroll ? "stickylogo" : ""}`}>
-          <span>&lt</span>
+          <span>&lt;</span>
           <span>S</span>
           <span>o</span>
           <span>F</span>
@@ -162,7 +162,7 @@ function Header() {
           <span>e</span>
           <span>‎</span>
           <span>/</span>
-          <span>&gt</span>
+          <span>&gt;</span>
         </a>
 
         <input className="icons" type="checkbox" id="check" />
