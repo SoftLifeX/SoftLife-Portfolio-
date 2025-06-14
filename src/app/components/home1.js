@@ -62,7 +62,7 @@ function Home1() {
     {status === "Available" ? (
       <div className="statusBar1">
      
-     <p><span className="indicator" />Available</p>
+     <p><span className="indicator" />Available for new projects</p>
      </div>
     ) : (
       <div/>
