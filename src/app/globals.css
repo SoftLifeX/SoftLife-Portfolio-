@@ -887,9 +887,11 @@ outline: none;
 
   40%{
     transform: scale(1.5);
+    background-color: #98FB98;
   }
   50%{
     transform: scale(1.5);
+    background-color: #98FB98;
   }
 }
 
