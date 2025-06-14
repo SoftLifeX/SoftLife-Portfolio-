@@ -111,7 +111,7 @@ function Home1() {
                   />
                 </span>
               </h2>
-               <p>
+               <p className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
                 <span className="slideUp" id="slide1">
