@@ -446,7 +446,7 @@ section {
   border-radius: 30px;
   background: transparent;
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 0.12rem var(--secondary-text);
+  box-shadow: 0 0 0.10rem var(--secondary-text);
 }
 
 .navbar a.active {
@@ -454,8 +454,8 @@ section {
   color: var(--base-color);
   background-color: var(--text-color);
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 0.12rem var(--accent-color);
-  scale: 1.02;
+  box-shadow: 0 0 0.10rem var(--accent-color);
+  scale: 1.01;
 }
 
 .navbar .social-icons {
@@ -944,7 +944,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 38svh;
+  top: 35svh;
 }
 
 .slider {
@@ -985,6 +985,7 @@ outline: none;
 
 .homepage p{
   margin: 0;
+  color: var(--secondary-text);
 }
 
 .homepage .socials {
