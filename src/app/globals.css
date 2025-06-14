@@ -972,7 +972,7 @@ outline: none;
 
 .homepage h2 {
  /* font-family: 'time', serif;*/
-  font-weight: 400; 
+  font-weight: 300; 
   color: var(--text-color);
   font-size: 1.7rem;
   margin: 0.5rem 0;
@@ -1075,7 +1075,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 124%;
+  top: 125%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
