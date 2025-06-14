@@ -357,6 +357,18 @@ section {
   animation-delay: 0.9s;
 }
 
+.logo span:nth-child(10) {
+  animation-delay: 0.95s;
+}
+
+.logo span:nth-child(11) {
+  animation-delay: 0.75s;
+}
+
+.logo span:nth-child(12) {
+  animation-delay: 1s;
+}
+
 .logo:hover span {
   opacity: 1;
   animation-name: fadeout;
@@ -848,11 +860,11 @@ outline: none;
 }
 
 .statusBar1{
-  padding: 0.05rem 0.4rem;
-  background-color: #98FB98;
+ /* padding: 0.05rem 0.4rem; 
   color: #006400;
   border-radius: 30px;
-  width: fit-content;
+  width: fit-content; */
+  
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -865,14 +877,28 @@ outline: none;
     background-color:  #006400;
     margin-right: 0.25rem;
   display: inline-block;
+  animation: scaled 2.5s ease-in-out infinite;
+}
+
+@keyframes scaled{
+  0%, 100%{
+    transform: scale(1);
+  }
+
+  40%{
+    transform: scale(1.2);
+  }
+  50%{
+    transform: scale(1.2);
+  }
 }
 
 .statusBar2{
-  padding: 0.05rem 0.4rem;
+ /* padding: 0.05rem 0.4rem;
   background-color: #F0E68C;
   color: #FEBE10;
   border-radius: 30px;
-  width: fit-content;
+  width: fit-content; */
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -909,6 +935,7 @@ outline: none;
   width: 18.5rem;
   height: 6.5rem;
   left: 10svw;
+  display: inline;
 }
 
 .sliderContainer {
@@ -940,16 +967,16 @@ outline: none;
 }
 
 .homepage h2 {
-  font-family: 'time', serif;
-  font-weight: 100;
+ /* font-family: 'time', serif;
+  font-weight: 100; */
   color: var(--text-color);
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   margin: 1rem 1rem;
   position: relative;
 }
 
 .homepage h2 span {
-  font-family: 'time', serif;
+  /*font-family: 'time', serif;*/
 }
 
 .homepage .socials {
