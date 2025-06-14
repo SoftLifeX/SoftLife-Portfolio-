@@ -997,7 +997,7 @@ outline: none;
 
 .homepage .socials a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   -webkit-text-stroke: 0.0625rem var(--base-color);
   color: var(--text-color);
   display: inline-flex;
@@ -1076,7 +1076,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 127%;
+  top: 126%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
