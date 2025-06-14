@@ -886,10 +886,10 @@ outline: none;
   }
 
   40%{
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
   50%{
-    transform: scale(1.2);
+    transform: scale(1.5);
   }
 }
 
@@ -977,6 +977,10 @@ outline: none;
 
 .homepage h2 span {
   /*font-family: 'time', serif;*/
+}
+
+.homepage p{
+  margin: 0;
 }
 
 .homepage .socials {
@@ -1067,7 +1071,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 121%;
+  top: 124%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
