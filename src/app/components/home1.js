@@ -96,7 +96,7 @@ function Home1() {
           </div>
          </div>
     <div className="h2Container">
-           <h2><b><span id="helloText" />
+           <h2><span id="helloText" />
                 <span className="waving-hand">👋</span>, I'm{" "}
                 <span className="typed">
                   <Typewriter
@@ -110,8 +110,7 @@ function Home1() {
                     delaySpeed={1000}
                   />
                 </span>
-              </b></h2>
-                <br />
+              </h2>
                <p>
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
