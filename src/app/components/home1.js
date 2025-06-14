@@ -97,11 +97,11 @@ function Home1() {
          </div>
     <div className="h2Container">
            <h2><span id="helloText" />
-                <span className="waving-hand">👋</span>, I'm{" "}
+                <span className="waving-hand">👋</span>, 
                 <span className="typed">
                   <Typewriter
                     words={[
-                      "Daniel c. Daniel , \n popularly known as SoftLife!",
+                      " I'm Daniel c. Daniel , \n popularly known as SoftLife!",
                     ]}
                     cursor
                     cursorStyle=""
