@@ -79,7 +79,7 @@
   align-items: center;
   position: fixed;
    top: 1.7rem;
-left: 48%;
+left: 42%;
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -2263,6 +2263,10 @@ left: 50%;
 
   .layer {
     height: 100%;
+  }
+
+  #theme-switch {
+    left: 52%;
   }
 
   /*.tab-titles ul li a {
