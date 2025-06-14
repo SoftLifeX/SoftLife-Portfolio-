@@ -629,6 +629,7 @@ height: fit-content;
   margin-bottom: 2.5rem;
 position: relative;
   z-index: 1;
+  font-weight: 100;
 }
 
 .btn2:hover {
@@ -731,6 +732,7 @@ outline: none;
   margin-bottom: 2.5rem;
   z-index: 5;
   position: relative;
+  font-weight: 100;
 }
 
 .btn4:hover {
@@ -970,7 +972,7 @@ outline: none;
 
 .homepage h2 {
  /* font-family: 'time', serif;*/
-  font-weight: 100; 
+  font-weight: 300; 
   color: var(--text-color);
   font-size: 1.7rem;
   margin: 0.5rem 0;
