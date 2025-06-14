@@ -96,16 +96,7 @@ function Home1() {
           </div>
          </div>
     <div className="h2Container">
-                       <motion.h2
-                initial={{ y: "60%" }}
-                animate={{ y: "0%" }}
-                transition={{
-                  delay: 0.65,
-                  duration: 0.5,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                <span id="helloText" />
+           <h2><b><span id="helloText" />
                 <span className="waving-hand">👋</span>, I'm{" "}
                 <span className="typed">
                   <Typewriter
@@ -119,7 +110,9 @@ function Home1() {
                     delaySpeed={1000}
                   />
                 </span>
+              </b></h2>
                 <br />
+               <p>
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
                 <span className="slideUp" id="slide1">
@@ -134,7 +127,7 @@ function Home1() {
                 <span className="slideUp" id="slide4">
                   <span>a Travel Enthusiast ✈️ 🌍</span>
                 </span>
-              </motion.h2>
+              </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
       <filter id="marker-shape">
@@ -156,12 +149,12 @@ function Home1() {
               <div className="btnContainer">
             <Magnetic2>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
-                  Resume <i class='bx bxs-download bx-flashing' ></i>
+                  Resume
                 </a>
             </Magnetic2>
             <Magnetic2>
             <Link href="/contact" className="btn2">
-              Hire Me! <i class="fa-solid fa-user-tie fa-beat"></i>
+              Hire Me!
             </Link>
             </Magnetic2>
            </div>
