@@ -1075,7 +1075,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 125%;
+  top: 127%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
