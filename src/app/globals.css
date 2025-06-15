@@ -822,7 +822,7 @@ outline: none;
   align-items: center;
 }
 
-.pointer svg {
+.arrowIcom {
   text-decoration: none;
   font-size: 2.5rem;
   color: var(--text-color);
