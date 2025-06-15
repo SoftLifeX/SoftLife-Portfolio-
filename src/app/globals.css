@@ -822,7 +822,7 @@ outline: none;
   align-items: center;
 }
 
-.arrowIcom {
+.arrowIcon {
   text-decoration: none;
   font-size: 2.5rem;
   color: var(--text-color);
@@ -831,7 +831,7 @@ outline: none;
   transition: 0.5s ease-in-out;
   margin-bottom: 1.87rem;
   margin-left: 3.12rem;
-  background: transparent;
+  background-color: transparent;
 }
 
 .pointer2 {
