@@ -825,13 +825,14 @@ outline: none;
 .arrowIcon {
   text-decoration: none;
   font-size: 2.5rem;
-  color: var(--text-color);
+  fill: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
   margin-bottom: 1.87rem;
   margin-left: 3.12rem;
   background-color: transparent;
+  rotate: 90deg;
 }
 
 .pointer2 {
