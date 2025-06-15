@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2"
+import ArrowIcon from "./arrow"
 
 
 
@@ -53,7 +54,7 @@ function Home1() {
         <div className="homepage">
     <div data-scroll data-scroll-speed={0.1}>
       <div className="pointer">
-<i class="fa-thin fa-arrow-down fa-beat-fade"></i>
+        <ArrowIcon />
       </div>
        <div className="pointer2">
           <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
