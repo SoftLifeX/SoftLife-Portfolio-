@@ -2,6 +2,7 @@ import * as React from "react";
 
 const ArrowIcon = (props) => (
   <svg
+    className="arrowIcon"
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     id="Capa_1"
