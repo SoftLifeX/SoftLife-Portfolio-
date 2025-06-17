@@ -156,7 +156,7 @@ outline: none;
   font-size: 1rem;
   content: attr(data-title);
   position: absolute;
-  bottom: 0.5rem;
+  bottom: -0.5rem;
   left: 100%;
   white-space: nowrap;
   opacity: 0;
@@ -309,6 +309,7 @@ section {
   color: var(--text-color);
   /*text-shadow: 0 0 0.3rem var(--secondary-color), 0.15rem 0.15rem 0.25rem var(--text-color);*/
   text-decoration: none;
+  font-weight: 600;
 }
 
 .logo span {
@@ -431,10 +432,10 @@ section {
   text-decoration: none;
   margin-left: 2.5rem;
   list-style: none;
-  font-weight: 100;
+  font-weight: 200;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 .navbar a span {
@@ -813,7 +814,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 3svh;
+  top: 2svh;
   left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -931,7 +932,7 @@ outline: none;
   position: absolute;
   width: 35rem;
   height: 6.5rem;
-  top: 20svh;
+  top: 19svh;
   left: 10svw;
 }
 
@@ -940,7 +941,7 @@ outline: none;
   top: 72svh;
   width: 18.5rem;
   height: 6.5rem;
-  left: 5svw;
+  left: 0svw;
 }
 
 .sliderContainer {
@@ -1066,7 +1067,7 @@ outline: none;
   content:"";
   background-color: var(--palette-color);
   width:100%;
-  height:1em;
+  height: 1em;
   position:absolute;
   z-index:-1;
   filter:url(#marker-shape);
@@ -1077,7 +1078,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 35%;
+  top: 119%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
