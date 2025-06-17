@@ -153,8 +153,8 @@ function Header() {
           <span>&lt;</span>
           <span>S</span>
           <span>o</span>
-          <span>F</span>
-          <span>T</span>
+          <span>f</span>
+          <span>t</span>
           <span>‎</span>
           <span>L</span>
           <span>i</span>
