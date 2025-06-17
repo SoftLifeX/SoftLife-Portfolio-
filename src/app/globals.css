@@ -624,7 +624,7 @@ height: fit-content;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.10rem var(--accent-color);
+  /*box-shadow: 0 0 0.10rem var(--accent-color);*/
   margin-bottom: 2.5rem;
 position: relative;
   z-index: 1;
