@@ -878,7 +878,7 @@ outline: none;
 .indicator{
   position: absolute;
   left: 0;
-  top: 18%;
+  top: 20%;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5rem;
   height: 0.5rem;
