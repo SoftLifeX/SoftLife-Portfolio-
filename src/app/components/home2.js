@@ -43,7 +43,7 @@ function Home2() {
       <section ref={secRef} className="home2">
         <div className="portfolio">
           <div className="container">
-            <h3  data-scroll data-scroll-speed={0.1}>
+            <p>
               Creativity is not just a skill
               <br /> It's a life-style 
           <span> 
@@ -53,8 +53,8 @@ function Home2() {
          </span>
               <br />
               <br />
-              <span className="blocktext">We live it!</span>
-            </h3>
+              <span className="blocktext"></span>
+            </p>
 
             <h5>Case Studies</h5>
             <div className="work-list">
