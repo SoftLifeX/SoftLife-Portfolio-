@@ -877,11 +877,11 @@ outline: none;
 
 .indicator{
   position: absolute;
-  left: 50%;
+  left: 0;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 0.5rem;
+  height: 0.5rem;
   
   &:before {
     content: '';
