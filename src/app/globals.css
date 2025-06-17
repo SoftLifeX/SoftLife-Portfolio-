@@ -303,13 +303,12 @@ section {
 
 .logo {
   position: fixed;
-  left: 8rem;
+  left: 10svw;
   top: 1.7rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text-color);
-  text-shadow: 0 0 0.6rem var(--secondary-color), 0.37rem 0.37rem 0.56rem var(--text-color);
+  text-shadow: 0 0 0.3rem var(--secondary-color), 0.15rem 0.15rem 0.25rem var(--text-color);
   text-decoration: none;
-  font-weight: 600;
 }
 
 .logo span {
@@ -403,8 +402,8 @@ section {
 
 .navbar {
   position: fixed;
-  right: 8rem;
-    top: 1.3rem;
+  right: 10svw;
+  top: 1.3rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
   border: 0.06rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
@@ -450,7 +449,7 @@ section {
 }
 
 .navbar a.active {
-  border-radius: 15px;
+  border-radius: 30px;
   color: var(--base-color);
   background-color: var(--text-color);
   padding: 0.05rem 1rem;
@@ -476,7 +475,7 @@ section {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
-  top: 2rem;
+  top: 1.7rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -814,7 +813,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 5svh;
+  top: 3svh;
   left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -932,7 +931,7 @@ outline: none;
   position: absolute;
   width: 35rem;
   height: 6.5rem;
-  top: 23svh;
+  top: 20svh;
   left: 10svw;
 }
 
@@ -962,7 +961,7 @@ outline: none;
   margin: 0px;
   color: var(--text-color);
   font-family: 'penna' , serif;
-  font-size: 14rem;
+  font-size: 12rem;
   font-weight: normal;
   padding-right: 3.12rem;
 }
@@ -1079,7 +1078,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 121%;
+  top: 21%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
