@@ -28,7 +28,7 @@ function Contact() {
                 <a href="https://github.com/SoftLifeDev" data-title="Github">
                   <i className="fa-brands fa-github"></i>
                 </a>
-                <a href="" data-title="linkedin">
+                <a href="linkedin.com/in/daniel-c-daniel-dev" data-title="linkedin">
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
                 <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
