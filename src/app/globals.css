@@ -445,7 +445,7 @@ section {
   border-radius: 30px;
   background: transparent;
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 0.10rem var(--secondary-text);
+  border: 0.06rem solid var(--tertiary-color);
 }
 
 .navbar a.active {
@@ -453,7 +453,7 @@ section {
   color: var(--base-color);
   background-color: var(--text-color);
   padding: 0.05rem 1rem;
-  box-shadow: 0 0 0.10rem var(--accent-color);
+ /* box-shadow: 0 0 0.10rem var(--accent-color);*/
   scale: 1.01;
 }
 
@@ -613,8 +613,8 @@ border: none;
 outline: none;
   color: var(--text-color);
   margin: 1.87rem auto;
-  padding: 0.5rem 1rem;
-  border: 0.06rem solid var(--border-color);
+  padding: 0.5rem 0.5rem;
+  border: 0.06rem solid var(--tertiary-color);
   border-radius: 5px;
   cursor: pointer;
   transition: padding, box-shadow ease-in-out;
@@ -632,14 +632,14 @@ position: relative;
 }
 
 .btn2:hover {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   color: var(--base-color);
 }
 
 .btn2:before{
 transition: 0.4s all ease;
 position: absolute;
-box-shadow: 0 0 0.10rem var(--accent-color);
+/*box-shadow: 0 0 0.10rem var(--accent-color);*/
   background-color: var(--text-color);
 top: 50%;
 bottom: 50%;
@@ -660,7 +660,7 @@ left: 0;
 right: 0;
 opacity: 1;
   animation: border 0.4s ease;
-  box-shadow: inset 0 0 0 0.10rem var(--accent-color);
+/*  box-shadow: inset 0 0 0 0.10rem var(--accent-color);*/
 }
 
 
@@ -719,7 +719,7 @@ outline: none;
   background-color: var(--text-color);
   color: var(--base-color);
   margin: 1.87rem auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 5px;
   cursor: pointer;
   transition: scale, ease-in-out;
@@ -728,7 +728,7 @@ outline: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.10rem var(--accent-color);
+ /* box-shadow: 0 0 0.10rem var(--accent-color);*/
   margin-bottom: 2.5rem;
   z-index: 5;
   position: relative;
@@ -736,8 +736,8 @@ outline: none;
 }
 
 .btn4:hover {
-   padding: 0.5rem 1.5rem;
-  box-shadow: 0 0 0.10rem var(--accent-color);
+   padding: 0.5rem 1rem;
+/*  box-shadow: 0 0 0.10rem var(--accent-color);*/
 }
 
 
@@ -1998,6 +1998,10 @@ form textarea {
 .navbar a:nth-child(4) {
   transition-delay: 0.4s;
 }
+
+  .navbar a:hover {
+    border: none;
+  }
   
   .navbar a::after {
     content: '';
@@ -2209,7 +2213,10 @@ left: 52%;
 .navbar a:nth-child(4) {
   transition-delay: 0.4s;
 }
-  
+
+  .navbar a:hover {
+    border: none;
+  }
 
   .navbar a::after {
     content: '';
