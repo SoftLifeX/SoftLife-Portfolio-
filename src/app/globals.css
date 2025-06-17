@@ -1276,7 +1276,7 @@ outline: none;
   overflow: hidden;
 }
 
-.portfolio h3 {
+.portfolio p {
   padding: 3.75rem;
 }
 
@@ -1293,6 +1293,14 @@ outline: none;
   background: linear-gradient(to right, var(--secondary-text), var(--text-color));
   border-radius: 10px;
   padding: 0.2rem 0.5rem;
+}
+
+.blocktext:after {
+  content:'We Live It!';
+}
+
+.blocktext:hover:after{
+  content:'We Love It!'
 }
 
 .work-list {
