@@ -56,9 +56,9 @@ function Home1() {
       <div className="pointer">
         <ArrowIcon />
       </div>
-       <div className="pointer2">
+      {/*<div className="pointer2">
           <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
-       </div>
+       </div>*/}
     <div className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -77,7 +77,7 @@ function Home1() {
       <div/>
      )}
     </div>
-      <div className="socialContainer">           
+      {/* <div className="socialContainer">           
           <div className="socials">
                 <a href="https://wa.link/wjns9h" data-title="WhatsApp">
                   <i className="fa-brands fa-whatsapp"></i>
@@ -95,7 +95,7 @@ function Home1() {
                   <i className="fa-brands fa-x-twitter"></i>
                 </a>
           </div>
-         </div>
+         </div>*/}
     <div className="h2Container">
            <h2><span id="helloText" />
                 <span className="waving-hand">👋</span>, 
