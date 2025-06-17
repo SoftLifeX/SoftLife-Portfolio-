@@ -445,7 +445,7 @@ section {
   border-radius: 30px;
   background: transparent;
   padding: 0.05rem 1rem;
-  border: 0.06rem solid var(--tertiary-color);
+  box-shadow: 0 0 0.10rem var(--secondary-text);
 }
 
 .navbar a.active {
@@ -634,6 +634,7 @@ position: relative;
 .btn2:hover {
   padding: 0.5rem 1rem;
   color: var(--base-color);
+  border: none;
 }
 
 .btn2:before{
