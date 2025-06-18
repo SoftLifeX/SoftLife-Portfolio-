@@ -94,7 +94,7 @@ function Home2() {
              </div>
             <Magnetic2>
             <Link href="/craft" className="btn2">
-              Intrigued?<i className="bx bx-arrow-to-top"></i>
+              Intrigued?{/*<i className="bx bx-arrow-to-top"></i>*/}
             </Link>
             </Magnetic2>
 
