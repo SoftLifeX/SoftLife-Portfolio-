@@ -1390,8 +1390,8 @@ outline: none;
 .work-info p{
   position: relative;
   margin: 0 1rem;
-  font-size: 1.2rem;
-  color: var(--base-color);
+  color: var(--secondary-text);
+  font-family: 'time', serif;
 }
 
 .work:hover img {
