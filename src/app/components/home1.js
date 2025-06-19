@@ -47,6 +47,9 @@ function Home1() {
   }
 
   const [status,  setStatus] = useState("Available");
+
+  const isInView = useInView(ref, { once: true });
+  
   
   return (
     <div>
@@ -59,7 +62,11 @@ function Home1() {
       {/*<div className="pointer2">
           <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
        </div>*/}
-    <div className="statusContainer">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+       transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+    className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
      
@@ -97,7 +104,11 @@ function Home1() {
           </div>
          </div>*/}
     <div className="h2Container">
-           <h2><span id="helloText" />
+           <motion.h2
+             initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            ><span id="helloText" />
                 <span className="waving-hand">👋</span>, 
                 <span className="typed">
                   <Typewriter
@@ -111,8 +122,12 @@ function Home1() {
                     delaySpeed={1000}
                   />
                 </span>
-              </h2>
-               <p className="hometext">
+              </motion.h2>
+               <motion.p
+                initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+               className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
                 <span className="slideUp" id="slide1">
@@ -127,7 +142,7 @@ function Home1() {
                 <span className="slideUp" id="slide4">
                   <span>a Travel Enthusiast ✈️ 🌍</span>
                 </span>
-              </p>
+              </motion.p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
       <filter id="marker-shape">
