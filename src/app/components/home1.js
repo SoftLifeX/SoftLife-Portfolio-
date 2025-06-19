@@ -83,7 +83,7 @@ function Home1() {
     ) : (
       <div/>
      )}
-    </div>
+    </motion.div>
       {/* <div className="socialContainer">           
           <div className="socials">
                 <a href="https://wa.link/wjns9h" data-title="WhatsApp">
