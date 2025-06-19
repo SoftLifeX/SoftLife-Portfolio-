@@ -48,7 +48,7 @@ function Home1() {
 
   const [status,  setStatus] = useState("Available");
 
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView;
   
   
   return (
@@ -65,6 +65,7 @@ function Home1() {
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
        transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     className="statusContainer">
     {status === "Available" ? (
@@ -107,6 +108,7 @@ function Home1() {
            <motion.h2
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             ><span id="helloText" />
                 <span className="waving-hand">👋</span>, 
@@ -126,6 +128,7 @@ function Home1() {
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
