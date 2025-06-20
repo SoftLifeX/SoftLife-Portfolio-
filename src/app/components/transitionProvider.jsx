@@ -50,13 +50,13 @@ const TransitionProvider = ({ children }) => {
           className="PageIn1"
           animate={{ width: "0vw", transformOrigin: 'left' }}
           exit={{ width: "50vw", transformOrigin: 'left' }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
         />
        <motion.span
           className="PageIn2"
           animate={{ width: "0vw", transformOrigin: 'right' }}
           exit={{ width: "50vw", transformOrigin: 'right' }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
         />
       </motion.div>
         <motion.div
@@ -76,12 +76,12 @@ const TransitionProvider = ({ children }) => {
         <motion.span
           className="PageOut1"
           initial={{ width: "50vw", transformOrigin: 'left' }}
-          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: 'easeOut' } }}
+          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
        <motion.span
           className="PageOut2"
           initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: 'easeOut' } }}
+          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
       </motion.div>
       <StickyCursor/>
