@@ -2345,7 +2345,7 @@ left: 52%;
     margin: 1.87rem;
   }
 
-  .TransitionProvider3 {
+  .PageOut1 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2356,7 +2356,7 @@ left: 52%;
     right: 0;
   }
   
-  .TransitionProvider4 {
+  .PageOut2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2367,7 +2367,7 @@ left: 52%;
     right: 0;
   }
 
-  .TransitionProvider2 {
+  .PagePath {
     position: fixed;
     margin: auto;
     top: 0;
@@ -2383,7 +2383,7 @@ left: 52%;
     font-family: 'audrey', sans-serif;
   }
 
-  .TransitionProvider {
+  .PageIn1 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2393,7 +2393,7 @@ left: 52%;
     z-index: 990;
   }
 
-  .TransitionProvider1 {
+  .PageIn2 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2431,7 +2431,7 @@ left: 52%;
  }
 }
 
-.TransitionProvider3 {
+.PageOut1 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2442,7 +2442,7 @@ left: 52%;
     right: 0;
   }
   
-  .TransitionProvider4 {
+  .PageOut2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2453,7 +2453,7 @@ left: 52%;
     right: 0;
   }
 
-  .TransitionProvider2 {
+  .PagePath {
     position: fixed;
     margin: auto;
     top: 0;
@@ -2469,7 +2469,7 @@ left: 52%;
     font-family: 'audrey', sans-serif;
   }
 
-  .TransitionProvider {
+  .PageIn1 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2479,7 +2479,7 @@ left: 52%;
     z-index: 990;
   }
 
-  .TransitionProvider1 {
+  .PageIn2 {
     width: 100%;
     height: 100%;
     position: fixed;
