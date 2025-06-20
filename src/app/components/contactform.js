@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 
 function Contactform() {
 
@@ -28,13 +29,25 @@ function Contactform() {
       <section>
         <div className="contact">
           <div className="container">
-            <h5>Get in Touch!</h5>
-            <h1 data-scroll data-scroll-speed={0.1}>
+            <motion.h5
+             initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>Get in Touch!</motion.h5>
+            <motion.h1 
+             initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
               Let's collaborate
-            </h1>
+            </motion.h1>
             <div className="row">
               <div className="contact-left">
-                <h3>
+                <motion.h3
+                initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
                   Feeling social? <br />
                   Connect with me on any of these online spaces
              <span> 
@@ -42,7 +55,7 @@ function Contactform() {
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-                </h3>
+                </motion.h3>
                 <div className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com" data-title="Email Me">
                     <i className="bx bxl-gmail"></i>
@@ -73,7 +86,7 @@ function Contactform() {
                   Home <i className="bx bx-home-alt-2"></i>
                 </Link>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn2">
-                 Resume <i class='bx bxs-download bx-flashing' ></i>
+                 Resume
                 </a>
               </div>
               <div className="contact-right">
