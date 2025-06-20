@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const words = [
-  "SoftLife",
+  "<SoftLife Dev />",
   "Designer",
   "Developer",
-  "Nice to meet you :)",
+  "Creative Noob",
+  "Nice to Meet You :)",
 ];
-
+ 
 export default function Index() {
   const [index, setIndex] = useState(0);
 
