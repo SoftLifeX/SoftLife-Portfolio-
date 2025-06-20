@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const words = [
-  "<SoftLife Dev />",
+  "SoftLife Dev ",
   "Designer",
   "Developer",
   "Creative Noob",
