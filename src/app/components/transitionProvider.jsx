@@ -64,7 +64,7 @@ const TransitionProvider = ({ children }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
         >
           {paths[pathName]}
         </motion.div>
