@@ -10,7 +10,7 @@ function About3() {
            <h5>Our Services</h5>
             <div className="services-list">
               <motion.div
-               initial={{ opacity: 0, scale: 1.5 }}
+               initial={{ opacity: 0, scale: 1.05 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
@@ -30,7 +30,7 @@ function About3() {
               </motion.div>
 
               <motion.div
-              initial={{ opacity: 0, scale: 1.5 }}
+              initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
              transition={{ delay: 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
@@ -51,7 +51,7 @@ function About3() {
               </motion.div>
 
               <motion.div
-              initial={{ opacity: 0, scale: 1.5 }}
+              initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
              transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
@@ -72,7 +72,7 @@ function About3() {
               </motion.div>
 
               <motion.div
-              initial={{ opacity: 0, scale: 1.5 }}
+              initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
              transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
