@@ -43,20 +43,24 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-        <motion.div
-          className="TransitionProvider"
+         <motion.div
+            className='PageIn'
+            >
+        <motion.span
+          className="PageIn1"
           animate={{ width: "0vw", transformOrigin: 'left' }}
           exit={{ width: "50vw", transformOrigin: 'left' }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         />
-       <motion.div
-          className="TransitionProvider1"
+       <motion.span
+          className="PageIn2"
           animate={{ width: "0vw", transformOrigin: 'right' }}
           exit={{ width: "50vw", transformOrigin: 'right' }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         />
+      </motion.div>
         <motion.div
-          className="TransitionProvider2"
+          className="PagePath"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
@@ -64,16 +68,22 @@ const TransitionProvider = ({ children }) => {
         >
           {paths[pathName]}
         </motion.div>
-        <motion.div
-          className="TransitionProvider3"
+         
+      <motion.div
+         className='PageOut'
+         transition={{ delay: 0.3 }}
+         >
+        <motion.span
+          className="PageOut1"
           initial={{ width: "50vw", transformOrigin: 'left' }}
           animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: 'easeOut' } }}
         />
-       <motion.div
-          className="TransitionProvider4"
+       <motion.span
+          className="PageOut2"
           initial={{ width: "50vw", transformOrigin: 'right' }}
           animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: 'easeOut' } }}
         />
+      </motion.div>
       <StickyCursor/>
         <Header />
         <div>{children}</div>
