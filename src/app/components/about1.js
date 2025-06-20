@@ -31,7 +31,7 @@ function About1() {
               </div>
               <div>
              <p className="circle-sketch-highlight">
-          An award-winning, detail-oriented web | mobile designer & software engineer with expertise in <b>JavaScript</b> <b>TypeScript</b> <b> React </b>, <b> Motion design </b>, <b> flutter </b>, <b> React Native </b> and <b> Next js </b> as my major frame-work.
+          An award-winning, detail-oriented web | mobile designer & software engineer with expertise in <b>JavaScript</b>, <b>TypeScript</b>, <b>React</b>, <b>Vue.js</b>, <b>Motion design</b>, <b>Figma</b>, <b>flutter</b>, <b>React Native</b> and <b>Next.js</b> as my major frame-work.
             <br/> I continously strive to be the finest version of myself, my workflow is no exception. 
             <br/> "As developers, we bridge the recess where tech meets standard" - Valhalla. 
             <br/> A quote perfectly aligning with my goals as a software engineer. 
