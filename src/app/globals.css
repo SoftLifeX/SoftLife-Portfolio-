@@ -368,6 +368,22 @@ section {
   animation-delay: 1s;
 }
 
+.logo span:nth-child(13) {
+  animation-delay: 0.33s;
+}
+
+.logo span:nth-child(14) {
+  animation-delay: 0.24s;
+}
+
+.logo span:nth-child(15) {
+  animation-delay: 1.2s;
+}
+
+.logo span:nth-child(16) {
+  animation-delay: 1.08s;
+}
+
 .logo:hover span {
   opacity: 1;
   animation-name: fadeout;
@@ -2380,7 +2396,7 @@ left: 52%;
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    font-family: 'audrey', sans-serif;
+    font-family: 'penna', sans-serif;
   }
 
   .PageIn1 {
@@ -2466,7 +2482,7 @@ left: 52%;
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    font-family: 'audrey', sans-serif;
+    font-family: 'penna', sans-serif;
   }
 
   .PageIn1 {
