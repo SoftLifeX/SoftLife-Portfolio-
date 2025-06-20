@@ -15,7 +15,7 @@ const TransitionProvider = ({ children }) => {
 
   const paths = {
 
-    "/": "SoftLife Dev",
+    "/": "Home",
 
     "/about": "About",
 
@@ -64,14 +64,14 @@ const TransitionProvider = ({ children }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
         >
           {paths[pathName]}
         </motion.div>
          
       <motion.div
          className='PageOut'
-         transition={{ delay: 5}}
+         transition={{ delay: 1.5}}
          >
         <motion.span
           className="PageOut1"
