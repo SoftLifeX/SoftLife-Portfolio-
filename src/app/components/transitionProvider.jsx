@@ -15,7 +15,7 @@ const TransitionProvider = ({ children }) => {
 
   const paths = {
 
-    "/": "Home",
+    "/": "<SoftLife Dev />",
 
     "/about": "About",
 
