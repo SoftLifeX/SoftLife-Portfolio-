@@ -84,7 +84,7 @@ function About2() {
               <ul>
                 <div className="cert_cv">
                   <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
-                  Resume <i class='bx bxs-download bx-flashing' ></i>
+                  Resume 
                 </a>
                   <a href="" className="btn2">
                     <i className="fa-solid fa-file-lines"></i>Certificate 
