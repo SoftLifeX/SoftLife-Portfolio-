@@ -28,7 +28,7 @@ export default function Index() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 750 : 750
+      index == 0 ? 600 : 600
     );
   }, [index]);
 
