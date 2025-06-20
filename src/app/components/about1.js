@@ -9,11 +9,17 @@ function About1() {
     <div>
       <section className="about1">
         <div className="about">
-        <h5 data-scroll data-scroll-speed={0.1}>About</h5>
-          <h1
-             data-scroll data-scroll-speed={0.1}>
+        <motion.h5 initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>About</motion.h5>
+          <motion.h1
+             initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
             Creating symphonies of digital functionality and aesthetics
-          </h1>
+          </motion.h1>
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
             <div className="about-col-1">
