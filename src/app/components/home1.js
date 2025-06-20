@@ -65,7 +65,7 @@ function Home1() {
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.75, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -128,7 +128,7 @@ function Home1() {
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
@@ -156,15 +156,10 @@ function Home1() {
        </div>
 
         <div className="sliderContainer">
-        <motion.div
-           initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}      
-        ref={slider} className="slider">
+        <div ref={slider} className="slider">
           <p className="slidertext" ref={firstText}>  Helping brands thrive in our digital era  </p>
           <p className="slidertext" ref={secondText}>  Helping brands thrive in our digital era  </p>
-        </motion.div>
+        </div>
       </div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
