@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
+import { motion, useInView } from "framer-motion";
 
 
 function Craft1() {
@@ -12,11 +13,22 @@ function Craft1() {
       <section className="craft1">
         <div className="portfolio">
           <div className="container">
-            <h1 data-scroll data-scroll-speed={0.1}>
+            <motion.h1
+       initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
               Digital concepts given life
-            </h1>
+            </motion.h1>
 
-            <h5>Craft</h5>
+            <motion.h5
+                initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       >
+       Craft
+         </motion.h5>
          <div id="stacks">stacks</div>
          <div className="tab-titles">
                 <h4>
