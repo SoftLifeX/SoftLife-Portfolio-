@@ -59,9 +59,9 @@ function Home2() {
             <h5>Case Studies</h5>
             <div className="work-list">
               <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
                  src={images.work1} alt="Critique" title="CritiQue"/>
@@ -76,9 +76,9 @@ function Home2() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: -100 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
                  src={images.work1} alt="Upskill Africa" title="Upskill Africa"/>
