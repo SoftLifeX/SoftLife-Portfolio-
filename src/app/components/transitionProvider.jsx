@@ -71,7 +71,7 @@ const TransitionProvider = ({ children }) => {
          
       <motion.div
          className='PageOut'
-         transition={{ delay: 0.8 }}
+         transition={{ delay: 1.1 }}
          >
         <motion.span
           className="PageOut1"
