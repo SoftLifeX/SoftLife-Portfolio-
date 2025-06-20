@@ -15,7 +15,7 @@ const TransitionProvider = ({ children }) => {
 
   const paths = {
 
-    "/": "<SoftLife Dev />",
+    "/": "SoftLife Dev",
 
     "/about": "About",
 
@@ -71,7 +71,7 @@ const TransitionProvider = ({ children }) => {
          
       <motion.div
          className='PageOut'
-         transition={{ delay: 2.5 }}
+         transition={{ delay: 5}}
          >
         <motion.span
           className="PageOut1"
