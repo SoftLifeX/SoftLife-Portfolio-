@@ -109,7 +109,7 @@ function Home1() {
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             ><span id="helloText" />
                 <span className="waving-hand">👋</span>, 
                 <span className="typed">
@@ -129,7 +129,7 @@ function Home1() {
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
