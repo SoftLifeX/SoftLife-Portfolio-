@@ -83,7 +83,7 @@ function Contactform() {
                   </a>
                 </div>
                 <Link href="/" className="btn4">
-                  Home <i className="bx bx-home-alt-2"></i>
+                  Home
                 </Link>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn2">
                  Resume
@@ -110,7 +110,7 @@ function Contactform() {
                     required
                   ></textarea>
                   <button className="btn2">
-                    Send<i className="bx bxs-paper-plane"></i>
+                    Send!
                   </button>
                 </form>
                 <span id="msg"></span>
