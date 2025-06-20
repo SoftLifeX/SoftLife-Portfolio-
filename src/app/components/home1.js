@@ -55,7 +55,6 @@ function Home1() {
     <div>
       <section className="home1">
         <div className="homepage">
-    <div data-scroll data-scroll-speed={0.1}>
       <div className="pointer">
         <ArrowIcon />
       </div>
@@ -66,7 +65,7 @@ function Home1() {
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.75, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     className="statusContainer">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -129,7 +128,7 @@ function Home1() {
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext">
                 an award-winning <span className="marker-highlight">Front-end | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
@@ -157,14 +156,22 @@ function Home1() {
        </div>
 
         <div className="sliderContainer">
-        <div ref={slider} className="slider">
+        <motion.div
+           initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}      
+        ref={slider} className="slider">
           <p className="slidertext" ref={firstText}>  Helping brands thrive in our digital era  </p>
           <p className="slidertext" ref={secondText}>  Helping brands thrive in our digital era  </p>
-        </div>
+        </motion.div>
       </div>
-      </div>
-          <div data-scroll data-scroll-speed={0.1}>
-              <div className="btnContainer">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+         className="btnContainer">
             <Magnetic2>
                 <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
                   Resume
@@ -175,8 +182,7 @@ function Home1() {
               Hire Me!
             </Link>
             </Magnetic2>
-           </div>
-          </div>
+           </motion.div>
         </div>
       </section>
     </div>
