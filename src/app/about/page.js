@@ -22,20 +22,15 @@ const About = () => {
       }, []);
 
   return (
-    <AnimatePresence >
-      <motion.div 
-        initial={{ opacity: 0.5, scale: 0, transformOrigin: 'top' }}
-        animate={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
-        exit={{ opacity: 1, scale: 1, transformOrigin: 'top' }}
-        transition={{ duration: 0.5 }}
-      >
+    
+      <div>
 
       <About1 />
       <About2 />
       <About3 />
       <Contact />
-    </motion.div>
-   </AnimatePresence>
+    </div>
+   
   );
 };
 
