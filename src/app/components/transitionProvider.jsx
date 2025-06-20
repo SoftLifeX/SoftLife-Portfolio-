@@ -64,14 +64,14 @@ const TransitionProvider = ({ children }) => {
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           {paths[pathName]}
         </motion.div>
          
       <motion.div
          className='PageOut'
-         transition={{ delay: 0.4 }}
+         transition={{ delay: 0.5 }}
          >
         <motion.span
           className="PageOut1"
