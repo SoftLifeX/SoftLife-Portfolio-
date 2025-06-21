@@ -13,7 +13,7 @@ function About3() {
                initial={{ opacity: 0, scale: 1.05 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+       transition={{ duration: 0.6 }}>
                <i className="fa-thin fa-code"></i>
                 <h2>Web Development</h2>
                 <p>
@@ -33,7 +33,7 @@ function About3() {
               initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             transition={{ delay: 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+             transition={{ delay: 0.15, duration: 0.6 }}>
                 <i className="fa-brands fa-figma"></i>
                 <h2>UI/UX</h2>
                 <p>
@@ -75,7 +75,7 @@ function About3() {
               initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+             transition={{ delay: 0.45, duration: 0.6 }}>
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Design</h2>
                 <p>
