@@ -505,7 +505,8 @@ section {
   border-radius: 50%;
   color: var(--base-color);
   background-color: var(--text-color);
-  scale: 1.1;
+  width: 2rem;
+  height: 2rem;
 }
 
 
