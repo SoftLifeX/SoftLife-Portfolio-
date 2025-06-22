@@ -483,7 +483,7 @@ section {
   opacity: 0;
 }
 
-.icons {
+.menuButton {
   right: 5%;
   color: var(--text-color);
   display: none;
@@ -500,7 +500,7 @@ section {
   transition: 0.5s ease-in-out;
 }
 
-.icons.active{
+.stickymenuButton{
   padding: 0.3rem;
   border-radius: 50%;
   color: var(--base-color);
@@ -1964,36 +1964,36 @@ form textarea {
     padding: 1.3rem 5%;
   }
 
-  .icons {
+  .menuButton {
     display: inline-flex;
   }
 
 
-  .icons>span {
+  .menuButton>span {
     height: 0.10rem;
     background-color: var(--text-color);
     transition: 0.5s;
     width: 80%
   }
 
-  .icons>span:nth-child(1) {
+  .menuButton>span:nth-child(1) {
     width: 80%;
   }
 
-  .icons>span:nth-child(3) {
+  .menuButton>span:nth-child(3) {
     width: 80%;
   }
 
-  #check:checked~.icons>span:nth-child(1) {
+  #check:checked~.menuButton>span:nth-child(1) {
     transform: translateY(15px) rotate(405deg);
     width: 100%;
   }
 
-  #check:checked~.icons>span:nth-child(2) {
+  #check:checked~.menuButton>span:nth-child(2) {
     opacity: 0;
   }
 
-  #check:checked~.icons>span:nth-child(3) {
+  #check:checked~.menuButton>span:nth-child(3) {
     transform: translateY(-15px) rotate(-405deg);
     width: 100%;
   }
@@ -2163,7 +2163,7 @@ left: 52%;
    left: 2rem; 
   }
 
-  .icons {
+  .menuButton {
     right: 15%;
   }
   
@@ -2181,7 +2181,7 @@ left: 52%;
   }
 
 
-  .icons {
+  .menuButton {
     display: inline-flex;
   }
 
