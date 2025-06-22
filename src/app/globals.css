@@ -500,9 +500,14 @@ section {
   transition: 0.5s ease-in-out;
 }
 
-.icons:hover {
-  scale: 1.1;
+.icons.active{
+  padding: 0.3rem;
+  border-radius: 50%;
+  color: var(--base-color);
+  background-color: var(--text-color);
 }
+
+
 
 /*groups*/
 h2 {
@@ -1965,9 +1970,10 @@ form textarea {
 
 
   .icons>span {
-    height: 0.12rem;
+    height: 0.10rem;
     background-color: var(--text-color);
     transition: 0.5s;
+    width: 80%
   }
 
   .icons>span:nth-child(1) {
