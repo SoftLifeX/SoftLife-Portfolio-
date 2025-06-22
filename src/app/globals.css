@@ -505,6 +505,7 @@ section {
   border-radius: 50%;
   color: var(--base-color);
   background-color: var(--text-color);
+  scale: 1.1;
 }
 
 
@@ -1975,6 +1976,14 @@ form textarea {
     transition: 0.5s;
     width: 80%
   }
+
+  .stickymenuButton>span {
+    height: 0.10rem;
+    background-color: var(--base-color);
+    transition: 0.5s;
+    width: 80%
+  }
+  
 
   .menuButton>span:nth-child(1) {
     width: 80%;
