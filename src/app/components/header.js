@@ -169,7 +169,7 @@ function Header() {
           <span>&gt;</span>
         </a>
 
-        <input className="menuButton" type="checkbox" id="check" />
+        <input className={`menuButton ${scroll ? "stickymenuButton" : ""}`} type="checkbox" id="check" />
         <div className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
