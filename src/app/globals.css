@@ -1361,7 +1361,7 @@ outline: none;
 }
 
 .work-info{
-  position: relative;
+  position: absolute;
   border: none;
   outline: none;
   background-color: transparent;
@@ -1384,12 +1384,12 @@ outline: none;
   border: none;
   outline: none;
   background: white;
-  margin: 0 0.2rem;
+  margin: 0;
   padding: 0.2rem 0.5rem;
   border-radius: 30px;
   cursor: pointer;
   width: fit-content;
-  height: fit-content;
+  height: 94%;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -1408,7 +1408,7 @@ outline: none;
   margin: 0 1rem;
   color: var(--secondary-text);
   font-family: 'time', serif;
-  padding: 1.5rem;
+  padding: 0.2rem;
 }
 
 .work:hover img {
