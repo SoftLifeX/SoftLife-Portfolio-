@@ -69,7 +69,7 @@ function Home2() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -86,7 +86,7 @@ function Home2() {
                   <div className="work-info">  
                   <p>Upskill Africa</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
