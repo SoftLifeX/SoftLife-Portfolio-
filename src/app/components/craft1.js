@@ -57,13 +57,13 @@ function Craft1() {
 
           {action === "Project" ? (
             <div>
-            <h3> My digital crafts
+            <p> My digital crafts
             <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-            </h3>
+         </p>
             
            <div className="work-list">
               <div className="work">
@@ -72,7 +72,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -84,7 +84,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -96,9 +96,9 @@ function Craft1() {
                   <div className="work-info">  
                   <p>Upskill Africa</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
-                   </div> 
+                   </div>
                 </div>
               </div>
 
@@ -108,7 +108,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -122,13 +122,13 @@ function Craft1() {
             )}
             {action === "Concept" ? (
           <div>
-            <h3> Concepts in production
+            <p> Concepts in production
             <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-            </h3>
+            </p>
            <div className="work-list">
               <div className="work">
                 <Image src={images.work1} alt="CritiQue" title="Critique" />
@@ -136,7 +136,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -148,7 +148,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -160,7 +160,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -172,7 +172,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View Project<i className="fa-light fa-arrow-up-right"></i>
+                    View <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
