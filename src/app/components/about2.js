@@ -83,7 +83,7 @@ function About2() {
               <h2>Certification & CV</h2>
               <ul>
                 <div className="cert_cv">
-                  <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
+                  <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume 
                 </a>
                   <a href="" className="btn2">
