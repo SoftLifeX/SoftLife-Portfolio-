@@ -130,7 +130,7 @@ function Home1() {
             viewport={{ once: true }}
             transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext">
-                an award-winning <span className="marker-highlight"> Web | Mobile</span>
+                an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
                 <span className="slideUp" id="slide1">
                   <span>a Content-Creator 📷 🤳🏼</span>
