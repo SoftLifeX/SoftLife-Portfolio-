@@ -1996,11 +1996,11 @@ form textarea {
   }
 
   #check:checked~.menuButton>span:nth-child(2) {
-  transform: rotate(45deg);
+  transform: translateY(2px) rotate(45deg);
   }
 
   #check:checked~.menuButton>span:nth-child(3) {
-   transform: rotate(-45deg);
+   transform: translateY(-2px) rotate(-45deg);
   }
 
 
