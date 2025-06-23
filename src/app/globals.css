@@ -1046,10 +1046,12 @@ outline: none;
 
 .homepage .btn2 {
   display: inline-block;
+  margin: 0 auto;
 }
 
 .homepage .btn4 {
   display: inline-block;
+  margin: 0 auto;
 }
 
 .typed {
