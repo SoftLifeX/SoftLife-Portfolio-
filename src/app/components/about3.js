@@ -7,7 +7,7 @@ function About3() {
       <section className="about3">
         <div className="services">
           <div className="container">
-           <h5>Our Services</h5>
+           <h5>What we Serve!</h5>
             <div className="services-list">
               <div>
                <i className="fa-thin fa-code"></i>
