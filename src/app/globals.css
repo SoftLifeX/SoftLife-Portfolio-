@@ -500,7 +500,7 @@ section {
   padding: 0.3rem;
   border-radius: 50%;
   background-color: var(--text-color);
-  scale: 1.5;
+  scale: 1.8;
 }
 
 
@@ -598,7 +598,7 @@ h5 {
 
 h5::after {
   content: '';
-  width: 2.5rem;
+  width: 3rem;
   height: 0.18rem;
   background: var(--text-color);
   position: absolute;
@@ -608,7 +608,7 @@ h5::after {
 
 h5::before {
   content: '';
-  width: 1.2rem;
+  width: 1.5rem;
   height: 0.18rem;
   background: var(--text-color);
   position: absolute;
