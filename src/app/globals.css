@@ -2134,6 +2134,10 @@ form textarea {
 
 @media (max-width: 600px) {
 
+  .btnContainer {
+  left: 0svw;
+  }
+
   #theme-switch {
 left: 52%;
 }
@@ -2155,7 +2159,6 @@ left: 52%;
   }
 
   .homepage {
-    align-content: center;
     height: 100svh;
   }
 
@@ -2309,13 +2312,6 @@ left: 52%;
     margin: auto 0;
   }
 
-/*  .homepage h2 {
-    font-size: 1.5rem;
-  } */
-
-  .blob {
-    padding-bottom: 1rem;
-  }
 
   .layer {
     height: 100%;
@@ -2325,14 +2321,6 @@ left: 52%;
     left: 56%;
   }
 
-  /*.tab-titles ul li a {
-    display: block;
-  }*/
-
-  /*  .tab-titles ul li a::after {
-       display: none;
-     }*/
-
   .section {
     margin-top: 0;
     margin-bottom: 0;
@@ -2340,10 +2328,6 @@ left: 52%;
 
   .home2 {
     scale: 0.92;
-  }
-
-  .contact .btn2 {
-    margin: 1.87rem;
   }
 
   .PageOut1 {
