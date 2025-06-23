@@ -853,26 +853,6 @@ outline: none;
   rotate: 90deg;
 }
 
-.pointer2 {
-  position: fixed;
-  top: 35svh;
-  left: 20rem;
-  rotate: 135deg;
-  margin: 1.87rem auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.pointer2 i {
-  text-decoration: none;
-  font-size: 2.5rem;
-  color: var(--text-color);
-  display: inline-flex;
-  transition: transform, ease-in-out;
-  transition: 0.5s ease-in-out;
-  margin-bottom: 1.87rem;
-  margin-left: 3.12rem;
-}
 
 .statusContainer {
   position: absolute;
@@ -993,7 +973,14 @@ outline: none;
   width: 18.5rem;
   height: 6.5rem;
   left: 0svw;
-  margin: 0 auto;
+}
+
+.btnContainer2 {
+  position: absolute;
+  top: 72svh;
+  width: 18.5rem;
+  height: 6.5rem;
+  left: 8rem;
 }
 
 .sliderContainer {
@@ -1044,15 +1031,6 @@ outline: none;
   color: var(--secondary-text);
 }
 
-.homepage .btn2 {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.homepage .btn4 {
-  display: inline-block;
-  margin: 0 auto;
-}
 
 .typed {
   width: 100%;
