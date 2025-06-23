@@ -309,6 +309,7 @@ section {
   /*text-shadow: 0 0 0.3rem var(--secondary-color), 0.15rem 0.15rem 0.25rem var(--text-color);*/
   text-decoration: none;
   font-weight: 600;
+  width: fit-content;
 }
 
 .logo span {
@@ -460,7 +461,7 @@ section {
 .navbar a:hover {
   border-radius: 30px;
   background: transparent;
-  padding: 0.05rem 1rem;
+  padding: 0.1rem 1rem;
   box-shadow: 0 0 0.10rem var(--secondary-text);
 }
 
@@ -468,7 +469,7 @@ section {
   border-radius: 30px;
   color: var(--base-color);
   background-color: var(--text-color);
-  padding: 0.05rem 1rem;
+  padding: 0.1rem 1rem;
  /* box-shadow: 0 0 0.10rem var(--accent-color);*/
   scale: 1.01;
 }
@@ -500,7 +501,7 @@ section {
   padding: 0.3rem;
   border-radius: 50%;
   background-color: var(--text-color);
-  scale: 1.8;
+  scale: 1.6;
 }
 
 
@@ -1014,17 +1015,18 @@ outline: none;
   font-size: 12rem;
   font-weight: normal;
   padding-right: 3.12rem;
+  cursor: text;
 }
 
 .slidertext:nth-of-type(2) {
   position: absolute;
   left: 100%;
   top: 0;
+  cursor: text;
 }
 
 .homepage h2 {
   font-family: 'time', serif;
-  font-weight: 200; 
   color: var(--text-color);
   font-size: 1.4rem;
   margin: 0.5rem 0;
