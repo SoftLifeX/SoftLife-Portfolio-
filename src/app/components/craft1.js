@@ -21,14 +21,6 @@ function Craft1() {
               Digital concepts given life
             </motion.h1>
 
-          <motion.p
-        initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-       >
-       Still confused?
-        </motion.p>
        <motion.h5
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
