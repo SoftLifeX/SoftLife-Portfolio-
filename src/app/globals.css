@@ -1996,11 +1996,19 @@ form textarea {
   }
 
   #check:checked~.menuButton>span:nth-child(2) {
-  transform: translateY(2px) rotate(45deg);
+  transform: translateY(3px) rotate(405deg);
   }
 
   #check:checked~.menuButton>span:nth-child(3) {
-   transform: translateY(-2px) rotate(-45deg);
+   transform: translateY(-3px) rotate(-405deg);
+  }
+
+#check:checked~.stickymenuButton>span:nth-child(2) {
+  transform: translateY(2px) rotate(405deg);
+  }
+
+  #check:checked~.stickymenuButton>span:nth-child(3) {
+   transform: translateY(-2px) rotate(-405deg);
   }
 
 
