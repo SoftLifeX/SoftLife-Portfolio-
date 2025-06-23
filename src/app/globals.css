@@ -1027,6 +1027,7 @@ outline: none;
 
 .homepage h2 {
   font-family: 'time', serif;
+  font-weight: 100; 
   color: var(--text-color);
   font-size: 1.4rem;
   margin: 0.5rem 0;
