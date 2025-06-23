@@ -2134,8 +2134,8 @@ form textarea {
 
 @media (max-width: 600px) {
 
-  .btnContainer {
-  left: 0svw;
+  .homepage .bound {
+  margin: 0;
   }
 
   #theme-switch {
