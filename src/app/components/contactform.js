@@ -85,7 +85,7 @@ function Contactform() {
                 <Link href="/" className="btn4">
                   HomePage
                 </Link>
-                <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn2">
+                <a href="./Daniel c. Daniel's Resume.pdf" download className="btn2">
                  Resume
                 </a>
               </div>
