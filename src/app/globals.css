@@ -972,8 +972,12 @@ outline: none;
   top: 72svh;
   width: 18.5rem;
   height: 6.5rem;
-  left: 0svw;
+  left: 10svw;
 }
+
+  .homepage .bound {
+  margin: 0;
+  }
 
 .btnContainer2 {
   position: absolute;
@@ -2134,9 +2138,7 @@ form textarea {
 
 @media (max-width: 600px) {
 
-  .homepage .bound {
-  margin: 0;
-  }
+
 
   #theme-switch {
 left: 52%;
