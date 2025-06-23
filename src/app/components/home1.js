@@ -168,7 +168,7 @@ function Home1() {
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
          className="btnContainer">
             <Magnetic2>
-                <a href="./Daniel c. Daniel [SoftLife Dev]Resume.pdf" download className="btn4">
+                <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume
                 </a>
             </Magnetic2>
