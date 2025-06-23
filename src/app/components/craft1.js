@@ -72,7 +72,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -84,7 +84,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -96,7 +96,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>Upskill Africa</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div>
                 </div>
@@ -108,7 +108,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -136,7 +136,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -148,7 +148,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -160,7 +160,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
@@ -172,7 +172,7 @@ function Craft1() {
                   <div className="work-info">  
                   <p>CritiQue</p>
                   <a href="">
-                    View <i className="fa-light fa-arrow-up-right"></i>
+                    <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
                 </div>
