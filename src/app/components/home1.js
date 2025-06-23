@@ -172,6 +172,13 @@ function Home1() {
                   Resume
                 </a>
             </Magnetic2>
+           </motion.div>
+           <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+         className="btnContainer2">
             <Magnetic2>
             <Link href="/contact" className="btn2">
               Hire Me!
