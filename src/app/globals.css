@@ -993,6 +993,7 @@ outline: none;
   width: 18.5rem;
   height: 6.5rem;
   left: 0svw;
+  margin: 0 auto;
 }
 
 .sliderContainer {
@@ -1043,22 +1044,12 @@ outline: none;
   color: var(--secondary-text);
 }
 
-.homepage .socials {
-  margin: 1rem 0;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.homepage .btn2 {
+  display: inline-block;
 }
 
-.homepage .socials a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  -webkit-text-stroke: 0.0625rem var(--base-color);
-  color: var(--text-color);
-  display: inline-flex;
-  transition: transform, ease-in-out;
-  transition: 0.5s ease-in-out;
-  margin-left: 0.5rem;
+.homepage .btn4 {
+  display: inline-block;
 }
 
 .typed {
