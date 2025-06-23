@@ -478,21 +478,19 @@ section {
 }
 
 #check {
-  display: block;
-  z-index: 5;
-  opacity: 0;
+  display: none;
 }
 
 .menuButton {
   right: 5%;
   color: var(--text-color);
   display: none;
-  position: absolute;
+  align-items: center;
+  position: fixed;
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
   top: 1.7rem;
-  display: flex;
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.2 ease;
@@ -503,10 +501,8 @@ section {
 .stickymenuButton{
   padding: 0.3rem;
   border-radius: 50%;
-  color: var(--base-color);
   background-color: var(--text-color);
-  width: 2rem;
-  height: 2rem;
+  scale: 2;
 }
 
 
@@ -1987,16 +1983,17 @@ form textarea {
   
 
   .menuButton>span:nth-child(1) {
-    width: 80%;
+    opacity: 0;
   }
 
-  .menuButton>span:nth-child(3) {
-    width: 80%;
+  .menuButton>span:nth-child(4) {
+    opacity: 0;
   }
 
   #check:checked~.menuButton>span:nth-child(1) {
     transform: translateY(15px) rotate(405deg);
     width: 100%;
+    opacity: 1;
   }
 
   #check:checked~.menuButton>span:nth-child(2) {
