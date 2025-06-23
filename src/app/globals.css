@@ -1973,7 +1973,6 @@ form textarea {
   }
 
   .stickymenuButton>span {
-    height: 0.05rem;
     background-color: var(--base-color);
     transition: 0.5s;
     width: 80%
@@ -1988,12 +1987,20 @@ form textarea {
     opacity: 0;
   }
 
+  .stickymenuButton>span:nth-child(2) {
+    height: 0.05rem;
+  }
+
+  .stickymenuButton>span:nth-child(3) {
+    height: 0.05rem;
+  }
+
   #check:checked~.menuButton>span:nth-child(2) {
-  transform: translateY(5px) rotate(-405deg);
+  transform: translateY(-5px) rotate(-405deg);
   }
 
   #check:checked~.menuButton>span:nth-child(3) {
-   transform: translateY(-5px) rotate(405deg);
+   transform: translateY(5px) rotate(405deg);
   }
 
 
