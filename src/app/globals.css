@@ -976,7 +976,8 @@ outline: none;
 }
 
   .homepage .bound {
-  margin: 0;
+  margin-left: 0;
+    margin-right: 1.6rem
   }
 
 .btnContainer2 {
