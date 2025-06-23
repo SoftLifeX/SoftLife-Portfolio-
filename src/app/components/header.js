@@ -174,6 +174,7 @@ function Header() {
           <span></span>
           <span></span>
           <span></span>
+          <span></span>
         </label>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
