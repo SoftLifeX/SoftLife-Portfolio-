@@ -1384,12 +1384,12 @@ outline: none;
   border: none;
   outline: none;
   background: white;
-  margin: 0;
-  padding: 0.2rem 0.5rem;
-  border-radius: 30px;
+  margin: 0.1rem;
+  padding: 0.2rem;
+  border-radius: 50%;
   cursor: pointer;
-  width: fit-content;
-  height: 94%;
+  width: 2.5rem,;
+  height: 2.5rem;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -1397,10 +1397,6 @@ outline: none;
   position: relative;
   color: black;
   font-size: 1rem;
-}
-
-.work-info a i{
-  margin-left: 0.5rem;
 }
 
 .work-info p{
