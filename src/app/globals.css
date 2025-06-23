@@ -972,13 +972,13 @@ outline: none;
   top: 72svh;
   width: 18.5rem;
   height: 6.5rem;
-  left: 10svw;
+  left: 0svw;
 }
 
-  .homepage .bound {
+ /* .homepage .bound {
   margin-left: 0;
     margin-right: 1.6rem
-  }
+  } */
 
 .btnContainer2 {
   position: absolute;
