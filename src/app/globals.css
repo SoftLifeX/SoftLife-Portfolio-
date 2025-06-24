@@ -967,7 +967,7 @@ outline: none;
 .btnContainer {
   position: absolute;
   top: 72svh;
-  width: 18.5rem;
+  width: 9rem;
   height: 6.5rem;
   left: 0svw;
 }
@@ -980,9 +980,8 @@ outline: none;
 .btnContainer2 {
   position: absolute;
   top: 72svh;
-  width: 18.5rem;
+  width: 9rem;
   height: 6.5rem;
-  left: 8rem;
 }
 
 .sliderContainer {
