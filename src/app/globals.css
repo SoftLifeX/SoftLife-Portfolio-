@@ -973,21 +973,14 @@ outline: none;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
-  border: 1px solid red;
 }
-
- /* .homepage .bound {
-  margin-left: 0;
-    margin-right: 1.6rem
-  } */
 
 .btnContainer2 {
   position: absolute;
   top: 72svh;
   width: fit-content;
   height: 6.5rem;
-  left: 30svw;
-  border: 1px solid red;
+  left: 22svw;
 }
 
 .sliderContainer {
@@ -2137,12 +2130,15 @@ form textarea {
     margin-bottom: 200px;
   }
 
+  .btnContainer2 {
+    left: 28svw;
+  } 
 }
 
 @media (max-width: 600px) {
 
   .btnContainer2 {
-    left: 24svw;
+    left: 28svw;
   } 
 
 
