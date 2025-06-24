@@ -43,7 +43,7 @@ function Contactform() {
             </motion.h1>
             <div className="row">
               <div className="contact-left">
-                <motion.h3
+                <motion.h2
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -54,8 +54,8 @@ function Contactform() {
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-                   <br /> Trust me we're good at what we do! :)
-                </motion.h3>
+                  <br /> <br /> Trust me we're good at what we do! :)
+                </motion.h2>
                 <div className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com" data-title="Email Me">
                     <i className="bx bxl-gmail"></i>
