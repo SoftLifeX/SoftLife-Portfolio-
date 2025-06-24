@@ -33,7 +33,7 @@ function Contactform() {
              initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>Get in Touch!</motion.h5>
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>You've scrolled this far!</motion.h5>
             <motion.h1 
              initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
@@ -43,19 +43,19 @@ function Contactform() {
             </motion.h1>
             <div className="row">
               <div className="contact-left">
-                <motion.h3
+                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
-                  Feeling social? <br />
                   Connect with me on any of these online spaces
-             <span> 
+                    <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-                </motion.h3>
+                   <br /> Trust me we're good at what we do! :)
+                </motion.p>
                 <div className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com" data-title="Email Me">
                     <i className="bx bxl-gmail"></i>
