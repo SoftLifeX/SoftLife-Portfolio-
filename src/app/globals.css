@@ -461,7 +461,7 @@ section {
 .navbar a:hover {
   border-radius: 30px;
   background: transparent;
-  padding: 0.1rem 1rem;
+  padding: 0.3rem 1rem;
   box-shadow: 0 0 0.10rem var(--secondary-text);
 }
 
@@ -469,7 +469,7 @@ section {
   border-radius: 30px;
   color: var(--base-color);
   background-color: var(--text-color);
-  padding: 0.1rem 1rem;
+  padding: 0.3rem 1rem;
  /* box-shadow: 0 0 0.10rem var(--accent-color);*/
   scale: 1.01;
 }
@@ -969,7 +969,7 @@ outline: none;
   top: 72svh;
   width: 9rem;
   height: 6.5rem;
-  left: 0svw;
+  left: 10svw;
 }
 
  /* .homepage .bound {
@@ -982,7 +982,7 @@ outline: none;
   top: 72svh;
   width: 9rem;
   height: 6.5rem;
-  left: 9rem;
+  left: 13rem;
 }
 
 .sliderContainer {
