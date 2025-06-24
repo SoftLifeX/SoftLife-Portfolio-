@@ -986,7 +986,7 @@ outline: none;
   top: 72svh;
   width: fit-content;
   height: 6.5rem;
-  left: 20svh;
+  left: 30svw;
   border: 1px solid red;
 }
 
@@ -2141,6 +2141,9 @@ form textarea {
 
 @media (max-width: 600px) {
 
+  .btnContainer2 {
+    left: 24svw;
+  } 
 
 
   #theme-switch {
