@@ -12,7 +12,7 @@ function About1() {
         <motion.h5 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>About</motion.h5>
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>What we're about?</motion.h5>
           <motion.h1
              initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
