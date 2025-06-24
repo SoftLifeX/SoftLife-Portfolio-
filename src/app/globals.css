@@ -483,7 +483,7 @@ section {
 }
 
 .menuButton {
-  right: 5%;
+  right: 5svh;
   color: var(--text-color);
   display: none;
   align-items: center;
@@ -2144,14 +2144,6 @@ form textarea {
   #theme-switch {
 left: 52%;
 }
-
-  .logo {
-   left: 2rem; 
-  }
-
-  .menuButton {
-    right: 15%;
-  }
   
     .codeProp {
   left: 77%;
@@ -2318,10 +2310,6 @@ left: 52%;
 
   .layer {
     height: 100%;
-  }
-
-  #theme-switch {
-    left: 56%;
   }
 
   .section {
