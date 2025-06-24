@@ -699,8 +699,9 @@ opacity: 1;
 
 .bound {
   width: fit-content;
-  height: 2.8rem;
-  transform: scale(4);
+  height: 3rem;
+  padding: 0 0.5rem;
+  border: 1px solid red;
   position: absolute;
   margin: auto;
 
