@@ -516,7 +516,7 @@ h2 {
   background-clip: text;
   display: block;
   text-align: left;
-  font-family: 'lemon', serif;
+  font-family: 'time', serif;
 }
 
 h1 {
@@ -700,7 +700,6 @@ opacity: 1;
 .bound {
   width: fit-content;
   height: fit-content;
-  border: 1px solid red;
   position: absolute;
   margin: auto;
 
