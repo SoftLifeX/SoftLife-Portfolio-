@@ -980,7 +980,7 @@ outline: none;
   top: 72svh;
   width: fit-content;
   height: 6.5rem;
-  left: 22svw;
+  left: 15svw;
 }
 
 .sliderContainer {
@@ -1925,6 +1925,14 @@ form textarea {
 }
 
 /*breakpoints*/
+
+@media (max-width: 1024px) {
+
+  .btnContainer2 {
+    left: 22svw;
+  } 
+}
+
 @media (max-width: 992px) {
   .homepage {
     padding: 1.3rem 5%;
@@ -2138,7 +2146,7 @@ form textarea {
 @media (max-width: 600px) {
 
   .btnContainer2 {
-    left: 28svw;
+    left: 32svw;
   } 
 
 
