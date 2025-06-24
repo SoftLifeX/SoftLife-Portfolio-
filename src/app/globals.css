@@ -55,7 +55,7 @@
   --accent-color2: rgba(0, 0, 0, 0.16);
   --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
   --text-color2: #000;
-  --palette-color: yellow;
+  --palette-color: #006400;
 }
 
 [data-theme="dark"] {
@@ -900,7 +900,7 @@ outline: none;
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #ADF802;
+    background-color: var(--palette-color);
     border-radius: 15px;
     box-shadow: 0 0 8px rgba(0,0,0,.3);
     animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
