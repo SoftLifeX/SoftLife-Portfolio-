@@ -451,7 +451,7 @@ section {
   font-weight: 200;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .navbar a span {
@@ -647,6 +647,7 @@ height: fit-content;
 position: relative;
   z-index: 1;
   font-weight: 200;
+  font-size: 0.9rem;
 }
 
 .btn2:hover {
@@ -752,6 +753,7 @@ outline: none;
   z-index: 5;
   position: relative;
   font-weight: 200;
+  font-size: 0.9rem;
 }
 
 .btn4:hover {
@@ -1311,7 +1313,7 @@ outline: none;
   display: block;
   background: rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
-  box-shadow: 0 0 0.25rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
@@ -1380,7 +1382,7 @@ outline: none;
 }
 
 .work:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .fakemargin {
