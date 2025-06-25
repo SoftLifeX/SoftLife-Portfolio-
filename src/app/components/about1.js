@@ -2,6 +2,7 @@ import React from 'react'
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2";
+import AboutIcon from "./aboutIcon"
 
 function About1() {
 
@@ -25,7 +26,7 @@ What we're About?
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
             <div className="about-col-1">
-              <img src="" data-scroll data-scroll-speed={0.1} />
+              <AboutIcon />
             </div>
             <div className="about-col-2">
               <div className="codeProp">
