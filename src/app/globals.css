@@ -1453,6 +1453,7 @@ outline: none;
   width: 24rem;
   height: 13.5rem;
   margin: 1rem auto;
+  display: block;
 }
 
 .about-col-1:hover img {
