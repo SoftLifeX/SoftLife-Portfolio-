@@ -1450,8 +1450,9 @@ outline: none;
 }
 
 .about-col-1 svg {
-  width: 410px;
-  height: 261px;
+  width: 24rem;
+  height: 13.5rem;
+  margin: 1rem auto;
 }
 
 .about-col-1:hover img {
