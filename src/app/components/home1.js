@@ -156,10 +156,19 @@ function Home1() {
        </div>
 
         <div className="sliderContainer">
+      <div classNane="clear">
         <div ref={slider} className="slider">
           <p className="slidertext" ref={firstText}>  Helping brands thrive in our digital era  </p>
           <p className="slidertext" ref={secondText}>  Helping brands thrive in our digital era  </p>
         </div>
+      </div>
+
+      <div classNane="blurry">
+        <div ref={slider} className="slider">
+          <p className="slidertext" ref={firstText}>  Helping brands thrive in our digital era  </p>
+          <p className="slidertext" ref={secondText}>  Helping brands thrive in our digital era  </p>
+        </div>
+      </div>
       </div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
