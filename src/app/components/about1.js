@@ -26,7 +26,11 @@ What we're About?
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
             <div className="about-col-1">
-              <AboutIcon />
+              <motion.AboutIcon 
+                initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} />
             </div>
             <div className="about-col-2">
               <div>
