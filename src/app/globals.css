@@ -1589,6 +1589,7 @@ outline: none;
   text-align: center;
   transition: ease-in-out;
   transition: 0.5s ease-in-out;
+  padding-top: 1rem
 }
 
 .tab-titles ul li a::after {
@@ -1635,10 +1636,6 @@ outline: none;
 @keyframes fade-in {
  from { opacity: 0; }
  to { opacity: 1; }
-}
-
-#stacks {
-  visibility: hidden;
 }
 
 .tab-contents {
