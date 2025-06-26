@@ -109,7 +109,7 @@ function Contactform() {
                     placeholder="Message"
                     required
                   ></textarea>
-                  <button className="btn2">
+                  <button className="btn4">
                     Send Message!
                   </button>
                 </form>
