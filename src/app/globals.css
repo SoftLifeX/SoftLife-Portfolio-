@@ -978,7 +978,7 @@ outline: none;
 
 .btnContainer {
   position: absolute;
-  top: 72svh;
+  top: 75svh;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
@@ -986,7 +986,7 @@ outline: none;
 
 .btnContainer2 {
   position: absolute;
-  top: 72svh;
+  top: 75svh;
   width: fit-content;
   height: 6.5rem;
   left: 18svw;
