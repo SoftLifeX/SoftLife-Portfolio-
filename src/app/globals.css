@@ -1467,7 +1467,12 @@ outline: none;
   flex-basis: 30%;
 }
 
-.about-col-1 svg {
+.aboutImg{
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImg svg {
   width: 24rem;
   height: 18rem;
   margin: 1rem auto;
@@ -2145,7 +2150,7 @@ form textarea {
 
 @media (max-width: 600px) {
 
-  .about-col-1 svg {
+  .aboutImg svg {
   width: 20rem;
   height: 12rem;
   margin: 1rem auto;
