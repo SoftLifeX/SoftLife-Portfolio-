@@ -14,7 +14,7 @@ function About1() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
-What we're About?
+    What we're About?
     </motion.h5>
           <motion.h1
              initial={{ opacity: 0, scale: 0 }}
@@ -26,11 +26,13 @@ What we're About?
           <h2>Meet The Mind Behind The Code</h2>
           <div className="row">
             <div className="about-col-1">
-              <motion.AboutIcon 
+              <motion.div
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} />
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+           <AboutIcon />
+    </motion.div>
             </div>
             <div className="about-col-2">
               <div>
