@@ -17,7 +17,7 @@ function Craft1() {
        initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
               Digital concepts given life
             </motion.h1>
 
@@ -25,7 +25,7 @@ function Craft1() {
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
        >
        See My Craft!
          </motion.h5>
@@ -56,14 +56,19 @@ function Craft1() {
               </div>
 
           {action === "Project" ? (
-            <div>
-            <p> My digital crafts
+            <div className="state1">
+            <motion.p
+            initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            > My digital crafts
             <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-         </p>
+         </motion.p>
             
            <div className="work-list">
               <div className="work">
@@ -121,7 +126,7 @@ function Craft1() {
             <div/>
             )}
             {action === "Concept" ? (
-          <div>
+          <div className="state2">
             <p> Concepts in production
             <span> 
           <div className="dot"></div>
