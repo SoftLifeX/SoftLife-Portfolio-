@@ -1403,6 +1403,7 @@ outline: none;
 
 .fakemargin {
   font-size: 0.06rem;
+  visibility: hidden;
   padding-bottom: 1.87rem;
 }
 
@@ -1636,7 +1637,7 @@ outline: none;
 }
 
 #stacks {
-  color: transparent;
+  visibility: hidden;
 }
 
 .tab-contents {
