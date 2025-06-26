@@ -133,7 +133,7 @@ body::-webkit-scrollbar {
     padding: 0.5rem 0.5rem;
     border: 0.06rem solid var(--border-color);
     border-radius: 5px;
-    box-shadow: 0 0 0.25rem var(--accent-color);
+    box-shadow: 0 0 0.10rem var(--accent-color);
   border-radius: 50%;
   pointer-events: none;
   z-index: -99;
@@ -152,13 +152,13 @@ outline: none;
   background-color: var(--text-color);
   color: var(--base-color);
   margin:0.01rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 5px;
   box-shadow: 0 0 0.10rem var(--accent-color);
   z-index: 5;
   width: fit-content;
   height: fit-content;
-  font-size: 1rem;
+  font-size: 0.8rem;
   content: attr(data-title);
   position: absolute;
   bottom: -3rem;
@@ -1910,18 +1910,13 @@ form textarea {
   padding: 1rem;
   margin-bottom: 0.6rem;
   color: black;
-  font-size: 1.12rem;
+  font-size: 1rem;
   border-radius: 6px;
-}
-
-.contact-right .btn2 {
-  color: var(--base-color);
-  background: var(--text-color);
 }
 
 #msg {
   color: greenyellow;
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 
 /*breakpoints*/
@@ -2138,7 +2133,7 @@ form textarea {
 @media (max-width: 600px) {
 
   .contact-right .btn4{
-  margin-left: 0.5rem;
+  margin-left: 1.87rem;
   }
 
   .btnContainer2 {
