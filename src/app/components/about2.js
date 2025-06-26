@@ -7,6 +7,7 @@ function About2() {
   return (
     <div>
       <section className="about2">
+     <div id="stacks" />
         <div className="container">
          <div className="tab-titles">
                 <h4>
