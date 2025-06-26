@@ -516,10 +516,11 @@ h2 {
   font-size: 1.2rem;
   margin: 1.87rem;
   cursor: text;
-  background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+  /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
   color: transparent;
   background-clip: text;
-  display: block;
+  display: block;*/
+  color: var(--text-color);
   text-align: left;
   font-family: 'time', serif;
 }
@@ -592,10 +593,10 @@ h5 {
   font-size: 1.25rem;
   margin: 1.87rem;
   cursor: text;
- background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
+ /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
   color: transparent;
   background-clip: text;
-  display: block;
+  display: block;*/
   text-align: left;
   font-family: 'time', serif;
   position: relative;
@@ -1736,7 +1737,7 @@ outline: none;
 }
 
 .services-list div {
-  background-color: var(--primary-color);
+  background-color: var(--base-color);
   padding-left: 1.87rem;
   padding-right: 1.87rem;
   padding-top: 1.87rem;
@@ -1758,8 +1759,6 @@ outline: none;
 }
 
 .services-list div h2 {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 500;
   padding-top: 0;
 }
 
@@ -1772,7 +1771,7 @@ outline: none;
 .services-list div:before {
   transition: 0.4s all ease;
   position: absolute;
-  box-shadow: 0 0 0.20rem var(--accent-color);
+  box-shadow: 0 0 0.10rem var(--accent-color);
   background-color: var(--text-color);
   top: 50%;
   bottom: 50%;
@@ -1853,7 +1852,7 @@ outline: none;
   background-color: transparent;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  outline: 1.8px solid var(--base-color);
+  outline: 0.11rem solid var(--base-color);
   outline-offset: -10px;
   color: var(--text-color);
 }
@@ -1996,10 +1995,7 @@ form textarea {
     width: 15rem;
     height: 17.7rem;
     background: var(--tertiary-text);
-    backdrop-filter: blur(50px);
-    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px var(--tertiary-text);
     overflow: hidden;
-    transition: 0.3s ease;
     text-shadow: none;
     border-radius: 10px;
     z-index: 40;
@@ -2104,11 +2100,6 @@ form textarea {
     flex-direction: column;
   }
 
-  .about-col-1 img {
-    margin-left: 1.2rem;
-    margin-bottom: 31.8rem;
-  }
-
   .tab-titles ul li a:hover {
     border-radius: none;
     width: 100%;
@@ -2189,10 +2180,7 @@ left: 52%;
     position: absolute;
     left: 2rem;
     background: var(--tertiary-text);
-    backdrop-filter: blur(50px);
-    box-shadow: 0 1rem 1rex rgba(0, 0, 0, 0.1), 0 0 6px var(--accent-color);
     overflow: hidden;
-    transition: 0.3s ease;
     text-shadow: none;
     border-radius: 10px;
     z-index: 40;
