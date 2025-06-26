@@ -1473,9 +1473,9 @@ outline: none;
 }
 
 .aboutImg svg {
-  width: 24rem;
+  width: 20rem;
   height: 18rem;
-  margin: 1rem auto;
+  margin: auto;
   display: block;
 }
 
@@ -1609,8 +1609,6 @@ outline: none;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
 }
-
-
 
 .tab-titles ul li a:hover::after {
   width: 100%;
