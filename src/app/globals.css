@@ -1470,7 +1470,7 @@ outline: none;
 .about-col-1 svg {
   width: 20rem;
   height: 12rem;
-  margin: 1rem auto;
+  margin: auto;
   display: block;
 }
 
