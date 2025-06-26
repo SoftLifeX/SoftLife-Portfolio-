@@ -1450,14 +1450,10 @@ outline: none;
 }
 
 .about-col-1 svg {
-  width: 24rem;
-  height: 13.5rem;
+  width: 20rem;
+  height: 12rem;
   margin: 1rem auto;
   display: block;
-}
-
-.about-col-1:hover img {
-  transform: scale(1.05);
 }
 
 .about-col-1 h1 {
