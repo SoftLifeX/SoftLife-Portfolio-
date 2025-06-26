@@ -141,7 +141,7 @@ body::-webkit-scrollbar {
 
 
 [data-title]:hover:after {
-  opacity: 0.7;
+  opacity: 0.8;
   transition: all 0.1s ease 0.5s;
   visibility: visible;
 }
@@ -1098,7 +1098,7 @@ outline: none;
   content:"";
   background-color: yellow;
   width:100%;
-  height: 1em;
+  height: 1.1em;
   position:absolute;
   z-index:-1;
   filter:url(#marker-shape);
@@ -1109,7 +1109,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 110%;
+  top: 130%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
@@ -1288,8 +1288,8 @@ outline: none;
 .portfolio .blocktext {
   color: var(--base-color);
   background: linear-gradient(to right, var(--secondary-text), var(--text-color));
-  border-radius: 10px;
-  padding: 0.2rem 0.5rem;
+  border-radius: 1px;
+  padding: 0.5rem 0.5rem;
 }
 
 .blocktext:after {
@@ -1896,7 +1896,7 @@ outline: none;
   text-decoration: none;
   font-size: 1.87rem;
   -webkit-text-stroke: 0.0625rem var(--base-color);
-  color: var(--text-color);
+  color: var(--secondary-text);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -1906,6 +1906,7 @@ outline: none;
 
 .social-icons a:hover {
   transform: translateY(-0.31rem);
+  color: var(--text-color);
 }
 
 .contact-right {
