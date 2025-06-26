@@ -29,9 +29,6 @@ What we're About?
               <AboutIcon />
             </div>
             <div className="about-col-2">
-              <div className="codeProp">
-                  <i class="fa-thin fa-code fa-flip"></i>
-              </div>
               <div>
              <p className="circle-sketch-highlight">
           An award-winning, detail-oriented web | mobile designer & software engineer with expertise in <b>JavaScript</b>, <b>TypeScript</b>, <b>React</b>, <b>Vue.js</b>, <b>Motion design</b>, <b>Figma</b>, <b>flutter</b>, <b>React Native</b> and <b>Next.js</b> as my major frame-work.
