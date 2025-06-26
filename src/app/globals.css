@@ -520,7 +520,6 @@ h2 {
   color: transparent;
   background-clip: text;
   display: block;*/
-  color: var(--text-color);
   text-align: left;
   font-family: 'time', serif;
   font-weight: 100; 
@@ -2138,6 +2137,10 @@ form textarea {
 
 @media (max-width: 600px) {
 
+  .contact-right .btn4{
+  margin-left: 0.5rem;
+  }
+
   .btnContainer2 {
     left: 32svw;
   } 
@@ -2151,22 +2154,12 @@ left: 52%;
   left: 77%;
 }
 
-  .sticky {
-    box-shadow: 0 0 0.25rem var(--accent-color);
-  }
-
   .homepage {
     height: 100svh;
   }
 
-
   .menuButton {
     display: inline-flex;
-  }
-
-  .about-col-1 img {
-    margin-left: 1.2rem;
-    margin-bottom: 0;
   }
 
   .row {
