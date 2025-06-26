@@ -1638,7 +1638,7 @@ outline: none;
 }
 
 #stacks {
-  display: none;
+  visibility: hidden;
 }
 
 .tab-contents {
