@@ -29,7 +29,6 @@ function Craft1() {
        >
        See My Craft!
          </motion.h5>
-         <div id="stacks" />
          <div className="tab-titles">
                 <h4>
                   <ul>
