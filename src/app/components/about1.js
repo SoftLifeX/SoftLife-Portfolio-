@@ -27,6 +27,7 @@ function About1() {
           <div className="row">
             <div className="about-col-1">
               <motion.div
+               className="aboutImg"
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
