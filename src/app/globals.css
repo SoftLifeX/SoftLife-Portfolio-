@@ -1879,16 +1879,16 @@ outline: none;
 .social-icons a {
   text-decoration: none;
   font-size: 1.87rem;
-  color: var(--secondary-text);
-  display: inline-block;
+  -webkit-text-stroke: 0.0625rem var(--base-color);
+  color: var(--text-color);
+  display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
   margin-bottom: 1.87rem;
-  padding-left: 1.2rem;
+  padding-left: 1.12rem;
 }
 
 .social-icons a:hover {
-  color: var(--text-color);
   transform: translateY(-0.31rem);
 }
 
