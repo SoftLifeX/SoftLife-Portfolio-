@@ -57,7 +57,7 @@ function Craft1() {
 
           {action === "Project" ? (
             <div className="state1">
-            <motion.p
+            <motion.h2
             initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -68,7 +68,7 @@ function Craft1() {
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-         </motion.p>
+         </motion.h2>
             
            <div className="work-list">
               <div className="work">
@@ -127,13 +127,13 @@ function Craft1() {
             )}
             {action === "Concept" ? (
           <div className="state2">
-            <p> Concepts in production
+            <h2> Concepts in production
             <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-            </p>
+            </h2>
            <div className="work-list">
               <div className="work">
                 <Image src={images.work1} alt="CritiQue" title="Critique" />
