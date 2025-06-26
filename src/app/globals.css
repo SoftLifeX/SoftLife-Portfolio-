@@ -1580,6 +1580,7 @@ outline: none;
   margin: 0.6rem 1.2rem;
   text-align: center;
   position: relative;
+  padding-top: 1rem;
 }
 
 .tab-titles ul li a {
@@ -1590,6 +1591,7 @@ outline: none;
   transition: ease-in-out;
   transition: 0.5s ease-in-out;
   padding-top: 1rem
+  margin-top: 1rem;
 }
 
 .tab-titles ul li a::after {
@@ -1627,6 +1629,10 @@ outline: none;
   transition: 0.5s;
   transition: scale, ease-in-out;
   transition: 0.5s ease-in-out;
+}
+
+#stacks{
+  visibility: hidden;
 }
 
 .tab-col-1, .tab-col-2{
