@@ -1299,6 +1299,15 @@ outline: none;
   content:'We Love It!'
 }
 
+.state1, .state2{
+  animation: fade-in 1.5s forwards;
+}
+
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
+}
+
 .work-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1617,12 +1626,13 @@ outline: none;
   transition: 0.5s ease-in-out;
 }
 
-.tab-col-1 {
-  flex-basis: 40%;
+.tab-col-1, .tab-col-2{
+  animation: fade-in 1.5s forwards;
 }
 
-.tab-col-2 {
-  flex-basis: 60%;
+@keyframes fade-in {
+ from { opacity: 0; }
+ to { opacity: 1; }
 }
 
 #stacks {
