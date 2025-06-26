@@ -1,4 +1,4 @@
-@font-face {
+,@font-face {
   font-family: 'dot';
   src: url(assets/fonts/LaradotSerif-Regular.ttf);
 }
@@ -1468,9 +1468,9 @@ outline: none;
 }
 
 .about-col-1 svg {
-  width: 20rem;
-  height: 12rem;
-  margin: 2rem auto;
+  width: 24rem;
+  height: 18rem;
+  margin: 1rem auto;
   display: block;
 }
 
@@ -2144,6 +2144,13 @@ form textarea {
 }
 
 @media (max-width: 600px) {
+
+  .about-col-1 svg {
+  width: 20rem;
+  height: 12rem;
+  margin: 1rem auto;
+  display: block;
+  }
 
   .contact-right .btn4{
   margin-left: 1.87rem;
