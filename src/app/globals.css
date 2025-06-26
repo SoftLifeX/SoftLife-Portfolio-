@@ -523,6 +523,7 @@ h2 {
   color: var(--text-color);
   text-align: left;
   font-family: 'time', serif;
+  font-weight: 100; 
 }
 
 h1 {
@@ -599,6 +600,7 @@ h5 {
   display: block;*/
   text-align: left;
   font-family: 'time', serif;
+  font-weight: 100; 
   position: relative;
   padding-top: 3.12rem;
 }
