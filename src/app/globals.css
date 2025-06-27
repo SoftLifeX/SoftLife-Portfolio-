@@ -511,6 +511,7 @@ section {
 
 
 
+
 /*groups*/
 h2 {
   font-size: 1.2rem;
@@ -1999,6 +2000,10 @@ form textarea {
 
   #check:checked~.stickymenuButton>span:nth-child(3) {
    transform: translateY(-2px) rotate(-405deg);
+  }
+
+  #check:checked~.stickymenuButton{
+    background-color: var(--secondary-text);
   }
 
 
