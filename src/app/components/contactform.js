@@ -1,10 +1,34 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 
 function Contactform() {
 
-  const handleSubmit = (e) =>{
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        (response) => {
+          msg.innerHTML = "Message sent successfully!";
+                setTimeout(function () {
+                  msg.innerHTML = "";
+                }, 5000);
+               e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+ /* const handleSubmit = (e) =>{
      e.preventDefault();
 
      const url =
@@ -22,7 +46,7 @@ function Contactform() {
                e.target.reset();
               })
               .catch((error) => console.error("Error!", error.message));
-  }
+  } */
 
   return (
     <div>
@@ -90,7 +114,7 @@ function Contactform() {
                 </a>
               </div>
               <div className="contact-right">
-                <form onSubmit={handleSubmit}>
+                <form ref={form} onSubmit={sendEmail}>
                   <input
                     type="text"
                     name="name"
@@ -109,7 +133,7 @@ function Contactform() {
                     placeholder="Message"
                     required
                   ></textarea>
-                  <button className="btn4">
+                  <button type="submit" className="btn4">
                     Send Message!
                   </button>
                 </form>
