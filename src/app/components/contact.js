@@ -11,30 +11,30 @@ function Contact() {
               Ready to elevate your brand?
             </h1>
             <Magnetic2>
-            <a href="mailto:daniel.c.daniel.dev@gmail.com" className="btn4">
+            <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
               daniel.c.daniel.dev@gmail.com
             </a>
             </Magnetic2>
             <Magnetic2>
-            <a href="tel:+234 813 933 1585" className="btn2">
+            <a href="tel:+234 813 933 1585" target="_blank" className="btn2">
               +234 813 933 1585
             </a>
             </Magnetic2>
           </div>
           <div className="socials">
-               <a href="https://wa.link/wjns9h" data-title="WhatsApp">
+               <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                   <i className="fa-brands fa-whatsapp"></i>
                 </a>
-                <a href="https://github.com/SoftLifeDev" data-title="Github">
+                <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
                   <i className="fa-brands fa-github"></i>
                 </a>
-                <a href="linkedin.com/in/daniel-c-daniel-dev" data-title="linkedin">
+                <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
+                <a href="https://www.instagram.com/softlifekid/" target="_blank"data-title="Instagram">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://x.com/SoftLife_Dev" data-title="X">
+                <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                   <i className="fa-brands fa-x-twitter"></i>
                 </a>
           </div>
