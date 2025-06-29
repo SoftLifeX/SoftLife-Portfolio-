@@ -73,7 +73,7 @@ function Contactform() {
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
                   Connect with me on any of these online spaces
-                    <span> 
+          <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
@@ -81,28 +81,28 @@ function Contactform() {
                   <br /> <br /> Trust me we're good at what we do! :)
                 </motion.h2>
                 <div className="social-icons">
-                  <a href="mailto:softlife.dev001@gmail.com" data-title="Email Me">
+                  <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
                     <i className="bx bxl-gmail"></i>
                   </a>
-                  <a href="https://web.facebook.com/SoftLife.dev" data-title="Facebook">
+                  <a href="https://web.facebook.com/SoftLife.dev" target="_blank" data-title="Facebook">
                     <i className="bx bxl-facebook"></i>
                   </a>
-                  <a href="https://x.com/SoftLife_Dev" data-title="X">
+                  <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <i className="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a href="https://wa.link/wjns9h" data-title="WhatsApp">
+                  <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <i className="bx bxl-whatsapp"></i>
                   </a>
-                  <a href="" data-title="Discord">
+{/*<a href="" data-title="Discord">
                     <i className="bx bxl-discord-alt"></i>
-                  </a>
-                  <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
+                  </a>*/}
+                  <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
                     <i className="bx bxl-instagram"></i>
                   </a>
-                  <a href="" data-title="linkedin">
+                  <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                      <i className="bx bxl-linkedin-square"></i>
                   </a>
-                  <a href="https://github.com/SoftLifeDev" data-title="Github">
+                  <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
                     <i className="bx bxl-github"></i>
                   </a>
                 </div>
