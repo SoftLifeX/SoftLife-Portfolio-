@@ -255,8 +255,8 @@ section {
 .contactForm {
   scale: 0.98;
   margin-top: 0;
-  position: relative;
-  top: -10rem
+  position: absolute;
+  top: 1svh;
   }
 
 .top {
