@@ -62,7 +62,7 @@ function Home2() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.car-culture} alt="car-culture" title="Car Culture"/>
+                 src={images.car} alt="Car Culture" title="Car Culture"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>Car Culture</p>
