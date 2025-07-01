@@ -50,7 +50,7 @@ const TransitionProvider = ({ children }) => {
           className="PageIn1"
           animate={{ width: "0vw", transformOrigin: 'left' }}
           exit={{ width: "50vw", transformOrigin: 'left' }}
-          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
         />
        <motion.span
           className="PageIn2"
