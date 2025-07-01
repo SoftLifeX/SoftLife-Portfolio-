@@ -44,7 +44,7 @@ function About3() {
 
               <div>
                <i className="fa-thin fa-paintbrush"></i>
-                <h2>Graphic Design</h2>
+                <h2>Branding</h2>
                 <p>
                   Your Brand is your Legacy;
                   <br />
@@ -61,7 +61,7 @@ function About3() {
 
               <div>
                 <i className="fa-brands fa-app-store"></i>
-                <h2>App Design</h2>
+                <h2>App Development</h2>
                 <p>
                   There's a thin line between your visions and REALITY.
                   <br />
