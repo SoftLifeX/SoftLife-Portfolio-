@@ -37,8 +37,16 @@ function About2() {
           {action === "Tools" ? (
             
             <div className="tab-col-1">
-              <h2>My Stack & Tools</h2>
-              <div className="tab-contents">
+              <h2 className="marker-highlight">My Stack & Tools</h2>
+              <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
+            <div className="tab-contents">
                 <ul>
                   <div className="tools">
                     <i className="bx bxl-html5">
@@ -80,8 +88,16 @@ function About2() {
                   </div>
                 </ul>
               </div>
-              <h2>Certification & CV</h2>
-              <ul>
+              <h2 className="marker-highlight">Certification & CV</h2>
+             <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
+            <ul>
                 <div className="cert_cv">
                   <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume 
@@ -97,7 +113,15 @@ function About2() {
             )}
             {action === "Experience" ? (
                         <div className="tab-col-2">
-              <h2>Experience</h2>
+              <h2 className="marker-highlight">Experience</h2>
+              <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
               <div className="tab-contents-exp">
                 <i className="fa-solid fa-laptop"></i>
                 <p>01/2023-Present</p>
