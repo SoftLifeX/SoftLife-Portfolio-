@@ -1486,6 +1486,10 @@ outline: none;
   justify-content: center;
 }
 
+.about-col-2 .h2boundary{
+  margin: auto;
+}
+
   .codeProp {
   position: fixed;
   top: 48%;
