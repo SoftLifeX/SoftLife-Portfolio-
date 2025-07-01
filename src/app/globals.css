@@ -550,7 +550,7 @@ h3 {
     animation: scaling 2.5s ease-in-out infinite;
     display: inline-block;
     margin-left: 0.25rem;
-}I'm
+}
 
 @keyframes scaling{
   0%, 100%{
