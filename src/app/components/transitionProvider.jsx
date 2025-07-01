@@ -61,8 +61,8 @@ const TransitionProvider = ({ children }) => {
       </motion.div>
         <motion.div
           className="PagePath"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
+          initial={{ display: 'flex' }}
+          animate={{ display: 'none' }}
           exit={{ opacity: 0 }}
           transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
         >
