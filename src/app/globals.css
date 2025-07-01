@@ -172,33 +172,6 @@ outline: none;
   position: relative;
 }
 
-/*transition*/
-.curve{
-    svg, .background{
-        position: fixed;
-        height: calc(100vh + 600px);
-        width: 100vw;
-        pointer-events: none;
-        left: 0;
-        top: 0;
-    }
-    .background{
-        background: var(--text-color);
-        transition: opacity 0s linear 0.1s;
-    }
-    .route{
-        position: absolute;
-        left: 50%;
-        top: 40%;
-        color: var(--base-color);
-        font-size: 4rem;
-        z-index: 999;
-        transform: translateX(-50%);
-        text-align: center;
-        font-family: 'audrey', sans-serif;  
-    }
-  }
-
 /*sections*/
 section {
   width: 100%;
@@ -323,7 +296,7 @@ section {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   font-family: 'penna', serif;
-  padding-left: 0.3rem;
+  padding-left: 0.1rem;
 }
 
 .logo span:nth-child(1) {
@@ -828,8 +801,6 @@ outline: none;
   box-shadow: 0 0 0.25rem var(--accent-color);
   background-color: var(--text-color);
 }
-
-/*transparent tags*/
 
 /*homepage*/
 .homepage {
