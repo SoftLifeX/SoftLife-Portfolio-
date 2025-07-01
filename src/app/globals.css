@@ -194,7 +194,7 @@ section {
 }
 
 .home2 {
-  scale: 0.85;
+  scale: 0.92;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   will-change: transform ease-in-out;
@@ -216,13 +216,13 @@ section {
 }
 
 .about2 {
-  scale: 0.9;
+  scale: 0.92;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
 
 .about3 {
-  scale: 0.9;
+  scale: 0.92;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
 }
@@ -296,7 +296,7 @@ section {
   animation-duration: 2s;
   animation-fill-mode: forwards;
   font-family: 'penna', serif;
-  padding-left: 0.1rem;
+  padding-left: 0.2rem;
 }
 
 .logo span:nth-child(1) {
@@ -499,6 +499,10 @@ h2 {
   width: fit-content;
 }
 
+.svg-filter{
+  display: none;
+}
+
 .marker-highlighter{
   position:relative;
   color: black;
@@ -513,7 +517,7 @@ h2 {
   z-index:-1;
   filter:url(#marker-shape);
   left:-0.25em;
-  top:0.1em;
+  top:0.2em;
   padding:0.10em 0.25em;
 }
 
@@ -1447,6 +1451,12 @@ outline: none;
   padding: 3.12rem;
 }
 
+.about .h2boundary{
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .about h2 {
   text-align: center;
 }
@@ -1462,6 +1472,8 @@ outline: none;
 }
 
 .aboutImg{
+  position: relative;
+  top: -4rem;
   justify-content: center;
   align-items: center;
 }
@@ -1484,10 +1496,6 @@ outline: none;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   justify-content: center;
-}
-
-.about-col-2 .h2boundary{
-  margin: auto;
 }
 
   .codeProp {
