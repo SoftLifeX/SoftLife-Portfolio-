@@ -33,10 +33,10 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-    default: "SoftLife Dev • Designer & Developer",
-    template: "%s - SoftLife Dev • Designer & Developer",
+    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
   },
-  description: "An award-winning Front-end | Mobile Software engineer and designer specialized in React, Motion design, Typescript and Next js with expertise in Web Development, ui/ux design, App Development",
+  description: "An award-winning Full-stack | Mobile Software engineer and designer specialized in React, Motion design, Typescript and Next js with expertise in Web Development, ui/ux design, App Development",
   },
   openGraph: {
     title: {
@@ -63,10 +63,10 @@ export const metadata = {
     },
   },
   title: {
-    default: "SoftLife Dev • Designer & Developer",
-    template: "%s - SoftLife Dev • Designer & Developer",
+    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
   },
-  description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
+  description: "An award-winning, detail-oriented Full-stack Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel', 'software engineer', 'coding', 'TypeScript', 'Javascript'],
   authors: [{ name: 'Daniel Daniel Chimbu-okaaomee' }],
   creator: 'SoftLife Dev',
