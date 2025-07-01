@@ -29,7 +29,7 @@ function Craft1() {
                         setAction("Project");
                         }}
                        >
-                        Case Studies 
+                        Development 
                       </a>
                     </li>
                     <li>
@@ -38,7 +38,7 @@ function Craft1() {
                         setAction("Concept");
                         }}
                        >
-                        Concept Works
+                        Designs
                       </a>
                     </li>
                   </ul>
@@ -46,22 +46,16 @@ function Craft1() {
               </div>
 
           {action === "Project" ? (
-            <div className="state1">
-            <h2> My digital crafts
-            <span> 
-          <div className="dot"></div>
-         <div className="dot"></div>
-        <div className="dot"></div>
-         </span>
-            </h2>
-            
+          <div className="state1">
            <div className="work-list">
               <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
+                <Image
+                 priority={true}
+                 src={images.car-culture} alt="car-culture" title="Car Culture"/>
                 <div className="layer">
                   <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
+                  <p>Car Culture</p>
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
@@ -69,11 +63,13 @@ function Craft1() {
               </div>
 
               <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
+                <Image
+                 priority={true}
+                 src={images.jewlers} alt="Jewlers" title="Jewlers"/>
                 <div className="layer">
                   <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
+                  <p>Jewlers</p>
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
@@ -81,11 +77,11 @@ function Craft1() {
               </div>
                
             <div className="work">
-                <Image src={images.work1} alt="Upskill Africa" title="Upskill Africa" />
+                <Image src={images.upskill-africa} alt="Upskill Africa" title="Upskill Africa" />
                 <div className="layer">
                   <div className="work-info">  
                   <p>Upskill Africa</p>
-                  <a href="">
+                  <a href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div>
@@ -93,11 +89,11 @@ function Craft1() {
               </div>
 
               <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
+                <Image src={images.counsel} alt="Counsel" title="Counsel" />
                 <div className="layer">
                   <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
+                  <p>Counsel</p>
+                  <a href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
@@ -112,61 +108,14 @@ function Craft1() {
             )}
             {action === "Concept" ? (
           <div className="state2">
-            <h2> Concepts in production
-            <span> 
-          <div className="dot"></div>
-         <div className="dot"></div>
-        <div className="dot"></div>
-         </span>
-            </h2>
            <div className="work-list">
               <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
-                <div className="layer">
-                  <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
-                    <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
-                   </div> 
-                </div>
+                <Image src={images.upskill-africa} alt="Upskill Africa" title="Upskill Africa" />
               </div>
 
               <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
-                <div className="layer">
-                  <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
-                    <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
-                   </div> 
-                </div>
-              </div>
-
-              <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
-                <div className="layer">
-                  <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
-                    <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
-                   </div> 
-                </div>
-              </div>
-
-              <div className="work">
-                <Image src={images.work1} alt="CritiQue" title="Critique" />
-                <div className="layer">
-                  <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
-                    <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
-                   </div> 
-                </div>
-            </div>
+                <Image src={images.counsel} alt="Counsel" title="Counsel" />
+             </div>
           </div>
             <p className="fakemargin">margin</p>
         </div>
