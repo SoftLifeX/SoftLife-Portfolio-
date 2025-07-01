@@ -6,6 +6,7 @@ import Magnetic2 from './magnetic2';
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { motion, useInView } from "framer-motion";
+import curveArrow from "./curveArrow"
 
 function Home2() {
 
@@ -53,6 +54,8 @@ function Home2() {
               <br />
               <span className="blocktext"></span>
             </p>
+
+             <curveArrow />
 
             <h5>Case Studies</h5>
             <div className="work-list">
