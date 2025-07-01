@@ -9,7 +9,7 @@ const words = [
   "Designer",
   "Developer",
   "Creative Noob",
-  "Nice to Meet You :)",
+  "Hello :)",
 ];
  
 export default function Index() {
