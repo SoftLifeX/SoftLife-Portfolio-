@@ -9,9 +9,9 @@ import { motion, useInView } from "framer-motion";
 
 function Home2() {
 
-  /*  const ref = useRef(null);
+   const ref = useRef(null);
 
-   const isInView = useInView(ref, { once: true }); */
+   const isInView = useInView(ref, { once: true }); 
 
    const secRef = useRef(null); 
 
