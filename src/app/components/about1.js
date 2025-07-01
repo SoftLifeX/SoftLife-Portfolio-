@@ -23,7 +23,15 @@ function About1() {
        transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
             Digital functionality Meets Aesthetics
           </motion.h1>
-          <h2>Meet The Mind Behind The Code</h2>
+          <h2 className="marker-highlight">Meet The Mind Behind The Code</h2>
+        <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
           <div className="row">
             <div className="about-col-1">
               <motion.div
