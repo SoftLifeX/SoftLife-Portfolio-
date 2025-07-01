@@ -256,7 +256,7 @@ section {
   scale: 0.98;
   margin-top: 0;
   position: relative;
-  top: -2rem
+  top: -10rem
   }
 
 .top {
@@ -1903,7 +1903,7 @@ outline: none;
 
 /*contact*/
 .contact h5 {
-  padding-top: 3.12rem;
+  padding-top: 4.12rem;
 }
 
 .contact-left {
