@@ -10,7 +10,7 @@ import curveArrow from "./curveArrow"
 
 function Home2() {
 
-   const secRef = useRef(null); 
+   /*const secRef = useRef(null); 
 
    const isInView = useInView(secRef, { once: true });
    
@@ -35,11 +35,11 @@ function Home2() {
        scale: 0.92,
        ease:" easeInOut",
      });
-   });
+   }); */
 
   return (
     <div>
-      <section ref={secRef} className="home2">
+      <section {/*ref={secRef}*/} className="home2">
         <div className="portfolio">
           <div className="container">
             <p>
@@ -59,11 +59,7 @@ function Home2() {
 
             <h5>Case Studies</h5>
             <div className="work-list">
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
+              <div className="work">
                 <Image
                  priority={true}
                  src={images.work1} alt="Critique" title="CritiQue"/>
@@ -75,13 +71,9 @@ function Home2() {
                   </a>
                    </div> 
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
+              <div className="work">
                 <Image
                  priority={true}
                  src={images.work1} alt="Upskill Africa" title="Upskill Africa"/>
@@ -93,7 +85,7 @@ function Home2() {
                   </a>
                    </div> 
                 </div>
-              </motion.div>
+              </div>
              </div>
             <Magnetic2>
             <Link href="/craft" className="btn2">
