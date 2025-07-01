@@ -62,11 +62,11 @@ function Home2() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.work1} alt="Critique" title="CritiQue"/>
+                 src={images.car-culture} alt="car-culture" title="Car Culture"/>
                 <div className="layer">
                   <div className="work-info">  
-                  <p>CritiQue</p>
-                  <a href="">
+                  <p>Car Culture</p>
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
@@ -76,11 +76,11 @@ function Home2() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.work1} alt="Upskill Africa" title="Upskill Africa"/>
+                 src={images.jewlers} alt="jewlers" title="Jewlers"/>
                 <div className="layer">
                   <div className="work-info">  
-                  <p>Upskill Africa</p>
-                  <a href="">
+                  <p>Jewlers</p>
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
                   </a>
                    </div> 
