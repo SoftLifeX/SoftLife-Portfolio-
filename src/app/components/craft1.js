@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 
 function Craft1() {
@@ -51,7 +52,7 @@ function Craft1() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.car-culture} alt="car-culture" title="Car Culture"/>
+                 src={images.car} alt="Car Culture" title="Car Culture"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>Car Culture</p>
@@ -77,7 +78,7 @@ function Craft1() {
               </div>
                
             <div className="work">
-                <Image src={images.upskill-africa} alt="Upskill Africa" title="Upskill Africa" />
+                <Image src={images.upskill} alt="Upskill Africa" title="Upskill Africa" />
                 <div className="layer">
                   <div className="work-info">  
                   <p>Upskill Africa</p>
@@ -110,7 +111,7 @@ function Craft1() {
           <div className="state2">
            <div className="work-list">
               <div className="work">
-                <Image src={images.upskill-africa} alt="Upskill Africa" title="Upskill Africa" />
+                <Image src={images.upskill} alt="Upskill Africa" title="Upskill Africa" />
               </div>
 
               <div className="work">
