@@ -1,10 +1,12 @@
-import work1 from './work1.png'
-import work2 from "./work2.png";
-import work3 from "./work3.png";
+import counsel from './counsel.png'
+import upskill-africa from "./upskill-africa.png";
+import car-culture from "./car-culture.png";
+import jewlers from "./jewlers.png";
 
 
 export const images = {
-  work1,
-  work2,
-  work3
+  counsel,
+  upskill-africa,
+  car-culture,
+  jewlers
 };
