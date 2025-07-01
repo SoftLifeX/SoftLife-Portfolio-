@@ -39,7 +39,7 @@ function Home2() {
 
   return (
     <div>
-      <section {/*ref={secRef}*/} className="home2">
+      <section className="home2">
         <div className="portfolio">
           <div className="container">
             <p>
@@ -89,7 +89,7 @@ function Home2() {
              </div>
             <Magnetic2>
             <Link href="/craft" className="btn2">
-              Intrigued?{/*<i className="bx bx-arrow-to-top"></i>*/}
+              Intrigued?
             </Link>
             </Magnetic2>
 
