@@ -37,9 +37,9 @@ function About2() {
           {action === "Tools" ? (
             
             <div className="tab-col-1">
-            <span className="h2boundary">
+            <div className="h2boundary">
               <h2 className="marker-highlighter">My Stack & Tools</h2>
-            </span>
+            </div>
             <div className="tab-contents">
                 <ul>
                   <div className="tools">
@@ -82,9 +82,9 @@ function About2() {
                   </div>
                 </ul>
               </div>
-            <span className="h2boundary">
+            <div className="h2boundary">
               <h2 className="marker-highlighter">Certification & CV</h2>
-           </span>
+           </div>
             <ul>
                 <div className="cert_cv">
                   <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -101,9 +101,17 @@ function About2() {
             )}
             {action === "Experience" ? (
                         <div className="tab-col-2">
-            <span className="h2boundary">
+            <div className="h2boundary">
               <h2 className="marker-highlighter">Experience</h2>
-            </span>
+            </div>
+              <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
               <div className="tab-contents-exp">
                 <i className="fa-solid fa-laptop"></i>
                 <p>01/2023-Present</p>
