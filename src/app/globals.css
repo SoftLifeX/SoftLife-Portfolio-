@@ -293,7 +293,6 @@ section {
   color: var(--text-color);
   /*text-shadow: 0 0 0.3rem var(--secondary-color), 0.15rem 0.15rem 0.25rem var(--text-color);*/
   text-decoration: none;
-  font-weight: 600;
   width: fit-content;
 }
 
@@ -302,7 +301,7 @@ section {
   animation-name: fadein;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  font-family: 'penna', serif;
+  font-family: 'chillen', serif;
   padding-left: 0.2rem;
 }
 
@@ -1119,7 +1118,7 @@ outline: none;
 
 .slideUp {
   position: absolute;
-  top: 112%;
+  top: 114%;
   /*  color: transparent;
    -webkit-text-stroke: 0.0312rem var(--text-color);*/
   -webkit-animation: fadeslideUp 8s infinite;
