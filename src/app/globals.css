@@ -852,7 +852,6 @@ outline: none;
 
 .arrowIcon {
   text-decoration: none;
-  font-size: 2.5rem;
   fill: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
@@ -1299,6 +1298,11 @@ outline: none;
 
 .blocktext:hover:after{
   content:'We Love It!'
+}
+
+.portfolio svg{
+  fill: var(--text-color);
+  background-color: transparent;
 }
 
 .state1, .state2{
