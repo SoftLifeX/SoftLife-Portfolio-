@@ -9,9 +9,9 @@ import { motion, useInView } from "framer-motion";
 
 function Home2() {
 
-    const ref = useRef(null);
+  /*  const ref = useRef(null);
 
-   const isInView = useInView(ref, { once: true });
+   const isInView = useInView(ref, { once: true }); */
 
    const secRef = useRef(null); 
 
@@ -61,6 +61,7 @@ function Home2() {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
@@ -78,6 +79,7 @@ function Home2() {
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }} className="work">
                 <Image
                  priority={true}
