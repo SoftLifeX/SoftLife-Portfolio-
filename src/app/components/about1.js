@@ -23,9 +23,9 @@ function About1() {
        transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
             Digital functionality Meets Aesthetics
           </motion.h1>
-        <span className="h2boundary">
+        <div className="h2boundary">
           <h2 className="marker-highlighter">Meet The Mind Behind The Code</h2>
-        </span> 
+        </div> 
           <div className="row">
             <div className="about-col-1">
               <motion.div
