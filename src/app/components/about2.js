@@ -37,7 +37,9 @@ function About2() {
           {action === "Tools" ? (
             
             <div className="tab-col-1">
+            <span className="h2boundary">
               <h2 className="marker-highlighter">My Stack & Tools</h2>
+            </span>
             <div className="tab-contents">
                 <ul>
                   <div className="tools">
@@ -80,7 +82,9 @@ function About2() {
                   </div>
                 </ul>
               </div>
+            <span className="h2boundary">
               <h2 className="marker-highlighter">Certification & CV</h2>
+           </span>
             <ul>
                 <div className="cert_cv">
                   <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -97,7 +101,9 @@ function About2() {
             )}
             {action === "Experience" ? (
                         <div className="tab-col-2">
+            <span className="h2boundary">
               <h2 className="marker-highlighter">Experience</h2>
+            </span>
               <div className="tab-contents-exp">
                 <i className="fa-solid fa-laptop"></i>
                 <p>01/2023-Present</p>
