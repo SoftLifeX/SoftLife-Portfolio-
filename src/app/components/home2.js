@@ -68,7 +68,7 @@ function Home2() {
                   <p>Car Culture</p>
                   <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div> 
                 </div>
               </div>
@@ -82,7 +82,7 @@ function Home2() {
                   <p>Jewlers</p>
                   <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div> 
                 </div>
               </div>
