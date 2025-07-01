@@ -499,7 +499,7 @@ h2 {
   width: fit-content;
 }
 
-.svg-filter{
+.svg-filters{
   display: none;
 }
 
@@ -550,7 +550,7 @@ h3 {
     animation: scaling 2.5s ease-in-out infinite;
     display: inline-block;
     margin-left: 0.25rem;
-}
+}I'm
 
 @keyframes scaling{
   0%, 100%{
@@ -1473,7 +1473,7 @@ outline: none;
 
 .aboutImg{
   position: relative;
-  top: -4rem;
+  top: -2.5rem;
   justify-content: center;
   align-items: center;
 }
