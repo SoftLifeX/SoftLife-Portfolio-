@@ -17,18 +17,9 @@ function Craft1() {
        initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
               Digital concepts given life
             </motion.h1>
-
-       <motion.h5
-                initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-       >
-       See My Craft!
-         </motion.h5>
          <div className="tab-titles">
                 <h4>
                   <ul>
@@ -56,18 +47,13 @@ function Craft1() {
 
           {action === "Project" ? (
             <div className="state1">
-            <motion.h2
-            initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            > My digital crafts
+            <h2> My digital crafts
             <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-         </motion.h2>
+            </h2>
             
            <div className="work-list">
               <div className="work">
