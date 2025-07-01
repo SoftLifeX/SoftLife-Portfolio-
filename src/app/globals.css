@@ -252,6 +252,13 @@ section {
   border: 0.06rem solid var(--border-color);
 }
 
+.contactForm{
+  scale: 0.98;
+  box-shadow: 0 0 0.10rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
+  margin-top: 0;
+  }
+
 .top {
   position: fixed;
   top: 0;
@@ -495,9 +502,9 @@ h2 {
   font-weight: 100; 
 }
 
-.h2boundary{
+/*.h2boundary{
   width: fit-content;
-}
+}*/
 
 .svg-filters{
   display: none;
@@ -505,10 +512,20 @@ h2 {
 
 .marker-highlighter{
   position:relative;
-  color: black;
+  color: var(--text-color);
 }
 
-.marker-highlighter:before{
+.marker-highlighter::after {
+  content: '';
+  width: 100%;
+  height: 0.10rem;
+  background: var(--secondary-text);
+  position: absolute;
+  bottom: -0.37rem;
+  left: 0;
+}
+
+/*.marker-highlighter:before{
   content:"";
   background-color: yellow;
   width: 100%;
@@ -519,7 +536,7 @@ h2 {
   left:-0.25em;
   top:0.2em;
   padding:0.10em 0.25em;
-}
+}*/
 
 h1 {
   color: var(--text-color);
@@ -603,7 +620,7 @@ h5 {
 h5::after {
   content: '';
   width: 3rem;
-  height: 0.18rem;
+  height: 0.15rem;
   background: var(--text-color);
   position: absolute;
   bottom: -0.37rem;
@@ -613,7 +630,7 @@ h5::after {
 h5::before {
   content: '';
   width: 1.5rem;
-  height: 0.18rem;
+  height: 0.15rem;
   background: var(--text-color);
   position: absolute;
   bottom: -0.75rem;
