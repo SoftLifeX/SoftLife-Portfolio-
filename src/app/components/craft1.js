@@ -57,7 +57,7 @@ function Craft1() {
                   <p>Car Culture</p>
                   <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div> 
                 </div>
               </div>
@@ -71,7 +71,7 @@ function Craft1() {
                   <p>Jewlers</p>
                   <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div> 
                 </div>
               </div>
@@ -81,9 +81,9 @@ function Craft1() {
                 <div className="layer">
                   <div className="work-info">  
                   <p>Upskill Africa</p>
-                  <a href="/maintenance">
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div>
                 </div>
               </div>
@@ -93,9 +93,9 @@ function Craft1() {
                 <div className="layer">
                   <div className="work-info">  
                   <p>Counsel</p>
-                  <a href="/maintenance">
+                  <Link href="/maintenance">
                     <i className="fa-light fa-arrow-up-right"></i>
-                  </a>
+                  </Link>
                    </div> 
                 </div>
              </div>
