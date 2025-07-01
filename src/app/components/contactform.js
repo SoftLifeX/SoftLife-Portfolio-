@@ -28,29 +28,9 @@ function Contactform() {
       );
   };
 
- /* const handleSubmit = (e) =>{
-     e.preventDefault();
-
-     const url =
-       "https://script.google.com/macros/s/AKfycbz9XaaCC0nE-w8yw5uDEMuz9M9bqsGciQQWMD-RO4SMXm-w2hkygQ-RTGsgf6PaD1A/exec";
-
-       fetch(url, {
-         method: "POST",
-         headers: { "Content-type": "application/x-www-form-urlencoded" },
-         body: (`Name=${e.target.name.value}&Email=${e.target.email.value}&Message=${e.target.message.value}`)
-       }).then((response) => {
-                msg.innerHTML = "Message sent successfully!";
-                setTimeout(function () {
-                  msg.innerHTML = "";
-                }, 5000);
-               e.target.reset();
-              })
-              .catch((error) => console.error("Error!", error.message));
-  } */
-
   return (
     <div>
-      <section>
+      <section className="contactForm">
         <div className="contact">
           <div className="container">
             <motion.h5
