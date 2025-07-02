@@ -17,9 +17,9 @@ type HeadingSapnProps = {
 };
 
 function SectionHeroHeadingSpan({ word, isActive, shouldHide }: HeadingSapnProps) {
-    if (isActive) return <span className='section-hero__heading-roll-span active'>{word}</span>;
-    if (shouldHide) return <span className='section-hero__heading-roll-span hide'>{word}</span>;
-    return <span className='section-hero__heading-roll-span'>{word}</span>;
+    if (isActive) return <span className='scrolltext-span active'>{word}</span>;
+    if (shouldHide) return <span className='scrolltext-span hide'>{word}</span>;
+    return <span className='scrolltext-span'>{word}</span>;
 }
 
 function Home1() {
@@ -172,7 +172,7 @@ function Home1() {
                 <span className="slideUp" id="slide4">
                   <span>a Travel Enthusiast ✈️ 🌍</span>
                 </span>*/}
-              <span>
+              <span className="scrolltext">
                 {ITEMS.map((el, i) => (
                     <SectionHeroHeadingSpan key={i} word={el} isActive={currentWord === i} shouldHide={prevWord === i} />
                 ))}
