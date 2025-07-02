@@ -56,7 +56,7 @@ const TransitionProvider = ({ children }) => {
           className="PageIn2"
           animate={{ width: "0vw", transformOrigin: 'right' }}
           exit={{ width: "50vw", transformOrigin: 'right' }}
-          transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
         />
       </motion.div>
         <motion.div
@@ -64,7 +64,7 @@ const TransitionProvider = ({ children }) => {
           initial={{ display: 'flex' }}
           animate={{ display: 'none' }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+          transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
         >
           {paths[pathName]}
         </motion.div>
