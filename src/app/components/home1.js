@@ -11,8 +11,8 @@ import ArrowIcon from "./arrow"
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
 
 function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
-    if (isActive) return <span className='scrolltext-span active'>{word}</span>;
-    if (shouldHide) return <span className='scrolltext-span hide'>{word}</span>;
+    if (isActive) return <span className='scrollspan scrollactive'>{word}</span>;
+    if (shouldHide) return <span className='scrollspan scrollhide'>{word}</span>;
     return <span className='scrolltext-span'>{word}</span>;
 }
 
