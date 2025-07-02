@@ -39,8 +39,8 @@ export const metadata = {
   },
   openGraph: {
     title: {
-    default: "SoftLife Dev • Designer & Developer",
-    template: "%s - SoftLife Dev • Designer & Developer",
+    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   url: "https://softlife-dev.vercel.app/",
