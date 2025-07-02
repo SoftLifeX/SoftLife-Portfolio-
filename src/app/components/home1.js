@@ -8,9 +8,37 @@ import Link from "next/link";
 import Magnetic2 from "./magnetic2"
 import ArrowIcon from "./arrow"
 
+const ITEMS = ['living', 'owning', 'renting'];
 
+type HeadingSapnProps = {
+    word: string;
+    isActive: boolean;
+    shouldHide: boolean;
+};
+
+function SectionHeroHeadingSpan({ word, isActive, shouldHide }: HeadingSapnProps) {
+    if (isActive) return <span className='section-hero__heading-roll-span active'>{word}</span>;
+    if (shouldHide) return <span className='section-hero__heading-roll-span hide'>{word}</span>;
+    return <span className='section-hero__heading-roll-span'>{word}</span>;
+}
 
 function Home1() {
+
+  const [currentWord, setCurrentWord] = useState(0);
+    const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
+
+    const changeWord = () => {
+        if (currentWord < ITEMS.length - 1) {
+            setCurrentWord((curr) => curr + 1);
+        } else {
+            setCurrentWord(0);
+        }
+    };
+
+    useEffect(() => {
+        const timeout = setTimeout(changeWord, 3000);
+        return () => clearTimeout(timeout);
+    });
 
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -132,7 +160,7 @@ function Home1() {
                className="hometext">
                 an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
-                <span className="slideUp" id="slide1">
+              {/*<span className="slideUp" id="slide1">
                   <span>a Content-Creator 📷 🤳🏼</span>
                 </span>
                 <span className="slideUp" id="slide2">
@@ -143,7 +171,12 @@ function Home1() {
                 </span>
                 <span className="slideUp" id="slide4">
                   <span>a Travel Enthusiast ✈️ 🌍</span>
-                </span>
+                </span>*/}
+              <span>
+                {ITEMS.map((el, i) => (
+                    <SectionHeroHeadingSpan key={i} word={el} isActive={currentWord === i} shouldHide={prevWord === i} />
+                ))}
+              </span>
               </motion.p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
