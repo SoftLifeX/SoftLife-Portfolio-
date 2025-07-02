@@ -559,12 +559,12 @@ h3 {
 }
 
 .dot {
-    height: 0.25rem;
-    width: 0.25rem;
-    border-radius:50%;
+    height: 0.2rem;
+    width: 0.2rem;
+    border-radius: 50%;
     transform: scale(0);
     background-color: gray;
-    animation: scaling 2.5s ease-in-out infinite;
+    animation: scaling 2s ease-in-out infinite;
     display: inline-block;
     margin-left: 0.25rem;
 }
@@ -1074,7 +1074,7 @@ outline: none;
 
 #helloText:after {
   content: " ";
-  animation: animate 12s ease infinite;
+  animation: animate 7.5s ease infinite;
 }
 
 @keyframes animate {
@@ -1972,6 +1972,17 @@ form textarea {
     padding: 1.3rem 5%;
   }
 
+  .aboutImg{
+    top: -0.01rem;
+  }
+
+  .aboutImg svg {
+  width: 20rem;
+  height: 12rem;
+  margin: 1rem auto;
+  display: block;
+  }
+  
   .menuButton {
     display: inline-flex;
   }
@@ -2016,11 +2027,11 @@ form textarea {
   }
 
 #check:checked~.stickymenuButton>span:nth-child(2) {
-  transform: translateY(2px) rotate(405deg);
+  transform: translateY(2px) rotate(45deg);
   }
 
   #check:checked~.stickymenuButton>span:nth-child(3) {
-   transform: translateY(-2px) rotate(-405deg);
+   transform: translateY(-2px) rotate(-45deg);
   }
 
   .navbar {
@@ -2085,6 +2096,7 @@ form textarea {
 
   .navbar a:hover {
     border: none;
+    box-shadow: none;
   }
   
   .navbar a::after {
@@ -2158,10 +2170,6 @@ form textarea {
 
 
 @media (max-width: 722px) {
-  .about-col-1 img {
-    margin-left: 1.2rem;
-    margin-bottom: 200px;
-  }
 
   .btnContainer2 {
     left: 28svw;
@@ -2292,6 +2300,7 @@ left: 52%;
 
   .navbar a:hover {
     border: none;
+    box-shadow: none;
   }
 
   .navbar a::after {
@@ -2429,8 +2438,7 @@ left: 52%;
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  font-family: 'penna', serif;
-    font-weight: bold;
+  font-family: 'chillen', serif;
 }
 
 .introduction {
@@ -2515,8 +2523,7 @@ left: 52%;
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  font-family: 'penna', serif;
-    font-weight: normal;
+  font-family: 'chillen', serif;
 }
 
 .introduction {
