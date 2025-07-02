@@ -8,7 +8,7 @@ import Link from "next/link";
 import Magnetic2 from "./magnetic2"
 import ArrowIcon from "./arrow"
 
-const ITEMS = ['a Content Creator', 'a Lover of the Arts', 'a bit of a gamer', 'a Travel Enthusiast'];
+const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
 
 function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
     if (isActive) return <span className='scrolltext-span active'>{word}</span>;
@@ -30,7 +30,7 @@ function Home1() {
     };
 
     useEffect(() => {
-        const timeout = setTimeout(changeWord, 3000);
+        const timeout = setTimeout(changeWord, 4000);
         return () => clearTimeout(timeout);
     });
 
