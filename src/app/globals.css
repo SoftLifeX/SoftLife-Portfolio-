@@ -548,6 +548,7 @@ h1 {
   cursor: text;
   font-family: 'chillen', serif;
   letter-spacing: 0.2rem;
+  line-height: 3;
 }
 
 h3 {
