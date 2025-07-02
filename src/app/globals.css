@@ -1344,7 +1344,7 @@ outline: none;
   background: rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
   box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--border-color);
+  border: 0.06rem solid var(--text-color);
 }
 
  .layer {
@@ -1369,7 +1369,7 @@ outline: none;
   border: none;
   outline: none;
   background-color: transparent;
-  color: var(--text-color);
+  color: var(--base-color);
   border-radius: 30px;
   display: flex;
   justify-content:space-between;
@@ -1387,7 +1387,7 @@ outline: none;
    display: flex;
   border: none;
   outline: none;
-  background: white;
+  background: black;
   margin: 0.1rem;
   padding: 0.2rem 0.2rem;
   border-radius: 50%;
@@ -1397,16 +1397,16 @@ outline: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 0 0 0.10rem white;
+  box-shadow: 0 0 0.10rem black;
   position: relative;
-  color: black;
+  color: white;
   font-size: 1rem;
 }
 
 .work-info p{
   position: relative;
   margin: 0 1rem;
-  color: var(--secondary-text);
+  color: black;
   font-family: 'time', serif;
   padding: 0.2rem;
 }
