@@ -1276,7 +1276,15 @@ outline: none;
   transform-style: preserve-3d;
 }
 
-.scrolltext-span
+.scrolltext-span.active {
+  transform: translateZ(3rem);
+  opacity: 1;
+}
+
+.scrolltext-span.hide {
+  transform: rotateX(-90deg) translateZ(-3rem);
+  opacity: 0;
+}
 
 .waving-hand {
   animation-name: wave-animation;
