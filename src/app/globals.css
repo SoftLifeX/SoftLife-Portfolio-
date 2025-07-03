@@ -1908,19 +1908,19 @@ form textarea {
     height: 0.05rem;
   }
 
-  #check:checked~.menuButton>span:nth-child(2) {
+  .menuButton>span.active:nth-child(2) {
   transform: translateY(4px) rotate(45deg);
   }
 
-  #check:checked~.menuButton>span:nth-child(3) {
+  .menuButton>span.active:nth-child(3) {
    transform: translateY(-4px) rotate(-45deg);
   }
 
-#check:checked~.stickymenuButton>span:nth-child(2) {
+.stickymenuButton>span.active:nth-child(2) {
   transform: translateY(2px) rotate(45deg);
   }
 
-  #check:checked~.stickymenuButton>span:nth-child(3) {
+.stickymenuButton>span.active:nth-child(3) {
    transform: translateY(-2px) rotate(-45deg);
   }
 
@@ -1944,7 +1944,7 @@ form textarea {
     top: 5rem;
   }
 
-  #check:checked~.navbar {
+  .navbar.open {
     transform: scale(1);
   }
 
@@ -1963,7 +1963,7 @@ form textarea {
     width: fit-content;
   }
 
-  #check:checked~.navbar a {
+  .navbar.open a {
     transform: scale(1);
     opacity: 1;
   }
@@ -2131,20 +2131,8 @@ left: 52%;
     top: 5rem;
   }
 
-  #check:checked~.navbar {
+  .navbar.open {
     transform: scale(1);
-  }
-
-  .navbar .social-icons {
-    display: flex;
-    justify-content: center;
-    margin: 0.6rem auto;
-    align-content: center;
-  }
-
-  .navbar .social-icons a {
-    padding-left: 1rem;
-    font-size: 2rem;
   }
 
  .navbar span a::after {
@@ -2167,7 +2155,7 @@ left: 52%;
     border-radius: none;
   }
 
-  #check:checked~.navbar a {
+  .navbar.open a {
     transform: scale(1);
     opacity: 1;
   }
