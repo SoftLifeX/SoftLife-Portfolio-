@@ -1657,15 +1657,15 @@ outline: none;
   -webkit-text-stroke: 0.0625rem var(--base-color);
 }
 
-.services-list div:hover ~ .fa-brands.fa-figma{
+.serviceCard:hover > .fa-brands.fa-figma{
   -webkit-text-stroke: 0.0625rem var(--text-color);
 }
 
-.services-list div:hover ~ .fa-brands.fa-app-store{
+.serviceCard:hover > .fa-brands.fa-app-store{
   -webkit-text-stroke: 0.0625rem var(--text-color);
 }
 
-.services-list div {
+.serviceCard {
   background-color: var(--base-color);
   padding-left: 1.87rem;
   padding-right: 1.87rem;
@@ -1683,8 +1683,13 @@ outline: none;
   z-index: 1;
 }
 
-.services-list div i {
+.serviceCard i {
   font-size: 2.5rem;
+}
+
+.serviceCard:hover > div#lottie path{
+  stroke: var(--base-color);
+  fill: var(--text-color);
 }
 
 div#lottie path {
@@ -1693,25 +1698,23 @@ div#lottie path {
 }
 
 div#lottie {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 20%;
+  height: 20%;
   color: var(--text-color);
-  border: none;
-  box-shadow: none;
-  padding: 1rem;
+  padding: 0;
 }
 
-.services-list div h2 {
+.serviceCard h2 {
   padding-top: 0;
 }
 
 
-.services-list div:hover {
+.serviceCard:hover {
   transform: translateY(-20px);
   color: var(--base-color);
 }
 
-.services-list div:before {
+.serviceCard:before {
   transition: 0.4s all ease;
   position: absolute;
   box-shadow: 0 0 0.10rem var(--accent-color);
@@ -1724,7 +1727,7 @@ div#lottie {
   content: "";
 }
 
-.services-list div:hover:before {
+.serviceCard:hover:before {
   transition: 0.4s all ease;
   border-radius: 5px;
   z-index: -1;
