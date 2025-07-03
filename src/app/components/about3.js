@@ -12,9 +12,7 @@ function About3() {
            <h5>What we Serve!</h5>
             <div className="services-list">
               <div>
-               <div className="lottieicon">
                  <Lottie loop={true} animationData={Developer} />
-               </div>
                 <h2>Web Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
