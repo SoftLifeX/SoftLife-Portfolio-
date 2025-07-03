@@ -198,9 +198,10 @@ function Header() {
         <input type="checkbox"
           id="check"
           checked={checked}
+          ref={labelRef}
           readOnly />
          <label htmlFor="check"   
-          ref={labelRef}
+          
           onClick={handleLabelClick}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
