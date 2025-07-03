@@ -13,14 +13,37 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 
 function Header() {
+//checkbox 
+   const [isChecked, setIsChecked] = useState(false);
+      const checkboxRef = useRef(null);
 
+      useEffect(() => {
+        const handleClickOutside = (event) => {
+          if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
+            setIsChecked(false);
+          }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [checkboxRef]);
+
+      const handleCheckboxChange = () => {
+        setIsChecked(!isChecked); // Toggle the checkbox on direct click
+      };
+   
+   //sticky 
    const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY >= 10);
     });
   });
- 
+
+   //navigation 
  const links = [
    {
      url: "/",
@@ -67,6 +90,7 @@ function Header() {
    },
  ];
 
+   //theme switch
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -169,13 +193,18 @@ function Header() {
           <span>&gt;</span>
         </a>
 
-        <input type="checkbox" id="check" />
+       <div ref={checkboxRef}>
+        <input type="checkbox" 
+         checked={isChecked}
+         onChange={handleCheckboxChange}
+         id="check" />
         <label htmlFor="check" className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </label>
+       </div>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
          id="theme-switch" data-title="Theme">
