@@ -15,7 +15,7 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 function Header() {
 //checkbox 
    const [isChecked, setIsChecked] = useState(false);
-   ‎const CheckboxToggle = () => {
+   const CheckboxToggle = () => {
 ‎  const [checked, setChecked] = useState(false);
 ‎  const labelRef = useRef(null);
 ‎
