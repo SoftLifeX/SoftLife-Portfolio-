@@ -19,7 +19,7 @@ function Header() {
       const checktoggleRef = useRef(null);
    
       useEffect(() => {
-        const handleClickOutside = (event) => {
+        const handleClickOutside, checktoggleRef = (event) => {
           if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
             setIsChecked(false);
           }
@@ -28,7 +28,7 @@ function Header() {
         document.addEventListener('mousedown', handleClickOutside, checktoggleRef);
 
         return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
+          document.removeEventListener('mousedown', handleClickOutside, checktoggleRef);
         };
       }, [checkboxRef]);
 
