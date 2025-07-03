@@ -199,7 +199,7 @@ function Header() {
          ref={checkboxRef}
          id="check" />
         <label htmlFor="check"   
-         className={`menuButton ${scroll ? "stickymenuButton" : ""}`>
+         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
           <span></span>
