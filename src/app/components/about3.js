@@ -11,7 +11,7 @@ function About3() {
           <div className="container">
            <h5>What we Serve!</h5>
             <div className="services-list">
-              <div>
+              <div className="services">
                  <Lottie
                   id="lottie"
                   loop={true} 
@@ -28,9 +28,9 @@ function About3() {
                   We boast functonality, without the compromise of your
                   aesthetics.
                 </p>
-    </div>
+              </div>
 
-              <div>
+              <div className="services">
                 <i className="fa-brands fa-figma"></i>
                 <h2>UI/UX</h2>
                 <p>
@@ -47,7 +47,7 @@ function About3() {
                 </p>
                     </div>
 
-              <div>
+              <div className="services">
                <i className="fa-thin fa-paintbrush"></i>
                 <h2>Branding</h2>
                 <p>
@@ -62,9 +62,9 @@ function About3() {
                   <br />
                   Tailored specifically, <b>just for YOU!</b>
                 </p>
-    </div>
+             </div>
 
-              <div>
+              <div className="services">
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Development</h2>
                 <p>
@@ -81,7 +81,7 @@ function About3() {
                   <br />
                   seamlessly integrate you vision with top-tier algorithms.
                 </p>
-                    </div>
+               </div>
             </div>
           </div>
         </div>
