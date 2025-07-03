@@ -1689,14 +1689,16 @@ outline: none;
 
 div#lottie path {
     stroke: var(--text-color);
-    fill: transparent;
+    fill: var(--base-color);
 }
 
 div#lottie {
   width: 2.5rem;
   height: 2.5rem;
-  background-color: transparent;
   color: var(--text-color);
+  border: none;
+  box-shadow: none;
+  padding: 1rem;
 }
 
 .services-list div h2 {
