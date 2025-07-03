@@ -14,28 +14,28 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
-‎  const buttonRef = useRef(null);
-‎  const menuRef = useRef(null);
-‎
-‎  const toggleMenu = () => {
-‎    setIsOpen(prev => !prev);
-‎  };
-‎
-‎  useEffect(() => {
-‎    const handleClickOutside = (e) => {
-‎      if (
-‎        menuRef.current &&
-‎        !menuRef.current.contains(e.target) &&
-‎        buttonRef.current &&
-‎        !buttonRef.current.contains(e.target)
-‎      ) {
-‎        setIsOpen(false);
-‎      }
-‎    };
-‎
-‎    document.body.addEventListener('click', handleClickOutside);
-‎    return () => document.body.removeEventListener('click', handleClickOutside);
-‎  }, []);
+  const buttonRef = useRef(null);
+  const menuRef = useRef(null);
+
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(e.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.body.addEventListener('click', handleClickOutside);
+    return () => document.body.removeEventListener('click', handleClickOutside);
+  }, []);
 
    //sticky 
    const [scroll, setScroll] = useState(false);
