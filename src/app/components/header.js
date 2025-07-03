@@ -15,25 +15,28 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 function Header() {
 //checkbox 
    const [isChecked, setIsChecked] = useState(false);
-      const checkboxRef = useRef(null);
-   
-      useEffect(() => {
-        const handleClickOutside = (event) => {
-          if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
-            setIsChecked(false);
-          }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-
-        return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
-        };
-      }, [checkboxRef]);
-
-      const handleCheckboxChange = () => {
-        setIsChecked(!isChecked); // Toggle the checkbox on direct click
-      };
+   ‎const CheckboxToggle = () => {
+‎  const [checked, setChecked] = useState(false);
+‎  const labelRef = useRef(null);
+‎
+‎  useEffect(() => {
+‎    const handleBodyClick = (e) => {
+‎      // If the click is outside the label, uncheck
+‎      if (labelRef.current && !labelRef.current.contains(e.target)) {
+‎        setChecked(false);
+‎      }
+‎    };
+‎
+‎    document.body.addEventListener('click', handleBodyClick);
+‎    return () => {
+‎      document.body.removeEventListener('click', handleBodyClick);
+‎    };
+‎  }, []);
+‎
+‎  const toggleCheckbox = () => {
+‎    setChecked((prev) => !prev);
+‎  };
+‎
    
    //sticky 
    const [scroll, setScroll] = useState(false);
@@ -192,20 +195,20 @@ function Header() {
           <span>/</span>
           <span>&gt;</span>
         </a>
-
-       <span ref={checkboxRef}>
+     
         <input type="checkbox" 
-         checked={isChecked}
+         checked={checked}
          onChange={handleCheckboxChange}
          id="check" />
          <label htmlFor="check"   
+          onClick={toggleCheckbox}
+‎          ref={labelRef}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
          </label>
-       </span>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
          id="theme-switch" data-title="Theme">
