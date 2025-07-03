@@ -14,29 +14,27 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
 //checkbox 
-   const [isChecked, setIsChecked] = useState(false);
-   const CheckboxToggle = () => {
-‎  const [checked, setChecked] = useState(false);
-‎  const labelRef = useRef(null);
+const CheckboxToggle = () => {
+‎  const [checked, setChecked] = useState(false);
+‎  const labelRef = useRef(null);
 ‎
-‎  useEffect(() => {
-‎    const handleBodyClick = (e) => {
-‎      // If the click is outside the label, uncheck
-‎      if (labelRef.current && !labelRef.current.contains(e.target)) {
-‎        setChecked(false);
-‎      }
-‎    };
+‎  useEffect(() => {
+‎    const handleBodyClick = (e) => {
+‎      // If the click is outside the label, uncheck
+‎      if (labelRef.current && !labelRef.current.contains(e.target)) {
+‎        setChecked(false);
+‎      }
+‎    };
 ‎
-‎    document.body.addEventListener('click', handleBodyClick);
-‎    return () => {
-‎      document.body.removeEventListener('click', handleBodyClick);
-‎    };
-‎  }, []);
+‎    document.body.addEventListener('click', handleBodyClick);
+‎    return () => {
+‎      document.body.removeEventListener('click', handleBodyClick);
+‎    };
+‎  }, []);
 ‎
-‎  const toggleCheckbox = () => {
-‎    setChecked((prev) => !prev);
-‎  };
-‎
+‎  const toggleCheckbox = () => {
+‎    setChecked((prev) => !prev);
+‎  };
    
    //sticky 
    const [scroll, setScroll] = useState(false);
