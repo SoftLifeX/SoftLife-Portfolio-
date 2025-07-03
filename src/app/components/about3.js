@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import Developer from "@/app/assets/Developer.json";
+import Branding from "@/app/assets/Branding.json";
+import Figma from "@/app/assets/Figma.json";
 import Lottie from "lottie-react";
 
 function About3() {
@@ -31,7 +33,10 @@ function About3() {
               </div>
 
               <div className="serviceCard">
-                <i className="fa-brands fa-figma"></i>
+                <Lottie
+                  id="lottie"
+                  loop={true} 
+                  animationData={Figma} />
                 <h2>UI/UX</h2>
                 <p>
                   Unlock the vast potential of user-centric designs:
@@ -48,7 +53,10 @@ function About3() {
                     </div>
 
               <div className="serviceCard">
-               <i className="fa-thin fa-paintbrush"></i>
+               <Lottie
+                  id="lottie"
+                  loop={true} 
+                  animationData={Branding} />
                 <h2>Branding</h2>
                 <p>
                   Your Brand is your Legacy;
