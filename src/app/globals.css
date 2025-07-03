@@ -1693,7 +1693,8 @@ outline: none;
 }
 
 div#lottie path {
-    stroke: 1 var(--text-color);
+    stroke: var(--text-color);
+   stroke-width: 1;
     fill: var(--base-color);
 }
 
