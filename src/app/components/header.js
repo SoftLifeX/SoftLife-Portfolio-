@@ -13,29 +13,29 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 
 function Header() {
-  const [checked, setChecked] = useState(false);
-  const labelRef = useRef(null);
-
-  useEffect(() => {
-    const handleBodyClick = (e) => {
-      // If click is outside the label, uncheck the checkbox
-      if (labelRef.current && !labelRef.current.contains(e.target)) {
-        setChecked(false);
-      }
-    };
-
-    // Native event listener avoids React synthetic event issues
-    document.body.addEventListener('click', handleBodyClick);
-
-    return () => {
-      document.body.removeEventListener('click', handleBodyClick);
-    };
-  }, []);
-
-  const handleLabelClick = (e) => {
-    e.stopPropagation(); // Prevent body click from firing
-    setChecked((prev) => !prev); // Toggle checkbox
-  };
+  const [isOpen, setIsOpen] = useState(false);
+‎  const buttonRef = useRef(null);
+‎  const menuRef = useRef(null);
+‎
+‎  const toggleMenu = () => {
+‎    setIsOpen(prev => !prev);
+‎  };
+‎
+‎  useEffect(() => {
+‎    const handleClickOutside = (e) => {
+‎      if (
+‎        menuRef.current &&
+‎        !menuRef.current.contains(e.target) &&
+‎        buttonRef.current &&
+‎        !buttonRef.current.contains(e.target)
+‎      ) {
+‎        setIsOpen(false);
+‎      }
+‎    };
+‎
+‎    document.body.addEventListener('click', handleClickOutside);
+‎    return () => document.body.removeEventListener('click', handleClickOutside);
+‎  }, []);
 
    //sticky 
    const [scroll, setScroll] = useState(false);
@@ -195,19 +195,17 @@ function Header() {
           <span>&gt;</span>
         </a>
      
-        <input type="checkbox"
-          id="check"
-          checked={checked}
-          ref={labelRef}
-           readOnly
-             />
          <span
-          onClick={handleLabelClick}
+          ref={buttonRef}
+          onClick={(e) => {
+‎          e.stopPropagation();
+‎          toggleMenu();
+‎        }}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span className={`icon1 ${isOpen ? 'active' : ''}`}></span>
+          <span className={`icon2 ${isOpen ? 'active' : ''}`}></span>
+          <span className={`icon3 ${isOpen ? 'active' : ''}`}></span>
+          <span className={`icon4 ${isOpen ? 'active' : ''}`}></span>
          </span>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -253,7 +251,7 @@ function Header() {
 
         </div>
 
-        <nav className={`navbar ${scroll ? "sticky" : ""}`}>
+        <nav className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
           <li>
             {links.map((link) => (
