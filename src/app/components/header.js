@@ -251,7 +251,11 @@ function Header() {
 
         </div>
 
-        <nav className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
+        <nav
+         onClick={(e) => {
+          e.stopPropagation();
+          }}       
+        className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
           <li>
             {links.map((link) => (
