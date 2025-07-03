@@ -16,7 +16,6 @@ function Header() {
 //checkbox 
    const [isChecked, setIsChecked] = useState(false);
       const checkboxRef = useRef(null);
-      const checktoggleRef = useRef(null);
    
       useEffect(() => {
         const handleClickOutside = (event) => {
@@ -25,16 +24,10 @@ function Header() {
           }
         };
 
-         const checktoggleRef = (event) => {
-          if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
-            setIsChecked(false);
-          }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside, checktoggleRef);
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
-          document.removeEventListener('mousedown', handleClickOutside, checktoggleRef);
+          document.removeEventListener('mousedown', handleClickOutside);
         };
       }, [checkboxRef]);
 
@@ -206,8 +199,8 @@ function Header() {
          onChange={handleCheckboxChange}
          id="check" />
          <label htmlFor="check"   
-          ref={checktoggleRef}
-         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
+         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}
+         {checked && "(checked!)"}>
           <span></span>
           <span></span>
           <span></span>
