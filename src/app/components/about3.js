@@ -11,7 +11,7 @@ function About3() {
           <div className="container">
            <h5>What we Serve!</h5>
             <div className="services-list">
-              <div className="services">
+              <div className="serviceCard">
                  <Lottie
                   id="lottie"
                   loop={true} 
@@ -30,7 +30,7 @@ function About3() {
                 </p>
               </div>
 
-              <div className="services">
+              <div className="serviceCard">
                 <i className="fa-brands fa-figma"></i>
                 <h2>UI/UX</h2>
                 <p>
@@ -47,7 +47,7 @@ function About3() {
                 </p>
                     </div>
 
-              <div className="services">
+              <div className="serviceCard">
                <i className="fa-thin fa-paintbrush"></i>
                 <h2>Branding</h2>
                 <p>
@@ -64,7 +64,7 @@ function About3() {
                 </p>
              </div>
 
-              <div className="services">
+              <div className="serviceCard">
                 <i className="fa-brands fa-app-store"></i>
                 <h2>App Development</h2>
                 <p>
