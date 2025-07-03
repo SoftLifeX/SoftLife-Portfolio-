@@ -200,14 +200,14 @@ function Header() {
           checked={checked}
           ref={labelRef}
            />
-         <label htmlFor="check"   
+         <span
           onClick={handleLabelClick}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-         </label>
+         </span>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
          id="theme-switch" data-title="Theme">
