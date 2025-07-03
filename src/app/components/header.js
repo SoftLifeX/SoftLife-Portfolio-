@@ -22,19 +22,23 @@ function Header() {
   };
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(e.target) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(e.target)
-      ) {
+    const handleClickOutside = (event) => {
+      const clickedOutsideMenu =
+        menuRef.current && !menuRef.current.contains(event.target);
+      const clickedOutsideButton =
+        buttonRef.current && !buttonRef.current.contains(event.target);
+
+      if (clickedOutsideMenu && clickedOutsideButton) {
         setIsOpen(false);
       }
     };
 
-    document.body.addEventListener('click', handleClickOutside);
-    return () => document.body.removeEventListener('click', handleClickOutside);
+    // Use capture phase to catch earlier in the event cycle
+    document.addEventListener('click', handleClickOutside, true);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
   }, []);
 
    //sticky 
