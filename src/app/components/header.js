@@ -202,7 +202,7 @@ function Header() {
          <label htmlFor="check"   
           ref={labelRef}
           onClick={handleLabelClick}
-         className={`menuButton ${scroll ? "stickymenuButton" : ""}`>
+         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
           <span></span>
