@@ -193,13 +193,13 @@ function Header() {
           <span>&gt;</span>
         </a>
 
+       <label htmlFor="check"   
+         ref={checkboxRef}
+         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
         <input type="checkbox" 
          checked={isChecked}
          onChange={handleCheckboxChange}
-         ref={checkboxRef}
          id="check" />
-        <label htmlFor="check"   
-         className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
           <span></span>
           <span></span>
           <span></span>
