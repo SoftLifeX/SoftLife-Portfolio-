@@ -1687,6 +1687,13 @@ outline: none;
   font-size: 2.5rem;
 }
 
+.services-list div .lottieicon {
+  width: 2.5rem;
+  height: 2.5r
+  background-color: transparent;
+  color: var(--text-color);
+}
+
 .services-list div h2 {
   padding-top: 0;
 }
