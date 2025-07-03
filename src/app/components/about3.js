@@ -13,7 +13,7 @@ function About3() {
             <div className="services-list">
               <div>
                  <Lottie
-                  className="lottie"
+                  id="lottie"
                   loop={true} 
                   animationData={Developer} />
                 <h2>Web Development</h2>
