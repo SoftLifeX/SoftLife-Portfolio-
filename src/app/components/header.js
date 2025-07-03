@@ -19,7 +19,13 @@ function Header() {
       const checktoggleRef = useRef(null);
    
       useEffect(() => {
-        const handleClickOutside, checktoggleRef = (event) => {
+        const handleClickOutside = (event) => {
+          if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
+            setIsChecked(false);
+          }
+        };
+
+         const checktoggleRef = (event) => {
           if (checkboxRef.current && !checkboxRef.current.contains(event.target)) {
             setIsChecked(false);
           }
