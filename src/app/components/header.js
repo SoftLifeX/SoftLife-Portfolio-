@@ -198,7 +198,6 @@ function Header() {
      
         <input type="checkbox" 
          checked={checked}
-         onChange={handleCheckboxChange}
          id="check" />
          <label htmlFor="check"   
           onClick={toggleCheckbox}
