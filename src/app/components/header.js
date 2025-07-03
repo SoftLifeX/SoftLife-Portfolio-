@@ -198,14 +198,14 @@ function Header() {
          <span
           ref={buttonRef}
           onClick={(e) => {
-‎          e.stopPropagation();
-‎          toggleMenu();
-‎        }}
+          e.stopPropagation();
+          toggleMenu();
+          }}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
-          <span className={`icon1 ${isOpen ? 'active' : ''}`}></span>
-          <span className={`icon2 ${isOpen ? 'active' : ''}`}></span>
-          <span className={`icon3 ${isOpen ? 'active' : ''}`}></span>
-          <span className={`icon4 ${isOpen ? 'active' : ''}`}></span>
+          <span className={`icon1 ${isOpen ? "active" : ""}`}></span>
+          <span className={`icon2 ${isOpen ? "active" : ""}`}></span>
+          <span className={`icon3 ${isOpen ? "active" : ""}`}></span>
+          <span className={`icon4 ${isOpen ? "active" : ""}`}></span>
          </span>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
