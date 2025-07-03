@@ -12,7 +12,10 @@ function About3() {
            <h5>What we Serve!</h5>
             <div className="services-list">
               <div>
-                 <Lottie loop={true} animationData={Developer} />
+                 <Lottie
+                  className="lottie"
+                  loop={true} 
+                  animationData={Developer} />
                 <h2>Web Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
