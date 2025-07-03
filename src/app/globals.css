@@ -1692,15 +1692,34 @@ outline: none;
   fill: var(--text-color);
 }
 
+.serviceCard:hover > div#lottie2 path{
+  stroke: var(--base-color);
+  fill: var(--text-color);
+  }
+
 div#lottie path {
     stroke: var(--text-color);
-   stroke-width: 1;
     fill: var(--base-color);
 }
 
+div#lottie2 path {
+    stroke: var(--text-color);
+    fill: var(--base-color);
+    stroke-width: 1;
+  }
+
+
+
 div#lottie {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 19%;
+  height: 19%;
+  color: var(--text-color);
+  padding: 0;
+}
+
+div#lottie2 {
+  width: 2.4rem;
+  height: 2.4rem;
   color: var(--text-color);
   padding: 0;
 }
