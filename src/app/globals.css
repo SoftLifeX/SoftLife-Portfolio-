@@ -1693,13 +1693,13 @@ outline: none;
 }
 
 div#lottie path {
-    stroke: var(--text-color);
+    stroke: 1 var(--text-color);
     fill: var(--base-color);
 }
 
 div#lottie {
-  width: 20%;
-  height: 20%;
+  width: 2.5rem;
+  height: 2.5rem;
   color: var(--text-color);
   padding: 0;
 }
