@@ -193,18 +193,19 @@ function Header() {
           <span>&gt;</span>
         </a>
 
-       <div ref={checkboxRef}>
         <input type="checkbox" 
          checked={isChecked}
          onChange={handleCheckboxChange}
+         ref={checkboxRef}
          id="check" />
-        <label htmlFor="check" className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
+        <label htmlFor="check" 
+          ref={checkboxRef}  
+         className={`menuButton ${scroll ? "stickymenuButton" : ""}`>
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </label>
-       </div>
 
    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
          id="theme-switch" data-title="Theme">
