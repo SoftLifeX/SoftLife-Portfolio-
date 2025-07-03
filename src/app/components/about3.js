@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
+import developer from "@/app/assets/developer.json";
+
+import Lottie from "lottie-react";
 
 function About3() {
   return (
