@@ -13,27 +13,30 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 
 function Header() {
+  const [checked, setChecked] = useState(false);
+  const labelRef = useRef(null);
 
-const CheckboxToggle = () => {
-const [checked, setChecked] = useState(false);
-const labelRef = useRef(null);
-‎
-   useEffect(() => {
-      const handleBodyClick = (e) => {
-         if (labelRef.current && !labelRef.current.contains(e.target)){
-            setChecked(false);
-         }
-      };
-   document.body.addEventListener('click', handleBodyClick);
-      return () => {
-         document.body.removeEventListener('click', handleBodyClick);
-      };
-   }, []);
-   
-   const toggleCheckbox = () => {
-      setChecked((prev) => !prev);
-   };
-   
+  useEffect(() => {
+    const handleBodyClick = (e) => {
+      // If click is outside the label, uncheck the checkbox
+      if (labelRef.current && !labelRef.current.contains(e.target)) {
+        setChecked(false);
+      }
+    };
+
+    // Native event listener avoids React synthetic event issues
+    document.body.addEventListener('click', handleBodyClick);
+
+    return () => {
+      document.body.removeEventListener('click', handleBodyClick);
+    };
+  }, []);
+
+  const handleLabelClick = (e) => {
+    e.stopPropagation(); // Prevent body click from firing
+    setChecked((prev) => !prev); // Toggle checkbox
+  };
+
    //sticky 
    const [scroll, setScroll] = useState(false);
   useEffect(() => {
@@ -192,12 +195,13 @@ const labelRef = useRef(null);
           <span>&gt;</span>
         </a>
      
-        <input type="checkbox" 
-         checked={checked}
-         id="check" />
+        <input type="checkbox"
+          id="check"
+          checked={checked}
+          readOnly />
          <label htmlFor="check"   
-          onClick={toggleCheckbox}
-‎          ref={labelRef}
+          ref={labelRef}
+          onClick={handleLabelClick}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`>
           <span></span>
           <span></span>
