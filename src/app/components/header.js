@@ -199,7 +199,8 @@ function Header() {
           id="check"
           checked={checked}
           ref={labelRef}
-           />
+           readOnly
+             />
          <span
           onClick={handleLabelClick}
          className={`menuButton ${scroll ? "stickymenuButton" : ""}`}>
