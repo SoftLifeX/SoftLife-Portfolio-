@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
-import developer from "@/app/assets/developer.json";
-
+import Developer from "@/app/assets/Developer.json";
 import Lottie from "lottie-react";
 
 function About3() {
@@ -13,7 +12,9 @@ function About3() {
            <h5>What we Serve!</h5>
             <div className="services-list">
               <div>
-               <i className="fa-thin fa-code"></i>
+               <div className="lottieicon">
+                 <Lottie loop={true} animationData={Developer} />
+               </div>
                 <h2>Web Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
