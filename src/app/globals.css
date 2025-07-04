@@ -1645,11 +1645,11 @@ transition: transform, ease-in-out;
 
 .techstack:hover {
   transform: translateY(-0.31rem);
-  color: var(--text-color);
 }
 
 .techstack svg{
   background: transparent;
+  margin: auto;
   }
 
 .techstack p {
