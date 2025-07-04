@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from "react";
 import Magnetic2 from "./magnetic2";
 import Lottie from "lottie-react";
 import { useLottie } from 'lottie-react';
@@ -10,19 +10,29 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-const defaultOptions = {
-        loop: false, // Play once initially
-        autoplay: true,
-      }
-
-const { View, play } = useLottie(defaultOptions);
-
- const handleAnimationComplete = () => {
-        // When the animation completes, play it again
-        play();
-      };
-  
 function Contact() {
+const xRef = useRef();
+
+  useEffect(() => {
+    const animation = xRef.current;
+
+    // Start animation once
+    animation.play();
+
+    // When animation finishes, loop it from now on
+    const onComplete = () => {
+      animation.setLoop(true);   // Enable looping
+      animation.play();          // Restart with loop
+    };
+
+    animation.addEventListener("complete", onComplete);
+
+    // Clean up on unmount
+    return () => {
+      animation.removeEventListener("complete", onComplete);
+    };
+  }, []);
+        
   return (
     <div>
       <section className="home3">
@@ -45,10 +55,12 @@ function Contact() {
           <div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={X}
-                    onComplete={handleAnimationComplete}/>
+                      id="lottie3"
+                      lottieRef={xRef}
+                      animationData={X}
+                      loop={false} // Start with no loop
+                      autoplay={true}
+                   />
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
