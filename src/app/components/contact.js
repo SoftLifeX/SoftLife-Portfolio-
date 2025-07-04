@@ -9,7 +9,7 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-const lottieRef = useRef();
+const lottieRef = useRef(null);
   useEffect(() => {
     const animation = lottieRef.current;
 
