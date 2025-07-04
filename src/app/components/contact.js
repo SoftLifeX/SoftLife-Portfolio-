@@ -9,9 +9,8 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-function Contact() {
 
-  const LottieAnimation = () => {
+const LottieAnimation = () => {
       const defaultOptions = {
         loop: false, // Play once initially
         autoplay: true,
@@ -23,6 +22,8 @@ function Contact() {
         // When the animation completes, play it again
         play();
       };
+  
+function Contact() {
   return (
     <div>
       <section className="home3">
