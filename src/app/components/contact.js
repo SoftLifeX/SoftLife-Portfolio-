@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef, useEffect } from "react";
 import Magnetic2 from "./magnetic2";
 import Lottie from "lottie-react";
@@ -11,33 +12,44 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
 function Contact() {
- 
+
+  const containerRef = useRef();
+  const [hasPlayed, setHasPlayed] = useState(false);
+
   const options = {
     animationData: X,
     loop: false,
     autoplay: false,
   };
 
-  const { View, animation } = useLottie(options);
+  const { View, play, stop } = useLottie(options);
 
+  // Use native IntersectionObserver
   useEffect(() => {
-  if (animation) {
-    // Manually play once
-    animation.play();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasPlayed) {
+          play();
+          setHasPlayed(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    const onComplete = () => {
-      animation.loop = true;  // Enable loop
-      animation.play();       // Start loop from beginning
-    };
-
-    animation.addEventListener("complete", onComplete);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     return () => {
-      animation.removeEventListener("complete", onComplete);
+      if (containerRef.current) observer.unobserve(containerRef.current);
     };
-  }
-}, [animation]);
+  }, [hasPlayed, play]);
 
+  // Replay on hover
+  const handleHover = () => {
+    stop();
+    play();
+  };
 
   return (
     <div>
@@ -60,7 +72,10 @@ function Contact() {
           </div>
           <div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
-                   <div id="lottie3">{View}</div>
+                   <div
+                    ref={containerRef}
+                    onMouseEnter={handleHover}
+                    id="lottie3">{View}</div>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
