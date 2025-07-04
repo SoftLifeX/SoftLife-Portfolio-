@@ -17,6 +17,7 @@ import Nextjs from "./svg/nextjs";
 import Git from "./svg/git";
 import Bitbucket from "./svg/bitbucket";
 import Figma from "./svg/figma";
+import Flutter from "./svg/flutter";
 import Typescript from "./svg/typescript";
 
 function About2() {
@@ -145,6 +146,11 @@ function About2() {
             <span className="techstack">
               <Figma />
               <p>Figma</p>
+            </span>
+
+            <span className="techstack">
+              <Flutter />
+              <p>Flutter</p>
             </span>
 
             <span className="techstack">
