@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Image from "next/image";
+import { images } from "@/app/images/images";
 
 
 function About2() {
@@ -43,7 +45,7 @@ function About2() {
             <div className="tab-contents">
                 <ul>
                   <div className="tools">
-                    <i className="bx bxl-html5">
+            {/*<i className="bx bxl-html5">
                       <p>HTML</p>
                     </i>
                     <i className="bx bxl-css3">
@@ -78,7 +80,9 @@ function About2() {
                    </i>
                    <i className="fa-brands fa-figma">
                      <p>Figma</p>
-                   </i>
+                   </i>*/}
+               <Image src={images.html} alt="Upskill Africa" />
+              <p>Html</p>
                   </div>
                 </ul>
               </div>
