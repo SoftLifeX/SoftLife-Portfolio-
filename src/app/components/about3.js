@@ -20,7 +20,7 @@ function About3() {
              <Lottie
               id="lottie3"
               loop={true} 
-              animationData={Developer} />
+              animationData={Serve} />
            </h5>
             <div className="services-list">
               <div className="serviceCard">
