@@ -74,49 +74,49 @@ function Contactform() {
                   id="lottie3"
                   loop={false} 
                   animationData={Email} 
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://web.facebook.com/SoftLife.dev" target="_blank" data-title="Facebook">
                     <Lottie
                   id="lottie3"
                   loop={false} 
                   animationData={Facebook} 
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                   id="lottie3"
                   loop={false} 
                   animationData={X} 
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
                   id="lottie3"
                   loop={false}  
                   animationData={Whatsapp}
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
                     <Lottie
                   id="lottie3"
                   loop={false} 
                   animationData={Instagram} 
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                      <Lottie
                   id="lottie3"
                   loop={false} 
                   animationData={LinkedIn}
-                    hover/>
+                    interaction={hover}/>
                   </a>
                   <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
                     <Lottie
                   id="lottie3"
                   loop={false}  
                   animationData={Github} 
-                    hover/>
+                    interaction={hover}/>
                   </a>
                 </div>
                 <Link href="/" className="btn4">
