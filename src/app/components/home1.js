@@ -110,9 +110,11 @@ function Home1() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-            ><span id="helloText" />
+            >
+                <span id="helloText" />
+                <span className="waving-hand">
                 <Wave />
-                {/*<span className="waving-hand">👋🏼</span>, */}
+                </span>, 
                 <span className="typed">
                   <Typewriter
                     words={[
