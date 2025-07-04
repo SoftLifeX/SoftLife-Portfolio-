@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
 import Dev from "@/app/assets/Dev.json";
+import Serve from "@/app/assets/Serve.json";
+import Costs from "@/app/assets/Costs.json";
+import Brand from "@/app/assets/Brand.json";
 import Developer from "@/app/assets/Developer.json";
 import Branding from "@/app/assets/Branding.json";
 import Figma from "@/app/assets/Figma.json";
@@ -13,13 +16,20 @@ function About3() {
       <section className="about3">
         <div className="services">
           <div className="container">
-           <h5>What we Serve!</h5>
+           <h5>What we Serve!
+            <span>
+             <Lottie
+              id="lottie"
+              loop={true} 
+              animationData={Developer} />
+            </span>
+           </h5>
             <div className="services-list">
               <div className="serviceCard">
                  <Lottie
                   id="lottie"
                   loop={true} 
-                  animationData={Dev} />
+                  animationData={Developer} />
                 <h2>Web | App Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
@@ -41,9 +51,9 @@ function About3() {
                   animationData={Figma} />
                 <h2>UI/UX</h2>
                 <p>
-                  Unlock the vast potential of user-centric designs:
+                  Unlock the unique experience of user-centric designs:
                   <br />
-                  From intuitive and comprehensive concepts, crafts; to fluid
+                  From intuitive and comprehensive concepts; to fluid
                   user-experience;
                   <br />
                   Your audience is sure to be delighted!
@@ -73,6 +83,25 @@ function About3() {
                   Tailored specifically, <b>just for YOU!</b>
                 </p>
              </div>
+
+           <div className="serviceCard">
+                 <Lottie
+                  id="lottie"
+                  loop={true} 
+                  animationData={Costs} />
+                <h2>Affordable excellence</h2>
+                <p>
+                    Helping brands exceed monthly estimated ROI by
+                    turning visitors into loyal customers and accelerating growth.
+                    <br /> 
+                    <br />
+                    what's more?
+                    <br />
+                    No surprises here! No hidden fees, No sneaky bills!
+                    <br />
+                    transparency redefined
+                </p>
+              </div>
 
               <div className="serviceCard">
                 <Lottie
