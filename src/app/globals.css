@@ -1613,8 +1613,6 @@ outline: none;
 .tools {
   color: var(--secondary-text);
   list-style: none;
-  display: inline;
-  align-items: center;
 }
 
 /*.tools i {
@@ -1639,7 +1637,7 @@ outline: none;
 }*/
 
 .techstack{
-  display: block;
+  display: inline-block;
 transition: transform, ease-in-out;
   transition: 1s ease-in-out;
 }
