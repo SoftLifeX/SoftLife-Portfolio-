@@ -2054,6 +2054,7 @@ form textarea {
   .navbar a:hover {
     border: none;
     box-shadow: none;
+    padding: 0;
   }
   
   .navbar a::after {
@@ -2246,6 +2247,7 @@ left: 52%;
   .navbar a:hover {
     border: none;
     box-shadow: none;
+    padding: 0;
   }
 
   .navbar a::after {
