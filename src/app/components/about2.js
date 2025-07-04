@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
+import Html from "./svg/html"
 
 
 function About2() {
@@ -81,8 +82,10 @@ function About2() {
                    <i className="fa-brands fa-figma">
                      <p>Figma</p>
                    </i>*/}
-               <Image src={images.html} alt="Upskill Africa" />
+             <span className="techstack">
+              <Html />
               <p>Html</p>
+            </span>
                   </div>
                 </ul>
               </div>
