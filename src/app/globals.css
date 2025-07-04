@@ -1725,6 +1725,14 @@ div#lottie2 {
   padding: 0;
 }
 
+div#lottie3 {
+  width: 14%;
+  height: 14%;
+  color: var(--text-color);
+  padding: 0;
+  display: inline-block;
+}
+
 .serviceCard h2 {
   padding-top: 0;
 }
