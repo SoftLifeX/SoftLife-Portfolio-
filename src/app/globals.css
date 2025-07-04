@@ -1640,6 +1640,7 @@ outline: none;
   display: inline-block;
 transition: transform, ease-in-out;
   transition: 1s ease-in-out;
+  align-items: center
 }
 
 .techstack:hover {
@@ -1656,6 +1657,7 @@ transition: transform, ease-in-out;
   font-size: 0.8rem;
   list-style: none;
   transition: 0.5s ease-in-out;
+  text-align: center;
 }
 
 
