@@ -36,8 +36,9 @@ function Home2() {
              Case Studies
              <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Case} />
+                  loop={false} 
+                  animationData={Case}
+                  hover/>
             </h5>
             <div className="work-list">
               <div className="work">
