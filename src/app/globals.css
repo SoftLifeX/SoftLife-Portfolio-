@@ -1610,7 +1610,7 @@ outline: none;
   align-items: center;
 }
 
-.tools i {
+/*.tools i {
   transition: transform, ease-in-out;
   transition: 1s ease-in-out;
 }
@@ -1629,7 +1629,32 @@ outline: none;
 
 .tools i:hover p {
   color: var(--text-color);
+}*/
+
+.techstack{
+transition: transform, ease-in-out;
+  transition: 1s ease-in-out;
 }
+
+.techstack:hover {
+  transform: translateY(-0.31rem);
+  color: var(--text-color);
+}
+
+.techstack img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: transparent;
+  }
+
+.techstack p {
+  color: var(--text-color,);
+  font-size: 0.8rem;
+  list-style: none;
+  transition: 0.5s ease-in-out;
+}
+
 
 .cert_cv {
   list-style: none;
