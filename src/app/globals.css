@@ -1640,6 +1640,7 @@ outline: none;
 }*/
 
 .techstack{
+  display: inline;
 transition: transform, ease-in-out;
   transition: 1s ease-in-out;
 }
@@ -1650,7 +1651,6 @@ transition: transform, ease-in-out;
 }
 
 .techstack svg{
-  display: block;
   background: transparent;
   }
 
