@@ -9,9 +9,9 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-const xRef = useRef();
+const lottieRef = useRef();
   useEffect(() => {
-    const animation = xRef.current;
+    const animation = lottieRef.current;
 
     // Start animation once
     animation.play();
@@ -53,7 +53,7 @@ function Contact() {
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                       id="lottie3"
-                      lottieRef={xRef}
+                      lottieRef={lottieRef}
                       animationData={X}
                       loop={false} // Start with no loop
                       autoplay={true}
