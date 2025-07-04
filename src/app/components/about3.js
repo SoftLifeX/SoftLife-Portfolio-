@@ -34,7 +34,7 @@ function About3() {
 
               <div className="serviceCard">
                 <Lottie
-                  id="lottie"
+                  id="lottie2"
                   loop={true} 
                   animationData={Figma} />
                 <h2>UI/UX</h2>
