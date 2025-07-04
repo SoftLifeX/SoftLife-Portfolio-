@@ -80,9 +80,6 @@ function Home1() {
       <div className="pointer">
         <ArrowIcon />
       </div>
-      {/*<div className="pointer2">
-          <i class="fa-thin fa-arrow-down fa-beat-fade"></i>
-       </div>*/}
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
@@ -106,25 +103,6 @@ function Home1() {
       <div/>
      )}
     </motion.div>
-      {/* <div className="socialContainer">           
-          <div className="socials">
-                <a href="https://wa.link/wjns9h" data-title="WhatsApp">
-                  <i className="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://github.com/SoftLifeDev" data-title="Github">
-                  <i className="fa-brands fa-github"></i>
-                </a>
-                <a href="" data-title="linkedin">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/softlifekid/" data-title="Instagram">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://x.com/SoftLife_Dev" data-title="X">
-                  <i className="fa-brands fa-x-twitter"></i>
-                </a>
-          </div>
-         </div>*/}
     <div className="h2Container">
            <motion.h2
              initial={{ opacity: 0, scale: 0 }}
