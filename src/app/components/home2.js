@@ -27,9 +27,9 @@ function Home2() {
               <br />
               <span className="blocktext"></span>
             </p>
-
+           <div className="curveCon">
              <CurveArrow />
-
+           </div>
             <h5>Case Studies</h5>
             <div className="work-list">
               <div className="work">
