@@ -2,6 +2,14 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
+import Lottie from "lottie-react";
+import Email from "@/app/assets/Email.json";
+import Facebook from "@/app/assets/Facebook.json";
+import Github from "@/app/assets/Github.json";
+import Instagram from "@/app/assets/Instagram.json";
+import LinkedIn from "@/app/assets/LinkedIn.json";
+import Whatsapp from "@/app/assets/Whatsapp.json";
+import X from "@/app/assets/X.json";
 
 function Contactform() {
 
@@ -62,28 +70,46 @@ function Contactform() {
                 </motion.h2>
                 <div className="social-icons">
                   <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
-                    <i className="bx bxl-gmail"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Email} />
                   </a>
                   <a href="https://web.facebook.com/SoftLife.dev" target="_blank" data-title="Facebook">
-                    <i className="bx bxl-facebook"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Facebook} />
                   </a>
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
-                    <i className="fa-brands fa-x-twitter"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={X} />
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
-                    <i className="bx bxl-whatsapp"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Whatsapp} />
                   </a>
-{/*<a href="" data-title="Discord">
-                    <i className="bx bxl-discord-alt"></i>
-                  </a>*/}
                   <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
-                    <i className="bx bxl-instagram"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Instagram} />
                   </a>
                   <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
-                     <i className="bx bxl-linkedin-square"></i>
+                     <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={LinkedIn} />
                   </a>
                   <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
-                    <i className="bx bxl-github"></i>
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Github} />
                   </a>
                 </div>
                 <Link href="/" className="btn4">
