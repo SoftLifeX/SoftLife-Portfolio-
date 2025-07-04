@@ -6,7 +6,7 @@ import Magnetic2 from './magnetic2';
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { motion, useInView } from "framer-motion";
-import CurveArrow from "./curveArrow"
+import CurveArrow from "./svg/curveArrow"
 
 function Home2() {
 
