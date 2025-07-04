@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Developer from "@/app/assets/Developer.json";
 import Branding from "@/app/assets/Branding.json";
 import Figma from "@/app/assets/Figma.json";
+import Targetaim from "@/app/assets/Targetaim.json";
 import Lottie from "lottie-react";
 
 function About3() {
@@ -18,7 +19,7 @@ function About3() {
                   id="lottie"
                   loop={true} 
                   animationData={Developer} />
-                <h2>Web Development</h2>
+                <h2>Web | App Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
                   <br />
@@ -73,8 +74,11 @@ function About3() {
              </div>
 
               <div className="serviceCard">
-                <i className="fa-brands fa-app-store"></i>
-                <h2>App Development</h2>
+                <Lottie
+                  id="lottie"
+                  loop={true} 
+                  animationData={Targetaim} />
+                <h2>The Full Package</h2>
                 <p>
                   There's a thin line between your visions and REALITY.
                   <br />
