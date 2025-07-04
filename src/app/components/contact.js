@@ -9,16 +9,14 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-
-const LottieAnimation = () => {
-      const defaultOptions = {
+const defaultOptions = {
         loop: false, // Play once initially
         autoplay: true,
       }
 
-      const { View, play } = useLottie(defaultOptions);
+const { View, play } = useLottie(defaultOptions);
 
-      const handleAnimationComplete = () => {
+ const handleAnimationComplete = () => {
         // When the animation completes, play it again
         play();
       };
