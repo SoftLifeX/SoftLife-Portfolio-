@@ -6,36 +6,9 @@ import Magnetic2 from './magnetic2';
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { motion, useInView } from "framer-motion";
-import curveArrow from "./curveArrow"
+import CurveArrow from "./curveArrow"
 
 function Home2() {
-
-   /*const secRef = useRef(null); 
-
-   const isInView = useInView(secRef, { once: true });
-   
-   useLayoutEffect(() => {
-     gsap.registerPlugin(ScrollTrigger);
-
-     const tl = gsap.timeline({
-       scrollTrigger: {
-         trigger: secRef.current,
-
-         scrub: true,
-
-         start: isInView,
-
-         end: "100%",
-       },
-     });
-
-
-
-     tl.to(secRef.current, {
-       scale: 0.92,
-       ease:" easeInOut",
-     });
-   }); */
 
   return (
     <div>
@@ -55,7 +28,7 @@ function Home2() {
               <span className="blocktext"></span>
             </p>
 
-             <curveArrow />
+             <CurveArrow />
 
             <h5>Case Studies</h5>
             <div className="work-list">
