@@ -10,6 +10,19 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
 function Contact() {
+
+  const LottieAnimation = () => {
+      const defaultOptions = {
+        loop: false, // Play once initially
+        autoplay: true,
+      }
+
+      const { View, play } = useLottie(defaultOptions);
+
+      const handleAnimationComplete = () => {
+        // When the animation completes, play it again
+        play();
+      };
   return (
     <div>
       <section className="home3">
@@ -34,7 +47,8 @@ function Contact() {
                     <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={X} />
+                  animationData={X}
+                    onComplete={handleAnimationComplete}/>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
