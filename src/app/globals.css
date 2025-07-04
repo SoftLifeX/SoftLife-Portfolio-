@@ -506,7 +506,6 @@ h2 {
   cursor: text;
   text-align: left;
   font-family: 'time', serif;
-  font-weight: 100; 
 }
 
 /*.h2boundary{
@@ -548,7 +547,6 @@ h2 {
 h1 {
   color: var(--text-color);
   font-size: 5rem;
-  font-weight: 100;
   text-align: left;
   margin: 2.5rem;
   text-decoration: none;
@@ -561,7 +559,6 @@ h1 {
 h3 {
   font-size: 1.87rem;
   margin: 1.56rem;
-  font-weight: 400;
   cursor: text;
   text-align: left;
   font-family: 'time', serif;
@@ -615,13 +612,8 @@ h5 {
   font-size: 1.25rem;
   margin: 1.87rem;
   cursor: text;
- /*background: linear-gradient(to right, var(--text-color), var(--secondary-text), var(--text-color));
-  color: transparent;
-  background-clip: text;
-  display: block;*/
   text-align: left;
   font-family: 'time', serif;
-  font-weight: 100; 
   position: relative;
   padding-top: 3.12rem;
 }
@@ -1021,11 +1013,10 @@ outline: none;
 
 .slidertext {
   position: relative;
-  margin: 0px;
+  margin: 0;
   color: var(--text-color);
   font-family: 'penna' , serif;
   font-size: 12rem;
-  font-weight: normal;
   letter-spacing: normal;
   padding-right: 3.12rem;
   cursor: text;
@@ -1040,7 +1031,7 @@ outline: none;
 
 .homepage h2 {
   font-family: 'time', serif;
-  font-weight: 100; 
+  font-weight: 500; 
   color: var(--text-color);
   font-size: 1.3rem;
   margin: 0.5rem 0;
@@ -1332,7 +1323,7 @@ outline: none;
 
 .socials a {
   text-decoration: none;
-  font-size: 1.87rem;
+  font-size: 1.2rem;
   -webkit-text-stroke: 0.0625rem var(--base-color);
   color: var(--text-color);
   display: inline-flex;
@@ -1350,7 +1341,6 @@ outline: none;
   width: 100%;
   text-align: center;
   padding: 1.56rem 0;
-  font-weight: 300;
   color: var(--secondary-text);
 }
 
@@ -1615,27 +1605,6 @@ outline: none;
   list-style: none;
 }
 
-/*.tools i {
-  transition: transform, ease-in-out;
-  transition: 1s ease-in-out;
-}
-
-.tools i:hover {
-  transform: translateY(-0.31rem);
-  color: var(--text-color);
-}
-
-.tools p {
-  color: var(--secondary-text);
-  font-size: 0.8rem;
-  list-style: none;
-  transition: 0.5s ease-in-out;
-}
-
-.tools i:hover p {
-  color: var(--text-color);
-}*/
-
 .techstack{
   display: inline-block;
 transition: transform, ease-in-out;
@@ -1873,7 +1842,7 @@ div#lottie2 {
 
 .social-icons a {
   text-decoration: none;
-  font-size: 1.87rem;
+  font-size: 1.2rem;
   -webkit-text-stroke: 0.0625rem var(--base-color);
   color: var(--secondary-text);
   display: inline-flex;
