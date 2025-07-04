@@ -3,6 +3,8 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2";
 import AboutIcon from "./svg/aboutIcon"
+import Lottie from "lottie-react";
+import About from "@/app/assets/About.json";
 
 function About1() {
 
@@ -15,6 +17,10 @@ function About1() {
       viewport={{ once: true }}
        transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
     What we're About?
+        <Lottie
+          id="lottie3"
+          loop={true} 
+          animationData={About} />
     </motion.h5>
           <motion.h1
              initial={{ opacity: 0, scale: 0 }}
