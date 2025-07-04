@@ -72,44 +72,51 @@ function Contactform() {
                   <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Email} />
+                  loop={false} 
+                  animationData={Email} 
+                    hover/>
                   </a>
                   <a href="https://web.facebook.com/SoftLife.dev" target="_blank" data-title="Facebook">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Facebook} />
+                  loop={false} 
+                  animationData={Facebook} 
+                    hover/>
                   </a>
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={X} />
+                  loop={false} 
+                  animationData={X} 
+                    hover/>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Whatsapp} />
+                  loop={false}  
+                  animationData={Whatsapp}
+                    hover/>
                   </a>
                   <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Instagram} />
+                  loop={false} 
+                  animationData={Instagram} 
+                    hover/>
                   </a>
                   <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                      <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={LinkedIn} />
+                  loop={false} 
+                  animationData={LinkedIn}
+                    hover/>
                   </a>
                   <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
-                  animationData={Github} />
+                  loop={false}  
+                  animationData={Github} 
+                    hover/>
                   </a>
                 </div>
                 <Link href="/" className="btn4">
