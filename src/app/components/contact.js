@@ -10,6 +10,28 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
 function Contact() {
+  
+  const lottieRef = useRef();
+
+  useEffect(() => {
+    const anim = lottieRef.current;
+
+    if (anim) {
+      anim.play();
+
+      const onComplete = () => {
+        anim.setLoop(true);
+        anim.play(); // restart the looping
+      };
+
+      anim.addEventListener("complete", onComplete);
+
+      return () => {
+        anim.removeEventListener("complete", onComplete);
+      };
+    }
+  }, []);
+
   return (
     <div>
       <section className="home3">
@@ -32,10 +54,11 @@ function Contact() {
           <div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
+                      lottieRef={lottieRef}
                       id="lottie3"
                       animationData={X}
                       loop={false} 
-                      autoplay={true}
+                      autoplay={false}
                    />
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
