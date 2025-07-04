@@ -7,6 +7,8 @@ import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { motion, useInView } from "framer-motion";
 import CurveArrow from "./svg/curveArrow"
+import Lottie from "lottie-react";
+import Case from "@/app/assets/Case.json";
 
 function Home2() {
 
@@ -30,7 +32,13 @@ function Home2() {
            <div className="curveCon">
              <CurveArrow />
            </div>
-            <h5>Case Studies</h5>
+            <h5>
+             Case Studies
+             <Lottie
+                  id="lottie"
+                  loop={true} 
+                  animationData={Case} />
+            </h5>
             <div className="work-list">
               <div className="work">
                 <Image
