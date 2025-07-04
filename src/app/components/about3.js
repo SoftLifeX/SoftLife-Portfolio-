@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Developer from "@/app/assets/Developer.json";
 import Branding from "@/app/assets/Branding.json";
 import Figma from "@/app/assets/Figma.json";
-import Targetaim from "@/app/assets/Targetaim.json";
+import Full from "@/app/assets/Full.json";
 import Lottie from "lottie-react";
 
 function About3() {
@@ -77,7 +77,7 @@ function About3() {
                 <Lottie
                   id="lottie"
                   loop={true} 
-                  animationData={Targetaim} />
+                  animationData={Full} />
                 <h2>The Full Package</h2>
                 <p>
                   There's a thin line between your visions and REALITY.
