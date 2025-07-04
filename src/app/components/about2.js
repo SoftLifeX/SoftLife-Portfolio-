@@ -10,7 +10,7 @@ import Vue from "./svg/vue";
 import Express from "./svg/express";
 import Javascript from "./svg/javascript";
 import Nodejs from "./svg/nodejs";
-import React from "./svg/react";
+import Reacticon from "./svg/react";
 import Framer from "./svg/framer";
 import Gitlab from "./svg/gitlab";
 import Nextjs from "./svg/nextjs";
