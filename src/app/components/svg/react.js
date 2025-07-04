@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const React = (props) => (
+const Reacticon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="48"
@@ -23,5 +23,5 @@ const React = (props) => (
   </svg>
 );
 
-export default React;
+export default Reacticon;
         
