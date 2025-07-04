@@ -15,27 +15,28 @@ function Contact() {
   const options = {
     animationData: X,
     loop: false,
-    autoplay: true,
+    autoplay: false,
   };
 
   const { View, animation } = useLottie(options);
 
   useEffect(() => {
-    if (animation) {
-      animation.play();
+  if (animation) {
+    // Manually play once
+    animation.play();
 
-      animation.addEventListener("complete", () => {
-        animation.loop = true;
-        animation.play();
-      });
-    }
+    const onComplete = () => {
+      animation.loop = true;  // Enable loop
+      animation.play();       // Start loop from beginning
+    };
+
+    animation.addEventListener("complete", onComplete);
 
     return () => {
-      if (animation) {
-        animation.removeEventListener("complete");
-      }
+      animation.removeEventListener("complete", onComplete);
     };
-  }, [animation]);
+  }
+}, [animation]);
 
 
   return (
