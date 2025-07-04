@@ -108,7 +108,7 @@ function About2() {
             </span>
 
             <span className="techstack">
-              <React />
+              <Reacticon />
               <p>React</p>
             </span>
 
@@ -123,7 +123,7 @@ function About2() {
             </span>
 
             <span className="techstack">
-              <React />
+              <Reacticon />
               <p>React Native</p>
             </span>
 
