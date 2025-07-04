@@ -2,7 +2,22 @@ import React, { useState } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
 import Html from "./svg/html"
-
+import Bootstrap from "./svg/bootstrap";
+import Css from "./svg/css";
+import Tailwind from "./svg/tailwind";
+import Sass from "./svg/sass";
+import Vue from "./svg/vue";
+import Express from "./svg/express";
+import Javascript from "./svg/javascript";
+import Nodejs from "./svg/nodejs";
+import React from "./svg/react";
+import Framer from "./svg/framer";
+import Gitlab from "./svg/gitlab";
+import Nextjs from "./svg/nextjs";
+import Git from "./svg/git";
+import Bitbucket from "./svg/bitbucket";
+import Figma from "./svg/figma";
+import Typescript from "./svg/typescript";
 
 function About2() {
 
@@ -46,45 +61,95 @@ function About2() {
             <div className="tab-contents">
                 <ul>
                   <div className="tools">
-            {/*<i className="bx bxl-html5">
-                      <p>HTML</p>
-                    </i>
-                    <i className="bx bxl-css3">
-                      <p>CSS3</p>
-                    </i>
-                    <i className="bx bxl-tailwind-css">
-                      <p>Tailwind</p>
-                    </i>
-                    <i className="bx bxl-javascript">
-                      <p>JavaScript</p>
-                    </i>
-                    <i className="bx bxl-nodejs">
-                      <p>Node JS</p>
-                    </i>
-                    <i className="bx bxl-typescript">
-                      <p>Typescript</p>
-                    </i>
-                    <i className="bx bxl-jquery">
-                      <p>JQuery</p>
-                    </i>
-                    <i className="bx bxl-react">
-                      <p>React</p>
-                    </i>
-                    <i className="bx bxl-git">
-                      <p>Git</p>
-                    </i>
-                    <i className="bx bxl-github">
-                      <p>GitHub</p>
-                    </i>
-                   <i className="fa-brands fa-flutter">
-                     <p>Flutter</p>
-                   </i>
-                   <i className="fa-brands fa-figma">
-                     <p>Figma</p>
-                   </i>*/}
+            
              <span className="techstack">
               <Html />
               <p>Html</p>
+            </span>
+
+            <span className="techstack">
+              <Css />
+              <p>Css3</p>
+            </span>
+
+            <span className="techstack">
+              <Bootstrap />
+              <p>Bootstrap</p>
+            </span>
+
+            <span className="techstack">
+              <Tailwind />
+              <p>Tailwind</p>
+            </span>
+
+            <span className="techstack">
+              <Sass />
+              <p>Sass</p>
+            </span>
+
+            <span className="techstack">
+              <Express />
+              <p>Express.js</p>
+            </span>
+
+            <span className="techstack">
+              <Javascript />
+              <p>JavaScript</p>
+            </span>
+
+            <span className="techstack">
+              <Vue />
+              <p>Vue.js</p>
+            </span>
+
+            <span className="techstack">
+              <Nodejs />
+              <p>Nodejs</p>
+            </span>
+
+            <span className="techstack">
+              <React />
+              <p>React</p>
+            </span>
+
+            <span className="techstack">
+              <Framer />
+              <p>Framer</p>
+            </span>
+
+            <span className="techstack">
+              <Gitlab />
+              <p>Gitlab</p>
+            </span>
+
+            <span className="techstack">
+              <React />
+              <p>React Native</p>
+            </span>
+
+            <span className="techstack">
+              <Nextjs />
+              <p>Nextjs</p>
+            </span>
+
+            <span className="techstack">
+              <Git />
+              <p>Git</p>
+            </span>
+
+            <span className="techstack">
+              <Bitbucket />
+              <p>Bitbucket</p>
+            </span>
+
+            <span className="techstack">
+              <Figma />
+              <p>Figma</p>
+            </span>
+
+            <span className="techstack">
+              <Typescript />
+              <p>Typescript</p>
             </span>
                   </div>
                 </ul>
