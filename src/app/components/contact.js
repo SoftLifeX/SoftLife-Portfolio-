@@ -1,6 +1,7 @@
 import React from 'react'
 import Magnetic2 from "./magnetic2";
 import Lottie from "lottie-react";
+import { useLottie } from 'lottie-react';
 import Email from "@/app/assets/Email.json";
 import Facebook from "@/app/assets/Facebook.json";
 import Github from "@/app/assets/Github.json";
