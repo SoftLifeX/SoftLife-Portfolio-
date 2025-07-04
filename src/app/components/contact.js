@@ -37,31 +37,36 @@ function Contact() {
                    <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={X} />
+                  animationData={X}
+                    hover/>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={Whatsapp} />
+                  animationData={Whatsapp}
+                    hover/>
                   </a>
                   <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
                     <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={Instagram} />
+                  animationData={Instagram} 
+                    hover/>
                   </a>
                   <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                      <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={LinkedIn} />
+                  animationData={LinkedIn}
+                    hover/>
                   </a>
                   <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
                     <Lottie
                   id="lottie3"
                   loop={false} 
-                  animationData={Github} />
+                  animationData={Github} 
+                    hover/>
                   </a>
           </div>
         </div>
