@@ -7,7 +7,6 @@ import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2"
 import ArrowIcon from "./svg/arrow"
-import Wave from "./svg/wave";
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
 
@@ -113,7 +112,7 @@ function Home1() {
             >
                 <span id="helloText" />
                 <span className="waving-hand">
-                <Wave />
+                👋🏼
                 </span>, 
                 <span className="typed">
                   <Typewriter
