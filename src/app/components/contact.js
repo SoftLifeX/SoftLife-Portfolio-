@@ -33,7 +33,7 @@ function Contact() {
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                   id="lottie3"
-                  loop={true} 
+                  loop={false} 
                   animationData={X} />
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
