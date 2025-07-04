@@ -2,7 +2,7 @@ import React from 'react'
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2";
-import AboutIcon from "./aboutIcon"
+import AboutIcon from "./svg/aboutIcon"
 
 function About1() {
 
