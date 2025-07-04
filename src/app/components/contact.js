@@ -9,26 +9,6 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-const lottieRef = useRef(null);
-  useEffect(() => {
-    const animation = lottieRef.current;
-
-    // Start animation once
-    animation.play();
-
-    // When animation finishes, loop it from now on
-    const onComplete = () => {
-      animation.setLoop(true);   // Enable looping
-      animation.play();          // Restart with loop
-    };
-
-    animation.addEventListener("complete", onComplete);
-
-    // Clean up on unmount
-    return () => {
-      animation.removeEventListener("complete", onComplete);
-    };
-  }, []);
 function Contact() {
   return (
     <div>
@@ -53,9 +33,8 @@ function Contact() {
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                       id="lottie3"
-                      lottieRef={lottieRef}
                       animationData={X}
-                      loop={false} // Start with no loop
+                      loop={false} 
                       autoplay={true}
                    />
                   </a>
