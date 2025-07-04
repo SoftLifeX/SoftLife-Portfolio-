@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Magnetic2 from "./magnetic2";
 import Lottie from "lottie-react";
+import { useLottie } from "lottie-react";
 import Email from "@/app/assets/Email.json";
 import Facebook from "@/app/assets/Facebook.json";
 import Github from "@/app/assets/Github.json";
@@ -10,27 +11,32 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
 function Contact() {
-  
-  const lottieRef = useRef();
+ 
+  const options = {
+    animationData: X,
+    loop: false,
+    autoplay: true,
+  };
+
+  const { View, animation } = useLottie(options);
 
   useEffect(() => {
-    const anim = lottieRef.current;
+    if (animation) {
+      animation.play();
 
-    if (anim) {
-      anim.play();
-
-      const onComplete = () => {
-        anim.setLoop(true);
-        anim.play(); // restart the looping
-      };
-
-      anim.addEventListener("complete", onComplete);
-
-      return () => {
-        anim.removeEventListener("complete", onComplete);
-      };
+      animation.addEventListener("complete", () => {
+        animation.loop = true;
+        animation.play();
+      });
     }
-  }, []);
+
+    return () => {
+      if (animation) {
+        animation.removeEventListener("complete");
+      }
+    };
+  }, [animation]);
+
 
   return (
     <div>
@@ -53,13 +59,7 @@ function Contact() {
           </div>
           <div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
-                    <Lottie
-                      lottieRef={lottieRef}
-                      id="lottie3"
-                      animationData={X}
-                      loop={false} 
-                      autoplay={false}
-                   />
+                   <div id="lottie3">{View}</div>
                   </a>
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
