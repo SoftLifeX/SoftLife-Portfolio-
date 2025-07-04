@@ -1,5 +1,13 @@
 import React from 'react'
 import Magnetic2 from "./magnetic2";
+import Lottie from "lottie-react";
+import Email from "@/app/assets/Email.json";
+import Facebook from "@/app/assets/Facebook.json";
+import Github from "@/app/assets/Github.json";
+import Instagram from "@/app/assets/Instagram.json";
+import LinkedIn from "@/app/assets/LinkedIn.json";
+import Whatsapp from "@/app/assets/Whatsapp.json";
+import X from "@/app/assets/X.json";
 
 function Contact() {
   return (
@@ -22,21 +30,36 @@ function Contact() {
             </Magnetic2>
           </div>
           <div className="socials">
-               <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
-                  <i className="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
-                  <i className="fa-brands fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://www.instagram.com/softlifekid/" target="_blank"data-title="Instagram">
-                  <i className="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
-                  <i className="fa-brands fa-x-twitter"></i>
-                </a>
+                  <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={X} />
+                  </a>
+                  <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Whatsapp} />
+                  </a>
+                  <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Instagram} />
+                  </a>
+                  <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
+                     <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={LinkedIn} />
+                  </a>
+                  <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
+                    <Lottie
+                  id="lottie3"
+                  loop={true} 
+                  animationData={Github} />
+                  </a>
           </div>
         </div>
         <div className="copyright">
