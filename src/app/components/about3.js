@@ -17,12 +17,10 @@ function About3() {
         <div className="services">
           <div className="container">
            <h5>What we Serve!
-            <span>
              <Lottie
-              id="lottie"
+              id="lottie3"
               loop={true} 
               animationData={Developer} />
-            </span>
            </h5>
             <div className="services-list">
               <div className="serviceCard">
