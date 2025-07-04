@@ -1324,10 +1324,6 @@ outline: none;
 }
 
 .socials a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  -webkit-text-stroke: 0.0625rem var(--base-color);
-  color: var(--text-color);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -1856,10 +1852,6 @@ div#lottie3 {
 }
 
 .social-icons a {
-  text-decoration: none;
-  font-size: 1.4rem;
-  -webkit-text-stroke: 0.0625rem var(--base-color);
-  color: var(--secondary-text);
   display: inline-flex;
   transition: transform, ease-in-out;
   transition: 0.5s ease-in-out;
@@ -1869,7 +1861,6 @@ div#lottie3 {
 
 .social-icons a:hover {
   transform: translateY(-0.31rem);
-  color: var(--text-color);
 }
 
 .contact-right {
