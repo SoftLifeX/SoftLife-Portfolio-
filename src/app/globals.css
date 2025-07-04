@@ -1709,6 +1709,11 @@ div#lottie2 path {
     stroke-width: 1;
   }
 
+div#lottie3 path {
+    stroke: var(--text-color);
+    fill: var(--base-color);
+}
+
 
 
 div#lottie {
@@ -1726,12 +1731,12 @@ div#lottie2 {
 }
 
 div#lottie3 {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.65rem;
+  height: 1.65rem;
   color: var(--text-color);
   padding: 0;
   position: relative;
-  top: 0.6rem;
+  top: 0.4rem;
   display: inline-block;
 }
 
