@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, useInView } from "framer-motion";
+import Dev from "@/app/assets/Dev.json";
 import Developer from "@/app/assets/Developer.json";
 import Branding from "@/app/assets/Branding.json";
 import Figma from "@/app/assets/Figma.json";
@@ -18,7 +19,7 @@ function About3() {
                  <Lottie
                   id="lottie"
                   loop={true} 
-                  animationData={Developer} />
+                  animationData={Dev} />
                 <h2>Web | App Development</h2>
                 <p>
                   Ready to <b>Captivate</b> your desired audience?
