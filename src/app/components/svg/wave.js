@@ -3,7 +3,6 @@ import * as React from "react";
 const Wave = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="waving-hand"
     width="20"
     height="20"
     fill="none"
