@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Magnetic2 from "./magnetic2";
 import Lottie from "lottie-react";
-import { useLottie } from 'lottie-react';
 import Email from "@/app/assets/Email.json";
 import Facebook from "@/app/assets/Facebook.json";
 import Github from "@/app/assets/Github.json";
@@ -10,9 +9,7 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
-function Contact() {
 const xRef = useRef();
-
   useEffect(() => {
     const animation = xRef.current;
 
@@ -32,7 +29,7 @@ const xRef = useRef();
       animation.removeEventListener("complete", onComplete);
     };
   }, []);
-        
+function Contact() {
   return (
     <div>
       <section className="home3">
