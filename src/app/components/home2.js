@@ -35,7 +35,7 @@ function Home2() {
             <h5>
              Case Studies
              <Lottie
-                  id="lottie"
+                  id="lottie3"
                   loop={true} 
                   animationData={Case} />
             </h5>
