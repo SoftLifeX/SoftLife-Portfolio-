@@ -68,7 +68,7 @@ function Contactform() {
          </span>
                   <br /> <br /> Trust me we're good at what we do! :)
                 </motion.h2>
-                <div className="socials">
+                {/*<div className="socials">
                   <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
                     <Lottie
                   id="lottie3"
@@ -118,7 +118,7 @@ function Contactform() {
                   animationData={Github} 
                     />
                   </a>
-                </div>
+                </div>*/}
                 <Link href="/" className="btn4">
                   HomePage
                 </Link>
