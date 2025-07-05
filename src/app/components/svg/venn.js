@@ -30,7 +30,7 @@ const VennDiagram = (props) => (
         
         {/* Bottom text */}
         <circle id="vennline" cx="120" cy="360" r="3" fill="" />
-        <text id="venntext" x="200" y="370" textAnchor="middle" fill="" fontSize="12">FIND THE OVERLAP</text>
+        <text id="venntext" x="200" y="360" textAnchor="middle" fill="" fontSize="12">FIND THE OVERLAP</text>
       </svg>
 );
 
