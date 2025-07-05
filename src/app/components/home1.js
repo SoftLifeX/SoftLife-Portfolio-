@@ -87,7 +87,7 @@ function Home1() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-    className="statusContainer">
+    className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
      
@@ -107,6 +107,7 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
            <motion.h2
+            className="scale"
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -134,7 +135,7 @@ function Home1() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-               className="hometext">
+               className="hometext scale">
                 an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
               <span className="scrolltext">
@@ -164,7 +165,7 @@ function Home1() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-         className="btnContainer">
+         className="btnContainer scale">
             <Magnetic2>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume
@@ -176,7 +177,7 @@ function Home1() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-         className="btnContainer2">
+         className="btnContainer2 scale">
             <Magnetic2>
             <Link href="/contact" className="btn2">
               Hire Me!
