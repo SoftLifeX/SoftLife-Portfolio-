@@ -127,7 +127,7 @@ function Home1() {
                     deleteSpeed={1000}
                     delaySpeed={1000}
                   />
-                </span>*
+                </span>
               </motion.h2>
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
