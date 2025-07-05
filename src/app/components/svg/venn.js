@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const VennDiagram = (props) => (
-      <svg width="" height="" viewBox="0 0 700 700">
+      <svg width="700" height="700" viewBox="0 0 700 700">
         {/* Circles */}
         <circle id="venncircle" cx="140" cy="140" r="100" stroke="" strokeWidth="1.5" fill="none" />
         <circle id="venncircle" cx="260" cy="140" r="100" stroke="" strokeWidth="1.5" fill="none" />
