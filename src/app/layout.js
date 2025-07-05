@@ -18,7 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'SoftLifeX • Software Engineer | Designer',
+  title: { 
+    default: 'SoftLifeX • Software Engineer | Designer',
+    template: "%s - SoftLifeX • Software Engineer | Designer"
+  },
   description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
   keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'Robinson Honour'],
   authors: [{ name: 'Daniel Daniel c' }],
