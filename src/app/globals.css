@@ -72,7 +72,7 @@
 
 [data-theme="dark"] {
   --base-color: black;
-  --text-color: white;
+  --text-color: #E2DFD2;
   --secondary-text: gray;
   --tertiary-text: white;
   --primary-color: transparent;
