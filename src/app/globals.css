@@ -410,8 +410,7 @@ section {
 
 .navbar {
   position: fixed;
-  left: 0;
-  right: 0;
+  left: 50%;
   top: 1.3rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
@@ -427,7 +426,7 @@ section {
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   background-color: transparent;
-     backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   }
 
 .navbar ul li {
@@ -481,10 +480,10 @@ section {
 }
 
 .stickymenuButton{
-  padding: 0.3rem;
   border-radius: 50%;
   background-color: var(--text-color);
   scale: 1.6;
+  padding: 0.2rem
 }
 
 
@@ -1903,8 +1902,7 @@ form textarea {
   .stickymenuButton>span {
     background-color: var(--base-color);
     transition: 0.5s;
-    width: 100%
-    padding: 0.2rem
+    width: 90%
   }
   
 
