@@ -19,7 +19,7 @@ function Contact() {
         <div className="contact">
           <div className="container">
             <h1 data-scroll data-scroll-speed={0.1}>
-              Ready to elevate your brand?
+              Let's Collaborate 
             </h1>
             <Magnetic2>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
