@@ -1374,6 +1374,19 @@ outline: none;
   display: block;
 }
 
+#venncircle{
+  stroke: var(--text-color);
+}
+#vennmid{
+  fill: var(--text-color);
+}
+#vennline{
+  fill: var(--text-color);
+}
+#venntext{
+  fill: var(--text-color);
+}
+
 .about-col-1 h1 {
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
