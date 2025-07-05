@@ -7,6 +7,8 @@ import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2"
 import ArrowIcon from "./svg/arrow"
+import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
 
@@ -72,7 +74,23 @@ function Home1() {
 
   const isInView = useInView;
   
-  
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    if (textRef.current) {
+      gsap.to(text.current, {
+        duration: 3,
+        scrambleText: {
+          text: "I'm Daniel c. Daniels. \n Software Engineer.",
+          chars: "私はダニエル・C・ダニエルです。ソフトウェアエンジニアです",
+          revealDelay: 0.5,
+          tweenLength: false,
+        },
+        ease: "power2.inOut",
+      });
+    }
+  }, []);
+    
   return (
     <div>
       <section className="home1">
@@ -114,7 +132,8 @@ function Home1() {
                 <span className="waving-hand">
                 👋🏼
                 </span>, 
-                <span className="typed">
+                <span ref={textRef} />
+      {/* <span className="typed">
                   <Typewriter
                     words={[
                       " I'm Daniel c. Daniels. \n Software Engineer.",
@@ -125,7 +144,7 @@ function Home1() {
                     deleteSpeed={1000}
                     delaySpeed={1000}
                   />
-                </span>
+                </span>*/}
               </motion.h2>
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
@@ -135,18 +154,6 @@ function Home1() {
                className="hometext">
                 an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
-              {/*<span className="slideUp" id="slide1">
-                  <span>a Content-Creator 📷 🤳🏼</span>
-                </span>
-                <span className="slideUp" id="slide2">
-                  <span>a Lover of the Arts 🎨 🍷</span>
-                </span>
-                <span className="slideUp" id="slide3">
-                  <span>a bit of a Gamer 🎮</span>
-                </span>
-                <span className="slideUp" id="slide4">
-                  <span>a Travel Enthusiast ✈️ 🌍</span>
-                </span>*/}
               <span className="scrolltext">
                 {ITEMS.map((el, i) => (
                     <SectionHeroHeadingSpan key={i} word={el} isActive={currentWord === i} shouldHide={prevWord === i} />
