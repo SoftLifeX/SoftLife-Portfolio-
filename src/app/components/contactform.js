@@ -51,7 +51,7 @@ function Contactform() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
-              Let's collaborate
+              It's time to level up!
             </motion.h1>
             <div className="row">
               <div className="contact-left">
@@ -66,9 +66,9 @@ function Contactform() {
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-                  <br /> <br /> Trust me we're good at what we do! :)
+                  <br /> <br /> Trust me we're good at what we do :)
                 </motion.h2>
-                {/*<div className="socials">
+                <div className="socials">
                   <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
                     <Lottie
                   id="lottie3"
@@ -118,7 +118,7 @@ function Contactform() {
                   animationData={Github} 
                     />
                   </a>
-                </div>*/}
+                </div>
                 <Link href="/" className="btn4">
                   HomePage
                 </Link>
