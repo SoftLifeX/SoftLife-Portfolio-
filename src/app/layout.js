@@ -18,63 +18,67 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  /*icons: {
-    apple: '/apple-icon.png',
-  },*/
-  metadataBase: new URL('https://softlife-dev.vercel.app/'),
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-US': '/en-US',
-      'de-DE': '/de-DE',
-    },
+  title: 'SoftLifeX • Software Engineer | Designer',
+  description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
+  keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'Robinson Honour'],
+  authors: [{ name: 'Daniel Daniel c' }],
+  creator: 'SoftlifeX',
+  publisher: 'SoftlifeX',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://softlifex.vercel.app',
+    siteName: 'soft',
+    title: 'SoftLifeX • Software Engineer | Designer',
+    description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
+    /*images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Robinson Honour - Creative Software Engineer',
+      },
+    ],*/
   },
   twitter: {
     card: 'summary_large_image',
-    title: {
-    default: "Daniel Daniels • Designer & Developer",
-    template: "%s - Daniel Daniels • Designer & Developer",
-  },
-  description: "An award-winning Full-stack | Mobile Software engineer and designer specialized in React, Motion design, Typescript and Next js with expertise in Web Development, ui/ux design, App Development",
-  },
-  openGraph: {
-    title: {
-    default: "Daniel Daniels • Designer & Developer",
-    template: "%s - Daniel Daniels • Designer & Developer",
-  },
-  description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  url: "https://softlife-dev.vercel.app/",
-    siteName: "Daniel Daniels",
-    locale: 'en_US',
-    type: 'website',
+    title: 'SoftLifeX • Software Engineer | Designer',
+    description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
+    creator: '@softlifeX',
   },
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
   },
-  title: {
-    default: "Daniel Daniels • Designer & Developer",
-    template: "%s - Daniel Daniels • Designer & Developer",
+  verification: {
+    google: 'your-google-verification-code',
   },
-  description: "An award-winning, detail-oriented Full-stack Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniels', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel', 'software engineer', 'coding', 'TypeScript', 'Javascript'],
-  authors: [{ name: 'Daniel Daniels' }],
-  creator: 'Daniel Daniels',
-  publisher: 'Daniel Daniels',
-  url: "https://softlife-dev.vercel.app/",
-  //image: "https://devalexdgreat.vercel.app/favicon.png",
-  siteName: "Daniel Daniels",
-  type: "website"
+  themeColor: '#6f1cd7',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'SoftLifeX',
+  },
 };
+}
+  
 
 export default function RootLayout({ children }) {
   return (
