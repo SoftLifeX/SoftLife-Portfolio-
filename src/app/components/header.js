@@ -220,13 +220,13 @@ function Header() {
 						xmlns="http://www.w3.org/2000/svg"
 						className="themesvg"
 					>
-						<m.path
+	                                        {/*<m.path
 							variants={shineVariant}
 							d={moonPath}
 							className="shinePath"
 							initial="hidden"
 							animate={theme === "dark" ? "visible" : "hidden"}
-						/>
+						/>*/}
 
 						<m.g
 							variants={raysVariants}
@@ -258,8 +258,8 @@ function Header() {
 								theme === "dark"
 									? {
 											d: moonPath,
-											rotate: -360,
-											scale: 2,
+											rotate: 0,
+											scale: 1.6,
 											stroke: "DarkOrange",
 											fill: "DarkOrange",
 											fillOpacity: 0.5,
@@ -268,7 +268,7 @@ function Header() {
 										}
 									: {
 											d: sunPath,
-											rotate: 0,
+											rotate: 360,
 											stroke: "yellow",
 											fill: "yellow",
 											fillOpacity: 0.5,
