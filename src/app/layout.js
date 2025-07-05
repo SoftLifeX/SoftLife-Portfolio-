@@ -32,19 +32,19 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
-    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    default: "Daniel Daniels • Designer & Developer",
+    template: "%s - Daniel Daniels • Designer & Developer",
   },
   description: "An award-winning Full-stack | Mobile Software engineer and designer specialized in React, Motion design, Typescript and Next js with expertise in Web Development, ui/ux design, App Development",
   },
   openGraph: {
     title: {
-    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
-    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    default: "Daniel Daniels • Designer & Developer",
+    template: "%s - Daniel Daniels • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Front-end Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
   url: "https://softlife-dev.vercel.app/",
-    siteName: "SoftLife Dev",
+    siteName: "Daniel Daniels",
     locale: 'en_US',
     type: 'website',
   },
@@ -62,17 +62,17 @@ export const metadata = {
     },
   },
   title: {
-    default: "SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
-    template: "%s - SoftLife Dev | Daniel Daniel Chimbu-okaaomee • Designer & Developer",
+    default: "Daniel Daniels • Designer & Developer",
+    template: "%s - Daniel Daniels • Designer & Developer",
   },
   description: "An award-winning, detail-oriented Full-stack Software developer specialized in React, Motion design and Next js with expertise in Web Development, ui/ux design, App Development",
-  keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel', 'software engineer', 'coding', 'TypeScript', 'Javascript'],
-  authors: [{ name: 'Daniel Daniel Chimbu-okaaomee' }],
-  creator: 'SoftLife Dev',
-  publisher: 'SoftLife Dev',
+  keywords: ['Daniel Daniel Chimbu-okaaomee', 'Daniel Daniels', 'Daniel Daniel c.', 'Software developer', 'Web Development', 'App Development', 'Front-end', 'Softlife Dev', 'award-winning',  'React', 'Next js', 'Motion design', 'Daniel c. Daniel', 'software engineer', 'coding', 'TypeScript', 'Javascript'],
+  authors: [{ name: 'Daniel Daniels' }],
+  creator: 'Daniel Daniels',
+  publisher: 'Daniel Daniels',
   url: "https://softlife-dev.vercel.app/",
   //image: "https://devalexdgreat.vercel.app/favicon.png",
-  siteName: "SoftLife Dev",
+  siteName: "Daniel Daniels",
   type: "website"
 };
 
