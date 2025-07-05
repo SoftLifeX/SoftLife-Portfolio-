@@ -74,12 +74,12 @@
   --base-color: black;
   --text-color: #E2DFD2;
   --secondary-text: gray;
-  --tertiary-text: white;
+  --tertiary-text: #E2DFD2;
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
   --tertiary-color: white;
-  --accent-color2: white;
+  --accent-color2: #E2DFD2;
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
