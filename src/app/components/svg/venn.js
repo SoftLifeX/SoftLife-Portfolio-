@@ -8,7 +8,7 @@ const VennDiagram = (props) => (
         <circle id="venncircle" cx="200" cy="240" r="100" stroke="" strokeWidth="1.5" fill="none" />
 
         {/* Overlap area - approximate with path or polygon */}
-        <path
+      {/*<path
           id="vennmid" 
           d="M180 165
              A30 30 0 0 1 220 165
@@ -17,7 +17,7 @@ const VennDiagram = (props) => (
              Z"
           fill=""
           opacity="1"
-        />
+        />*/}
 
         {/* Text - BRAND */}
         <text id="venntext" x="100" y="130" textAnchor="middle" fill="" fontSize="14" fontWeight="bold">BRANDS</text>
