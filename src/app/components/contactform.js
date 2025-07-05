@@ -69,9 +69,9 @@ function Contactform() {
                   <br /> <br /> Trust me we're good at what we do :)
                 </motion.h2>
                 <div className="socials">
-                  <a href="mailto:softlife.dev001@gmail.com" target="_blank" data-title="Email Me">
+                  <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" data-title="Email Me">
                     <Lottie
-                  id="lottie3"
+                  id="lottie3" 
                   loop={false} 
                   animationData={Email} 
                     />
