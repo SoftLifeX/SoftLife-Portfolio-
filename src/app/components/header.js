@@ -179,7 +179,7 @@ function Header() {
   return (
     <div>
       <header className="top">
-         <a href="/" className={`logo ${scroll ? "stickylogo" : ""}`}>
+        {/* <a href="/" className={`logo ${scroll ? "stickylogo" : ""}`}>
           <span>&lt;</span>
           <span>S</span>
           <span>o</span>
@@ -197,7 +197,7 @@ function Header() {
           <span>‎</span>
           <span>/</span>
           <span>&gt;</span>
-        </a>
+        </a>*/}
      
          <span
           ref={buttonRef}
