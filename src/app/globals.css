@@ -49,7 +49,7 @@
 }
 
 :root {
-  --base-color: white;
+  --base-color: #E2DFD2;
   --text-color: #000;
   --secondary-text: gray;
   --tertiary-text: rgba(0, 0, 0, 0.924);
@@ -2012,7 +2012,7 @@ form textarea {
   .navbar a::after {
     content: '';
     width: 0;
-    height: 0.15rem;
+    height: 0.10rem;
     background: var(--secondary-text);
     position: absolute;
     left: 50%;
@@ -2039,7 +2039,7 @@ form textarea {
   .navbar a.active::after {
     content: '';
     width: 100%;
-    height: 0.15rem;
+    height: 0.10rem;
     background: var(--base-color);
     position: absolute;
     left: 0;
@@ -2193,7 +2193,7 @@ form textarea {
   .navbar a::after {
     content: '';
     width: 0%;
-    height: 0.15rem;
+    height: 0.10rem;
     background: var(--secondary-text);
     position: absolute;
     left: 0;
@@ -2219,7 +2219,7 @@ form textarea {
   .navbar a.active::after {
     content: '';
     width: 100%;
-    height: 0.15rem;
+    height: 0.10rem;
     background: var(--base-color);
     position: absolute;
     left: 0;
