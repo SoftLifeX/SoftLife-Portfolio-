@@ -528,7 +528,7 @@ h1 {
   color: var(--text-color);
   font-size: 5rem;
   text-align: left;
-  margin: 2.5rem;
+  margin: 2rem;
   text-decoration: none;
   cursor: text;
   font-family: 'chillen', serif;
@@ -1212,7 +1212,6 @@ outline: none;
   background: rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
   box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--text-color);
 }
 
  .layer {
