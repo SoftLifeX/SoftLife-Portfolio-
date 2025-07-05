@@ -84,7 +84,7 @@
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
-  --theme-switch: rgba(0, 0, 0, 0.16);
+  --theme-switch: #E2DFD2;
 }
 
 #theme-switch {
@@ -99,7 +99,7 @@
   height: 2.1rem;
   padding: 0;
   border-radius: 50%;
-  background-color: var(--theme-switch);
+  border: 0.06rem solid var(--theme-switch);
 }
 
 
@@ -283,7 +283,7 @@ section {
   }
 
 .top {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
