@@ -101,6 +101,26 @@
   border: 0.06rem solid var(--border-color);
 }
 
+.themesvg{
+  position: relative;
+}
+
+.themeg{
+  stroke: yellow;
+    stroke-width: 6;
+}
+
+.shinePath{
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke: #FFBF00;
+}
+
+.rayPath{
+  transform-origin: center;
+}
+
 * {
   margin: 0;
   padding: 0;
