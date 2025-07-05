@@ -42,11 +42,13 @@ function Contactform() {
         <div className="contact">
           <div className="container">
             <motion.h5
+             className="scale"
              initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>You've scrolled this far!</motion.h5>
             <motion.h1 
+             className="scale"
              initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
@@ -56,6 +58,7 @@ function Contactform() {
             <div className="row">
               <div className="contact-left">
                 <motion.h2
+                 className="scale"
                 initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
