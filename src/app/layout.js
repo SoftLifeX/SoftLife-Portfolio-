@@ -23,7 +23,7 @@ export const metadata = {
     template: "%s - SoftLifeX • Software Engineer | Designer"
   },
   description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
-  keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'Robinson Honour'],
+  keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'softlifex'],
   authors: [{ name: 'Daniel Daniel c' }],
   creator: 'SoftlifeX',
   publisher: 'SoftlifeX',
@@ -80,7 +80,6 @@ export const metadata = {
     title: 'SoftLifeX',
   },
 };
-}
   
 
 export default function RootLayout({ children }) {
