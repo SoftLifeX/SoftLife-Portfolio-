@@ -61,6 +61,7 @@
   --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
   --text-color2: #000;
   --palette-color: #006400;
+  --theme-switch: transparent;
  
   --grid-template-columns: 10% 1fr 1fr 1fr 10%;
     --grid-container-columns: 2/5;
@@ -83,13 +84,14 @@
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
+  --theme-switch: rgba(0, 0, 0, 0.16);
 }
 
 #theme-switch {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
    top: 1.7rem;
   right: 5svw;
   cursor: pointer;
@@ -97,14 +99,14 @@
   height: 2.1rem;
   padding: 0;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--theme-switch);
 }
 
 
 
 .themeg{
   stroke: yellow;
-    stroke-width: 6;
+    stroke-width: 5;
 }
 
 .rayPath{
