@@ -135,7 +135,7 @@ function Header() {
 		visible: {
 			pathLength: 1,
 			opacity: 1,
-			scale: 1,
+			scale: 0.85,
 			transition: {
 				duration: 0.5,
 				ease: "easeOut",
