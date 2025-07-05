@@ -15,6 +15,7 @@ function Craft1() {
         <div className="portfolio">
           <div className="container">
             <motion.h1
+        className="scale"
        initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
