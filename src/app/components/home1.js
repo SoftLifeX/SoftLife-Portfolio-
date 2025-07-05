@@ -7,7 +7,7 @@ import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic2 from "./magnetic2"
 import ArrowIcon from "./svg/arrow"
-import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin';
+
 
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
@@ -74,22 +74,6 @@ function Home1() {
 
   const isInView = useInView;
   
-  const textRef = useRef(null);
-
-  useEffect(() => {
-    if (textRef.current) {
-      gsap.to(text.current, {
-        duration: 3,
-        scrambleText: {
-          text: "I'm Daniel c. Daniels. \n Software Engineer.",
-          chars: "私はダニエル・C・ダニエルです。ソフトウェアエンジニアです",
-          revealDelay: 0.5,
-          tweenLength: false,
-        },
-        ease: "power2.inOut",
-      });
-    }
-  }, []);
     
   return (
     <div>
@@ -132,8 +116,7 @@ function Home1() {
                 <span className="waving-hand">
                 👋🏼
                 </span>, 
-                <span ref={textRef} />
-      {/* <span className="typed">
+                <span className="typed">
                   <Typewriter
                     words={[
                       " I'm Daniel c. Daniels. \n Software Engineer.",
@@ -144,7 +127,7 @@ function Home1() {
                     deleteSpeed={1000}
                     delaySpeed={1000}
                   />
-                </span>*/}
+                </span>*
               </motion.h2>
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
