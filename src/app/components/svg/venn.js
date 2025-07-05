@@ -1,6 +1,4 @@
-
-
-import React from 'react';
+import * as React from "react";
 
 const VennDiagram = (props) => (
       <svg width="400" height="400" viewBox="0 0 400 400">
