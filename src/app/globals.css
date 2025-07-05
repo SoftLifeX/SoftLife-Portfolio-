@@ -483,7 +483,7 @@ section {
   border-radius: 50%;
   background-color: var(--text-color);
   scale: 1.6;
-  padding: 0.2rem
+  padding: 0.3rem
 }
 
 
@@ -1902,7 +1902,7 @@ form textarea {
   .stickymenuButton>span {
     background-color: var(--base-color);
     transition: 0.5s;
-    width: 90%
+    width: 100%
   }
   
 
