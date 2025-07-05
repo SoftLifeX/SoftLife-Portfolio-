@@ -516,7 +516,7 @@ h2 {
 .marker-highlighter::after {
   content: '';
   width: 100%;
-  height: 0.06rem;
+  height: 0.05rem;
   background: var(--secondary-text);
   position: absolute;
   bottom: -0.37rem;
@@ -1007,7 +1007,7 @@ outline: none;
 
 .homepage h2 {
   font-family: 'time', serif;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -1897,13 +1897,14 @@ form textarea {
     height: 0.10rem;
     background-color: var(--text-color);
     transition: 0.5s;
-    width: 80%
+    width: 100%
   }
 
   .stickymenuButton>span {
     background-color: var(--base-color);
     transition: 0.5s;
-    width: 80%
+    width: 100%
+    padding: 0.2rem
   }
   
 
