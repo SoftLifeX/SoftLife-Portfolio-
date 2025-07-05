@@ -1,9 +1,8 @@
-'use client';
+
 
 import React from 'react';
 
-const VennDiagram = () => {
-  return (
+const VennDiagram = (props) => {
       <svg width="400" height="400" viewBox="0 0 400 400">
         {/* Circles */}
         <circle id="venncircle" cx="140" cy="140" r="100" stroke="" strokeWidth="1.5" fill="none" />
@@ -35,7 +34,6 @@ const VennDiagram = () => {
         <circle id="vennline" cx="120" cy="360" r="3" fill="" />
         <text id="venntext" x="200" y="370" textAnchor="middle" fill="" fontSize="12">FIND THE OVERLAP</text>
       </svg>
-  );
 };
 
 export default VennDiagram;
