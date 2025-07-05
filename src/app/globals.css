@@ -1955,7 +1955,7 @@ form textarea {
   }
 
   .navbar {
-    position: absolute;
+    position: fixed;
     right: 2rem;
     width: 15rem;
     height: 17.7rem;
@@ -2133,7 +2133,7 @@ form textarea {
   .navbar {
     height: 20rem;
     width: unset;
-    position: absolute;
+    position: fixed;
     left: 2rem;
     background: var(--tertiary-text);
     overflow: hidden;
