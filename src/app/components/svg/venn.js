@@ -1,11 +1,11 @@
 import * as React from "react";
 
 const VennDiagram = (props) => (
-      <svg width="400" height="400" viewBox="0 0 400 400">
+      <svg width="" height="" viewBox="0 0 700 700">
         {/* Circles */}
-        <circle id="venncircle" cx="140" cy="140" r="150" stroke="" strokeWidth="1.5" fill="none" />
-        <circle id="venncircle" cx="260" cy="140" r="150" stroke="" strokeWidth="1.5" fill="none" />
-        <circle id="venncircle" cx="200" cy="240" r="150" stroke="" strokeWidth="1.5" fill="none" />
+        <circle id="venncircle" cx="182" cy="182" r="130" stroke="" strokeWidth="1.5" fill="none" />
+        <circle id="venncircle" cx="338" cy="182" r="130" stroke="" strokeWidth="1.5" fill="none" />
+        <circle id="venncircle" cx="260" cy="312" r="130" stroke="" strokeWidth="1.5" fill="none" />
 
         {/* Overlap area - approximate with path or polygon */}
         <path
