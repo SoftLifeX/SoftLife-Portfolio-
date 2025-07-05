@@ -1368,8 +1368,7 @@ outline: none;
 }
 
 .aboutImg svg {
-  width: 37.5rem;
-  height: 37.5rem;
+  scale: 1.5;
   margin: auto;
   display: block;
   font-family: 'time', serif;
@@ -1380,6 +1379,7 @@ outline: none;
 }
 #vennmid{
   fill: var(--text-color);
+  scale: 2;
 }
 #vennline{
   fill: var(--text-color);
