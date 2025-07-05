@@ -93,28 +93,18 @@
    top: 1.7rem;
   right: 5svw;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 2.1rem;
+  height: 2.1rem;
   padding: 0;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.16);
-  border: 0.06rem solid var(--border-color);
+  background-color: transparent;
 }
 
-.themesvg{
-  position: relative;
-}
+
 
 .themeg{
   stroke: yellow;
     stroke-width: 6;
-}
-
-.shinePath{
-  position: absolute;
-  top: 0;
-  left: 0;
-  stroke: #FFBF00;
 }
 
 .rayPath{
