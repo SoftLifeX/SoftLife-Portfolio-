@@ -1372,6 +1372,7 @@ outline: none;
   height: 18rem;
   margin: auto;
   display: block;
+  font-family: 'time', serif;
 }
 
 #venncircle{
@@ -1385,6 +1386,7 @@ outline: none;
 }
 #venntext{
   fill: var(--text-color);
+  font-family: 'time', serif;
 }
 
 .about-col-1 h1 {
