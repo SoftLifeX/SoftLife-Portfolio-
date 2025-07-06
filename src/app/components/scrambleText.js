@@ -68,7 +68,7 @@ const ScrambleText = ({ text, speed = 5 }) => {
   }, [text, speed]);
 
   return (
-    <h1
+    <span 
       ref={textRef}
       id='scramble'
     />
