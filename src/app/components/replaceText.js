@@ -2,10 +2,25 @@
 
 import { useEffect, useState } from 'react';
 
-const ReplaceText = ({ text, speed = 60, scrambleChar = '#' }) => {
+const ReplaceText = ({
+  text,
+  speed = 60,
+  scrambleChars = ['#', '%', '*', '&', '?', '+', '!', '$', '~'],
+}) => {
   const [progress, setProgress] = useState(0);
+  const [randomScramble, setRandomScramble] = useState([]);
 
   useEffect(() => {
+    // Generate a random scramble character for each non-linebreak character
+    const generated = text
+      .split('')
+      .map((char) =>
+        char === '\n'
+          ? null
+          : scrambleChars[Math.floor(Math.random() * scrambleChars.length)]
+      );
+    setRandomScramble(generated);
+
     let frame = 0;
     const totalChars = text.replace(/\n/g, '').length;
     const interval = setInterval(() => {
@@ -20,7 +35,7 @@ const ReplaceText = ({ text, speed = 60, scrambleChar = '#' }) => {
     }, speed);
 
     return () => clearInterval(interval);
-  }, [text, speed]);
+  }, [text, speed, scrambleChars]);
 
   const renderText = () => {
     let count = 0;
@@ -28,7 +43,7 @@ const ReplaceText = ({ text, speed = 60, scrambleChar = '#' }) => {
       if (char === '\n') return <br key={i} />;
 
       const showReal = count < progress;
-      const displayChar = showReal ? char : scrambleChar;
+      const displayChar = showReal ? char : randomScramble[i] || ' ';
       count++;
 
       return (
@@ -43,7 +58,7 @@ const ReplaceText = ({ text, speed = 60, scrambleChar = '#' }) => {
 
   return (
     <div
-      id='scramble'
+      id='replace'
     >
       {renderText()}
     </div>
