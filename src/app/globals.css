@@ -1046,6 +1046,12 @@ outline: none;
   animation-iteration-count: infinite;
 }
 
+#scramble{
+  width: 100%;
+  white-space: pre-line;
+  overflow: hidden;
+}
+
 @keyframes cursor {
   50% {
     border-color: transparent;
