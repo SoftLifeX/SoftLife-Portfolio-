@@ -1047,6 +1047,7 @@ outline: none;
 }
 
 #scramble{
+  color: var(--text-color);
   white-space: pre-wrap;
 }
 
@@ -1101,7 +1102,7 @@ outline: none;
 
 #helloText:after {
   content: " ";
-  animation: animate 7.5s ease infinite;
+  animation: animate 7.5s ease-in infinite;
 }
 
 @keyframes animate {
