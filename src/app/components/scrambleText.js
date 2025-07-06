@@ -7,7 +7,7 @@ const ScrambleText = ({ text, duration = 2 }) => {
   const textRef = useRef();
 
   useEffect(() => {
-    const chars = 'あいうえお かきくけこ さしすせそ たちつてと なにぬねの はひふへほ まみむめも やゆよ らりるれろ わをん';
+    const chars = 'あいうえお かきくけこ さしすせそ たちつてと なにぬねの はひふへほ';
     let frame = 0;
     let queue = [];
     const el = textRef.current;
@@ -52,7 +52,7 @@ const ScrambleText = ({ text, duration = 2 }) => {
   }, [text]);
 
   return (
-    <h2 ref={textRef} style={{ whiteSpace: 'pre' }} />
+    <h2 id='scramble' ref={textRef} />
   );
 };
 
