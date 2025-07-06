@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Magnetic2 from "./magnetic2";
+import Magnetic from "./magnetic";
 import Lottie from "lottie-react";
 import { useLottie } from "lottie-react";
 import Email from "@/app/assets/Email.json";
@@ -21,16 +21,16 @@ function Contact() {
             <h1 data-scroll data-scroll-speed={0.1}>
               Let's Collaborate 
             </h1>
-            <Magnetic2>
+            <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
               daniel.c.daniel.dev@gmail.com
             </a>
-            </Magnetic2>
-            <Magnetic2>
+            </Magnetic>
+            <Magnetic>
             <a href="tel:+234 813 933 1585" target="_blank" className="btn2">
               +234 813 933 1585
             </a>
-            </Magnetic2>
+            </Magnetic>
           </div>
           <div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
