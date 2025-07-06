@@ -7,7 +7,7 @@ const ScrambleText = ({ text, duration = 2 }) => {
   const textRef = useRef();
 
   useEffect(() => {
-    const chars = 'あいうえお かきくけこ さしすせそ たちつてと なにぬねの はひふへほ';
+    const chars = ' あいうえお かきくけこ さしすせそ たちつてと ';
     let frame = 0;
     let queue = [];
     const el = textRef.current;
