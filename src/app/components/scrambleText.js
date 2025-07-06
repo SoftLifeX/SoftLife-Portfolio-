@@ -68,7 +68,7 @@ const ScrambleText = ({ text, speed = 4, duration = 15 }) => {
   }, [text, speed, duration]);
 
   return (
-    <span
+    <div
       ref={textRef}
       id='scramble'
       dangerouslySetInnerHTML={{ __html: html }}
