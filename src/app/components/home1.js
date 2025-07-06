@@ -120,12 +120,12 @@ function Home1() {
                 </span>, 
                 <span>
                  <ScrambleText 
-                text={` I'm Daniel c. Daniel. \n Software Engineer.`}
+                text={" I'm Daniel c. Daniel. \n Software Engineer."}
                 speed={4} 
                 duration={10} />
                 </span>
 {/* <ReplaceText
-                 text={` I'm Daniel c. Daniel. \n Software Engineer.`}
+                 text={" I'm Daniel c. Daniel. \n Software Engineer."}
                  speed={80}
                  scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
               />*/}
