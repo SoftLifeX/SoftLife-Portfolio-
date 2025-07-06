@@ -75,7 +75,7 @@ const ScrambleText = ({
   }, [text, speed, lineDelay]);
 
   return (
-    <div
+    <span
       ref={textRef}
       id='scramble'
     />
