@@ -1,0 +1,53 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
+const ReplaceText = ({ text, speed = 60, scrambleChar = '#' }) => {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const totalChars = text.replace(/\n/g, '').length;
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= totalChars) {
+          clearInterval(interval);
+          return prev;
+        }
+        return prev + 1;
+      });
+      frame++;
+    }, speed);
+
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  const renderText = () => {
+    let count = 0;
+    return text.split('').map((char, i) => {
+      if (char === '\n') return <br key={i} />;
+
+      const showReal = count < progress;
+      const displayChar = showReal ? char : scrambleChar;
+      count++;
+
+      return (
+        <span
+          key={i}
+          className={`faketext ${ showReal ? "show" : "hide"}`}>
+          {displayChar}
+        </span>
+      );
+    });
+  };
+
+  return (
+    <div
+      id='scramble'
+    >
+      {renderText()}
+    </div>
+  );
+};
+
+export default ReplaceText;
