@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-const ScrambleText = ({ text, speed = 5 }) => {
+const ScrambleText = ({ text, speed = 4 }) => {
   const textRef = useRef();
 
   useEffect(() => {
