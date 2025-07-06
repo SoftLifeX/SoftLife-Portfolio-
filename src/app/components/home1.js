@@ -119,7 +119,7 @@ function Home1() {
                 </span>, 
                 <span>
                  <ScrambleText 
-                text={"I'm Daniel c. Daniel. \n Software Engineer."}
+                text={" I'm Daniel c. Daniel. \n Software Engineer."}
                 />
                 </span>
               </motion.h2>
