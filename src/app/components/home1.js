@@ -126,7 +126,7 @@ function Home1() {
                 </span>
              <ReplaceText
                  text={` I'm Daniel c. Daniel. \n Software Engineer.`}
-                 speed={50}
+                 speed={80}
                  scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
               />
               </motion.h2>
