@@ -120,10 +120,15 @@ function Home1() {
                 </span>, 
                 <span>
                  <ScrambleText 
-                text={" I'm Daniel c. Daniel. \n Software Engineer."}
-                />
+                text={` I'm Daniel c. Daniel. \n Software Engineer.`}
+                speed={5} 
+                duration={20} />
                 </span>
-                    <ReplaceText text={" I'm Daniel c. Daniel. \n Software Engineer."} speed={40} scrambleChar="か" />
+             <ReplaceText
+                 text={` I'm Daniel c. Daniel. \n Software Engineer.`}
+                 speed={50}
+                 scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
+              />
               </motion.h2>
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
