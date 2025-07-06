@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
 import Link from "next/link";
-import Magnetic2 from './magnetic2';
+import Magnetic from './magnetic';
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { motion, useInView } from "framer-motion";
@@ -69,11 +69,11 @@ function Home2() {
                 </div>
               </div>
              </div>
-            <Magnetic2>
+            <Magnetic>
             <Link href="/craft" className="btn2">
               Intrigued?
             </Link>
-            </Magnetic2>
+            </Magnetic>
 
             <p className="fakemargin">margin</p>
           </div>
