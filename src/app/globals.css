@@ -1047,7 +1047,7 @@ outline: none;
 }
 
 #scramble{
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 #replace{
