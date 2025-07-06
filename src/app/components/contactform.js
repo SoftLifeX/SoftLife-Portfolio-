@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Link from "next/link";
+import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import { motion, useInView } from "framer-motion";
 import Lottie from "lottie-react";
 import Email from "@/app/assets/Email.json";
@@ -63,12 +64,18 @@ function Contactform() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
-                  Connect with me on any of these online spaces
-          <span> 
-          <div className="dot"></div>
-         <div className="dot"></div>
-        <div className="dot"></div>
-         </span>
+                <span className="typed">
+                  <Typewriter
+                    words={[
+                      " Let's connect, \n I'm available on any of these virtual platforms! "
+                    ]}
+                    cursor
+                    cursorStyle=""
+                    typeSpeed={90}
+                    deleteSpeed={1000}
+                    delaySpeed={1000}
+                  />
+                </span>
                   <br /> <br /> Trust me we're good at what we do :)
                 </motion.h2>
                 <div className="social-icons">
