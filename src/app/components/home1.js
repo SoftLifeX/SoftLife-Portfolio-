@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
+import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 
 
@@ -122,6 +123,7 @@ function Home1() {
                 text={" I'm Daniel c. Daniel. \n Software Engineer."}
                 />
                 </span>
+                    <ReplaceText text={" I'm Daniel c. Daniel. \n Software Engineer."} speed={40} scrambleChar="か" />
               </motion.h2>
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
