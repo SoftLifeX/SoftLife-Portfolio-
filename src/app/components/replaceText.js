@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 const ReplaceText = ({
   text,
   speed = 60,
-  scrambleChars = ['#', '%', '*', '&', '?', '+', '!', '$', '~'],
+  scrambleChars = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ'],
 }) => {
   const [progress, setProgress] = useState(0);
   const [randomScramble, setRandomScramble] = useState([]);
