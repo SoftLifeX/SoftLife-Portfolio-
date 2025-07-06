@@ -121,8 +121,8 @@ function Home1() {
                 <span>
                  <ScrambleText 
                 text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
-                speed={4} 
-                duration={10} />
+                speed={2} 
+                lineDelay={20} />
                 </span>
 {/* <ReplaceText
                  text={" I'm Daniel c. Daniel. \n Software Engineer."}
