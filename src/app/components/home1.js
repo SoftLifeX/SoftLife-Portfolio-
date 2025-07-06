@@ -5,7 +5,8 @@ import { ScrollTrigger } from 'gsap/all';
 import { motion, useInView } from "framer-motion";
 import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
-import Magnetic2 from "./magnetic2"
+import Magnetic from "./magnetic"
+import ScrambleText from "./scrambleText"
 import ArrowIcon from "./svg/arrow"
 
 
@@ -120,7 +121,7 @@ function Home1() {
                 <span className="typed">
                   <Typewriter
                     words={[
-                      " I'm Daniel c. Daniel. \n Software Engineer.",
+                      " I'm Daniel c. Daniel. \n Software Engineer."
                     ]}
                     cursor
                     cursorStyle=""
@@ -128,6 +129,9 @@ function Home1() {
                     deleteSpeed={1000}
                     delaySpeed={1000}
                   />
+                 <ScrambleText 
+                text="I'm Daniel c. Daniel. \n Software Engineer."
+                />
                 </span>
               </motion.h2>
                <motion.p
@@ -166,11 +170,11 @@ function Home1() {
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
          className="btnContainer scale">
-            <Magnetic2>
+            <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume
                 </a>
-            </Magnetic2>
+            </Magnetic>
            </motion.div>
            <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -178,11 +182,11 @@ function Home1() {
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
          className="btnContainer2 scale">
-            <Magnetic2>
+            <Magnetic>
             <Link href="/contact" className="btn2">
               Hire Me!
             </Link>
-            </Magnetic2>
+            </Magnetic>
            </motion.div>
         </div>
       </section>
