@@ -1940,7 +1940,7 @@ form textarea {
   } 
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .homepage {
     padding: 1.3rem 5%;
   }
