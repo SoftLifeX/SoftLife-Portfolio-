@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 
-function Magnetic2({children}) {
+function Magnetic({children}) {
      const ref = useRef(null);
 
      const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -41,4 +41,4 @@ function Magnetic2({children}) {
   );
 }
 
-export default Magnetic2;
+export default Magnetic;
