@@ -1,31 +1,42 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-const ScrambleText = ({ text, speed = 4, duration = 15 }) => {
+const ScrambleText = ({
+  text,
+  speed = 2,           // speed per character
+  lineDelay = 20        // delay before each new line starts
+}) => {
   const textRef = useRef();
-  const [html, setHtml] = useState('');
 
   useEffect(() => {
-    const chars = ' あいうえお かきくけこ ';
-    const rawText = text.split('\n').join(' \n ');
-    const queue = [];
+    const chars = 'あいうえお かきくけこ';
     let frame = 0;
+    let queue = [];
+    const el = textRef.current;
 
-    for (let i = 0; i < rawText.length; i++) {
-      const char = rawText[i];
-      if (char === '\n') {
-        queue.push({ type: 'linebreak' });
-      } else {
-        const delay = i * speed;
+    const lines = text.split('\n');
+
+    let globalIndex = 0;
+
+    lines.forEach((line, lineIndex) => {
+      const baseDelay = lineIndex * lineDelay;
+
+      for (let i = 0; i < line.length; i++) {
         queue.push({
           type: 'char',
-          to: char,
-          start: delay,
-          end: delay + duration,
+          to: line[i],
+          start: baseDelay + i * speed,
+          end: baseDelay + i * speed + 10,
         });
+        globalIndex++;
       }
-    }
+
+      // Add a line break token
+      if (lineIndex < lines.length - 1) {
+        queue.push({ type: 'linebreak' });
+      }
+    });
 
     const update = () => {
       let complete = 0;
@@ -42,21 +53,17 @@ const ScrambleText = ({ text, speed = 4, duration = 15 }) => {
         const { to, start, end } = item;
 
         if (frame >= end) {
-          output.push(`<span class="char final">${to}</span>`);
+          output.push(`<span class="reveal">${to}</span>`);
           complete++;
         } else if (frame >= start) {
-          const randomChar = chars[Math.floor(Math.random() * chars.length)];
-          const progress = (frame - start) / (end - start);
-          const opacity = progress.toFixed(2);
-          output.push(
-            `<span class="char scramble" style="opacity:${opacity}">${randomChar}</span>`
-          );
+          const randChar = chars[Math.floor(Math.random() * chars.length)];
+          output.push(`<span class="scramble">${randChar}</span>`);
         } else {
-          output.push(`<span class="char"> </span>`);
+          output.push(`<span class="scramble"> </span>`);
         }
       }
 
-      setHtml(output.join(''));
+      el.innerHTML = output.join('');
 
       if (complete < queue.filter(i => i.type === 'char').length) {
         frame++;
@@ -65,13 +72,12 @@ const ScrambleText = ({ text, speed = 4, duration = 15 }) => {
     };
 
     update();
-  }, [text, speed, duration]);
+  }, [text, speed, lineDelay]);
 
   return (
-    <span
+    <div
       ref={textRef}
       id='scramble'
-      dangerouslySetInnerHTML={{ __html: html }}
     />
   );
 };
