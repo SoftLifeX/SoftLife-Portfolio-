@@ -1052,6 +1052,20 @@ outline: none;
   overflow: hidden;
 }
 
+.faketext{
+  display: inline-block;
+  opacity: 1;
+  transition: color 0.2s ease;
+}
+
+.faketext.show{
+  color: var(--text-color);
+}
+
+.faketext.hide{
+  color: #aaa;
+}
+
 @keyframes cursor {
   50% {
     border-color: transparent;
