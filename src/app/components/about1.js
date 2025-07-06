@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
-import Magnetic2 from "./magnetic2";
+import Magnetic from "./magnetic";
 import AboutIcon from "./svg/aboutIcon"
 import VennDiagram from "./svg/venn"
 import Lottie from "lottie-react";
@@ -60,11 +60,11 @@ function About1() {
 
               </p>
                     
-                <Magnetic2>
+                <Magnetic>
                 <Link href="/contact" className="btn2">
                   <i className="bx bxs-paper-plane"></i>Contact!
                 </Link>
-                </Magnetic2>
+                </Magnetic>
               </div>
             </div>
           </div>
