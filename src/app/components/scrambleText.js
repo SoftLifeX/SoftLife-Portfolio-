@@ -4,8 +4,9 @@ import { useEffect, useRef } from 'react';
 
 const ScrambleText = ({
   text,
-  speed = 2,           // speed per character
-  lineDelay = 20        // delay before each new line starts
+  speed = 2,             // Frames per character
+  lineDelay = 48,         // Default fixed delay (used if autoLineDelay = false)
+  autoLineDelay = false,  // Enable automatic delay per line
 }) => {
   const textRef = useRef();
 
@@ -16,11 +17,13 @@ const ScrambleText = ({
     const el = textRef.current;
 
     const lines = text.split('\n');
-
-    let globalIndex = 0;
+    let totalCharsBefore = 0;
 
     lines.forEach((line, lineIndex) => {
-      const baseDelay = lineIndex * lineDelay;
+      // Use automatic delay if enabled
+      const baseDelay = autoLineDelay
+        ? totalCharsBefore * speed
+        : lineIndex * lineDelay;
 
       for (let i = 0; i < line.length; i++) {
         queue.push({
@@ -29,10 +32,11 @@ const ScrambleText = ({
           start: baseDelay + i * speed,
           end: baseDelay + i * speed + 10,
         });
-        globalIndex++;
       }
 
-      // Add a line break token
+      totalCharsBefore += line.length;
+
+      // Add line break if not the last line
       if (lineIndex < lines.length - 1) {
         queue.push({ type: 'linebreak' });
       }
@@ -72,12 +76,12 @@ const ScrambleText = ({
     };
 
     update();
-  }, [text, speed, lineDelay]);
+  }, [text, speed, lineDelay, autoLineDelay]);
 
   return (
     <span
       ref={textRef}
-      id='scramble'
+      id='scrnble' 
     />
   );
 };
