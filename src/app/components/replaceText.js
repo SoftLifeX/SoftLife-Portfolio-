@@ -1,68 +1,86 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-const ReplaceText = ({
+const ScrambleRevealText = ({
   text,
-  speed = 90,
-  scrambleChars = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ'],
+  speed = 60,
+  scrambleChars =  ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ'],
 }) => {
-  const [progress, setProgress] = useState(0);
-  const [randomScramble, setRandomScramble] = useState([]);
+  const [rendered, setRendered] = useState('');
+  const scrambleRef = useRef([]);
+  const frame = useRef(0);
 
   useEffect(() => {
-    // Generate a random scramble character for each non-linebreak character
-    const generated = text
-      .split('')
-      .map((char) =>
-        char === '\n'
-          ? null
-          : scrambleChars[Math.floor(Math.random() * scrambleChars.length)]
-      );
-    setRandomScramble(generated);
+    const cleanedText = text.split('');
+    const totalChars = cleanedText.filter((c) => c !== '\n').length;
 
-    let frame = 0;
-    const totalChars = text.replace(/\n/g, '').length;
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= totalChars) {
-          clearInterval(interval);
-          return prev;
+    const buildQueue = () => {
+      const queue = [];
+      let index = 0;
+      for (let i = 0; i < cleanedText.length; i++) {
+        const char = cleanedText[i];
+        if (char === '\n') {
+          queue.push({ type: 'linebreak' });
+        } else {
+          const start = index * 2;
+          const end = start + 10 + Math.floor(Math.random() * 10);
+          queue.push({ type: 'char', to: char, start, end });
+          index++;
         }
-        return prev + 1;
-      });
-      frame++;
-    }, speed);
+      }
+      return queue;
+    };
 
-    return () => clearInterval(interval);
+    scrambleRef.current = buildQueue();
+
+    const update = () => {
+      const output = [];
+      let completed = 0;
+      let scrambleIndex = 0;
+
+      for (let i = 0; i < scrambleRef.current.length; i++) {
+        const item = scrambleRef.current[i];
+
+        if (item.type === 'linebreak') {
+          output.push('<br />');
+        } else {
+          const { start, end, to } = item;
+          if (frame.current >= end) {
+            output.push(`<span class="char reveal">${to}</span>`);
+            completed++;
+          } else if (frame.current >= start) {
+            const randChar =
+              scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+            output.push(
+              `<span class="char scramble">${randChar}</span>`
+            );
+          } else {
+            output.push('<span class="char scramble"> </span>');
+          }
+
+          scrambleIndex++;
+        }
+      }
+
+      setRendered(output.join(''));
+
+      if (completed < scrambleRef.current.filter(i => i.type === 'char').length) {
+        frame.current++;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
   }, [text, speed, scrambleChars]);
-
-  const renderText = () => {
-    let count = 0;
-    return text.split('').map((char, i) => {
-      if (char === '\n') return <br key={i} />;
-
-      const showReal = count < progress;
-      const displayChar = showReal ? char : randomScramble[i] || ' ';
-      count++;
-
-      return (
-        <span
-          key={i}
-          className={`faketext ${ showReal ? "show" : "hide"}`}>
-          {displayChar}
-        </span>
-      );
-    });
-  };
 
   return (
     <span
       id='replace'
-    >
-      {renderText()}
-    </span>
+      dangerouslySetInnerHTML={{ __html: rendered }}
+    />
   );
 };
+
 
 export default ReplaceText;
