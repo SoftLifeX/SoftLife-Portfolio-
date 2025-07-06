@@ -1047,9 +1047,26 @@ outline: none;
 }
 
 #scramble{
-  width: 100%;
-  white-space: pre-line;
-  overflow: hidden;
+  white-space: pre-wrap;
+}
+
+#replace{
+  white-space: pre-wrap;
+}
+
+.char {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.scramble {
+  color: #aaa;
+  opacity: 0.4;
+}
+
+.final {
+  color: #000;
+  transition: color 0.4s ease, opacity 0.4s ease;
 }
 
 .faketext{
