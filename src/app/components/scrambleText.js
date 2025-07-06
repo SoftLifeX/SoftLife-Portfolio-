@@ -52,7 +52,7 @@ const ScrambleText = ({ text, duration = 2 }) => {
   }, [text]);
 
   return (
-    <h2 id='scramble' ref={textRef} />
+    <span id='scramble' ref={textRef} />
   );
 };
 
