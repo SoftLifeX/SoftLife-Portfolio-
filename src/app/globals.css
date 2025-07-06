@@ -1031,6 +1031,7 @@ outline: none;
 
 .homepage h2 span {
   font-family: 'time', serif;
+  color: var(--text-color);
 }
 
 .hometext{
@@ -1047,8 +1048,7 @@ outline: none;
 }
 
 #scramble{
-  color: var(--text-color);
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 #replace{
