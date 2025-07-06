@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: { 
-    default: 'SoftLifeX • Software Engineer | Designer',
-    template: "%s - SoftLifeX • Software Engineer | Designer"
+    default: 'SoftlifeX • Software Engineer | Designer',
+    template: "%s - SoftlifeX • Software Engineer | Designer"
   },
   description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
   keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'softlifex'],
@@ -42,7 +42,7 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://softlifex.vercel.app',
     siteName: 'soft',
-    title: 'SoftLifeX • Software Engineer | Designer',
+    title: 'SoftlifeX • Software Engineer | Designer',
     description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
     /*images: [
       {
@@ -57,7 +57,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'SoftLifeX • Software Engineer | Designer',
     description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
-    creator: '@softlifeX',
+    creator: '@SoftLife_Dev',
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'SoftLifeX',
+    title: 'SoftlifeX',
   },
 };
   
