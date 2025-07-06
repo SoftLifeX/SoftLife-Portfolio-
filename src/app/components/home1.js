@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, useInView } from "framer-motion";
-import { Typewriter, Cursor } from "nextjs-simple-typewriter";
 import Link from "next/link";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
@@ -118,19 +117,9 @@ function Home1() {
                 <span className="waving-hand">
                 👋🏼
                 </span>, 
-                <span className="typed">
-                  <Typewriter
-                    words={[
-                      " I'm Daniel c. Daniel. \n Software Engineer."
-                    ]}
-                    cursor
-                    cursorStyle=""
-                    typeSpeed={90}
-                    deleteSpeed={1000}
-                    delaySpeed={1000}
-                  />
+                <span>
                  <ScrambleText 
-                text="I'm Daniel c. Daniel. \n Software Engineer."
+                text={"I'm Daniel c. Daniel. \n Software Engineer."}
                 />
                 </span>
               </motion.h2>
