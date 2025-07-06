@@ -29,14 +29,7 @@ const VennDiagram = (props) => (
         <text id="venntext" x="200" y="270" textAnchor="middle" fill="" fontSize="14" fontWeight="bold">AESTHETICS</text>
 
 
-       {/* Curved line to bottom text */}
-       <path
-       id="venncircle"
-        d="M260 340 Q180 500 180 640"
-       stroke=""
-        strokeWidth="1.2"
-        fill="none"
-        />
+      
         {/* Bottom text */}
         <circle id="vennline" cx="120" cy="360" r="3" fill="" />
         <text id="venntext" x="200" y="360" textAnchor="middle" fill="" fontSize="12">FIND THE INTERSECTION</text>
