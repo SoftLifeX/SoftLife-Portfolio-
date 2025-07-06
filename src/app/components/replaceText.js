@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const ScrambleRevealText = ({
+const ReplaceText = ({
   text,
   speed = 60,
   scrambleChars =  ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ'],
