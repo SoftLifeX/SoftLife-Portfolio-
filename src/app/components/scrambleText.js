@@ -1,25 +1,34 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 
-const ScrambleText = ({ text, duration = 2 }) => {
+const ScrambleText = ({ text, speed = 5 }) => {
   const textRef = useRef();
 
   useEffect(() => {
-    const chars = ' あいうえお かきくけこ さしすせそ たちつてと ';
-    let frame = 0;
-    let queue = [];
-    const el = textRef.current;
+    const chars = 'あいうえお かきくけこ さしすせそ';
     const output = [];
+    const el = textRef.current;
+    let frame = 0;
 
-    for (let i = 0; i < text.length; i++) {
-      queue.push({
-        from: chars[Math.floor(Math.random() * chars.length)],
-        to: text[i],
-        start: Math.floor(Math.random() * 40),
-        end: Math.floor(Math.random() * 40 + 20),
-      });
+    const rawText = text.split('\n').join(' \n '); // buffer around \n
+    const queue = [];
+
+    for (let i = 0; i < rawText.length; i++) {
+      const char = rawText[i];
+      if (char === '\n') {
+        queue.push({ type: 'linebreak' });
+      } else {
+        // Characters unscramble one after the other
+        const delay = i * speed;
+        queue.push({
+          type: 'char',
+          from: chars[Math.floor(Math.random() * chars.length)],
+          to: char,
+          start: delay,
+          end: delay + 15,
+        });
+      }
     }
 
     const update = () => {
@@ -27,7 +36,14 @@ const ScrambleText = ({ text, duration = 2 }) => {
       output.length = 0;
 
       for (let i = 0; i < queue.length; i++) {
-        let { from, to, start, end } = queue[i];
+        const item = queue[i];
+
+        if (item.type === 'linebreak') {
+          output.push('<br />');
+          continue;
+        }
+
+        const { to, start, end } = item;
 
         if (frame >= end) {
           output.push(to);
@@ -43,16 +59,19 @@ const ScrambleText = ({ text, duration = 2 }) => {
 
       el.innerHTML = output.join('');
 
-      if (complete === queue.length) return;
+      if (complete === queue.filter(i => i.type === 'char').length) return;
       frame++;
       requestAnimationFrame(update);
     };
 
     update();
-  }, [text]);
+  }, [text, speed]);
 
   return (
-    <span id='scramble' ref={textRef} />
+    <h1
+      ref={textRef}
+      id='scramble'
+    />
   );
 };
 
