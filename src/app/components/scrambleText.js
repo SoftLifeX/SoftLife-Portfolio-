@@ -6,7 +6,7 @@ const ScrambleText = ({ text, speed = 4 }) => {
   const textRef = useRef();
 
   useEffect(() => {
-    const chars = 'あいうえお かきくけこ さしすせそ';
+    const chars = ' あいうえお かきくけこ ';
     const output = [];
     const el = textRef.current;
     let frame = 0;
