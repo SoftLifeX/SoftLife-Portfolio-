@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 const ReplaceText = ({
   text,
-  speed = 60,
+  speed = 90,
   scrambleChars = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ'],
 }) => {
   const [progress, setProgress] = useState(0);
@@ -57,11 +57,11 @@ const ReplaceText = ({
   };
 
   return (
-    <div
+    <span
       id='replace'
     >
       {renderText()}
-    </div>
+    </span>
   );
 };
 
