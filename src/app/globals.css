@@ -121,7 +121,7 @@
 
 
 .themeg{
-  stroke: #fff;
+  stroke: #000;
     stroke-width: 5;
 }
 
@@ -1897,6 +1897,10 @@ div#lottie3 {
 .contact h5 {
   padding-top: 4.12rem;
 }
+
+  .contact h2 {
+  font-family: 'time';
+  }
 
 .contact-left {
   flex-basis: 36%;
