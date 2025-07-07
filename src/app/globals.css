@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: 'tan';
+  src: url(assets/fonts/MERINGUE.ttf);
+}
+
+@font-face {
   font-family: 'play';
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
@@ -131,7 +136,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'aboreto', serif;
+  font-family: 'play', serif;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -555,7 +560,7 @@ h1 {
   margin: 2rem;
   text-decoration: none;
   cursor: text;
-  font-family: 'aboreto', serif;
+  font-family: 'tan', serif;
  /* letter-spacing: 0.2rem;
   line-height: 1.2;
   font-weight: 100;*/
