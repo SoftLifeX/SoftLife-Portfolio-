@@ -259,9 +259,9 @@ function Header() {
 									? {
 											d: moonPath,
 											rotate: 0,
-											scale: 1.6,
-											stroke: "DarkOrange",
-											fill: "DarkOrange",
+											scale: 1.3,
+											stroke: "#E2DFD2",
+											fill: "#E2DFD2",
 											fillOpacity: 0.5,
 											strokeOpacity: 1,
 											transition: { delay: 0.1 },
@@ -269,8 +269,8 @@ function Header() {
 									: {
 											d: sunPath,
 											rotate: 360,
-											stroke: "yellow",
-											fill: "yellow",
+											stroke: "#fff",
+											fill: "#fff",
 											fillOpacity: 0.5,
 											strokeOpacity: 1,
 										}
