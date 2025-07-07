@@ -304,7 +304,7 @@ section {
   width: 100%;
   padding: 1.3rem 10%;
   display: flex;
-  justify-content:space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
   background-color: transparent;
@@ -442,6 +442,7 @@ section {
 .navbar {
   position: fixed;
   left: 50%;
+  transform: translate(-50%, -50%);
   top: 1.3rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
@@ -1020,10 +1021,10 @@ outline: none;
   position: relative;
   margin: 0;
   color: var(--text-color);
-  font-family: 'penna' , serif;
   font-size: 12rem;
+  /*font-family: 'penna' , serif;
   letter-spacing: normal;
-  font-weight: normal;
+  font-weight: normal; */
   padding-right: 3.12rem;
   cursor: text;
 }
