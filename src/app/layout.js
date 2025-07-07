@@ -32,16 +32,11 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
-  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://softlifex.vercel.app',
-    siteName: 'soft',
+    siteName: 'softlifex Portfolio',
     title: 'SoftlifeX • Software Engineer | Designer',
     description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
     /*images: [
@@ -55,7 +50,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SoftLifeX • Software Engineer | Designer',
+    title: 'SoftlifeX • Software Engineer | Designer',
     description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
     creator: '@SoftLife_Dev',
   },
