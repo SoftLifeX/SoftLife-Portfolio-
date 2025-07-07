@@ -3,14 +3,25 @@
   src: url(assets/fonts/LaradotSerif-Regular.ttf);
 }
 
-/*@font-face {
-  font-family: 'time';
-  src: url(assets/fonts/Timeless.ttf);
-}*/
-
+/
 @font-face {
   font-family: 'time';
+  src: url(assets/fonts/Timeless.ttf);
+}
+
+@font-face {
+  font-family: 'play';
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'libre';
+  src: url(assets/fonts/LibreCaslonText-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'aboreto';
+  src: url(assets/fonts/Aboreto-Regular.ttf);
 }
 
 @font-face {
@@ -120,7 +131,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'poppins', sans-serif;
+  font-family: 'aboreto', serif;
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
@@ -135,7 +146,6 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 'time';
   background: var(--base-color);
   color: var(--text-color);
 }
@@ -511,7 +521,7 @@ h2 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'time', serif;
+  font-family: 'libre', serif;
   font-weight: 100;
 }
 
@@ -545,10 +555,10 @@ h1 {
   margin: 2rem;
   text-decoration: none;
   cursor: text;
-  font-family: 'chillen', serif;
-  letter-spacing: 0.2rem;
+  font-family: 'aboreto', serif;
+ /* letter-spacing: 0.2rem;
   line-height: 1.2;
-  font-weight: 100;
+  font-weight: 100;*/
 }
 
 h3 {
@@ -609,7 +619,7 @@ h5 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'time', serif;
+  font-family: 'libre', serif;
   position: relative;
   padding-top: 3.12rem;
   font-weight: 100;
@@ -1021,7 +1031,7 @@ outline: none;
 }
 
 .homepage h2 {
-  font-family: 'time', serif;
+  font-family: 'libre', serif;
   font-weight: normal;
   color: var(--text-color);
   font-size: 1.4rem;
