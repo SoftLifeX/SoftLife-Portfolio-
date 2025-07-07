@@ -108,7 +108,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-   top: 1.7rem;
+   top: 50%;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -443,7 +443,7 @@ section {
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 1.3rem;
+  top: 50%;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
   border: 0.06rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
@@ -505,7 +505,7 @@ section {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
-  top: 1.7rem;
+  top: 50%;
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
