@@ -1022,9 +1022,8 @@ outline: none;
   margin: 0;
   color: var(--text-color);
   font-size: 12rem;
-  /*font-family: 'penna' , serif;
-  letter-spacing: normal;
-  font-weight: normal; */
+  font-family: 'tan' , serif;
+  font-weight: 100; 
   padding-right: 3.12rem;
   cursor: text;
 }
@@ -1721,10 +1720,7 @@ transition: transform, ease-in-out;
 
 .serviceCard {
   background-color: var(--base-color);
-  padding-left: 1.87rem;
-  padding-right: 1.87rem;
-  padding-top: 1.87rem;
-  padding-bottom: 0.6rem;
+  padding: 1.87rem;
   font-size: 0.8rem;
   font-weight: 300;
   border-radius: 5px;
