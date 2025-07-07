@@ -269,8 +269,8 @@ function Header() {
 									: {
 											d: sunPath,
 											rotate: 360,
-											stroke: "#fff",
-											fill: "#fff",
+											stroke: "#000",
+											fill: "#000",
 											fillOpacity: 0.5,
 											strokeOpacity: 1,
 										}
