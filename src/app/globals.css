@@ -108,7 +108,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-   top: 50%;
+   top: 1.7rem;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -441,9 +441,8 @@ section {
 
 .navbar {
   position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  top: 50%;
+  margin: 0.01rem auto;
+  top: 1.3rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
   border: 0.06rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
@@ -505,7 +504,7 @@ section {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
-  top: 50%;
+  top: 1.7rem;
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
