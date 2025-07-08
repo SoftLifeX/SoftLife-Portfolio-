@@ -443,7 +443,7 @@ section {
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 1.3rem;
+  top: 1.7rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
   border: 0.06rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
@@ -689,44 +689,24 @@ position: relative;
 
 .btn2:before{
 transition: 0.4s all ease;
+  border-radius: 5px;
 position: absolute;
-/*box-shadow: 0 0 0.10rem var(--accent-color);*/
   background-color: var(--text-color);
-top: 50%;
-bottom: 50%;
-left: 50%;
-right: 50%;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
 opacity: 0;
+clip-path: circle(0% at 50% 50%); 
+  transition: clip-path 0.5s ease;
 content: "";
 }
 
 .btn2:hover:before {
 padding: 0.5rem 1rem;
-transition: 0.4s all ease;
-  border-radius: 5px;
+  clip-path: circle(100% at 50% 50%);
 z-index: -1;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
 opacity: 1;
-  animation: border 0.4s ease;
-/*  box-shadow: inset 0 0 0 0.10rem var(--accent-color);*/
-}
-
-
-@keyframes border{
-  0%{
-    border-radius: 50%;
-  }
-
-  40%{
-    border-radius: 10px;
-  }
-
-  100%{
-    border-radius: 10px;
-  }
 }
 
 .bound {
@@ -2339,7 +2319,6 @@ form textarea {
     z-index: 990;
     height: 100%;
     width: 100%;
-    /*border-radius: 0 0 30% 30%;*/
     left: 0;
     right: 0;
   }
@@ -2350,7 +2329,6 @@ form textarea {
     z-index: 990;
     height: 100%;
     width: 100%;
-    /*border-radius: 0 0 30% 30%;*/
     left: 0;
     right: 0;
   }
@@ -2368,7 +2346,7 @@ form textarea {
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    font-family: 'penna', serif;
+    /*font-family: 'penna', serif;*/
   }
 
   .PageIn1 {
@@ -2376,7 +2354,6 @@ form textarea {
     height: 100%;
     position: fixed;
     background: var(--text-color);
-    /*border-radius: 30% 30% 0 0;*/
     left: 0;
     z-index: 990;
   }
@@ -2386,7 +2363,6 @@ form textarea {
     height: 100%;
     position: fixed;
     background: var(--text-color);
-    /*border-radius: 30% 30% 0 0;*/
     right: 0;
     z-index: 990;
   }
@@ -2405,7 +2381,7 @@ form textarea {
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  font-family: 'penna', serif;
+  /*font-family: 'penna', serif;*/
 }
 
 .introduction {
@@ -2424,7 +2400,6 @@ form textarea {
     z-index: 990;
     height: 100%;
     width: 100%;
-    /*border-radius: 0 0 30% 30%;*/
     left: 0;
     right: 0;
   }
@@ -2435,7 +2410,6 @@ form textarea {
     z-index: 990;
     height: 100%;
     width: 100%;
-    /*border-radius: 0 0 30% 30%;*/
     left: 0;
     right: 0;
   }
@@ -2453,7 +2427,7 @@ form textarea {
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    font-family: 'penna', serif;
+   /* font-family: 'penna', serif; */
   }
 
   .PageIn1 {
@@ -2490,7 +2464,7 @@ form textarea {
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  font-family: 'penna', serif;
+  /*font-family: 'penna', serif;*/
 }
 
 .introduction {
