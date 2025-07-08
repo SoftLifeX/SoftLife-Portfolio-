@@ -68,7 +68,7 @@
   --base-color: #fff3e8;
   --text-color: #000;
   --secondary-text: gray;
-  --tertiary-text: rgba(0, 0, 0, 0.924);
+  --tertiary-text: rgba(0, 0, 0, 0.7);
   --primary-color: rgba(0, 0, 0, 0.16);
   --secondary-color: white;
   --accent-color: black;
@@ -91,7 +91,7 @@
   --base-color: black;
   --text-color: #fff3e8;
   --secondary-text: gray;
-  --tertiary-text: #fff3e8;
+  --tertiary-text: rgba(255, 243, 232, 0.7);
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
@@ -445,7 +445,7 @@ section {
   top: 1.7rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
-  border: 0.06rem solid linear-gradient(rgba(0, 0, 0, 0.6), #d0f8ec);
+  border: 0.06rem solid var(--border-color);
   border-radius: 30px;
   cursor: pointer;
   transition: scale 0.5s ease;
@@ -466,6 +466,7 @@ section {
 .navbar a {
   display: inline;
   color: var(--secondary-text);
+  border-radius: 30px;
   text-decoration: none;
   margin-left: 2.5rem;
   list-style: none;
@@ -478,7 +479,6 @@ section {
 }
 
 .navbar a:hover {
-  border-radius: 30px;
   background: transparent;
   padding: 0.25rem 1rem;
   box-shadow: 0 0 0.10rem var(--secondary-text);
@@ -528,9 +528,9 @@ h2 {
   font-weight: 100;
 }
 
-/*.h2boundary{
+.h2boundary{
   width: fit-content;
-}*/
+}
 
 .svg-filters{
   display: none;
@@ -966,7 +966,8 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  color: var(--text-color);
+  -webkit-text-stroke: 2px var(--text-color);
+  color: var(--tertiary-text);
   font-size: 8rem;
   font-family: 'tan' , serif;
   font-weight: 100; 
