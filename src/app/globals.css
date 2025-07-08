@@ -665,7 +665,7 @@ outline: none;
   color: var(--text-color);
   margin: 0.5rem auto;
   padding: 0.5rem 0.5rem;
-  border: 0.06rem solid var(--tertiary-color);
+  border: 0.06rem solid var(--text-color);
   border-radius: 5px;
   cursor: pointer;
   transition: padding, box-shadow ease-in-out;
@@ -683,19 +683,17 @@ position: relative;
 .btn2:hover {
   padding: 0.5rem 0.8rem;
   color: var(--base-color);
-  border: none;
 }
 
 .btn2:before{
-transition: 0.4s all ease;
+transition: 0.4s all east-northeast;
   border-radius: 5px;
 position: absolute;
   background-color: var(--text-color);
-top: 50%;
-bottom: 50%;
-left: 50%;
-right: 50%;
-opacity: 0;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
 clip-path: circle(0% at 50% 50%); 
   transition: clip-path 0.4s ease;
 content: "";
@@ -703,13 +701,8 @@ content: "";
 
 .btn2:hover:before {
   padding: 0.5rem 0.8rem;
-  top: 0;
-bottom: 0;
-left: 0;
-right: 0;
   clip-path: circle(100% at 50% 50%);
 z-index: -1;
-opacity: 1;
 }
 
 .bound {
@@ -1787,10 +1780,10 @@ div#lottie3 {
   position: absolute;
   box-shadow: 0 0 0.10rem var(--accent-color);
   background-color: var(--text-color);
-  top: 50%;
-bottom: 50%;
-left: 50%;
-right: 50%;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
 clip-path: circle(0% at 50% 50%); 
   transition: clip-path 0.4s ease;
   content: "";
@@ -1799,13 +1792,8 @@ clip-path: circle(0% at 50% 50%);
 
 .serviceCard:hover:before {
   clip-path: circle(100% at 50% 50%);
-  top: 0;
-bottom: 0;
-left: 0;
-right: 0;
   border-radius: 5px;
   z-index: -1;
-  opacity: 1;
 }
 
 /*review list*/
