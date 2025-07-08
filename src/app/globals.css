@@ -668,7 +668,7 @@ outline: none;
   border: 0.06rem solid var(--text-color);
   border-radius: 5px;
   cursor: pointer;
-  transition: padding 0.4s ease-in-out, border 0.4s ease-in-out;
+  transition: padding 0.5s linear, border 0.4s ease-in;
   width: fit-content;
 height: fit-content;
   justify-content: center;
@@ -686,7 +686,7 @@ position: relative;
 }
 
 .btn2:before{
-transition: 0.4s all east-northeast;
+transition: 0.5s all linear;
   border-radius: 5px;
 position: absolute;
   background-color: var(--text-color);
@@ -695,7 +695,7 @@ bottom: 0;
 left: 0;
 right: 0;
 clip-path: circle(0% at 50% 50%); 
-transition: clip-path 0.4s ease-out, opacity 0.4s ease-in-out;
+transition: clip-path 0.5s linear, opacity 0.5s ease-out;
 content: "";
 opacity: 0;
 }
@@ -751,8 +751,7 @@ outline: none;
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: scale, ease-in-out;
-  transition: 0.4s ease-in-out;
+  transition: padding 0.5s linear;
   width: fit-content;
   justify-content: center;
   align-items: center;
@@ -795,35 +794,6 @@ outline: none;
   rotate: 0deg;
   margin-left: 0.5rem;
 
-}
-
-.btn3 {
-  display: block;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  margin: 1.87rem;
-  padding: 0.5rem 1rem;
-  border: 0.06rem solid var(--border-color);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: scale, ease-in-out;
-  transition: 0.5s ease-in-out;
-  width: fit-content;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: 0 0 0.10rem var(--accent-color);
-  margin-bottom: 2.5rem;
-  float: right;
-  right: 3.75rem;
-  position: absolute;
-}
-
-.btn3:hover {
-  color: var(--base-color);
-  scale: 1.1;
-  box-shadow: 0 0 0.25rem var(--accent-color);
-  background-color: var(--text-color);
 }
 
 /*homepage*/
@@ -1095,7 +1065,7 @@ outline: none;
 
 #helloText:after {
   content: " ";
-  animation: animate 7.5s ease-in infinite;
+  animation: animate 7.5s linear infinite;
 }
 
 @keyframes animate {
@@ -1146,7 +1116,7 @@ outline: none;
   grid-row: 1;
   grid-column: 1;
   opacity: 0;
-  transition: opacity 500ms ease-out, transform 750ms var(--ease-back);
+  transition: opacity 500ms ease-out, transform 500ms var(--ease-back);
   transform: rotateX(90deg) translateZ(-1rem);
   transform-style: preserve-3d;
 }
@@ -1253,7 +1223,6 @@ outline: none;
   height: 100%;
   display: block;
   background: rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s;
   box-shadow: 0 0 0.10rem var(--accent-color);
 }
 
@@ -1271,7 +1240,6 @@ outline: none;
   padding: 0 2.5rem;
   flex-direction: column;
    border-radius: 5px;
-  transition: transform, height 0.4s ease-in;
 }
 
 .work-info{
@@ -1319,10 +1287,6 @@ outline: none;
   color: black;
   font-family: 'time', serif;
   padding: 0.2rem;
-}
-
-.work:hover img {
-  transform: scale(1.02);
 }
 
 .fakemargin {
@@ -1431,52 +1395,6 @@ outline: none;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
   justify-content: center;
-}
-
-  .codeProp {
-  position: fixed;
-  top: 48%;
-  left: 38%;
-  margin: 1.87rem auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.codeProp i {
-  text-decoration: none;
-  font-size: 2.5rem;
-  color: var(--text-color);
-  display: inline-flex;
-  transition: transform, ease-in-out;
-  transition: 0.5s ease-in-out;
-  margin-bottom: 1.87rem;
-  margin-left: 3.12rem;
- }
-
-.codeProp:hover i{
-  animation: colorwheel 5s ease-in-out infinite;
-}
-
-@keyframes colorwheel{
-  0%, 100%{
-    color: var(--text-color);
-  }
-
-  20%{
-    color: red;
-  }
-
-  40%{
-    color: yellow;
-  }
-  
-  60%{
-    color: #ADF802;
-  }
-
-  80%{
-    color: navy;
-  }
 }
 
 .circle-sketch-highlight{
@@ -1640,7 +1558,7 @@ outline: none;
 .techstack{
   display: inline-block;
 transition: transform, ease-in-out;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   align-items: center
 }
 
@@ -1786,7 +1704,7 @@ bottom: 0;
 left: 0;
 right: 0;
 clip-path: circle(0% at 50% 50%); 
-  transition: clip-path 0.4s ease-out, opacity 0.4s ease-in-out;
+  transition: clip-path 0.5s linear, opacity 0.5s ease-out;
   content: "";
   border-radius: 5px;
   opacity: 0;
@@ -1838,8 +1756,7 @@ clip-path: circle(0% at 50% 50%);
   font-size: 0.8rem;
   font-weight: 300;
   border-radius: 10px;
-  transition: scale, ease-in-out;
-  transition: 0.5s ease-in-out;
+  transition: scale 0.5s linear;
   background-color: transparent;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
@@ -1999,12 +1916,13 @@ form textarea {
     align-items: center;
     text-align: center;
     transform: scale(0);
-    transition: 0.3s ease;
+    transition: transform 0.5s linear, opacity 0.5s ease-out;
     top: 5rem;
   }
 
   .navbar.open {
     transform: scale(1);
+    opacity: 0;
   }
 
   .navbar a {
@@ -2013,7 +1931,7 @@ form textarea {
     margin: 1.5rem auto;
     text-align: center;
     transform: scale(0);
-    transition: 0.3s ease;
+    transition: transform 0.3s linear, opacity 0.3s ease-out;
     opacity: 0;
     box-shadow: none;
     border: none;
@@ -2057,9 +1975,7 @@ form textarea {
     position: absolute;
     left: 50%;
     bottom: -0.37rem;
-    transition: 0.5s;
-    transition: scale, ease-in-out;
-    transition: 0.5s ease-in-out;
+    transition: width 0.5s linear, left 0.5s linear;
   }
 
   .navbar a:hover::after {
@@ -2084,9 +2000,7 @@ form textarea {
     position: absolute;
     left: 0;
     bottom: -0.37rem;
-    transition: 0.5s;
-    transition: scale, ease-in-out;
-    transition: 0.5s ease-in-out;
+    transition: width 0.5s linear, left 0.5s linear;
   }
 
   .row {
@@ -2139,10 +2053,7 @@ form textarea {
   .btnContainer2 {
     left: 32svw;
   } 
-  
-    .codeProp {
-  left: 77%;
-}
+
 
   .homepage {
     height: 100svh;
@@ -2174,13 +2085,13 @@ form textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-    transform: scale(0);
-    transition: 0.3s ease;
+    transition: transform 0.5s linear, opacity 0.5s ease-out;
     top: 5rem;
   }
 
   .navbar.open {
     transform: scale(1);
+    opacity: 1;
   }
 
  .navbar span a::after {
@@ -2196,7 +2107,7 @@ form textarea {
     width: fit-content;
     text-align: center;
     transform: scale(0);
-    transition: 0.3s ease;
+    transition: transform 0.3s linear, opacity 0.3s ease-out;
     opacity: 0;
     text-shadow: none;
     position: relative;
@@ -2238,9 +2149,7 @@ form textarea {
     position: absolute;
     left: 0;
     bottom: -0.37rem;
-    transition: 0.5s;
-    transition: scale, ease-in-out;
-    transition: 0.5s ease-in-out;
+    transition: width 0.5s linear, left 0.5s linear;
   }
 
   .navbar a:hover::after {
@@ -2264,9 +2173,6 @@ form textarea {
     position: absolute;
     left: 0;
     bottom: -0.37rem;
-    transition: 0.5s;
-    transition: scale, ease-in-out;
-    transition: 0.5s ease-in-out;
   }
 
   .navbar a span {
