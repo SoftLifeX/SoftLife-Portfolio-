@@ -702,7 +702,7 @@ content: "";
 }
 
 .btn2:hover:before {
-  padding: 0.5rem 0.8rem
+  padding: 0.5rem 0.8rem;
   clip-path: circle(100% at 50% 50%);
 z-index: -1;
 opacity: 1;
