@@ -110,11 +110,9 @@ function About3() {
                 <p>
                   There's a thin line between your visions and REALITY.
                   <br />
-                  <br />
                   Let us aid you in bridging that gap.
                   <br />
-                  <br />
-                  Bringing your creativity to life is no longer a far dream.
+                  Bringing your creativity to lifehad never been easier!.
                   <br />
                   <br />
                   Why wait?
