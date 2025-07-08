@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const words = [
   " ",
-  "Softlifeメ",
+  "Softlife X",
   "Designer",
   "Developer",
   ]
