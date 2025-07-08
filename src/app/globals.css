@@ -955,7 +955,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 35svh;
+  top: 45svh;
 }
 
 .slider {
@@ -1068,7 +1068,7 @@ outline: none;
 
 @keyframes animate {
   0% {
-    content: "Yo";
+    content: "Hola";
   }
 
   25% {
