@@ -967,7 +967,7 @@ outline: none;
   position: relative;
   margin: 0;
   color: var(--text-color);
-  font-size: 12rem;
+  font-size: 8rem;
   font-family: 'tan' , serif;
   font-weight: 100; 
   padding-right: 3.12rem;
@@ -985,7 +985,7 @@ outline: none;
   font-family: 'play', serif;
   font-weight: normal;
   color: var(--text-color);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 0.5rem 0;
   position: relative;
 }
@@ -1354,7 +1354,6 @@ outline: none;
 
 .aboutImg{
   position: relative;
-  top: -4.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -1829,10 +1828,6 @@ form textarea {
     padding: 1.3rem 5%;
   }
 
-  .aboutImg{
-    top: -0.01rem;
-  }
-
   .aboutImg svg {
   width: 20rem;
   height: 12rem;
@@ -1843,7 +1838,6 @@ form textarea {
   .menuButton {
     display: inline-flex;
   }
-
 
   .menuButton>span {
     height: 0.10rem;
@@ -1913,7 +1907,7 @@ form textarea {
 
   .navbar.open {
     transform: scale(1);
-    opacity: 0;
+    opacity: 1;
   }
 
   .navbar a {
@@ -1980,7 +1974,6 @@ form textarea {
     background-color: transparent;
     padding: 0;
     box-shadow: none;
-    scale: 1;
   }
 
   .navbar a.active::after {
@@ -2035,6 +2028,7 @@ form textarea {
   height: 12rem;
   margin: 1rem auto;
   display: block;
+  scale: 1.2;
   }
 
   .contact-right .btn4{
