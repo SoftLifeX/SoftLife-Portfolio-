@@ -329,7 +329,6 @@ section {
   top: 1.7rem;
   font-size: 1.2rem;
   color: var(--text-color);
-  /*text-shadow: 0 0 0.3rem var(--secondary-color), 0.15rem 0.15rem 0.25rem var(--text-color);*/
   text-decoration: none;
   width: fit-content;
 }
@@ -682,7 +681,7 @@ position: relative;
 }
 
 .btn2:hover {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   color: var(--base-color);
   border: none;
 }
@@ -703,7 +702,7 @@ content: "";
 }
 
 .btn2:hover:before {
-padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem
   clip-path: circle(100% at 50% 50%);
 z-index: -1;
 opacity: 1;
@@ -765,7 +764,7 @@ outline: none;
 }
 
 .btn4:hover {
-   padding: 0.5rem 1rem;
+   padding: 0.5rem 0.8rem;
 }
 
 
@@ -1784,39 +1783,22 @@ div#lottie3 {
   position: absolute;
   box-shadow: 0 0 0.10rem var(--accent-color);
   background-color: var(--text-color);
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  opacity: 0;
+  top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+opacity: 0;
+clip-path: circle(0% at 50% 50%); 
+  transition: clip-path 0.5s ease;
   content: "";
+  border-radius: 5px;
 }
 
 .serviceCard:hover:before {
-  transition: 0.4s all ease;
+  clip-path: circle(100% at 50% 50%);
   border-radius: 5px;
   z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   opacity: 1;
-  animation: border 0.4s ease;
-}
-
-
-@keyframes border {
-  0% {
-    border-radius: 50%;
-  }
-
-  40% {
-    border-radius: 5px;
-  }
-
-  100% {
-    border-radius: 5px;
-  }
 }
 
 /*review list*/
@@ -2341,6 +2323,7 @@ form textarea {
     right: 0;
     bottom: 0;
     color: var(--base-color);
+    font-weight: 100;
     font-size: 4rem;
     cursor: default;
     z-index: 995;
@@ -2375,6 +2358,7 @@ form textarea {
   right: 0;
   bottom: 0;
   color: var(--base-color);
+  font-weight: 100;
    background: var(--text-color);
   font-size: 4rem;
   cursor: default;
@@ -2422,6 +2406,7 @@ form textarea {
     right: 0;
     bottom: 0;
     color: var(--base-color);
+    font-weight: 100;
     font-size: 4rem;
     cursor: default;
     z-index: 995;
@@ -2458,6 +2443,7 @@ form textarea {
   right: 0;
   bottom: 0;
   color: var(--base-color);
+  font-weight: 100;
    background: var(--text-color);
   font-size: 4rem;
   cursor: default;
