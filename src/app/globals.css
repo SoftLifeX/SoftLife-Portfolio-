@@ -65,7 +65,7 @@
 }
 
 :root {
-  --base-color: #E2DFD2;
+  --base-color: #fff3e8;
   --text-color: #000;
   --secondary-text: gray;
   --tertiary-text: rgba(0, 0, 0, 0.924);
@@ -89,18 +89,18 @@
 
 [data-theme="dark"] {
   --base-color: black;
-  --text-color: #E2DFD2;
+  --text-color: #fff3e8;
   --secondary-text: gray;
-  --tertiary-text: #E2DFD2;
+  --tertiary-text: #fff3e8;
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
   --tertiary-color: white;
-  --accent-color2: #E2DFD2;
+  --accent-color2: #fff3e8;
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
-  --theme-switch: #E2DFD2;
+  --theme-switch: #fff3e8;
 }
 
 #theme-switch {
