@@ -68,7 +68,7 @@
   --base-color: #fff3e8;
   --text-color: #000;
   --secondary-text: gray;
-  --tertiary-text: rgba(0, 0, 0, 0.7);
+  --tertiary-text: rgba(0, 0, 0, 0.5);
   --primary-color: rgba(0, 0, 0, 0.16);
   --secondary-color: white;
   --accent-color: black;
@@ -91,7 +91,7 @@
   --base-color: black;
   --text-color: #fff3e8;
   --secondary-text: gray;
-  --tertiary-text: rgba(255, 243, 232, 0.7);
+  --tertiary-text: rgba(255, 243, 232, 0.5);
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
@@ -528,10 +528,6 @@ h2 {
   font-weight: 100;
 }
 
-.h2boundary{
-  width: fit-content;
-}
-
 .svg-filters{
   display: none;
 }
@@ -966,7 +962,7 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  -webkit-text-stroke: 2px var(--text-color);
+  -webkit-text-stroke: 3px var(--text-color);
   color: var(--tertiary-text);
   font-size: 8rem;
   font-family: 'tan' , serif;
@@ -1337,6 +1333,7 @@ outline: none;
   margin: auto;
   justify-content: center;
   align-items: center;
+  width: fit-content;
 }
 
 .about h2 {
@@ -1891,7 +1888,7 @@ form textarea {
     right: 2rem;
     width: 15rem;
     height: 17.7rem;
-    background: var(--tertiary-text);
+    background: var(--text-color);
     overflow: hidden;
     text-shadow: none;
     border-radius: 10px;
@@ -2061,7 +2058,7 @@ form textarea {
     width: unset;
     position: fixed;
     left: 2rem;
-    background: var(--tertiary-text);
+    background: var(--text-color);
     overflow: hidden;
     text-shadow: none;
     border-radius: 10px;
