@@ -691,18 +691,22 @@ transition: 0.4s all ease;
   border-radius: 5px;
 position: absolute;
   background-color: var(--text-color);
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
+top: 50%;
+bottom: 50%;
+left: 50%;
+right: 50%;
 opacity: 0;
 clip-path: circle(0% at 50% 50%); 
-  transition: clip-path 0.5s ease;
+  transition: clip-path 0.4s ease;
 content: "";
 }
 
 .btn2:hover:before {
   padding: 0.5rem 0.8rem;
+  top: 0;
+bottom: 0;
+left: 0;
+right: 0;
   clip-path: circle(100% at 50% 50%);
 z-index: -1;
 opacity: 1;
@@ -1783,19 +1787,22 @@ div#lottie3 {
   position: absolute;
   box-shadow: 0 0 0.10rem var(--accent-color);
   background-color: var(--text-color);
-  top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-opacity: 0;
+  top: 50%;
+bottom: 50%;
+left: 50%;
+right: 50%;
 clip-path: circle(0% at 50% 50%); 
-  transition: clip-path 0.5s ease;
+  transition: clip-path 0.4s ease;
   content: "";
   border-radius: 5px;
 }
 
 .serviceCard:hover:before {
   clip-path: circle(100% at 50% 50%);
+  top: 0;
+bottom: 0;
+left: 0;
+right: 0;
   border-radius: 5px;
   z-index: -1;
   opacity: 1;
@@ -2323,13 +2330,12 @@ form textarea {
     right: 0;
     bottom: 0;
     color: var(--base-color);
-    font-weight: 100;
     font-size: 4rem;
     cursor: default;
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    /*font-family: 'penna', serif;*/
+    font-family: 'penna', serif;
   }
 
   .PageIn1 {
@@ -2358,14 +2364,13 @@ form textarea {
   right: 0;
   bottom: 0;
   color: var(--base-color);
-  font-weight: 100;
    background: var(--text-color);
   font-size: 4rem;
   cursor: default;
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  /*font-family: 'penna', serif;*/
+  font-family: 'penna', serif;
 }
 
 .introduction {
@@ -2406,13 +2411,12 @@ form textarea {
     right: 0;
     bottom: 0;
     color: var(--base-color);
-    font-weight: 100;
     font-size: 4rem;
     cursor: default;
     z-index: 995;
     width: fit-content;
     height: fit-content;
-   /* font-family: 'penna', serif; */
+    font-family: 'penna', serif; 
   }
 
   .PageIn1 {
@@ -2420,7 +2424,6 @@ form textarea {
     height: 100%;
     position: fixed;
     background: var(--text-color);
-    /*border-radius: 30% 30% 0 0;*/
     left: 0;
     z-index: 990;
   }
@@ -2430,7 +2433,6 @@ form textarea {
     height: 100%;
     position: fixed;
     background: var(--text-color);
-    /*border-radius: 30% 30% 0 0;*/
     right: 0;
     z-index: 990;
 }
@@ -2443,14 +2445,13 @@ form textarea {
   right: 0;
   bottom: 0;
   color: var(--base-color);
-  font-weight: 100;
    background: var(--text-color);
   font-size: 4rem;
   cursor: default;
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  /*font-family: 'penna', serif;*/
+  font-family: 'penna', serif;
 }
 
 .introduction {
