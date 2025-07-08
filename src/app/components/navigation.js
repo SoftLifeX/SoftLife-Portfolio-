@@ -3,7 +3,8 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import React from "react"
 
-export default function Navigation = () => {
+const Navigation = ({ children }) => {
+
 
   const pathName = usePathname();
 
@@ -23,5 +24,6 @@ export default function Navigation = () => {
    
   );
 };
-    
+
+export default Navigation;
 
