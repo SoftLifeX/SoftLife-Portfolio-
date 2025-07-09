@@ -211,7 +211,7 @@ outline: none;
 }
 
 /*pages*/
-.hero{
+/*.hero{
   animation: backdrop 1.3s;
 }
 
@@ -222,7 +222,7 @@ outline: none;
  100% {
 background: var(--base-color);
  }
-}
+}*/
    
 /*sections*/
 section {
@@ -244,10 +244,10 @@ section {
   background: var(--base-color);
   overflow: hidden;
   margin-top: 0;
-  animation: clip 1s 0.3s;
+  /*animation: clip 1s 0.3s;*/
 }
 
-@keyframes clip {
+/*@keyframes clip {
  from {
    clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
    transform: scale(0.1);
@@ -256,7 +256,7 @@ section {
    clip-path: polygon(0 25%, 0 0, 35% 0%, 65% 0%, 100% 0, 100% 25%, 100% 49%, 100% 100%, 65% 100%, 35% 100%, 0 100%, 0 48%);
    transform: scale(0.98);
  }
-}
+}*/
 
 .home2 {
   scale: 0.92;
