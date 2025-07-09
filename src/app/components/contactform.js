@@ -38,7 +38,6 @@ function Contactform() {
   };
 
   return (
-    <div>
       <section className="contactForm">
         <div className="contact">
           <div className="container">
@@ -166,7 +165,6 @@ function Contactform() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
