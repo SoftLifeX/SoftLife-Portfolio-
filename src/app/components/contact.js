@@ -14,7 +14,6 @@ function Contact() {
 
 
   return (
-    <div>
       <section className="home3">
         <div className="contact">
           <div className="container">
@@ -77,7 +76,6 @@ function Contact() {
           </p>
         </div>
       </section>
-    </div>
   );
 }
 
