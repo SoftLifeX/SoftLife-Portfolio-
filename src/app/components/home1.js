@@ -78,12 +78,7 @@ function Home1() {
   
     
   return (
-      <motion.section
-      initial={{ clipPath: 'polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)' }}
-       whileInView={{ clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)' }}
-      viewport={{ once: true }}
-       transition={{ delay: 4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-    className="home1">
+      <section className="home1">
        <Header />
         <div className="homepage">
       <div className="pointer">
@@ -191,7 +186,7 @@ function Home1() {
             </Magnetic>
            </motion.div>
         </div>
-      </motion.section>
+     </section>
   );
 }
 
