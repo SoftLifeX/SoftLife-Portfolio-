@@ -25,6 +25,7 @@ const TransitionProvider = ({ children }) => {
 
   }
 
+      const noHeaderPaths = ['/'];
 
   const pathName = usePathname();
 
@@ -85,7 +86,7 @@ const TransitionProvider = ({ children }) => {
         />
       </motion.div>
       <StickyCursor/>
-        <Header />
+        {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
       </div>
     </AnimatePresence>
