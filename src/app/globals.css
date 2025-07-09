@@ -153,18 +153,7 @@ body {
   background-repeat: no-repeat;
   background: var(--base-color);
   color: var(--text-color);
-animation: backdrop 1.3s forwards;
 }
-
-@keyframes backdrop {
- from { 
-   background: var(--text-color);
- }
- to {
-background: var(--base-color);
- }
-}
-   
 
 body::-webkit-scrollbar {
   display: none;
@@ -221,6 +210,20 @@ outline: none;
   position: relative;
 }
 
+/*pages*/
+.hero{
+  animation: backdrop 1.3s forwards;
+}
+
+@keyframes backdrop {
+ from { 
+   background: var(--text-color);
+ }
+ to {
+background: var(--base-color);
+ }
+}
+   
 /*sections*/
 section {
   width: 100%;
