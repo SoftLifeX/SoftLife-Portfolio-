@@ -8,6 +8,7 @@ import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
+import Header from "./header";
 
 
 
@@ -77,8 +78,8 @@ function Home1() {
   
     
   return (
-    <div>
       <section className="home1">
+       <Header />
         <div className="homepage">
       <div className="pointer">
         <ArrowIcon />
@@ -186,7 +187,6 @@ function Home1() {
            </motion.div>
         </div>
       </section>
-    </div>
   );
 }
 
