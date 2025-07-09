@@ -153,7 +153,18 @@ body {
   background-repeat: no-repeat;
   background: var(--base-color);
   color: var(--text-color);
+animation: backdrop 1.3s forwards;
 }
+
+@keyframes backdrop {
+ from { 
+   background: var(--text-color);
+ }
+ to {
+background: var(--base-color);
+ }
+}
+   
 
 body::-webkit-scrollbar {
   display: none;
@@ -229,7 +240,7 @@ section {
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
   margin-top: 0;
-  animation: clip 1s 0.3s forwards;
+  animation: clip 1s 0.3s;
 }
 
 @keyframes clip {
