@@ -13,7 +13,6 @@ import Case from "@/app/assets/Case.json";
 function Home2() {
 
   return (
-    <div>
       <section className="home2">
         <div className="portfolio">
           <div className="container">
@@ -79,7 +78,6 @@ function Home2() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
