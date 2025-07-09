@@ -67,13 +67,13 @@
 :root {
   --base-color: #fff3e8;
   --text-color: #000;
-  --secondary-text: gray;
-  --tertiary-text: rgba(0, 0, 0, 0.5);
+  --secondary-text: rgba(0, 0, 0, 0.5);
+  --tertiary-text: rgba(0, 0, 0, 0.7);
   --primary-color: rgba(0, 0, 0, 0.16);
   --secondary-color: white;
   --accent-color: black;
   --tertiary-color: gray;
-  --accent-color2: rgba(0, 0, 0, 0.16);
+  --accent-color2: rgba(0, 0, 0, 0.2);
   --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
   --text-color2: #000;
   --palette-color: #006400;
@@ -90,13 +90,13 @@
 [data-theme="dark"] {
   --base-color: black;
   --text-color: #fff3e8;
-  --secondary-text: gray;
-  --tertiary-text: rgba(255, 243, 232, 0.5);
+  --secondary-text: rgba(255, 243, 232, 0.5);
+  --tertiary-text: rgba(255, 243, 232, 0.7);
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
   --tertiary-color: white;
-  --accent-color2: #fff3e8;
+  --accent-color2: rgba(255, 243, 232, 0.2);;
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
@@ -420,7 +420,7 @@ h2 {
   content: '';
   width: 100%;
   height: 0.05rem;
-  background: var(--secondary-text);
+  background: var(--tertiary-text);
   position: absolute;
   bottom: -0.37rem;
   left: 0;
@@ -842,7 +842,7 @@ outline: none;
   position: relative;
   margin: 0;
   -webkit-text-stroke: 2px var(--text-color);
-  color: var(--tertiary-text);
+  color: var(--secondary-text);
   font-size: 8rem;
   font-family: 'tan' , serif;
   font-weight: 100; 
@@ -1320,7 +1320,7 @@ outline: none;
 }
 
 .tab-titles ul li a {
-  color: var(--tertiary-color);
+  color: var(--tertiary-text);
   text-decoration: none;
   display: inline;
   text-align: center;
@@ -1395,7 +1395,7 @@ outline: none;
 }
 
 .tab-contents-exp h4 {
-  border-left: 2px solid var(--tertiary-color);
+  border-left: 2px solid var(--tertiary-text);
   padding-left: 0.6rem;
   margin: 0.6rem;
   list-style: none;
@@ -1420,7 +1420,6 @@ outline: none;
 }
 
 .tools {
-  color: var(--tertiary-text);
   list-style: none;
 }
 
@@ -1525,7 +1524,7 @@ div#lottie2 path {
 div#lottie3 path {
     stroke: var(--text-color);
     fill: var(--base-color);
-    stroke-width: 1;
+    stroke-width: 3;
 }
 
 div#lottie4 path {
@@ -1694,10 +1693,10 @@ form textarea {
   margin-left: 1.2rem;
   border: 0;
   outline: none;
-  background: var(--tertiary-text);
+  background: var(--accent-color2);
   padding: 1rem;
   margin-bottom: 0.6rem;
-  color: black;
+  color: var(--base-color);
   font-size: 1rem;
   border-radius: 6px;
 }
@@ -1816,6 +1815,7 @@ form textarea {
     text-shadow: none;
     position: relative;
     width: fit-content;
+    color: var(--tertiary-text);
   }
 
   .navbar.open a {
@@ -1990,6 +1990,7 @@ form textarea {
     text-shadow: none;
     position: relative;
     border-radius: none;
+    color: var(--tertiary-text);
   }
 
   .navbar.open a {
