@@ -12,7 +12,6 @@ import Lottie from "lottie-react";
 
 function About3() {
   return (
-    <div>
       <section className="about3">
         <div className="services">
           <div className="container">
@@ -124,7 +123,6 @@ function About3() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
