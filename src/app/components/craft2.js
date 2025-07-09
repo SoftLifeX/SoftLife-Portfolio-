@@ -2,7 +2,6 @@ import React from 'react'
 
 function Craft2() {
   return (
-    <div>
       <section className="craft2" data-scroll data-scroll-speed={0.1}>
         <div className="review">
           <div className="container">
@@ -70,7 +69,6 @@ function Craft2() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
