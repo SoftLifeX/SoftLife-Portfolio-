@@ -78,7 +78,12 @@ function Home1() {
   
     
   return (
-      <section className="home1">
+      <motion.section
+      initial={{ clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%) }}
+       whileInView={{clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)}}
+      viewport={{ once: true }}
+       transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+    className="home1">
        <Header />
         <div className="homepage">
       <div className="pointer">
@@ -89,7 +94,7 @@ function Home1() {
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
        transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-    className="statusContainer scale">
+  className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
      
@@ -113,7 +118,7 @@ function Home1() {
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.7, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             >
                 <span id="helloText" />
                 <span className="waving-hand">
@@ -135,7 +140,7 @@ function Home1() {
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
+            transition={{ delay: 0.85, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
                className="hometext scale">
                 an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
                   <br /> Software Engineer, Designer  & <br />{" "}
@@ -165,7 +170,7 @@ function Home1() {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
          className="btnContainer scale">
             <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -177,7 +182,7 @@ function Home1() {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.6, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
          className="btnContainer2 scale">
             <Magnetic>
             <Link href="/contact" className="btn2">
