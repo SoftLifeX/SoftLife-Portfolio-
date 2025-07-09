@@ -939,24 +939,44 @@ outline: none;
 
 #helloText:after {
   content: " ";
-  animation: animate 7.5s linear infinite;
+  animation: animate 15s linear infinite;
 }
 
 @keyframes animate {
-  0% {
+  10% {
     content: "Hola";
   }
 
-  25% {
+  20% {
     content: "Hey";
   }
 
-  50% {
+  30% {
     content: "Guten Tag";
   }
 
-  75% {
+  40% {
+    content: "Nǐ hǎo";
+  }
+
+  50% {
+    content: "سلام";
+  }
+
+  60% {
     content: "Bonjour";
+  }
+
+  70% {
+    content: "مرحبا";
+  }
+
+  80% {
+    content: "óla";
+  }
+
+  90% {
+    content: "नमस्ते";
   }
 
   100% {
