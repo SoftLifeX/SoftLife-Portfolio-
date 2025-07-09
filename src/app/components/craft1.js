@@ -10,7 +10,6 @@ function Craft1() {
   const [action,  setAction] = useState("Project");
   
   return (
-    <div>
       <section className="craft1">
         <div className="portfolio">
           <div className="container">
@@ -127,7 +126,6 @@ function Craft1() {
          </div>
         </div>
       </section>
-    </div>
   );
 }
 
