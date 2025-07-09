@@ -10,7 +10,6 @@ import About from "@/app/assets/About.json";
 function About1() {
 
     return (
-    <div>
       <section className="about1">
         <div className="about">
         <motion.h5
@@ -70,7 +69,6 @@ function About1() {
           </div>
         </div>
       </section>
-    </div>
   );
 }
 
