@@ -216,7 +216,7 @@ outline: none;
 }
 
 @keyframes backdrop {
- 0%,50% { 
+ 0%,60% { 
    background: var(--text-color);
  }
  100% {
@@ -249,8 +249,8 @@ section {
 
 @keyframes clip {
  from {
-   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-   transform: scale(0.21);
+   clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);
+   transform: scale(0.1);
  }
  to {
    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); 
