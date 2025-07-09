@@ -229,12 +229,6 @@ section {
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
   margin-top: 0;
-  animation: clip 1s forwards;
-}
-
-@keyframes clip {
- from { clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); }
- to { clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); }
 }
 
 .home2 {
