@@ -1443,7 +1443,7 @@ outline: none;
 }
 
 .tab-contents-exp h4 {
-  border-left: 2px solid var(--tertiary-text);
+  border-left: 2px solid var(--tertiary-color);
   padding-left: 0.6rem;
   margin: 0.6rem;
   list-style: none;
@@ -1482,7 +1482,6 @@ transition: transform 0.5s ease-in-out;
 }
 
 .techstack svg{
-  background: transparent;
   margin: auto;
   }
 
