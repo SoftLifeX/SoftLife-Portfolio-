@@ -24,7 +24,6 @@ function About2() {
 
   const [action,  setAction] = useState("Tools");
   return (
-    <div>
       <section className="about2">
      <div id="stack"> stack </div>
         <div className="container">
@@ -235,7 +234,6 @@ function About2() {
      <p className="fakemargin">margin</p>
         </div>
       </section>
-    </div>
   );
 }
 
