@@ -173,27 +173,8 @@ function Header() {
 		"M70 49.5C70 60.8218 60.8218 70 49.5 70C38.1782 70 29 60.8218 29 49.5C29 38.1782 38.1782 29 49.5 29C39 45 49.5 59.5 70 49.5Z";
 
   return (
-    <div>
       <header className="top">
-        {/* <a href="/" className={`logo ${scroll ? "stickylogo" : ""}`}>
-          <span>&lt;</span>
-          <span>S</span>
-          <span>o</span>
-          <span>f</span>
-          <span>t</span>
-          <span>‎</span>
-          <span>L</span>
-          <span>i</span>
-          <span>f</span>
-          <span>e</span>
-          <span>‎</span>
-          <span>D</span>
-          <span>e‎</span>
-          <span>v</span>
-          <span>‎</span>
-          <span>/</span>
-          <span>&gt;</span>
-        </a>*/}
+        
      
          <span
           ref={buttonRef}
@@ -294,7 +275,6 @@ function Header() {
          </ul>          
         </nav>
       </header>
-    </div>
   );
 }
 
