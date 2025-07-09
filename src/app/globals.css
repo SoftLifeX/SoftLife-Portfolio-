@@ -317,127 +317,6 @@ section {
      backdrop-filter: blur(5px);
 }
 
-.stickylogo {
-  position: fixed;
-  width: 100%;
-  background-color: transparent;
-}
-
-.logo {
-  position: fixed;
-  left: 5svw;
-  top: 1.7rem;
-  font-size: 1.2rem;
-  color: var(--text-color);
-  text-decoration: none;
-  width: fit-content;
-}
-
-.logo span {
-  opacity: 0;
-  animation-name: fadein;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  font-family: 'chillen', serif;
-  padding-left: 0.2rem;
-}
-
-.logo span:nth-child(1) {
-  animation-delay: 0.15s;
-}
-
-.logo span:nth-child(2) {
-  animation-delay: 0.9s;
-}
-
-.logo span:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.logo span:nth-child(4) {
-  animation-delay: 0;
-}
-
-.logo span:nth-child(5) {
-  animation-delay: 0.05s;
-}
-
-.logo span:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.logo span:nth-child(7) {
-  animation-delay: 0.45s;
-}
-
-.logo span:nth-child(8) {
-  animation-delay: 0.7s;
-}
-
-.logo span:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.logo span:nth-child(10) {
-  animation-delay: 0.95s;
-}
-
-.logo span:nth-child(11) {
-  animation-delay: 0.75s;
-}
-
-.logo span:nth-child(12) {
-  animation-delay: 1s;
-}
-
-.logo span:nth-child(13) {
-  animation-delay: 0.33s;
-}
-
-.logo span:nth-child(14) {
-  animation-delay: 0.24s;
-}
-
-.logo span:nth-child(15) {
-  animation-delay: 1.2s;
-}
-
-.logo span:nth-child(16) {
-  animation-delay: 1.08s;
-}
-
-.logo:hover span {
-  opacity: 1;
-  animation-name: fadeout;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-/*logo animation*/
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .navbar {
   position: fixed;
   left: 50%;
@@ -465,7 +344,7 @@ section {
 
 .navbar a {
   display: inline;
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
   border-radius: 30px;
   text-decoration: none;
   margin-left: 2.5rem;
@@ -481,7 +360,7 @@ section {
 .navbar a:hover {
   background: transparent;
   padding: 0.25rem 1rem;
-  box-shadow: 0 0 0.10rem var(--secondary-text);
+  box-shadow: 0 0 0.10rem var(--tertiary-text);
 }
 
 .navbar a.active {
@@ -609,7 +488,7 @@ h3 {
 h4 {
   font-size: 1rem;
   cursor: text;
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
   text-align: left;
 }
 
@@ -994,7 +873,7 @@ outline: none;
 
 .hometext{
   margin: 0;
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
 }
 
 
@@ -1019,7 +898,7 @@ outline: none;
 }
 
 .scramble {
-  color: #aaa;
+  color: var(--tertiary-text);
   opacity: 0.4;
 }
 
@@ -1154,7 +1033,7 @@ outline: none;
   padding-top: 3rem;
   padding-bottom: 0.6rem;
   padding-left: 1.5rem;
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
 }
 
 .portfolio h1 {
@@ -1163,7 +1042,7 @@ outline: none;
 
 .portfolio .blocktext {
   color: var(--base-color);
-  background: linear-gradient(to right, var(--secondary-text), var(--text-color));
+  background: linear-gradient(to right, var(--tertiary-text), var(--text-color));
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
 }
@@ -1316,7 +1195,7 @@ outline: none;
   width: 100%;
   text-align: center;
   padding: 1.56rem 0;
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
 }
 
 
@@ -1541,7 +1420,7 @@ outline: none;
 }
 
 .tools {
-  color: var(--secondary-text);
+  color: var(--tertiary-text);
   list-style: none;
 }
 
@@ -1561,7 +1440,7 @@ transition: transform 0.5s ease-in-out;
   }
 
 .techstack p {
-  color: var(--text-color,);
+  color: var(--text-color);
   font-size: 0.8rem;
   list-style: none;
   transition: 0.5s ease-in-out;
@@ -1646,6 +1525,12 @@ div#lottie2 path {
 div#lottie3 path {
     stroke: var(--text-color);
     fill: var(--base-color);
+    stroke-width: 1;
+}
+
+div#lottie4 path {
+    stroke: var(--text-color);
+    fill: var(--base-color);
 }
 
 
@@ -1665,6 +1550,16 @@ div#lottie2 {
 }
 
 div#lottie3 {
+  width: 2.2rem;
+  height: 2.2rem;
+  color: var(--text-color);
+  padding: 0;
+  position: relative;
+  top: 0.4rem;
+  display: inline-block;
+}
+
+div#lottie4 {
   width: 1.65rem;
   height: 1.65rem;
   color: var(--text-color);
@@ -1799,7 +1694,7 @@ form textarea {
   margin-left: 1.2rem;
   border: 0;
   outline: none;
-  background: var(--accent-color2);
+  background: var(--tertiary-text);
   padding: 1rem;
   margin-bottom: 0.6rem;
   color: black;
@@ -1954,7 +1849,7 @@ form textarea {
     content: '';
     width: 0;
     height: 0.10rem;
-    background: var(--secondary-text);
+    background: var(--tertiary-text);
     position: absolute;
     left: 50%;
     bottom: -0.37rem;
@@ -1997,7 +1892,7 @@ form textarea {
     width: 100%;
     padding: 0;
     box-shadow: none;
-    color: var(--secondary-text);
+    color: var(--tertiary-text);
   }
 
   .navbar span a::after {
@@ -2128,7 +2023,7 @@ form textarea {
     content: '';
     width: 0%;
     height: 0.10rem;
-    background: var(--secondary-text);
+    background: var(--tertiary-text);
     position: absolute;
     left: 0;
     bottom: -0.37rem;
@@ -2186,7 +2081,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
+    height: 100svh;
     width: 100%;
     left: 0;
     right: 0;
@@ -2196,7 +2091,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
+    height: 100svh;
     width: 100%;
     left: 0;
     right: 0;
@@ -2220,7 +2115,7 @@ form textarea {
 
   .PageIn1 {
     width: 100%;
-    height: 100%;
+    height: 100svh;
     position: fixed;
     background: var(--text-color);
     left: 0;
@@ -2229,7 +2124,7 @@ form textarea {
 
   .PageIn2 {
     width: 100%;
-    height: 100%;
+    height: 100svh;
     position: fixed;
     background: var(--text-color);
     right: 0;
@@ -2267,7 +2162,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
+    height: 100svh;
     width: 100%;
     left: 0;
     right: 0;
@@ -2277,7 +2172,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
+    height: 100svh;
     width: 100%;
     left: 0;
     right: 0;
@@ -2301,7 +2196,7 @@ form textarea {
 
   .PageIn1 {
     width: 100%;
-    height: 100%;
+    height: 100svh;
     position: fixed;
     background: var(--text-color);
     left: 0;
@@ -2310,7 +2205,7 @@ form textarea {
 
   .PageIn2 {
     width: 100%;
-    height: 100%;
+    height: 100svh;
     position: fixed;
     background: var(--text-color);
     right: 0;
