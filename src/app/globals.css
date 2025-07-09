@@ -68,7 +68,7 @@
   --base-color: #fff3e8;
   --text-color: #000;
   --secondary-text: rgba(0, 0, 0, 0.5);
-  --tertiary-text: rgba(0, 0, 0, 0.7);
+  --tertiary-text: rgba(0, 0, 0, 0.8);
   --primary-color: rgba(0, 0, 0, 0.16);
   --secondary-color: white;
   --accent-color: black;
@@ -91,12 +91,12 @@
   --base-color: black;
   --text-color: #fff3e8;
   --secondary-text: rgba(255, 243, 232, 0.5);
-  --tertiary-text: rgba(255, 243, 232, 0.7);
+  --tertiary-text: rgba(255, 243, 232, 0.8);
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
   --tertiary-color: white;
-  --accent-color2: rgba(255, 243, 232, 0.2);;
+  --accent-color2: rgba(255, 243, 232, 0.5);;
   --border-color: rgba(255, 255, 255, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
@@ -1524,7 +1524,6 @@ div#lottie2 path {
 div#lottie3 path {
     stroke: var(--text-color);
     fill: var(--base-color);
-    stroke-width: 3;
 }
 
 div#lottie4 path {
@@ -1815,7 +1814,7 @@ form textarea {
     text-shadow: none;
     position: relative;
     width: fit-content;
-    color: var(--tertiary-text);
+    color: var(--base-color);
   }
 
   .navbar.open a {
@@ -1990,7 +1989,7 @@ form textarea {
     text-shadow: none;
     position: relative;
     border-radius: none;
-    color: var(--tertiary-text);
+    color: var(--base-color);
   }
 
   .navbar.open a {
@@ -2024,7 +2023,7 @@ form textarea {
     content: '';
     width: 0%;
     height: 0.10rem;
-    background: var(--tertiary-text);
+    background: var(--base-color);
     position: absolute;
     left: 0;
     bottom: -0.37rem;
@@ -2082,7 +2081,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100svh;
+    height: 100%;
     width: 100%;
     left: 0;
     right: 0;
@@ -2092,7 +2091,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100svh;
+    height: 100%;
     width: 100%;
     left: 0;
     right: 0;
@@ -2116,7 +2115,7 @@ form textarea {
 
   .PageIn1 {
     width: 100%;
-    height: 100svh;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
     left: 0;
@@ -2125,7 +2124,7 @@ form textarea {
 
   .PageIn2 {
     width: 100%;
-    height: 100svh;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
     right: 0;
@@ -2163,7 +2162,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100svh;
+    height: 100%;
     width: 100%;
     left: 0;
     right: 0;
@@ -2173,7 +2172,7 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100svh;
+    height: 100%;
     width: 100%;
     left: 0;
     right: 0;
@@ -2197,7 +2196,7 @@ form textarea {
 
   .PageIn1 {
     width: 100%;
-    height: 100svh;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
     left: 0;
@@ -2206,7 +2205,7 @@ form textarea {
 
   .PageIn2 {
     width: 100%;
-    height: 100svh;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
     right: 0;
