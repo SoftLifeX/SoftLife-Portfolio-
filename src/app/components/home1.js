@@ -191,7 +191,7 @@ function Home1() {
             </Magnetic>
            </motion.div>
         </div>
-      </section>
+      </motion.section>
   );
 }
 
