@@ -2,6 +2,7 @@
 
 import { AnimatePresence } from "framer-motion";
 import Header from "./header";
+import Contact from "./contact";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -25,7 +26,8 @@ const TransitionProvider = ({ children }) => {
 
   }
 
-      const noHeaderPaths = ['/'];
+   const noHeaderPaths = ['/'];
+   const noContactPaths = ['/contact'];
 
   const pathName = usePathname();
 
@@ -88,6 +90,7 @@ const TransitionProvider = ({ children }) => {
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
+      {!noContactPaths.includes(pathName) && <Contact />}
       </div>
     </AnimatePresence>
   );
