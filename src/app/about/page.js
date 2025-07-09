@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import About1 from "../components/about1";
 import About2 from "../components/about2";
 import About3 from "../components/about3";
-import Contact from "../components/contact";
 
 const About = () => {
 const pathName = usePathname();
@@ -25,7 +24,6 @@ const pathName = usePathname();
       <About1 />
       <About2 />
       <About3 />
-      <Contact />
     </div>
    
   );
