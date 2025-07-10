@@ -127,9 +127,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
-     <TransitionProvider>
            {children}
-  </TransitionProvider>
   </ThemeProvider>
       </body>
     </html>
