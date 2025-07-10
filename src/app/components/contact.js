@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useEffect } from "react";
 import Magnetic from "./magnetic";
 import Lottie from "lottie-react";
