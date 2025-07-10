@@ -47,45 +47,61 @@ const TransitionProvider = ({ children }) => {
         {isLoading && <Preloader />}
       <div key={pathName}>
          <motion.div
-            className='PageIn'
+            className='PageExit'
             >
         <motion.span
-          className="PageIn1"
-          animate={{ width: "0vw", transformOrigin: 'left' }}
-          exit={{ width: "50vw", transformOrigin: 'left' }}
-          transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-        />
+          className="PageExit1"
+          animate={{ scaleX: 0, transformOrigin: 'left' }}
+          exit={{ scaleX: 1, transformOrigin: 'left' }}
+          transition={{ duration: 0.35, ease: [0.250, 0.460, 0.450, 0.940] }}
+        >
+        <motion.div />
+       <motion.div transition={{delay: 0.2}}/>
+      <motion.div transition={{delay: 0.4}}/>
+        </motion.span>
        <motion.span
-          className="PageIn2"
-          animate={{ width: "0vw", transformOrigin: 'right' }}
-          exit={{ width: "50vw", transformOrigin: 'right' }}
-          transition={{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
-        />
+          className="PageExit2"
+          animate={{ scaleX: 0, transformOrigin: 'right' }}
+          exit={{ scaleX: 1, transformOrigin: 'right' }}
+          transition={{ duration: 0.35, ease: [0.250, 0.460, 0.450, 0.940] }}
+        >
+       <motion.div />
+       <motion.div transition={{delay: 0.2}}/>
+      <motion.div transition={{delay: 0.4}}/>
+       </motion.span>
       </motion.div>
         <motion.div
           className="PagePath"
           initial={{ display: 'flex' }}
           animate={{ display: 'none' }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 0.2, duration: 0.3, ease: "easeIn" }}
+          transition={{ delay: 0.2, duration: 0.1, ease: "easeIn" }}
         >
           {paths[pathName]}
         </motion.div>
          
       <motion.div
-         className='PageOut'
-         transition={{ delay: 1}}
+         className='PageEnter'
+         transition={{ delay: 0.6}}
          >
         <motion.span
-          className="PageOut1"
+          className="PageEnter1"
           initial={{ width: "50vw", transformOrigin: 'left' }}
           animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
-        />
+        >
+        <motion.div />
+       <motion.div transition={{delay: 0.2}}/>
+      <motion.div transition={{delay: 0.4}}/>
+        </motion.span>
        <motion.span
-          className="PageOut2"
+          className="PageEnter2"
           initial={{ width: "50vw", transformOrigin: 'right' }}
           animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
-        />
+        >
+       <motion.div />
+       <motion.div transition={{delay: 0.2}}/>
+      <motion.div transition={{delay: 0.4}}/>
+       </motion.span>
       </motion.div>
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
