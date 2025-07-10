@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./header";
+import Contact from "./contact";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import TransitionProvider from "./components/transitionProvider";
@@ -127,7 +129,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
-           {children}
+           <StickyCursor/>
+        {!noHeaderPaths.includes(pathName) && <Header />}
+        <div>{children}</div>
+      {!noContactPaths.includes(pathName) && <Contact />}
   </ThemeProvider>
       </body>
     </html>
