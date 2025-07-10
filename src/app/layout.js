@@ -1,4 +1,4 @@
-'use client'
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
@@ -83,10 +83,6 @@ export const metadata = {
   
 
 export default function RootLayout({ children }) {
-  const noHeaderPaths = ['/'];
-   const noContactPaths = ['/contact'];
-
-  const pathName = usePathname();
   
   return (
     <html lang="en" suppressHydrationWarning>
@@ -137,10 +133,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
-           <StickyCursor/>
-        {!noHeaderPaths.includes(pathName) && <Header />}
-        <div>{children}</div>
-      {!noContactPaths.includes(pathName) && <Contact />}
+     <TransitionProvider>
+       {children}
+     </TransitionProvider>
   </ThemeProvider>
       </body>
     </html>
