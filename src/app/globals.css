@@ -2131,7 +2131,7 @@ form textarea {
     scale: 0.92;
   }
 
-  .PageOut1 {
+  .PageEnter1 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2141,7 +2141,7 @@ form textarea {
     right: 0;
   }
   
-  .PageOut2 {
+  .PageEnter2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2167,7 +2167,7 @@ form textarea {
     font-family: 'penna', serif;
   }
 
-  .PageIn1 {
+  .PageExit1 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2176,7 +2176,7 @@ form textarea {
     z-index: 990;
   }
 
-  .PageIn2 {
+  .PageExit2 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2212,7 +2212,7 @@ form textarea {
  }
 }
 
-.PageOut1 {
+.PageEnter1 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2222,7 +2222,7 @@ form textarea {
     right: 0;
   }
   
-  .PageOut2 {
+  .PageEnter2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
@@ -2248,7 +2248,7 @@ form textarea {
     font-family: 'penna', serif; 
   }
 
-  .PageIn1 {
+  .PageExit1 {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -2257,7 +2257,7 @@ form textarea {
     z-index: 990;
   }
 
-  .PageIn2 {
+  .PageExit2 {
     width: 100%;
     height: 100%;
     position: fixed;
