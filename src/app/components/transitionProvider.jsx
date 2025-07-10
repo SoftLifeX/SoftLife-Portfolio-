@@ -51,25 +51,45 @@ const TransitionProvider = ({ children }) => {
             >
         <motion.span
           className="PageExit1"
+          transition={{ duration: 0.35 }}
+        >
+        <motion.div 
+           animate={{ scaleX: 0, transformOrigin: 'left' }}
+          exit={{ scaleX: 1, transformOrigin: 'left' }}
+           transition={{ ease: [0.250, 0.460, 0.450, 0.940] }}
+           />
+       <motion.div 
           animate={{ scaleX: 0, transformOrigin: 'left' }}
           exit={{ scaleX: 1, transformOrigin: 'left' }}
-          transition={{ duration: 0.35, ease: [0.250, 0.460, 0.450, 0.940] }}
-        >
-        <motion.div />
-       <motion.div transition={{delay: 0.2}}/>
-      <motion.div transition={{delay: 0.4}}/>
+          transition={{ delay: 0.2, ease: [0.250, 0.460, 0.450, 0.940] }}/>
+      <motion.div
+         animate={{ scaleX: 0, transformOrigin: 'left' }}
+          exit={{ scaleX: 1, transformOrigin: 'left' }}
+         transition={{delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940]}}/>
         </motion.span>
+            
        <motion.span
           className="PageExit2"
-          animate={{ scaleX: 0, transformOrigin: 'right' }}
-          exit={{ scaleX: 1, transformOrigin: 'right' }}
-          transition={{ duration: 0.35, ease: [0.250, 0.460, 0.450, 0.940] }}
+          transition={{ duration: 0.35 }}
         >
-       <motion.div />
-       <motion.div transition={{delay: 0.2}}/>
-      <motion.div transition={{delay: 0.4}}/>
+       <motion.div
+         animate={{ scaleX: 0, transformOrigin: 'right' }}
+          exit={{ scaleX: 1, transformOrigin: 'right' }}
+         transition={{ ease: [0.250, 0.460, 0.450, 0.940] }}
+          />
+       <motion.div
+         animate={{ scaleX: 0, transformOrigin: 'right' }}
+          exit={{ scaleX: 1, transformOrigin: 'right' }}
+         transition={{ delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940] }}
+          />
+      <motion.div
+         animate={{ scaleX: 0, transformOrigin: 'right' }}
+          exit={{ scaleX: 1, transformOrigin: 'right' }}
+         transition={{ delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940] }}
+         />
        </motion.span>
       </motion.div>
+         
         <motion.div
           className="PagePath"
           initial={{ display: 'flex' }}
@@ -86,21 +106,40 @@ const TransitionProvider = ({ children }) => {
          >
         <motion.span
           className="PageEnter1"
-          initial={{ width: "50vw", transformOrigin: 'left' }}
-          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
+         transition= {{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
         >
-        <motion.div />
-       <motion.div transition={{delay: 0.2}}/>
-      <motion.div transition={{delay: 0.4}}/>
+        <motion.div 
+           initial={{ scaleX: 1, transformOrigin: 'left' }}
+          animate={{ scaleX: 0, transformOrigin: 'left'}}
+           />
+       <motion.div
+          initial={{ scaleX: 1, transformOrigin: 'left' }}
+          animate={{ scaleX: 0, transformOrigin: 'left'}}
+          transition={{delay: 0.2}}
+          />
+      <motion.div 
+         initial={{ scaleX: 1, transformOrigin: 'left' }}
+          animate={{ scaleX: 0, transformOrigin: 'left'}}
+         transition={{delay: 0.4}}
+         />
         </motion.span>
+         
        <motion.span
           className="PageEnter2"
-          initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
-        >
-       <motion.div />
-       <motion.div transition={{delay: 0.2}}/>
-      <motion.div transition={{delay: 0.4}}/>
+          transition= {{ duration: 0.35, ease: [0.76, 0, 0.24, 1] }}
+          >
+       <motion.div 
+          initial={{ scaleX: 1, transformOrigin: 'right' }}
+          animate={{ scaleX: 0, transformOrigin: 'right'}}
+          />
+       <motion.div 
+          initial={{ scaleX: 1, transformOrigin: 'right' }}
+          animate={{ scaleX: 0, transformOrigin: 'right'}}
+          transition={{delay: 0.2}}/>
+      <motion.div 
+         initial={{ scaleX: 1, transformOrigin: 'right' }}
+          animate={{ scaleX: 0, transformOrigin: 'right'}} 
+         transition={{delay: 0.4}}/>
        </motion.span>
       </motion.div>
       <StickyCursor/>
