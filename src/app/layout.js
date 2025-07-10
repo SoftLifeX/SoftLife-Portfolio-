@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./header";
-import Contact from "./contact";
+import Header from "./components/header";
+import Contact from "./components/contact";
+import StickyCursor from "./components/stickyCursor"
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import TransitionProvider from "./components/transitionProvider";
