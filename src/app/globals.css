@@ -2135,21 +2135,29 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
   }
+
+.PageEnter1 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+}
   
   .PageEnter2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
   }
+
+.PageEnter2 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+}
 
   .PagePath {
     position: fixed;
@@ -2167,22 +2175,30 @@ form textarea {
     font-family: 'penna', serif;
   }
 
-  .PageExit1 {
-    width: 100%;
-    height: 100%;
+    .PageExit1 {
     position: fixed;
     background: var(--text-color);
     left: 0;
     z-index: 990;
   }
 
+.PageExit1 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+    }
+
   .PageExit2 {
-    width: 100%;
-    height: 100%;
     position: fixed;
     background: var(--text-color);
     right: 0;
     z-index: 990;
+}
+
+.PageExit2 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
   }
 
 .loader {
@@ -2216,21 +2232,29 @@ form textarea {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
   }
+
+.PageEnter1 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+}
   
   .PageEnter2 {
     position: fixed;
     background: var(--text-color);
     z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
   }
+
+.PageEnter2 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+}
 
   .PagePath {
     position: fixed;
@@ -2249,21 +2273,29 @@ form textarea {
   }
 
   .PageExit1 {
-    width: 100%;
-    height: 100%;
     position: fixed;
     background: var(--text-color);
     left: 0;
     z-index: 990;
   }
 
+.PageExit1 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
+    }
+
   .PageExit2 {
-    width: 100%;
-    height: 100%;
     position: fixed;
     background: var(--text-color);
     right: 0;
     z-index: 990;
+}
+
+.PageExit2 > div {
+  width: 100%;  
+  height: 33.33%;
+  height: calc(100% / 3);
 }
 
 .loader {
@@ -2287,7 +2319,7 @@ form textarea {
     position: fixed;
       background: var(--text-color);
       z-index: 9990;
-      height: 100svh;
-      width: 100svw;
+      height: 100%;
+      width: 100%;
      top: 0;
 }
