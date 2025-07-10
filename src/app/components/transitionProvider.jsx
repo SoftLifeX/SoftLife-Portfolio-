@@ -46,7 +46,7 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-         <motion.div
+         {/* <motion.div
             className='PageExit'
             >
         <motion.span
@@ -143,7 +143,7 @@ const TransitionProvider = ({ children }) => {
           animate={{ scaleX: 0, transformOrigin: 'right'}} 
          transition={{delay: 0.4, ease: [0.550, 0.085, 0.680, 0.530]}}/>
        </motion.span>
-      </motion.div>
+      </motion.div>*/}
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
