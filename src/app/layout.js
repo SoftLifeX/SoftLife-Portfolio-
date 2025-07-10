@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Contact from "./components/contact";
 import StickyCursor from "./components/stickyCursor"
+import { usePathname } from "next/navigation";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import TransitionProvider from "./components/transitionProvider";
@@ -81,6 +82,11 @@ export const metadata = {
   
 
 export default function RootLayout({ children }) {
+  const noHeaderPaths = ['/'];
+   const noContactPaths = ['/contact'];
+
+  const pathName = usePathname();
+  
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
