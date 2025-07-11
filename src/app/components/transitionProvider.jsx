@@ -13,7 +13,6 @@ import StickyCursor from "../components/stickyCursor"
 
 const TransitionProvider = ({ children }) => {
 
-   useRevealer();
 
    const [isLoading, setIsLoading] = useState(true);
 
