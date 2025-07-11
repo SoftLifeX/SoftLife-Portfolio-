@@ -28,7 +28,9 @@ function Home1() {
     const changeWord = () => {
         if (currentWord < ITEMS.length - 1) {
             setCurrentWord((curr) => curr + 1);
-        } else {
+        },
+      currentWord == 0 ? 300 : 566;
+       else {
             setCurrentWord(0);
         }
     };
