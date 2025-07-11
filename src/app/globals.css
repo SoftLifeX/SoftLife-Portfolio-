@@ -2143,6 +2143,8 @@ form textarea {
     z-index: 990;
     left: 0;
     top: 0;
+    transform-origin: center top;
+    pointer-event: none;
 }
 
 .loader {
