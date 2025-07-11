@@ -12,6 +12,24 @@ import Preloader from "../Preloader"
 import StickyCursor from "../components/stickyCursor"
 
 
+  const router = useTransitionRouter();
+
+  export function triggerPageTransition() {
+  document.documentElement.animate([
+    {
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+    },
+    {
+      clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)"
+    },
+  ], {
+    duration: 2000,
+    easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
+    pseudoElement: '::view-transition-new(root)'
+  });
+  }
+
+
 const TransitionProvider = ({ children }) => {
 
 
@@ -33,33 +51,6 @@ const TransitionProvider = ({ children }) => {
    const noContactPaths = ['/contact'];
 
   const pathName = usePathname();
-  const router = useTransitionRouter();
-
-  export function triggerPageTransition() {
-  document.documentElement.animate([
-    {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
-    },
-    {
-      clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)"
-    },
-  ], {
-    duration: 2000,
-    easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
-    pseudoElement: '::view-transition-new(root)'
-  });
-}
-
-return (
-  <div className="nav">
-    <div className="nav__col">
-      <div className="nav__logo">
-        <Link href="/">myuozok</Link>
-      </div>
-    </div>
-  </div>
-);
-
 
     useEffect(() =>{
       setTimeout(() => {
