@@ -1,7 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
-import {useGSAP} from 'gsap/react';
-import CustomEase from 'gsap/CustomEase';
+import gsap from 'gsap';
 
 
 
