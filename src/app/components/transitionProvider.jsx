@@ -33,6 +33,11 @@ const TransitionProvider = ({ children }) => {
    const noContactPaths = ['/contact'];
 
   const pathName = usePathname();
+  const router = useTransitionRouter();
+
+   function pageTransition {
+      
+   }
 
 
     useEffect(() =>{
