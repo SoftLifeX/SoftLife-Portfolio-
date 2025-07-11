@@ -11,7 +11,7 @@ function Revealer() {
     
     useEffect( () => {
     gsap.registerPlugin(CustomEase);
-    gsap.to(revealer, {
+    gsap.to(revealer.current, {
       scaleY: 0,
       duration: 1.25,
       delay: 1,
