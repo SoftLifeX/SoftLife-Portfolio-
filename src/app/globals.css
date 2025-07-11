@@ -2066,29 +2066,6 @@ form textarea {
     margin-bottom: 0;
   }
 
-  .home2 {
-    scale: 0.92;
-  }
-
-  .PageEnter1 {
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    right: 0;
-  }
-  
-  .PageEnter2 {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    right: 0;
-  }
-
   .PagePath {
     position: fixed;
     margin: auto;
@@ -2105,24 +2082,14 @@ form textarea {
     font-family: 'penna', serif;
   }
 
-    .PageExit1 {
-      height: 100%;
+    .revealer{
+   height: 100%;
     width: 100%;
-    display: grid;
     position: fixed;
     background: var(--text-color);
+    z-index: 990;
     left: 0;
-    z-index: 990;
-  }
-  
-  .PageExit2 {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    position: fixed;
-    background: var(--text-color);
-    right: 0;
-    z-index: 990;
+    top: 0;
 }
 
 .loader {
@@ -2152,28 +2119,6 @@ form textarea {
  }
 }
 
-.PageEnter1 {
-  height: 100%;
-    width: 100%;
-    display: grid;
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    right: 0;
-  }
-  
-  .PageEnter2 {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    right: 0;
-  }
-
   .PagePath {
     position: fixed;
     margin: auto;
@@ -2189,25 +2134,16 @@ form textarea {
     height: fit-content;
     font-family: 'penna', serif; 
   }
+}
 
-  .PageExit1 {
-    height: 100%;
+.revealer{
+   height: 100%;
     width: 100%;
-    display: grid;
     position: fixed;
     background: var(--text-color);
+    z-index: 990;
     left: 0;
-    z-index: 990;
-  }
-
-  .PageExit2 {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    position: fixed;
-    background: var(--text-color);
-    right: 0;
-    z-index: 990;
+    top: 0;
 }
 
 .loader {
