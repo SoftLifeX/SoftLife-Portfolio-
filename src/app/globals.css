@@ -1,10 +1,4 @@
 @font-face {
-  font-family: 'dot';
-  src: url(assets/fonts/LaradotSerif-Regular.ttf);
-}
-
-
-@font-face {
   font-family: 'time';
   src: url(assets/fonts/Timeless.ttf);
 }
@@ -20,48 +14,8 @@
 }
 
 @font-face {
-  font-family: 'libre';
-  src: url(assets/fonts/LibreCaslonText-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'aboreto';
-  src: url(assets/fonts/Aboreto-Regular.ttf);
-}
-
-@font-face {
   font-family: 'penna';
   src: url(assets/fonts/penna.otf);
-}
-
-@font-face {
-  font-family: 'audrey';
-  src: url(assets/fonts/Audrey-Normal.otf);
-}
-
-@font-face {
-  font-family: 'lemon';
-  src: url(assets/fonts/LEMONMILK-Light.otf);
-}
-
-@font-face {
-  font-family: 'star';
-  src: url(assets/fonts/The\ Star\ in\ the\ Midnight.ttf);
-}
-
-@font-face {
-  font-family: 'memph';
-  src: url(assets/fonts/Memphis\ River.otf);
-}
-
-@font-face {
-  font-family: 'aris';
-  src: url(assets/fonts/Arista-Pro-Alternate-Bold-trial.ttf);
-}
-
-@font-face {
-  font-family: "chillen";
-  src: url(assets/fonts/Chillen.ttf);
 }
 
 :root {
@@ -461,8 +415,6 @@ h1 {
   text-decoration: none;
   cursor: text;
   font-family: 'tan', serif;
- /* letter-spacing: 0.2rem;
-  line-height: 1.2;*/
   font-weight: 100;
 }
 
@@ -735,11 +687,6 @@ outline: none;
 }
 
 .statusBar1{
- /* padding: 0.05rem 0.4rem; 
-  color: #006400;
-  border-radius: 30px;
-  width: fit-content; */
-  
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -821,14 +768,6 @@ outline: none;
     background-color: #FEBE10;
     margin-right: 0.25rem;
   display: inline-block;
-}
-
-.socialContainer {
-  position: absolute;
-  width: 19rem;
-  height: 6.5rem;
-  top: 16svh;
-  left: 10svw;
 }
 
 .h2Container {
