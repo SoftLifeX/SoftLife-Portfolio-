@@ -30,7 +30,7 @@ export default function Overlay() {
       transformOrigin: "top center",
       duration: 1,
       delay: 1.2,   // match your CSS transition time
-      ease: ease     // your custom hop ease
+      ease: ease,     // your custom hop ease
     });
 
   }, [pathname]);
