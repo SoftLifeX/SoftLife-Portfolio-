@@ -3,6 +3,12 @@ import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CustomEase from 'gsap/CustomEase';
+
+
+gsap.registerPlugin(CustomEase);
+
+const ease = CustomEase.create("hop", "0.9, 0, 0.1, 1");
 
 export default function Overlay() {
   const overlayRef = useRef(null);
@@ -20,7 +26,7 @@ export default function Overlay() {
     tl.to(overlayRef.current, {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
       duration: 0.8,
-      ease: "power2.inOut"
+      ease: ease,
     })
     .to(overlayRef.current, {
       scaleY: 0,
