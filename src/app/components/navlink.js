@@ -27,14 +27,10 @@ const NavLink = ({ link }) => {
   }
   
   const handleNavigation = (path) => (e) => {
-  if (path === pathName) {
-    e.preventDefault();
-    return;
+  if ( pathName !== link.url ) {
+    onTransitionReady: triggerPageTransition
+   }
   }
-  router.push(path, {
-    onTransitionReady: triggerPageTransition,
-  });
-};
   
   return (
     <Link onClick={handleNavigation(link.url)} className={pathName === link.url ? "active" : ""} href={link.url}>
