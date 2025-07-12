@@ -10,7 +10,6 @@ gsap.registerPlugin(CustomEase);
 
 // Your custom easing curves
 const ease = CustomEase.create("hop", "0.9, 0, 0.1, 1");
-const clipEase = CustomEase.create("scale", "0.250, 0.460, 0.450, 0.940");
 
 export default function Overlay() {
   const overlayRef = useRef(null);
@@ -21,7 +20,7 @@ export default function Overlay() {
     overlay.classList.add("loaded");
   }, []);
 
-  useGSAP(() => {
+  /*useGSAP(() => {
     const overlay = overlayRef.current;
 
     // After CSS clip-path transition, run GSAP with your custom ease
@@ -33,7 +32,7 @@ export default function Overlay() {
       ease: ease,     // your custom hop ease
     });
 
-  }, [pathname]);
+  }, [pathname]);*/
 
   return <div ref={overlayRef} className="overlay"></div>;
     }
