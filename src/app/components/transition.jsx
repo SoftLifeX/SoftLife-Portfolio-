@@ -58,4 +58,4 @@ const Transition = ({ children }) => {
   );
 };
 
-export default TransitionProvider;
+export default Transition;
