@@ -33,7 +33,7 @@ export default function Overlay() {
       scaleY: 0,
       duration: 0.6,
       ease: "power2.in",
-      delay: 0.1
+      delay: 0.1,
       ease: ease,
     });
 
