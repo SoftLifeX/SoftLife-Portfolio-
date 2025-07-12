@@ -4,7 +4,6 @@ import Header from "./header";
 import Contact from "./contact";
 import Overlay from "./overlay";
 import { usePathname } from "next/navigation";
-import { ViewTransitions } from "next-view-transitions";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "../Preloader"
 import StickyCursor from "../components/stickyCursor"
@@ -44,13 +43,11 @@ const Transition = ({ children }) => {
 
   return (
     <>
-     <ViewTransitions>
          <Overlay />
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
       {!noContactPaths.includes(pathName) && <Contact />}
-     </ViewTransitions>
     </>
   );
 };
