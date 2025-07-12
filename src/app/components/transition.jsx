@@ -2,7 +2,7 @@
 
 import Header from "./header";
 import Contact from "./contact";
-import { useRevealer } from "./hooks/useRevealer";
+import Overlay from "./overlay";
 import { usePathname } from "next/navigation";
 import { ViewTransitions } from "next-view-transitions";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
@@ -12,8 +12,6 @@ import StickyCursor from "../components/stickyCursor"
 
 
 const Transition = ({ children }) => {
-  
-  useRevealer();
 
    const [isLoading, setIsLoading] = useState(true);
 
@@ -46,9 +44,8 @@ const Transition = ({ children }) => {
 
   return (
     <>
-    {isLoading && <Preloader />}
      <ViewTransitions>
-         <div className="revealer" />
+         <Overlay />
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
