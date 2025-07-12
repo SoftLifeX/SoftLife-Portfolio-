@@ -20,12 +20,6 @@ function useRevealer() {
        delay: 1,
        ease: ease,
     });
-  }, []);
-
-
-return (
-    <div ref={revealer} className="revealer" />
- );
-}
+  }, {});
 
 export default useRevealer
