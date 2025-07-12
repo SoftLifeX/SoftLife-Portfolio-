@@ -2,14 +2,7 @@
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap, { CSSPlugin } from "gsap";
-import CustomEase from "gsap/CustomEase";
-
-// Register plugins
-gsap.registerPlugin(CSSPlugin, CustomEase);
-
-const ease = CustomEase.create("hop", "0.9, 0, 0.1, 1");
-const clipEase = CustomEase.create("scale", "0.250, 0.460, 0.450, 0.940");
+import gsap from "gsap";
 
 export default function Overlay() {
   const overlayRef = useRef(null);
@@ -17,39 +10,33 @@ export default function Overlay() {
 
   useGSAP(() => {
     const overlay = overlayRef.current;
-
-    const tl = gsap.timeline();
-
-    // Start state: small clip-path + scaleY 1
-    tl.set(overlay, {
-      css: {
-        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
-        transform: "scaleY(1)",
-        transformOrigin: "top center"
-      }
+    gsap.set(overlay, {
+      scaleY: 1,
+      transformOrigin: "top center"
     });
 
-    // Animate clip-path to full height polygon
-    tl.to(overlay, {
-      css: {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
-      },
-      duration: 1.2,
-      ease: clipEase
-    })
-    // Then scaleY collapses it upwards
-    .to(overlay, {
-      css: {
-        transform: "scaleY(0)"
-      },
-      duration: 1,
-      delay: 0.3,
-      ease: ease
+    gsap.to(overlay, {
+      scaleY: 0,
+      duration: 1.5,
+      ease: "power2.inOut",
+      delay: 0.3
     });
 
   }, [pathname]);
 
   return (
-    <div ref={overlayRef} className="overlay"></div>
+    <div
+      ref={overlayRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        background: "black",
+        zIndex: 9999,
+        pointerEvents: "none"
+      }}
+    ></div>
   );
-        }
+      }
