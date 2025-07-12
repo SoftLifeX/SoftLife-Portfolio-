@@ -28,7 +28,7 @@ export default function Overlay() {
       transformOrigin: "top center",
       duration: 1,
       delay: 1,
-      ease: ease,
+      ease: ease
     });
   }, [pathname]);
 
@@ -37,10 +37,7 @@ export default function Overlay() {
       ref={overlayRef}
       style={{
         position: "fixed",
-        top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+        inset: 0,
         background: "black",
         zIndex: 9999,
         pointerEvents: "none",
@@ -67,4 +64,4 @@ export default function Overlay() {
       </svg>
     </div>
   );
-}
+    }
