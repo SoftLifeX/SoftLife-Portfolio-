@@ -26,9 +26,9 @@ const NavLink = ({ link }) => {
   });
   }
   
-  const handleNavigation = (path) => (e) => {
+  const handleNavigation = () => (e) => {
   if ( pathName !== link.url ) {
-    onTransitionReady: triggerPageTransition
+    onTransitionReady: triggerPageTransition(path, router)
    }
   }
   
