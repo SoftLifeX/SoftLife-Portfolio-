@@ -1,51 +1,40 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CustomEase from "gsap/CustomEase";
+
+gsap.registerPlugin(CustomEase);
+
+const ease = CustomEase.create("hop", "0.9, 0, 0.1, 1");
+const clipEase = CustomEase.create("scale", "0.250, 0.460, 0.450, 0.940");
 
 export default function Overlay() {
   const overlayRef = useRef(null);
   const pathname = usePathname();
 
   useGSAP(() => {
-    // Print a visible log on the page (yellow bar at bottom)
-    document.body.insertAdjacentHTML("beforeend",
-      `<div style="
-        position:fixed;
-        bottom:0;
-        left:0;
-        right:0;
-        background:yellow;
-        color:black;
-        z-index:100000;
-        padding:5px;
-        font-size:12px;
-      ">
-        ✅ Overlay mounted for route: ${pathname}
-      </div>`
-    );
+    const overlay = overlayRef.current;
 
     const tl = gsap.timeline();
 
-    tl.set(overlayRef.current, {
+    tl.set(overlay, {
       clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
       scaleY: 1,
-      transformOrigin: "top center",
-      background: "red",
-      boxShadow: "0 0 20px 10px yellow"
+      transformOrigin: "top center"
     });
 
-    tl.to(overlayRef.current, {
+    tl.to(overlay, {
       clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
       duration: 0.8,
-      ease: "power2.inOut",
+      ease: clipEase
     })
-    .to(overlayRef.current, {
+    .to(overlay, {
       scaleY: 0,
       duration: 0.6,
       delay: 0.1,
-      ease: "power2.in",
+      ease: ease
     });
 
   }, [pathname]);
@@ -58,7 +47,7 @@ export default function Overlay() {
         top: 0, left: 0, right: 0, bottom: 0,
         zIndex: 9999,
         pointerEvents: "none",
-        background: "red"
+        background: "black" // your final design
       }}
     ></div>
   );
