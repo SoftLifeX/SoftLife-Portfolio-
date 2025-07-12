@@ -14,10 +14,10 @@ const NavLink = ({ link }) => {
   function triggerPageTransition() {
   document.documentElement.animate([
     {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
+      clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)"
     },
     {
-      clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)"
+      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
     },
   ], {
     duration: 2000,
@@ -25,6 +25,7 @@ const NavLink = ({ link }) => {
     pseudoElement: '::view-transition-new(root)'
   });
   }
+  
   const handleNavigation = (path) => (e) => {
   if (path === pathName) {
     e.preventDefault();
