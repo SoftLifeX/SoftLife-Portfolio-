@@ -10,30 +10,9 @@ import { usePathname } from 'next/navigation'
 const NavLink = ({ link }) => {
 
   const pathName = usePathname();
-  const router = useTransitionRouter();
-  function triggerPageTransition() {
-  document.documentElement.animate([
-    {
-      clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)"
-    },
-    {
-      clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)"
-    },
-  ], {
-    duration: 2000,
-    easing: 'cubic-bezier(0.9, 0, 0.1, 1)',
-    pseudoElement: '::view-transition-new(root)'
-  });
-  }
-  
-  const handleNavigation = () => (e) => {
-  if ( pathName !== link.url ) {
-    onTransitionReady: triggerPageTransition(path, router)
-   }
-  }
   
   return (
-    <Link onClick={handleNavigation(link.url)} className={pathName === link.url ? "active" : ""} href={link.url}>
+    <Link className={pathName === link.url ? "active" : ""} href={link.url}>
         {link.title}
   </Link>
   );
