@@ -16,9 +16,11 @@ export default function Overlay() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const overlay = overlayRef.current;
+  const overlay = overlayRef.current;
+  setTimeout(() => {
     overlay.classList.add("loaded");
-  }, []);
+  }, 60);
+}, []);
 
   /*useGSAP(() => {
     const overlay = overlayRef.current;
