@@ -11,7 +11,7 @@ const NavLink = ({ link }) => {
 
   
   return (
-    <Link className={pathName === link.url ? "active" : ""} href={link.url}>
+    <Link onClick={handleNavigation(link.url)} className={pathName === link.url ? "active" : ""} href={link.url}>
         {link.title}
   </Link>
   );
