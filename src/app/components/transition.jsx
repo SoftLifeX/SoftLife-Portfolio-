@@ -4,6 +4,7 @@ import Header from "./header";
 import Contact from "./contact";
 import { useRevealer } from "./hooks/useRevealer";
 import { usePathname } from "next/navigation";
+import { ViewTransitions } from "next-view-transitions";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "../Preloader"
 import StickyCursor from "../components/stickyCursor"
