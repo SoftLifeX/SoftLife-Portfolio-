@@ -3,7 +3,7 @@
 import { AnimatePresence } from "framer-motion";
 import Header from "./header";
 import Contact from "./contact";
-import Revealer from "./revealer";
+import useRevealer from "./hooks/useRevealer";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useTransitionRouter } from 'next-view-transitions'
