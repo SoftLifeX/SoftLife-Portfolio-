@@ -2082,16 +2082,16 @@ form textarea {
     font-family: 'penna', serif;
   }
 
-    .revealer{
-   height: 100%;
-    width: 100%;
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    top: 0;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--text-color);
+  z-index: 990;
+  pointer-events: none;
 }
-
 .loader {
   position: fixed;
   margin: auto;
@@ -2135,16 +2135,20 @@ form textarea {
     font-family: 'penna', serif; 
   }
 
-.revealer{
-   height: 100%;
-    width: 100%;
-    position: fixed;
-    background: var(--text-color);
-    z-index: 990;
-    left: 0;
-    top: 0;
-    transform-origin: center top;
-    pointer-event: none;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--text-color);
+  z-index: 990;
+  pointer-events: none;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
 }
 
 .loader {
