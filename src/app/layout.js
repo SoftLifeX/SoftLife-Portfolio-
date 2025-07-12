@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
-import TransitionProvider from "./components/transitionProvider";
+import Transition from "./components/transition";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -129,9 +129,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
-     <TransitionProvider>
+     <Transition>
        {children}
-     </TransitionProvider>
+     </Transition>
   </ThemeProvider>
       </body>
     </html>
