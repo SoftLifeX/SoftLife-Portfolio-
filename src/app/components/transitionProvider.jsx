@@ -66,7 +66,7 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-         <Revealer />
+         <div className="revealer" />
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
