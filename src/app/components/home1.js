@@ -157,8 +157,8 @@ function Home1() {
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <p className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer | Designer  </p>
-          <p className="slidertext" ref={secondText}>  Softlifeメ • Software Engineer | Designer   </p>
+          <p className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer | Designer⠀⠀⠀⠀  </p>
+          <p className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer | Designer⠀⠀⠀   </p>
         </div>
       </div>
         <motion.div
