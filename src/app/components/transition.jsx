@@ -1,10 +1,8 @@
 "use client";
 
-import { AnimatePresence } from "framer-motion";
 import Header from "./header";
 import Contact from "./contact";
 import { useRevealer } from "./hooks/useRevealer";
-import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "../Preloader"
@@ -12,7 +10,7 @@ import StickyCursor from "../components/stickyCursor"
 
 
 
-const TransitionProvider = ({ children }) => {
+const Transition = ({ children }) => {
   
   useRevealer();
 
@@ -46,16 +44,16 @@ const TransitionProvider = ({ children }) => {
   },[]);
 
   return (
-     <AnimatePresence mode="wait">
-        {isLoading && <Preloader />}
-      <div key={pathName}>
+    <>
+    {isLoading && <Preloader />}
+     <ViewTransitions>
          <div className="revealer" />
       <StickyCursor/>
         {!noHeaderPaths.includes(pathName) && <Header />}
         <div>{children}</div>
       {!noContactPaths.includes(pathName) && <Contact />}
-      </div>
-    </AnimatePresence>
+     </ViewTransitions>
+    </>
   );
 };
 
