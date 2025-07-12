@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import Transition from "./components/transition";
+import { ViewTransitions } from "next-view-transitions";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -129,9 +130,11 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
    <ThemeProvider enableSystem={false}>
+  <ViewTransitions>
      <Transition>
        {children}
      </Transition>
+  </ViewTransitions>
   </ThemeProvider>
       </body>
     </html>
