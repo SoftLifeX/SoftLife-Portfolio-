@@ -9,10 +9,22 @@ export default function Overlay() {
   const pathname = usePathname();
 
   useGSAP(() => {
-    console.log("✅ Overlay mounted for route:", pathname);
-
-    // print the entire <body> to see if the div is there
-    console.log("🚀 DOM snapshot:", document.body.innerHTML);
+    // Print a visible log on the page (yellow bar at bottom)
+    document.body.insertAdjacentHTML("beforeend",
+      `<div style="
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        background:yellow;
+        color:black;
+        z-index:100000;
+        padding:5px;
+        font-size:12px;
+      ">
+        ✅ Overlay mounted for route: ${pathname}
+      </div>`
+    );
 
     const tl = gsap.timeline();
 
@@ -50,4 +62,4 @@ export default function Overlay() {
       }}
     ></div>
   );
-    }
+        }
