@@ -12,6 +12,27 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
+
+
+function triggerPageTransition () {
+    document.documentElement.animate([
+      {
+        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    });
+}
+
+
+const Header = () => {
+	
 //navigation 
  const router = useTransitionRouter();
 const pathName = usePathname();
@@ -34,25 +55,6 @@ const pathName = usePathname();
       url: "/contact",
     },
   ];
-
-function triggerPageTransition () {
-    document.documentElement.animate([
-      {
-        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
-      },
-      {
-        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
-      },
-    ],
-    {
-      duration: 2000,
-      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
-      pseudoElement: "::view-transition-new(root)",
-    });
-}
-
-
-const Header = () => {
 	
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef(null);
