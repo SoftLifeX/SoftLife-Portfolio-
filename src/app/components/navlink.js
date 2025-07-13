@@ -30,12 +30,12 @@ const NavLink = ({ link }) => {
 
   
   
-  const handleNavigation = (path) => (e) => {
-    if (path === pathName) {
+  const handleNavigation = ({ link }) => (e) => {
+    if (link.url === pathName) {
       e.preventDefault();
       return;
     }
-    router.push (path, {
+    router.push ({ link }, {
       onTransitionReady: triggerPageTransition,
     });
   };
