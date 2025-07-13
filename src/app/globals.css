@@ -319,6 +319,10 @@ section {
   backdrop-filter: blur(5px);
   }
 
+  .navbar a{
+    text-decoration: none;
+  }
+
 .navbar ul li{
   display: inline;
   color: var(--tertiary-text);
@@ -2160,4 +2164,24 @@ form textarea {
       height: 100%;
       width: 100%;
      top: 0;
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: transform, opacity, scale;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
 }
