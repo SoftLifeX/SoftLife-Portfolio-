@@ -263,7 +263,7 @@ function triggerPageTransition () {
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
             {routes.map((route) => (
-	  <li key={route.label}>
+	  <li key={route.label} className={pathName === link.url ? "active" : ""}>
             <Link
               href={route.url}
               onClick={(e) => {
@@ -280,7 +280,6 @@ function triggerPageTransition () {
             </Link>
 	  </li>
           ))}
-          </li>
          </ul>          
         </nav>
       </header>
