@@ -276,10 +276,10 @@ const handleNav = (route) => (e) => {
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
             {routes.map((route) => (
-	  <li key={route.label} className={pathName === link.url ? "active" : ""}>
+	  <li key={route.label} className={pathName === route.url ? "active" : ""}>
             <Link
               href={route.url}
-              onClick={handleNav(route.url)}
+              onClick={handleNav}
             >
               {route.label}
             </Link>
