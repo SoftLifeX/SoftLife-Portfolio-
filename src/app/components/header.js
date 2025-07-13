@@ -58,14 +58,12 @@ const pathName = usePathname();
 
 const handleNav = (path) => (e) => {
  if (path === pathName) {
- e.preventDefault();
- return;
-}
  router.push(path, {
  onTransitionReady: triggerPageTransition,
 });
+ }
 }
-	
+ 
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
