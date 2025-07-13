@@ -37,7 +37,7 @@ const Header = () => {
  const router = useTransitionRouter();
 const pathName = usePathname();
 
-  const routes = [
+ /* const routes = [
     {
       label: "Home",
       url: "/",
@@ -54,14 +54,14 @@ const pathName = usePathname();
       label: "Contact",
       url: "/contact",
     },
-  ];
+  ];*/
 
-const handleNav = (route) => (e) => {
- if (route.url === pathName) {
+const handleNav = (path) => (e) => {
+ if (path === pathName) {
  e.preventDefault();
  return;
 }
- router.push(route.url, {
+ router.push(path, {
  onTransitionReady: triggerPageTransition,
 });
 }
@@ -275,16 +275,38 @@ const handleNav = (route) => (e) => {
           }}       
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
-            {routes.map((route) => (
-	  <li key={route.label} className={pathName === route.url ? "active" : ""}>
+	  <li className={pathName === '/' ? "active" : ""}>
             <Link
-              href={route.url}
-              onClick={handleNav}
+              href='/'
+              onClick={handleNav('/')}
             >
-              {route.label}
+              Home
             </Link>
 	  </li>
-          ))}
+         <li className={pathName === '/about' ? "active" : ""}>
+            <Link
+              href='/about'
+              onClick={handleNav('/about')}
+            >
+              About
+            </Link>
+	  </li>
+          <li className={pathName === '/craft' ? "active" : ""}>
+            <Link
+              href='/craft'
+              onClick={handleNav('/craft')}
+            >
+              Craft
+            </Link>
+	  </li>
+          <li className={pathName === '/contact' ? "active" : ""}>
+            <Link
+              href='/contact'
+              onClick={handleNav('/contact')}
+            >
+              Contact
+            </Link>
+	  </li>
          </ul>          
         </nav>
       </header>
