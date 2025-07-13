@@ -279,7 +279,7 @@ const handleNav = (route) => (e) => {
 	  <li key={route.label} className={pathName === link.url ? "active" : ""}>
             <Link
               href={route.url}
-              onClick={handleNav}
+              onClick={handleNav(route.url)}
             >
               {route.label}
             </Link>
