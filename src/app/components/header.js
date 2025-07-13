@@ -12,23 +12,10 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
-function triggerPageTransition () {
-    document.documentElement.animate([
-      {
-        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
-      },
-      {
-        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
-      },
-    ],
-    {
-      duration: 2000,
-      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
-      pseudoElement: "::view-transition-new(root)",
-    });
-}
+
 
 function Header() {
+	
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
@@ -67,6 +54,7 @@ function Header() {
 
    //navigation 
  const router = useTransitionRouter();
+const pathName = usePathname();
 
   const routes = [
     {
@@ -86,6 +74,22 @@ function Header() {
       url: "/contact",
     },
   ];
+
+function triggerPageTransition () {
+    document.documentElement.animate([
+      {
+        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    });
+}
  
    //theme switch
   const [mounted, setMounted] = useState(false)
@@ -258,13 +262,15 @@ function Header() {
           }}       
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
-          <li>
             {routes.map((route) => (
+	  <li key={route.label}>
             <Link
-	     key={route.label}
               href={route.url}
               onClick={(e) => {
+                if (route.url === pathName) {
                 e.preventDefault();
+		return;
+		}
                 router.push(route.url, {
                   onTransitionReady: triggerPageTransition,
                 });
@@ -272,6 +278,7 @@ function Header() {
             >
               {route.label}
             </Link>
+	  </li>
           ))}
           </li>
          </ul>          
