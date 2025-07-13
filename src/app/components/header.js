@@ -55,6 +55,16 @@ const pathName = usePathname();
       url: "/contact",
     },
   ];
+
+const handleNav = (route) => (e) => {
+ if (route.url === pathName) {
+ e.preventDefault();
+ return;
+}
+ router.push(route.url, {
+ onTransitionReady: triggerPageTransition,
+});
+}
 	
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef(null);
@@ -269,15 +279,7 @@ const pathName = usePathname();
 	  <li key={route.label} className={pathName === link.url ? "active" : ""}>
             <Link
               href={route.url}
-              onClick={(e) => {
-                if (route.url === pathName) {
-                e.preventDefault();
-		return;
-		}
-                router.push(route.url, {
-                  onTransitionReady: triggerPageTransition,
-                });
-              }}
+              onClick={handleNav}
             >
               {route.label}
             </Link>
