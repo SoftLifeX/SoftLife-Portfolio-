@@ -31,7 +31,7 @@ const NavLink = ({ link }) => {
   
   
   const handleNavigation = ({ link }) => (e) => {
-    if (link.url === pathName) {
+    if (link === pathName) {
       e.preventDefault();
       return;
     }
