@@ -12,6 +12,44 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
+//navigation 
+ const router = useTransitionRouter();
+const pathName = usePathname();
+
+  const routes = [
+    {
+      label: "Home",
+      url: "/",
+    },
+    {
+      label: "About",
+      url: "/about",
+    },
+    {
+      label: "Craft",
+      url: "/craft",
+    },
+    {
+      label: "Contact",
+      url: "/contact",
+    },
+  ];
+
+function triggerPageTransition () {
+    document.documentElement.animate([
+      {
+        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    });
+}
 
 
 const Header = () => {
@@ -52,44 +90,7 @@ const Header = () => {
     });
   });
 
-   //navigation 
- const router = useTransitionRouter();
-const pathName = usePathname();
-
-  const routes = [
-    {
-      label: "Home",
-      url: "/",
-    },
-    {
-      label: "About",
-      url: "/about",
-    },
-    {
-      label: "Craft",
-      url: "/craft",
-    },
-    {
-      label: "Contact",
-      url: "/contact",
-    },
-  ];
-
-function triggerPageTransition () {
-    document.documentElement.animate([
-      {
-        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
-      },
-      {
-        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
-      },
-    ],
-    {
-      duration: 2000,
-      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
-      pseudoElement: "::view-transition-new(root)",
-    });
-}
+   
  
    //theme switch
   const [mounted, setMounted] = useState(false)
