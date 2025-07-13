@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from 'next-themes'
 import Link from "next/link";
-import NavLink from "./navlink";
+import { useTransitionRouter } from "next-view-transitions";
 import { motion as m } from "motion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -50,52 +50,27 @@ function Header() {
   });
 
    //navigation 
- const links = [
-   {
-     url: "/",
-     title: "Home",
-     icon: (
-       <FontAwesomeIcon
-         icon={faHouse}
-         style={{ paddingRight: "5px", scale: "0.8" }}
-       />
-     ),
-   },
+ const router = useTransitionRouter();
 
-   {
-     url: "/about",
-     title: "About",
-     icon: (
-       <FontAwesomeIcon
-         icon={faUser}
-         style={{ paddingRight: "5px", scale: "0.8" }}
-       />
-     ),
-   },
-
-   {
-     url: "/craft",
-     title: "Craft",
-     icon: (
-       <FontAwesomeIcon
-         icon={faFolder}
-         style={{ paddingRight: "5px", scale: "0.8" }}
-       />
-     ),
-   },
-
-   {
-     url: "/contact",
-     title: "Contact",
-     icon: (
-       <FontAwesomeIcon
-         icon={faEnvelope}
-         style={{ paddingRight: "5px", scale: "0.8" }}
-       />
-     ),
-   },
- ];
-
+  const routes = [
+    {
+      label: "Home",
+      url: "/",
+    },
+    {
+      label: "About",
+      url: "/about",
+    },
+    {
+      label: "Craft",
+      url: "/craft",
+    },
+    {
+      label: "Contact",
+      url: "/contact",
+    },
+  ];
+ 
    //theme switch
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
@@ -268,8 +243,19 @@ function Header() {
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
          <ul>
           <li>
-            {links.map((link) => (
-            <NavLink link={link} key={link.title} />
+            {routes.map((route) => (
+            <Link
+	     key={route.label}
+              href={route.url}
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(route.url, {
+                  onTransitionReady: triggerPageAnimation,
+                });
+              }}
+            >
+              {route.label}
+            </Link>
           ))}
           </li>
          </ul>          
