@@ -12,7 +12,7 @@ const NavLink = ({ link }) => {
   const pathName = usePathname();
   const router = useTransitionRouter();
 
-  function TriggerPageTransition () {
+  function triggerPageTransition () {
     document.documentElement.animate([
       {
         clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
@@ -30,8 +30,20 @@ const NavLink = ({ link }) => {
 
   
   
+  const handleNavigation = (path) => (e) => {
+    if (path === pathName) {
+      e.preventDefault();
+      return;
+    }
+    router.push (path, {
+      onTransitionReady: triggerPageTransition,
+    });
+  };
+
+  
+  
   return (
-    <Link className={pathName === link.url ? "active" : ""} href={link.url}>
+    <Link onClick={handleNavigation(link.url)} className={pathName === link.url ? "active" : ""} href={link.url}>
         {link.title}
   </Link>
   );
