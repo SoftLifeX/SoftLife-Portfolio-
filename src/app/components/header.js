@@ -14,7 +14,7 @@ import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
 
 
-const Header() {
+const Header = () => {
 	
   const [isOpen, setIsOpen] = useState(false);
   const buttonRef = useRef(null);
