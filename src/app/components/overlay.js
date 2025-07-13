@@ -10,23 +10,24 @@ const ease = CustomEase.create("hop", "0.9, 0, 0.1, 1");
 
 export default function Overlay() {
   const overlayRef = useRef(null);
-  const polygonRef = useRef(null);
+  const svgRef = useRef(null);
   const pathname = usePathname();
 
   useEffect(() => {
-    // start from your small polygon shape
-    polygonRef.current.setAttribute("points", "25,75 75,75 75,75 25,75");
+    const svg = svgRef.current;
 
-    // animate polygon expansion
+    // starts tiny
+    svg.style.transform = "scale(0)";
+    svg.style.transition = "transform 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+
+    // after paint
     setTimeout(() => {
-      polygonRef.current.setAttribute("points", "0,100 100,100 100,100 0,100");
+      svg.style.transform = "scale(1)";
     }, 50);
   }, []);
 
   useGSAP(() => {
     const overlay = overlayRef.current;
-
-    // animate overlay scaling away after polygon grows
     gsap.to(overlay, {
       scaleY: 0,
       transformOrigin: "top center",
@@ -42,8 +43,8 @@ export default function Overlay() {
       style={{
         position: "fixed",
         top: 0, left: 0, right: 0, bottom: 0,
+        background: "white",
         zIndex: 9999,
-        background: "transparent",
         pointerEvents: "none",
         display: "flex",
         alignItems: "center",
@@ -53,20 +54,17 @@ export default function Overlay() {
       }}
     >
       <svg
+        ref={svgRef}
         width="100%"
         height="100%"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        style={{
-          transition: "all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
-        }}
       >
         <polygon
-          ref={polygonRef}
           points="25,75 75,75 75,75 25,75"
           fill="black"
         />
       </svg>
     </div>
   );
-          }
+      }
