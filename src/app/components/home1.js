@@ -8,8 +8,6 @@ import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
-import Header from "./header";
-
 
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
@@ -79,7 +77,6 @@ function Home1() {
     
   return (
       <section className="home1">
-       <Header />
         <div className="homepage">
       <div className="pointer">
         <ArrowIcon />
