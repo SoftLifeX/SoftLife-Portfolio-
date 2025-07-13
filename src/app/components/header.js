@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useTheme } from 'next-themes'
 import Link from "next/link";
 import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from 'next/navigation'
 import { motion as m } from "motion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -11,6 +12,21 @@ import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faFolder } from "@fortawesome/free-solid-svg-icons";
 
+function triggerPageTransition () {
+    document.documentElement.animate([
+      {
+        clipPath: "polygon(25% 75% 75% 75% 75% 75% 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100% 100% 100% 100% 0% 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    });
+}
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -250,7 +266,7 @@ function Header() {
               onClick={(e) => {
                 e.preventDefault();
                 router.push(route.url, {
-                  onTransitionReady: triggerPageAnimation,
+                  onTransitionReady: triggerPageTransition,
                 });
               }}
             >
