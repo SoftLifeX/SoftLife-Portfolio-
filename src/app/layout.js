@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 /*import { Provider } from "./components/hooks/ThemeProvider";*/
 import Transition from "./components/transition";
+import { unstable_ViewTransition as ViewTransitions } from 'react'
 import { ViewTransitions } from "next-view-transitions";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
