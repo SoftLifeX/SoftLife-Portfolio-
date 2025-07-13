@@ -30,8 +30,8 @@ export default function Overlay() {
     gsap.to(overlay, {
       scaleY: 0,
       transformOrigin: "top center",
-      duration: 1,
-      delay: 1,
+      duration: 3,
+      delay: 3,
       ease: ease
     });
   }, [pathname]);
@@ -58,7 +58,7 @@ export default function Overlay() {
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         style={{
-          transition: "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+          transition: "all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
         }}
       >
         <polygon
