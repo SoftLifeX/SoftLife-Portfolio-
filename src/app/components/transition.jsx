@@ -46,9 +46,7 @@ const Transition = ({ children }) => {
     <>
          <div className="revealer" />
       <StickyCursor/>
-        <div>
            {children}
-        </div>
       {!noContactPaths.includes(pathName) && <Contact />}
     </>
   );
