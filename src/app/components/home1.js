@@ -28,7 +28,7 @@ function Home1() {
   const subtitleRef = useRef(null);
 
   useGSAP(() => {
-    const heroSplit = new SplitText(titleRef.current, { type: 'chars, words', 'lines' });
+    const heroSplit = new SplitText(titleRef.current, { type: 'chars, words, lines' });
     const subtitleSplit = new SplitText(subtitleRef.current, { type: 'lines' });
 
     heroSplit.chars.forEach((char) => {
