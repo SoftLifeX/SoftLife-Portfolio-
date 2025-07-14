@@ -45,8 +45,8 @@ const TransitionProvider = ({ children }) => {
       <div key={pathName}>
          <motion.span
           className="PageExit"
-          animate={{ scaleY: 0.2, scaleX: 0.6, transformOrigin: 'bottom center' }}
-          exit={{ scaleY: 1, scaleX: 1, transformOrigin: 'bottom center' }}
+          initial={{ scaleY: 0.2, scaleX: 0.6, transformOrigin: 'bottom center' }}
+          animate={{ scaleY: 1, scaleX: 1, transformOrigin: 'bottom center' }}
           transition={{ duration: 0.5, ease: [0.9, 0, 0.1, 1] }}
         />
 
