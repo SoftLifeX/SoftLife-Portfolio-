@@ -127,10 +127,10 @@ function Home1() {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             >
-                <span id="helloText" />
+            {/*<span id="helloText" />
                 <span className="waving-hand">
                 👋🏼
-                </span>, 
+                </span>, */}
                 <span>
                 I'm Daniel c. Daniel. <br />
                 Software Engineer.
