@@ -25,21 +25,17 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 function Home1() {
 
 
-  const titleRef = useRef(null);
-  const subtitleRef = useRef(null);
-
   useGSAP(() => {
     const heroSplit = new SplitText('.title', { type: 'chars, words' });
     const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
 
     heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
-  });
 
     // Optional: Animate characters
     gsap.from(heroSplit.chars, {
       opacity: 0,
-      y: 50,
-      stagger: 0.05,
+      yPercent: 50,
+      stagger: 0.06,
       duration: 1,
       ease: 'back.out',
     });
