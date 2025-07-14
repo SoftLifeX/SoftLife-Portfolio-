@@ -9,7 +9,9 @@ import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/SplitText';
+import { SplitText } from 'gsap/all';
+
+
 
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
