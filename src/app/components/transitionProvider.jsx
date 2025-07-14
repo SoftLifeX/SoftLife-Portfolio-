@@ -76,12 +76,12 @@ const TransitionProvider = ({ children }) => {
         <motion.span
           className="PageOut1"
           initial={{ width: "50vw", transformOrigin: 'left' }}
-          animate={{ width: "0vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
+          animate={{ width: "50vw", transformOrigin: 'left', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
        <motion.span
           className="PageOut2"
           initial={{ width: "50vw", transformOrigin: 'right' }}
-          animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
+          animate={{ width: "50vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
       </motion.div>
       <StickyCursor/>
