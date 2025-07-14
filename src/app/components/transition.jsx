@@ -10,7 +10,7 @@ import Preloader from "../Preloader"
 import StickyCursor from "../components/stickyCursor"
 
 
-const TransitionProvider = ({ children }) => {
+const Transition = ({ children }) => {
 
    const [isLoading, setIsLoading] = useState(true);
 
@@ -45,51 +45,15 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-         {/* <motion.div
-            className='PageExit'
-            >
-        <motion.span
-          className="PageExit1"
-          transition={{ duration: 0.35 }}
-        >
-        <motion.div 
-           animate={{ scaleX: 0, transformOrigin: 'left' }}
-          exit={{ scaleX: 1, transformOrigin: 'left' }}
-           transition={{ ease: [0.250, 0.460, 0.450, 0.940] }}
-           />
-       <motion.div 
-          animate={{ scaleX: 0, transformOrigin: 'left' }}
-          exit={{ scaleX: 1, transformOrigin: 'left' }}
-          transition={{ delay: 0.2, ease: [0.250, 0.460, 0.450, 0.940] }}/>
-      <motion.div
-         animate={{ scaleX: 0, transformOrigin: 'left' }}
-          exit={{ scaleX: 1, transformOrigin: 'left' }}
-         transition={{delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940]}}/>
-        </motion.span>
-            
-       <motion.span
-          className="PageExit2"
-          transition={{ duration: 0.35 }}
-        >
-       <motion.div
-         animate={{ scaleX: 0, transformOrigin: 'right' }}
-          exit={{ scaleX: 1, transformOrigin: 'right' }}
-         transition={{ ease: [0.250, 0.460, 0.450, 0.940] }}
-          />
-       <motion.div
-         animate={{ scaleX: 0, transformOrigin: 'right' }}
-          exit={{ scaleX: 1, transformOrigin: 'right' }}
-         transition={{ delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940] }}
-          />
-      <motion.div
-         animate={{ scaleX: 0, transformOrigin: 'right' }}
-          exit={{ scaleX: 1, transformOrigin: 'right' }}
-         transition={{ delay: 0.4, ease: [0.250, 0.460, 0.450, 0.940] }}
-         />
-       </motion.span>
-      </motion.div>
+
+      <motion.div 
+         className="pageExit"
+          initial={{ clipPath: 'polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)' }}
+          animate={{ clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)' }}
+          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+         /> 
          
-        <motion.div
+         <motion.div
           className="PagePath"
           initial={{ display: 'flex' }}
           animate={{ display: 'none' }}
@@ -99,50 +63,12 @@ const TransitionProvider = ({ children }) => {
           {paths[pathName]}
         </motion.div>
          
-      <motion.div
-         className='PageEnter'
-         transition={{ delay: 0.6}}
-         >
-        <motion.span
-          className="PageEnter1"
-         transition= {{ duration: 0.35 }}
-        >
-        <motion.div 
-           initial={{ scaleX: 1, transformOrigin: 'left' }}
-          animate={{ scaleX: 0, transformOrigin: 'left'}}
-           transition={{ ease: [0.550, 0.085, 0.680, 0.530] }}
-           />
-       <motion.div
-          initial={{ scaleX: 1, transformOrigin: 'left' }}
-          animate={{ scaleX: 0, transformOrigin: 'left'}}
-          transition={{delay: 0.2, ease: [0.550, 0.085, 0.680, 0.530]}}
-          />
-      <motion.div 
-         initial={{ scaleX: 1, transformOrigin: 'left' }}
-          animate={{ scaleX: 0, transformOrigin: 'left'}}
-         transition={{delay: 0.4, ease: [0.550, 0.085, 0.680, 0.530]}}
-         />
-        </motion.span>
-         
-       <motion.span
-          className="PageEnter2"
-          transition= {{ duration: 0.35 }}
-          >
-       <motion.div 
-          initial={{ scaleX: 1, transformOrigin: 'right' }}
-          animate={{ scaleX: 0, transformOrigin: 'right'}}
-          transition={{ ease: [0.550, 0.085, 0.680, 0.530] }}
-          />
-       <motion.div 
-          initial={{ scaleX: 1, transformOrigin: 'right' }}
-          animate={{ scaleX: 0, transformOrigin: 'right'}}
-          transition={{delay: 0.2, ease: [0.550, 0.085, 0.680, 0.530]}}/>
-      <motion.div 
-         initial={{ scaleX: 1, transformOrigin: 'right' }}
-          animate={{ scaleX: 0, transformOrigin: 'right'}} 
-         transition={{delay: 0.4, ease: [0.550, 0.085, 0.680, 0.530]}}/>
-       </motion.span>
-      </motion.div>*/}
+         <motion.div 
+          className="pageEnter"
+          initial={{ scaleY: 1, transformOrigin: 'top center' }}
+          animate={{ scaleY: 0, transformOrigin: 'top center'}}
+          transition={{delay: 0.4, ease: [0.9, 0, 0.1, 1]}}
+            />
       <StickyCursor/>
         <Header />
         <div>{children}</div>
@@ -152,4 +78,4 @@ const TransitionProvider = ({ children }) => {
   );
 };
 
-export default TransitionProvider;
+export default Transition;
