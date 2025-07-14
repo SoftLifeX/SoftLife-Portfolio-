@@ -8,6 +8,10 @@ import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
+import { useGSAP } from '@gsap/react';
+import { SplitText } from 'gsap/all';
+
+
 
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
@@ -19,6 +23,13 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 }
 
 function Home1() {
+
+    useGSAP(() => {
+    const heroSplit = new SplitText('.title', { type: 'chars, words', 'lines' });
+    const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
+
+    heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
+  });
 
   const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
@@ -106,7 +117,7 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
            <motion.h2
-            className="scale"
+            className="title"
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -117,10 +128,12 @@ function Home1() {
                 👋🏼
                 </span>, 
                 <span>
-                 <ScrambleText 
+                I'm Daniel c. Daniel. <br />
+                Software Engineer.
+      {/*<ScrambleText 
                 text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
                 speed={4} 
-                autoLineDelay={true} />
+                autoLineDelay={true} />*/}
                 </span>
 {/* <ReplaceText
                  text={" I'm Daniel c. Daniel. \n Software Engineer."}
