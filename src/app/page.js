@@ -6,8 +6,8 @@ import React from "react";
 import { useEffect } from "react";
 import Home1 from "./components/home1";
 import Home2 from "./components/home2";
-import About2 from "../components/about2";
-import Contact from "../components/contact";
+import About2 from "./components/about2";
+import Contact from "./components/contact";
 
 
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
         }, []);
 
   return (
-    <div className="hero">
+    <div>
 
       
       <Home1 />
