@@ -9,9 +9,7 @@ import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/all';
-
-
+import { SplitText } from 'gsap/SplitText';
 
 
 const ITEMS = ['a Content Creator📸', 'a Lover of the Arts🎨', 'a bit of a gamer🎮', 'a Travel Enthusiast✈️'];
@@ -24,13 +22,30 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-    useGSAP(() => {
-    const heroSplit = new SplitText('.title', { type: 'chars, words', 'lines' });
-    const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
+    gsap.registerPlugin(SplitText);
 
-    heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
-  });
+  const titleRef = useRef(null);
+  const subtitleRef = useRef(null);
 
+  useGSAP(() => {
+    const heroSplit = new SplitText(titleRef.current, { type: 'chars, words', 'lines' });
+    const subtitleSplit = new SplitText(subtitleRef.current, { type: 'lines' });
+
+    heroSplit.chars.forEach((char) => {
+      char.classList.add('text-gradient');
+    });
+
+    // Optional: Animate characters
+    gsap.from(heroSplit.chars, {
+      opacity: 0,
+      y: 50,
+      stagger: 0.05,
+      duration: 1,
+      ease: 'back.out',
+    });
+  }, []);
+
+    
   const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
 
@@ -117,7 +132,7 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
            <motion.h2
-            className="title"
+            ref={titleRef} 
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
