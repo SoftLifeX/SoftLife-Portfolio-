@@ -45,8 +45,8 @@ const TransitionProvider = ({ children }) => {
       <div key={pathName}>
          <motion.span
           className="PageExit"
-          animate={{ clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)" }}
-          exit={{ clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" }}
+          animate={{ scaleY: 0.2, scaleX: 0.4, transformOrigin: 'bottom center' }}
+          exit={{ scaleY: 1, scaleX: 1, transformOrigin: 'bottom center' }}
           transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
         />
 
