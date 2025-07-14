@@ -24,7 +24,6 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-    gsap.registerPlugin(SplitText);
 
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
