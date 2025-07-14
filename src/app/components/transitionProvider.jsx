@@ -43,19 +43,7 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-         <motion.span
-          className="PageExit"
-          initial={{ scaleY: 0.2, scaleX: 0.6, transformOrigin: 'bottom center' }}
-          animate={{ scaleY: 1, scaleX: 1, transformOrigin: 'bottom center' }}
-          transition={{ duration: 0.5, ease: [0.9, 0, 0.1, 1] }}
-        />
-
-         <motion.span
-          className="PageEnter"
-          initial={{ scaleY: 1, transformOrigin: 'top center' }}
-          animate={{ scaleY: 0, transformOrigin: 'top center', transition: { duration: 0.5, delay: 0.5, ease: [0.9, 0, 0.1, 1] } }}
-        />
-       {/*<motion.div
+         <motion.div
             className='PageIn'
             >
         <motion.span
@@ -95,7 +83,7 @@ const TransitionProvider = ({ children }) => {
           initial={{ width: "50vw", transformOrigin: 'right' }}
           animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
-      </motion.div>*/}
+      </motion.div>
       <StickyCursor/>
         <Header />
         <div>{children}</div>
