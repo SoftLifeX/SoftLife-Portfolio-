@@ -24,23 +24,16 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-
   useGSAP(() => {
     const heroSplit = new SplitText('.title', { type: 'chars, words' });
     const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
-
-    heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
-
-    // Optional: Animate characters
     gsap.from(heroSplit.chars, {
-      opacity: 0,
       yPercent: 50,
-      stagger: 0.06,
-      duration: 1,
-      ease: 'back.out',
+      duration: 1.8,
+      ease: 'expo.out',
+      stagger: 0.06
     });
   }, []);
-
     
   const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
@@ -141,11 +134,11 @@ function Home1() {
                 <span>
                 I'm Daniel c. Daniel. <br />
                 Software Engineer.
+                </span>
                 {/*<ScrambleText 
                 text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
                 speed={4} 
-                autoLineDelay={true} />*/}
-                </span>
+                autoLineDelay={true} />           
 {/* <ReplaceText
                  text={" I'm Daniel c. Daniel. \n Software Engineer."}
                  speed={80}
