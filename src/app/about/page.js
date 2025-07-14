@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { useEffect } from "react";
 import About1 from "../components/about1";
-import About2 from "../components/about2";
+import Contact from "../components/contact";
 import About3 from "../components/about3";
 
 const About = () => {
@@ -22,8 +22,8 @@ const pathName = usePathname();
     
     <div>
       <About1 />
-      <About2 />
       <About3 />
+       <Contact />
     </div>
    
   );
