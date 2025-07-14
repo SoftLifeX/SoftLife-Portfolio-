@@ -26,7 +26,6 @@ const TransitionProvider = ({ children }) => {
 
   }
 
-   const noHeaderPaths = ['/'];
    const noContactPaths = ['/contact'];
 
   const pathName = usePathname();
@@ -145,7 +144,7 @@ const TransitionProvider = ({ children }) => {
        </motion.span>
       </motion.div>*/}
       <StickyCursor/>
-        {!noHeaderPaths.includes(pathName) && <Header />}
+        <Header />
         <div>{children}</div>
       {!noContactPaths.includes(pathName) && <Contact />}
       </div>
