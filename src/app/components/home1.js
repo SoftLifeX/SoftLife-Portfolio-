@@ -29,12 +29,11 @@ function Home1() {
   const subtitleRef = useRef(null);
 
   useGSAP(() => {
-    const heroSplit = new SplitText(titleRef.current, { type: 'chars, words, lines' });
-    const subtitleSplit = new SplitText(subtitleRef.current, { type: 'lines' });
+    const heroSplit = new SplitText('.title', { type: 'chars, words' });
+    const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
 
-    heroSplit.chars.forEach((char) => {
-      char.classList.add('text-gradient');
-    });
+    heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
+  });
 
     // Optional: Animate characters
     gsap.from(heroSplit.chars, {
@@ -133,7 +132,7 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
            <motion.h2
-            ref={titleRef} 
+            className="title"
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -146,7 +145,7 @@ function Home1() {
                 <span>
                 I'm Daniel c. Daniel. <br />
                 Software Engineer.
-      {/*<ScrambleText 
+                {/*<ScrambleText 
                 text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
                 speed={4} 
                 autoLineDelay={true} />*/}
