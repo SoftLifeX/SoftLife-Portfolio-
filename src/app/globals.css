@@ -2131,24 +2131,17 @@ form textarea {
     scale: 0.92;
   }
 
-  .PageEnter1 {
+.PageEnter, .PageExit {
+    width: 100%;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
-    z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
-  }
-  
-  .PageEnter2 {
-    position: fixed;
-    background: var(--text-color);
+    top: 0;
+    bottom: 0;
     z-index: 990;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
+    pointer-events: none;
   }
 
   .PagePath {
@@ -2164,25 +2157,7 @@ form textarea {
     z-index: 995;
     width: fit-content;
     height: fit-content;
-    font-family: 'penna', serif;
-  }
-
-  .PageExit1 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: var(--text-color);
-    left: 0;
-    z-index: 990;
-  }
-
-  .PageExit2 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: var(--text-color);
-    right: 0;
-    z-index: 990;
+    font-family: 'penna', serif; 
   }
 
 .loader {
@@ -2212,24 +2187,17 @@ form textarea {
  }
 }
 
-.PageEnter1 {
+  .PageEnter, .PageExit {
+    width: 100%;
+    height: 100%;
     position: fixed;
     background: var(--text-color);
-    z-index: 990;
-    height: 100%;
-    width: 100%;
     left: 0;
     right: 0;
-  }
-  
-  .PageEnter2 {
-    position: fixed;
-    background: var(--text-color);
+    top: 0;
+    bottom: 0;
     z-index: 990;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
+    pointer-events: none;
   }
 
   .PagePath {
@@ -2247,24 +2215,6 @@ form textarea {
     height: fit-content;
     font-family: 'penna', serif; 
   }
-
-  .PageExit1 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: var(--text-color);
-    left: 0;
-    z-index: 990;
-  }
-
-  .PageExit2 {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: var(--text-color);
-    right: 0;
-    z-index: 990;
-}
 
 .loader {
   position: fixed;
@@ -2290,4 +2240,5 @@ form textarea {
       height: 100svh;
       width: 100svw;
      top: 0;
+     pointer-events: none;
 }
