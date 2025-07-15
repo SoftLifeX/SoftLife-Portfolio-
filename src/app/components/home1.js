@@ -24,28 +24,47 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 function Home1() {
 
 
-  const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticPart = ",I'm Daniel c. Daniel.";
-  const secondLine = "Software Engineer";
+  const dynamicWords = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
+  const staticEnd = ",I'm Daniel c. Daniel.";
+  const lineTwo = "Software Engineer";
 
   const [index, setIndex] = useState(0);
-  const [showWord, setShowWord] = useState(true);
+  const [showDynamic, setShowDynamic] = useState(true);
   const firstLoad = useRef(true);
+
+useEffect(() => {
+    const timeout = setTimeout(() => {
+      firstLoad.current = false;
+    }, 4000); // Allow first animation to complete
+    return () => clearTimeout(timeout);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setShowWord(false);
+      setShowDynamic(false);
       setTimeout(() => {
-        setIndex((i) => (i + 1) % words.length);
-        setShowWord(true);
-        firstLoad.current = false;
-      }, 300);
+        setIndex((prev) => (prev + 1) % dynamicWords.length);
+        setShowDynamic(true);
+      }, 250);
     }, 1500);
-
     return () => clearInterval(interval);
   }, []);
- const dynamicLetters = words[index].split("");
-  const staticWords = staticPart.split(" ");
-  const line2Words = secondLine.split(" ");
+
+  const dynamic = dynamicWords[index];
+
+  const splitLetters = (str) =>
+    str.split("").map((char, i) => (
+      <motion.span
+        key={`${char}-${i}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.03, duration: 0.3 }}
+        style={{ display: "inline-block" }}
+      >
+        {char === " " ? "\u00A0" : char}
+      </motion.span>
+    ));
+
 
   
   const [currentWord, setCurrentWord] = useState(0);
@@ -133,77 +152,56 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2
-      style={{
+      <h2 style={{
         display: "flex",
         flexDirection: "column",
         fontSize: "1.5rem",
         lineHeight: "1.8rem",
-        alignItems: "flex-start",
-        gap: "0.3rem",
         height: "5rem",
+        alignItems: "flex-start",
         overflow: "hidden",
+        gap: "0.25rem",
       }}
     >
-      {/* Line 1: Dynamic + Static */}
-      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-        <AnimatePresence mode="wait" key={`dynamic-${index}`}>
-          {showWord && (
-            <motion.span
-              style={{ display: "inline-flex", gap: "0.05rem" }}
-              key={words[index]}
-            >
-              {dynamicLetters.map((char, i) => (
+      {/* First line */}
+      <div style={{ display: "inline-block" }}>
+        {firstLoad.current ? (
+          <>
+            {splitLetters(dynamic)}
+            {splitLetters(staticEnd)}
+          </>
+        ) : (
+          <>
+            <AnimatePresence mode="wait">
+              {showDynamic && (
                 <motion.span
-                  key={`${char}-${i}`}
-                  initial={{ opacity: 0, y: 15 }}
+                  key={dynamic}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ delay: i * 0.05, duration: 0.3 }}
+                  exit={{ opacity: 0, y: -20 }}
                   style={{ display: "inline-block" }}
                 >
-                  {char}
+                  {dynamic.split("").map((char, i) => (
+                    <motion.span
+                      key={`${char}-${i}`}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: i * 0.05, duration: 0.3 }}
+                      style={{ display: "inline-block" }}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
                 </motion.span>
-              ))}
-            </motion.span>
-          )}
-        </AnimatePresence>
-
-        {staticWords.map((word, i) =>
-          firstLoad.current ? (
-            <motion.span
-              key={`static-${i}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + i * 0.15 }}
-              style={{ display: "inline-block" }}
-            >
-              {word}
-            </motion.span>
-          ) : (
-            <span key={`static-${i}`}>{word}</span>
-          )
+              )}
+            </AnimatePresence>
+            {splitLetters(staticEnd)}
+          </>
         )}
       </div>
 
-      {/* Line 2: Software Engineer */}
-      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-        {line2Words.map((word, i) =>
-          firstLoad.current ? (
-            <motion.span
-              key={`line2-${i}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 + i * 0.15 }}
-              style={{ display: "inline-block" }}
-            >
-              {word}
-            </motion.span>
-          ) : (
-            <span key={`line2-${i}`}>{word}</span>
-          )
-        )}
-      </div>
+      {/* Second line */}
+      <div>{splitLetters(lineTwo)}</div>
      </h2>
      
                <motion.p
