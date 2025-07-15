@@ -29,7 +29,7 @@ const AnimatedStrong = ({ text }) => {
 };
   
   return (
-    <strong
+    <h1
       ref={ref}
       style={{
       display: "inline-block",
@@ -50,7 +50,7 @@ const AnimatedStrong = ({ text }) => {
           {char}
         </motion.span>
       ))}
-    </strong>
+    </h1>
   );
 };
 
@@ -61,9 +61,9 @@ function Contact() {
       <section className="home3">
         <div className="contact">
           <div className="container">
-            <h1 data-scroll data-scroll-speed={0.1}>
+            
              <AnimatedStrong text="Let's Collaborate" />
-            </h1>
+            
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
               daniel.c.daniel.dev@gmail.com
