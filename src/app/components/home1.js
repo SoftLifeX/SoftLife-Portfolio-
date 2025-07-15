@@ -25,7 +25,7 @@ function Home1() {
 
 
   const dynamicWords = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticEnd = " ,I'm Daniel c. Daniel.";
+  const staticEnd = ", I'm Daniel c. Daniel.";
   const lineTwo = "Software Engineer";
 
   const [index, setIndex] = useState(0);
@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 2290); // Allow first animation to complete
+    }, 2300); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
