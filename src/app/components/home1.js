@@ -23,58 +23,34 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.05,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -20,
-    transition: { duration: 0.3 },
-  },
+const charVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -15 },
 };
 
-const charVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+const containerVariants = {
+  visible: {
+    transition: { staggerChildren: 0.05 },
+  },
 };
 
 
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
+  const staticLines = ["I'm Daniel C. Daniel.", "Software Engineer"];
   const [index, setIndex] = useState(0);
-  const [firstLoad, setFirstLoad] = useState(true);
-  const [showWord, setShowWord] = useState(true);
+  const [show, setShow] = useState(true);
 
-  const staticPart = "I'm Daniel c. Daniel.\nSoftware Engineer";
-
-  // Finish first load after animation
   useEffect(() => {
-    const timeout = setTimeout(() => setFirstLoad(false), 2000);
-    return () => clearTimeout(timeout);
+    const cycle = setInterval(() => {
+      setShow(false);
+      setTimeout(() => {
+        setIndex((i) => (i + 1) % words.length);
+        setShow(true);
+      }, 300);
+    }, 3000);
+    return () => clearInterval(cycle);
   }, []);
-
-  // Trigger exit of word
-  useEffect(() => {
-    if (!firstLoad) {
-      const timeout = setTimeout(() => setShowWord(false), 2500);
-      return () => clearTimeout(timeout);
-    }
-  }, [index, firstLoad]);
-
-  // Trigger entry of next word
-  useEffect(() => {
-    if (!showWord && !firstLoad) {
-      const timeout = setTimeout(() => {
-        setIndex((prev) => (prev + 1) % words.length);
-        setShowWord(true);
-      }, 400); // match exit animation
-      return () => clearTimeout(timeout);
-    }
-  }, [showWord, firstLoad]);
-
 
   
   const [currentWord, setCurrentWord] = useState(0);
@@ -162,58 +138,58 @@ const charVariants = {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2 style={{
-        height: "4rem",
+      <h2   style={{
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
-        gap: "0.5rem",
-        overflow: "hidden",
-        fontSize: "2rem",
-        fontWeight: "bold",
+        gap: "0.3rem",
+        fontSize: "1.5rem",
+        lineHeight: "1.8rem",
       }}
     >
-      {firstLoad ? (
-        // ✅ First time: animate entire sentence word by word
-        `${words[index]}, ${staticPart}`.split(" ").map((word, i) => (
+      {/* Dynamic Word */}
+      <AnimatePresence mode="wait">
+        {show && (
           <motion.span
-            key={`${word}-${i}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.2 }}
-            style={{ display: "inline-block" }}
+            key={words[index]}
+            style={{ display: "inline-flex" }}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={containerVariants}
           >
-            {word}
-          </motion.span>
-        ))
-      ) : (
-        <>
-          <AnimatePresence mode="wait">
-            {showWord && (
+            {words[index].split("").map((ch, i) => (
               <motion.span
-                key={words[index]}
-                style={{ display: "inline-flex" }} // required for inner letter layout
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={container}
+                key={ch + i}
+                variants={charVariants}
+                style={{ display: "inline-block" }}
               >
-                {words[index].split("").map((char, i) => (
-                  <motion.span
-                    key={char + i}
-                    variants={charVariants}
-                    style={{ display: "inline-block" }}
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-                <span>,</span>
+                {ch}
               </motion.span>
-            )}
-          </AnimatePresence>
-          <span>{staticPart}</span>
-        </>
-      )}
+            ))}
+          </motion.span>
+        )}
+      </AnimatePresence>
+
+      {/* Static Text Lines */}
+      {staticLines.map((line, i) => (
+        <div
+          key={i}
+          style={{ overflow: "hidden", whiteSpace: "nowrap" }}
+        >
+          {line.split("").map((ch, j) => (
+            <motion.span
+              key={ch + j}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.3 + j * 0.02 }}
+              style={{ display: "inline-block" }}
+            >
+              {ch}
+            </motion.span>
+          ))}
+        </div>
+      ))}
      </h2>
      
                <motion.p
