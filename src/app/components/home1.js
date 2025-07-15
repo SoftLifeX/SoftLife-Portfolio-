@@ -23,34 +23,30 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-const charVariants = {
-  hidden: { opacity: 0, y: 15 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -15 },
-};
-
-const containerVariants = {
-  visible: {
-    transition: { staggerChildren: 0.05 },
-  },
-};
-
 
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticLines = ["I'm Daniel C. Daniel.", "Software Engineer"];
+  const staticPart = "I'm Daniel C. Daniel.";
+  const secondLine = "Software Engineer";
+
   const [index, setIndex] = useState(0);
-  const [show, setShow] = useState(true);
+  const [showWord, setShowWord] = useState(true);
+  const firstLoad = useRef(true);
 
   useEffect(() => {
-    const cycle = setInterval(() => {
-      setShow(false);
+    const interval = setInterval(() => {
+      setShowWord(false);
       setTimeout(() => {
         setIndex((i) => (i + 1) % words.length);
-        setShow(true);
-      }, 300);
-    }, 3000);
-    return () => clearInterval(cycle);
+        setShowWord(true);
+        firstLoad.current = false;
+      }, 300); // exit duration
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  const line1Words = [words[index], ...staticPart.split(" ")];
+  const line2Words = secondLine.split(" ");
 
   
   const [currentWord, setCurrentWord] = useState(0);
@@ -138,58 +134,73 @@ const containerVariants = {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2   style={{
+      <h2 
+       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        gap: "0.3rem",
         fontSize: "1.5rem",
         lineHeight: "1.8rem",
+        alignItems: "center",
+        gap: "0.3rem",
+        height: "3rem",
+        overflow: "hidden",
       }}
     >
-      {/* Dynamic Word */}
-      <AnimatePresence mode="wait">
-        {show && (
-          <motion.span
-            key={words[index]}
-            style={{ display: "inline-flex" }}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={containerVariants}
-          >
-            {words[index].split("").map((ch, i) => (
-              <motion.span
-                key={ch + i}
-                variants={charVariants}
-                style={{ display: "inline-block" }}
-              >
-                {ch}
-              </motion.span>
-            ))}
-          </motion.span>
-        )}
-      </AnimatePresence>
-
-      {/* Static Text Lines */}
-      {staticLines.map((line, i) => (
-        <div
-          key={i}
-          style={{ overflow: "hidden", whiteSpace: "nowrap" }}
-        >
-          {line.split("").map((ch, j) => (
+      {/* Line 1: Dynamic + Static */}
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
+        {line1Words.map((word, i) =>
+          i === 0 ? (
+            // Animate dynamic word every time
+            <AnimatePresence mode="wait" key={`dynamic-${index}`}>
+              {showWord && (
+                <motion.span
+                  key={word}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -15 }}
+                  transition={{ duration: 0.3 }}
+                  style={{ display: "inline-block" }}
+                >
+                  {word}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          ) : firstLoad.current ? (
+            // Animate static words only on first load
             <motion.span
-              key={ch + j}
-              initial={{ opacity: 0, y: 15 }}
+              key={`static-${i}`}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.3 + j * 0.02 }}
+              transition={{ delay: i * 0.15 }}
               style={{ display: "inline-block" }}
             >
-              {ch}
+              {word}
             </motion.span>
-          ))}
-        </div>
-      ))}
+          ) : (
+            // After first load, just show static words
+            <span key={`static-${i}`}>{word}</span>
+          )
+        )}
+      </div>
+
+      {/* Line 2: Only animates on first load */}
+      <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
+        {line2Words.map((word, i) =>
+          firstLoad.current ? (
+            <motion.span
+              key={`line2-${i}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 + i * 0.15 }}
+              style={{ display: "inline-block" }}
+            >
+              {word}
+            </motion.span>
+          ) : (
+            <span key={`line2-${i}`}>{word}</span>
+          )
+        )}
+      </div>
      </h2>
      
                <motion.p
