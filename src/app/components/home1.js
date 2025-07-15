@@ -60,7 +60,10 @@ function Home1() {
     return () => clearInterval(interval);
   }, []);
 
-  const phrase = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`;
+  const fullText = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`; 
+const splitWords = fullText.split(" ");
+
+
 
   
   const [currentWord, setCurrentWord] = useState(0);
@@ -148,22 +151,32 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2 style={{ display: "inline-block" }}>
-       {
-        phrase.split(" ").map( (word, index) => {
-         return
-            <span>
-             <motion.span 
-              variants={slideUp}
-              custom={index}
-            animate="open"
-             key={index}>
-              {word}
-             </motion.span>
-            </span>
-        })
-      }
-      </h2>
+      <h2 style={{  
+    height: "4rem",  
+    display: "flex",  
+    alignItems: "center",  
+    justifyContent: "center",  
+    gap: "0.5rem",  
+    overflow: "hidden",  
+  }}  
+>  
+  {splitWords.map((wordText, i) => (  
+    <motion.span  
+      key={`${fullText}-${i}`}  
+      initial={{ opacity: 0, y: 20 }}  
+      animate={{ opacity: 1, y: 0 }}  
+      transition={{  
+        duration: 0.4,  
+        delay: i * 0.2, // manual stagger  
+      }}  
+      style={{  
+        display: "inline-block",  
+      }}  
+    >  
+      {wordText}  
+    </motion.span>  
+  ))}  
+</h2>
       {/* <motion.h2
             className="scale"
              initial={{ opacity: 0, scale: 0 }}
