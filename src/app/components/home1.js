@@ -25,7 +25,7 @@ function Home1() {
 
 
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticPart = "I'm Daniel C. Daniel.";
+  const staticPart = "I'm Daniel c. Daniel.";
   const secondLine = "Software Engineer";
 
   const [index, setIndex] = useState(0);
@@ -40,7 +40,7 @@ function Home1() {
         setShowWord(true);
         firstLoad.current = false;
       }, 300); // exit duration
-    }, 1000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
@@ -140,9 +140,9 @@ function Home1() {
         flexDirection: "column",
         fontSize: "1.5rem",
         lineHeight: "1.8rem",
-        alignItems: "center",
+        alignItems: "flex-start",
         gap: "0.3rem",
-        height: "3rem",
+        height: "6rem",
         overflow: "hidden",
       }}
     >
