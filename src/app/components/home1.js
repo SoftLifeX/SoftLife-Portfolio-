@@ -24,11 +24,9 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-  gsap.registerPlugin(SplitText);
+  const phrase = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`;
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const [index, setIndex] = useState(0);
-  const textRef = useRef(null);
-  const splitInstance = useRef(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,33 +36,7 @@ function Home1() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    if (!textRef.current) return;
-
-    // Clear old animation
-    gsap.killTweensOf("*");
-
-    // Reset innerHTML
-    textRef.current.innerHTML = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer.`;
-
-    // Kill old split if exists
-    if (splitInstance.current) splitInstance.current.revert();
-
-    // Apply new split
-    splitInstance.current = new SplitText(textRef.current, {
-      type: "words,chars",
-    });
-
-    // Animate characters in
-    gsap.from(splitInstance.current.chars, {
-      opacity: 0,
-      yPercent: 50,
-      stagger: 0.06,
-      duration: 1.8,
-      ease: "power2.out",
-    });
-  }, [index]);
-    
+  
   const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
 
@@ -151,7 +123,19 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
       <h2>
-       <span className="title" ref={textRef} />
+       {
+
+        phrase.split(" ").map( (word, index) => {
+         return
+            <span>
+             <motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>
+              {word}
+             </motion.span>
+            </span>
+
+        })
+
+      }
       </h2>
       {/* <motion.h2
             className="scale"
