@@ -156,9 +156,7 @@ function Home1() {
              <motion.span 
               variants={slideUp}
               custom={index}
-             initial={open}
-            animate={closed}
-            exit={open}
+            animate="open"
              key={index}>
               {word}
              </motion.span>
