@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 2500); // Allow first animation to complete
+    }, 2300); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
@@ -45,7 +45,7 @@ useEffect(() => {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % dynamicWords.length);
         setShowDynamic(true);
-      }, 300);
+      }, 150);
     }, 1500);
     return () => clearInterval(interval);
   }, []);
@@ -56,9 +56,9 @@ useEffect(() => {
     str.split("").map((char, i) => (
       <motion.span
         key={`${char}-${i}`}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.05, duration: 0.3 }}
+        transition={{ delay: i * 0.03, duration: 0.3 }}
         style={{ display: "inline-block" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -176,7 +176,7 @@ useEffect(() => {
               {showDynamic && (
                 <motion.span
                   key={dynamic}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   style={{ display: "inline-block" }}
@@ -184,9 +184,9 @@ useEffect(() => {
                   {dynamic.split("").map((char, i) => (
                     <motion.span
                       key={`${char}-${i}`}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05, duration: 0.4 }}
+                      transition={{ delay: i * 0.03, duration: 0.4 }}
                       style={{ display: "inline-block" }}
                     >
                       {char}
