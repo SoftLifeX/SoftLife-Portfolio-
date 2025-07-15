@@ -10,6 +10,49 @@ import Instagram from "@/app/assets/Instagram.json";
 import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
+import { motion, useInView } from "framer-motion";
+
+const AnimatedStrong = ({ text }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20% 0px" });
+
+  const letterVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.05,
+      duration: 0.4,
+    },
+  }),
+};
+  
+  return (
+    <strong
+      ref={ref}
+      style={{
+      display: "inline-block",
+      }}
+    >
+      {text.split("").map((char, i) => (
+        <motion.span
+          key={`${char}-${i}`}
+          custom={i}
+          variants={letterVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          style={{
+            display: "inline-block",
+            whiteSpace: "pre", // preserves spaces
+          }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </strong>
+  );
+};
 
 function Contact() {
 
@@ -19,7 +62,7 @@ function Contact() {
         <div className="contact">
           <div className="container">
             <h1 data-scroll data-scroll-speed={0.1}>
-              Let's Collaborate 
+             <AnimatedStrong text="Let's Collaborate" />
             </h1>
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
