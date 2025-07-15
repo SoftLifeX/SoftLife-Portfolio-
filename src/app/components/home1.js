@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { motion, useInView } from "framer-motion";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
@@ -23,46 +23,57 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-  const slideUp = {
-
-    initial: {
-
-        y: "100%"
-
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.05,
     },
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+    transition: { duration: 0.3 },
+  },
+};
 
-    open: (i) => ({
+const charVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
-        y: "0%",
-
-        transition: {duration: 0.5, delay: 0.01 * i}
-
-    }),
-
-    closed: {
-
-        y: "100%",
-
-        transition: {duration: 0.5}
-
-    }
-
- }
 
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const [index, setIndex] = useState(0);
+  const [firstLoad, setFirstLoad] = useState(true);
+  const [showWord, setShowWord] = useState(true);
 
+  const staticPart = "I'm Daniel c. Daniel.\nSoftware Engineer";
+
+  // Finish first load after animation
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % words.length);
-    }, 2000); 
-
-    return () => clearInterval(interval);
+    const timeout = setTimeout(() => setFirstLoad(false), 2000);
+    return () => clearTimeout(timeout);
   }, []);
 
-  const fullText = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`; 
-const splitWords = fullText.split(" ");
+  // Trigger exit of word
+  useEffect(() => {
+    if (!firstLoad) {
+      const timeout = setTimeout(() => setShowWord(false), 2500);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, firstLoad]);
 
+  // Trigger entry of next word
+  useEffect(() => {
+    if (!showWord && !firstLoad) {
+      const timeout = setTimeout(() => {
+        setIndex((prev) => (prev + 1) % words.length);
+        setShowWord(true);
+      }, 400); // match exit animation
+      return () => clearTimeout(timeout);
+    }
+  }, [showWord, firstLoad]);
 
 
   
@@ -151,57 +162,60 @@ const splitWords = fullText.split(" ");
      )}
     </motion.div>
     <div className="h2Container">
-      <h2 style={{  
-    height: "4rem",  
-    display: "flex",  
-    alignItems: "center",  
-    justifyContent: "center",  
-    gap: "0.5rem",  
-    overflow: "hidden",  
-  }}  
->  
-  {splitWords.map((wordText, i) => (  
-    <motion.span  
-      key={`${fullText}-${i}`}  
-      initial={{ opacity: 0, y: 20 }}  
-      animate={{ opacity: 1, y: 0 }}  
-      transition={{  
-        duration: 0.4,  
-        delay: i * 0.2, // manual stagger  
-      }}  
-      style={{  
-        display: "inline-block",  
-      }}  
-    >  
-      {wordText}  
-    </motion.span>  
-  ))}  
-</h2>
-      {/* <motion.h2
-            className="scale"
-             initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-            >
-            <span id="helloText" />
-                <span className="waving-hand">
-                👋🏼
-                </span>, 
-                <span>
-                I'm Daniel c. Daniel. <br />
-                Software Engineer.
-                </span>
-                <ScrambleText 
-                text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
-                speed={4} 
-                autoLineDelay={true} />           
-               <ReplaceText
-                 text={" I'm Daniel c. Daniel. \n Software Engineer."}
-                 speed={80}
-                 scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
-              />
-              </motion.h2>*/}
+      <h2 style={{
+        height: "4rem",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "0.5rem",
+        overflow: "hidden",
+        fontSize: "2rem",
+        fontWeight: "bold",
+      }}
+    >
+      {firstLoad ? (
+        // ✅ First time: animate entire sentence word by word
+        `${words[index]}, ${staticPart}`.split(" ").map((word, i) => (
+          <motion.span
+            key={`${word}-${i}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: i * 0.2 }}
+            style={{ display: "inline-block" }}
+          >
+            {word}
+          </motion.span>
+        ))
+      ) : (
+        <>
+          <AnimatePresence mode="wait">
+            {showWord && (
+              <motion.span
+                key={words[index]}
+                style={{ display: "inline-flex" }} // required for inner letter layout
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variants={container}
+              >
+                {words[index].split("").map((char, i) => (
+                  <motion.span
+                    key={char + i}
+                    variants={charVariants}
+                    style={{ display: "inline-block" }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+                <span>,</span>
+              </motion.span>
+            )}
+          </AnimatePresence>
+          <span>{staticPart}</span>
+        </>
+      )}
+     </h2>
+     
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
