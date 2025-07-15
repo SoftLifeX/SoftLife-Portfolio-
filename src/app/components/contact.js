@@ -14,7 +14,7 @@ import { motion, useInView } from "framer-motion";
 
 
 function Contact() {
-const lineText = "Let's Collaborate.";
+const lineText = "Let's Collaborate";
 
 
   const [splitChars, setSplitChars] = useState([]);
@@ -29,12 +29,14 @@ const lineText = "Let's Collaborate.";
           <div className="container">
             
              <motion.h1
+            className="headertext"
       style={{
+        fontFamily: "tan",
         fontSize: "clamp(3rem, 4vw, 5rem)",
         whiteSpace: "pre-wrap",
         display: "flex",
         flexWrap: "wrap",
-        lineHeight: 5,
+        lineHeight: 3.5,
         maxWidth: "100%",
       }}
       initial="hidden"
