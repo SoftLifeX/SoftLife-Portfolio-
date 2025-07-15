@@ -46,7 +46,7 @@ useEffect(() => {
         setIndex((prev) => (prev + 1) % dynamicWords.length);
         setShowDynamic(true);
       }, 300);
-    }, 1500);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -82,11 +82,11 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       {word.split("").map((char, charIndex) => (
         <motion.span
           key={`${char}-${wordIndex}-${charIndex}`}
-          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 5 }}
+          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 3 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.03),
-            duration: 0.3,
+            duration: 0.5,
           }}
           style={{ display: "inline-block", whiteSpace: "pre" }}
         >
@@ -111,7 +111,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           setIndexB((prev) => (prev + 1) % dynamicWordsB.length);
           setShowDynamicB(true);
         }, 300);
-      }, 1500);
+      }, 3000);
     }, 3000);
 
     return () => clearTimeout(timeout);
@@ -245,7 +245,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       <div>
         <span>{renderTextByWordAndLetter(line1TextA, 0)}</span>{" "}
         <span className="marker-highlight">
-          {renderTextByWordAndLetter(line1TextB, 0.3)}
+          {renderTextByWordAndLetter(line1TextB, 0.5)}
         </span>
       </div>
 
@@ -258,13 +258,13 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           {showDynamicB && (
             <motion.div
               key={dynamicWordsB[indexB]}
-              initial={firstLoadB.current ? { opacity: 0, y: 5 } : { opacity: 0 }}
+              initial={firstLoadB.current ? { opacity: 0, y: 3 } : { opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.5 }}
               style={{ display: "inline-block" }}
             >
-              {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.2, !firstLoadB.current)}
+              {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.5, !firstLoadB.current)}
             </motion.div>
           )}
         </AnimatePresence>
