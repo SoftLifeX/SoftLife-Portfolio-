@@ -9,7 +9,6 @@ import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
-import { SplitText } from 'gsap/all';
 
 
 
@@ -23,6 +22,32 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 }
 
 function Home1() {
+
+  const slideUp = {
+
+    initial: {
+
+        y: "100%"
+
+    },
+
+    open: (i) => ({
+
+        y: "0%",
+
+        transition: {duration: 0.5, delay: 0.01 * i}
+
+    }),
+
+    closed: {
+
+        y: "100%",
+
+        transition: {duration: 0.5}
+
+    }
+
+ }
 
   const phrase = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`;
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
