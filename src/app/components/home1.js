@@ -45,7 +45,7 @@ useEffect(() => {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % dynamicWords.length);
         setShowDynamic(true);
-      }, 250);
+      }, 300);
     }, 1500);
     return () => clearInterval(interval);
   }, []);
@@ -58,7 +58,7 @@ useEffect(() => {
         key={`${char}-${i}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.03, duration: 0.3 }}
+        transition={{ delay: i * 0.04, duration: 0.3 }}
         style={{ display: "inline-block" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -160,7 +160,7 @@ useEffect(() => {
         height: "5rem",
         alignItems: "flex-start",
         overflow: "hidden",
-        gap: "0.25rem",
+        gap: "0.3rem",
       }}
     >
       {/* First line */}
@@ -178,7 +178,7 @@ useEffect(() => {
                   key={dynamic}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+                  exit={{ opacity: 0, y: -10 }}
                   style={{ display: "inline-block" }}
                 >
                   {dynamic.split("").map((char, i) => (
@@ -186,7 +186,7 @@ useEffect(() => {
                       key={`${char}-${i}`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05, duration: 0.3 }}
+                      transition={{ delay: i * 0.05, duration: 0.4 }}
                       style={{ display: "inline-block" }}
                     >
                       {char}
