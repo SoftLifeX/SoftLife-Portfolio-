@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 2200); // Allow first animation to complete
+    }, 2100); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
@@ -56,7 +56,7 @@ useEffect(() => {
     str.split("").map((char, i) => (
       <motion.span
         key={`${char}-${i}`}
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: i * 0.03, duration: 0.3 }}
         style={{ display: "inline-block" }}
@@ -65,32 +65,46 @@ useEffect(() => {
       </motion.span>
     ));
 
-//paragraph animation 
-  const dynamicWordsB = [
-    "a Content Creator📸",
-    "a Lover of the Arts🎨",
-    "a bit of a gamer🎮",
-    "a Travel Enthusiast✈️",
-  ];
+//paragraph animation
+const dynamicWordsB = [
+  "a Content Creator📸",
+  "a Lover of the Arts🎨",
+  "a bit of a gamer🎮",
+  "a Travel Enthusiast✈️",
+];
 
-  const line1TextA = "an award-winning";
-  const line1TextB = "Full-stack | Mobile";
-  const line2Text = "Software Engineer, Designer &";
+const line1TextA = "an award-winning";
+const line1TextB = "Full-stack | Mobile";
+const line2Text = "Software Engineer, Designer &";
+const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
+  return text.split(" ").map((word, wordIndex) => (
+    <span key={`${word}-${wordIndex}`} style={{ display: "inline-block", marginRight: "0.5ch" }}>
+      {word.split("").map((char, charIndex) => (
+        <motion.span
+          key={`${char}-${wordIndex}-${charIndex}`}
+          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.03),
+            duration: 0.3,
+          }}
+          style={{ display: "inline-block", whiteSpace: "pre" }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </span>
+  ));
+};
 
   const [indexB, setIndexB] = useState(0);
   const [showDynamicB, setShowDynamicB] = useState(true);
   const firstLoadB = useRef(true);
 
-  const dynamicText = dynamicWordsB[indexB];
   useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoadB.current = false;
-    }, 2200);
-    return () => clearTimeout(timeout);
-  }, []);
 
-  useEffect(() => {
-    if (!firstLoadB.current) {
       const interval = setInterval(() => {
         setShowDynamicB(false);
         setTimeout(() => {
@@ -98,51 +112,12 @@ useEffect(() => {
           setShowDynamicB(true);
         }, 300);
       }, 1500);
-      return () => clearInterval(interval);
-    }
-  }, [indexB]);
-  const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
-    return text.split(" ").map((word, wordIndex) => (
-      <span key={`word-${wordIndex}`} style={{ display: "inline-block", marginRight: "0.5ch" }}>
-        {word.split("").map((char, charIndex) => (
-          <motion.span
-            key={`char-${wordIndex}-${charIndex}`}
-            initial={
-              noSlide ? { opacity: 0 } : { opacity: 0, y: 20 }
-            }
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: baseDelay + wordIndex * 0.2 + charIndex * 0.05,
-              duration: 0.3,
-            }}
-            style={{
-              display: "inline-block",
-              whiteSpace: "pre",
-            }}
-          >
-            {char}
-          </motion.span>
-        ))}
-      </span>
-    ));
-  };
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
   
- /* const [currentWord, setCurrentWord] = useState(0);
-    const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
-
-    const changeWord = () => {
-        if (currentWord < ITEMS.length - 1) {
-            setCurrentWord((curr) => curr + 1);
-        }else {
-            setCurrentWord(0);
-        }
-    };
-
-    useEffect(() => {
-        const timeout = setTimeout(changeWord, 1500);
-        return () => clearTimeout(timeout);
-    }); */
-
+//sliding text
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -236,7 +211,7 @@ useEffect(() => {
               {showDynamic && (
                 <motion.span
                   key={dynamic}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   style={{ display: "inline-block" }}
@@ -244,7 +219,7 @@ useEffect(() => {
                   {dynamic.split("").map((char, i) => (
                     <motion.span
                       key={`${char}-${i}`}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.03, duration: 0.4 }}
                       style={{ display: "inline-block" }}
@@ -264,15 +239,9 @@ useEffect(() => {
       <div>{splitLetters(lineTwo)}</div>
      </h2>
      
-    <p style={{
-        fontSize: "1rem",
-        lineHeight: "1.1",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        gap: "0.1rem",
-      }}
-    >
+    <p style={{ fontSize: "1rem", lineHeight: "1.1", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
+      
+      {/* Line 1 */}
       <div>
         <span>{renderTextByWordAndLetter(line1TextA, 0)}</span>{" "}
         <span className="marker-highlight">
@@ -280,17 +249,25 @@ useEffect(() => {
         </span>
       </div>
 
-      <div>
-        {renderTextByWordAndLetter(line2Text, 0.6)}
-      </div>
+      {/* Line 2 */}
+      <div>{renderTextByWordAndLetter(line2Text, 0)}</div>
 
-      <div>
-        {showDynamicB &&
-          renderTextByWordAndLetter(
-            dynamicText,
-            0.9,
-            !firstLoadB.current // only fade (no slide) after first load
+      {/* Line 3: Dynamic Word */}
+      <div style={{ height: "1.2em", display: "flex", alignItems: "center" }}>
+        <AnimatePresence mode="wait">
+          {showDynamicB && (
+            <motion.div
+              key={dynamicWordsB[indexB]}
+              initial={firstLoadB.current ? { opacity: 0, y: 5 } : { opacity: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              style={{ display: "inline-block" }}
+            >
+              {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.2, !firstLoadB.current)}
+            </motion.div>
           )}
+        </AnimatePresence>
       </div>
      </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
