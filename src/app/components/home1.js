@@ -24,14 +24,7 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-  "use client";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { SplitText } from "gsap/all";
-
-gsap.registerPlugin(SplitText);
-
-export default function SplitTextCycler() {
+  gsap.registerPlugin(SplitText);
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const [index, setIndex] = useState(0);
   const textRef = useRef(null);
@@ -40,7 +33,7 @@ export default function SplitTextCycler() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 1000); // every 3s
+    }, 1000); 
 
     return () => clearInterval(interval);
   }, []);
