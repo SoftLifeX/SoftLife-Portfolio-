@@ -25,7 +25,7 @@ function Home1() {
 
 
   const dynamicWords = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticEnd = ",I'm Daniel c. Daniel.";
+  const staticEnd = " ,I'm Daniel c. Daniel.";
   const lineTwo = "Software Engineer";
 
   const [index, setIndex] = useState(0);
@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 4000); // Allow first animation to complete
+    }, 2500); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
@@ -58,7 +58,7 @@ useEffect(() => {
         key={`${char}-${i}`}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.04, duration: 0.3 }}
+        transition={{ delay: i * 0.05, duration: 0.3 }}
         style={{ display: "inline-block" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -178,7 +178,7 @@ useEffect(() => {
                   key={dynamic}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
+                  exit={{ opacity: 0 }}
                   style={{ display: "inline-block" }}
                 >
                   {dynamic.split("").map((char, i) => (
