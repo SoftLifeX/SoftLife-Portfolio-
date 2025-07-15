@@ -14,55 +14,15 @@ import { motion, useInView } from "framer-motion";
 
 
 function Contact() {
-const lineText = "Let's Collaborate";
 
-
-  const [splitChars, setSplitChars] = useState([]);
-
-  useEffect(() => {
-    setSplitChars(lineText.split(""));
-  }, []);
 
   return (
       <section className="home3">
         <div className="contact">
           <div className="container">
-            
-             <motion.h1
-            className="headertext"
-      style={{
-        fontSize: "clamp(3rem, 4vw, 5rem)",
-        whiteSpace: "pre-wrap",
-        display: "flex",
-        flexWrap: "wrap",
-        lineHeight: 3.5,
-        maxWidth: "100%",
-      }}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.6 }}
-    >
-      {splitChars.map((char, index) => (
-        <motion.span
-          key={`${char}-${index}`}
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{
-            delay: index * 0.05,
-            duration: 0.4,
-          }}
-          style={{
-            display: "inline-block",
-            marginRight: char === " " ? "0.25rem" : "0",
-          }}
-        >
-          {char}
-        </motion.span>
-      ))}
-    </motion.h1>
-            
+             <h1 data-scroll data-scroll-speed={0.1}>
+              Let's Collaborate 
+            </h1>
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
               daniel.c.daniel.dev@gmail.com
