@@ -31,7 +31,6 @@ const lineText = "Let's Collaborate";
              <motion.h1
             className="headertext"
       style={{
-        fontFamily: "tan",
         fontSize: "clamp(3rem, 4vw, 5rem)",
         whiteSpace: "pre-wrap",
         display: "flex",
