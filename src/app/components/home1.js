@@ -56,9 +56,9 @@ useEffect(() => {
     str.split("").map((char, i) => (
       <motion.span
         key={`${char}-${i}`}
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.03, duration: 0.3 }}
+        transition={{ delay: i * 0.03, duration: 0.3, ease: [0.175, 0.885, 0.32, 1.275] }}
         style={{ display: "inline-block" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -67,10 +67,10 @@ useEffect(() => {
 
 //paragraph animation
 const dynamicWordsB = [
-  "a Content Creator📸",
-  "a Lover of the Arts🎨",
-  "a bit of a gamer🎮",
-  "a Travel Enthusiast✈️",
+  "a Content Creator",
+  "a Lover of the Arts",
+  "a bit of a gamer",
+  "a Travel Enthusiast",
 ];
 
 const line1TextA = "an award-winning";
@@ -82,7 +82,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       {word.split("").map((char, charIndex) => (
         <motion.span
           key={`${char}-${wordIndex}-${charIndex}`}
-          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 3 }}
+          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
             delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.03),
@@ -211,7 +211,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
               {showDynamic && (
                 <motion.span
                   key={dynamic}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   style={{ display: "inline-block" }}
@@ -219,9 +219,9 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
                   {dynamic.split("").map((char, i) => (
                     <motion.span
                       key={`${char}-${i}`}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.03, duration: 0.4 }}
+                      transition={{ delay: i * 0.03, duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] }}
                       style={{ display: "inline-block" }}
                     >
                       {char}
@@ -258,10 +258,10 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           {showDynamicB && (
             <motion.div
               key={dynamicWordsB[indexB]}
-              initial={firstLoadB.current ? { opacity: 0, y: 3 } : { opacity: 0 }}
+              initial={firstLoadB.current ? { opacity: 0, y: 4 } : { opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275]  }}
               style={{ display: "inline-block" }}
             >
               {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.5, !firstLoadB.current)}
