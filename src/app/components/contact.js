@@ -29,7 +29,7 @@ const AnimatedStrong = ({ text }) => {
 };
   
   return (
-    <strong
+    <span
       ref={ref}
       className="headertext"
       style={{
@@ -52,7 +52,7 @@ const AnimatedStrong = ({ text }) => {
           {char}
         </motion.span>
       ))}
-    </strong>
+    </span>
   );
 };
 
