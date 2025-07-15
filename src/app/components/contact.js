@@ -32,8 +32,11 @@ const AnimatedStrong = ({ text }) => {
     <h1
       ref={ref}
       style={{
-      display: "inline-block",
-      }}
+  fontFamily: '"tan", sans-serif',
+  fontWeight: 100,
+  fontSize: "clamp(3.12rem, 4vw, 5rem)",
+  display: "inline-block",
+}}
     >
       {text.split("").map((char, i) => (
         <motion.span
