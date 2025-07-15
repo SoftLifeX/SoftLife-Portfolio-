@@ -29,12 +29,11 @@ const AnimatedStrong = ({ text }) => {
 };
   
   return (
-    <h1
+    <strong
       ref={ref}
+      className="headertext"
       style={{
-  fontFamily: '"tan", sans-serif',
-  fontWeight: 100,
-  fontSize: "clamp(3.12rem, 4vw, 5rem)",
+  fontSize: "clamp(3rem, 4vw, 5rem)",
   display: "inline-block",
 }}
     >
@@ -53,7 +52,7 @@ const AnimatedStrong = ({ text }) => {
           {char}
         </motion.span>
       ))}
-    </h1>
+    </strong>
   );
 };
 
