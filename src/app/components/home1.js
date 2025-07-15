@@ -120,26 +120,29 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-           <motion.h2
-            className="title"
+      <h2>
+       <span  ref={textRef} />
+      </h2>
+      {/* <motion.h2
+            className="scale"
              initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
             >
-            {/*<span id="helloText" />
+            <span id="helloText" />
                 <span className="waving-hand">
                 👋🏼
-                </span>, */}
+                </span>, 
                 <span>
                 I'm Daniel c. Daniel. <br />
                 Software Engineer.
                 </span>
-                {/*<ScrambleText 
+                <ScrambleText 
                 text={" I'm Daniel c. Daniel.\nSoftware Engineer."}
                 speed={4} 
                 autoLineDelay={true} />           
-{/* <ReplaceText
+               <ReplaceText
                  text={" I'm Daniel c. Daniel. \n Software Engineer."}
                  speed={80}
                  scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
