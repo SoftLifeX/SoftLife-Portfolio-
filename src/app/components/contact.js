@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Magnetic from "./magnetic";
 import Lottie from "lottie-react";
 import { useLottie } from "lottie-react";
@@ -12,59 +12,55 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
-const AnimatedStrong = ({ text }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20% 0px" });
-
-  const letterVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.05,
-      duration: 0.4,
-    },
-  }),
-};
-  
-  return (
-    <span
-      ref={ref}
-      className="headertext"
-      style={{
-  fontSize: "clamp(3rem, 4vw, 5rem)",
-  display: "inline-block",
-}}
-    >
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={`${char}-${i}`}
-          custom={i}
-          variants={letterVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          style={{
-            display: "inline-block",
-            whiteSpace: "pre-wrap", // preserves spaces
-          }}
-        >
-          {char}
-        </motion.span>
-      ))}
-    </span>
-  );
-};
 
 function Contact() {
+const lineText = "Let's Collaborate.";
 
+
+  const [splitChars, setSplitChars] = useState([]);
+
+  useEffect(() => {
+    setSplitChars(lineText.split(""));
+  }, []);
 
   return (
       <section className="home3">
         <div className="contact">
           <div className="container">
             
-             <AnimatedStrong text="Let's Collaborate" />
+             <motion.h1
+      style={{
+        fontSize: "clamp(3rem, 4vw, 5rem)",
+        whiteSpace: "pre-wrap",
+        display: "flex",
+        flexWrap: "wrap",
+        lineHeight: 5,
+        maxWidth: "100%",
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.6 }}
+    >
+      {splitChars.map((char, index) => (
+        <motion.span
+          key={`${char}-${index}`}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{
+            delay: index * 0.05,
+            duration: 0.4,
+          }}
+          style={{
+            display: "inline-block",
+            marginRight: char === " " ? "0.25rem" : "0",
+          }}
+        >
+          {char}
+        </motion.span>
+      ))}
+    </motion.h1>
             
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
