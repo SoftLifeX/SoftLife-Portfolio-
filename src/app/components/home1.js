@@ -24,16 +24,53 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-  useGSAP(() => {
-    const heroSplit = new SplitText('.title', { type: 'chars, words' });
-    const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
-    gsap.from(heroSplit.chars, {
-      yPercent: 50,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06
-    });
+  "use client";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+
+gsap.registerPlugin(SplitText);
+
+export default function SplitTextCycler() {
+  const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
+  const [index, setIndex] = useState(0);
+  const textRef = useRef(null);
+  const splitInstance = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 1000); // every 3s
+
+    return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (!textRef.current) return;
+
+    // Clear old animation
+    gsap.killTweensOf("*");
+
+    // Reset innerHTML
+    textRef.current.innerHTML = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer.`;
+
+    // Kill old split if exists
+    if (splitInstance.current) splitInstance.current.revert();
+
+    // Apply new split
+    splitInstance.current = new SplitText(textRef.current, {
+      type: "words,chars",
+    });
+
+    // Animate characters in
+    gsap.from(splitInstance.current.chars, {
+      opacity: 0,
+      yPercent: 50,
+      stagger: 0.06,
+      duration: 1.8,
+      ease: "power2.out",
+    });
+  }, [index]);
     
   const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
@@ -47,7 +84,7 @@ function Home1() {
     };
 
     useEffect(() => {
-        const timeout = setTimeout(changeWord, 4000);
+        const timeout = setTimeout(changeWord, 1000);
         return () => clearTimeout(timeout);
     });
 
@@ -121,7 +158,7 @@ function Home1() {
     </motion.div>
     <div className="h2Container">
       <h2>
-       <span  ref={textRef} />
+       <span className="title" ref={textRef} />
       </h2>
       {/* <motion.h2
             className="scale"
@@ -146,8 +183,8 @@ function Home1() {
                  text={" I'm Daniel c. Daniel. \n Software Engineer."}
                  speed={80}
                  scrambleChars={['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け', 'こ']}
-              />*/}
-              </motion.h2>
+              />
+              </motion.h2>*/}
                <motion.p
                 initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
