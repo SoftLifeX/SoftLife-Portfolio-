@@ -49,7 +49,8 @@ function Home1() {
 
  }
 
-  const phrase = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`;
+  const titleRef = useRef(null);
+ const isInView = useInView(titleRef)
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const [index, setIndex] = useState(0);
 
@@ -60,6 +61,8 @@ function Home1() {
 
     return () => clearInterval(interval);
   }, []);
+
+  const phrase = `${words[index]}, I'm Daniel c. Daniel.\nSoftware Engineer`;
 
   
   const [currentWord, setCurrentWord] = useState(0);
@@ -147,9 +150,8 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2>
+      <h2 ref={titleRef} className="title">
        {
-
         phrase.split(" ").map( (word, index) => {
          return
             <span>
@@ -157,9 +159,7 @@ function Home1() {
               {word}
              </motion.span>
             </span>
-
         })
-
       }
       </h2>
       {/* <motion.h2
