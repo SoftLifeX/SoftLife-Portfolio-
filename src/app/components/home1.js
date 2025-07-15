@@ -57,7 +57,7 @@ function Home1() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
-    }, 1000); 
+    }, 2000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -77,7 +77,7 @@ function Home1() {
     };
 
     useEffect(() => {
-        const timeout = setTimeout(changeWord, 1000);
+        const timeout = setTimeout(changeWord, 5000);
         return () => clearTimeout(timeout);
     });
 
@@ -150,7 +150,7 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2 ref={titleRef} className="title">
+      <h2 ref={titleRef}>
        {
         phrase.split(" ").map( (word, index) => {
          return
