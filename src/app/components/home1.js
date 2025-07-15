@@ -31,7 +31,6 @@ function Home1() {
   const [index, setIndex] = useState(0);
   const [showWord, setShowWord] = useState(true);
   const firstLoad = useRef(true);
-
   useEffect(() => {
     const interval = setInterval(() => {
       setShowWord(false);
@@ -39,13 +38,13 @@ function Home1() {
         setIndex((i) => (i + 1) % words.length);
         setShowWord(true);
         firstLoad.current = false;
-      }, 300); // exit duration
+      }, 300);
     }, 1500);
 
     return () => clearInterval(interval);
   }, []);
-
-  const line1Words = [words[index], ...staticPart.split(" ")];
+ const dynamicLetters = words[index].split("");
+  const staticWords = staticPart.split(" ");
   const line2Words = secondLine.split(" ");
 
   
@@ -61,7 +60,7 @@ function Home1() {
     };
 
     useEffect(() => {
-        const timeout = setTimeout(changeWord, 5000);
+        const timeout = setTimeout(changeWord, 1500);
         return () => clearTimeout(timeout);
     });
 
@@ -134,56 +133,60 @@ function Home1() {
      )}
     </motion.div>
     <div className="h2Container">
-      <h2 
-       style={{
+      <h2
+      style={{
         display: "flex",
         flexDirection: "column",
-        fontSize: "1.5rem",
-        lineHeight: "1.8rem",
+        fontSize: "2rem",
+        lineHeight: "2.5rem",
         alignItems: "flex-start",
-        gap: "0.3rem",
+        gap: "0.6rem",
         height: "6rem",
         overflow: "hidden",
       }}
     >
       {/* Line 1: Dynamic + Static */}
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
-        {line1Words.map((word, i) =>
-          i === 0 ? (
-            // Animate dynamic word every time
-            <AnimatePresence mode="wait" key={`dynamic-${index}`}>
-              {showWord && (
+        <AnimatePresence mode="wait" key={`dynamic-${index}`}>
+          {showWord && (
+            <motion.span
+              style={{ display: "inline-flex", gap: "0.05rem" }}
+              key={words[index]}
+            >
+              {dynamicLetters.map((char, i) => (
                 <motion.span
-                  key={word}
+                  key={`${char}-${i}`}
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ delay: i * 0.05, duration: 0.3 }}
                   style={{ display: "inline-block" }}
                 >
-                  {word}
+                  {char}
                 </motion.span>
-              )}
-            </AnimatePresence>
-          ) : firstLoad.current ? (
-            // Animate static words only on first load
+              ))}
+            </motion.span>
+          )}
+        </AnimatePresence>
+
+        {staticWords.map((word, i) =>
+          firstLoad.current ? (
             <motion.span
               key={`static-${i}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.15 }}
+              transition={{ delay: 0.3 + i * 0.15 }}
               style={{ display: "inline-block" }}
             >
               {word}
             </motion.span>
           ) : (
-            // After first load, just show static words
             <span key={`static-${i}`}>{word}</span>
           )
         )}
       </div>
 
-      {/* Line 2: Only animates on first load */}
+      {/* Line 2: Software Engineer */}
       <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
         {line2Words.map((word, i) =>
           firstLoad.current ? (
@@ -191,7 +194,7 @@ function Home1() {
               key={`line2-${i}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 + i * 0.15 }}
+              transition={{ delay: 1 + i * 0.15 }}
               style={{ display: "inline-block" }}
             >
               {word}
