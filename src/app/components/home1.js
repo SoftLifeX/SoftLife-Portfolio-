@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 2310); // Allow first animation to complete
+    }, 2200); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
@@ -80,12 +80,12 @@ useEffect(() => {
   const [indexB, setIndexB] = useState(0);
   const [showDynamicB, setShowDynamicB] = useState(true);
   const firstLoadB = useRef(true);
-  const dynamicText = dynamicWordsB[indexB];
 
- useEffect(() => {
+  const dynamicText = dynamicWordsB[indexB];
+  useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoadB.current = false;
-    }, (line1TextA.length + line1TextB.length + line2Text.length + dynamicText.length) * 50 + 1000);
+    }, 2200);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -101,23 +101,31 @@ useEffect(() => {
       return () => clearInterval(interval);
     }
   }, [indexB]);
-
-const renderLetters = (text, delayOffset = 0, noSlide = false) =>
-    text.split("").map((char, i) => (
-      <motion.span
-        key={`${text}-${i}`}
-        initial={
-          noSlide
-            ? { opacity: 0 }
-            : { opacity: 0, y: 20 }
-        }
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: delayOffset + i * 0.03, duration: 0.3 }}
-        style={{ display: "inline-block" }}
-      >
-        {char}
-      </motion.span>
+  const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
+    return text.split(" ").map((word, wordIndex) => (
+      <span key={`word-${wordIndex}`} style={{ display: "inline-block", marginRight: "0.5ch" }}>
+        {word.split("").map((char, charIndex) => (
+          <motion.span
+            key={`char-${wordIndex}-${charIndex}`}
+            initial={
+              noSlide ? { opacity: 0 } : { opacity: 0, y: 20 }
+            }
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: baseDelay + wordIndex * 0.2 + charIndex * 0.05,
+              duration: 0.3,
+            }}
+            style={{
+              display: "inline-block",
+              whiteSpace: "pre",
+            }}
+          >
+            {char}
+          </motion.span>
+        ))}
+      </span>
     ));
+  };
   
  /* const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
@@ -256,23 +264,32 @@ const renderLetters = (text, delayOffset = 0, noSlide = false) =>
       <div>{splitLetters(lineTwo)}</div>
      </h2>
      
-    <p style={{ fontSize: "1rem", lineHeight: "1.3", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.2rem" }}>
-      
+    <p style={{
+        fontSize: "1rem",
+        lineHeight: "1.1",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        gap: "0.1rem",
+      }}
+    >
       <div>
-        <span>{renderLetters(line1TextA)}</span>{" "}
-        <span>{renderLetters(line1TextB, line1TextA.length * 0.05 + 0.1)}</span>
+        <span>{renderTextByWordAndLetter(line1TextA, 0)}</span>{" "}
+        <span className="marker-highlight">
+          {renderTextByWordAndLetter(line1TextB, 0.3)}
+        </span>
       </div>
 
       <div>
-        {renderLetters(line2Text, (line1TextA.length + line1TextB.length) * 0.05 + 0.3)}
+        {renderTextByWordAndLetter(line2Text, 0.6)}
       </div>
 
       <div>
         {showDynamicB &&
-          renderLetters(
+          renderTextByWordAndLetter(
             dynamicText,
-            (line1TextA.length + line1TextB.length + line2Text.length) * 0.05 + 0.6,
-            !firstLoadB.current // fade-only after first load
+            0.9,
+            !firstLoadB.current // only fade (no slide) after first load
           )}
       </div>
      </p>
