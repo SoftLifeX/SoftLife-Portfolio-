@@ -25,7 +25,7 @@ function Home1() {
 
 
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const staticPart = "I'm Daniel c. Daniel.";
+  const staticPart = ",I'm Daniel c. Daniel.";
   const secondLine = "Software Engineer";
 
   const [index, setIndex] = useState(0);
@@ -137,11 +137,11 @@ function Home1() {
       style={{
         display: "flex",
         flexDirection: "column",
-        fontSize: "2rem",
-        lineHeight: "2.5rem",
+        fontSize: "1.5rem",
+        lineHeight: "1.8rem",
         alignItems: "flex-start",
-        gap: "0.6rem",
-        height: "6rem",
+        gap: "0.3rem",
+        height: "5rem",
         overflow: "hidden",
       }}
     >
