@@ -44,7 +44,7 @@ const AnimatedStrong = ({ text }) => {
           animate={isInView ? "visible" : "hidden"}
           style={{
             display: "inline-block",
-            whiteSpace: "pre", // preserves spaces
+            whiteSpace: "pre-wrap", // preserves spaces
           }}
         >
           {char}
