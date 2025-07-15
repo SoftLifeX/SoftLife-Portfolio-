@@ -439,6 +439,16 @@ h1 {
   font-weight: 100;
 }
 
+.headertext{
+  color: var(--text-color);
+  text-align: left;
+  margin: 2rem;
+  text-decoration: none;
+  cursor: text;
+  font-family: 'tan', serif;
+  font-weight: 100;
+}
+
 h3 {
   font-size: 1.87rem;
   margin: 1.56rem;
