@@ -50,7 +50,7 @@ function Home1() {
  }
 
   const titleRef = useRef(null);
- const isInView = useInView(titleRef)
+ const InView = useInView(titleRef)
   const words = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const [index, setIndex] = useState(0);
 
@@ -155,7 +155,7 @@ function Home1() {
         phrase.split(" ").map( (word, index) => {
          return
             <span>
-             <motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>
+             <motion.span variants={slideUp} custom={index} animate={InView ? "open" : "closed"} key={index}>
               {word}
              </motion.span>
             </span>
