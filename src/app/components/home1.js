@@ -23,7 +23,7 @@ function SectionHeroHeadingSpan({ word, isActive, shouldHide }) {
 
 function Home1() {
 
-
+//header animation 
   const dynamicWords = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
   const staticEnd = ", I'm Daniel c. Daniel.";
   const lineTwo = "Software Engineer";
@@ -35,7 +35,7 @@ function Home1() {
 useEffect(() => {
     const timeout = setTimeout(() => {
       firstLoad.current = false;
-    }, 2300); // Allow first animation to complete
+    }, 2310); // Allow first animation to complete
     return () => clearTimeout(timeout);
   }, []);
 
@@ -65,9 +65,61 @@ useEffect(() => {
       </motion.span>
     ));
 
+//paragraph animation 
+  const dynamicWordsB = [
+    "a Content Creator📸",
+    "a Lover of the Arts🎨",
+    "a bit of a gamer🎮",
+    "a Travel Enthusiast✈️",
+  ];
 
+  const line1TextA = "an award-winning";
+  const line1TextB = "Full-stack | Mobile";
+  const line2Text = "Software Engineer, Designer &";
+
+  const [indexB, setIndexB] = useState(0);
+  const [showDynamicB, setShowDynamicB] = useState(true);
+  const firstLoadB = useRef(true);
+  const dynamicText = dynamicWordsB[indexB];
+
+ useEffect(() => {
+    const timeout = setTimeout(() => {
+      firstLoadB.current = false;
+    }, (line1TextA.length + line1TextB.length + line2Text.length + dynamicText.length) * 50 + 1000);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!firstLoadB.current) {
+      const interval = setInterval(() => {
+        setShowDynamicB(false);
+        setTimeout(() => {
+          setIndexB((prev) => (prev + 1) % dynamicWordsB.length);
+          setShowDynamicB(true);
+        }, 300);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [indexB]);
+
+const renderLetters = (text, delayOffset = 0, noSlide = false) =>
+    text.split("").map((char, i) => (
+      <motion.span
+        key={`${text}-${i}`}
+        initial={
+          noSlide
+            ? { opacity: 0 }
+            : { opacity: 0, y: 20 }
+        }
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: delayOffset + i * 0.03, duration: 0.3 }}
+        style={{ display: "inline-block" }}
+      >
+        {char}
+      </motion.span>
+    ));
   
-  const [currentWord, setCurrentWord] = useState(0);
+ /* const [currentWord, setCurrentWord] = useState(0);
     const prevWord = currentWord === 0 ? ITEMS.length - 1 : currentWord - 1;
 
     const changeWord = () => {
@@ -81,7 +133,7 @@ useEffect(() => {
     useEffect(() => {
         const timeout = setTimeout(changeWord, 1500);
         return () => clearTimeout(timeout);
-    });
+    }); */
 
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -204,20 +256,26 @@ useEffect(() => {
       <div>{splitLetters(lineTwo)}</div>
      </h2>
      
-               <motion.p
-                initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.35, duration: 0.6, ease: [0.16, 1, 0.3, 1] }} 
-               className="hometext scale">
-                an award-winning <span className="marker-highlight"> Full-stack | Mobile</span>
-                  <br /> Software Engineer, Designer  & <br />{" "}
-              <span className="scrolltext">
-                {ITEMS.map((el, i) => (
-                    <SectionHeroHeadingSpan key={i} word={el} isActive={currentWord === i} shouldHide={prevWord === i} />
-                ))}
-              </span>
-              </motion.p>
+    <p style={{ fontSize: "1rem", lineHeight: "1.3", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.2rem" }}>
+      
+      <div>
+        <span>{renderLetters(line1TextA)}</span>{" "}
+        <span>{renderLetters(line1TextB, line1TextA.length * 0.05 + 0.1)}</span>
+      </div>
+
+      <div>
+        {renderLetters(line2Text, (line1TextA.length + line1TextB.length) * 0.05 + 0.3)}
+      </div>
+
+      <div>
+        {showDynamicB &&
+          renderLetters(
+            dynamicText,
+            (line1TextA.length + line1TextB.length + line2Text.length) * 0.05 + 0.6,
+            !firstLoadB.current // fade-only after first load
+          )}
+      </div>
+     </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
       <filter id="marker-shape">
