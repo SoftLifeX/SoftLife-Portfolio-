@@ -102,7 +102,7 @@ function About3() {
 
               <div className="serviceCard">
                 <Lottie
-                  id="lottie"
+                  id="lottie3"
                   loop={true} 
                   animationData={Targeted} />
                 <h2>The Full Package</h2>
