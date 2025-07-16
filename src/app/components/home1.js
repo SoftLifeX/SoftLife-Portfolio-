@@ -19,13 +19,13 @@ const dynamicWords = [
   "a Content Creator", "a Lover of the Arts", "a bit of a gamer", "a Travel Enthusiast"];
 
 const charVariants = {
-  hidden: { opacity: 0, y: "0.25em" },
-  visible: { opacity: 1, y: "0em", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
+  hidden: { opacity: 0, y: "100%" },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.6 },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.9 },
   }),
 };
 
@@ -126,7 +126,7 @@ const lineContainer1 = {
     transition: {
       staggerChildren: 0.05,
       ease: [0.175, 0.885, 0.32, 1.275],
-      delay: 0.4,
+      delay: 0.7,
     },
   },
 };
@@ -232,7 +232,7 @@ const lineContainer1 = {
         alignItems: "flex-start",
         gap: "0.4rem",
         fontSize: "1.5rem",
-        lineHeight: 1,
+        lineHeight: 1.05,
         whiteSpace: "pre-wrap",
         overflow: "hidden",
       }}
@@ -303,7 +303,7 @@ const lineContainer1 = {
       </motion.div>
     </div>
   </h2>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.05, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
 
