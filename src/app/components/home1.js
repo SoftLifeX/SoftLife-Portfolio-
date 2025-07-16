@@ -12,22 +12,45 @@ import { useGSAP } from '@gsap/react';
 
 function Home1() {
 
-//header animation 
-  const splitByChar = (text) => text.split("");
-  const staticText = ", I'm Daniel C. Daniel";
-  const secondaryText = "Software Engineer";
+//header animation
+const dynamicWords1 = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
 
-  const dynamicWords = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-  const [index, setIndex] = useState(0);
+const charVariant1 = {
+  initial: { opacity: 0, y: "100%" },
+  animate: {
+    opacity: 1,
+    y: "0%",
+    transition: { duration: 0.4 },
+  },
+};
+
+const lineContainer1 = {
+  animate: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+  const [index1, setIndex1] = useState(0);
+  const [isFirstLoad1, setIsFirstLoad1] = useState(true);
+  const dynamicWord1 = dynamicWords1[index1];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % dynamicWords.length);
-    }, 1500);
-    return () => clearInterval(interval);
+    const timeout = setTimeout(() => {
+      setIsFirstLoad1(false);
+    }, 2100);
+    return () => clearTimeout(timeout);
   }, []);
-  const currentDynamic = dynamicWords[index];
 
+  useEffect(() => {
+    if (!isFirstLoad1) {
+      const interval = setInterval(() => {
+        setIndex1((prev) => (prev + 1) % dynamicWords1.length);
+      }, 1500);
+      return () => clearInterval(interval);
+    }
+  }, [isFirstLoad1]);
 
 //paragraph animation
 const dynamicWordsB = [
@@ -151,59 +174,85 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
      )}
     </motion.div>
     <div className="h2Container">
-     <h2>
-      <div
+    <h2>
+    <div
       style={{
-        fontSize: "1.5rem",
-        lineHeight: "1.5rem",
-        whiteSpace: "pre-wrap",
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        gap: "0.3rem",
+        gap: "1rem",
+        fontSize: "1.5rem",
+        lineHeight: 1.4,
+        whiteSpace: "pre-wrap",
         overflow: "hidden",
-      }}>
-      <div style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}>
-        {splitByChar(currentDynamic).map((char, i) => (
-          <motion.span
-            key={`${char}-${i}`}
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.4,
-              delay: i * 0.05,
-            }}
-            style={{
-              display: "inline-block",
-              overflow: "hidden",
-            }}
-          >
-            {char}
-          </motion.span>
-        ))}
-        <span style={{ marginLeft: "0.3rem" }}>{staticText}</span>
+      }}
+    >
+      {/* First Line */}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
+        {/* Dynamic Word */}
+        <motion.div
+          key={dynamicWord1 + isFirstLoad1}
+          variants={lineContainer1}
+          initial="initial"
+          animate="animate"
+          style={{ display: "flex", overflow: "hidden" }}
+        >
+          {dynamicWord1.split("").map((char, i) => (
+            <motion.span
+              key={`char-${i}`}
+              variants={charVariant1}
+              style={{
+                display: "inline-block",
+                whiteSpace: "pre",
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.div>
+
+        {/* Static Part */}
+        <motion.div
+          variants={lineContainer1}
+          initial="initial"
+          animate="animate"
+          style={{ display: "flex", gap: "0.25rem", overflow: "hidden" }}
+        >
+          {", I'm Daniel c. Daniel"
+            .split(" ")
+            .map((word, i) => (
+              <motion.span
+                key={`static-${i}`}
+                variants={charVariant1}
+                style={{ display: "inline-block" }}
+              >
+                {word}
+              </motion.span>
+            ))}
+        </motion.div>
       </div>
-      <div style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}>
-        {splitByChar(secondaryText).map((char, i) => (
-          <motion.span
-            key={`secondary-${char}-${i}`}
-            initial={{ y: "100%", opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.4,
-              delay: i * 0.05 + currentDynamic.length * 0.05 + 0.2,
-            }}
-            style={{
-              display: "inline-block",
-              overflow: "hidden",
-            }}
-          >
-            {char}
-          </motion.span>
-        ))}
+
+      {/* Second Line */}
+      <motion.div
+        variants={lineContainer1}
+        initial="initial"
+        animate="animate"
+        style={{ display: "flex", gap: "0.25rem", overflow: "hidden" }}
+      >
+        {"Software Engineer"
+          .split(" ")
+          .map((word, i) => (
+            <motion.span
+              key={`second-${i}`}
+              variants={charVariant1}
+              style={{ display: "inline-block" }}
+            >
+              {word}
+            </motion.span>
+          ))}
+      </motion.div>
       </div>
-    </div>
-   </h2>
+     </h2>
      
     <p style={{ fontSize: "1rem", lineHeight: "1rem", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
       
