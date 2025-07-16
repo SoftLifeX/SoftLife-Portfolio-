@@ -39,7 +39,7 @@ function splitTextLine(text, keyPrefix = "line") {
         display: "flex",
         flexWrap: "wrap",
         whiteSpace: "pre",
-        fontSize: "5rem",
+        fontSize: "clamp(3rem, 4vw, 5rem)",
         height: "5rem"
       }}
     >
