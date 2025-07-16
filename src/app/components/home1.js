@@ -103,7 +103,7 @@ function renderLine(words, keyPrefix = "") {
           return (
             <motion.span
               key={`${keyPrefix}-highlight-${i}`}
-              className="highlight-bg"
+              className="marker-highlight"
               style={{ display: "inline-flex", whiteSpace: "pre" }}
               variants={wordContainer}
             >
