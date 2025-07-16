@@ -16,11 +16,7 @@ const fullLines = [
 ];
 
 const dynamicWords = [
-  "a Content Creator",
-  "a Lover of the Arts",
-  "a bit of a gamer",
-  "a Travel Enthusiast",
-];
+  "a Content Creator", "a Lover of the Arts", "a bit of a gamer", "a Travel Enthusiast"];
 
 const charVariants = {
   hidden: { opacity: 0, y: "0.25em" },
@@ -93,7 +89,7 @@ function renderLine(words, keyPrefix = "") {
         return (
           <motion.span
             key={`${keyPrefix}-word-${i}`}
-            style={{ display: "inline-block", whiteSpace: "pre" }}
+            style={{ display: "inline-block", whiteSpace: "pre", overflow: "hidden" }}
             variants={wordContainer}
           >
             {word.split("").map((char, j) => (
@@ -305,7 +301,7 @@ const lineContainer1 = {
       </motion.div>
     </div>
   </h2>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0 }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden" }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
 
@@ -317,6 +313,7 @@ const lineContainer1 = {
           whiteSpace: "pre",
           fontSize: "1rem",
           gap: "0.3rem",
+          overflow: "hidden",
         }}
         initial="hidden"
         animate="visible"
@@ -326,7 +323,7 @@ const lineContainer1 = {
           <motion.span
             key={`dynamic-char-${j}`}
             variants={charVariants}
-            style={{ display: "inline-block", whiteSpace: "pre" }}
+            style={{ display: "inline-block", whiteSpace: "pre", overflow: "hidden" }}
           >
             {char === " " ? "\u00A0" : char}
           </motion.span>
