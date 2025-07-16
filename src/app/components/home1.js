@@ -298,7 +298,7 @@ const dynamicWord = useCyclingWord(dynamicWords, 1500);
       </motion.div>
     </div>
   </h2>
-    <p className="hometext">
+    <p>
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: "1" }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
@@ -334,8 +334,8 @@ const dynamicWord = useCyclingWord(dynamicWords, 1500);
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <p className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer | Designer⠀⠀⠀⠀  </p>
-          <p className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer | Designer⠀⠀⠀   </p>
+          <h1 className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer | Designer⠀⠀⠀⠀  </h1>
+          <h1 className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer | Designer⠀⠀⠀   </h1>
         </div>
       </div>
         <motion.div
