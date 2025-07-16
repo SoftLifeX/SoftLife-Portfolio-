@@ -17,14 +17,14 @@ const charVariants = {
   visible: {
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.4 },
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
 const containerVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.05, 
+      staggerChildren: 0.05, ease: [0.175, 0.885, 0.32, 1.275]
     },
   },
 };
