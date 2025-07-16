@@ -20,12 +20,12 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "0.25em" },
-  visible: { opacity: 1, y: "0em", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.3 } },
+  visible: { opacity: 1, y: "0em", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.4 } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275] },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.4 },
   }),
 };
 
@@ -117,7 +117,7 @@ const charVariant1 = {
   animate: {
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.2 },
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.3 },
   },
 };
 
@@ -126,6 +126,7 @@ const lineContainer1 = {
     transition: {
       staggerChildren: 0.05,
       ease: [0.175, 0.885, 0.32, 1.275],
+      delay: 0.3,
     },
   },
 };
