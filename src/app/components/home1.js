@@ -298,7 +298,7 @@ const dynamicWord = useCyclingWord(dynamicWords, 1500);
       </motion.div>
     </div>
   </h2>
-    <p>
+    <p className="hometext">
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: "1" }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
