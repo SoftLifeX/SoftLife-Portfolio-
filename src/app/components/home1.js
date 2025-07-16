@@ -54,7 +54,7 @@ const lineContainer1 = {
 
 //paragraph animation
   const fullLines = [
-    ["An", "award-winning", "full-stack", "|", "Mobile"],
+    ["An", "award-winning", "Full-stack", "|", "Mobile"],
     ["Software", "Engineer,", "designer", "&"],
   ];
 
@@ -114,9 +114,9 @@ const lineContainer1 = {
         variants={wordContainer}
       >
         {words.map((word, i) => {
-          const isHighlight = word === "full-stack";
+          const isHighlight = word === "Full-stack";
           if (isHighlight) {
-            const highlightWords = ["full-stack", "|", "Mobile"];
+            const highlightWords = ["Full-stack", "|", "Mobile"];
             return (
               <motion.span
                 key={`${keyPrefix}-highlight-${i}`}
@@ -284,7 +284,7 @@ const lineContainer1 = {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        gap: "0.25rem",
+        gap: "0.4rem",
         fontSize: "1.5rem",
         lineHeight: 1,
         whiteSpace: "pre-wrap",
@@ -320,7 +320,7 @@ const lineContainer1 = {
           variants={lineContainer1}
           initial="initial"
           animate="animate"
-          style={{ display: "flex", gap: "0.25rem", overflow: "hidden" }}
+          style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
         >
           {", I'm Daniel c. Daniel"
             .split(" ")
@@ -341,7 +341,7 @@ const lineContainer1 = {
         variants={lineContainer1}
         initial="initial"
         animate="animate"
-        style={{ display: "flex", gap: "0.25rem", overflow: "hidden" }}
+        style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
       >
         {"Software Engineer"
           .split(" ")
@@ -358,7 +358,7 @@ const lineContainer1 = {
     </div>
   </h2>
     <p>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.6 }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1 }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
       {renderDynamicWord(dynamicWord)}
@@ -376,8 +376,8 @@ const lineContainer1 = {
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer | Designer⠀⠀⠀⠀  </h1>
-          <h1 className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer | Designer⠀⠀⠀   </h1>
+          <h1 className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer & Designer⠀⠀⠀⠀  </h1>
+          <h1 className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer & Designer⠀⠀⠀   </h1>
         </div>
       </div>
         <motion.div
