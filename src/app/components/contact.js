@@ -12,12 +12,6 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-
 const charVariants_letsCollab = {
   hidden: { opacity: 0, y: "0.25em" },
   visible: {
