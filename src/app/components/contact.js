@@ -90,7 +90,7 @@ function Contact() {
         flexDirection: 'column',
       }}
     >
-      {InView && renderWords(words, 'collab')}
+      {inView && renderWords(words, 'collab')}
     </div>
     
             </h1>
