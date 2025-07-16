@@ -12,77 +12,62 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
-
-function Contact() {
-  
- const charVariants = {
-  hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
-};
-
-const wordContainer = {
+const charVariants = {
+  hidden: { opacity: 0, y: "0.25em" },
   visible: {
-    transition: {
-      staggerChildren: 0.04,
-    },
+    opacity: 1,
+    y: "0em",
+    transition: { duration: 0.35 },
   },
 };
 
-  const text = "Let's collaborate";
+const containerVariants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.03,
+    },
+  },
+};
+function splitTextLine(text, keyPrefix = "line") {
+  return (
+    <motion.div
+      className="line"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        whiteSpace: "pre",
+        fontSize: "1.25rem",
+      }}
+    >
+      {text.split("").map((char, i) => (
+        <motion.span
+          key={`${keyPrefix}-${i}`}
+          variants={charVariants}
+          style={{ display: "inline-block", whiteSpace: "pre" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
+}
 
-  
-    
-  
-
+function Contact() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { amount: 1.0 }); // fully in view
 
   return (
       <section className="home3">
         <div className="contact">
           <div className="container">
              <h1 data-scroll data-scroll-speed={0.1}>
-              <motion.div
-      className="lets-collab"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        whiteSpace: "pre-wrap",
-        fontSize: "clamp(3rem, 4vw, 5rem)",
-        lineHeight: "1",
-        margin: 0,
-        gap: "0.3rem",
-      }}
-      initial="hidden"
-      animate="visible"
-      variants={wordContainer}
-    >
-      {text.split(" ").map((word, wordIndex) => (
-        <motion.span
-          key={`word-${wordIndex}`}
-          style={{ display: "inline-flex", whiteSpace: "pre" }}
-          variants={wordContainer}
-        >
-          {word.split("").map((char, charIndex) => (
-            <motion.span
-              key={`char-${wordIndex}-${charIndex}`}
-              variants={charVariants}
-              style={{
-                display: "inline-block",
-                whiteSpace: "pre",
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-          {/* Add a non-breaking space after each word */}
-          <motion.span
-            style={{ display: "inline-block", whiteSpace: "pre" }}
-            variants={charVariants}
-          >
-            {"\u00A0"}
-          </motion.span>
-        </motion.span>
-      ))}
-    </motion.div> 
+              <div ref={ref} style={{ margin: 0, display: "flex", flexDirection: "column" }}>
+               {inView && splitTextLine("Let's collaborate", "collab")}
+             </div>
+    
             </h1>
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
