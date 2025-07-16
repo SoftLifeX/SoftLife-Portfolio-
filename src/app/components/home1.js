@@ -190,16 +190,17 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       <h2 style={{
         display: "flex",
         flexDirection: "column",
-        fontSize: "1.5rem",
-        lineHeight: "1.5rem",
-        height: "4rem",
+        position: "relative",
         alignItems: "flex-start",
         overflow: "hidden",
         gap: "0.3rem",
       }}
     >
       {/* First line */}
-      <div style={{ display: "inline-block" }}>
+      <div style={{ 
+          fontSize: "1.5rem",
+          lineHeight: "1.5rem",
+          display: "inline-block" }}>
         {firstLoad.current ? (
           <>
             {splitLetters(dynamic)}
@@ -222,7 +223,10 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.05, duration: 0.4, ease: [0.755, 0.050, 0.855, 0.060] }}
-                      style={{ display: "inline-block" }}
+                      style={{
+                          fontSize: "1.5rem",
+                          lineHeight: "1.5rem",
+                          display: "inline-block" }}
                     >
                       {char}
                     </motion.span>
@@ -236,7 +240,13 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       </div>
 
       {/* Second line */}
-      <div>{splitLetters(lineTwo)}</div>
+      <div 
+         style={{ 
+          fontSize: "1.5rem",
+          lineHeight: "1.5rem",
+         }}
+          > 
+          {splitLetters(lineTwo)}</div>
      </h2>
      
     <p style={{ fontSize: "1rem", lineHeight: "1rem", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
