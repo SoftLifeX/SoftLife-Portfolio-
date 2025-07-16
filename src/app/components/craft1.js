@@ -1,11 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Image from "next/image";
 import { images } from "@/app/images/images";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
+const charVariants_letsCollab = {
+  hidden: { opacity: 0, y: "0.25em" },
+  visible: {
+    opacity: 1,
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+  },
+};
 
+const wordContainer_letsCollab = {
+  visible: (i = 1) => ({
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
+    },
+  }),
+};
 function Craft1() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
+
+  const words = ["Digital", "concepts", "given", "life"];
 
   const [action,  setAction] = useState("Project");
   
@@ -13,14 +33,43 @@ function Craft1() {
       <section className="craft1">
         <div className="portfolio">
           <div className="container">
-            <motion.h1
-        className="scale"
-       initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}>
-              Digital concepts given life
-            </motion.h1>
+            <h1>
+              <motion.div
+                  ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={wordContainer_letsCollab}
+      className="flex flex-wrap text-[1.25rem] leading-tight"
+      style={{
+        whiteSpace: "normal",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      {words.map((word, i) => (
+        <motion.span
+          key={`word-${i}`}
+          style={{
+            display: "inline-flex",
+            marginRight: i !== words.length - 1 ? "0.4em" : "0",
+          }}
+          variants={wordContainer_letsCollab}
+        >
+          {word.split("").map((char, j) => (
+            <motion.span
+              key={`char-${i}-${j}`}
+              variants={charVariants_letsCollab}
+              style={{
+                display: "inline-block",
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.span>
+      ))}
+    </motion.div>
+            </h1>
          <div className="tab-titles">
                 <h4>
                   <ul>
