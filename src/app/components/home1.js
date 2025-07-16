@@ -20,7 +20,7 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.9 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.8 } },
 };
 
 const wordContainer = {
@@ -29,15 +29,15 @@ const wordContainer = {
   }),
 };
 
-function useCyclingWord(words, delay = 4000) {
+function useCyclingWord(words) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((i) => (i + 1) % words.length);
-    }, delay);
+    }, 2000);
     return () => clearInterval(interval);
-  }, [words, delay]);
+  }, [words]);
 
   return words[index];
 }
