@@ -12,6 +12,7 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
+
 const charVariants_letsCollab = {
   hidden: { opacity: 0, y: "0.25em" },
   visible: {
@@ -33,8 +34,9 @@ const wordContainer_letsCollab = {
 
 function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 1.0, once: true }); // fully in view
-  const words = ['Let’s', 'collaborate'];
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
+
+  const words = ["Let's", "collaborate"];
   
 
   return (
@@ -43,7 +45,7 @@ function Contact() {
           <div className="container">
              <h1 data-scroll data-scroll-speed={0.1}>
               <motion.div
-      ref={ref}
+                  ref={ref}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={wordContainer_letsCollab}
