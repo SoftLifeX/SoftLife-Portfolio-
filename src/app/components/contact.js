@@ -14,6 +14,25 @@ import { motion, useInView } from "framer-motion";
 
 
 function Contact() {
+  
+ const charVariants = {
+  hidden: { opacity: 0, y: "100%" },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
+};
+
+const wordContainer = {
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+    },
+  },
+};
+
+  const text = "Let's collaborate";
+
+  
+    
+  
 
 
   return (
@@ -21,7 +40,49 @@ function Contact() {
         <div className="contact">
           <div className="container">
              <h1 data-scroll data-scroll-speed={0.1}>
-              Let's Collaborate 
+              <motion.div
+      className="lets-collab"
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        whiteSpace: "pre-wrap",
+        fontSize: "clamp(3rem, 4vw, 5rem)",
+        lineHeight: "1",
+        margin: 0,
+        gap: "0.3rem",
+      }}
+      initial="hidden"
+      animate="visible"
+      variants={wordContainer}
+    >
+      {text.split(" ").map((word, wordIndex) => (
+        <motion.span
+          key={`word-${wordIndex}`}
+          style={{ display: "inline-flex", whiteSpace: "pre" }}
+          variants={wordContainer}
+        >
+          {word.split("").map((char, charIndex) => (
+            <motion.span
+              key={`char-${wordIndex}-${charIndex}`}
+              variants={charVariants}
+              style={{
+                display: "inline-block",
+                whiteSpace: "pre",
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+          {/* Add a non-breaking space after each word */}
+          <motion.span
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+            variants={charVariants}
+          >
+            {"\u00A0"}
+          </motion.span>
+        </motion.span>
+      ))}
+    </motion.div> 
             </h1>
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
