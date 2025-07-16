@@ -12,79 +12,34 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
-const easing = [0.175, 0.885, 0.32, 1.275];
+"use client";
 
-const charVariants = {
-  hidden: { opacity: 0, y: '0.25em' },
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+const charVariants_letsCollab = {
+  hidden: { opacity: 0, y: "0.25em" },
   visible: {
     opacity: 1,
-    y: '0em',
-    transition: {
-      duration: 0.4,
-      ease: easing,
-    },
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
-const wordContainer = {
+const wordContainer_letsCollab = {
   visible: (i = 1) => ({
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: i * 0.05,
-      ease: easing,
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
     },
   }),
 };
-function renderWords(words, keyPrefix = '') {
-  return (
-    <motion.div
-      className="text-container"
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        whiteSpace: 'normal',
-        fontSize: 'clamp(3rem, 4vw, 5rem)',
-        height: "10rem",
-      }}
-      initial="hidden"
-      animate="visible"
-      variants={wordContainer}
-    >
-      {words.map((word, i) => (
-        <motion.span
-          key={`${keyPrefix}-word-${i}`}
-          style={{ display: 'inline-block', whiteSpace: 'pre' }}
-          variants={wordContainer}
-        >
-          {word.split('').map((char, j) => (
-            <motion.span
-              key={`${keyPrefix}-char-${i}-${j}`}
-              variants={charVariants}
-              style={{ display: 'inline-block', whiteSpace: 'pre' }}
-            >
-              {char === ' ' ? '\u00A0' : char}
-            </motion.span>
-          ))}
-          {i < fullText.length - 1 && (
-      <motion.span
-        aria-hidden="true"
-        style={{
-          display: "inline-block",
-          width: "0.35em"
-        }}
-      >
-        {"\u00A0"}
-      </motion.span>
-    )}
-        </motion.span>
-      ))}
-    </motion.div>
-  );
- }
+  
 
 function Contact() {
   const ref = useRef(null);
-  const inView = useInView(ref, { amount: 1.0, once: true }); // fully in view
+  const isInView = useInView(ref, { amount: 1.0, once: true }); // fully in view
   const words = ['Let’s', 'collaborate'];
   
 
@@ -93,16 +48,41 @@ function Contact() {
         <div className="contact">
           <div className="container">
              <h1 data-scroll data-scroll-speed={0.1}>
-              <div
+              <motion.div
       ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={wordContainer_letsCollab}
+      className="flex flex-wrap text-[1.25rem] leading-tight"
       style={{
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
+        whiteSpace: "normal",
+        margin: 0,
+        padding: 0,
       }}
     >
-      {inView && renderWords(words, 'collab')}
-    </div>
+      {words.map((word, i) => (
+        <motion.span
+          key={`word-${i}`}
+          style={{
+            display: "inline-flex",
+            marginRight: i !== words.length - 1 ? "0.4em" : "0",
+          }}
+          variants={wordContainer_letsCollab}
+        >
+          {word.split("").map((char, j) => (
+            <motion.span
+              key={`char-${i}-${j}`}
+              variants={charVariants_letsCollab}
+              style={{
+                display: "inline-block",
+              }}
+            >
+              {char}
+            </motion.span>
+          ))}
+        </motion.span>
+      ))}
+    </motion.div>
     
             </h1>
             <Magnetic>
