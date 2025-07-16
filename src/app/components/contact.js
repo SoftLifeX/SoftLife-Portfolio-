@@ -65,12 +65,17 @@ function renderWords(words, keyPrefix = '') {
               {char === ' ' ? '\u00A0' : char}
             </motion.span>
           ))}
-          <motion.span
-      aria-hidden="true"
-      style={{ display: "inline-block", width: "0.25em" }}
-    >
-      {"\u00A0"}
-    </motion.span>
+          {i < fullText.length - 1 && (
+      <motion.span
+        aria-hidden="true"
+        style={{
+          display: "inline-block",
+          width: "0.35em"
+        }}
+      >
+        {"\u00A0"}
+      </motion.span>
+    )}
         </motion.span>
       ))}
     </motion.div>
