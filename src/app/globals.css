@@ -836,12 +836,6 @@ outline: none;
   color: var(--text-color);
 }
 
-.homepage p {
-  margin: 0.1rem 0;
-  color: var(--tertiary-text);
-}
-
-
 .typed {
   width: 100%;
   white-space: pre-line;
