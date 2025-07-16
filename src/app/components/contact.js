@@ -12,65 +12,86 @@ import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
+const easing = [0.175, 0.885, 0.32, 1.275];
+
 const charVariants = {
-  hidden: { opacity: 0, y: "100%" },
+  hidden: { opacity: 0, y: '0.25em' },
   visible: {
     opacity: 1,
-    y: "0%",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
-  },
-};
-
-const containerVariants = {
-  visible: {
+    y: '0em',
     transition: {
-      staggerChildren: 0.05, ease: [0.175, 0.885, 0.32, 1.275]
+      duration: 0.4,
+      ease: easing,
     },
   },
 };
-function splitTextLine(text, keyPrefix = "line") {
+
+const wordContainer = {
+  visible: (i = 1) => ({
+    transition: {
+      staggerChildren: 0.05,
+      delayChildren: i * 0.05,
+      ease: easing,
+    },
+  }),
+};
+function renderWords(words, keyPrefix = '') {
   return (
     <motion.div
-      className="line"
+      className="text-container"
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        whiteSpace: 'normal',
+        fontSize: 'clamp(3rem, 4vw, 5rem)',
+        height: "5rem",
+      }}
       initial="hidden"
       animate="visible"
-      variants={containerVariants}
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        whiteSpace: "normal",
-        fontSize: "clamp(3rem, 4vw, 5rem)",
-        height: "5rem"
-      }}
+      variants={wordContainer}
     >
-      {text.split("").map((char, i) => (
+      {words.map((word, i) => (
         <motion.span
-          key={`${keyPrefix}-${i}`}
-          variants={charVariants}
-          style={{
-          display: "inline-block",
-          whiteSpace: char === " " ? "normal" : "pre",
-         }}
+          key={`${keyPrefix}-word-${i}`}
+          style={{ display: 'inline-block', whiteSpace: 'pre' }}
+          variants={wordContainer}
         >
-          {char === " " ? "\u00A0" : char}
+          {word.split('').map((char, j) => (
+            <motion.span
+              key={`${keyPrefix}-char-${i}-${j}`}
+              variants={charVariants}
+              style={{ display: 'inline-block', whiteSpace: 'pre' }}
+            >
+              {char === ' ' ? '\u00A0' : char}
+            </motion.span>
+          ))}
         </motion.span>
       ))}
     </motion.div>
   );
-}
+ }
 
 function Contact() {
   const ref = useRef(null);
-  const inView = useInView(ref, { amount: 1.0 }); // fully in view
+  const inView = useInView(ref, { amount: 1.0, once: true }); // fully in view
+  const words = ['Let’s', 'collaborate'];
+  
 
   return (
       <section className="home3">
         <div className="contact">
           <div className="container">
              <h1 data-scroll data-scroll-speed={0.1}>
-              <div ref={ref} style={{ margin: 0, display: "flex", flexDirection: "column" }}>
-               {inView && splitTextLine("Let's collaborate", "collab")}
-             </div>
+              <div
+      ref={ref}
+      style={{
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
+      {InView && renderWords(words, 'collab')}
+    </div>
     
             </h1>
             <Magnetic>
