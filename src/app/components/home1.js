@@ -20,12 +20,12 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 1 } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.9 },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275],  },
   }),
 };
 
@@ -117,7 +117,7 @@ const charVariant1 = {
   animate: {
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+    transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
@@ -126,7 +126,7 @@ const lineContainer1 = {
     transition: {
       staggerChildren: 0.05,
       ease: [0.175, 0.885, 0.32, 1.275],
-      delay: 0.7,
+      delay: 1,
     },
   },
 };
@@ -232,7 +232,7 @@ const lineContainer1 = {
         alignItems: "flex-start",
         gap: "0.4rem",
         fontSize: "1.5rem",
-        lineHeight: 1.05,
+        lineHeight: 1.1,
         whiteSpace: "pre-wrap",
         overflow: "hidden",
       }}
@@ -303,7 +303,7 @@ const lineContainer1 = {
       </motion.div>
     </div>
   </h2>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.05, }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
 
