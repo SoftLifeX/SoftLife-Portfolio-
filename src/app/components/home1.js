@@ -20,7 +20,7 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.8 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.75 } },
 };
 
 const wordContainer = {
@@ -152,7 +152,7 @@ const lineContainer1 = {
   }, [isFirstLoad1]);
 
 //paragraph animation
-  const dynamicWord = useCyclingWord(dynamicWords, 1500);
+  const dynamicWord = useCyclingWord(dynamicWords, 200);
     
 //sliding text
   const firstText = useRef(null);
