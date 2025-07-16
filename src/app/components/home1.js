@@ -163,7 +163,27 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
         gap: "0.3rem",
         overflow: "hidden",
       }}>
-      <div style={{ display: "flex", gap: "0.4rem", overflow: "hidden" }}>
+      <div style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}>
+        {splitByChar(currentDynamic).map((char, i) => (
+          <motion.span
+            key={`${char}-${i}`}
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              duration: 0.4,
+              delay: i * 0.05,
+            }}
+            style={{
+              display: "inline-block",
+              overflow: "hidden",
+            }}
+          >
+            {char}
+          </motion.span>
+        ))}
+        <span style={{ marginLeft: "0.3rem" }}>{staticText}</span>
+      </div>
+      <div style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}>
         {splitByChar(secondaryText).map((char, i) => (
           <motion.span
             key={`secondary-${char}-${i}`}
