@@ -107,7 +107,7 @@ body {
   background-repeat: no-repeat;
   background: var(--base-color);
   color: var(--text-color);
-  font-family: 'tan', serif;
+  font-family: 'time', serif;
 }
 
 body::-webkit-scrollbar {
