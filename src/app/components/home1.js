@@ -56,9 +56,9 @@ useEffect(() => {
     str.split("").map((char, i) => (
       <motion.span
         key={`${char}-${i}`}
-        initial={{ opacity: 0, y: 15 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: i * 0.03, duration: 0.3, ease: [0.175, 0.885, 0.32, 1.275] }}
+        transition={{ delay: i * 0.05, duration: 0.4, ease: [0.755, 0.050, 0.855, 0.060] }}
         style={{ display: "inline-block" }}
       >
         {char === " " ? "\u00A0" : char}
@@ -82,10 +82,10 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       {word.split("").map((char, charIndex) => (
         <motion.span
           key={`${char}-${wordIndex}-${charIndex}`}
-          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 4 }}
+          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.03),
+            delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.05),
             duration: 0.5,
           }}
           style={{ display: "inline-block", whiteSpace: "pre" }}
@@ -167,7 +167,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
   className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -191,8 +191,8 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
         display: "flex",
         flexDirection: "column",
         fontSize: "1.5rem",
-        lineHeight: "1.8rem",
-        height: "5rem",
+        lineHeight: "1.5rem",
+        height: "4rem",
         alignItems: "flex-start",
         overflow: "hidden",
         gap: "0.3rem",
@@ -211,7 +211,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
               {showDynamic && (
                 <motion.span
                   key={dynamic}
-                  initial={{ opacity: 0, y: 15 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   style={{ display: "inline-block" }}
@@ -219,9 +219,9 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
                   {dynamic.split("").map((char, i) => (
                     <motion.span
                       key={`${char}-${i}`}
-                      initial={{ opacity: 0, y: 15 }}
+                      initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.03, duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] }}
+                      transition={{ delay: i * 0.05, duration: 0.4, ease: [0.755, 0.050, 0.855, 0.060] }}
                       style={{ display: "inline-block" }}
                     >
                       {char}
@@ -239,7 +239,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       <div>{splitLetters(lineTwo)}</div>
      </h2>
      
-    <p style={{ fontSize: "1rem", lineHeight: "1.1", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
+    <p style={{ fontSize: "1rem", lineHeight: "1rem", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
       
       {/* Line 1 */}
       <div>
@@ -258,10 +258,10 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           {showDynamicB && (
             <motion.div
               key={dynamicWordsB[indexB]}
-              initial={firstLoadB.current ? { opacity: 0, y: 4 } : { opacity: 0 }}
+              initial={firstLoadB.current ? { opacity: 0, y: 10 } : { opacity: 0 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275]  }}
+              transition={{ duration: 0.5, ease: [0.755, 0.050, 0.855, 0.060]  }}
               style={{ display: "inline-block" }}
             >
               {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.5, !firstLoadB.current)}
@@ -290,7 +290,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
          className="btnContainer scale">
             <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -302,7 +302,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.5, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
          className="btnContainer2 scale">
             <Magnetic>
             <Link href="/contact" className="btn2">
