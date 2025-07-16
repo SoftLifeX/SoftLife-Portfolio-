@@ -53,16 +53,17 @@ const lineContainer1 = {
   }, [isFirstLoad1]);
 
 //paragraph animation
+ import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+export default function Hero() {
   const fullLines = [
     ["An", "award-winning", "Full-stack", "|", "Mobile"],
     ["Software", "Engineer,", "designer", "&"],
   ];
 
   const dynamicWords = [
-    "a Content Creator",
-    "a Lover of the Arts",
-    "a bit of a gamer",
-    "a Travel Enthusiast",
+    "a Content Creator📸", "a Lover of the Arts🎨", "a bit of a gamer🎮", "a Travel Enthusiast✈️",
   ];
 
   const charVariants = {
@@ -76,27 +77,20 @@ const lineContainer1 = {
 
   const wordContainer = {
     visible: (i = 1) => ({
-      transition: {
-        staggerChildren: 0.03,
-        delayChildren: i * 0.03,
-      },
+      transition: { staggerChildren: 0.03, delayChildren: i * 0.03 },
     }),
   };
 
   function useCyclingWord(words, delay = 1500) {
     const [index, setIndex] = useState(0);
-
     useEffect(() => {
       const interval = setInterval(() => {
         setIndex((i) => (i + 1) % words.length);
       }, delay);
       return () => clearInterval(interval);
     }, [words, delay]);
-
     return words[index];
   }
-
-  const dynamicWord = useCyclingWord(dynamicWords, 1500);
 
   function renderLine(words, keyPrefix = "") {
     return (
@@ -108,6 +102,7 @@ const lineContainer1 = {
           whiteSpace: "pre",
           fontSize: "1rem",
           gap: "0.25rem",
+          margin: 0,
         }}
         initial="hidden"
         animate="visible"
@@ -176,38 +171,8 @@ const lineContainer1 = {
     );
   }
 
-  function renderDynamicWord(word) {
-    return (
-      <motion.div
-        key={word}
-        className="dynamic-line"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          whiteSpace: "pre",
-          fontSize: "1rem",
-          gap: "0.25rem",
-        }}
-        initial="hidden"
-        animate="visible"
-        variants={wordContainer}
-      >
-        {word.split("").map((char, j) => (
-          <motion.span
-            key={`dyn-char-${j}`}
-            variants={charVariants}
-            style={{
-              display: "inline-block",
-              whiteSpace: "pre",
-            }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </motion.div>
-    );
-  }
-  
+  const dynamicWord = useCyclingWord(dynamicWords, 1500);
+
 //sliding text
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -358,10 +323,34 @@ const lineContainer1 = {
     </div>
   </h2>
     <p>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1 }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.4, margin: 0 }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
-      {renderDynamicWord(dynamicWord)}
+      <motion.div
+        key={dynamicWord}
+        className="dynamic"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          whiteSpace: "pre",
+          fontSize: "1rem",
+          gap: "0.25rem",
+          margin: 0,
+        }}
+        initial="hidden"
+        animate="visible"
+        variants={wordContainer}
+      >
+        {dynamicWord.split("").map((char, i) => (
+          <motion.span
+            key={`dyn-char-${i}`}
+            variants={charVariants}
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
+      </motion.div>
     </div>
     </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
