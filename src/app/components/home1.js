@@ -53,81 +53,101 @@ const lineContainer1 = {
   }, [isFirstLoad1]);
 
 //paragraph animation
-const dynamicWords2 = [
+const fullLines = [
+  ["An", "award-winning", "full-stack", "|", "Mobile"],
+  ["Software", "Engineer,", "designer", "&"],
+];
+
+const dynamicWords = [
   "a Content Creator",
   "a Lover of the Arts",
   "a bit of a gamer",
   "a Travel Enthusiast",
 ];
-const containerVariants = (delay = 0) => ({
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.05,
-      delayChildren: delay,
-    },
-  },
-});
 
 const charVariants = {
-  hidden: { opacity: 0, y: "100%" },
-  visible: {
-    opacity: 1,
-    y: "0%",
-    transition: { duration: 0.4, ease: "easeOut" },
-  },
+  hidden: { opacity: 0, y: "0.25em" },
+  visible: { opacity: 1, y: "0em", transition: { duration: 0.35 } },
 };
 
-const renderLine = (words, keyPrefix, delay = 0) => (
-  <motion.div
-    key={keyPrefix}
-    variants={containerVariants(delay)}
-    initial="hidden"
-    animate="visible"
-    style={{
-      display: "flex",
-      flexWrap: "wrap",
-      gap: "0.25rem",
-      overflow: "hidden",
-    }}
-  >
-    {words.map((word, i) => (
-      <div key={`${keyPrefix}-word-${i}`} style={{ display: "flex", overflow: "hidden" }}>
-        {word.split("").map((char, j) => (
-          <motion.span
-           key={`${keyPrefix}-char-${i}-${j}`}
-           variants={charVariants}
-           className={
-           word === "full-stack" || word === "|" || word === "Mobile"
-           ? "marker-highlight"
-           : ""
-          }
-          style={{
-          display: "inline-block",
-          whiteSpace: "pre",
-          }}
-          >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-        ))}
-      </div>
-    ))}
-  </motion.div>
-);
+const wordContainer = {
+  visible: (i = 1) => ({
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03 },
+  }),
+};
 
-  const [index2, setIndex2] = useState(0);
-
+function useCyclingWord(words, delay = 1500) {
+  const [index, setIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex2((prev) => (prev + 1) % dynamicWords2.length);
-    }, 1500);
-
+      setIndex((i) => (i + 1) % words.length);
+    }, delay);
     return () => clearInterval(interval);
-  }, []);
+  }, [words, delay]);
+  return words[index];
+}
 
-  const dynamicWord = dynamicWords2[index2];
-  const dynamicChars = dynamicWord.split(" ");
+function renderLine(words, keyPrefix = "") {
+  return (
+    <motion.div
+      className="line"
+      style={{ display: "flex", flexWrap: "wrap", whiteSpace: "pre", fontSize: "1rem", gap: "0.25rem" }}
+      initial="hidden"
+      animate="visible"
+      variants={wordContainer}
+    >
+      {words.map((word, i) => {
+        const isHighlight = word === "full-stack";
+        if (isHighlight) {
+          const highlightWords = ["full-stack", "|", "Mobile"];
+          return (
+            <motion.span
+              key={`${keyPrefix}-highlight-${i}`}
+              className="highlight-bg"
+              style={{ display: "inline-flex", whiteSpace: "pre" }}
+              variants={wordContainer}
+            >
+              {highlightWords
+                .join(" ")
+                .split("")
+                .map((char, j) => (
+                  <motion.span
+                    key={`highlight-char-${j}`}
+                    variants={charVariants}
+                    style={{ display: "inline-block", whiteSpace: "pre" }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </motion.span>
+                ))}
+            </motion.span>
+          );
+        }
 
+        if (["|", "Mobile"].includes(word)) return null;
+
+        return (
+          <motion.span
+            key={`${keyPrefix}-word-${i}`}
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+            variants={wordContainer}
+          >
+            {word.split("").map((char, j) => (
+              <motion.span
+                key={`${keyPrefix}-char-${i}-${j}`}
+                variants={charVariants}
+                style={{ display: "inline-block", whiteSpace: "pre" }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.span>
+        );
+      })}
+    </motion.div>
+  );
+  }
+const dynamicWord = useCyclingWord(dynamicWords, 1500);
+              
   
 //sliding text
   const firstText = useRef(null);
@@ -207,7 +227,7 @@ const renderLine = (words, keyPrefix, delay = 0) => (
         alignItems: "flex-start",
         gap: "0.25rem",
         fontSize: "1.5rem",
-        lineHeight: 1.4,
+        lineHeight: 1,
         whiteSpace: "pre-wrap",
         overflow: "hidden",
       }}
@@ -279,21 +299,27 @@ const renderLine = (words, keyPrefix, delay = 0) => (
     </div>
   </h2>
     <p>
-     
-    <div
-      style={{
-        fontSize: "1rem",
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.1rem",
-        alignItems: "flex-start",
-        lineHeight: 1,
-        overflow: "hidden",
-      }}
-    >
-      {renderLine(["An", "award-winning", "full-stack", "|", "Mobile"], "line1")}
-      {renderLine(["Software", "Engineer,", "designer", "&"], "line2", 0.8)}
-      {renderLine(dynamicChars, "line3", 1.6)}
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: "1" }}>
+      {renderLine(fullLines[0], "line1")}
+      {renderLine(fullLines[1], "line2")}
+      <motion.div
+        key={dynamicWord}
+        className="line"
+        style={{ display: "flex", whiteSpace: "pre", fontSize: "1rem", marginTop: "0.1rem" }}
+        initial="hidden"
+        animate="visible"
+        variants={wordContainer}
+      >
+        {dynamicWord.split("").map((char, i) => (
+          <motion.span
+            key={`dynamic-char-${i}`}
+            variants={charVariants}
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
+      </motion.div>
     </div>
     </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
