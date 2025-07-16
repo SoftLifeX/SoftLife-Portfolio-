@@ -1,10 +1,4 @@
 @font-face {
-  font-family: 'dot';
-  src: url(assets/fonts/LaradotSerif-Regular.ttf);
-}
-
-
-@font-face {
   font-family: 'time';
   src: url(assets/fonts/Timeless.ttf);
 }
@@ -20,49 +14,10 @@
 }
 
 @font-face {
-  font-family: 'libre';
-  src: url(assets/fonts/LibreCaslonText-Regular.ttf);
-}
-
-@font-face {
-  font-family: 'aboreto';
-  src: url(assets/fonts/Aboreto-Regular.ttf);
-}
-
-@font-face {
   font-family: 'penna';
   src: url(assets/fonts/penna.otf);
 }
 
-@font-face {
-  font-family: 'audrey';
-  src: url(assets/fonts/Audrey-Normal.otf);
-}
-
-@font-face {
-  font-family: 'lemon';
-  src: url(assets/fonts/LEMONMILK-Light.otf);
-}
-
-@font-face {
-  font-family: 'star';
-  src: url(assets/fonts/The\ Star\ in\ the\ Midnight.ttf);
-}
-
-@font-face {
-  font-family: 'memph';
-  src: url(assets/fonts/Memphis\ River.otf);
-}
-
-@font-face {
-  font-family: 'aris';
-  src: url(assets/fonts/Arista-Pro-Alternate-Bold-trial.ttf);
-}
-
-@font-face {
-  font-family: "chillen";
-  src: url(assets/fonts/Chillen.ttf);
-}
 
 :root {
   --base-color: #fff3e8;
@@ -881,7 +836,7 @@ outline: none;
   color: var(--text-color);
 }
 
-.hometext{
+.homepage p {
   margin: 0.1rem 0;
   color: var(--tertiary-text);
 }
