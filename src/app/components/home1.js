@@ -25,7 +25,7 @@ const charVariants = {
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.4 },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.6 },
   }),
 };
 
@@ -126,7 +126,7 @@ const lineContainer1 = {
     transition: {
       staggerChildren: 0.05,
       ease: [0.175, 0.885, 0.32, 1.275],
-      delay: 0.3,
+      delay: 0.4,
     },
   },
 };
