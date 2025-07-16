@@ -13,18 +13,18 @@ import X from "@/app/assets/X.json";
 import { motion, useInView } from "framer-motion";
 
 const charVariants = {
-  hidden: { opacity: 0, y: "0.25em" },
+  hidden: { opacity: 0, y: "100%" },
   visible: {
     opacity: 1,
-    y: "0em",
-    transition: { duration: 0.35 },
+    y: "0%",
+    transition: { duration: 0.4 },
   },
 };
 
 const containerVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.03,
+      staggerChildren: 0.05,
     },
   },
 };
@@ -39,7 +39,8 @@ function splitTextLine(text, keyPrefix = "line") {
         display: "flex",
         flexWrap: "wrap",
         whiteSpace: "pre",
-        fontSize: "1.25rem",
+        fontSize: "5rem",
+        height: "5rem"
       }}
     >
       {text.split("").map((char, i) => (
