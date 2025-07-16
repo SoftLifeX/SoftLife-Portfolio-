@@ -312,7 +312,6 @@ const lineContainer1 = {
           flexWrap: "wrap",
           whiteSpace: "pre",
           fontSize: "1rem",
-          gap: "0.3rem",
           overflow: "hidden",
         }}
         initial="hidden"
