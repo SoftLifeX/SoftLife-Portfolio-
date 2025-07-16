@@ -20,16 +20,16 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "0.25em" },
-  visible: { opacity: 1, y: "0em", transition: { duration: 0.35 } },
+  visible: { opacity: 1, y: "0em", transition: { duration: 0.35, ease: [0.175, 0.885, 0.32, 1.275] } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03 },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275] },
   }),
 };
 
-function useCyclingWord(words, delay = 1500) {
+function useCyclingWord(words, delay = 2000) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -117,7 +117,7 @@ const charVariant1 = {
   animate: {
     opacity: 1,
     y: "0%",
-    transition: { duration: 0.4 },
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
@@ -125,6 +125,7 @@ const lineContainer1 = {
   animate: {
     transition: {
       staggerChildren: 0.05,
+      ease: [0.175, 0.885, 0.32, 1.275],
     },
   },
 };
@@ -202,7 +203,7 @@ const lineContainer1 = {
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
   className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -349,7 +350,7 @@ const lineContainer1 = {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer scale">
             <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -361,7 +362,7 @@ const lineContainer1 = {
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.755, 0.050, 0.855, 0.060] }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer2 scale">
             <Magnetic>
             <Link href="/contact" className="btn2">
