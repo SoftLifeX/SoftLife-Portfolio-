@@ -53,10 +53,6 @@ const lineContainer1 = {
   }, [isFirstLoad1]);
 
 //paragraph animation
- import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-
-export default function Hero() {
   const fullLines = [
     ["An", "award-winning", "Full-stack", "|", "Mobile"],
     ["Software", "Engineer,", "designer", "&"],
@@ -323,7 +319,7 @@ export default function Hero() {
     </div>
   </h2>
     <p>
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1.4, margin: 0 }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", lineHeight: 1, margin: 0 }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
       <motion.div
