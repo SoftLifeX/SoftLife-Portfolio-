@@ -44,7 +44,7 @@ function renderWords(words, keyPrefix = '') {
         flexWrap: 'wrap',
         whiteSpace: 'normal',
         fontSize: 'clamp(3rem, 4vw, 5rem)',
-        height: "5rem",
+        height: "10rem",
       }}
       initial="hidden"
       animate="visible"
