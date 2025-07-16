@@ -53,56 +53,93 @@ const lineContainer1 = {
   }, [isFirstLoad1]);
 
 //paragraph animation
-const dynamicWordsB = [
-  "a Content Creator",
-  "a Lover of the Arts",
-  "a bit of a gamer",
-  "a Travel Enthusiast",
+const dynamicPhrases = [
+  "a Content Creator📸",
+  "a Lover of the Arts🎨",
+  "a bit of a gamer🎮",
+  "a Travel Enthusiast✈️",
 ];
 
-const line1TextA = "an award-winning";
-const line1TextB = "Full-stack | Mobile";
-const line2Text = "Software Engineer, Designer &";
-const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
-  return text.split(" ").map((word, wordIndex) => (
-    <span key={`${word}-${wordIndex}`} style={{ display: "inline-block", marginRight: "0.5ch" }}>
-      {word.split("").map((char, charIndex) => (
-        <motion.span
-          key={`${char}-${wordIndex}-${charIndex}`}
-          initial={noSlide ? { opacity: 0 } : { opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: baseDelay + (wordIndex * 0.3) + (charIndex * 0.05),
-            duration: 0.5,
-          }}
-          style={{ display: "inline-block", whiteSpace: "pre" }}
-        >
-          {char}
-        </motion.span>
-      ))}
-    </span>
-  ));
-};
+const containerVariants = (delay = 0) => ({
+  hidden: {},
+  visible: {
+    transition: {
+      delay,
+      staggerChildren: 0.03,
+    },
+  },
+});
 
-  const [indexB, setIndexB] = useState(0);
-  const [showDynamicB, setShowDynamicB] = useState(true);
-  const firstLoadB = useRef(true);
+const charVariants = {
+  hidden: { opacity: 0, y: "100%" },
+  visible: {
+    opacity: 1,
+    y: "0%",
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  },
+};
+  
+  const [index, setIndex] = useState(0);
+  const [showDynamic, setShowDynamic] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      firstLoadB.current = false;
-
-      const interval = setInterval(() => {
-        setShowDynamicB(false);
-        setTimeout(() => {
-          setIndexB((prev) => (prev + 1) % dynamicWordsB.length);
-          setShowDynamicB(true);
-        }, 300);
-      }, 3000);
-    }, 3000);
-
-    return () => clearTimeout(timeout);
+    const showTimer = setTimeout(() => setShowDynamic(true), 800);
+    return () => clearTimeout(showTimer);
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowDynamic(false);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % dynamicPhrases.length);
+        setShowDynamic(true);
+      }, 200); // small gap between words
+    }, 1500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const dynamicChars = dynamicPhrases[index].split("");
+
+  const renderLine = (words, keyPrefix, delay = 0) => (
+    <motion.div
+      key={keyPrefix}
+      variants={containerVariants(delay)}
+      initial="hidden"
+      animate="visible"
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "0.25rem",
+        overflow: "hidden",
+      }}
+    >
+      {words.map((word, i) => (
+        <div
+          key={`${keyPrefix}-word-${i}`}
+          style={{ display: "flex", overflow: "hidden" }}
+        >
+          {word.split("").map((char, j) => (
+            <motion.span
+              key={`${keyPrefix}-char-${i}-${j}`}
+              variants={charVariants}
+              style={{
+                display: "inline-block",
+                whiteSpace: "pre",
+              }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </div>
+      ))}
+    </motion.div>
+  );
+
+
+
   
 //sliding text
   const firstText = useRef(null);
@@ -180,7 +217,7 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-start",
-        gap: "1rem",
+        gap: "0.25rem",
         fontSize: "1.5rem",
         lineHeight: 1.4,
         whiteSpace: "pre-wrap",
@@ -254,37 +291,62 @@ const renderTextByWordAndLetter = (text, baseDelay = 0, noSlide = false) => {
       </div>
      </h2>
      
-    <p style={{ fontSize: "1rem", lineHeight: "1rem", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "0.1rem" }}>
-      
-      {/* Line 1 */}
-      <div>
-        <span>{renderTextByWordAndLetter(line1TextA, 0)}</span>{" "}
-        <span className="marker-highlight">
-          {renderTextByWordAndLetter(line1TextB, 0.5)}
-        </span>
-      </div>
+    <p>
+      <div
+          style={{
+        display: "flex",
+        flexDirection: "column",
+        fontSize: "1rem",
+        lineHeight: "1rem",
+        alignItems: "flex-start",
+        gap: "0.1rem",
+        whiteSpace: "pre-wrap",
+      }}
+    >
+      {renderLine(
+        [
+          "An",
+          "award-winning",
+          <span className="marker-highlight">
+            full-stack&nbsp;|&nbsp;Mobile
+          </span>,
+        ],
+        "line1",
+        0
+      )}
 
-      {/* Line 2 */}
-      <div>{renderTextByWordAndLetter(line2Text, 0)}</div>
+      {renderLine(["Software", "Engineer,", "designer", "&"], "line2", 1)}
 
-      {/* Line 3: Dynamic Word */}
-      <div style={{ height: "1.2em", display: "flex", alignItems: "center" }}>
+      <div style={{ display: "flex", overflow: "hidden" }}>
         <AnimatePresence mode="wait">
-          {showDynamicB && (
+          {showDynamic && (
             <motion.div
-              key={dynamicWordsB[indexB]}
-              initial={firstLoadB.current ? { opacity: 0, y: 10 } : { opacity: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: [0.755, 0.050, 0.855, 0.060]  }}
-              style={{ display: "inline-block" }}
+              key={dynamicPhrases[index]}
+              variants={containerVariants(2)}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              style={{ display: "flex", overflow: "hidden", flexWrap: "wrap" }}
             >
-              {renderTextByWordAndLetter(dynamicWordsB[indexB], 0.5, !firstLoadB.current)}
+              {dynamicChars.map((char, i) => (
+                <motion.span
+                  key={`dyn-${i}`}
+                  variants={charVariants}
+                  style={{
+                    display: "inline-block",
+                    whiteSpace: "pre",
+                  }}
+                >
+                  {char === " " ? "\u00A0" : char}
+                </motion.span>
+              ))}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-     </p>
+    </div>
+     
+    </p>
     <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
       <filter id="marker-shape">
