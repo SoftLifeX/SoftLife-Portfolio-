@@ -95,20 +95,20 @@ const renderLine = (words, keyPrefix, delay = 0) => (
       <div key={`${keyPrefix}-word-${i}`} style={{ display: "flex", overflow: "hidden" }}>
         {word.split("").map((char, j) => (
           <motion.span
-            key={`${keyPrefix}-char-${i}-${j}`}
-            variants={charVariants}
-            style={{
-              display: "inline-block",
-              whiteSpace: "pre",
-              className={
-              word === "full-stack" || word === "|" || word === "Mobile"
-              ? "marker-highlight"
-              : ""
-            }
-            }}
+           key={`${keyPrefix}-char-${i}-${j}`}
+           variants={charVariants}
+           className={
+           word === "full-stack" || word === "|" || word === "Mobile"
+           ? "marker-highlight"
+           : ""
+          }
+          style={{
+          display: "inline-block",
+          whiteSpace: "pre",
+          }}
           >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
         ))}
       </div>
     ))}
