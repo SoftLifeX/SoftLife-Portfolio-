@@ -24,7 +24,7 @@ const charVariants = {
 const containerVariants = {
   visible: {
     transition: {
-      staggerChildren: 0.05,
+      staggerChildren: 0.05, 
     },
   },
 };
@@ -38,7 +38,7 @@ function splitTextLine(text, keyPrefix = "line") {
       style={{
         display: "flex",
         flexWrap: "wrap",
-        whiteSpace: "pre",
+        whiteSpace: "normal",
         fontSize: "clamp(3rem, 4vw, 5rem)",
         height: "5rem"
       }}
@@ -47,7 +47,10 @@ function splitTextLine(text, keyPrefix = "line") {
         <motion.span
           key={`${keyPrefix}-${i}`}
           variants={charVariants}
-          style={{ display: "inline-block", whiteSpace: "pre" }}
+          style={{
+          display: "inline-block",
+          whiteSpace: char === " " ? "normal" : "pre",
+         }}
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
