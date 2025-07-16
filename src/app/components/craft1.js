@@ -18,6 +18,7 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
+      delay: 1,
     },
   }),
 };
