@@ -882,7 +882,7 @@ outline: none;
 }
 
 .hometext{
-  margin: 0;
+  margin: 0.1rem 0;
   color: var(--tertiary-text);
 }
 
@@ -944,53 +944,6 @@ outline: none;
 @keyframes typing {
   from {
     width: 0;
-  }
-}
-
-#helloText:after {
-  content: " ";
-  animation: animate 15s linear infinite;
-}
-
-@keyframes animate {
-  10% {
-    content: "Hola";
-  }
-
-  20% {
-    content: "Hey";
-  }
-
-  30% {
-    content: "Guten Tag";
-  }
-
-  40% {
-    content: "Nǐ hǎo";
-  }
-
-  50% {
-    content: "سلام";
-  }
-
-  60% {
-    content: "Bonjour";
-  }
-
-  70% {
-    content: "مرحبا";
-  }
-
-  80% {
-    content: "óla";
-  }
-
-  90% {
-    content: "नमस्ते";
-  }
-
-  100% {
-    content: "こんにちは";
   }
 }
 
