@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "./magnetic";
