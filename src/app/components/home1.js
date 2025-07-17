@@ -110,34 +110,37 @@ function renderLine(words, keyPrefix = "") {
 function Home1() {
 
 //header animation
+const h2 = useRef(null);
+const isInView = useInView(h2, { once: true, margin: "0px 0px -10% 0px" });
+  
 const dynamicWords1 = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
 
 const charVariant2 = {
-  initial: { opacity: 0, y: "100%" },
-  animate: {
+  hidden: { opacity: 0, y: "0.3em" },
+  visible: {
     opacity: 1,
-    y: "0%",
-    transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] },
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
 const charVariant1 = {
-  initial: { opacity: 0, y: "-100%" },
-  animate: {
+  hidden: { opacity: 0, y: "-0.3em" },
+  visible: {
     opacity: 1,
-    y: "0%",
-    transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] },
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
 const lineContainer1 = {
-  animate: {
+  visible: (i = 1) => ({
     transition: {
-      staggerChildren: 0.05,
-      ease: [0.175, 0.885, 0.32, 1.275],
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
       delay: 1,
     },
-  },
+  }),
 };
 
   const [index1, setIndex1] = useState(0);
@@ -200,7 +203,6 @@ const lineContainer1 = {
 
   const [status,  setStatus] = useState("Available");
 
-  const isInView = useInView;
   
     
   return (
@@ -235,6 +237,7 @@ const lineContainer1 = {
     <div className="h2Container">
     <h2>
     <div
+      ref={h2}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -252,8 +255,8 @@ const lineContainer1 = {
         <motion.div
           key={dynamicWord1 + isFirstLoad1}
           variants={lineContainer1}
-          initial="initial"
-          animate="animate"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
           style={{ display: "flex", overflow: "hidden" }}
         >
           {dynamicWord1.split("").map((char, i) => (
@@ -273,8 +276,8 @@ const lineContainer1 = {
         {/* Static Part */}
         <motion.div
           variants={lineContainer1}
-          initial="initial"
-          animate="animate"
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
           style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
         >
           {", I'm Daniel c. Daniel"
@@ -294,8 +297,8 @@ const lineContainer1 = {
       {/* Second Line */}
       <motion.div
         variants={lineContainer1}
-        initial="initial"
-        animate="animate"
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
         style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
       >
         {"Software Engineer"
