@@ -12,6 +12,7 @@ import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
 
+
 const charVariants_letsCollab = {
   hidden: { opacity: 0, y: "0.25em" },
   visible: {
