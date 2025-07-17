@@ -33,7 +33,7 @@ function Header() {
 
     const handleClickOutside = (event) => {
 
-      const clickedOutsideMenu =
+       const clickedOutsideMenu =
 
         menuRef.current && !menuRef.current.contains(event.target);
 
