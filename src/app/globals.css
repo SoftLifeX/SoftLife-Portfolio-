@@ -2080,6 +2080,7 @@ form textarea {
     display: block;
     font-size: 1.1rem;
     margin: 1.5rem auto;
+    color: var(--base-color);
     opacity: 0;
     transform: scale(0);
     transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940), opacity 0.3s ease-in-out;
@@ -2125,7 +2126,7 @@ form textarea {
   .pill {
     display: none !important;
   }
-}
+
 
   h1 {
     font-size: 3.12rem;
