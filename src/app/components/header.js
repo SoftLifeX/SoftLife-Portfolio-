@@ -1,7 +1,5 @@
 'use client'
 
-
-
 import { useState, useRef, useEffect } from 'react';
 
 import { useTheme } from 'next-themes'
@@ -11,19 +9,6 @@ import Link from "next/link";
 import NavLink from "./navlink";
 
 import { motion as m } from "motion/react";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
-import { faHouse } from "@fortawesome/free-solid-svg-icons";
-
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-
-import { faFolder } from "@fortawesome/free-solid-svg-icons";
-
-
-
 
 
 function Header() {
@@ -110,18 +95,6 @@ function Header() {
 
      title: "Home",
 
-     icon: (
-
-       <FontAwesomeIcon
-
-         icon={faHouse}
-
-         style={{ paddingRight: "5px", scale: "0.8" }}
-
-       />
-
-     ),
-
    },
 
 
@@ -132,17 +105,6 @@ function Header() {
 
      title: "About",
 
-     icon: (
-
-       <FontAwesomeIcon
-
-         icon={faUser}
-
-         style={{ paddingRight: "5px", scale: "0.8" }}
-
-       />
-
-     ),
 
    },
 
@@ -154,17 +116,6 @@ function Header() {
 
      title: "Craft",
 
-     icon: (
-
-       <FontAwesomeIcon
-
-         icon={faFolder}
-
-         style={{ paddingRight: "5px", scale: "0.8" }}
-
-       />
-
-     ),
 
    },
 
@@ -175,18 +126,6 @@ function Header() {
      url: "/contact",
 
      title: "Contact",
-
-     icon: (
-
-       <FontAwesomeIcon
-
-         icon={faEnvelope}
-
-         style={{ paddingRight: "5px", scale: "0.8" }}
-
-       />
-
-     ),
 
    },
 
