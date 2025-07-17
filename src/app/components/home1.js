@@ -110,33 +110,25 @@ function renderLine(words, keyPrefix = "") {
 function Home1() {
 
 //header animation
-
-const line1Ref = useRef(null);
-const isInView = useInView(line1Ref, { once: true, margin: "0px 0px -10% 0px" });
-
-const line2Ref = useRef(null);
-  const IsInView = useInView(line2Ref, { once: true, margin: "0px 0px -10% 0px" });
-  
-  
 const dynamicWords1 = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
 
 const charVariant1 = {
-  hidden: { opacity: 0, y: "0.25em" },
-  visible: {
+  initial: { opacity: 0, y: "100%" },
+  animate: {
     opacity: 1,
-    y: "0em",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+    y: "0%",
+    transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] },
   },
 };
 
 const lineContainer1 = {
-  visible: (i = 1) => ({
+  animate: {
     transition: {
-      staggerChildren: 0.04,
-      delayChildren: i * 0.04,
+      staggerChildren: 0.05,
+      ease: [0.175, 0.885, 0.32, 1.275],
       delay: 1,
     },
-  }),
+  },
 };
 
   const [index1, setIndex1] = useState(0);
@@ -199,6 +191,7 @@ const lineContainer1 = {
 
   const [status,  setStatus] = useState("Available");
 
+  const isInView = useInView;
   
     
   return (
@@ -238,19 +231,20 @@ const lineContainer1 = {
         flexDirection: "column",
         alignItems: "flex-start",
         gap: "0.4rem",
-        fontSize: "2rem",
+        fontSize: "1.5rem",
+        lineHeight: 1.1,
         whiteSpace: "pre-wrap",
         overflow: "hidden",
       }}
     >
       {/* First Line */}
-      <div ref={line1Ref} style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
         {/* Dynamic Word */}
         <motion.div
           key={dynamicWord1 + isFirstLoad1}
           variants={lineContainer1}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          initial="initial"
+          animate="animate"
           style={{ display: "flex", overflow: "hidden" }}
         >
           {dynamicWord1.split("").map((char, i) => (
@@ -270,8 +264,8 @@ const lineContainer1 = {
         {/* Static Part */}
         <motion.div
           variants={lineContainer1}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
+          initial="initial"
+          animate="animate"
           style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
         >
           {", I'm Daniel c. Daniel"
@@ -290,10 +284,9 @@ const lineContainer1 = {
 
       {/* Second Line */}
       <motion.div
-        ref={line2Ref}
         variants={lineContainer1}
-        initial="hidden"
-        animate={IsInView ? "visible" : "hidden"}
+        initial="initial"
+        animate="animate"
         style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
       >
         {"Software Engineer"
@@ -309,9 +302,7 @@ const lineContainer1 = {
           ))}
       </motion.div>
     </div>
-  </h2> 
-</div>
-<div className="pContainer">
+  </h2>
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
@@ -348,7 +339,7 @@ const lineContainer1 = {
       </filter>
       </defs>
    </svg>
- </div>
+       </div>
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
