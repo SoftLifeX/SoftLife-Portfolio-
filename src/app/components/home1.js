@@ -11,21 +11,21 @@ import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
 
 const fullLines = [
-  ["An", "award-winning", "Full-Stack", "|", "Mobile"],
-  ["Software", "Engineer,", "designer", "&"],
+  ["Full-Stack", "|", "Mobile"],
+  ["Software", "Engineer", "+", "Designer", "&"],
 ];
 
 const dynamicWords = [
-  "a Content Creator", "a Lover of the Arts", "a bit of a gamer", "a Travel Enthusiast"];
+  "Content Creator", "Lover of the Arts", "a bit of a gamer", "Travel Enthusiast"];
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.75 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275],  },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 1.2  },
   }),
 };
 
@@ -133,12 +133,22 @@ const charVariant1 = {
   },
 };
 
-const lineContainer1 = {
+ const lineContainer1 = {
   visible: (i = 1) => ({
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 1,
+      delay: 1.1,
+    },
+  }),
+};
+
+  const lineContainer2 = {
+  visible: (i = 1) => ({
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
+      delay: 1.1,
     },
   }),
 };
@@ -251,7 +261,7 @@ const lineContainer1 = {
       {/* First Line */}
       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
         {/* Dynamic Word */}
-        <motion.div
+      {/*<motion.div
           key={dynamicWord1 + isFirstLoad1}
           variants={lineContainer1}
           initial="hidden"
@@ -270,7 +280,7 @@ const lineContainer1 = {
               {char === " " ? "\u00A0" : char}
             </motion.span>
           ))}
-        </motion.div>
+        </motion.div>*/}
 
         {/* Static Part */}
         <motion.div
@@ -279,7 +289,7 @@ const lineContainer1 = {
           animate={isInView ? "visible" : "hidden"}
           style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
         >
-          {", I'm Daniel c. Daniel"
+          {"Daniel c. Daniel"
             .split(" ")
             .map((word, i) => (
               <motion.span
@@ -295,7 +305,7 @@ const lineContainer1 = {
 
       {/* Second Line */}
       <motion.div
-        variants={lineContainer1}
+        variants={lineContainer2}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
@@ -314,9 +324,7 @@ const lineContainer1 = {
       </motion.div>
     </div>
   </h2>
-</div>
 
-  <div className="pContainer">
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
@@ -345,25 +353,13 @@ const lineContainer1 = {
         ))}
       </motion.div>
     </div>
-    <motion.svg
-     initial={{ width: "0%"}}
-     whileInView={{ width: "100%" }}
-     viewport={{ once: true }}
-      transition={{ delay: 1.3, duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] }}
-     xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
-      <defs>
-      <filter id="marker-shape">
-      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
-      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
-      </filter>
-      </defs>
-   </motion.svg>
+    
        </div>
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 className="slidertext" ref={firstText}>  Softlifeメ • Software Engineer & Designer⠀⠀⠀⠀  </h1>
-          <h1 className="slidertext" ref={secondText}>⠀Softlifeメ • Software Engineer & Designer⠀⠀⠀   </h1>
+          <h1 className="slidertext" ref={firstText}>Softlifeメ • Software Engineer & Designer</h1>
+          <h1 className="slidertext" ref={secondText}>Softlifeメ • Software Engineer & Designer</h1>
         </div>
       </div>
         <motion.div
