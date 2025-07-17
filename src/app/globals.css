@@ -272,7 +272,7 @@ section {
      backdrop-filter: blur(5px);
 }
 
-/*.navbar {
+.navbar {
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
@@ -324,61 +324,7 @@ section {
   background-color: var(--text-color);
   padding: 0.25rem 1rem;
   scale: 1.01;
-}*/
-
-
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    opacity: 1;
-    z-index: 50;
-    position: fixed;
-    left: 50%;
-  transform: translate(-50%, 0);
-  top: 1.7rem;
-  padding: 0.5rem 1rem;
-  border-radius: 30px;
-  cursor: pointer;
-  width: fit-content;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--border-color);
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-  }
-
-  .navbar ul li {
-  list-style: none;
-  }
-
-  .navbar a {
-    font-size: 1rem;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    position: relative;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-    list-style: none;
-  }
-
-  .navbar a:hover,
-  .navbar a.intersecting {
-    color: var(--base-color); /* Use your CSS variable here */
-  }
-
-  .pill {
-    position: absolute;
-    border-radius: 30px;
-    z-index: -1;
-    background: var(--text-color); /* This should be your defined color */
-    transition: all 0.3s ease;
-    pointer-events: none;
-  }
-
-
+}
 
 
 .menuButton {
@@ -699,7 +645,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 10svh;
+  top: 2svh;
   left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -723,8 +669,7 @@ outline: none;
   width: 19rem;
   height: 6rem;
   top: 13svh;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 10svw;
 }
 
 .statusBar1{
@@ -832,14 +777,6 @@ outline: none;
   left: 10svw;
 }
 
-.pContainer {
-  position: absolute;
-  width: 35rem;
-  height: 6.5rem;
-  top: 50svh;
-  right: 10svw;
-}
-
 .btnContainer {
   position: absolute;
   top: 75svh;
@@ -858,7 +795,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 38svh;
+  top: 47svh;
 }
 
 .slider {
@@ -1947,7 +1884,7 @@ form textarea {
     flex-direction: column;
   }
 
- /* .navbar {
+  .navbar {
     height: 20rem;
     width: unset;
     position: fixed;
@@ -2055,86 +1992,6 @@ form textarea {
 
   .navbar a span {
     display: inline;
-  }*/
-
-
-  
-  .navbar {
-    height: 20rem;
-    width: unset;
-    position: fixed;
-    left: 2rem;
-    top: 5rem;
-    background: var(--text-color);
-    overflow: hidden;
-    border-radius: 10px;
-    z-index: 40;
-    transform: scaleY(0);
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940), opacity 0.5s ease-in-out;
-  }
-
-  .navbar.open {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 1.1rem;
-    margin: 1.5rem auto;
-    color: var(--base-color);
-    opacity: 0;
-    transform: scale(0);
-    transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940), opacity 0.3s ease-in-out;
-  }
-
-  .navbar.open a {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  .navbar a:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.navbar a:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.navbar a:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.navbar a:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-  .navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.37rem;
-    width: 0%;
-    height: 0.1rem;
-    background: var(--base-color);
-    transition: width 0.4s ease;
-  }
-
-  .navbar a:hover::after,
-  .navbar a.active::after {
-    width: 100%;
-  }
-
-  .pill {
-    display: none !important;
   }
 
 
