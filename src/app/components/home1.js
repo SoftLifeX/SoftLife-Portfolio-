@@ -311,7 +311,7 @@ const lineContainer1 = {
     </div>
   </h2> 
 </div>
-<div className="pContainer"
+<div className="pContainer">
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
