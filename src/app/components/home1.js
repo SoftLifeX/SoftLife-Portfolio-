@@ -244,7 +244,6 @@ const lineContainer1 = {
         alignItems: "flex-start",
         gap: "0.4rem",
         fontSize: "1.5rem",
-        lineHeight: 1.1,
         whiteSpace: "pre-wrap",
         overflow: "hidden",
       }}
@@ -346,14 +345,19 @@ const lineContainer1 = {
         ))}
       </motion.div>
     </div>
-    <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+    <motion.svg
+     initial={{ width: "0%"}}
+     whileInView={{ width: "100%" }}
+     viewport={{ once: true }}
+      transition={{ delay: 1.3, duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] }}
+     xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
       <defs>
       <filter id="marker-shape">
       <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
       <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
       </filter>
       </defs>
-   </svg>
+   </motion.svg>
        </div>
 
         <div className="sliderContainer">
