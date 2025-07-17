@@ -43,7 +43,7 @@ const TransitionProvider = ({ children }) => {
      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       <div key={pathName}>
-         <motion.div
+         {/*  <motion.div
             className='PageIn'
             >
         <motion.span
@@ -83,7 +83,7 @@ const TransitionProvider = ({ children }) => {
           initial={{ width: "50vw", transformOrigin: 'right' }}
           animate={{ width: "0vw", transformOrigin: 'right', transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] } }}
         />
-      </motion.div>
+      </motion.div>*/}
       <StickyCursor/>
         <Header />
         <div>{children}</div>
