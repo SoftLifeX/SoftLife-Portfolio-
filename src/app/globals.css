@@ -5,6 +5,7 @@
 
 @font-face {
   font-family: 'redact';
+  font-weight: 100;
   src: url(assets/fonts/Redaction.otf);
 }
 
@@ -70,7 +71,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-   top: 1.7rem;
+  bottom: 1.7rem;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -752,33 +753,17 @@ outline: none;
   display: inline-block;
 }
 
-.socialContainer {
-  position: absolute;
-  width: 19rem;
-  height: 6.5rem;
-  top: 16svh;
-  left: 10svw;
-}
-
 .h2Container {
   position: absolute;
   width: 35rem;
-  height: 4 5rem;
-  top: 35svh;
+  height: 6.5rem;
+  top: 65svh;
   left: 10svw;
-}
-
-.pContainer {
-  position: absolute;
-  width: 20rem;
-  height: 3rem;
-  top: 45svh;
-  right: 10svw;
 }
 
 .btnContainer {
   position: absolute;
-  top: 80svh;
+  top: 85svh;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
@@ -786,7 +771,7 @@ outline: none;
 
 .btnContainer2 {
   position: absolute;
-  top: 80svh;
+  top: 85svh;
   width: fit-content;
   height: 6.5rem;
   left: 18svw;
@@ -794,7 +779,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 55svh;
+  top: 35svh;
 }
 
 .slider {
@@ -805,7 +790,7 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  -webkit-text-stroke: 1px var(--text-color);
+  -webkit-text-stroke: 0.03125rem var(--text-color);
   color: var(--secondary-text);
   font-size: 6rem;
   font-family: 'tan' , serif;
@@ -821,8 +806,7 @@ outline: none;
 }
 
 .homepage h2 {
-  font-family: 'play', serif;
-  font-weight: normal;
+  font-family: 'redact', serif;
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -830,7 +814,7 @@ outline: none;
 }
 
 .homepage h2 span {
-  font-family: 'play', serif;
+  font-family: 'redact', serif;
   color: var(--text-color);
 }
 
