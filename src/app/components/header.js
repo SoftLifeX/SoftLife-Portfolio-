@@ -37,7 +37,7 @@ function Header() {
 
         menuRef.current && !menuRef.current.contains(event.target);
 
-      const clickedOutsideButton =
+       const clickedOutsideButton =
 
         buttonRef.current && !buttonRef.current.contains(event.target);
 
