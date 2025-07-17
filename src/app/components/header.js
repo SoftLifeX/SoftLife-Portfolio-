@@ -198,7 +198,7 @@ function Header() {
 
   const [mounted, setMounted] = useState(false)
 
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
 
 
 
@@ -380,7 +380,7 @@ function Header() {
 
 
 
-   <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+   <div onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
 
          id="theme-switch" data-title="Theme">
 
@@ -426,7 +426,7 @@ function Header() {
 
 							initial="hidden"
 
-							animate={theme === "light" ? "visible" : "hidden"}
+							animate={resolvedTheme === "light" ? "visible" : "hidden"}
 
 							className="themeg"
 
@@ -474,7 +474,7 @@ function Header() {
 
 							animate={
 
-								theme === "dark"
+								resolvedTheme === "dark"
 
 									? {
 
