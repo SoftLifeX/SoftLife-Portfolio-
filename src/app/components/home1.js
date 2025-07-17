@@ -112,8 +112,17 @@ function Home1() {
 //header animation
 const dynamicWords1 = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
 
-const charVariant1 = {
+const charVariant2 = {
   initial: { opacity: 0, y: "100%" },
+  animate: {
+    opacity: 1,
+    y: "0%",
+    transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275] },
+  },
+};
+
+const charVariant1 = {
+  initial: { opacity: 0, y: "-100%" },
   animate: {
     opacity: 1,
     y: "0%",
@@ -294,7 +303,7 @@ const lineContainer1 = {
           .map((word, i) => (
             <motion.span
               key={`second-${i}`}
-              variants={charVariant1}
+              variants={charVariant2}
               style={{ display: "inline-block" }}
             >
               {word}
@@ -303,6 +312,9 @@ const lineContainer1 = {
       </motion.div>
     </div>
   </h2>
+</div>
+
+  <div className="pContainer">
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
       {renderLine(fullLines[1], "line2")}
