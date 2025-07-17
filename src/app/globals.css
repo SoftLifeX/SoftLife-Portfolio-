@@ -4,12 +4,19 @@
 }
 
 @font-face {
+  font-family: 'redact';
+  src: url(assets/fonts/Redaction.otf);
+}
+
+@font-face {
   font-family: 'tan';
+  font-weight: 100;
   src: url(assets/fonts/MERINGUE.ttf);
 }
 
 @font-face {
   font-family: 'play';
+  font-weight: 100;
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
@@ -107,7 +114,7 @@ body {
   background-repeat: no-repeat;
   background: var(--base-color);
   color: var(--text-color);
-  font-family: 'time', serif;
+  font-family: 'play', serif;
 }
 
 body::-webkit-scrollbar {
@@ -358,8 +365,7 @@ h2 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'play', serif;
-  font-weight: 100;
+  font-family: 'redact', serif;
 }
 
 .svg-filters{
@@ -389,19 +395,6 @@ h1 {
   text-decoration: none;
   cursor: text;
   font-family: 'tan', serif;
- /* letter-spacing: 0.2rem;
-  line-height: 1.2;*/
-  font-weight: 100;
-}
-
-.headertext{
-  color: var(--text-color);
-  text-align: left;
-  margin: 2rem;
-  text-decoration: none;
-  cursor: text;
-  font-family: 'tan', serif;
-  font-weight: 100;
 }
 
 h3 {
@@ -410,7 +403,6 @@ h3 {
   cursor: text;
   text-align: left;
   font-family: 'play', serif;
-  font-weight: 100;
 }
 
 .dot {
@@ -462,10 +454,9 @@ h5 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'libre', serif;
+  font-family: 'redact', serif;
   position: relative;
   padding-top: 3.12rem;
-  font-weight: 100;
 }
 
 h5::after {
@@ -645,7 +636,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 2svh;
+  top: 15svh;
   left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -772,14 +763,22 @@ outline: none;
 .h2Container {
   position: absolute;
   width: 35rem;
-  height: 6.5rem;
-  top: 22svh;
+  height: 4 5rem;
+  top: 35svh;
   left: 10svw;
+}
+
+.pContainer {
+  position: absolute;
+  width: 20rem;
+  height: 3rem;
+  top: 45svh;
+  right: 10svw;
 }
 
 .btnContainer {
   position: absolute;
-  top: 75svh;
+  top: 80svh;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
@@ -787,7 +786,7 @@ outline: none;
 
 .btnContainer2 {
   position: absolute;
-  top: 75svh;
+  top: 80svh;
   width: fit-content;
   height: 6.5rem;
   left: 18svw;
@@ -795,7 +794,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 47svh;
+  top: 55svh;
 }
 
 .slider {
@@ -806,11 +805,10 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  -webkit-text-stroke: 2px var(--text-color);
+  -webkit-text-stroke: 1px var(--text-color);
   color: var(--secondary-text);
-  font-size: 8rem;
+  font-size: 6rem;
   font-family: 'tan' , serif;
-  font-weight: 100; 
   padding-right: 3.12rem;
   cursor: text;
 }
@@ -904,7 +902,7 @@ outline: none;
 .marker-highlight:before{
   content:"";
   background-color: yellow;
-  width:100%;
+  width: 100%;
   height: 1em;
   position:absolute;
   z-index:-1;
@@ -912,29 +910,6 @@ outline: none;
   left:-0.25em;
   /*top:0.1em;*/
   padding:0.10em 0.25em;
-}
-
-.scrolltext{
-  display: inline-grid;
-}
-
-.scrollspan {
-  grid-row: 1;
-  grid-column: 1;
-  opacity: 0;
-  transition: opacity 500ms ease-out, transform 500ms var(--ease-back);
-  transform: rotateX(90deg) translateZ(-1rem);
-  transform-style: preserve-3d;
-}
-
-.scrollspan.active {
-  transform: translateZ(1rem);
-  opacity: 1;
-}
-
-.scrollspan.hide {
-  transform: rotateX(-90deg) translateZ(-1rem);
-  opacity: 0;
 }
 
 .waving-hand {
@@ -1171,7 +1146,6 @@ outline: none;
  /* scale: 1.5;*/
   margin: auto;
   display: block;
-  font-family: 'time', serif;
 }
 
 #venncircle{
