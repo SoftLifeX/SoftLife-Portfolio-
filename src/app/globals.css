@@ -272,7 +272,7 @@ section {
      backdrop-filter: blur(5px);
 }
 
-.navbar {
+/*.navbar {
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
@@ -324,7 +324,58 @@ section {
   background-color: var(--text-color);
   padding: 0.25rem 1rem;
   scale: 1.01;
-}
+}*/
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 2rem;
+    top: 5rem;
+    background: var(--text-color);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 40;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navlink-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .navlink {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: var(--base-color);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+  }
+
+  .navlink.active,
+  .navlink-container:hover .navlink {
+    color: var(--text-color);
+  }
+
+  .pill {
+    background-color: var(--base-color);
+    border-radius: 0.5rem;
+    z-index: 0;
+  }
+
+
 
 
 .menuButton {
@@ -1884,7 +1935,7 @@ form textarea {
     flex-direction: column;
   }
 
-  .navbar {
+ /* .navbar {
     height: 20rem;
     width: unset;
     position: fixed;
@@ -1992,8 +2043,97 @@ form textarea {
 
   .navbar a span {
     display: inline;
+  }*/
+
+  .navbar {
+    position: fixed;
+    left: 2rem;
+    top: 5rem;
+    background: var(--text-color);
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 40;
+    height: 20rem;
+    transform: scale(0);
+    transition: transform 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940), opacity 0.3s ease-out;
+    opacity: 0;
+    overflow: hidden;
+    width: unset;
   }
 
+  .navbar.open {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .navbar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navlink-container {
+    display: block;
+  }
+
+  .navlink {
+    display: block;
+    font-size: 1.1rem;
+    margin: 1.5rem auto;
+    text-align: center;
+    color: var(--base-color);
+    text-decoration: none;
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940), opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  .navbar.open a {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+.navlink:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.navlink:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.navlink:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.navlink:nth-child(4) {
+  transition-delay: 0.4s;
+  }
+
+  .navlink::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.37rem;
+    width: 0%;
+    height: 0.1rem;
+    background: var(--base-color);
+    transition: width 0.5s ease;
+  }
+
+  .navlink:hover::after,
+  .navlink.active::after {
+    width: 100%;
+  }
+
+  .pill {
+    display: none;
+    }
 
   h1 {
     font-size: 3.12rem;
