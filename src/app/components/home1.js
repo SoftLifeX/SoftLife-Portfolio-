@@ -12,7 +12,7 @@ import { useGSAP } from '@gsap/react';
 
 const fullLines = [
   ["Full-Stack", "|", "Mobile"],
-  ["Software", "Engineer", "+", "Designer", "&"],
+  ["Designer", "+", "Developer", "&"],
 ];
 
 const dynamicWords = [
@@ -20,12 +20,12 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.7 } },
 };
 
 const wordContainer = {
   visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275], delay: 1.2  },
+    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275],   },
   }),
 };
 
@@ -64,7 +64,7 @@ function renderLine(words, keyPrefix = "") {
           return (
             <motion.span
               key={`${keyPrefix}-highlight-${i}`}
-              className="marker-highlight"
+              
               style={{ display: "inline-flex", whiteSpace: "pre" }}
               variants={wordContainer}
             >
@@ -107,71 +107,57 @@ function renderLine(words, keyPrefix = "") {
     </motion.div>
   );
 }
+
+//h2 animation 
+const charVariants_letsCollab = {
+  hidden: { opacity: 0, y: "-0.25em" },
+  visible: {
+    opacity: 1,
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+  },
+};
+
+const wordContainer_letsCollab = {
+  visible: (i = 1) => ({
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
+      delay: 1,
+    },
+  }),
+};
+
+const charVariants2_letsCollab = {
+  hidden: { opacity: 0, y: "0.25em" },
+  visible: {
+    opacity: 1,
+    y: "0em",
+    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+  },
+};
+
+const wordContainer2_letsCollab = {
+  visible: (i = 1) => ({
+    transition: {
+      staggerChildren: 0.04,
+      delayChildren: i * 0.04,
+      delay: 1,
+    },
+  }),
+};
 function Home1() {
 
-//header animation
-const h2 = useRef(null);
-const isInView = useInView(h2, { once: true, margin: "0px 0px -10% 0px" });
+//h2 animation
+const h2Ref = useRef(null);
+const IsInView = useInView(h2Ref, { once: true, margin: "0px 0px -10% 0px" });
+const h2Ref2 = useRef(null);
+const IsInView2 = useInView(h2Ref2, { once: true, margin: "0px 0px -10% 0px" });
   
-const dynamicWords1 = [ "Hola", "Hey", "Guten Tag", "Nǐ hǎo", "سلام", "Bonjour", "مرحبا", "óla", "नमस्ते", "こんにちは"];
-
-const charVariant2 = {
-  hidden: { opacity: 0, y: "0.3em" },
-  visible: {
-    opacity: 1,
-    y: "0em",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
-  },
-};
-
-const charVariant1 = {
-  hidden: { opacity: 0, y: "-0.3em" },
-  visible: {
-    opacity: 1,
-    y: "0em",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
-  },
-};
-
- const lineContainer1 = {
-  visible: (i = 1) => ({
-    transition: {
-      staggerChildren: 0.04,
-      delayChildren: i * 0.04,
-      delay: 1.1,
-    },
-  }),
-};
-
-  const lineContainer2 = {
-  visible: (i = 1) => ({
-    transition: {
-      staggerChildren: 0.04,
-      delayChildren: i * 0.04,
-      delay: 1.1,
-    },
-  }),
-};
-
-  const [index1, setIndex1] = useState(0);
-  const [isFirstLoad1, setIsFirstLoad1] = useState(true);
-  const dynamicWord1 = dynamicWords1[index1];
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsFirstLoad1(false);
-    }, 2100);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    if (!isFirstLoad1) {
-      const interval = setInterval(() => {
-        setIndex1((prev) => (prev + 1) % dynamicWords1.length);
-      }, 1500);
-      return () => clearInterval(interval);
-    }
-  }, [isFirstLoad1]);
+const words = ["Daniel", "c." , "Daniel"];
+const words2 = ["Software", "Engineer"];
+  
+  
 
 //paragraph animation
   const dynamicWord = useCyclingWord(dynamicWords, 200);
@@ -246,84 +232,78 @@ const charVariant1 = {
     </motion.div>
     <div className="h2Container">
     <h2>
-    <div
-      ref={h2}
+      <motion.div
+      ref={h2Ref}
+      initial="hidden"
+      animate={IsInView ? "visible" : "hidden"}
+      variants={wordContainer_letsCollab}
+      className="flex items-start flex-wrap text-[1.25rem] leading-tight"
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-start",
-        gap: "0.4rem",
-        fontSize: "1.5rem",
-        whiteSpace: "pre-wrap",
-        overflow: "hidden",
+        whiteSpace: "normal",
+        margin: 0,
+        padding: 0,
       }}
     >
-      {/* First Line */}
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.25rem" }}>
-        {/* Dynamic Word */}
-      {/*<motion.div
-          key={dynamicWord1 + isFirstLoad1}
-          variants={lineContainer1}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          style={{ display: "flex", overflow: "hidden" }}
+      {words.map((word, i) => (
+        <motion.span
+          key={`word-${i}`}
+          style={{
+            display: "inline-flex",
+            marginRight: i !== words.length - 1 ? "0.4em" : "0",
+          }}
+          variants={wordContainer_letsCollab}
         >
-          {dynamicWord1.split("").map((char, i) => (
+          {word.split("").map((char, j) => (
             <motion.span
-              key={`char-${i}`}
-              variants={charVariant1}
+              key={`char-${i}-${j}`}
+              variants={charVariants_letsCollab}
               style={{
                 display: "inline-block",
-                whiteSpace: "pre",
               }}
             >
-              {char === " " ? "\u00A0" : char}
+              {char}
             </motion.span>
           ))}
-        </motion.div>*/}
+        </motion.span>
+      ))}
+    </motion.div>
 
-        {/* Static Part */}
-        <motion.div
-          variants={lineContainer1}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
+    <motion.div
+      ref={h2Ref2}
+      initial="hidden"
+      animate={IsInView2 ? "visible" : "hidden"}
+      variants={wordContainer2_letsCollab}
+      className="flex items-start flex-wrap text-[1.25rem] leading-tight"
+      style={{
+        whiteSpace: "normal",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      {words.map((word, i) => (
+        <motion.span
+          key={`word-${i}`}
+          style={{
+            display: "inline-flex",
+            marginRight: i !== words.length - 1 ? "0.4em" : "0",
+          }}
+          variants={wordContainer2_letsCollab}
         >
-          {"Daniel c. Daniel"
-            .split(" ")
-            .map((word, i) => (
-              <motion.span
-                key={`static-${i}`}
-                variants={charVariant1}
-                style={{ display: "inline-block" }}
-              >
-                {word}
-              </motion.span>
-            ))}
-        </motion.div>
-      </div>
-
-      {/* Second Line */}
-      <motion.div
-        variants={lineContainer2}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        style={{ display: "flex", gap: "0.3rem", overflow: "hidden" }}
-      >
-        {"Software Engineer"
-          .split(" ")
-          .map((word, i) => (
+          {word.split("").map((char, j) => (
             <motion.span
-              key={`second-${i}`}
-              variants={charVariant2}
-              style={{ display: "inline-block" }}
+              key={`char-${i}-${j}`}
+              variants={charVariants2_letsCollab}
+              style={{
+                display: "inline-block",
+              }}
             >
-              {word}
+              {char}
             </motion.span>
           ))}
-      </motion.div>
-    </div>
-  </h2>
+        </motion.span>
+      ))}
+    </motion.div>
+    </h2>
 
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
       {renderLine(fullLines[0], "line1")}
