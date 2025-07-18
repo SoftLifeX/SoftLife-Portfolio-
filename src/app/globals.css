@@ -5,7 +5,6 @@
 
 @font-face {
   font-family: 'redact';
-  font-weight: 100;
   src: url(assets/fonts/Redaction.otf);
 }
 
@@ -71,7 +70,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 1.7rem;
+  top: 95svh;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -367,6 +366,7 @@ h2 {
   cursor: text;
   text-align: left;
   font-family: 'redact', serif;
+    -webkit-text-stroke: 0.03125rem transparent;
 }
 
 .svg-filters{
@@ -637,7 +637,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 15svh;
+  top: 45svh;
   left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -790,8 +790,7 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  -webkit-text-stroke: 0.03125rem var(--text-color);
-  color: var(--secondary-text);
+  color: var(--text-color);
   font-size: 6rem;
   font-family: 'tan' , serif;
   padding-right: 3.12rem;
