@@ -114,7 +114,7 @@ const charVariants_letsCollab = {
   visible: {
     opacity: 1,
     y: "0em",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+    transition: { duration: 0.4 },
   },
 };
 
@@ -133,7 +133,7 @@ const charVariants2_letsCollab = {
   visible: {
     opacity: 1,
     y: "0em",
-    transition: { duration: 0.4, ease: [0.175, 0.885, 0.32, 1.275] },
+    transition: { duration: 0.4 },
   },
 };
 
