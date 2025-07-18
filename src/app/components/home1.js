@@ -20,7 +20,7 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.7 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 0.55 } },
 };
 
 const wordContainer = {
@@ -123,7 +123,7 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 1,
+      delay: 0.9,
     },
   }),
 };
@@ -142,7 +142,7 @@ const wordContainer2_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 1,
+      delay: 0.9,
     },
   }),
 };
@@ -155,7 +155,7 @@ const h2Ref2 = useRef(null);
 const IsInView2 = useInView(h2Ref2, { once: true, margin: "0px 0px -10% 0px" });
   
 const words = ["Daniel", "c." , "Daniel"];
-const words2 = ["Software", "Engineer"];
+const words2 = ["Software", "Engineer."];
   
   
 
@@ -211,7 +211,7 @@ const words2 = ["Software", "Engineer"];
       initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
+       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
   className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
@@ -346,7 +346,7 @@ const words2 = ["Software", "Engineer"];
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
+       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer scale">
             <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
@@ -358,7 +358,7 @@ const words2 = ["Software", "Engineer"];
           initial={{ opacity: 0, scale: 0 }}
        whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
+       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer2 scale">
             <Magnetic>
             <Link href="/contact" className="btn2">
