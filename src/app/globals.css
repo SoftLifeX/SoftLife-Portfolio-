@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'play';
-  font-weight: 100; 
+  font-weight: normal; 
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
@@ -127,7 +127,7 @@ body::-webkit-scrollbar {
   position: fixed;
   width: 2rem;
   height: 2rem;
-  background-color: var(--base-color);
+  background-color: var(--text-color);
     border: none;
     outline: none;
     color: var(--text-color);
