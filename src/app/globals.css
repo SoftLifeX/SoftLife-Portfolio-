@@ -16,6 +16,7 @@
 
 @font-face {
   font-family: 'play';
+  font-weight: 100; 
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
@@ -460,7 +461,7 @@ h5 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'redact', serif;
+  font-family: 'play', serif;
   position: relative;
   padding-top: 3.12rem;
 }
@@ -811,6 +812,7 @@ outline: none;
 
 .homepage h2 {
   font-family: 'play', serif;
+  font-weight: normal;
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -819,6 +821,7 @@ outline: none;
 
 .homepage h2 span {
   font-family: 'play', serif;
+  font-weight: normal;
   color: var(--text-color);
 }
 
@@ -2132,12 +2135,12 @@ form textarea {
   bottom: 0;
   color: var(--base-color);
    background: var(--text-color);
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: default;
   z-index: 9999;
   width: fit-content;
   height: fit-content;
-  font-family: 'penna', serif;
+  font-family: 'play', serif;
 }
 
 .introduction {
