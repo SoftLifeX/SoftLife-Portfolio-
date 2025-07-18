@@ -280,7 +280,7 @@ const words2 = ["Software", "Engineer"];
         padding: 0,
       }}
     >
-      {words.map((word, i) => (
+      {words2.map((word, i) => (
         <motion.span
           key={`word-${i}`}
           style={{
