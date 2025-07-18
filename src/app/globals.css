@@ -28,6 +28,7 @@
 
 
 :root {
+  --bg-color: radial-gradient(circle, rgba(232, 244, 255, 1) 0%, rgba(255, 243, 232, 1) 100%);
   --base-color: #fff3e8;
   --text-color: #000;
   --secondary-text: rgba(0, 0, 0, 0.5);
@@ -51,6 +52,7 @@
 }
 
 [data-theme="dark"] {
+  --bg-color: black;
   --base-color: black;
   --text-color: #fff3e8;
   --secondary-text: rgba(255, 243, 232, 0.5);
@@ -70,8 +72,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 90svh;
+  position: fixed;
+  top: 91svh;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -113,7 +115,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-background: radial-gradient(circle, rgba(232, 244, 255, 1) 0%, var(--base-color) 100%);
+background: var(--bg-color);
   color: var(--text-color);
   font-family: 'play', serif;
 }
@@ -194,7 +196,6 @@ section {
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
   margin-top: 0;
-  background: linear-gradient(135deg, rgba(232, 244, 255, 1) 0%, var(--base-color) 100%);
 }
 
 .home2 {
@@ -369,8 +370,7 @@ h2 {
   margin: 1.87rem;
   cursor: text;
   text-align: left;
-  font-family: 'redact', serif;
-    -webkit-text-stroke: 0.03125rem transparent;
+  font-family: 'play', serif;
 }
 
 .svg-filters{
@@ -493,7 +493,7 @@ p {
 
 .btn2 {
   display: block;
-  background-color: var(--base-color);
+  background-color: transparent;
 border: none;
 outline: none;
   color: var(--text-color);
@@ -1375,12 +1375,12 @@ transition: transform 0.5s ease-in-out;
 }
 
 .serviceCard {
-  background-color: var(--base-color);
+  background-color: transparent;
   padding: 1.87rem;
   font-size: 0.8rem;
   font-weight: 300;
   border-radius: 5px;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   color: var(--text-color);
