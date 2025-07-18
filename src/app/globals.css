@@ -73,7 +73,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 91svh;
+  top: 1.7rem;
   right: 5svw;
   cursor: pointer;
   width: 2.1rem;
@@ -117,7 +117,7 @@ body {
   background-repeat: no-repeat;
 background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'play', serif;
+  font-family: 'time', serif;
 }
 
 body::-webkit-scrollbar {
@@ -126,9 +126,9 @@ body::-webkit-scrollbar {
 
 .cursor {
   position: fixed;
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--primary-color);
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--base-color);
     border: none;
     outline: none;
     color: var(--text-color);
@@ -365,6 +365,9 @@ section {
 
 
 /*groups*/
+button {
+  font-family: 'time', serif;
+}
 h2 {
   font-size: 1.2rem;
   margin: 1.87rem;
@@ -758,7 +761,7 @@ outline: none;
 }
 
 .h2Container {
-  position: absolute;
+  position: fixed;
   width: 35rem;
   height: 6.5rem;
   top: 65svh;
@@ -809,7 +812,7 @@ outline: none;
 }
 
 .homepage h2 {
-  font-family: 'redact', serif;
+  font-family: 'play', serif;
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -817,7 +820,7 @@ outline: none;
 }
 
 .homepage h2 span {
-  font-family: 'redact', serif;
+  font-family: 'play', serif;
   color: var(--text-color);
 }
 
