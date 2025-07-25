@@ -1,14 +1,52 @@
 'use client'
 
 import { ThemeProvider } from 'next-themes'
-import TransitionProvider from "./components/transitionProvider";
+import { AnimatePresence } from "framer-motion";
+import Header from "./components/header";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import Preloader from "./components/Preloader"
+import StickyCursor from "./components/stickyCursor"
+
+
+
 
 export function Providers({ children }) {
+
+const [isLoading, setIsLoading] = useState(true);
+
+  const paths = {
+
+    "/": "Home",
+
+    "/about": "About",
+
+   "/craft": "Craft",
+
+    "/contact": "Contact"
+
+  }
+
+
+  const pathName = usePathname();
+
+
+    useEffect(() =>{
+      setTimeout(() => {
+             setIsLoading(false);
+
+             document.body.style.cursor = "default";
+
+             window.scrollTo(0, 0);
+           }, 2000);
+          },[]);
+
     return (
 <ThemeProvider defaultTheme='system' enableSystem>
- <TransitionProvider>
+ <StickyCursor/>
+ <Header />
   {children}
- </TransitionProvider>
 </ThemeProvider>
  )
 }
