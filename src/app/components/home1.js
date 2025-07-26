@@ -43,7 +43,7 @@ const dynamicWords = [
 
 const charVariants = {
   hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], delay: 3.6 } },
+  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], } },
 };
 
 const wordContainer = {
@@ -146,7 +146,7 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 5,
+      delay: 10,
     },
   }),
 };
@@ -165,7 +165,7 @@ const wordContainer2_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 5,
+      delay: 10,
     },
   }),
 };
