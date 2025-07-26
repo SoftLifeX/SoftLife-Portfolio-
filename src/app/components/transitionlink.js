@@ -48,7 +48,7 @@ const pageAnimation = () => {
 
 
 
-const TransitionLink = () => {
+const TransitionLink = ({href, label}) => {
 
 
 const pathname = usePathname();
