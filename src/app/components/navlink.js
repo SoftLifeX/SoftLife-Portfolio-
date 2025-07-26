@@ -2,17 +2,40 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTransitionRouter } from "next-view-transitions";
 
 
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+}
 
-
-const NavLink = ({ link }) => {
+const NavLink = ({ route }) => {
 
   const pathName = usePathname();
 
   return (
-    <Link style={{ "--i": 1 }} className={pathName === link.url ? "active" : ""} href={link.url}>
-        {link.title}
+  <Link className={pathName === route.url ? "active" : ""} href={route.url} 
+    onClick={(e) => {
+    e.preventDefault();
+    router.push(route.url, {
+    onTransitionReady: pageAnimation,
+    });
+     }}>
+    {route.label}
   </Link>
   );
 };
