@@ -10,6 +10,7 @@ import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
 import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from "next/navigation";
 
 
 //page transition....
