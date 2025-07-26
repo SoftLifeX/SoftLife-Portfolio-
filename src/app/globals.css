@@ -70,8 +70,8 @@
   top: 1.7rem;
   right: 5svw;
   cursor: pointer;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
   border-radius: 50%;
   border: 0.06rem solid var(--theme-switch);
@@ -101,6 +101,25 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+  will-change: clip-path;
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+  animation: none !important;
+}
 /*html {
   scroll-behavior: smooth;
 }*/
