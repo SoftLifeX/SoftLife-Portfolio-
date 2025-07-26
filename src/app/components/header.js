@@ -8,7 +8,31 @@ import Link from "next/link";
 
 import NavLink from "./navlink";
 
+import { useTransitionRouter } from "next-view-transitions";
+
 import { motion as m } from "motion/react";
+
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        opacity: 1,
+        scale: 1,
+        transform: "translateY(0)",
+      },
+      {
+        opacity: 0.5,
+        scale: 0.9,
+        transform: "translateY(-100px)",
+      },
+    ],
+    {
+      duration: 1000,
+      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
+      pseudoElement: "::view-transition-old(root)",
+    }
+  );
+}
 
 
 function Header() {
@@ -87,51 +111,26 @@ function Header() {
 
    //navigation 
 
- const links = [
+ const router = useTransitionRouter();
 
-   {
-
-     url: "/",
-
-     title: "Home",
-
-   },
-
-
-
-   {
-
-     url: "/about",
-
-     title: "About",
-
-
-   },
-
-
-
-   {
-
-     url: "/craft",
-
-     title: "Craft",
-
-
-   },
-
-
-
-   {
-
-     url: "/contact",
-
-     title: "Contact",
-
-   },
-
- ];
-
-
+  const routes = [
+    {
+      label: "Home",
+      url: "/",
+    },
+    {
+      label: "About",
+      url: "/about",
+    },
+    {
+      label: "Craft",
+      url: "/craft",
+    },
+    {
+      label: "Contact",
+      url: "/contact",
+    },
+  ];
 
    //theme switch
 
@@ -475,15 +474,21 @@ function Header() {
 
          <ul>
 
-          <li>
-
-            {links.map((link) => (
-
-            <NavLink link={link} key={link.title} />
-
-          ))}
-
+          {routes.map((route) => (
+          <li key={route.label}>
+            <Link
+              href={route.url}
+              onClick={(e) => {
+                e.preventDefault();
+                router.push(route.url, {
+                  onTransitionReady: pageAnimation,
+                });
+              }}
+            >
+              {route.label}
+            </Link>
           </li>
+        ))}
 
          </ul>          
 
