@@ -16,10 +16,10 @@ const pageAnimation = () => {
   document.documentElement.animate(
     [
       {
-        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75% )
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
       },
       {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0% )
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
       },
     ],
     {
