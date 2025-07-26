@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: 'redact';
-  src: url(assets/fonts/Redaction.otf);
-}
-
-@font-face {
   font-family: 'tan';
   font-weight: 100;
   src: url(assets/fonts/MERINGUE.ttf);
@@ -2153,4 +2148,16 @@ form textarea {
       height: 100svh;
       width: 100svw;
      top: 0;
+}
+
+.revealer {
+  position: fixed;
+  background: var(--text-color);
+  z-index: 9990;
+  height: 100svh;
+  width: 100svw;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform-origin: center top;
 }
