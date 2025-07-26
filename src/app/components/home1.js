@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
+import TransitionLink from "./transitionlink";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
@@ -361,9 +362,7 @@ const words2 = ["Software", "Engineer."];
        transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer2 scale">
             <Magnetic>
-            <Link href="/contact" className="btn2">
-              Hire Me!
-            </Link>
+            <TransitionLink href="/contact" className="btn2" label="Hire Me!" />
             </Magnetic>
            </motion.div>
         </div>
