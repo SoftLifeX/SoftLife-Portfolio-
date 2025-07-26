@@ -1,7 +1,6 @@
 "use client";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import React from "react";
 import { useEffect } from "react";
 import Home1 from "./components/home1";
@@ -12,7 +11,6 @@ import { useRevealer } from "./components/hooks/useRevealer";
 
 
 const Home = () => {
-   const pathName = usePathname();
    useRevealer();
      
      useEffect(() => {
@@ -25,14 +23,12 @@ const Home = () => {
 
   return (
     <div>
-
       <div className="revealer" />
       <Home1 />
       <Home2 />
      <About2 />
      <Contact />
-
-     </div>
+   </div>
   );
 };
 
