@@ -10,6 +10,8 @@ import NavLink from "./navlink";
 
 import { useTransitionRouter } from "next-view-transitions";
 
+import { usePathname } from "next/navigation";
+
 import { motion as m } from "motion/react";
 
 const pageAnimation = () => {
@@ -73,6 +75,7 @@ function Header() {
 
 
 
+
     // Use capture phase to catch earlier in the event cycle
 
     document.addEventListener('click', handleClickOutside, true);
@@ -108,8 +111,19 @@ function Header() {
    //navigation 
 
  const router = useTransitionRouter();
+ const pathname = usePathname();
 
-  const routes = [
+const handleNav = (path) => (e) => {
+ if (path === pathname) {
+  e.preventDefault(); 
+  return;
+ }
+  
+  router.push(path, {
+  onTransitionReady: pageAnimation,
+ });
+};
+  /*const routes = [
     {
       label: "Home",
       url: "/",
@@ -126,7 +140,7 @@ function Header() {
       label: "Contact",
       url: "/contact",
     },
-  ];
+  ];*/
 
    //theme switch
 
@@ -469,22 +483,26 @@ function Header() {
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
 
          <ul>
-
-          {routes.map((route) => (
-          <li key={route.label}>
-            <Link
-              href={route.url}
-              onClick={(e) => {
-                e.preventDefault();
-                router.push(route.url, {
-                  onTransitionReady: pageAnimation,
-                });
-              }}
-            >
-              {route.label}
+	  <li>
+	   <Link href="/" onClick={handleNav("/")}>
+               Home
             </Link>
-          </li>
-        ))}
+	  </li>
+	  <li>
+	   <Link href="/about" onClick={handleNav("/about")}>
+              About
+            </Link>
+	  </li>
+	  <li>
+	   <Link href="/craft" onClick={handleNav("/craft")}>
+              Craft
+            </Link>
+	  </li>
+	  <li>
+	   <Link href="/contact" onClick={handleNav("/contact")}>
+              Contact
+            </Link>
+	  </li>
 
          </ul>          
 
