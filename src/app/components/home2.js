@@ -9,8 +9,34 @@ import { motion, useInView } from "framer-motion";
 import CurveArrow from "./svg/curveArrow"
 import Lottie from "lottie-react";
 import Case from "@/app/assets/Case.json";
+import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from "next/navigation";
+
+//animation
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+}
 
 function Home2() {
+  //page transition
+  const router = useTransitionRouter();
+
+  const pathName = usePathname();
+
 
   return (
       <section className="home2">
@@ -69,8 +95,16 @@ function Home2() {
               </div>
              </div>
             <Magnetic>
-            <Link href="/craft" className="btn2">
-              Intrigued?
+            <Link 
+              href="/craft" 
+              className="btn2" 
+              onClick={(e) => {
+              e.preventDefault();
+              router.push("/craft", {
+              onTransitionReady: pageAnimation,
+             });
+           }}>
+             Intrigued?
             </Link>
             </Magnetic>
 
