@@ -11,6 +11,27 @@ import Instagram from "@/app/assets/Instagram.json";
 import LinkedIn from "@/app/assets/LinkedIn.json";
 import Whatsapp from "@/app/assets/Whatsapp.json";
 import X from "@/app/assets/X.json";
+import { usePathname } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
+
+//page transition
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+  }
 
 
 const charVariants_letsCollab = {
@@ -27,12 +48,16 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 1,
+      delay: 5,
     },
   }),
 };
 
 function Contactform() {
+  const router = useTransitionRouter();
+
+  const pathName = usePathname();
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
 
@@ -182,9 +207,17 @@ function Contactform() {
                     />
                   </a>
                 </div>
-                <Link href="/" className="btn4">
-                  HomePage
-                </Link>
+                <Link 
+              href="/" 
+              className="btn2" 
+              onClick={(e) => {
+              e.preventDefault();
+              router.push("/", {
+              onTransitionReady: pageAnimation,
+             });
+           }}>
+              HomePage
+            </Link>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn2">
                  Resume
                 </a>
