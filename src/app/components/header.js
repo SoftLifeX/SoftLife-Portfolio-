@@ -14,24 +14,6 @@ import { usePathname } from "next/navigation";
 
 import { motion as m } from "motion/react";
 
-const pageAnimation = () => {
-  document.documentElement.animate(
-    [
-      {
-        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
-      },
-      {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
-      },
-    ],
-    {
-      duration: 2000,
-      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
-      pseudoElement: "::view-transition-new(root)",
-    }
-  );
-}
-
 
 function Header() {
 
@@ -110,6 +92,7 @@ function Header() {
 
    //navigation 
 
+ /*
  const router = useTransitionRouter();
  const pathname = usePathname();
 
@@ -123,7 +106,9 @@ const handleNav = (path) => (e) => {
   onTransitionReady: pageAnimation,
  });
 };
-  /*const routes = [
+*/
+
+  const routes = [
     {
       label: "Home",
       url: "/",
@@ -140,7 +125,7 @@ const handleNav = (path) => (e) => {
       label: "Contact",
       url: "/contact",
     },
-  ];*/
+  ];
 
    //theme switch
 
@@ -483,27 +468,11 @@ const handleNav = (path) => (e) => {
         className={`navbar ${scroll ? "sticky" : ""} ${isOpen ? 'open' : ''}`}>
 
          <ul>
-	  <li>
-	   <Link href="/" onClick={handleNav("/")}>
-               Home
-            </Link>
-	  </li>
-	  <li>
-	   <Link href="/about" onClick={handleNav("/about")}>
-              About
-            </Link>
-	  </li>
-	  <li>
-	   <Link href="/craft" onClick={handleNav("/craft")}>
-              Craft
-            </Link>
-	  </li>
-	  <li>
-	   <Link href="/contact" onClick={handleNav("/contact")}>
-              Contact
-            </Link>
-	  </li>
-
+	  {routes.map((route) => (
+            <NavLink
+              route={route}>
+              key={route.label} />
+          ))}
          </ul>          
 
         </nav>
