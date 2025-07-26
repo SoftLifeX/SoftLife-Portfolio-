@@ -6,8 +6,12 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import Contactform from "../components/contactform";
+import { useRevealer } from "../components/hooks/useRevealer";
+
 
 const Contact = () => {
+
+useRevealer();
 
 const pathName = usePathname();
 
@@ -21,6 +25,7 @@ const pathName = usePathname();
 
 return(
     <div>
+     <div className="revealer" />
      <Contactform />
     </div>
   );
