@@ -4,13 +4,34 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
-import TransitionLink from "./transitionlink";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
 import { useGSAP } from '@gsap/react';
+import { useTransitionRouter } from "next-view-transitions";
 
+
+//page transition....
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+}
+
+//splittext
 const fullLines = [
   ["Full-Stack", "|", "Mobile"],
   ["Designer", "+", "Developer", "&"],
@@ -124,7 +145,7 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 4,
+      delay: 5,
     },
   }),
 };
@@ -143,11 +164,16 @@ const wordContainer2_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 4,
+      delay: 5,
     },
   }),
 };
 function Home1() {
+//page animation
+const router = useTransitionRouter();
+
+  const pathName = usePathname();
+
 
 //h2 animation
 const h2Ref = useRef(null);
@@ -362,7 +388,17 @@ const words2 = ["Software", "Engineer."];
        transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
          className="btnContainer2 scale">
             <Magnetic>
-            <TransitionLink href="/contact" className="btn2" label="Hire Me!" />
+            <Link 
+              href="/contact" 
+              className="btn2" 
+              onClick={(e) => {
+              e.preventDefault();
+              router.push("/contact", {
+              onTransitionReady: pageAnimation,
+             });
+           }}>
+              Let's build!
+            </Link>
             </Magnetic>
            </motion.div>
         </div>
