@@ -75,8 +75,8 @@
   top: 1.7rem;
   right: 5svw;
   cursor: pointer;
-  width: 2.1rem;
-  height: 2.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
   border-radius: 50%;
   border: 0.06rem solid var(--theme-switch);
@@ -373,6 +373,7 @@ h2 {
   cursor: text;
   text-align: left;
   font-family: 'play', serif;
+  font-weight: normal;
 }
 
 .svg-filters{
@@ -402,6 +403,7 @@ h1 {
   text-decoration: none;
   cursor: text;
   font-family: 'tan', serif;
+  font-weight: normal;
 }
 
 h3 {
@@ -464,6 +466,7 @@ h5 {
   font-family: 'play', serif;
   position: relative;
   padding-top: 3.12rem;
+  font-weight: normal;
 }
 
 h5::after {
