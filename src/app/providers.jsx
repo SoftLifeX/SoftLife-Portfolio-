@@ -6,7 +6,7 @@ import Header from "./components/header";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import Preloader from "./components/Preloader"
+import Preloader from "./Preloader"
 import StickyCursor from "./components/stickyCursor"
 
 
