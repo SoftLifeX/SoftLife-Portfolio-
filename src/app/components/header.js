@@ -16,20 +16,16 @@ const pageAnimation = () => {
   document.documentElement.animate(
     [
       {
-        opacity: 1,
-        scale: 1,
-        transform: "translateY(0)",
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75% )
       },
       {
-        opacity: 0.5,
-        scale: 0.9,
-        transform: "translateY(-100px)",
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0% )
       },
     ],
     {
-      duration: 1000,
-      easing: "cubic-bezier(0.76, 0, 0.24, 1)",
-      pseudoElement: "::view-transition-old(root)",
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
     }
   );
 }
