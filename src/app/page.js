@@ -8,10 +8,12 @@ import Home1 from "./components/home1";
 import Home2 from "./components/home2";
 import About2 from "./components/about2";
 import Contact from "./components/contact";
+import { useRevealer } from "./components/hooks/useRevealer";
 
 
 const Home = () => {
    const pathName = usePathname();
+   useRevealer();
      
      useEffect(() => {
           (async () => {
