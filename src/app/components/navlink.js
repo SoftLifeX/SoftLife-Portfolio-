@@ -25,6 +25,8 @@ const pageAnimation = () => {
 
 const NavLink = ({ route }) => {
 
+  const router = useTransitionRouter();
+
   const pathName = usePathname();
 
   return (
