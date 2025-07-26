@@ -1,8 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from './providers'
-/*import { Provider } from "./components/hooks/ThemeProvider";*/
-
+import { ViewTransitions } from "next-view-transitions";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
@@ -79,6 +78,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+   <ViewTransitions>
     <html lang="en" suppressHydrationWarning>
       <head>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -88,12 +88,11 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-   <Providers >
-     
-       {children}
-  
-  </Providers>
+       <Providers >    
+        {children}
+       </Providers>
       </body>
     </html>
+  </ViewTransitions>
   );
 }
