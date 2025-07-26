@@ -6,9 +6,12 @@ import React from "react";
 import { useEffect } from "react";
 import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
+import { useRevealer } from "../components/hooks/useRevealer";
 
 
 const Craft = () => {
+
+useRevealer();
 
 const pathName = usePathname();
      
@@ -22,6 +25,7 @@ const pathName = usePathname();
         
   return (
     <div>
+      <div className="revealer" />
       <Craft1 />
       <Craft2 />
     </div>
