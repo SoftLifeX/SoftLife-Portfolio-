@@ -470,7 +470,7 @@ const handleNav = (path) => (e) => {
          <ul>
 	  {routes.map((route) => (
             <NavLink
-              route={route}>
+              route={route}
               key={route.label} />
           ))}
          </ul>          
