@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div>
 
-      
+      <div className="revealer" />
       <Home1 />
       <Home2 />
      <About2 />
