@@ -6,6 +6,9 @@ import AboutIcon from "./svg/aboutIcon"
 import VennDiagram from "./svg/venn"
 import Lottie from "lottie-react";
 import About from "@/app/assets/About.json";
+import { useTransitionRouter } from "next-view-transitions";
+import { usePathname } from "next/navigation";
+
 
 const charVariants_letsCollab = {
   hidden: { opacity: 0, y: "0.25em" },
@@ -21,12 +24,36 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 1,
+      delay: 6,
     },
   }),
 };
 
+//page transition
+const pageAnimation = () => {
+  document.documentElement.animate(
+    [
+      {
+        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+      },
+      {
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
+      },
+    ],
+    {
+      duration: 2000,
+      easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+      pseudoElement: "::view-transition-new(root)",
+    }
+  );
+}
+
 function About1() {
+  //page transition
+  const router = useTransitionRouter();
+
+  const pathName = usePathname();
+
 const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
 
@@ -112,9 +139,17 @@ const ref = useRef(null);
               </p>
                     
                 <Magnetic>
-                <Link href="/contact" className="btn2">
-                  <i className="bx bxs-paper-plane"></i>Contact!
-                </Link>
+                <Link 
+              href="/contact" 
+              className="btn2" 
+              onClick={(e) => {
+              e.preventDefault();
+              router.push("/contact", {
+              onTransitionReady: pageAnimation,
+             });
+           }}>
+              Contact!
+            </Link>
                 </Magnetic>
               </div>
             </div>
