@@ -840,7 +840,23 @@ outline: none;
   font-family: 'play', serif;
   font-weight: normal;
   margin-top: 0;
+  position: relative;
+  color: var(--base-color);
 }
+
+.homepage div h2:before {
+  content:"";
+  background-color: var(--text-color);
+  width: 100%;
+  height: 1em;
+  position:absolute;
+  z-index:-1;
+  filter:url(#marker-shape);
+  left:-0.25em;
+  top: 0.2em;
+  padding:0.10em 0.25em;
+}
+
 
 .typed {
   width: 100%;
@@ -900,7 +916,10 @@ outline: none;
 
 .marker {
   margin-top: 0;
-  rotate: -10deg;
+  rotate: -7deg;
+  position: relative;
+  width: fit-content;
+  top: -2rem;
 }
 
 .marker-highlight{
