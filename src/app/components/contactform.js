@@ -53,7 +53,7 @@ function Contactform() {
 
         gsap.from(heroSplit.chars, {
          opacity: 0,
-         yPercent: 100,
+         yPercent: 50,
          duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
