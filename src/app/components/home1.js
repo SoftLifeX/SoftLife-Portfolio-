@@ -196,7 +196,7 @@ const router = useTransitionRouter();
          duration: 1.8,
          ease: "expo.out",
          stagger: 0.06,
-         delay: 4,
+         delay: 10,
         });
 
         gsap.from(paragraphSplit.lines, {
@@ -205,9 +205,9 @@ const router = useTransitionRouter();
          duration: 1.8,
          ease: "expo.out",
          stagger: 0.06,
-         delay: 5,
+         delay: 10,
         });
-  
+   }, []);
 
 //paragraph animation
   const dynamicWord = useCyclingWord(dynamicWords, 200);
