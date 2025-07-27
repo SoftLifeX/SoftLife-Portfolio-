@@ -55,14 +55,14 @@ const router = useTransitionRouter();
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
 
-        gsap.from(".marker-highlight", {
+        gsap.from(".marker-wrap", {
          clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          duration: 0.4,
          ease: "circ.out",
          delay: 1.8,
         });
 
-        gsap.from(".marker-highlight:before", {
+        gsap.from(".marker-wrap:before", {
          clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          duration: 0.4,
          ease: "circ.out",
@@ -162,7 +162,7 @@ const router = useTransitionRouter();
        Daniel c. Daniel
      </h2>
     <div className="marker">
-     <h2>
+     <h2 className="marker-wrap">
       <span className="marker-highlight"> 
         Software Engineer.
       </span>
