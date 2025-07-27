@@ -60,11 +60,18 @@ function Home2() {
         start: "top center",
       },
     });
-    revealTl.from(".blocktext", {
+    revealTl.from(".marker-wrap", {
       duration: 1,
       clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
       ease: "circ.inOut",
     });
+
+    revealTl.from(".marker-highlight:before", {
+      duration: 1,
+      clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
+      ease: "circ.inOut",
+    });
+
   }, []);
   
   //page transition
@@ -87,11 +94,9 @@ function Home2() {
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-            <span
-               style={{
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              }}
-               className="blocktext" > • We Live It •</span>
+           <span className="marker-wrap">
+             <span className="marker-highlight">  • We Live It •</span>
+           </span>
             </p>
            <div className="curveCon">
              <CurveArrow />
