@@ -47,7 +47,7 @@ function Home2() {
       scrollTrigger: {
         trigger: ".portfolio",
         start: "top center",
-        end: "30% center",
+        end: "top 20%",
         scrub: true,
       },
     });
@@ -56,16 +56,16 @@ function Home2() {
     const revealTl = gsap.timeline({
       delay: 1,
       scrollTrigger: {
-        trigger: ".blocktext",
-        start: "top 60%",
+        trigger: ".portfolio",
+        start: "top center",
       },
     });
     revealTl.from(".blocktext", {
       duration: 1,
-      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
       ease: "circ.inOut",
     });
-  });
+  }, []);
   
   //page transition
   const router = useTransitionRouter();
@@ -77,21 +77,21 @@ function Home2() {
       <section className="home2">
         <div className="portfolio">
           <div className="container">
-            <p className="quota">
+            <p>
+           <span className="quota">
               Creativity is not just a skill <br /> 
               It's a life-style 
+           </span>
           <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-         </p>
-            <p>
-              <span
+            <span
                style={{
                 clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
               }}
-               className="blocktext" ></span>
+               className="blocktext" > • We Live It •</span>
             </p>
            <div className="curveCon">
              <CurveArrow />
