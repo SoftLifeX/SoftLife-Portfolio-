@@ -61,6 +61,13 @@ const router = useTransitionRouter();
          ease: "circ.out",
          delay: 1.8,
         });
+
+        gsap.from(".svg-filters", {
+         clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+         duration: 0.4,
+         ease: "circ.out",
+         delay: 1.8,
+        });
    
         gsap.from(heroSplit.chars, {
          opacity: 0,
@@ -161,6 +168,14 @@ const router = useTransitionRouter();
       <WordShuffler/> 
      </div>
     </div>
+      <svg xmlns="//www.w3.org/2000/svg" version="1.1" className="svg-filters">
+      <defs>
+      <filter id="marker-shape">
+      <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+      </filter>
+      </defs>
+   </svg>
         <div className="sliderContainer">
         <div ref={slider} className="slider">
           <h1 className="slidertext" ref={firstText}>Softlifeメ • Software Engineer & Designer</h1>
