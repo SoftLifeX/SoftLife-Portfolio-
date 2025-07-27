@@ -13,13 +13,12 @@ export default function WordShuffler() {
   // Animate the word change
   useGsap(wordRef, (el) => {
     const tl = gsap.timeline();
-    tl.to(el, { y: '100%', duration: 0.4, ease: 'power2.in' });
-    tl.set(el, { y: '-100%' });
+    tl.set(el, { y: '100%' });
     tl.to(el, { y: '0%', duration: 0.4, ease: 'power2.out' });
     return tl;
   }, [index]);
 
-  // Trigger new word every 2.5 seconds
+  // Trigger new word every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % words.length);
