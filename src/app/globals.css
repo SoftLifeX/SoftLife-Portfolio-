@@ -906,13 +906,25 @@ outline: none;
   rotate: -7deg;
   position: relative;
   width: fit-content;
-  top: -1.5rem;
+  top: -0.5rem;
+}
+
+.marker-wrap{
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
+}
+
+.marker-wrap:before{
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  z-index:-1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
 .marker-highlight{
   position: relative;
   color: var(--base-color);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
 .marker-highlight:before{
@@ -926,7 +938,6 @@ outline: none;
   left:-0.25em;
   top: 0.2em;
   padding:0.10em 0.25em;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
 .waving-hand {
