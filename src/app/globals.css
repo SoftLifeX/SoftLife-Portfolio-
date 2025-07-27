@@ -147,7 +147,7 @@ body::-webkit-scrollbar {
     color: var(--text-color);
     margin: auto;
     padding: 0.5rem 0.5rem;
-    border: 0.06rem solid var(--border-color);
+    border: 0.06rem solid var(--text-color);
     border-radius: 5px;
     box-shadow: 0 0 0.10rem var(--accent-color);
   border-radius: 50%;
@@ -200,7 +200,6 @@ section {
   margin-bottom: 2.5rem;
   border-radius: 0.06rem;
   background-color: transparent;
-  backdrop-filter: blur(2px);
 }
 
 .home1 {
@@ -904,7 +903,9 @@ outline: none;
 .marker-highlight{
   position: relative;
   color: var(--base-color);
-  top: -0.2rem;
+  margin-top: 0;
+  rotate: -10deg;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
 .marker-highlight:before{
@@ -916,8 +917,10 @@ outline: none;
   z-index:-1;
   filter:url(#marker-shape);
   left:-0.25em;
-  top: -0.1em;
+  top: 0.2em;
   padding:0.10em 0.25em;
+  rotate: -10deg;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
 .waving-hand {
