@@ -164,9 +164,11 @@ const router = useTransitionRouter();
        Daniel c. Daniel
      </h2>
     <div className="marker">
-     <h2 className="marker-wrap">
+     <h2>
+      <span className="marker-wrap">
       <span className="marker-highlight"> 
         • Software Engineer •
+      </span>
       </span>
      </h2>
     </div>
