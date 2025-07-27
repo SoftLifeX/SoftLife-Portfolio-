@@ -56,7 +56,7 @@ const router = useTransitionRouter();
 
         gsap.from(heroSplit.chars, {
          opacity: 0,
-         yPercent: 100,
+         yPercent: 25,
          duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
@@ -65,11 +65,11 @@ const router = useTransitionRouter();
 
         gsap.from(paragraphSplit.lines, {
          opacity: 0,
-         yPercent: 100,
+         yPercent: 25,
          duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
-         delay: 3,
+         delay: 3.5,
         });
    }, []);
 
