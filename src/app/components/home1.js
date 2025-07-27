@@ -84,7 +84,14 @@ const router = useTransitionRouter();
          duration: 0.6,
          ease: "back.out",
          stagger: 0.04,
-         delay: 3.5,
+         delay: 2.2,
+        });
+
+        gsap.from(".scale", {
+         scale: 0,
+         duration: 0.4,
+         ease: "circ.out",
+         delay: 2.4,
         });
    }, []);
 
@@ -134,12 +141,7 @@ const router = useTransitionRouter();
       <div className="pointer">
         <ArrowIcon />
       </div>
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
-  className="statusContainer scale">
+    <div className="statusContainer scale">
     {status === "Available" ? (
       <div className="statusBar1">
      
@@ -156,7 +158,7 @@ const router = useTransitionRouter();
     ) : (
       <div/>
      )}
-    </motion.div>
+    </div>
     <div className="h2Container">
      <h2 className="title">
        Daniel c. Daniel
@@ -188,24 +190,14 @@ const router = useTransitionRouter();
           <h1 className="slidertext" ref={secondText}>Softlifeメ • Software Engineer & Designer</h1>
         </div>
       </div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
-         className="btnContainer scale">
+        <div className="btnContainer scale">
             <Magnetic>
                 <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
                   Resume
                 </a>
             </Magnetic>
-           </motion.div>
-           <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.2, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}
-         className="btnContainer2 scale">
+         </div>
+           <div className="btnContainer2 scale">
             <Magnetic>
             <Link 
               href="/contact" 
@@ -219,7 +211,7 @@ const router = useTransitionRouter();
               Let's build!
             </Link>
             </Magnetic>
-           </motion.div>
+          </div>
         </div>
      </section>
   );
