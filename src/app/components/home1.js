@@ -54,6 +54,14 @@ const router = useTransitionRouter();
         // Apply text-gradient class once before animating
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
+
+        gsap.from(".marker-highlight", {
+         clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+         duration: 0.4,
+         ease: "circ.out",
+         delay: 1.8,
+        });
+   
         gsap.from(heroSplit.chars, {
          opacity: 0,
          yPercent: 25,
@@ -66,7 +74,7 @@ const router = useTransitionRouter();
         gsap.from(paragraphSplit.lines, {
          opacity: 0,
          yPercent: 25,
-         duration: 0.4,
+         duration: 0.6,
          ease: "back.out",
          stagger: 0.04,
          delay: 3.5,
@@ -143,9 +151,9 @@ const router = useTransitionRouter();
      )}
     </motion.div>
     <div className="h2Container">
-    <h2 className="title">
-      Daniel c. Daniel  <br/> 
-      Software Engineer.
+    <h2>
+      <span className="title"> Daniel c. Daniel </span>  <br/> 
+      <span className="marker-highlight"> Software Engineer. </span>
     </h2>
     <div className="subtitle">
       Full-stack | Mobile <br/>
