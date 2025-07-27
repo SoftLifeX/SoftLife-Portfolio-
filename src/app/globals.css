@@ -35,7 +35,7 @@
   --border-color: linear-gradient(rgba(0, 0, 0, 0.6));
   --text-color2: #000;
   --palette-color: #006400;
-  --theme-switch: transparent;
+  --theme-switch: transparent; 
  
   --grid-template-columns: 10% 1fr 1fr 1fr 10%;
     --grid-container-columns: 2/5;
@@ -974,7 +974,7 @@ outline: none;
   padding: 3.12rem;
 }
 
-.portfolio .blocktext {
+/*.portfolio .blocktext {
   color: var(--base-color);
   background: linear-gradient(to right, var(--tertiary-text), var(--text-color));
   border-radius: 1px;
@@ -987,7 +987,7 @@ outline: none;
 
 .blocktext:hover:after{
   content:'We Love It!'
-}
+}*/
 
 .curveCon {
   position: relative;
