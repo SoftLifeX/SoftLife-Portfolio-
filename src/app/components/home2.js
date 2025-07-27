@@ -80,7 +80,7 @@ function Home2() {
           <div className="container">
             <p className="quota">
               Creativity isn't just a skill <br /> 
-              It's a life-style
+              It's a life-style!
           <span> 
           <div className="dot"></div>
          <div className="dot"></div>
