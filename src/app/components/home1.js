@@ -57,7 +57,7 @@ const router = useTransitionRouter();
         gsap.from(heroSplit.chars, {
          opacity: 0,
          yPercent: 100,
-         duration: 1.2,
+         duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
          delay: 2,
@@ -66,7 +66,7 @@ const router = useTransitionRouter();
         gsap.from(paragraphSplit.lines, {
          opacity: 0,
          yPercent: 100,
-         duration: 1.2,
+         duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
          delay: 3,
@@ -147,11 +147,11 @@ const router = useTransitionRouter();
       Daniel c. Daniel  <br/> 
       Software Engineer.
     </h2>
-    <p className="subtitle">
+    <div className="subtitle">
       Full-stack | Mobile <br/>
       Designer + Devoper <br/>
       <WordShuffler/> 
-    </p>
+     </div>
     </div>
         <div className="sliderContainer">
         <div ref={slider} className="slider">
