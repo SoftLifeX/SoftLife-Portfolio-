@@ -132,44 +132,6 @@ function renderLine(words, keyPrefix = "") {
   );
 }
 
-//h2 animation 
-const charVariants_letsCollab = {
-  hidden: { opacity: 0, y: "0.25em" },
-  visible: {
-    opacity: 1,
-    y: "0em",
-    transition: { duration: 0.4 },
-  },
-};
-
-const wordContainer_letsCollab = {
-  visible: (i = 1) => ({
-    transition: {
-      staggerChildren: 0.04,
-      delayChildren: i * 0.04,
-      delay: 5,
-    },
-  }),
-};
-
-const charVariants2_letsCollab = {
-  hidden: { opacity: 0, y: "0.25em" },
-  visible: {
-    opacity: 1,
-    y: "0em",
-    transition: { duration: 0.4 },
-  },
-};
-
-const wordContainer2_letsCollab = {
-  visible: (i = 1) => ({
-    transition: {
-      staggerChildren: 0.04,
-      delayChildren: i * 0.04,
-      delay: 5,
-    },
-  }),
-};
 function Home1() {
 //page animation
 const router = useTransitionRouter();
@@ -195,7 +157,7 @@ const router = useTransitionRouter();
          duration: 1.8,
          ease: "expo.out",
          stagger: 0.06,
-         delay: 10,
+         delay: 3,
         });
 
         gsap.from(paragraphSplit.lines, {
@@ -204,7 +166,7 @@ const router = useTransitionRouter();
          duration: 1.8,
          ease: "expo.out",
          stagger: 0.06,
-         delay: 10,
+         delay: 4,
         });
    }, []);
 
@@ -281,8 +243,8 @@ const router = useTransitionRouter();
     </motion.div>
     <div className="h2Container">
     <h2 className="title">
-      Daniel c. Daniel
-      <br/> Software Engineer.
+      Daniel c. Daniel  <br/> 
+      Software Engineer.
     </h2>
 
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
