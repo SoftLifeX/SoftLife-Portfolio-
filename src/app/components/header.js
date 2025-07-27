@@ -23,6 +23,16 @@ function Header() {
 
   const menuRef = useRef(null);
 
+  const pathname = usePathname();
+
+  // Remove "open" on pathname change
+  useEffect(() => {
+    if (isOpen) {
+      setIsOpen(false); // This removes the "open" class
+    }
+  }, [pathname]);
+
+
 
 
   const toggleMenu = () => {
@@ -88,25 +98,6 @@ function Header() {
 
   });
 
-
-
-   //navigation 
-
- /*
- const router = useTransitionRouter();
- const pathname = usePathname();
-
-const handleNav = (path) => (e) => {
- if (path === pathname) {
-  e.preventDefault(); 
-  return;
- }
-  
-  router.push(path, {
-  onTransitionReady: pageAnimation,
- });
-};
-*/
 
   const routes = [
     {
