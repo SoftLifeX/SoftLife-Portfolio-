@@ -146,7 +146,7 @@ const wordContainer_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 30,
+      delay: 5,
     },
   }),
 };
@@ -165,7 +165,7 @@ const wordContainer2_letsCollab = {
     transition: {
       staggerChildren: 0.04,
       delayChildren: i * 0.04,
-      delay: 10,
+      delay: 5,
     },
   }),
 };
@@ -177,11 +177,6 @@ const router = useTransitionRouter();
 
 
 //h2 animation
-const h2Ref = useRef(null);
-const IsInView = useInView(h2Ref, { once: true, margin: "0px 0px -10% 0px" });
-const h2Ref2 = useRef(null);
-const IsInView2 = useInView(h2Ref2, { once: true, margin: "0px 0px -10% 0px" });
-  
 const words = ["Daniel", "c." , "Daniel"];
 const words2 = ["Software", "Engineer."];
   
@@ -261,9 +256,8 @@ const words2 = ["Software", "Engineer."];
     <div className="h2Container">
     <h2>
       <motion.div
-      ref={h2Ref}
       initial="hidden"
-      animate={IsInView ? "visible" : "hidden"}
+       animate="visible"
       variants={wordContainer_letsCollab}
       className="flex items-start flex-wrap text-[1.25rem] leading-tight"
       style={{
@@ -297,9 +291,8 @@ const words2 = ["Software", "Engineer."];
     </motion.div>
 
     <motion.div
-      ref={h2Ref2}
       initial="hidden"
-      animate={IsInView2 ? "visible" : "hidden"}
+      animate="visible"
       variants={wordContainer2_letsCollab}
       className="flex items-start flex-wrap text-[1.25rem] leading-tight"
       style={{
