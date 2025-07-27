@@ -3,7 +3,6 @@ import { useState, useRef, useEffect } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
-import { useRef } from "react";
 import { ScrollTrigger } from 'gsap/all';
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
