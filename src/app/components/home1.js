@@ -75,7 +75,7 @@ const router = useTransitionRouter();
          duration: 0.4,
          ease: "back.out",
          stagger: 0.04,
-         delay: 2,
+         delay: 2.1,
         });
 
         gsap.from(paragraphSplit.lines, {
@@ -84,14 +84,14 @@ const router = useTransitionRouter();
          duration: 0.6,
          ease: "back.out",
          stagger: 0.04,
-         delay: 2.2,
+         delay: 2.6,
         });
 
         gsap.from(".scale", {
          scale: 0,
          duration: 0.4,
          ease: "circ.out",
-         delay: 2.4,
+         delay: 3.1,
         });
    }, []);
 
@@ -166,7 +166,7 @@ const router = useTransitionRouter();
     <div className="marker">
      <h2 className="marker-wrap">
       <span className="marker-highlight"> 
-        Software Engineer.
+        • Software Engineer •
       </span>
      </h2>
     </div>
