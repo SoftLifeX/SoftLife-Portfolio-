@@ -32,10 +32,10 @@ function Contact() {
          }
         })
 
-        scrollTimeline.from(titleSplit.words, {
+        scrollTimeline.from(titleSplit.chars, {
         opacity: 0, duration: 0.4, yPercent: 25, ease: 'back.out', stagger: 0.04
         })
-   }, []);
+   });
   
 
   return (
