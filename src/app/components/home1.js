@@ -74,7 +74,7 @@ const router = useTransitionRouter();
          yPercent: 25,
          duration: 0.4,
          ease: "back.out",
-         stagger: 0.04,
+         stagger: 0.02,
          delay: 2.1,
         });
 
@@ -84,14 +84,14 @@ const router = useTransitionRouter();
          duration: 0.6,
          ease: "back.out",
          stagger: 0.04,
-         delay: 2.6,
+         delay: 2.9,
         });
 
         gsap.from(".scale", {
          scale: 0,
          duration: 0.4,
          ease: "circ.out",
-         delay: 3.1,
+         delay: 3.3,
         });
    }, []);
 
