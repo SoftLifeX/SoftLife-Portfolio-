@@ -152,7 +152,7 @@ const router = useTransitionRouter();
       Designer + Devoper <br/>
       <WordShuffler/> 
     </p>
-
+    </div>
         <div className="sliderContainer">
         <div ref={slider} className="slider">
           <h1 className="slidertext" ref={firstText}>Softlifeメ • Software Engineer & Designer</h1>
