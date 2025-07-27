@@ -8,7 +8,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
 import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
-import ReplaceText from "./replaceText"
+import WordShuffler from "./wordShuffler"
 import ArrowIcon from "./svg/arrow"
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
@@ -33,104 +33,6 @@ const pageAnimation = () => {
   );
 }
 
-//splittext
-const fullLines = [
-  ["Full-Stack", "|", "Mobile"],
-  ["Designer", "+", "Developer", "&"],
-];
-
-const dynamicWords = [
-  "Content Creator", "Lover of the Arts", "a bit of a gamer", "Travel Enthusiast"];
-
-const charVariants = {
-  hidden: { opacity: 0, y: "100%" },
-  visible: { opacity: 1, y: "0%", transition: { duration: 0.5, ease: [0.175, 0.885, 0.32, 1.275], } },
-};
-
-const wordContainer = {
-  visible: (i = 1) => ({
-    transition: { staggerChildren: 0.03, delayChildren: i * 0.03, ease: [0.175, 0.885, 0.32, 1.275],   },
-  }),
-};
-
-function useCyclingWord(words) {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % words.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [words]);
-
-  return words[index];
-}
-
-function renderLine(words, keyPrefix = "") {
-  return (
-    <motion.div
-      className="line"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        whiteSpace: "pre",
-        fontSize: "1rem",
-        gap: "0.3rem",
-      }}
-      initial="hidden"
-      animate="visible"
-      variants={wordContainer}
-    >
-      {words.map((word, i) => {
-        const isHighlight = word === "Full-Stack";
-        if (isHighlight) {
-          const highlightWords = ["Full-Stack", "|", "Mobile"];
-          return (
-            <motion.span
-              key={`${keyPrefix}-highlight-${i}`}
-              
-              style={{ display: "inline-flex", whiteSpace: "pre" }}
-              variants={wordContainer}
-            >
-              {highlightWords
-                .join(" ")
-                .split("")
-                .map((char, j) => (
-                  <motion.span
-                    key={`highlight-char-${j}`}
-                    variants={charVariants}
-                    style={{ display: "inline-block", whiteSpace: "pre" }}
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </motion.span>
-                ))}
-            </motion.span>
-          );
-        }
-
-        if (["|", "Mobile"].includes(word)) return null;
-
-        return (
-          <motion.span
-            key={`${keyPrefix}-word-${i}`}
-            style={{ display: "inline-block", whiteSpace: "pre", overflow: "hidden" }}
-            variants={wordContainer}
-          >
-            {word.split("").map((char, j) => (
-              <motion.span
-                key={`${keyPrefix}-char-${i}-${j}`}
-                variants={charVariants}
-                style={{ display: "inline-block", whiteSpace: "pre" }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.span>
-        );
-      })}
-    </motion.div>
-  );
-}
 
 function Home1() {
 //page animation
@@ -139,7 +41,7 @@ const router = useTransitionRouter();
   const pathName = usePathname();
 
 
-//h2 animation
+//splitText
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
@@ -153,26 +55,25 @@ const router = useTransitionRouter();
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
         gsap.from(heroSplit.chars, {
+         opacity: 0,
          yPercent: 100,
-         duration: 1.8,
-         ease: "expo.out",
-         stagger: 0.06,
-         delay: 3,
+         duration: 1.2,
+         ease: "back.out",
+         stagger: 0.04,
+         delay: 2,
         });
 
         gsap.from(paragraphSplit.lines, {
          opacity: 0,
          yPercent: 100,
-         duration: 1.8,
-         ease: "expo.out",
-         stagger: 0.06,
-         delay: 4,
+         duration: 1.2,
+         ease: "back.out",
+         stagger: 0.04,
+         delay: 3,
         });
    }, []);
 
-//paragraph animation
-  const dynamicWord = useCyclingWord(dynamicWords, 200);
-    
+
 //sliding text
   const firstText = useRef(null);
   const secondText = useRef(null);
@@ -246,37 +147,11 @@ const router = useTransitionRouter();
       Daniel c. Daniel  <br/> 
       Software Engineer.
     </h2>
-
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
-      {renderLine(fullLines[0], "line1")}
-      {renderLine(fullLines[1], "line2")}
-
-      <motion.div
-        key={dynamicWord}
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          whiteSpace: "pre",
-          fontSize: "1rem",
-          overflow: "hidden",
-        }}
-        initial="hidden"
-        animate="visible"
-        variants={wordContainer}
-      >
-        {dynamicWord.split("").map((char, j) => (
-          <motion.span
-            key={`dynamic-char-${j}`}
-            variants={charVariants}
-            style={{ display: "inline-block", whiteSpace: "pre", overflow: "hidden" }}
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        ))}
-      </motion.div>
-    </div>
-    
-       </div>
+    <p className="subtitle">
+      Full-stack | Mobile <br/>
+      Designer + Devoper <br/>
+      <WordShuffler/> 
+    </p>
 
         <div className="sliderContainer">
         <div ref={slider} className="slider">
