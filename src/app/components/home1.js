@@ -14,6 +14,7 @@ import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
 
+
 //page transition....
 const pageAnimation = () => {
   document.documentElement.animate(
