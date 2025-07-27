@@ -158,10 +158,14 @@ const router = useTransitionRouter();
      )}
     </motion.div>
     <div className="h2Container">
-    <h2>
-      <span className="title"> Daniel c. Daniel </span>  <br/> 
-      <span className="marker-highlight"> Software Engineer. </span>
-    </h2>
+     <h2 className="title">
+       Daniel c. Daniel
+     </h2>
+    <div className="marker">
+     <h2 className="marker-highlight"> 
+       Software Engineer.
+     </h2>
+    </div>
     <div className="subtitle">
       Full-stack | Mobile <br/>
       Designer + Devoper <br/>
