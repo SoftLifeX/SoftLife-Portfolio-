@@ -25,17 +25,21 @@ function Contact() {
 
 
 
-         const scrollTimeline = gsap.timeline({
+    const scrollTimeline = gsap.timeline({
          scrollTrigger: {
          trigger: '.contact',
          start: 'top center'
          }
         })
 
-        scrollTimeline.from(titleSplit.chars, {
-        opacity: 0, duration: 0.4, yPercent: 25, ease: 'back.out', stagger: 0.04
+    scrollTimeline.from(titleSplit.chars, {
+        opacity: 0, 
+        duration: 0.4,
+        yPercent: 25,
+        ease: 'back.out', 
+        stagger: 0.04
         })
-   });
+   }, []);
   
 
   return (
