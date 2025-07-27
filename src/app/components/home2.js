@@ -41,7 +41,7 @@ function Home2() {
     
 
     gsap.from(firstMsgSplit.words, {
-      color: "#ababab",
+      opacity: 0.5,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
@@ -60,18 +60,12 @@ function Home2() {
         start: "top center",
       },
     });
+    
     revealTl.from(".marker-wrap", {
       duration: 1,
-      clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
-      ease: "circ.inOut",
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      ease: "circ.Out",
     });
-
-    revealTl.from(".marker-highlight:before", {
-      duration: 1,
-      clipPath: "polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%)",
-      ease: "circ.inOut",
-    });
-
   }, []);
   
   //page transition
@@ -84,20 +78,22 @@ function Home2() {
       <section className="home2">
         <div className="portfolio">
           <div className="container">
-            <p>
-           <span className="quota">
+            <p className="quota">
               Creativity isn't just a skill <br /> 
-              It's a life-style!
-           </span>
+              It's a life-style
           <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
+       </p>
+         <p>
            <span className="marker-wrap">
-             <span className="marker-highlight">  • We Live It •</span>
+             <span className="marker-highlight"> 
+              • We Live It •
+             </span>
            </span>
-            </p>
+         </p>
            <div className="curveCon">
              <CurveArrow />
            </div>
