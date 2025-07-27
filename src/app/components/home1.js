@@ -62,7 +62,7 @@ const router = useTransitionRouter();
          delay: 1.8,
         });
 
-        gsap.from(".svg-filters", {
+        gsap.from(".marker-highlight:before", {
          clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          duration: 0.4,
          ease: "circ.out",
