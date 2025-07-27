@@ -53,19 +53,18 @@ function Home2() {
     });
     
 
-    const revealTl = gsap.timeline({
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".portfolio",
-        start: "top center",
-      },
-    });
-    
-    revealTl.from(".marker-wrap", {
-      duration: 1,
-      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
-      ease: "circ.Out",
-    });
+    const scrollTimeline = gsap.timeline({
+         scrollTrigger: {
+         trigger: '.portfolio',
+         start: 'top center'
+         }
+        })
+
+    scrollTimeline.from(".marker-wrap", {
+        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+         duration: 0.4,
+         ease: "circ.out",
+        })
   }, []);
   
   //page transition
