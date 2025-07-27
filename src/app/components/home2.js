@@ -3,8 +3,9 @@ import Image from "next/image";
 import { images } from "@/app/images/images";
 import Link from "next/link";
 import Magnetic from './magnetic';
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/all";
 import { motion, useInView } from "framer-motion";
 import CurveArrow from "./svg/curveArrow"
 import Lottie from "lottie-react";
@@ -32,6 +33,40 @@ const pageAnimation = () => {
 }
 
 function Home2() {
+  //reveal text
+  useGSAP(() => {
+    const firstMsgSplit = SplitText.create(".quota", {
+      type: "words",
+    });
+    
+
+    gsap.from(firstMsgSplit.words, {
+      color: "#ababab",
+      ease: "power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".portfolio",
+        start: "top center",
+        end: "30% center",
+        scrub: true,
+      },
+    });
+    
+
+    const revealTl = gsap.timeline({
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".blocktext",
+        start: "top 60%",
+      },
+    });
+    revealTl.from(".blocktext", {
+      duration: 1,
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      ease: "circ.inOut",
+    });
+  });
+  
   //page transition
   const router = useTransitionRouter();
 
@@ -42,17 +77,21 @@ function Home2() {
       <section className="home2">
         <div className="portfolio">
           <div className="container">
-            <p>
-              Creativity is not just a skill
-              <br /> It's a life-style 
+            <p className="quota">
+              Creativity is not just a skill <br /> 
+              It's a life-style 
           <span> 
           <div className="dot"></div>
          <div className="dot"></div>
         <div className="dot"></div>
          </span>
-              <br />
-              <br />
-              <span className="blocktext"></span>
+         </p>
+            <p>
+              <span
+               style={{
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+              }}
+               className="blocktext" ></span>
             </p>
            <div className="curveCon">
              <CurveArrow />
