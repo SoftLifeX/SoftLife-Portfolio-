@@ -1,6 +1,9 @@
 'use client'
 import { useState, useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { SplitText } from "gsap/all";
+import { useRef } from "react";
 import { ScrollTrigger } from 'gsap/all';
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Link from "next/link";
@@ -8,7 +11,6 @@ import Magnetic from "./magnetic"
 import ScrambleText from "./scrambleText"
 import ReplaceText from "./replaceText"
 import ArrowIcon from "./svg/arrow"
-import { useGSAP } from '@gsap/react';
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 
@@ -177,9 +179,34 @@ const router = useTransitionRouter();
 
 
 //h2 animation
-const words = ["Daniel", "c." , "Daniel"];
-const words2 = ["Software", "Engineer."];
-  
+ useGSAP(() => {
+        const heroSplit = new SplitText(".title", {
+         type: "chars, words, lines",
+        });
+
+        const paragraphSplit = new SplitText(".subtitle", {
+         type: "lines",
+        });
+
+        // Apply text-gradient class once before animating
+        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+
+        gsap.from(heroSplit.chars, {
+         yPercent: 100,
+         duration: 1.8,
+         ease: "expo.out",
+         stagger: 0.06,
+         delay: 4,
+        });
+
+        gsap.from(paragraphSplit.lines, {
+         opacity: 0,
+         yPercent: 100,
+         duration: 1.8,
+         ease: "expo.out",
+         stagger: 0.06,
+         delay: 5,
+        });
   
 
 //paragraph animation
@@ -254,76 +281,9 @@ const words2 = ["Software", "Engineer."];
      )}
     </motion.div>
     <div className="h2Container">
-    <h2>
-      <motion.div
-      initial="hidden"
-       animate="visible"
-      variants={wordContainer_letsCollab}
-      className="flex items-start flex-wrap text-[1.25rem] leading-tight"
-      style={{
-        whiteSpace: "normal",
-        margin: 0,
-        padding: 0,
-      }}
-    >
-      {words.map((word, i) => (
-        <motion.span
-          key={`word-${i}`}
-          style={{
-            display: "inline-flex",
-            marginRight: i !== words.length - 1 ? "0.4em" : "0",
-          }}
-          variants={wordContainer_letsCollab}
-        >
-          {word.split("").map((char, j) => (
-            <motion.span
-              key={`char-${i}-${j}`}
-              variants={charVariants_letsCollab}
-              style={{
-                display: "inline-block",
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.span>
-      ))}
-    </motion.div>
-
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={wordContainer2_letsCollab}
-      className="flex items-start flex-wrap text-[1.25rem] leading-tight"
-      style={{
-        whiteSpace: "normal",
-        margin: 0,
-        padding: 0,
-      }}
-    >
-      {words2.map((word, i) => (
-        <motion.span
-          key={`word-${i}`}
-          style={{
-            display: "inline-flex",
-            marginRight: i !== words.length - 1 ? "0.4em" : "0",
-          }}
-          variants={wordContainer2_letsCollab}
-        >
-          {word.split("").map((char, j) => (
-            <motion.span
-              key={`char-${i}-${j}`}
-              variants={charVariants2_letsCollab}
-              style={{
-                display: "inline-block",
-              }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </motion.span>
-      ))}
-    </motion.div>
+    <h2 className="title">
+      Daniel c. Daniel
+      <br/> Software Engineer.
     </h2>
 
     <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: 0, overflow: "hidden", lineHeight: 1.1, }}>
