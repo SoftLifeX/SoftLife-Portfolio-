@@ -832,12 +832,14 @@ outline: none;
   color: var(--text-color);
   font-size: 1.5rem;
   margin: 0.2rem 0;
+  margin-top: 0;
   position: relative;
 }
 
-.homepage h2 span {
+.homepage div h2 {
   font-family: 'play', serif;
   font-weight: normal;
+  margin-top: 0;
 }
 
 .typed {
@@ -845,10 +847,6 @@ outline: none;
   white-space: pre-line;
   overflow: hidden;
   animation-iteration-count: infinite;
-}
-
-.title{
-  white-space: pre-wrap;
 }
 
 #scramble{
@@ -900,11 +898,14 @@ outline: none;
   }
 }
 
+.marker {
+  margin-top: 0;
+  rotate: -10deg;
+}
+
 .marker-highlight{
   position: relative;
   color: var(--base-color);
-  margin-top: 0;
-  rotate: -10deg;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
@@ -919,7 +920,6 @@ outline: none;
   left:-0.25em;
   top: 0.2em;
   padding:0.10em 0.25em;
-  rotate: -10deg;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
 
