@@ -916,10 +916,10 @@ outline: none;
 .marker-highlight{
   position: relative;
   color: var(--base-color);
-  background: linear-gradient(to right, var(--tertiary-text), var(--text-color));
+  background-color: var(--secondary-text);
   border-radius: 1px;
-  padding: 0.15rem 0.25rem;
-  border: 0.06rem solid var(--base-color);
+  padding: 0.25rem 0.5rem;
+  border: 0.06rem solid var(--text-color);
 }
 
 /*.marker-highlight:before{
