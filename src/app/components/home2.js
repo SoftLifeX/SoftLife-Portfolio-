@@ -43,7 +43,7 @@ function Home2() {
     });
     
     gsap.from(firstMsgSplit.words, {
-      opacity: 0.5,
+      opacity: 0.4,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
@@ -54,7 +54,7 @@ function Home2() {
       },
     });
     gsap.from(secMsgSplit.words, {
-      opacity: 0.5,
+      opacity: 0.4,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
