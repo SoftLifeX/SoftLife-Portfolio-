@@ -40,15 +40,14 @@ function Home2() {
     });
     
 
-    gsap.from(firstMsgSplit.words, {
-      opacity: 0.5,
+    gsap.to(firstMsgSplit.words, {
+      opacity: 1,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
         trigger: ".portfolio",
         start: "top center",
-        end: "top 20%",
-        scrub: true,
+        toggleActions: "play reverse play reverse",
       },
     });
     
@@ -56,15 +55,20 @@ function Home2() {
     const scrollTimeline = gsap.timeline({
          scrollTrigger: {
          trigger: '.portfolio',
-         start: 'top center'
-         }
+         start: 'top center',
+         toggleActions: "play reverse play reverse",
+         },
         })
 
-    scrollTimeline.from(".marker-wrap2", {
-        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+    scrollTimeline.to(".marker-wrap2", {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
          duration: 0.4,
          ease: "circ.out",
         })
+
+    return () => {
+      scrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
   }, []);
   
   //page transition
