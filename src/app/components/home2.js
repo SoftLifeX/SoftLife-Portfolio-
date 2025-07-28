@@ -46,17 +46,19 @@ function Home2() {
       stagger: 1,
       scrollTrigger: {
         trigger: ".portfolio",
-        start: "top center",
-        toggleActions: "play reverse play reverse",
-      },
+        start: "top 1%",
+        scrub: 0.25,
+        end: "top 30%",
+      }
     });
     
 
     const scrollTimeline = gsap.timeline({
          scrollTrigger: {
          trigger: '.portfolio',
-         start: 'top center',
-         toggleActions: "play reverse play reverse",
+         scrub: 0.25,
+        start: "top 1%",
+        end: window.innerHeight,
          },
         })
 
@@ -65,10 +67,6 @@ function Home2() {
          duration: 0.4,
          ease: "circ.out",
         })
-
-    return () => {
-      scrollTrigger.getAll().forEach((trigger) => trigger.kill())
-    }
   }, []);
   
   //page transition
