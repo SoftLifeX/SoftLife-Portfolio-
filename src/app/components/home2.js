@@ -70,6 +70,7 @@ function Home2() {
       scrollTrigger: {
         trigger: ".msg-text-scroll",
         start: "top 90%",
+        scrub: true,
       },
     });
     revealTl.to(".marker-wrap2", {
@@ -92,7 +93,7 @@ function Home2() {
             <h1 className="quota">
               Creativity isn't just a skill <br /> 
             </h1>
-        <h1>
+        <h1 className="markerbound2">
           <div className="marker2">
            <span className="marker-wrap2">
              <span className="marker-highlight2"> 
