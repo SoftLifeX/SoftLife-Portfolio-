@@ -77,7 +77,7 @@ function Home2() {
       clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
       ease: "circ.inOut",
     });
-  } []);
+  }, []);
   
   //page transition
   const router = useTransitionRouter();
