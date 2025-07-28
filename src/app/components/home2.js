@@ -68,7 +68,7 @@ function Home2() {
     const revealTl = gsap.timeline({
       delay: 1,
       scrollTrigger: {
-        trigger: ".marker-wrap",
+        trigger: ".marker-wrap2",
         start: "top 90%",
         scrub: true,
       },
