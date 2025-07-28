@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollSmoother, ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
 import { useRevealer } from "../components/hooks/useRevealer";
@@ -15,20 +18,22 @@ useRevealer();
 
 const pathName = usePathname();
      
-     useEffect(() => {
-          (async () => {
-            const LocomotiveScroll = (await import("locomotive-scroll")).default;
-    
-            const locomotiveScroll = new LocomotiveScroll();
-          })();
-        }, []);
+ useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 2,
+      effects: true,
+      smoothTouch: 0.1,
+    });
+  });
         
   return (
-    <div>
+   <div id="smooth-wrapper">
+    <div id="smooth-content">
       <div className="revealer" />
       <Craft1 />
       <Craft2 />
     </div>
+  </div>
   );
 };
 
