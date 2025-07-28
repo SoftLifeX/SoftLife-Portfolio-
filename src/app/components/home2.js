@@ -49,7 +49,6 @@ function Home2() {
         start: "top center",
         scrub: 0.25,
         end: "top 30%",
-        markers: true,
       }
     });
     
@@ -58,14 +57,13 @@ function Home2() {
          scrollTrigger: {
          trigger: '.portfolio',
          scrub: 0.25,
-        start: "top 1%",
-           markers: true,
+        start: "top center",
+        end: "top 30%",
          },
         })
 
     scrollTimeline.from(".marker-wrap2", {
         clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
-         duration: 0.4,
          ease: "circ.out",
         })
   }, []);
