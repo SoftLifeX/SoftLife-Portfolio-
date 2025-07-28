@@ -931,7 +931,7 @@ outline: none;
   position: relative;
   width: fit-content;
   height: fit-content;
-  top: -1rem;
+  top: -3rem;
 }
 
 .marker-wrap2{
@@ -987,20 +987,24 @@ outline: none;
   overflow-x: hidden;
 }
 
-.portfolio p {
-  padding-top: 3rem;
-  padding-bottom: 0.6rem;
-  padding-left: 1.5rem;
-  
-}
-
 .quota{
+  padding-top: 3rem;
   color: var(--text-color);
   opacity: 1;
+  padding-bottom: 0.6rem;
+  padding-left: 1.5rem;
+}
+
+.quota2{
+  color: var(--text-color);
+  opacity: 1;
+  padding-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  padding-top: 0;
 }
 
 .portfolio h1 {
-  padding: 3.12rem;
+  padding: 3rem;
 }
 
 /*.portfolio .blocktext {
