@@ -918,10 +918,9 @@ outline: none;
 .marker-highlight{
   position: relative;
   color: var(--base-color);
-  background-color: var(--tertiary-text);
+  background-color: var(--text-color);
   border-radius: 1px;
   padding: 0.3rem 0.5rem;
-  border: 0.06rem double var(--text-color);
 }
 
 .marker2 {
@@ -936,17 +935,18 @@ outline: none;
   position: relative;
   width: 100%;
   height: 100%;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
+  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%);  
 }
 
 .marker-highlight2{
   position: relative;
   color: var(--base-color);
-  background-color: var(--tertiary-text);
+  background-color: var(--text-color);
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
-  border: 0.06rem double var(--text-color);
+  left: -1rem;
   font-family: Arial;
+  
 }
 
 /*.marker-highlight:before{
@@ -994,7 +994,6 @@ outline: none;
   padding-left: 1.5rem;
   font-family: Arial;
   margin: 0;
-  font-weight: bold;
 }
 
 .quota2{
@@ -1005,7 +1004,6 @@ outline: none;
   padding-top: 0;
   font-family: Arial;
   margin: 0;
-  font-weight: bold;
 }
 
 .markerbound2{
@@ -1014,7 +1012,6 @@ outline: none;
   padding-top: 0;
   font-family: Arial;
   margin: 0;
-  font-weight: bold;
 }
 
 .portfolio h1 {
