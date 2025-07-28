@@ -926,7 +926,7 @@ outline: none;
 
 .marker2 {
   margin-top: 0;
-  rotate: 7deg;
+  rotate: 5deg;
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -946,7 +946,7 @@ outline: none;
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
   border: 0.06rem double var(--text-color);
-  font-family: 'time';
+  font-family: Arial;
 }
 
 /*.marker-highlight:before{
@@ -990,9 +990,9 @@ outline: none;
   padding-top: 3rem;
   color: var(--text-color);
   opacity: 1;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0;
   padding-left: 1.5rem;
-  font-family: 'time';
+  font-family: Arial;
   margin: 0;
   font-weight: bold;
 }
@@ -1000,19 +1000,19 @@ outline: none;
 .quota2{
   color: var(--text-color);
   opacity: 1;
-  padding-bottom: 0.6rem;
+  padding-bottom: 0;
   padding-left: 1.5rem;
   padding-top: 0;
-  font-family: 'time';
+  font-family: Arial;
   margin: 0;
   font-weight: bold;
 }
 
 .markerbound2{
-  padding-bottom: 0.6rem;
+  padding-bottom: 0;
   padding-left: 1.5rem;
   padding-top: 0;
-  font-family: 'time';
+  font-family: Arial;
   margin: 0;
   font-weight: bold;
 }
