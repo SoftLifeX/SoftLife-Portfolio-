@@ -73,7 +73,7 @@ function Home2() {
         scrub: true,
       },
     });
-    revealTl.to(".marker-wrap2", {
+    revealTl.from(".marker-wrap2", {
       duration: 1,
       clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
       ease: "circ.inOut",
