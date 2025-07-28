@@ -11,7 +11,7 @@ import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
 import { useRevealer } from "../components/hooks/useRevealer";
 
-
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const Craft = () => {
 
 useRevealer();
