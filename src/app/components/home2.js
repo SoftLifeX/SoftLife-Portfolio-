@@ -75,7 +75,7 @@ function Home2() {
     });
     revealTl.from(".marker-wrap2", {
       duration: 1,
-      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
       ease: "circ.inOut",
     });
   }, []);
