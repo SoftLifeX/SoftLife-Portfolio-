@@ -60,7 +60,7 @@ function Home2() {
          }
         })
 
-    scrollTimeline.from(".marker-wrap", {
+    scrollTimeline.from(".marker-wrap2", {
         clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          duration: 0.4,
          ease: "circ.out",
@@ -87,11 +87,13 @@ function Home2() {
          </span>
        </p>
          <p>
-           <span className="marker-wrap">
-             <span className="marker-highlight"> 
+          <div className="marker2">
+           <span className="marker-wrap2">
+             <span className="marker-highlight2"> 
               • We Live It •
              </span>
            </span>
+           </div>
          </p>
            <div className="curveCon">
              <CurveArrow />
