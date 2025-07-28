@@ -38,7 +38,7 @@ function Home2() {
     const firstMsgSplit = SplitText.create(".quota", {
       type: "words",
     });
-    const secMsgSplit = SplitText.create(".quota 2", {
+    const secMsgSplit = SplitText.create(".quota2", {
       type: "words",
     });
     
@@ -53,7 +53,7 @@ function Home2() {
         scrub: true,
       },
     });
-    gsap.to(secMsgSplit.words, {
+    gsap.from(secMsgSplit.words, {
       opacity: 0.5,
       ease: "power1.in",
       stagger: 1,
@@ -101,7 +101,7 @@ function Home2() {
            </span>
            </div>
          </h1>
-         <h1>
+         <h1 className="quota2">
            We Live It
          </h1>
            <div className="curveCon">
