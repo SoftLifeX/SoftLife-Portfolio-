@@ -18,19 +18,22 @@ const Home = () => {
      
   useGSAP(() => {
     ScrollSmoother.create({
-      smooth: 3,
+      smooth: 2,
       effects: true,
+      smoothTouch: 0.1,
     });
   });
 
   return (
-    <div>
+   <div id="smooth-wrapper">
+    <div id="smooth-content">
       <div className="revealer" />
       <Home1 />
       <Home2 />
      <About2 />
      <Contact />
    </div>
+  </div>
   );
 };
 
