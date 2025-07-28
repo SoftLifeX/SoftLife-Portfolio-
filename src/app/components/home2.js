@@ -75,7 +75,7 @@ function Home2() {
     });
     revealTl.from(".marker-wrap2", {
       duration: 1,
-      clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
       ease: "circ.inOut",
     });
   }, []);
@@ -91,19 +91,19 @@ function Home2() {
         <div className="portfolio">
           <div className="container">
             <h1 className="quota">
-              Creativity isn't just a skill <br /> 
+              CREATIVITY ISN'T JUST A SKILL <br /> 
             </h1>
         <h1 className="markerbound2">
           <div className="marker2">
            <span className="marker-wrap2">
              <span className="marker-highlight2"> 
-              • It's a Lifestyle •
+              • IT'S A LIFESTYLE •
              </span>
            </span>
            </div>
          </h1>
          <h1 className="quota2">
-           We Live It
+           WE LIVE IT
          </h1>
            <div className="curveCon">
              <CurveArrow />
