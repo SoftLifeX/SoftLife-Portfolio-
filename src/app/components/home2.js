@@ -18,7 +18,7 @@ const pageAnimation = () => {
   document.documentElement.animate(
     [
       {
-        clipPath: "polygon(25% 75%, 75% 75%, 75% 75%, 25% 75%)",
+        clipPath: "polygon(25% 75%, 75% en, 75% 75%, 25% 75%)",
       },
       {
         clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
@@ -40,15 +40,16 @@ function Home2() {
     });
     
 
-    gsap.to(firstMsgSplit.words, {
-      opacity: 1,
+    gsap.from(firstMsgSplit.words, {
+      opacity: 0.5,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
         trigger: ".portfolio",
-        start: "top 1%",
+        start: "top center",
         scrub: 0.25,
         end: "top 30%",
+        markers: true,
       }
     });
     
@@ -58,12 +59,12 @@ function Home2() {
          trigger: '.portfolio',
          scrub: 0.25,
         start: "top 1%",
-        end: window.innerHeight,
+           markers: true,
          },
         })
 
-    scrollTimeline.to(".marker-wrap2", {
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    scrollTimeline.from(".marker-wrap2", {
+        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          duration: 0.4,
          ease: "circ.out",
         })
