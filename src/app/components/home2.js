@@ -38,35 +38,46 @@ function Home2() {
     const firstMsgSplit = SplitText.create(".quota", {
       type: "words",
     });
+    const secMsgSplit = SplitText.create(".quota 2", {
+      type: "words",
+    });
     
-
     gsap.from(firstMsgSplit.words, {
       opacity: 0.5,
       ease: "power1.in",
       stagger: 1,
       scrollTrigger: {
-        trigger: ".portfolio",
-        start: "top center",
-        scrub: 0.25,
-        end: "top 30%",
-      }
+        trigger: ".quota",
+        start: "top 90%",
+        end: "bottom 90%",
+        scrub: true,
+      },
     });
-    
+    gsap.to(secMsgSplit.words, {
+      opacity: 0.5,
+      ease: "power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".quota2",
+        start: "top bottom",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
 
-    const scrollTimeline = gsap.timeline({
-         scrollTrigger: {
-         trigger: '.portfolio',
-         scrub: 0.25,
-        start: "top center",
-        end: "top 30%",
-         },
-        })
-
-    scrollTimeline.from(".marker-wrap2", {
-        clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
-         ease: "circ.out",
-        })
-  }, []);
+    const revealTl = gsap.timeline({
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".msg-text-scroll",
+        start: "top 90%",
+      },
+    });
+    revealTl.to(".marker-wrap2", {
+      duration: 1,
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      ease: "circ.inOut",
+    });
+  } []);
   
   //page transition
   const router = useTransitionRouter();
@@ -78,24 +89,21 @@ function Home2() {
       <section className="home2">
         <div className="portfolio">
           <div className="container">
-            <p className="quota">
+            <h1 className="quota">
               Creativity isn't just a skill <br /> 
-              It's a life-style!
-          <span> 
-          <div className="dot"></div>
-         <div className="dot"></div>
-        <div className="dot"></div>
-         </span>
-       </p>
-         <p>
+            </h1>
+        <h1>
           <div className="marker2">
            <span className="marker-wrap2">
              <span className="marker-highlight2"> 
-              • We Live It •
+              • It's a Lifestyle •
              </span>
            </span>
            </div>
-         </p>
+         </h1>
+         <h1>
+           We Live It
+         </h1>
            <div className="curveCon">
              <CurveArrow />
            </div>
