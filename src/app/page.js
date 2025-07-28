@@ -16,12 +16,12 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const Home = () => {
    useRevealer();
      
-     useGSAP(() => {
+  useGSAP(() => {
     ScrollSmoother.create({
       smooth: 3,
       effects: true,
     });
-  }, []);
+  });
 
   return (
     <div>
