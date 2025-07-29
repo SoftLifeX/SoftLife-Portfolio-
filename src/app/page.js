@@ -1,8 +1,8 @@
-"use client";
-import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
+//"use client";
+//import { AnimatePresence } from "framer-motion";
+//import { motion } from "framer-motion";
 import React from "react";
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
