@@ -1,5 +1,5 @@
-'use client'
-import { useState, useRef, useEffect } from 'react';
+//'use client'
+import { useState, useRef } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -34,6 +34,7 @@ const pageAnimation = () => {
   );
 }
 
+gsap.registerPlugin(ScrollTrigger);
 
 function Home1() {
 //page animation
@@ -97,8 +98,7 @@ const router = useTransitionRouter();
   let xPercent = 0;
   let direction = -1;
 
-  useEffect( () => {
-    gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
