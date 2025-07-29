@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./style.scss";
 // import CustomCursorContext from "./context/CustomCursorContext";
 
 // TODO: Hide if cursor not moved
