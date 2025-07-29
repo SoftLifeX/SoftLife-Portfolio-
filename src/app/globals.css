@@ -119,6 +119,15 @@
   animation: none !important;
 }
 
+::selection {
+  background: transparent;
+}
+
+/* For older WebKit browsers (e.g., Safari, older Chrome) */
+::-webkit-selection {
+  background: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }
