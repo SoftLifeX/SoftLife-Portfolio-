@@ -5,9 +5,10 @@ import { AnimatePresence } from "framer-motion";
 import Header from "./components/header";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import {useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "./Preloader"
 import StickyCursor from "./components/stickyCursor"
+import CustomCursor from "./components/CustomCursor"
 
 
 
@@ -44,7 +45,7 @@ const [isLoading, setIsLoading] = useState(true);
 
     return (
 <ThemeProvider defaultTheme='system' enableSystem>
- <StickyCursor/>
+ <CustomCursor/>
  <Header />
   {children}
 </ThemeProvider>
