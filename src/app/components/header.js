@@ -408,9 +408,9 @@ function Header() {
 
 											scale: 1.3,
 
-											stroke: "#fff3e8",
+											stroke: "#f5f0ec",
 
-											fill: "#fff3e8",
+											fill: "#f5f0ec",
 
 											fillOpacity: 0.5,
 
