@@ -1,5 +1,5 @@
 //'use client'
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -125,9 +125,6 @@ const router = useTransitionRouter();
     xPercent += 0.1 * direction;
   }
 
-  const [status,  setStatus] = useState("Available");
-
-  
     
   return (
       <section className="home1">
@@ -136,22 +133,11 @@ const router = useTransitionRouter();
         <ArrowIcon />
       </div>
     <div className="statusContainer scale">
-    {status === "Available" ? (
-      <div className="statusBar1">
-     
-     <p><span className="indicator" />Available for New Projects</p>
+      <div className="statusBar1">   
+     <p>
+      <span className="indicator" />Available for New Projects
+    </p>
      </div>
-    ) : (
-      <div/>
-     )}
-
-     {status === "Busy" ? (
-      <div className="statusBar2">
-     <p><span className="indicator"/> Sorry! currently unavailable :(</p>
-     </div>
-    ) : (
-      <div/>
-     )}
     </div>
     <div className="h2Container">
      <h2 className="title">
