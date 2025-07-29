@@ -28,8 +28,7 @@ function Contact() {
     const scrollTimeline = gsap.timeline({
          scrollTrigger: {
          trigger: '.contact',
-         start: 'top 80%',
-         scrub: true,
+         start: 'top 75%',
          }
         })
 
