@@ -22,8 +22,8 @@
 
 
 :root {
-  --bg-color: radial-gradient(circle, rgba(232, 244, 255, 1) 0%, rgba(255, 243, 232, 1) 100%);
-  --base-color: #fff3e8;
+  --bg-color: radial-gradient(circle, rgba(236, 241, 245, 1) 0%, rgba(245, 240, 236, 1) 100%);
+  --base-color: #f5f0ec;
   --text-color: #000;
   --secondary-text: rgba(0, 0, 0, 0.5);
   --tertiary-text: rgba(0, 0, 0, 0.8);
@@ -48,18 +48,18 @@
 [data-theme="dark"] {
   --bg-color: black;
   --base-color: black;
-  --text-color: #fff3e8;
-  --secondary-text: rgba(255, 243, 232, 0.5);
-  --tertiary-text: rgba(255, 243, 232, 0.8);
+  --text-color: #f5f0ec;
+  --secondary-text: rgba(245, 240, 236, 0.5);
+  --tertiary-text: rgba(245, 240, 236, 0.8);
   --primary-color: transparent;
   --secondary-color: gray;
   --accent-color: transparent;
   --tertiary-color: white;
-  --accent-color2: rgba(255, 243, 232, 0.5);;
-  --border-color: rgba(255, 255, 255, 0.704);
+  --accent-color2: rgba(245, 240, 236, 0.5);;
+  --border-color: rgba(245, 240, 236, 0.704);
   --text-color2: gray;
   --palette-color: #ADF802;
-  --theme-switch: #fff3e8;
+  --theme-switch: #f5f0ec;
 }
 
 #theme-switch {
@@ -128,9 +128,9 @@
   background: transparent;
 }
 
-html {
+/*html {
   scroll-behavior: smooth;
-}
+}*/
 
 body {
   background-position: center;
@@ -170,7 +170,7 @@ body::-webkit-scrollbar {
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   position: fixed;
-  background: white;
+  background: #f5f0ec;
   mix-blend-mode: difference;
   transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
 
