@@ -70,6 +70,7 @@ function Home2() {
       scrollTrigger: {
         trigger: ".marker-wrap2",
         start: "top 90%",
+        end: "bottom 90%",
         scrub: true,
       },
     });
