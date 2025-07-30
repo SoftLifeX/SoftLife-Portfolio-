@@ -34,6 +34,7 @@ useRevealer();
     <div id="smooth-content">
       <div className="revealer" />
       <About1 />
+     <About2 />
       <About3 />
        <Contact />
     </div>
