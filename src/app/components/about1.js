@@ -37,6 +37,12 @@ function About1() {
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
+         mask: "lines",
+         smartWrap: true,
+        });
+
+        const subSplit = new SplitText(".subtitle", {
+         type: "chars, words, lines",
         });
 
 
@@ -47,10 +53,20 @@ function About1() {
          opacity: 0,
          yPercent: 25,
          duration: 0.4,
-         ease: "back.out",
+         ease: "back",
          stagger: 0.04,
          delay: 2,
         });
+
+        gsap.from(subSplit.chars, {
+         opacity: 0,
+         x: 150,
+         duration: 0.4,
+         ease: "power4",
+         stagger: 0.04,
+         delay: 2,
+        });
+
    }, []);
 
   
@@ -67,7 +83,7 @@ const ref = useRef(null);
     return (
       <section className="about1">
         <div className="about">
-        <h5 className="title">
+        <h5 className="subtitle">
         What we're About? <Lottie id="lottie3" loop={true} animationData={About} />
          </h5>
           <h1 className="title">
