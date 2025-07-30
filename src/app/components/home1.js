@@ -147,14 +147,14 @@ const router = useTransitionRouter();
      <h2>
       <span className="marker-wrap">
       <span className="marker-highlight"> 
-        • Software Engineer •
+        ‎  ‎ Software Engineer  ‎ ‎
       </span>
       </span>
      </h2>
     </div>
     <div className="subtitle">
       Full-stack | Mobile <br/>
-      Designer + Devoper <br/>
+      Designer + Developer <br/>
       <WordShuffler/> 
      </div>
     </div>
