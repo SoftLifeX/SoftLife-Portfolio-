@@ -21,6 +21,7 @@ function Contact() {
  useGSAP(() => {
        const titleSplit = SplitText.create('.contact h1', {
          type: 'chars, words, lines'
+         mask: "lines",
         })
 
 
@@ -36,7 +37,7 @@ function Contact() {
         opacity: 0, 
         duration: 0.4,
         yPercent: 25,
-        ease: 'back.out', 
+        ease: 'back', 
         stagger: 0.04
         })
    }, []);
