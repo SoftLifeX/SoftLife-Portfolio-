@@ -45,6 +45,11 @@ function Contactform() {
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
+         mask: "lines",
+        });
+
+        const subSplit = new SplitText(".subtitle", {
+         type: "chars, words, lines",
         });
 
 
@@ -56,6 +61,15 @@ function Contactform() {
          yPercent: 25,
          duration: 0.4,
          ease: "back.out",
+         stagger: 0.04,
+         delay: 2,
+        });
+
+        gsap.from(subSplit.chars, {
+         opacity: 0,
+         x: 150,
+         duration: 0.4,
+         ease: "power4",
          stagger: 0.04,
          delay: 2,
         });
@@ -93,7 +107,7 @@ function Contactform() {
       <section className="contactForm">
         <div className="contact">
           <div className="container">
-            <h5 className="title">
+            <h5 className="subtitle">
               You've scrolled this far!
             </h5>
             <h1 className="title">
