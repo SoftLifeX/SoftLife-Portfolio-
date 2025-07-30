@@ -544,7 +544,22 @@ h1 {
   font-weight: normal;
 }
 
-h3 {
+.title{
+  font-kerning: none;
+  line-height: 1.0606060606em;
+}
+
+
+
+.lineParent {
+  overflow: hidden;
+  font-kerning: none;
+  line-height: inherit;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+}
+    
+ h3{
   font-size: 1.87rem;
   margin: 1.56rem;
   cursor: text;
