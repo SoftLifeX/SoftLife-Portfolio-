@@ -488,6 +488,7 @@ section {
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .stickymenuButton{
@@ -495,6 +496,7 @@ section {
   background-color: var(--text-color);
   scale: 1.6;
   padding: 0.3rem
+  mix-blend-mode: difference;
 }
 
 
@@ -520,6 +522,7 @@ h2 {
 .marker-highlighter{
   position:relative;
   color: var(--text-color);
+  margin: 1.2rem;
 }
 
 .marker-highlighter::after {
@@ -747,11 +750,11 @@ outline: none;
 }
 
 .cert_cv .btn2 {
-  margin: 1.87rem;
+  margin: 1.2rem;
 }
 
 .cert_cv .btn4 {
-  margin: 1.87rem;
+  margin: 1.2rem;
 }
 
 .contact-left .btn2 {
@@ -1489,14 +1492,12 @@ outline: none;
 
 .tab-contents-exp h4 {
   border-left: 2px solid var(--tertiary-text);
-  margin-top: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin: 0.6rem;
   list-style: none;
 }
 
 .tab-contents-exp ul li {
   list-style: none;
-
 }
 
 .tab-contents-exp p {
@@ -1533,8 +1534,6 @@ transition: transform 0.5s ease-in-out;
 
 .cert_cv {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 /*.tab-content {
@@ -1852,12 +1851,14 @@ form textarea {
     background-color: var(--text-color);
     transition: 0.5s;
     width: 100%
+    mix-blend-mode: difference;
   }
 
   .stickymenuButton>span {
     background-color: var(--base-color);
     transition: 0.5s;
     width: 100%
+    mix-blend-mode: difference;
   }
   
 
