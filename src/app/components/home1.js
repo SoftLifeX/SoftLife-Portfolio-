@@ -70,7 +70,7 @@ const router = useTransitionRouter();
          yPercent: 25,
          duration: 0.4,
          ease: "back",
-         stagger: 0.02,
+         stagger: 0.04,
          delay: 2.1,
         });
 
@@ -79,7 +79,7 @@ const router = useTransitionRouter();
         transformOrigin: "50% 50% -160px",
         opacity: 0,
         duration: 0.6, 
-        ease: "back",
+        ease: "power3",
         stagger: 0.25,
         delay: 2.9,
         });
