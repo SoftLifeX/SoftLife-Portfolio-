@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import About1 from "../components/about1";
+import About2 from "../components/about2";
 import Contact from "../components/contact";
 import About3 from "../components/about3";
 import { useRevealer } from "../components/hooks/useRevealer";
@@ -23,6 +24,7 @@ useRevealer();
       smooth: 2,
       effects: true,
       smoothTouch: 0.1,
+      normalizeScroll: true
     });
   });
      
