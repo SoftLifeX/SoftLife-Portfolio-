@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import Image from "next/image";
-import { images } from "@/app/images/images";
+import React, { useState, useEffect } from 'react';
 import Html from "./svg/html";
 import Bootstrap from "./svg/bootstrap";
 import Css from "./svg/css";
@@ -21,7 +19,14 @@ import Flutter from "./svg/flutter";
 import Typescript from "./svg/typescript";
 
 function About2() {
-  const [action, setAction] = useState("Tools");
+  const [isTools, setIsTools] = useState(true);
+  const [fadeClass, setFadeClass] = useState("fade-in");
+
+  useEffect(() => {
+    setFadeClass(""); // reset animation
+    const timeout = setTimeout(() => setFadeClass("fade-in"), 10);
+    return () => clearTimeout(timeout);
+  }, [isTools]);
 
   const techStack = [
     { icon: <Html />, name: "HTML" },
@@ -36,7 +41,7 @@ function About2() {
     { icon: <Reacticon />, name: "React" },
     { icon: <Framer />, name: "Framer" },
     { icon: <Gitlab />, name: "Gitlab" },
-    { icon: <Reacticon />, name: "React Native" }, // consider separate icon
+    { icon: <Reacticon />, name: "React Native" },
     { icon: <Nextjs />, name: "Next.js" },
     { icon: <Git />, name: "Git" },
     { icon: <Bitbucket />, name: "Bitbucket" },
@@ -49,14 +54,15 @@ function About2() {
     <section className="about2">
       <div id="stack">stack</div>
       <div className="container">
+        {/* Tab buttons */}
         <div className="tab-titles">
           <h4>
             <ul>
               <li>
                 <a
                   href="#stacks"
-                  className={action === "Tools" ? "active" : ""}
-                  onClick={() => setAction("Tools")}
+                  className={isTools ? "active" : ""}
+                  onClick={() => setIsTools(true)}
                 >
                   Tools
                 </a>
@@ -64,8 +70,8 @@ function About2() {
               <li>
                 <a
                   href="#stacks"
-                  className={action === "Experience" ? "active" : ""}
-                  onClick={() => setAction("Experience")}
+                  className={!isTools ? "active" : ""}
+                  onClick={() => setIsTools(false)}
                 >
                   Experience
                 </a>
@@ -74,12 +80,13 @@ function About2() {
           </h4>
         </div>
 
-        {action === "Tools" && (
-          <div className="tab-col-1">
-            <div className="h2boundary">
-              <h2 className="marker-highlighter">My Stack & Tools</h2>
-            </div>
-            <div className="tab-contents">
+        {/* Shared content container */}
+        <div className={`tab-content ${fadeClass}`}>
+          {isTools ? (
+            <>
+              <div className="h2boundary">
+                <h2 className="marker-highlighter">My Stack & Tools</h2>
+              </div>
               <div className="tools">
                 {techStack.map((tool, index) => (
                   <span key={index} className="techstack">
@@ -88,60 +95,53 @@ function About2() {
                   </span>
                 ))}
               </div>
-            </div>
 
-            <div className="h2boundary">
-              <h2 className="marker-highlighter">Certification & CV</h2>
-            </div>
-            <div className="cert_cv">
-              <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
-                Resume
-              </a>
-              <a href="#" className="btn2" onClick={(e) => e.preventDefault()}>
-                <i className="fa-solid fa-file-lines"></i> Certificate
-              </a>
-            </div>
-          </div>
-        )}
+              <div className="h2boundary">
+                <h2 className="marker-highlighter">Certification & CV</h2>
+              </div>
+              <div className="cert_cv">
+                <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
+                  Resume
+                </a>
+                <a href="#" className="btn2" onClick={(e) => e.preventDefault()}>
+                  <i className="fa-solid fa-file-lines"></i> Certificate
+                </a>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="h2boundary">
+                <h2 className="marker-highlighter">Experience</h2>
+              </div>
+              <div className="tab-contents-exp">
+                <i className="fa-solid fa-laptop"></i>
+                <p>01/2023 - Present</p>
+                <h4>Freelance Front End Web Developer</h4>
+                <li>
+                  Worked with diverse clients delivering fast and cost-effective solutions,
+                  increasing average client sales by 30–40% and achieving 95% satisfaction.
+                </li>
 
-        {action === "Experience" && (
-          <div className="tab-col-2">
-            <div className="h2boundary">
-              <h2 className="marker-highlighter">Experience</h2>
-            </div>
-            <div className="tab-contents-exp">
-              <i className="fa-solid fa-laptop"></i>
-              <p>01/2023 - Present</p>
-              <h4>Freelance Front End Web Developer</h4>
-              <li>
-                Collaboration with a diverse range of clients, exceeding expectations by offering innovative, efficient, and economical solutions.
-              </li>
-              <li>
-                Enhanced client sales by 30–40% and maintained a 95% satisfaction score through clear communication and technical precision.
-              </li>
-              <br />
-              <i className="fa-solid fa-briefcase"></i>
-              <p>11/2024 - Present</p>
-              <h4>Business Administrator & Personal Assistant, CEO Bellzito ENT</h4>
-              <li>
-                Improved operational efficiency by 20% through high-quality project execution and strategic management.
-              </li>
-              <br />
-              <i className="fa-solid fa-briefcase"></i>
-              <p>Remote</p>
-              <h4>Front End Developer</h4>
-              <li>
-                Completed projects in line with existing code and design standards.
-              </li>
-              <li>
-                Suggested and implemented performance improvements.
-              </li>
-              <li>
-                Kept up with current web technologies via courses and conferences.
-              </li>
-            </div>
-          </div>
-        )}
+                <br />
+                <i className="fa-solid fa-briefcase"></i>
+                <p>11/2024 - Present</p>
+                <h4>Business Administrator & Personal Asst. – Bellzito ENT</h4>
+                <li>
+                  Enhanced operational efficiency by 20% through consistent, quality project
+                  management and execution.
+                </li>
+
+                <br />
+                <i className="fa-solid fa-briefcase"></i>
+                <p>Remote</p>
+                <h4>Front End Developer</h4>
+                <li>Completed projects following standards and design systems.</li>
+                <li>Suggested and implemented performance improvements.</li>
+                <li>Kept up-to-date via courses and conferences.</li>
+              </div>
+            </>
+          )}
+        </div>
 
         <p className="fakemargin">margin</p>
       </div>
