@@ -39,6 +39,7 @@ function About1() {
          type: "chars, words, lines",
          mask: "lines",
          smartWrap: true,
+         linesClass: 'lineParent',
         });
 
         const subSplit = new SplitText(".subtitle", {
