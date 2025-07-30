@@ -106,7 +106,7 @@ function About2() {
                   <h4>Freelance Front End Web Developer</h4>
                   <ul>
                     <li>
-                      Delivered fast and cost-effective solutions, increasing average client
+                      • Delivered fast and cost-effective solutions, increasing average client
                       sales by 30–40% and achieving 95% satisfaction.
                     </li>
                   </ul>
@@ -115,16 +115,16 @@ function About2() {
                   <h4>Business Administrator & Personal Asst. – Bellzito ENT</h4>
                   <ul>
                     <li>
-                      Boosted efficiency by 20% through consistent, quality project execution.
+                      • Boosted efficiency by 20% through consistent, quality project execution.
                     </li>
                   </ul>
                 <br />
                  <p>Remote</p>
                   <h4>Front End Developer</h4>
                   <ul>
-                    <li>Completed projects following standards and design systems.</li>
-                    <li>Suggested and implemented performance improvements.</li>
-                    <li>Stayed current via courses and conferences.</li>
+                    <li>• Completed projects following standards and design systems.</li>
+                    <li>• Suggested and implemented performance improvements.</li>
+                    <li>• Stayed current via courses and conferences.</li>
                   </ul>
               </div>
             </>
