@@ -1117,7 +1117,7 @@ outline: none;
   opacity: 1;
   padding-bottom: 0;
   padding-left: 1.5rem;
-  font-family: Arial;
+  font-family: 'play', serif;
   margin: 0;
 }
 
@@ -1127,7 +1127,7 @@ outline: none;
   padding-bottom: 0;
   padding-left: 1.5rem;
   padding-top: 0;
-  font-family: Arial;
+  font-family: 'play', serif;
   margin: 0;
 }
 
