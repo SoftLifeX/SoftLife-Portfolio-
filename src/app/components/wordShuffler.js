@@ -14,7 +14,7 @@ export default function WordShuffler() {
   useGsap(wordRef, (el) => {
     const tl = gsap.timeline();
     tl.set(el, { y: '100%' });
-    tl.to(el, { y: '0%', duration: 0.4, ease: 'power2.out' });
+    tl.to(el, { y: '0%', duration: 0.4, ease: "back.out", });
     return tl;
   }, [index]);
 
