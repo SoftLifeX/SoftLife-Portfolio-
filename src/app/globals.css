@@ -164,7 +164,7 @@ body::-webkit-scrollbar {
 }
 
 .secondary-cursor {
-  z-index: 1000;
+  z-index: 900;
   border-radius: 50%;
   pointer-events: none;
   overflow: hidden;
@@ -186,7 +186,7 @@ body::-webkit-scrollbar {
 
 
 .secondary-cursor {
-  z-index: 10000;
+  z-index: 990;
   pointer-events: none;
   transform: translate3d(0, 0, 0);
   position: fixed;
@@ -477,7 +477,7 @@ section {
 
 .menuButton {
   left: 5svh;
-  color: var(--text-color);
+  color: #f5f0ec;
   display: none;
   align-items: center;
   position: fixed;
@@ -489,14 +489,16 @@ section {
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
   mix-blend-mode: difference;
+  z-index: 200;
 }
 
 .stickymenuButton{
   border-radius: 50%;
-  background-color: var(--text-color);
+  background: #f5f0ec;
   scale: 1.6;
   padding: 0.3rem;
   mix-blend-mode: difference;
+  z-index: 200;
 }
 
 
@@ -522,7 +524,7 @@ h2 {
 .marker-highlighter{
   position:relative;
   color: var(--text-color);
-  margin: 1.2rem;
+  margin: 1rem;
 }
 
 .marker-highlighter::after {
@@ -750,11 +752,11 @@ outline: none;
 }
 
 .cert_cv .btn2 {
-  margin: 1.2rem;
+  margin: 1rem;
 }
 
 .cert_cv .btn4 {
-  margin: 1.2rem;
+  margin: 1rem;
 }
 
 .contact-left .btn2 {
@@ -1494,6 +1496,7 @@ outline: none;
   border-left: 2px solid var(--tertiary-text);
   margin: 0.6rem;
   list-style: none;
+  padding-left: 0.4rem;
 }
 
 .tab-contents-exp ul li {
@@ -1848,17 +1851,19 @@ form textarea {
 
   .menuButton>span {
     height: 0.10rem;
-    background-color: var(--text-color);
+    background: #f5f0ec;
     transition: 0.5s;
     width: 100%;
     mix-blend-mode: difference;
+    z-index: 210;
   }
 
   .stickymenuButton>span {
-    background-color: var(--base-color);
+    background-color: #000;
     transition: 0.5s;
     width: 100%;
     mix-blend-mode: difference;
+    z-index: 210;
   }
   
 
