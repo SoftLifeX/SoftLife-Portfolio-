@@ -48,6 +48,7 @@ const router = useTransitionRouter();
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
+         linesClass: 'lineParent',
         });
 
         const paragraphSplit = new SplitText(".subtitle", {
