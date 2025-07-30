@@ -102,8 +102,6 @@ function About2() {
                 <h2 className="marker-highlighter">Experience</h2>
               </div>
               <div className="tab-contents-exp">
-                <section>
-                  <i className="fa-solid fa-laptop" role="img" aria-label="Freelance" />
                   <p>01/2023 - Present</p>
                   <h4>Freelance Front End Web Developer</h4>
                   <ul>
@@ -112,29 +110,22 @@ function About2() {
                       sales by 30–40% and achieving 95% satisfaction.
                     </li>
                   </ul>
-                </section>
-
-                <section>
-                  <i className="fa-solid fa-briefcase" role="img" aria-label="Business Admin" />
-                  <p>11/2024 - Present</p>
+                  <br />
+                 <p>11/2024 - Present</p>
                   <h4>Business Administrator & Personal Asst. – Bellzito ENT</h4>
                   <ul>
                     <li>
                       Boosted efficiency by 20% through consistent, quality project execution.
                     </li>
                   </ul>
-                </section>
-
-                <section>
-                  <i className="fa-solid fa-briefcase" role="img" aria-label="Developer" />
-                  <p>Remote</p>
+                <br />
+                 <p>Remote</p>
                   <h4>Front End Developer</h4>
                   <ul>
                     <li>Completed projects following standards and design systems.</li>
                     <li>Suggested and implemented performance improvements.</li>
                     <li>Stayed current via courses and conferences.</li>
                   </ul>
-                </section>
               </div>
             </>
           )}
