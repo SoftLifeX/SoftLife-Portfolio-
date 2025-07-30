@@ -14,6 +14,8 @@ function Craft1() {
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
+         linesClass: 'lineParent',
+         mask: "lines",
         });
 
 
@@ -24,7 +26,7 @@ function Craft1() {
          opacity: 0,
          yPercent: 25,
          duration: 0.4,
-         ease: "back.out",
+         ease: "back",
          stagger: 0.04,
          delay: 2,
         });
