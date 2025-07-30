@@ -748,11 +748,11 @@ outline: none;
 }
 
 .cert_cv .btn2 {
-  margin: 1rem;
+  margin: 1.87rem 1rem;
 }
 
 .cert_cv .btn4 {
-  margin: 1rem;
+  margin: 1.87rem 1rem;
 }
 
 .contact-left .btn2 {
@@ -1850,8 +1850,6 @@ form textarea {
     background-color: var(--text-color);
     transition: 0.5s;
     width: 100%;
-    mix-blend-mode: difference;
-    z-index: 210;
   }
 
   .stickymenuButton>span {
