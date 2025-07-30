@@ -1,53 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Html from "./svg/html";
-import Bootstrap from "./svg/bootstrap";
-import Css from "./svg/css";
-import Tailwind from "./svg/tailwind";
-import Sass from "./svg/sass";
-import Vue from "./svg/vue";
-import Express from "./svg/express";
-import Javascript from "./svg/javascript";
-import Nodejs from "./svg/nodejs";
-import Reacticon from "./svg/react";
-import Framer from "./svg/framer";
-import Gitlab from "./svg/gitlab";
-import Nextjs from "./svg/nextjs";
-import Git from "./svg/git";
-import Bitbucket from "./svg/bitbucket";
-import Figma from "./svg/figma";
-import Flutter from "./svg/flutter";
-import Typescript from "./svg/typescript";
+import React, { useState } from 'react';
+import { Icons } from "./svg"; // uses memoized icons
 
 function About2() {
   const [isTools, setIsTools] = useState(true);
-  const [fadeClass, setFadeClass] = useState("fade-in");
-
-  useEffect(() => {
-    setFadeClass(""); // reset animation
-    const timeout = setTimeout(() => setFadeClass("fade-in"), 10);
-    return () => clearTimeout(timeout);
-  }, [isTools]);
 
   const techStack = [
-    { icon: <Html />, name: "HTML" },
-    { icon: <Css />, name: "CSS3" },
-    { icon: <Bootstrap />, name: "Bootstrap" },
-    { icon: <Tailwind />, name: "Tailwind" },
-    { icon: <Sass />, name: "Sass" },
-    { icon: <Express />, name: "Express.js" },
-    { icon: <Javascript />, name: "JavaScript" },
-    { icon: <Vue />, name: "Vue.js" },
-    { icon: <Nodejs />, name: "Node.js" },
-    { icon: <Reacticon />, name: "React" },
-    { icon: <Framer />, name: "Framer" },
-    { icon: <Gitlab />, name: "Gitlab" },
-    { icon: <Reacticon />, name: "React Native" },
-    { icon: <Nextjs />, name: "Next.js" },
-    { icon: <Git />, name: "Git" },
-    { icon: <Bitbucket />, name: "Bitbucket" },
-    { icon: <Figma />, name: "Figma" },
-    { icon: <Flutter />, name: "Flutter" },
-    { icon: <Typescript />, name: "TypeScript" },
+    { icon: <Icons.Html />, name: "HTML" },
+    { icon: <Icons.Css />, name: "CSS3" },
+    { icon: <Icons.Bootstrap />, name: "Bootstrap" },
+    { icon: <Icons.Tailwind />, name: "Tailwind" },
+    { icon: <Icons.Sass />, name: "Sass" },
+    { icon: <Icons.Express />, name: "Express.js" },
+    { icon: <Icons.Javascript />, name: "JavaScript" },
+    { icon: <Icons.Vue />, name: "Vue.js" },
+    { icon: <Icons.Nodejs />, name: "Node.js" },
+    { icon: <Icons.Reacticon />, name: "React" },
+    { icon: <Icons.Framer />, name: "Framer" },
+    { icon: <Icons.Gitlab />, name: "Gitlab" },
+    { icon: <Icons.Reacticon />, name: "React Native" },
+    { icon: <Icons.Nextjs />, name: "Next.js" },
+    { icon: <Icons.Git />, name: "Git" },
+    { icon: <Icons.Bitbucket />, name: "Bitbucket" },
+    { icon: <Icons.Figma />, name: "Figma" },
+    { icon: <Icons.Flutter />, name: "Flutter" },
+    { icon: <Icons.Typescript />, name: "TypeScript" },
   ];
 
   return (
@@ -62,7 +38,10 @@ function About2() {
                 <a
                   href="#stacks"
                   className={isTools ? "active" : ""}
-                  onClick={() => setIsTools(true)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsTools(true);
+                  }}
                 >
                   Tools
                 </a>
@@ -71,7 +50,10 @@ function About2() {
                 <a
                   href="#stacks"
                   className={!isTools ? "active" : ""}
-                  onClick={() => setIsTools(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsTools(false);
+                  }}
                 >
                   Experience
                 </a>
@@ -80,16 +62,16 @@ function About2() {
           </h4>
         </div>
 
-        {/* Shared content container */}
-        <div className={`tab-content ${fadeClass}`}>
+        {/* Tab content */}
+        <div className="tab-content fade-in" key={isTools ? "tools" : "experience"}>
           {isTools ? (
             <>
               <div className="h2boundary">
                 <h2 className="marker-highlighter">My Stack & Tools</h2>
               </div>
               <div className="tools">
-                {techStack.map((tool, index) => (
-                  <span key={index} className="techstack">
+                {techStack.map((tool) => (
+                  <span key={tool.name} className="techstack">
                     {tool.icon}
                     <p>{tool.name}</p>
                   </span>
@@ -100,12 +82,18 @@ function About2() {
                 <h2 className="marker-highlighter">Certification & CV</h2>
               </div>
               <div className="cert_cv">
-                <a href="./Daniel c. Daniel's Resume.pdf" download className="btn4">
+                <a
+                  href="./daniel-daniel-resume.pdf"
+                  download
+                  className="btn4"
+                  title="Download Resume"
+                >
                   Resume
                 </a>
-                <a href="#" className="btn2" onClick={(e) => e.preventDefault()}>
-                  <i className="fa-solid fa-file-lines"></i> Certificate
-                </a>
+                <button className="btn2" disabled data-title="Certificate Coming Soon">
+                  <i className="fa-solid fa-file-lines" role="img" aria-label="Certificate" />
+                  Certificate
+                </button>
               </div>
             </>
           ) : (
@@ -114,30 +102,39 @@ function About2() {
                 <h2 className="marker-highlighter">Experience</h2>
               </div>
               <div className="tab-contents-exp">
-                <i className="fa-solid fa-laptop"></i>
-                <p>01/2023 - Present</p>
-                <h4>Freelance Front End Web Developer</h4>
-                <li>
-                  Worked with diverse clients delivering fast and cost-effective solutions,
-                  increasing average client sales by 30–40% and achieving 95% satisfaction.
-                </li>
+                <section>
+                  <i className="fa-solid fa-laptop" role="img" aria-label="Freelance" />
+                  <p>01/2023 - Present</p>
+                  <h4>Freelance Front End Web Developer</h4>
+                  <ul>
+                    <li>
+                      Delivered fast and cost-effective solutions, increasing average client
+                      sales by 30–40% and achieving 95% satisfaction.
+                    </li>
+                  </ul>
+                </section>
 
-                <br />
-                <i className="fa-solid fa-briefcase"></i>
-                <p>11/2024 - Present</p>
-                <h4>Business Administrator & Personal Asst. – Bellzito ENT</h4>
-                <li>
-                  Enhanced operational efficiency by 20% through consistent, quality project
-                  management and execution.
-                </li>
+                <section>
+                  <i className="fa-solid fa-briefcase" role="img" aria-label="Business Admin" />
+                  <p>11/2024 - Present</p>
+                  <h4>Business Administrator & Personal Asst. – Bellzito ENT</h4>
+                  <ul>
+                    <li>
+                      Boosted efficiency by 20% through consistent, quality project execution.
+                    </li>
+                  </ul>
+                </section>
 
-                <br />
-                <i className="fa-solid fa-briefcase"></i>
-                <p>Remote</p>
-                <h4>Front End Developer</h4>
-                <li>Completed projects following standards and design systems.</li>
-                <li>Suggested and implemented performance improvements.</li>
-                <li>Kept up-to-date via courses and conferences.</li>
+                <section>
+                  <i className="fa-solid fa-briefcase" role="img" aria-label="Developer" />
+                  <p>Remote</p>
+                  <h4>Front End Developer</h4>
+                  <ul>
+                    <li>Completed projects following standards and design systems.</li>
+                    <li>Suggested and implemented performance improvements.</li>
+                    <li>Stayed current via courses and conferences.</li>
+                  </ul>
+                </section>
               </div>
             </>
           )}
