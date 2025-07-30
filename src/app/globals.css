@@ -1502,16 +1502,6 @@ outline: none;
   margin: 0;
 }
 
-.tab-contents-exp i {
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 50%;
-  position: absolute;
-  right: 98.4%;
-  color: rgba(0, 0, 0, 0.16);
-  display: none;
-}
-
 .tools {
   list-style: none;
 }
@@ -1519,7 +1509,8 @@ outline: none;
 .techstack{
   display: inline-block;
 transition: transform 0.5s ease-in-out;
-  align-items: center
+  align-items: center;
+  margin: auto;
 }
 
 .techstack:hover {
@@ -1527,9 +1518,14 @@ transition: transform 0.5s ease-in-out;
 }
 
 .techstack svg{
-  background: transparent;
+ background: transparent;
   margin: auto;
   }
+
+.techstack .svg{
+ background: transparent;
+  margin: auto;
+}
 
 .techstack p {
   color: var(--text-color);
@@ -1544,14 +1540,31 @@ transition: transform 0.5s ease-in-out;
   list-style: none;
 }
 
-.tab-content {
+/*.tab-content {
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
-
+ 
+ 
 .tab-content.fade-in {
   opacity: 1;
+}*/
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out both;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /*services*/
 .services-list {
