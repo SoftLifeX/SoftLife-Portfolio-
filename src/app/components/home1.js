@@ -47,6 +47,7 @@ const router = useTransitionRouter();
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
+         mask: "lines",
         });
 
         const paragraphSplit = new SplitText(".subtitle", {
@@ -68,18 +69,19 @@ const router = useTransitionRouter();
          opacity: 0,
          yPercent: 25,
          duration: 0.4,
-         ease: "back.out",
+         ease: "back",
          stagger: 0.02,
          delay: 2.1,
         });
 
         gsap.from(paragraphSplit.lines, {
-         opacity: 0,
-         yPercent: 25,
-         duration: 0.6,
-         ease: "back.out",
-         stagger: 0.04,
-         delay: 2.9,
+        rotationX: -100,
+        transformOrigin: "50% 50% -160px",
+        opacity: 0,
+        duration: 0.6, 
+        ease: "back",
+        stagger: 0.25,
+        delay: 2.9,
         });
 
         gsap.from(".scale", {
