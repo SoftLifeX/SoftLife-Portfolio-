@@ -23,6 +23,7 @@ useGSAP(() => {
       smooth: 2,
       effects: true,
       smoothTouch: 0.1,
+      normalizeScroll: true
     });
   });
 
