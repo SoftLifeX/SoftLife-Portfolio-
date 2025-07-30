@@ -92,19 +92,19 @@ function Home2() {
         <div className="portfolio">
           <div className="container">
             <h1 className="quota">
-              CREATIVITY ISN'T JUST A SKILL <br /> 
+              Creativity Isn't Just A Skill <br /> 
             </h1>
         <h1 className="markerbound2">
           <div className="marker2">
            <span className="marker-wrap2">
              <span className="marker-highlight2"> 
-              • IT'S A LIFESTYLE •
+               ‎‎ It's A Lifestyle  ‎‎
              </span>
            </span>
            </div>
          </h1>
          <h1 className="quota2">
-           WE LIVE IT
+           We Live It!
          </h1>
            <div className="curveCon">
              <CurveArrow />
@@ -121,7 +121,7 @@ function Home2() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.car} alt="Car Culture" title="Car Culture"/>
+                 src={images.car} alt="Car Culture" data-title="Car Culture"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>Car Culture</p>
@@ -135,7 +135,7 @@ function Home2() {
               <div className="work">
                 <Image
                  priority={true}
-                 src={images.jewlers} alt="jewlers" title="Jewlers"/>
+                 src={images.jewlers} alt="jewlers" data-title="Jewlers"/>
                 <div className="layer">
                   <div className="work-info">  
                   <p>Jewlers</p>
