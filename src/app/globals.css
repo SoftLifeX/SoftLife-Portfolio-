@@ -1496,6 +1496,8 @@ outline: none;
 
 .tab-contents-exp ul li {
   padding-left: 0.6rem;
+  list-style: none;
+
 }
 
 .tab-contents-exp p {
@@ -1510,7 +1512,6 @@ outline: none;
   display: inline-block;
 transition: transform 0.5s ease-in-out;
   align-items: center;
-  margin: auto;
 }
 
 .techstack:hover {
@@ -1518,11 +1519,6 @@ transition: transform 0.5s ease-in-out;
 }
 
 .techstack svg{
- background: transparent;
-  margin: auto;
-  }
-
-.techstack .svg{
  background: transparent;
   margin: auto;
 }
