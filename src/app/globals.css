@@ -495,7 +495,7 @@ section {
   border-radius: 50%;
   background-color: var(--text-color);
   scale: 1.6;
-  padding: 0.3rem
+  padding: 0.3rem;
   mix-blend-mode: difference;
 }
 
