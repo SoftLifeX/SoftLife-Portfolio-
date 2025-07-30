@@ -63,7 +63,7 @@ function About2() {
         </div>
 
         {/* Tab content */}
-        <div className="tab-content fade-in" key={isTools ? "tools" : "experience"}>
+        <div className="tab-contents fade-in" key={isTools ? "tools" : "experience"}>
           {isTools ? (
             <>
               <div className="h2boundary">
