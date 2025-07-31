@@ -557,10 +557,12 @@ h1 {
 
 .title{
   will-change: transform;
+  opacity: 0;
 }
 
 .subtitle{
   will-change: transform;
+  opacity: 0;
 }
 
  h3{
