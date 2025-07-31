@@ -103,7 +103,7 @@ export default function Reviews() {
     <section className="reviews-section" id="reviews" ref={stickySectionRef}>
      <h5>Top Reviews</h5>
       <div className="sticky-header" ref={stickyHeaderRef}>
-        <h1 className="header-text">What Our Clients Our Saying!</h1>
+        <h2 className="header-text">What Our Clients Our Saying!</h2>
       </div>
 
       {reviewItems.map((review, index) => (
