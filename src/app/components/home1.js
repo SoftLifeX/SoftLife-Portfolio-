@@ -1,5 +1,5 @@
 //'use client'
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
@@ -48,6 +48,7 @@ const router = useTransitionRouter();
  useGSAP(() => {
    document.fonts.ready.then(() => {
   gsap.set(".title", { opacity: 1 });
+  }, []);
      
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
@@ -65,10 +66,10 @@ const router = useTransitionRouter();
       });
     }
   });
- })  
  
    document.fonts.ready.then(() => {
   gsap.set(".subtitle", { opacity: 1 });
+   }, []);
          const paragraphSplit = new SplitText(".subtitle", {
          type: "lines",
          mask: "lines",
@@ -86,7 +87,6 @@ const router = useTransitionRouter();
       });
     }
   });
-})
 
         
 
