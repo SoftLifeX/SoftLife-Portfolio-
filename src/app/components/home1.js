@@ -45,22 +45,18 @@ const router = useTransitionRouter();
 
 //splitText
   document.fonts.ready.then(() => {
-  gsap.set(".title", { opacity: 1 });
-
-  document.fonts.ready.then(() => {
-  gsap.set(".subtitle", { opacity: 1 });
+  gsap.set(".title, .subtitle", { opacity: 1 });
     
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
-         linesClass: 'lineParent',
           autoSplit: true,
          onSplit: (self) => {
 
         return gsap.from(self.chars, {
         opacity: 0,
-         yPercent: 25,
+         yPercent: 100,
          duration: 0.4,
          ease: "back",
          stagger: 0.04,
@@ -68,11 +64,11 @@ const router = useTransitionRouter();
       });
     }
   });
+ 
 
          const paragraphSplit = new SplitText(".subtitle", {
          type: "lines",
          mask: "lines",
-         linesClass: 'lineParent',
           autoSplit: true,
          onSplit: (self) => {
 
@@ -108,6 +104,7 @@ const router = useTransitionRouter();
          delay: 3.3,
         });
    }, []);
+  })
 
 
 //sliding text
