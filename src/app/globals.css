@@ -92,10 +92,6 @@
   transform-origin: center;
 }
 
-.scale{
-  width: fit-content;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -513,6 +509,7 @@ button {
 
 .scale{
   will-change: transform;
+  width: fit-content;
 }
 
 h2 {
@@ -923,7 +920,7 @@ outline: none;
 
 .h2Container {
   position: absolute;
-  width: 35rem;
+  width: 55rem;
   height: 6.5rem;
   top: 65svh;
   left: 10svw;
@@ -974,9 +971,9 @@ outline: none;
 
 .homepage h2 {
   font-family: 'play', serif;
-  font-weight: normal;
+  font-weight: bold;
   color: var(--text-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0.2rem 0;
   margin-top: 0;
   position: relative;
@@ -984,7 +981,7 @@ outline: none;
 
 .homepage div h2 span {
   font-family: 'play', serif;
-  font-weight: normal;
+  font-weight: bold;
   margin-top: 0;
   position: relative;
   color: var(--base-color);
@@ -1166,7 +1163,7 @@ outline: none;
 }
 
 /*.portfolio .blocktext {
-  color: var(--base-color);
+  color: var(--base-color); 
   background: linear-gradient(to right, var(--tertiary-text), var(--text-color));
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
@@ -1284,7 +1281,6 @@ outline: none;
   position: relative;
   margin: 0 1rem;
   color: black;
-  font-family: 'time', serif;
   padding: 0.2rem;
 }
 
@@ -1378,7 +1374,7 @@ outline: none;
 }
 #venntext{
   fill: var(--text-color);
-  font-family: 'time', serif;
+  font-family: 'pop', serif;
 }
 
 .about-col-1 h1 {
@@ -1786,7 +1782,7 @@ clip-path: circle(0% at 50% 50%);
 }
 
   .contact h2 {
-  font-family: 'time';
+  font-family: 'pop';
   }
 
 .contact-left {
