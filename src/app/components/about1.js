@@ -56,6 +56,10 @@ function About1() {
     }
   });
 
+   const subSplit = new SplitText(".subtitle", {
+         type: "chars, words, lines",
+        });
+
         gsap.from(subSplit.chars, {
          opacity: 0,
          x: 150,
