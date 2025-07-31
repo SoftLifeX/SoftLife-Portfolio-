@@ -44,16 +44,51 @@ const router = useTransitionRouter();
 
 
 //splitText
+  document.fonts.ready.then(() => {
+  gsap.set(".title", { opacity: 1 });
+
+  document.fonts.ready.then(() => {
+  gsap.set(".subtitle", { opacity: 1 });
+    
  useGSAP(() => {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
          linesClass: 'lineParent',
-        });
+          autoSplit: true,
+         onSplit: (self) => {
 
-        const paragraphSplit = new SplitText(".subtitle", {
+        return gsap.from(self.chars, {
+        opacity: 0,
+         yPercent: 25,
+         duration: 0.4,
+         ease: "back",
+         stagger: 0.04,
+         delay: 2.1,
+      });
+    }
+  });
+
+         const paragraphSplit = new SplitText(".subtitle", {
          type: "lines",
-        });
+         mask: "lines",
+         linesClass: 'lineParent',
+          autoSplit: true,
+         onSplit: (self) => {
+
+        return gsap.from(self.lines, {
+        rotationX: -100,
+        transformOrigin: "50% 50% -160px",
+        opacity: 0,
+        duration: 0.6, 
+        ease: "power3",
+        stagger: 0.25,
+        delay: 2.9,
+      });
+    }
+  });
+
+        
 
         // Apply text-gradient class once before animating
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
@@ -64,25 +99,6 @@ const router = useTransitionRouter();
          duration: 0.4,
          ease: "circ.out",
          delay: 1.8,
-        });
-   
-        gsap.from(heroSplit.chars, {
-         opacity: 0,
-         yPercent: 25,
-         duration: 0.4,
-         ease: "back",
-         stagger: 0.04,
-         delay: 2.1,
-        });
-
-        gsap.from(paragraphSplit.lines, {
-        rotationX: -100,
-        transformOrigin: "50% 50% -160px",
-        opacity: 0,
-        duration: 0.6, 
-        ease: "power3",
-        stagger: 0.25,
-        delay: 2.9,
         });
 
         gsap.from(".scale", {
