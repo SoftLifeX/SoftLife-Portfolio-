@@ -35,29 +35,26 @@ const pageAnimation = () => {
 function About1() {
     //splitText
  useGSAP(() => {
-        const heroSplit = new SplitText(".title", {
+        document.fonts.ready.then(() => {
+  gsap.set(".title", { opacity: 1 });
+  }, []);
+
+   const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
-         smartWrap: true,
-         linesClass: 'lineParent',
-        });
+          autoSplit: true,
+         onSplit: (self) => {
 
-        const subSplit = new SplitText(".subtitle", {
-         type: "chars, words, lines",
-        });
-
-
-        // Apply text-gradient class once before animating
-        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-
-        gsap.from(heroSplit.chars, {
-         opacity: 0,
-         yPercent: 25,
+        return gsap.from(self.chars, {
+        opacity: 0,
+         yPercent: 100,
          duration: 0.4,
          ease: "back",
          stagger: 0.04,
          delay: 2,
-        });
+      });
+    }
+  });
 
         gsap.from(subSplit.chars, {
          opacity: 0,
