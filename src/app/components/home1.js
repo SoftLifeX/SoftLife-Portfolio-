@@ -58,10 +58,10 @@ const router = useTransitionRouter();
 
         return gsap.from(self.chars, {
         opacity: 0,
-         yPercent: 100,
+         yPercent: 30,
          duration: 0.4,
          ease: "back",
-         stagger: 0.04,
+         stagger: 0.02,
          delay: 2.1,
       });
     }
@@ -180,8 +180,8 @@ const router = useTransitionRouter();
       
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 className="slidertext" ref={firstText}>Softlifeメ • Software Engineer & Designer</h1>
-          <h1 className="slidertext" ref={secondText}>Softlifeメ • Software Engineer & Designer</h1>
+          <h1 className="slidertext" ref={firstText}>SoftLife X • Software Engineer & Designer</h1>
+          <h1 className="slidertext" ref={secondText}>SoftLife X • Software Engineer & Designer</h1>
         </div>
       </div>
         <div className="btnContainer scale">
