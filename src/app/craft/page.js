@@ -9,6 +9,7 @@ import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import Craft1 from "../components/craft1";
 import Craft2 from "../components/craft2";
+import Reviews from "../components/reviews";
 import { useRevealer } from "../components/hooks/useRevealer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -32,6 +33,7 @@ const pathName = usePathname();
       <div className="revealer" />
       <Craft1 />
       <Craft2 />
+      <Reviews />
     </div>
   </div>
   );
