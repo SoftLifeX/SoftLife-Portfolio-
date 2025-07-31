@@ -43,6 +43,9 @@ function Contactform() {
 
   //splitText
  useGSAP(() => {
+   document.fonts.ready.then(() => {
+  gsap.set(".title", { opacity: 1 });
+  }, []);
 
    const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
