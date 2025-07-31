@@ -47,7 +47,7 @@ function About1() {
 
         return gsap.from(self.chars, {
         opacity: 0,
-         yPercent: 100,
+         yPercent: 25,
          duration: 0.4,
          ease: "back",
          stagger: 0.04,
