@@ -16,6 +16,12 @@
 }
 
 @font-face {
+  font-family: 'pop';
+  font-weight: normal; 
+  src: url(assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
   font-family: 'penna';
   src: url(assets/fonts/penna.otf);
 }
@@ -138,7 +144,7 @@ body {
   background-repeat: no-repeat;
 background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'time', serif;
+  font-family: 'pop', serif;
 }
 
 body::-webkit-scrollbar {
@@ -502,8 +508,13 @@ section {
 
 /*groups*/
 button {
-  font-family: 'time', serif;
+  font-family: 'pop', serif;
 }
+
+.scale{
+  will-change: transform;
+}
+
 h2 {
   font-size: 1.3rem;
   margin: 1.87rem;
@@ -520,7 +531,7 @@ h2 {
 .marker-highlighter{
   position:relative;
   color: var(--text-color);
-  margin: 1rem;
+  margin: 1.87rem 1rem;
 }
 
 .marker-highlighter::after {
@@ -545,20 +556,13 @@ h1 {
 }
 
 .title{
-  font-kerning: none;
-  line-height: 1.0606060606em;
+  will-change: transform;
 }
 
-
-
-.lineParent {
-  overflow: hidden;
-  font-kerning: none;
-  line-height: inherit;
-  padding-bottom: 5px;
-  margin-bottom: -5px;
+.subtitle{
+  will-change: transform;
 }
-    
+
  h3{
   font-size: 1.87rem;
   margin: 1.56rem;
