@@ -43,11 +43,23 @@ function Contactform() {
 
   //splitText
  useGSAP(() => {
-        const heroSplit = new SplitText(".title", {
+
+   const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
-         linesClass: 'lineParent',
-        });
+          autoSplit: true,
+         onSplit: (self) => {
+
+        return gsap.from(self.chars, {
+        opacity: 0,
+         yPercent: 25,
+         duration: 0.4,
+         ease: "back",
+         stagger: 0.04,
+         delay: 2,
+      });
+    }
+  });
 
         const subSplit = new SplitText(".subtitle", {
          type: "chars, words, lines",
@@ -56,15 +68,6 @@ function Contactform() {
 
         // Apply text-gradient class once before animating
         heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-
-        gsap.from(heroSplit.chars, {
-         opacity: 0,
-         yPercent: 25,
-         duration: 0.4,
-         ease: "back.out",
-         stagger: 0.04,
-         delay: 2,
-        });
 
         gsap.from(subSplit.chars, {
          opacity: 0,
