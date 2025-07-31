@@ -47,6 +47,10 @@ function Contactform() {
   gsap.set(".title", { opacity: 1 });
   }, []);
 
+   document.fonts.ready.then(() => {
+  gsap.set(".subtitle", { opacity: 1 });
+  }, []);
+
    const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
