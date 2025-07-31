@@ -12,24 +12,31 @@ import Link from "next/link";
 function Craft1() {
     //splitText
  useGSAP(() => {
+        document.fonts.ready.then(() => {
+  gsap.set(".title", { opacity: 1 });
+  }, []);
+     
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
-         linesClass: 'lineParent',
          mask: "lines",
-        });
+          autoSplit: true,
+         onSplit: (self) => {
 
-
-        // Apply text-gradient class once before animating
-        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-
-        gsap.from(heroSplit.chars, {
-         opacity: 0,
+        return gsap.from(self.chars, {
+        opacity: 0,
          yPercent: 25,
          duration: 0.4,
          ease: "back",
          stagger: 0.04,
          delay: 2,
-        });
+      });
+    }
+  });
+
+        // Apply text-gradient class once before animating
+        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+
+        
    }, []);
 
   const [action,  setAction] = useState("Project");
