@@ -1,4 +1,4 @@
-import { Icons } from "./svg"; 
+import { Icons } from "../svg"; 
 
 export const reviewItems = [
   {
