@@ -549,9 +549,9 @@ h1 {
   cursor: text;
   font-family: 'tan', serif;
   font-weight: normal;
-  background-image: linear-gradient( var(--text-color), gray);
-    color: transparent;
-    background-clip: text;
+  background: -webkit-linear-gradient(var(--text-color), #ababab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title{
