@@ -1,31 +1,10 @@
 import React, { useState } from 'react';
-import { Icons } from "./svg"; // uses memoized icons
+import { techStack } from "./constants";
 
-function About2() {
+function Stacks() {
   const [isTools, setIsTools] = useState(true);
 
-  const techStack = [
-    { icon: <Icons.Html />, name: "HTML" },
-    { icon: <Icons.Css />, name: "CSS3" },
-    { icon: <Icons.Bootstrap />, name: "Bootstrap" },
-    { icon: <Icons.Tailwind />, name: "Tailwind" },
-    { icon: <Icons.Sass />, name: "Sass" },
-    { icon: <Icons.Express />, name: "Express.js" },
-    { icon: <Icons.Javascript />, name: "JavaScript" },
-    { icon: <Icons.Vue />, name: "Vue.js" },
-    { icon: <Icons.Nodejs />, name: "Node.js" },
-    { icon: <Icons.Reacticon />, name: "React" },
-    { icon: <Icons.Framer />, name: "Framer" },
-    { icon: <Icons.Gitlab />, name: "Gitlab" },
-    { icon: <Icons.Reacticon />, name: "React Native" },
-    { icon: <Icons.Nextjs />, name: "Next.js" },
-    { icon: <Icons.Git />, name: "Git" },
-    { icon: <Icons.Bitbucket />, name: "Bitbucket" },
-    { icon: <Icons.Figma />, name: "Figma" },
-    { icon: <Icons.Flutter />, name: "Flutter" },
-    { icon: <Icons.Typescript />, name: "TypeScript" },
-  ];
-
+  
   return (
     <section className="about2">
       <div id="stack">stack</div>
@@ -137,4 +116,4 @@ function About2() {
   );
 }
 
-export default About2;
+export default Stacks;
