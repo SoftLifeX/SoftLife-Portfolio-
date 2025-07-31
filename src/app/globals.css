@@ -1779,6 +1779,55 @@ clip-path: circle(0% at 50% 50%);
   scale: 1.05;
 }
 
+
+.reviews-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sticky-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.header-text {
+  font-size: 30vw;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'pop', sans-serif;
+  line-height: 1;
+}
+
+.review-card {
+  position: absolute;
+  left: 100%;
+  width: 250px;
+  border-radius: 10px;
+  padding: 20px;
+  will-change: transform;
+  z-index: 20;
+  opacity: 0;
+  background-color: transparent;
+  box-shadow: 0 0 0.10rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
+  color: var(--text-color);
+}
+
+.review-card h3{
+  padding-top: 2rem;
+}
+
+
+
 /*contact*/
 .contact h5 {
   padding-top: 4.12rem;
