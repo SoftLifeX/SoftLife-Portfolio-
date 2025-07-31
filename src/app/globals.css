@@ -549,9 +549,7 @@ h1 {
   cursor: text;
   font-family: 'tan', serif;
   font-weight: normal;
-  background: -webkit-linear-gradient(var(--text-color), #ababab);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-color);
 }
 
 .title{
@@ -952,13 +950,15 @@ outline: none;
 .slider {
   position: relative;
   white-space: nowrap;
-  background-image: linear-gradient(to right, var(--base-color) 10%, rgba(255, 0, 0, 0), var(--text-color) 90%);
+  background: -webkit-linear-gradient(to right, var(--base-color) 10%, transparent, var(--base-color) 90%);
 }
 
 .slidertext {
   position: relative;
   margin: 0;
-  color: var(--text-color);
+  background: -webkit-linear-gradient(var(--text-color), #ababab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 6rem;
   font-family: 'tan' , serif;
   padding-right: 3.12rem;
