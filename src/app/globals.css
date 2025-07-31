@@ -549,7 +549,7 @@ h1 {
   cursor: text;
   font-family: 'tan', serif;
   font-weight: normal;
-  background-image: linear-gradient(var(--text-color), gray);
+  background-image: linear-gradient( var(--text-color), gray);
     color: transparent;
     background-clip: text;
 }
@@ -952,7 +952,7 @@ outline: none;
 .slider {
   position: relative;
   white-space: nowrap;
-  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), background-image: linear-gradient(to right, var(--base-color) 10%, rgba(255, 0, 0, 0), var(--text-color) 90%);
+  background-image: linear-gradient(to right, var(--base-color) 10%, rgba(255, 0, 0, 0), var(--text-color) 90%);
 }
 
 .slidertext {
