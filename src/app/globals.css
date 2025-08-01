@@ -333,7 +333,7 @@ section {
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
   overflow: hidden;
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .home2 {
@@ -355,7 +355,7 @@ section {
   scale: 0.98;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .about2 {
@@ -380,7 +380,7 @@ section {
   scale: 0.98;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .craft2 {
@@ -397,9 +397,9 @@ section {
 
 .contactForm {
   scale: 0.98;
-  margin-top: 0;
-  position: relative;
-  top: -0.8rem;
+  padding-top: 0;
+  /*position: relative;
+  top: -0.8rem;*/
   }
 
 .top {
@@ -975,8 +975,8 @@ outline: none;
 
 .slidertext {
   position: relative;
-  margin: 3rem 0;
-  line-height: 2em;
+  margin: 0;
+  line-height: 2.5em;
   background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1097,7 +1097,7 @@ outline: none;
 }
 
 .marker2 {
-  margin-top: 0;
+  padding-top: 0;
   rotate: 5deg;
   position: relative;
   width: fit-content;
@@ -1165,7 +1165,6 @@ outline: none;
   padding-bottom: 0;
   padding-left: 1.5rem;
   font-family: 'pop', serif;
-  margin: 0;
 }
 
 .quota2{
@@ -1175,7 +1174,6 @@ outline: none;
   padding-left: 1.5rem;
   padding-top: 0;
   font-family: 'pop', serif;
-  margin: 0;
 }
 
 .markerbound2{
@@ -1403,11 +1401,6 @@ outline: none;
 #venntext{
   fill: var(--text-color);
   font-family: 'pop', serif;
-}
-
-.about-col-1 h1 {
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .about-col-1 {
@@ -2285,10 +2278,13 @@ form textarea {
     font-size: 3.5rem;
     margin-left:  0;
     margin-right:  0;
-    margin-top:  1rem;
+    margin-top:  2rem;
     margin-bottom:  0;
   }
 
+  .about-col-1 p {
+  text-align: center;
+  }
 
   .layer {
     height: 100%;
@@ -2302,6 +2298,7 @@ form textarea {
   .home2 {
     scale: 0.92;
   }
+  
 
   .PageOut1 {
     position: fixed;
