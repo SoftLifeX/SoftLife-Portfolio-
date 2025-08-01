@@ -49,7 +49,7 @@ function Contact() {
         <div className="contact">
           <div className="container">
              <h1>
-              Let's Collaborate
+              Let's Build Together!
             </h1>
             <Magnetic>
             <a href="mailto:daniel.c.daniel.dev@gmail.com" target="_blank" className="btn4">
@@ -111,3 +111,4 @@ function Contact() {
 }
 
 export default Contact
+
