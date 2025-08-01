@@ -86,11 +86,6 @@ document.fonts.ready.then(() => {
 
   const pathName = usePathname();
 
-const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
-
-  const words = ["Performance", "Meets" , "Aesthetics"];
-    
     return (
       <section className="about1">
         <div className="about">
@@ -98,25 +93,14 @@ const ref = useRef(null);
         What we're About? <Lottie id="lottie3" loop={true} animationData={About} />
          </h5>
           <h1 className="title">
-           Performance meets Aesthetics
+           Function meets Finesse
           </h1>
         <div className="h2boundary">
           <h2 className="marker-highlighter">Meet The Mind Behind The Code</h2>
         </div> 
           <div className="row">
             <div className="about-col-1">
-              <motion.div
-               className="aboutImg"
-                initial={{ opacity: 0, scale: 0 }}
-       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}>
-           <VennDiagram />
-    </motion.div>
-            </div>
-            <div className="about-col-2">
-              <div>
-             <p className="circle-sketch-highlight">
+              <p className="circle-sketch-highlight">
           An award-winning, detail-oriented web | mobile designer & software engineer with expertise in <b>JavaScript</b>, <b>TypeScript</b>, <b>React</b>, <b>Vue.js</b>, <b>Motion design</b>, <b>Figma</b>, <b>flutter</b>, <b>React Native</b> and <b>Next.js</b> as my major frame-work.
             <br/> I continously strive to be the finest version of myself, my workflow is no exception. 
                 {/* <br/> "As developers, we bridge the recess where tech meets standard" - Valhalla. 
@@ -126,6 +110,16 @@ const ref = useRef(null);
             <br/> I don't bite! :)
 
               </p>
+            </div>
+            <div className="about-col-2">
+              <motion.div
+               className="aboutImg"
+                initial={{ opacity: 0, scale: 0 }}
+       whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+       transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}>
+           <VennDiagram />
+    </motion.div>
                     
                 <Magnetic>
                 <Link 
@@ -149,4 +143,5 @@ const ref = useRef(null);
 }
 
 export default About1
+
 
