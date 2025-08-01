@@ -545,6 +545,7 @@ h1 {
   font-size: 5rem;
   text-align: left;
   margin: 0 2rem;
+  margin-top: 2rem;
   text-decoration: none;
   cursor: text;
   font-family: 'pop', serif;
@@ -970,8 +971,8 @@ outline: none;
 
 .slidertext {
   position: relative;
-  margin: 2rem 0;
-  line-height: 1.1em;
+  margin: 3rem 0;
+  line-height: 2em;
   background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
