@@ -551,15 +551,15 @@ h1 {
   font-weight: 600;
   /*font-weight: normal*/
   color: var(--text-color);
-  line-height: 1em;
+  line-height: 0.8em;
 }
 
 .lineParent {
   overflow: hidden;
   font-kerning: none;
   line-height: inherit;
-  padding-top: 5px;
-  margin-top: -5px;
+  padding-top: 10px;
+  margin-top: -10px;
 }
 
 .title{
@@ -570,6 +570,11 @@ h1 {
 .subtitle{
   will-change: transform;
   opacity: 0;
+}
+
+.introtitle{
+  will-change: transform;
+  opacity: 1;
 }
 
  h3{
@@ -965,7 +970,8 @@ outline: none;
 
 .slidertext {
   position: relative;
-  margin: 0;
+  margin: 2rem 0;
+  line-height: 1.1em;
   background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1805,6 +1811,7 @@ clip-path: circle(0% at 50% 50%);
 
 .martyQuote{
   margin: 1rem 1.87rem;
+  padding: 2rem 0;
 }
 
 .marty{
