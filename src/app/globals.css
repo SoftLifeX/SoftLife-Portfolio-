@@ -547,8 +547,9 @@ h1 {
   margin: 2rem;
   text-decoration: none;
   cursor: text;
-  font-family: 'tan', serif;
-  font-weight: normal;
+  font-family: 'pop', serif;
+  font-weight: 600;
+  /*font-weight: normal*/
   color: var(--text-color);
 }
 
@@ -959,7 +960,8 @@ outline: none;
   background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 6rem;
+  font-size: 30vw;
+  font-weight: 600;
   font-family: 'tan' , serif;
   padding-right: 3.12rem;
   cursor: text;
@@ -990,6 +992,9 @@ outline: none;
   color: var(--base-color);
 }
 
+.introtext{
+  perspective: 500px;
+}
 
 .typed {
   width: 100%;
@@ -1053,7 +1058,7 @@ outline: none;
   position: relative;
   width: fit-content;
   height: fit-content;
-  top: -0.3rem;
+  top: -0.5rem;
 }
 
 .marker-wrap{
@@ -1085,6 +1090,7 @@ outline: none;
   height: 100%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);  
 }
+
 .marker-highlight2{
   position: relative;
   color: var(--base-color);
@@ -1093,7 +1099,6 @@ outline: none;
   padding: 0.5rem 0.5rem;
   left: -1rem;
   font-family: 'play';
-  
 }
 
 /*.marker-highlight:before{
