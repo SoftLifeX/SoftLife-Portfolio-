@@ -93,10 +93,10 @@ document.fonts.ready.then(() => {
         What we're About? <Lottie id="lottie3" loop={true} animationData={About} />
          </h5>
           <h1 className="title">
-           Function meets Finesse
+           Fast. Fluid. Flawless
           </h1>
         <div className="h2boundary">
-          <h2 className="marker-highlighter">Not just build - Authored.</h2>
+          <h2 className="marker-highlighter">Not just built - Authored.</h2>
         </div> 
           <div className="row">
             <div className="about-col-1">
@@ -142,6 +142,7 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
 
