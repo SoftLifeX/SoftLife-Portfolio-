@@ -59,11 +59,11 @@ const router = useTransitionRouter();
         opacity: 0,
          duration: 0.4,
          ease: "power3",
+         delay: 2.1,
          stagger: {
          amount: 2.8,
           from: "random"
          }
-         delay: 2.1,
       });
     }
   });
@@ -213,5 +213,6 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
