@@ -110,8 +110,6 @@ export default function Reviews() {
         <h2 className="header-text">Top Reviews!</h2>
       </div>
 
-     <div className="review-list">
-
       {reviewItems.map((review, index) => (
         <div
           key={review.id}
@@ -123,7 +121,6 @@ export default function Reviews() {
           <p className="review-role">{review.role}</p>
         </div>
       ))}
-    </div>
     </section>
   );
 }
