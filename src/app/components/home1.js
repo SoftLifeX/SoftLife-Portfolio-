@@ -171,7 +171,7 @@ const router = useTransitionRouter();
       </span>
      </h2>
     </div>
-    <div className="subtitle">
+    <div className="subtitle introtext">
       Full-stack | Mobile <br/>
       Designer + Developer <br/>
       <WordShuffler/> 
@@ -212,3 +212,4 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
