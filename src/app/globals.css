@@ -1790,6 +1790,16 @@ clip-path: circle(0% at 50% 50%);
   border: 0.06rem solid var(--border-color);
 }
 
+.martyQuote{
+  margin: 1rem 1.87rem;
+}
+
+.marty{
+  font-size: 0.8rem;
+  color: #ababab;
+  margin: 0 1rem;
+}
+
 .sticky-header {
   position: absolute;
   top: 0;
@@ -1814,6 +1824,7 @@ clip-path: circle(0% at 50% 50%);
   position: absolute;
   left: 100%;
   border-radius: 10px;
+  width: 400px
   padding: 1.2rem;
   will-change: transform;
   z-index: 20;
@@ -1826,6 +1837,7 @@ clip-path: circle(0% at 50% 50%);
 
 .review-card h3{
   padding-top: 2rem;
+  font-weight: normal;
 }
 
 
