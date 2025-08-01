@@ -19,6 +19,7 @@ function Craft1() {
         const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
+        linesClass: 'lineParent',
           autoSplit: true,
          onSplit: (self) => {
 
@@ -157,3 +158,4 @@ function Craft1() {
 }
 
 export default Craft1
+
