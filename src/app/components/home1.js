@@ -50,18 +50,19 @@ const router = useTransitionRouter();
   gsap.set(".title", { opacity: 1 });
   }, []);
      
-        const heroSplit = new SplitText(".title", {
+        const heroSplit = new SplitText(".introtitle", {
          type: "chars, words, lines",
-         mask: "lines",
           autoSplit: true,
          onSplit: (self) => {
 
         return gsap.from(self.chars, {
         opacity: 0,
-         yPercent: 30,
          duration: 0.4,
-         ease: "back",
-         stagger: 0.02,
+         ease: "power3",
+         stagger: {
+         amount: 2.8,
+          from: "random"
+         }
          delay: 2.1,
       });
     }
@@ -83,7 +84,7 @@ const router = useTransitionRouter();
         duration: 0.6, 
         ease: "power3",
         stagger: 0.25,
-        delay: 2.9,
+        delay: 2.7,
       });
     }
   });
@@ -105,7 +106,7 @@ const router = useTransitionRouter();
          scale: 0,
          duration: 0.4,
          ease: "circ.out",
-         delay: 3.3,
+         delay: 3.1,
         });
    }, []);
 
@@ -159,7 +160,7 @@ const router = useTransitionRouter();
      </div>
     </div>
     <div className="h2Container">
-     <h2 className="title">
+     <h2 className="introtitle">
        Daniel c. Daniel
      </h2>
     <div className="marker">
@@ -212,4 +213,5 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
