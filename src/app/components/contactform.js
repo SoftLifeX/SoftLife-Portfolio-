@@ -54,6 +54,7 @@ function Contactform() {
    const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
+         linesClass: 'lineParent',
           autoSplit: true,
          onSplit: (self) => {
 
@@ -246,3 +247,4 @@ function Contactform() {
 }
 
 export default Contactform
+
