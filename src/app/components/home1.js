@@ -56,10 +56,10 @@ const router = useTransitionRouter();
          onSplit: (self) => {
 
         return gsap.from(self.chars, {
-        opacity: 0,
+        opacity: 0.5,
          duration: 0.4,
          ease: "power3",
-         delay: 2.1,
+         delay: 1.8,
          stagger: {
          amount: 2.8,
           from: "random"
@@ -213,6 +213,7 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
 
