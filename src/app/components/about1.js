@@ -46,6 +46,7 @@ document.fonts.ready.then(() => {
    const heroSplit = new SplitText(".title", {
          type: "chars, words, lines",
          mask: "lines",
+         linesClass: 'lineParent',
           autoSplit: true,
          onSplit: (self) => {
 
@@ -148,3 +149,4 @@ const ref = useRef(null);
 }
 
 export default About1
+
