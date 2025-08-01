@@ -200,7 +200,7 @@ function Contactform() {
                 </div>
                 <Link 
               href="/" 
-              className="btn2" 
+              className="btn4" 
               onClick={(e) => {
               e.preventDefault();
               router.push("/", {
@@ -247,4 +247,5 @@ function Contactform() {
 }
 
 export default Contactform
+
 
