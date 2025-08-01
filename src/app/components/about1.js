@@ -96,7 +96,7 @@ document.fonts.ready.then(() => {
            Function meets Finesse
           </h1>
         <div className="h2boundary">
-          <h2 className="marker-highlighter">Meet The Mind Behind The Code</h2>
+          <h2 className="marker-highlighter">Not just build - Authored.</h2>
         </div> 
           <div className="row">
             <div className="about-col-1">
@@ -135,7 +135,6 @@ document.fonts.ready.then(() => {
             </Link>
                 </Magnetic>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -143,5 +142,6 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
