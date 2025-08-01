@@ -968,7 +968,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 35svh;
+  top: 30svh;
 }
 
 .slider {
@@ -981,9 +981,10 @@ outline: none;
   position: relative;
   margin: 0;
   line-height: 2.5em;
-  background: -webkit-linear-gradient(var(--text-color), #ababab);
+  /*background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
+  color: var(--text-color);
   font-size: 30vw;
   font-weight: 600;
   font-family: 'pop' , serif;
@@ -1123,6 +1124,7 @@ outline: none;
   padding: 0.5rem 0.5rem;
   left: -1rem;
   font-family: 'pop';
+  margin-top: 2rem;
 }
 
 /*.marker-highlight:before{
@@ -1193,6 +1195,7 @@ outline: none;
 .portfolio h1 {
   padding: 3rem;
   margin-top: 2rem;
+  line-height: 1.2em;
 }
 
 /*.portfolio .blocktext {
