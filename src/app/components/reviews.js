@@ -102,7 +102,7 @@ export default function Reviews() {
   return (
     <section className="reviews-section" id="reviews" ref={stickySectionRef}>
      <h5>What Our Clients Are Saying!</h5>
-      <p>Brand is not what you say.
+      <p className="martyQuote">Brand is not what you say.
        <br /> It's what they say
        <br /> <span className="marty">- Marty Neumeier</span>
     </p>
