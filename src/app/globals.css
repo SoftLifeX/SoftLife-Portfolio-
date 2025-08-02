@@ -1567,6 +1567,8 @@ outline: none;
   display: inline-block;
 transition: transform 0.5s ease-in-out;
   align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
 }
 
 .techstack:hover {
@@ -1575,7 +1577,6 @@ transition: transform 0.5s ease-in-out;
 
 .techstack svg{
  background: transparent;
-  margin: auto;
 }
 
 .techstack p {
@@ -1584,7 +1585,6 @@ transition: transform 0.5s ease-in-out;
   list-style: none;
   transition: 0.5s ease-in-out;
   text-align: center;
-  margin: 0.6rem 0;
 }
 
 
