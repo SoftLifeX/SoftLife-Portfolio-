@@ -1,4 +1,54 @@
 import { Icons } from "../svg"; 
+import { images } from "@/app/images/images";
+
+
+export const project = [
+    {
+        id: 1,
+        title: "Ochi",
+        img: ochi,
+        color: "#cdea68",
+        href: "https://ochi-website-clone.vercel.app/"
+
+    },
+    {
+        id: 2,
+        title: "Github",
+        img: github,
+        color: "#0C1015",
+        href: "https://github-landing-page-nu.vercel.app/"
+
+    },
+    {
+        id: 3,
+        title: "SupaDupa",
+        img: supadupa,
+        color: "#163200",
+        href: "https://supadupa-website-clone-by-devwithzain.vercel.app/"
+    },
+    {
+        id: 4,
+        title: "Flow Party",
+        img: flow,
+        color: "#B3EB16",
+        href: "https://flowparty-website-clone-by-devwithzain.vercel.app/"
+    },
+    {
+        id: 5,
+        title: "Metaverse",
+        img: metaverse,
+        color: "#1A232E",
+        href: "https://metaverse-landings-page.vercel.app/"
+    },
+    {
+        id: 6,
+        title: "LightSass",
+        img: lightsass,
+        color: "#0D1EA2",
+        href: "https://light-sass-landing-page-devwithzain.vercel.app/"
+    },
+];
+
 
 export const reviewItems = [
   {
