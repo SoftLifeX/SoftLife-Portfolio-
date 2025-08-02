@@ -7,7 +7,7 @@ export function initSmoother() {
   if (!smoother) {
     gsap.registerPlugin(ScrollSmoother);
     smoother = ScrollSmoother.create({
-      smooth: 1,
+      smooth: 2,
       effects: true,
       wrapper: '#smooth-wrapper',
       content: '#smooth-content',
