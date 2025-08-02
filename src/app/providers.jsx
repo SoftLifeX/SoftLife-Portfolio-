@@ -7,7 +7,9 @@ import {useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "./Preloader"
 import StickyCursor from "./components/stickyCursor"
 import CustomCursor from "./components/CustomCursor"
-
+import InitScrollSmoother from './components/InitScrollSmoother';
+import ScrollToTopOnRouteChange from './components/ScrollToTopOnRouteChange';
+import ScrollRestoration from './components/ScrollRestoration';
 
 
 
@@ -32,9 +34,16 @@ export function Providers({ children }) {
 
     return (
 <ThemeProvider defaultTheme='system' enableSystem>
+  <InitScrollSmoother />
+  <ScrollRestoration />
+  <ScrollToTopOnRouteChange />
  <CustomCursor/>
  <Header />
-  {children}
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      {children}
+    </div>
+  </div>
 </ThemeProvider>
  )
 }
