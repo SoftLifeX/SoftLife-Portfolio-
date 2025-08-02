@@ -335,6 +335,8 @@ section {
   overflow: hidden;
   padding-top: 0;
   margin-top: 0;
+  position: relative;
+  top: -0.1rem;
 }
 
 .home2 {
@@ -358,6 +360,8 @@ section {
   border: 0.06rem solid var(--border-color);
   padding-top: 0;
   margin-top: 0;
+  position: relative;
+  top: -0.1rem;
 }
 
 .about2 {
@@ -384,6 +388,8 @@ section {
   border: 0.06rem solid var(--border-color);
   padding-top: 0;
   margin-top: 0;
+  position: relative;
+  top: -0.2rem;
 }
 
 .craft2 {
@@ -402,8 +408,8 @@ section {
   scale: 0.98;
   padding-top: 0;
   margin-top: 0;
-  /*position: relative;
-  top: -0.8rem;*/
+  position: relative;
+  top: -0.8rem;
   }
 
 .top {
@@ -558,17 +564,17 @@ h1 {
   font-weight: 600;
   /*font-weight: normal*/
   color: var(--text-color);
-  line-height: 0.8em;
+  line-height: 0.7em;
 }
 
 .lineParent {
   overflow: hidden;
   font-kerning: none;
   line-height: inherit;
-  padding-top: 15px;
-  margin-top: -15px;
-  padding-bottom: 15px;
-  margin-bottom: -15px;
+  padding-top: 20px;
+  margin-top: -20px;
+  padding-bottom: 20px;
+  margin-bottom: -20px;
 }
 
 .title{
@@ -1125,6 +1131,7 @@ outline: none;
   left: -1rem;
   font-family: 'pop';
   margin-top: 2rem;
+  line-height: 1.2em;
 }
 
 /*.marker-highlight:before{
@@ -1172,6 +1179,7 @@ outline: none;
   padding-bottom: 0;
   padding-left: 1.5rem;
   font-family: 'pop', serif;
+  line-height: 1.2em;
 }
 
 .quota2{
@@ -1182,6 +1190,7 @@ outline: none;
   padding-top: 0;
   margin-top: 2rem;
   font-family: 'pop', serif;
+  line-height: 1.2em;
 }
 
 .markerbound2{
@@ -1195,7 +1204,6 @@ outline: none;
 .portfolio h1 {
   padding: 3rem;
   margin-top: 2rem;
-  line-height: 1.2em;
 }
 
 /*.portfolio .blocktext {
@@ -1576,6 +1584,7 @@ transition: transform 0.5s ease-in-out;
   list-style: none;
   transition: 0.5s ease-in-out;
   text-align: center;
+  margin: 0.6rem 0;
 }
 
 
