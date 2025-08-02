@@ -20,13 +20,6 @@ useRevealer();
 
 const pathName = usePathname();
      
-     {/* useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 2,
-      effects: true,
-      smoothTouch: 0.1,
-    });
-  });*/}
         
   return (
    <div>
@@ -39,6 +32,7 @@ const pathName = usePathname();
 };
 
 export default Craft;
+
 
 
 
