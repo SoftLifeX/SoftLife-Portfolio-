@@ -18,26 +18,24 @@ const About = () => {
 const pathName = usePathname();
 useRevealer();
      
- useGSAP(() => {
+     {/*useGSAP(() => {
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
       smoothTouch: 0.1,
     });
-  });
+  });*/}
      
   return (
     
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
+    <div>
       <div className="revealer" />
       <About1 />
       <About3 />
        <Contact />
     </div>
-  </div>
-   
   );
 };
 
 export default About;
+
