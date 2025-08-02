@@ -1560,34 +1560,42 @@ outline: none;
 }
 
 .tools {
-  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.techstack{
-  display: inline-block;
-transition: transform 0.5s ease-in-out;
-  align-items: center;
+.techstack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontally center icon and text */
   justify-content: center;
-  margin: 0.25rem;
+  width: 6rem;
+  height: 6rem;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+  cursor: pointer;
 }
 
 .techstack:hover {
   transform: translateY(-0.31rem);
 }
 
-.techstack svg{
- background: transparent;
- margin: auto;
+.techstack svg {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin: 0 auto 0.4rem auto; /* space between icon and text */
 }
 
 .techstack p {
   color: var(--text-color);
-  font-size: 1rem;
-  list-style: none;
-  transition: 0.5s ease-in-out;
-  text-align: center;
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.2;
 }
-
 
 .cert_cv {
   list-style: none;
