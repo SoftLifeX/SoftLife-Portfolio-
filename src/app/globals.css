@@ -473,7 +473,8 @@ section {
 }
 
 .navbar a:hover {
-  background: transparent;
+  background:  var(--tertiary-text);
+  color: var(--text-color);
   padding: 0.25rem 1rem;
   box-shadow: 0 0 0.10rem var(--tertiary-text);
 }
@@ -573,8 +574,8 @@ h1 {
   line-height: inherit;
   padding-top: 20px;
   margin-top: -20px;
-  padding-bottom: 20px;
-  margin-bottom: -20px;
+  padding-bottom: 25px;
+  margin-bottom: -25px;
 }
 
 .title{
@@ -740,7 +741,7 @@ z-index: -1;
 }
 
 .contact .bound {
-  margin: 1.87rem;
+  margin: 1.87rem 3.12rem;
 }
 
 .homepage .bound{
@@ -824,7 +825,7 @@ outline: none;
 /*homepage*/
 .homepage {
   align-content: center;
-  height: 100svh;
+  min-height: 100svh;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -832,7 +833,7 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 50svh;
+  top: 18svh;
   left: 15rem;
   rotate: 45deg;
   margin: 1.87rem auto;
@@ -952,13 +953,13 @@ outline: none;
   position: absolute;
   width: 55rem;
   height: 6.5rem;
-  top: 65svh;
+  top: 30svh;
   left: 10svw;
 }
 
 .btnContainer {
   position: absolute;
-  top: 85svh;
+  top: 55svh;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
@@ -966,7 +967,7 @@ outline: none;
 
 .btnContainer2 {
   position: absolute;
-  top: 85svh;
+  top: 55svh;
   width: fit-content;
   height: 6.5rem;
   left: 18svw;
@@ -974,7 +975,7 @@ outline: none;
 
 .sliderContainer {
   position: absolute;
-  top: 30svh;
+  top: 20svh;
 }
 
 .slider {
@@ -1871,7 +1872,7 @@ clip-path: circle(0% at 50% 50%);
   left: 100%;
   border-radius: 10px;
   width: 400px;
-  padding: 1.2rem;
+  padding: 0 1.2rem;
   will-change: transform;
   z-index: 20;
   opacity: 0;
@@ -2086,6 +2087,8 @@ form textarea {
     border: none;
     box-shadow: none;
     padding: 0;
+    background: transparent;
+    color: var(--base-color);
   }
   
   .navbar a::after {
@@ -2173,8 +2176,20 @@ form textarea {
 
   .btnContainer2 {
     left: 32svw;
+    top: 85svh;
   } 
 
+  .btnContainer{
+    top: 85svh;
+  }
+
+  .h2Container{
+    top: 55svh;
+  }
+
+  .pointer{
+    top: 40svh;
+  }
 
   .homepage {
     height: 100svh;
@@ -2261,6 +2276,8 @@ form textarea {
     border: none;
     box-shadow: none;
     padding: 0;
+    background: transparent;
+    color: var(--base-color);
   }
 
   .navbar a::after {
