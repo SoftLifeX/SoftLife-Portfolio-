@@ -18,22 +18,21 @@ useRevealer();
 
 const pathName = usePathname();
 
-useGSAP(() => {
+    {/*useGSAP(() => {
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
       smoothTouch: 0.1,
     });
-  });
+  }); */}
 
 return(
-   <div id="smooth-wrapper">
-    <div id="smooth-content">
+   <div>
      <div className="revealer" />
      <Contactform />
-    </div>
   </div>
   );
 };
 
 export default Contact;
+
