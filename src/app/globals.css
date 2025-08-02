@@ -1829,7 +1829,7 @@ clip-path: circle(0% at 50% 50%);
 .reviews-section {
   position: relative;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   overflow: hidden;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
@@ -1876,11 +1876,10 @@ clip-path: circle(0% at 50% 50%);
   transform: translateY(-12rem);
   z-index: 60;
   opacity: 0;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
+  background-color: var(--text-color);
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
-  color: var(--text-color);
+  color: var(--base-color);
 }
 
 .review-card h3{
