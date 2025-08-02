@@ -20,7 +20,7 @@ useRevealer();
 
 const pathName = usePathname();
      
-        
+     
   return (
    <div>
       <div className="revealer" />
@@ -32,6 +32,7 @@ const pathName = usePathname();
 };
 
 export default Craft;
+
 
 
 
