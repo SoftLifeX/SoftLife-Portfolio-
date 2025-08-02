@@ -5,6 +5,7 @@ import Css from "./css";
 import Tailwind from "./tailwind";
 import Sass from "./sass";
 import Vue from "./vue";
+import Gsap from "./gsap";
 import Express from "./express";
 import Javascript from "./javascript";
 import Nodejs from "./nodejs";
@@ -35,6 +36,7 @@ export const Icons = {
   Gitlab: memo(Gitlab),
   Nextjs: memo(Nextjs),
   Git: memo(Git),
+  Gsap: memo(Gsap),
   Bitbucket: memo(Bitbucket),
   Figma: memo(Figma),
   Flutter: memo(Flutter),
