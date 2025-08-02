@@ -9,7 +9,7 @@ import StickyCursor from "./components/stickyCursor"
 import CustomCursor from "./components/CustomCursor"
 import InitScrollSmoother from './components/InitScrollSmoother';
 import ScrollToTopOnRouteChange from './components/ScrollToTopOnRouteChange';
-import ScrollRestoration from './components/ScrollRestoration';
+//import ScrollRestoration from './components/ScrollRestoration';
 
 
 
@@ -35,7 +35,7 @@ export function Providers({ children }) {
     return (
 <ThemeProvider defaultTheme='system' enableSystem>
   <InitScrollSmoother />
-  <ScrollRestoration />
+  {/*<ScrollRestoration />*/}
   <ScrollToTopOnRouteChange />
  <CustomCursor/>
  <Header />
