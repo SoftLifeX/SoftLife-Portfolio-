@@ -473,8 +473,7 @@ section {
 }
 
 .navbar a:hover {
-  background:  var(--tertiary-text);
-  color: var(--text-color);
+  background: transparent;
   padding: 0.25rem 1rem;
   box-shadow: 0 0 0.10rem var(--tertiary-text);
 }
@@ -825,7 +824,7 @@ outline: none;
 /*homepage*/
 .homepage {
   align-content: center;
-  min-height: 100svh;
+  height: 120svh;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -833,8 +832,8 @@ outline: none;
 
 .pointer {
   position: fixed;
-  top: 18svh;
-  left: 15rem;
+  top: 15svh;
+  left: 18rem;
   rotate: 45deg;
   margin: 1.87rem auto;
   justify-content: center;
@@ -1874,6 +1873,7 @@ clip-path: circle(0% at 50% 50%);
   width: 400px;
   padding: 0 1.2rem;
   will-change: transform;
+  transform: translateY(-3rem);
   z-index: 20;
   opacity: 0;
   background-color: transparent;
@@ -2189,6 +2189,7 @@ form textarea {
 
   .pointer{
     top: 40svh;
+    left: 15rem;
   }
 
   .homepage {
