@@ -1,7 +1,6 @@
 import { Icons } from "../svg"; 
 import { images } from "@/app/images/images";
 
-
 export const project = [
     {
         id: 1,
