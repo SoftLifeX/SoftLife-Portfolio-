@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { scaleAnimation } from "./scaleAnimation";
 
+
 export default function Modal({ modal, projects }) {
   const { active, index } = modal;
   const modalContainer = useRef(null);
