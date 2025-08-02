@@ -12,6 +12,7 @@ import Project from "../components/project";
 import Reviews from "../components/reviews";
 import { useRevealer } from "../components/hooks/useRevealer";
 
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const Craft = () => {
 
@@ -38,5 +39,6 @@ const pathName = usePathname();
 };
 
 export default Craft;
+
 
 
