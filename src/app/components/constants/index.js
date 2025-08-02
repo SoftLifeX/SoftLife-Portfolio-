@@ -13,7 +13,7 @@ It was a delight working with the young man and we look forward to partnering wi
   },
 {
   id: 2,
-  name: "Jade Mensah",
+  name: "Mary Chinonso",
   role: "Creative Director · Studio Kairos",
   text: `Working with Daniel was an incredibly smooth experience. We brought him on during a pivotal brand refresh, and from the outset, he demonstrated an outstanding grasp of both form and function.
 He translated abstract concepts into designs that felt intentional and refined.
@@ -23,7 +23,7 @@ Collaborating with him felt like a genuine creative partnership — he’s someo
 
 {
   id: 3,
-  name: "Elliot Varga",
+  name: "Smart Onyeka",
   role: "Co-founder · Form & Foundry",
   text: `Daniel joined us during a crunch phase of product development, and his impact was immediate. He asked all the right questions and quickly shaped our ideas into elegant, user-centered interfaces.
 His designs carried a quiet confidence — not flashy, just deeply considered and functional.
@@ -41,7 +41,7 @@ Bringing a healthy blend of charisma and talent, making him an invaluable member
   },
   {
     id: 5,
-    name: "Kizito Cambell",
+    name: "Kizito Campbell",
     role: "CEO · Bellzito",
     text: `Creativity and precision personified. That is the best way to accurately delineate Daniel.
 Working with Daniel will forever be an absolute pleasure,
@@ -64,10 +64,11 @@ export const techStack = [
     { icon: <Icons.Reacticon />, name: "React" },
     { icon: <Icons.Framer />, name: "Framer" },
     { icon: <Icons.Gitlab />, name: "Gitlab" },
-    { icon: <Icons.Reacticon />, name: "React Native" },
+    { icon: <Icons.Reacticon />, name: "React \n Native" },
     { icon: <Icons.Nextjs />, name: "Next.js" },
     { icon: <Icons.Git />, name: "Git" },
     { icon: <Icons.Bitbucket />, name: "Bitbucket" },
+    { icon: <Icons.Gsap />, name: "Gsap" },
     { icon: <Icons.Figma />, name: "Figma" },
     { icon: <Icons.Flutter />, name: "Flutter" },
     { icon: <Icons.Typescript />, name: "TypeScript" },
