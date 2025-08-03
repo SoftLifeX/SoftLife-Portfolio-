@@ -322,8 +322,6 @@ section {
   right: 0;
   left: 0;
   bottom: 0;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
   border-radius: 0.06rem;
   background-color: transparent;
 }
@@ -335,8 +333,9 @@ section {
   overflow: hidden;
   padding-top: 0;
   margin-top: 0;
-  position: relative;
-  top: -0.1rem;
+  margin-bottom: 2.5rem;
+  /*position: relative;
+  top: -0.1rem;*/
 }
 
 .home2 {
@@ -346,12 +345,15 @@ section {
   will-change: transform ease-in-out;
   animation: ease-in-out;
   transition: ease-in-out;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .home3 {
   scale: 0.98;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 2.5rem;
 }
 
 .about1 {
@@ -360,26 +362,33 @@ section {
   border: 0.06rem solid var(--border-color);
   padding-top: 0;
   margin-top: 0;
-  position: relative;
-  top: -0.1rem;
+  /*position: relative;
+  top: -0.1rem;*/
+  margin-bottom: 2.5rem;
 }
 
 .about2 {
   scale: 0.92;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .about3 {
   scale: 0.92;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .about4 {
   scale: 0.98;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .craft1 {
@@ -388,8 +397,9 @@ section {
   border: 0.06rem solid var(--border-color);
   padding-top: 0;
   margin-top: 0;
-  position: relative;
-  top: -0.2rem;
+  /*position: relative;
+  top: -0.2rem;*/
+  margin-bottom: 2.5rem;
 }
 
 .craft2 {
@@ -402,8 +412,9 @@ section {
   scale: 0.98;
   padding-top: 0;
   margin-top: 0;
-  position: relative;
-  top: -2.4rem;
+  margin-bottom: 2.5rem;
+  /*position: relative;
+  top: -2.4rem;*/
   }
 
 .projects {
@@ -412,8 +423,10 @@ section {
   border: 0.06rem solid var(--border-color);
   padding-top: 0;
   margin-top: 0;
-  position: relative;
-  top: -2.4rem;
+  margin-bottom: 2.5rem;
+  height: 120%;
+  /*position: relative;
+  top: -2.4rem;*/
 }
 
 .top {
@@ -421,7 +434,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.3rem 10%;
+  padding: 0 10%;
   display: flex;
   justify-content: center;
   align-items: center;
