@@ -47,7 +47,7 @@ function About1() {
       charsClass: "char-inner",
       autoSplit: true,
       onSplit: (self) => {
-        const stagger = 0.04;
+        const stagger = 0.03;
         const delay = 1.7;
 
         // Animate each character in
@@ -155,6 +155,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
