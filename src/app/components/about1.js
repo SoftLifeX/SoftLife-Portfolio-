@@ -53,7 +53,7 @@ function About1() {
         // Animate each character in
         gsap.from(self.chars, {
           opacity: 0,
-          yPercent: 25,
+          yPercent: 40,
           duration: 0.4,
           ease: "back",
           stagger,
@@ -155,6 +155,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
