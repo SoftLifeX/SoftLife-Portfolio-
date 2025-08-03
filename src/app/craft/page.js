@@ -7,7 +7,6 @@ import { useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
-import Craft1 from "../components/craft1";
 import Project from "../components/project";
 import Reviews from "../components/reviews";
 import { useRevealer } from "../components/hooks/useRevealer";
@@ -24,7 +23,6 @@ const pathName = usePathname();
   return (
    <div>
       <div className="revealer" />
-      <Craft1 />
       <Project />
       <Reviews />
     </div>
@@ -32,6 +30,7 @@ const pathName = usePathname();
 };
 
 export default Craft;
+
 
 
 
