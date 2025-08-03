@@ -36,7 +36,14 @@ function Contact() {
       lineHeight: '0.8em',
     });
 
-    const tl = gsap.timeline();
+    const tl = gsap.timeline(
+        {
+         scrollTrigger: {
+         trigger: '.contact',
+         start: 'top 75%',
+         }
+        }
+    );
 
     tl.from(titleSplit.chars, {
       opacity: 0,
@@ -122,6 +129,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
