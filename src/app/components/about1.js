@@ -51,11 +51,10 @@ document.fonts.ready.then(() => {
          onSplit: (self) => {
 
         return gsap.from(self.chars, {
-        opacity: 0,
          yPercent: 25,
          duration: 0.4,
          ease: "back",
-         stagger: 0.04,
+         stagger: 0.5,
          delay: 2,
       });
     }
@@ -142,6 +141,7 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
 
