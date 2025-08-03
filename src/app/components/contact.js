@@ -33,7 +33,7 @@ function Contact() {
     },
   });
 
-  const stagger = 0.04;
+  const stagger = 0.025;
   const totalDuration = titleSplit.chars.length * stagger;
 
   scrollTimeline
@@ -119,5 +119,6 @@ function Contact() {
 }
 
 export default Contact
+
 
 
