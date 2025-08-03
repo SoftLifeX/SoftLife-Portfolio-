@@ -1627,158 +1627,59 @@ outline: none;
 }
 
 /*----projects---*/
-
-
-/* Section */
-.project-section {
-  width: 100%;
-  margin: 100px 0;
-  padding: 0 40px;
-  overflow-x: hidden;
-  box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--border-color);
-}
-
-
-/* Grid */
 .project-grid {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
   justify-content: space-between;
+  gap: 30px;
+  padding: 0 5vw;
 }
 
-.project-card-wrapper {
-  width: 49%;
-}
-
-.project-card {
-  width: 100%;
-  height: 100%;
-  position: relative;
+.project-item {
+  width: 48%;
+  margin-bottom: 50px;
 }
 
 .project-card img {
+  width: 100%;
+  max-height: 400px;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
   border-radius: 10px;
-}
-
-/* Modal */
-.modal {
-  height: 350px;
-  width: 400px;
-  background-color: white;
-  position: absolute;
-  overflow: hidden;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%) scale(0);
-  border-radius: 10px;
-  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-  z-index: 100;
-  box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--border-color);
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* Cursor + Label */
-.custom-cursor,
-.cursor-label {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: var(--base-color);
-  color: var(--text-color);
-  font-size: 14px;
-  font-weight: 300;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
-  z-index: 110;
-}
-
-.custom-cursor.active,
-.cursor-label.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-/* Inner Modal Slide */
-.modal-inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-  top: 0;
-  left: 0;
-}
-
-/* Each Slide */
-.modal-slide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .project-section {
-    padding: 0 30px;
-    margin: 80px 0;
-  }
-
-  .project-grid {
-    gap: 40px;
-  }
 }
 
 @media (max-width: 768px) {
-  .project-section {
-    padding: 0 20px;
-    margin: 60px 0;
-  }
-
-  .project-grid {
-    gap: 30px;
-  }
-
-  .project-card-wrapper {
+  .project-item {
     width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .project-section {
-    padding: 0 15px;
-    margin: 40px 0;
-  }
+/* Modal positioning fix */
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
 }
 
-/* Hide modal & cursor on small screens */
-@media (max-width: 640px) {
-  .modal,
-  .custom-cursor,
-  .cursor-label {
-    display: none !important;
-  }
+/* Cursor styles */
+.modal-cursor,
+.modal-label {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--text-color);
+  color: var(--base-color);
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  z-index: 1000;
 }
+
 
 /*services*/
 .services-list {
