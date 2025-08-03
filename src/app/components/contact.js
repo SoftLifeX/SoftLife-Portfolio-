@@ -19,29 +19,37 @@ import { motion, useInView } from "framer-motion";
 function Contact() {
     //splitText
  useGSAP(() => {
-       const titleSplit = SplitText.create('.contact h1', {
-         type: 'chars, words, lines',
-         mask: "lines",
-         linesClass: 'lineParent',
-        })
+  const titleSplit = SplitText.create('.contact h1', {
+    type: 'chars, words, lines',
+    mask: "lines",
+    linesClass: 'lineParent',
+    charsClass: 'char-inner',
+  });
 
+  const scrollTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.contact',
+      start: 'top 75%',
+    },
+  });
 
+  const stagger = 0.04;
+  const totalDuration = titleSplit.chars.length * stagger;
 
-    const scrollTimeline = gsap.timeline({
-         scrollTrigger: {
-         trigger: '.contact',
-         start: 'top 75%',
-         }
-        })
-
-    scrollTimeline.from(titleSplit.chars, {
-        opacity: 0, 
-        duration: 0.4,
-        yPercent: 25,
-        ease: 'back', 
-        stagger: 0.04
-        })
-   }, []);
+  scrollTimeline
+    .from(titleSplit.chars, {
+      opacity: 0,
+      yPercent: 25,
+      duration: 0.4,
+      ease: 'back',
+      stagger,
+    })
+    .to('.contact h1', {
+      lineHeight: '1.2em',
+      duration: totalDuration,
+      ease: 'power1.out',
+    }, '<'); // Start at same time as char animation
+}, []);
   
 
   return (
@@ -111,4 +119,5 @@ function Contact() {
 }
 
 export default Contact
+
 
