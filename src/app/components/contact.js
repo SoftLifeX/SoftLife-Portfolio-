@@ -19,6 +19,10 @@ import { motion, useInView } from "framer-motion";
 function Contact() {
     //splitText
  useGSAP(() => {
+ document.fonts.ready.then(() => {
+    // Initial opacity reveal
+    gsap.set([".title"], { opacity: 1 });
+
   const titleSplit = SplitText.create('.contact h1', {
     type: 'chars, words, lines',
     mask: "lines",
@@ -49,6 +53,7 @@ function Contact() {
       duration: totalDuration,
       ease: 'power1.out',
     }, '<'); // Start at same time as char animation
+ })
 }, []);
   
 
@@ -119,6 +124,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
