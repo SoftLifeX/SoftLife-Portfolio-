@@ -1004,6 +1004,7 @@ outline: none;
   -webkit-text-fill-color: transparent;*/
   color: var(--text-color);
   font-size: 30vw;
+  line-height: 2.5rem;
   font-weight: 600;
   font-family: 'pop' , serif;
   padding-right: 3.12rem;
@@ -1349,6 +1350,14 @@ outline: none;
 /*contact*/
 .contact h1 {
   padding: 3.12rem;
+  line-height: 0.8em;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.char-inner {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 .socials {
