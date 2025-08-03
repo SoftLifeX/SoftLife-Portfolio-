@@ -19,40 +19,39 @@ import { motion, useInView } from "framer-motion";
 function Contact() {
     //splitText
  useGSAP(() => {
- document.fonts.ready.then(() => {
-    // Initial opacity reveal
-    gsap.set([".contact h1"], { opacity: 1 });
+  document.fonts.ready.then(() => {
+    const titleSplit = SplitText.create('.contact h1', {
+      type: 'chars, words, lines',
+      mask: 'lines',
+      linesClass: 'lineParent',
+      charsClass: 'char-inner',
+    });
 
-  const titleSplit = SplitText.create('.contact h1', {
-    type: 'chars, words, lines',
-    linesClass: 'lineParent',
-    charsClass: 'char-inner',
-  });
+    const stagger = 0.025;
+    const totalDuration = titleSplit.chars.length * stagger;
 
-  const scrollTimeline = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.contact',
-      start: 'top 75%',
-    },
-  });
+    // Make sure initial state is clean
+    gsap.set('.contact h1', {
+      opacity: 1,
+      lineHeight: '0.8em',
+    });
 
-  const stagger = 0.025;
-  const totalDuration = titleSplit.chars.length * stagger;
+    const tl = gsap.timeline();
 
-  scrollTimeline
-    .from(titleSplit.chars, {
+    tl.from(titleSplit.chars, {
       opacity: 0,
       yPercent: 40,
       duration: 0.4,
-      ease: 'back',
+      ease: 'back.out',
       stagger,
-    })
-    .to('.contact h1', {
+    });
+
+    tl.to('.contact h1', {
       lineHeight: '1.2em',
       duration: totalDuration,
       ease: 'power1.out',
-    }, '<'); // Start at same time as char animation
- })
+    }, '<'); // Starts at the same time as the char animation
+  });
 }, []);
   
 
@@ -123,6 +122,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
