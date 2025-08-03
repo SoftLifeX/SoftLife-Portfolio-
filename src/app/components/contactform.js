@@ -50,7 +50,6 @@ function Contactform() {
     // Title SplitText
     const heroSplit = new SplitText(".title", {
       type: "chars, words, lines",
-      mask: "lines",
       linesClass: "lineParent",
       charsClass: "char-inner",
       autoSplit: true,
@@ -263,6 +262,7 @@ function Contactform() {
 }
 
 export default Contactform
+
 
 
 
