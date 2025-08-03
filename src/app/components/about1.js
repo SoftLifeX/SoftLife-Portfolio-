@@ -34,34 +34,31 @@ const pageAnimation = () => {
 
 function About1() {
     //splitText
-  const containerRef = useRef();
-
   useGSAP(() => {
-    const run = () => {
-      const split = new SplitText(".title", {
-        type: "chars",
-        charsClass: "char-inner",
-        outerChars: true, // wrap each inner span in a wrapper
-      });
+    // Set title visible
+    gsap.set(".title", { opacity: 1 });
 
-      // Add wrapper manually if needed
-      const chars = document.querySelectorAll(".char-inner");
-      chars.forEach((char) => {
-        const wrapper = document.createElement("span");
-        wrapper.className = "char-wrapper";
-        char.parentNode.replaceChild(wrapper, char);
-        wrapper.appendChild(char);
-      });
+    // Split text into chars
+    const split = new SplitText(".title", {
+      type: "chars",
+      charsClass: "char-inner"
+    });
 
-      gsap.set(".title", { opacity: 1 });
+    // Wrap each char in a container span
+    split.chars.forEach((char) => {
+      const wrapper = document.createElement("span");
+      wrapper.className = "char-wrapper";
+      char.parentNode.replaceChild(wrapper, char);
+      wrapper.appendChild(char);
+    });
 
-      gsap.to(".char-wrapper", {
-        className: "+=char-visible",
-        stagger: 0.035,
-        duration: 0.001,
-        delay: 1.8,
-      });
-    };
+    // Animate class toggle
+    gsap.to(".char-wrapper", {
+      className: "+=char-visible",
+      stagger: 0.04,
+      duration: 0.001,
+      delay: 1.8
+    });
 
     const subSplit = new SplitText(".subtitle", {
          type: "chars, words, lines",
@@ -78,11 +75,7 @@ function About1() {
          delay: 1.8,
         });
 
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(run);
-    } else {
-      run();
-    }
+
   }, []);
 
   
@@ -97,7 +90,7 @@ function About1() {
         <h5 className="subtitle">
         What we're About? <Lottie id="lottie3" loop={true} animationData={About} />
          </h5>
-        <h1 className="title" ref={containerRef}>
+        <h1 className="title">
          Fast. Fluid. Flawless.
         </h1>
         <div className="h2boundary">
@@ -147,6 +140,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
