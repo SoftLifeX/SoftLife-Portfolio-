@@ -398,12 +398,6 @@ section {
   border: 0.06rem solid var(--border-color);
 }
 
-.craft3 {
-  scale: 0.98;
-  box-shadow: 0 0 0.10rem var(--accent-color);
-  border: 0.06rem solid var(--border-color);
-}
-
 .contactForm {
   scale: 0.98;
   padding-top: 0;
@@ -411,6 +405,16 @@ section {
   position: relative;
   top: -0.8rem;
   }
+
+.projects {
+  scale: 0.98;
+  box-shadow: 0 0 0.10rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
+  padding-top: 0;
+  margin-top: 0;
+  position: relative;
+  top: -0.2rem;
+}
 
 .top {
   position: absolute;
@@ -1004,7 +1008,7 @@ outline: none;
   -webkit-text-fill-color: transparent;*/
   color: var(--text-color);
   font-size: 30vw;
-  line-height: 2.5rem;
+  line-height: 2.5em;
   font-weight: 600;
   font-family: 'pop' , serif;
   padding-right: 3.12rem;
@@ -1648,6 +1652,10 @@ outline: none;
 }
 
 /*----projects---*/
+.projects h1{
+  padding: 3.12rem;
+}
+
 .project-grid {
   display: flex;
   flex-wrap: wrap;
