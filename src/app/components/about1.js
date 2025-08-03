@@ -35,49 +35,65 @@ const pageAnimation = () => {
 function About1() {
     //splitText
   useGSAP(() => {
-    // Set title visible
-    gsap.set(".title", { opacity: 1 });
+  document.fonts.ready.then(() => {
+    // Initial opacity reveal
+    gsap.set([".title", ".subtitle"], { opacity: 1 });
 
-    // Split text into chars
-    const split = new SplitText(".title", {
-      type: "chars",
-      charsClass: "char-inner"
+    // Title SplitText
+    const heroSplit = new SplitText(".title", {
+      type: "chars, words, lines",
+      mask: "lines",
+      linesClass: "lineParent",
+      charsClass: "char-inner",
+      autoSplit: true,
+      onSplit: (self) => {
+        const stagger = 0.04;
+        const delay = 2;
+
+        // Animate each character in
+        gsap.from(self.chars, {
+          opacity: 0,
+          yPercent: 25,
+          duration: 0.4,
+          ease: "back",
+          stagger,
+          delay,
+        });
+
+        // Animate line-height progressively
+        for (let i = 0; i < self.chars.length; i++) {
+          const progress = (i + 1) / self.chars.length;
+          const lineHeight = 0.8 + (1.2 - 0.8) * progress;
+
+          gsap.to(".title", {
+            lineHeight: `${lineHeight}em`,
+            duration: 0.3,
+            ease: "power1.out",
+            delay: delay + i * stagger,
+          });
+        }
+      },
     });
 
-    // Wrap each char in a container span
-    split.chars.forEach((char) => {
-      const wrapper = document.createElement("span");
-      wrapper.className = "char-wrapper";
-      char.parentNode.replaceChild(wrapper, char);
-      wrapper.appendChild(char);
-    });
+    // Add gradient after split
+    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
 
-    // Animate class toggle
-    gsap.to(".char-wrapper", {
-      className: "+=char-visible",
-      stagger: 0.04,
-      duration: 0.001,
-      delay: 1.8
-    });
-
+    // Subtitle SplitText
     const subSplit = new SplitText(".subtitle", {
-         type: "chars, words, lines",
-        });
+      type: "chars, words, lines",
+    });
 
-    gsap.set(".subtitle", { opacity: 1 });
-
-        gsap.from(subSplit.chars, {
-         opacity: 0,
-         x: 150,
-         duration: 0.4,
-         ease: "power4",
-         stagger: 0.04,
-         delay: 1.8,
-        });
-
-
-  }, []);
-
+    // Subtitle animation (LEAVE THIS AS IS)
+    gsap.from(subSplit.chars, {
+      opacity: 0,
+      x: 150,
+      duration: 0.4,
+      ease: "power4",
+      stagger: 0.04,
+      delay: 2,
+    });
+  });
+}, []);
   
   //page transition
   const router = useTransitionRouter();
@@ -117,9 +133,9 @@ function About1() {
       viewport={{ once: true }}
        transition={{ delay: 0.3, duration: 0.6, ease: [0.175, 0.885, 0.32, 1.275] }}>
            <VennDiagram />
-    </motion.div>
-                    
-                <Magnetic>
+         </motion.div>
+              </div>
+         <Magnetic>
                 <Link 
               href="/contact" 
               className="btn2" 
@@ -132,7 +148,6 @@ function About1() {
               Contact!
             </Link>
                 </Magnetic>
-              </div>
           </div>
         </div>
       </section>
@@ -140,6 +155,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
