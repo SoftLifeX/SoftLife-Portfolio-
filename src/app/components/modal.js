@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import { scaleAnimation } from "../animations/scaleAnimation";
+import { scaleAnimation } from "./scaleAnimation";
 
 export default function Modal({ modal, projects }) {
   const { active, index } = modal;
