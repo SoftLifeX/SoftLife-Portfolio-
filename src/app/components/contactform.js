@@ -43,49 +43,65 @@ function Contactform() {
 
   //splitText
  useGSAP(() => {
-   document.fonts.ready.then(() => {
-  gsap.set(".title", { opacity: 1 });
-  }, []);
+  document.fonts.ready.then(() => {
+    // Initial opacity reveal
+    gsap.set([".title", ".subtitle"], { opacity: 1 });
 
-   document.fonts.ready.then(() => {
-  gsap.set(".subtitle", { opacity: 1 });
-  }, []);
+    // Title SplitText
+    const heroSplit = new SplitText(".title", {
+      type: "chars, words, lines",
+      mask: "lines",
+      linesClass: "lineParent",
+      charsClass: "char-inner",
+      autoSplit: true,
+      onSplit: (self) => {
+        const stagger = 0.025;
+        const delay = 1.6;
 
-   const heroSplit = new SplitText(".title", {
-         type: "chars, words, lines",
-         mask: "lines",
-         linesClass: 'lineParent',
-          autoSplit: true,
-         onSplit: (self) => {
+        // Animate each character in
+        gsap.from(self.chars, {
+          opacity: 0,
+          yPercent: 40,
+          duration: 0.4,
+          ease: "back",
+          stagger,
+          delay,
+        });
 
-        return gsap.from(self.chars, {
-        opacity: 0,
-         yPercent: 25,
-         duration: 0.4,
-         ease: "back",
-         stagger: 0.04,
-         delay: 2,
-      });
-    }
+        // Animate line-height progressively
+        for (let i = 0; i < self.chars.length; i++) {
+          const progress = (i + 1) / self.chars.length;
+          const lineHeight = 0.8 + (1.2 - 0.8) * progress;
+
+          gsap.to(".title", {
+            lineHeight: `${lineHeight}em`,
+            duration: 0.3,
+            ease: "power1.out",
+            delay: delay + i * stagger,
+          });
+        }
+      },
+    });
+
+    // Add gradient after split
+    heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+
+    // Subtitle SplitText
+    const subSplit = new SplitText(".subtitle", {
+      type: "chars, words, lines",
+    });
+
+    // Subtitle animation (LEAVE THIS AS IS)
+    gsap.from(subSplit.chars, {
+      opacity: 0,
+      x: 150,
+      duration: 0.4,
+      ease: "power4",
+      stagger: 0.04,
+      delay: 1.8,
+    });
   });
-
-        const subSplit = new SplitText(".subtitle", {
-         type: "chars, words, lines",
-        });
-
-
-        // Apply text-gradient class once before animating
-        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-
-        gsap.from(subSplit.chars, {
-         opacity: 0,
-         x: 150,
-         duration: 0.4,
-         ease: "power4",
-         stagger: 0.04,
-         delay: 2,
-        });
-   }, []);
+}, []);
   
   const router = useTransitionRouter();
 
@@ -247,5 +263,6 @@ function Contactform() {
 }
 
 export default Contactform
+
 
 
