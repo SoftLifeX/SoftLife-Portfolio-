@@ -54,7 +54,7 @@ document.fonts.ready.then(() => {
          yPercent: 100,
          duration: 0.4,
          ease: "back",
-         stagger: 0.5,
+         stagger: 0.04,
          delay: 2,
       });
     }
@@ -141,6 +141,7 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
 
