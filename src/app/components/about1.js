@@ -34,39 +34,40 @@ const pageAnimation = () => {
 
 function About1() {
     //splitText
- useGSAP(() => {
-        document.fonts.ready.then(() => {
-  gsap.set(".title", { opacity: 1 });
-  }, []);
+  const containerRef = useRef();
 
-document.fonts.ready.then(() => {
-  gsap.set(".subtitle", { opacity: 1 });
-  }, []);
-   
-   const heroSplit = new SplitText(".title", {
-         type: "chars, words, lines",
-         mask: "lines",
-         linesClass: 'lineParent',
-          autoSplit: true,
-         onSplit: (self) => {
-
-        return gsap.from(self.chars, {
-         yPercent: 100,
-         duration: 0.4,
-         ease: "back",
-         stagger: 0.04,
-         delay: 2,
+  useGSAP(() => {
+    const run = () => {
+      const split = new SplitText(".title", {
+        type: "chars",
+        charsClass: "char-inner",
+        outerChars: true, // wrap each inner span in a wrapper
       });
-    }
-  });
 
+      // Add wrapper manually if needed
+      const chars = document.querySelectorAll(".char-inner");
+      chars.forEach((char) => {
+        const wrapper = document.createElement("span");
+        wrapper.className = "char-wrapper";
+        char.parentNode.replaceChild(wrapper, char);
+        wrapper.appendChild(char);
+      });
 
+      gsap.set(".title", { opacity: 1 });
 
+      gsap.to(".char-wrapper", {
+        className: "+=char-visible",
+        stagger: 0.035,
+        duration: 0.001,
+        delay: 1.8,
+      });
+    };
 
-
-   const subSplit = new SplitText(".subtitle", {
+    const subSplit = new SplitText(".subtitle", {
          type: "chars, words, lines",
         });
+
+    gsap.set(".subtitle", { opacity: 1 });
 
         gsap.from(subSplit.chars, {
          opacity: 0,
@@ -74,10 +75,15 @@ document.fonts.ready.then(() => {
          duration: 0.4,
          ease: "power4",
          stagger: 0.04,
-         delay: 2,
+         delay: 1.8,
         });
 
-   }, []);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(run);
+    } else {
+      run();
+    }
+  }, []);
 
   
   //page transition
@@ -91,9 +97,9 @@ document.fonts.ready.then(() => {
         <h5 className="subtitle">
         What we're About? <Lottie id="lottie3" loop={true} animationData={About} />
          </h5>
-          <h1 className="title">
-           Fast. Fluid. Flawless
-          </h1>
+        <h1 className="title" ref={containerRef}>
+         Fast. Fluid. Flawless.
+        </h1>
         <div className="h2boundary">
           <h2 className="marker-highlighter">Not just built - Authored.</h2>
         </div> 
@@ -141,6 +147,7 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
 
