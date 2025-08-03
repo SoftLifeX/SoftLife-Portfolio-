@@ -13,46 +13,43 @@ function Craft1() {
     //splitText
  useGSAP(() => {
   document.fonts.ready.then(() => {
-    // Initial opacity reveal
-    gsap.set([".title", ".subtitle"], { opacity: 1 });
+    // Initial reveal for both
+    gsap.set([".title", ".subtitle"], { opacity: 1, lineHeight: "0.8em" });
 
-    // Title SplitText
+    // === Title Animation ===
     const heroSplit = new SplitText(".title", {
       type: "chars, words, lines",
+      mask: "lines",
       linesClass: "lineParent",
       charsClass: "char-inner",
       autoSplit: true,
       onSplit: (self) => {
         const stagger = 0.025;
         const delay = 1.6;
+        const duration = 0.4;
+        const totalDuration = self.chars.length * stagger;
 
-        // Animate each character in
+        // Animate chars
         gsap.from(self.chars, {
           opacity: 0,
           yPercent: 40,
-          duration: 0.4,
+          duration,
           ease: "back",
           stagger,
           delay,
         });
 
-        // Animate line-height progressively
-        for (let i = 0; i < self.chars.length; i++) {
-          const progress = (i + 1) / self.chars.length;
-          const lineHeight = 0.8 + (1.2 - 0.8) * progress;
-
-          gsap.to(".title", {
-            lineHeight: `${lineHeight}em`,
-            duration: 0.3,
-            ease: "power1.out",
-            delay: delay + i * stagger,
-          });
-        }
+        // Animate line-height globally in sync
+        gsap.to(".title", {
+          lineHeight: "1.2em",
+          duration: totalDuration,
+          ease: "power1.out",
+          delay,
+        });
       },
     });
   });
 }, []);
-  
 
   const [action,  setAction] = useState("Project");
   
@@ -172,6 +169,7 @@ function Craft1() {
 }
 
 export default Craft1
+
 
 
 
