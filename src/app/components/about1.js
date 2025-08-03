@@ -48,7 +48,7 @@ function About1() {
       autoSplit: true,
       onSplit: (self) => {
         const stagger = 0.04;
-        const delay = 1.8;
+        const delay = 1.7;
 
         // Animate each character in
         gsap.from(self.chars, {
@@ -155,6 +155,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
