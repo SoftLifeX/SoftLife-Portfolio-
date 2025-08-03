@@ -19,7 +19,6 @@ function Craft1() {
     // Title SplitText
     const heroSplit = new SplitText(".title", {
       type: "chars, words, lines",
-      mask: "lines",
       linesClass: "lineParent",
       charsClass: "char-inner",
       autoSplit: true,
@@ -173,5 +172,6 @@ function Craft1() {
 }
 
 export default Craft1
+
 
 
