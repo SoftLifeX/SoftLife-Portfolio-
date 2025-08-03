@@ -42,6 +42,7 @@ function About1() {
     // === Title Animation ===
     const heroSplit = new SplitText(".title", {
       type: "chars, words, lines",
+      mask: "lines",
       linesClass: "lineParent",
       charsClass: "char-inner",
       autoSplit: true,
@@ -146,6 +147,7 @@ function About1() {
 }
 
 export default About1
+
 
 
 
