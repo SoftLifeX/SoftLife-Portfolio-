@@ -68,7 +68,7 @@ export default function Project() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <section style={{ margin: "100px 0" }} className="projects">
+    <section style={{ margin: "0" }} className="projects">
       <h1 className="title">
         Selected  Projects
       </h1>
