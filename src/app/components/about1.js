@@ -51,7 +51,7 @@ document.fonts.ready.then(() => {
          onSplit: (self) => {
 
         return gsap.from(self.chars, {
-         yPercent: 25,
+         yPercent: 100,
          duration: 0.4,
          ease: "back",
          stagger: 0.5,
@@ -141,6 +141,7 @@ document.fonts.ready.then(() => {
 }
 
 export default About1
+
 
 
 
