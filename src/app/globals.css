@@ -581,41 +581,19 @@ h1 {
   opacity: 0;
 }*/
 
-/* The heading element */
 .title {
-  font-size: 3rem;
-  font-weight: bold;
-  overflow: hidden;
   opacity: 0;
-}
-
-/* Outer wrapper for each character */
-.char-wrapper {
-  display: inline-block;
+  line-height: 0.8em;
   overflow: hidden;
-  line-height: 0.8em; /* tighter to create the initial mask effect */
-  transition: line-height 0.4s ease;
+  display: block;
+  will-change: transform;
 }
-
-/* Inner span that gets animated */
 
 .char-inner {
   display: inline-block;
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
   will-change: transform, opacity;
 }
-/* Class added by GSAP to trigger the reveal */
-.char-visible {
-  line-height: 1.2em; /* expands to avoid clipping */
-}
 
-/* Once visible, inner span comes up and fades in */
-.char-visible .char-inner {
-  transform: translateY(0%);
-  opacity: 1;
-}
 
 .subtitle{
   will-change: transform;
