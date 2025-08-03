@@ -1,6 +1,5 @@
-"use client";
 import { useRef, useState } from "react";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { project } from "./constants";
 import ProjectCard from "./projectCard";
 import Modal from "./modal";
@@ -12,30 +11,34 @@ export default function Project() {
     offset: ["start end", "end start"],
   });
 
-  const transformStyles = Array(8)
-    .fill()
-    .map((_, i) =>
-      useTransform(scrollYProgress, [0, 1], [0, i % 2 === 0 ? -100 : 100])
-    );
+  const transforms = [
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+  ];
 
   const [modal, setModal] = useState({ active: false, index: 0 });
 
   return (
-    <section className="project-section" id="projects">
-      <div className="project-title">
-        <span /> selected <span /> projects
-      </div>
-      <div className="project-container" ref={container}>
-        {project.map((proj, index) => (
+    <section style={{ margin: "100px 0" }} id="projects">
+      <h1>
+        Selected  Projects
+      </h1>
+
+      <div className="project-grid" ref={container}>
+        {project.map((proj, idx) => (
           <motion.div
+            className="project-item"
             key={proj.id}
-            className="project-card-wrapper"
-            style={{ y: transformStyles[index % transformStyles.length] }}
+            style={{ y: transforms[idx % transforms.length] }}
           >
-            <ProjectCard item={proj} index={index} setModal={setModal} />
+            <ProjectCard item={proj} index={idx} setModal={setModal} />
           </motion.div>
         ))}
-        <Modal projects={project} modal={modal} />
+        <Modal modal={modal} projects={project} />
       </div>
     </section>
   );
