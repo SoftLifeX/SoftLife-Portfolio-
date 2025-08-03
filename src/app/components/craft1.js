@@ -12,33 +12,48 @@ import Link from "next/link";
 function Craft1() {
     //splitText
  useGSAP(() => {
-        document.fonts.ready.then(() => {
-  gsap.set(".title", { opacity: 1 });
-  }, []);
-     
-        const heroSplit = new SplitText(".title", {
-         type: "chars, words, lines",
-         mask: "lines",
-        linesClass: 'lineParent',
-          autoSplit: true,
-         onSplit: (self) => {
+  document.fonts.ready.then(() => {
+    // Initial opacity reveal
+    gsap.set([".title", ".subtitle"], { opacity: 1 });
 
-        return gsap.from(self.chars, {
-        opacity: 0,
-         yPercent: 25,
-         duration: 0.4,
-         ease: "back",
-         stagger: 0.04,
-         delay: 2,
-      });
-    }
+    // Title SplitText
+    const heroSplit = new SplitText(".title", {
+      type: "chars, words, lines",
+      mask: "lines",
+      linesClass: "lineParent",
+      charsClass: "char-inner",
+      autoSplit: true,
+      onSplit: (self) => {
+        const stagger = 0.025;
+        const delay = 1.6;
+
+        // Animate each character in
+        gsap.from(self.chars, {
+          opacity: 0,
+          yPercent: 40,
+          duration: 0.4,
+          ease: "back",
+          stagger,
+          delay,
+        });
+
+        // Animate line-height progressively
+        for (let i = 0; i < self.chars.length; i++) {
+          const progress = (i + 1) / self.chars.length;
+          const lineHeight = 0.8 + (1.2 - 0.8) * progress;
+
+          gsap.to(".title", {
+            lineHeight: `${lineHeight}em`,
+            duration: 0.3,
+            ease: "power1.out",
+            delay: delay + i * stagger,
+          });
+        }
+      },
+    });
   });
-
-        // Apply text-gradient class once before animating
-        heroSplit.chars.forEach((char) => char.classList.add("text-gradient"));
-
-        
-   }, []);
+}, []);
+  
 
   const [action,  setAction] = useState("Project");
   
@@ -158,4 +173,5 @@ function Craft1() {
 }
 
 export default Craft1
+
 
