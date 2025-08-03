@@ -1,9 +1,8 @@
-"use client";
 import { useEffect, useRef } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import { scaleAnimation } from "./scaleAnimation";
+import Image from "next/image";
+import { scaleAnimation } from "./motion/scaleAnimation";
 
 export default function Modal({ modal, projects }) {
   const { active, index } = modal;
@@ -12,60 +11,70 @@ export default function Modal({ modal, projects }) {
   const cursorLabel = useRef(null);
 
   useEffect(() => {
-    const xMoveContainer = gsap.quickTo(modalContainer.current, "left", {
-      duration: 0.8,
-      ease: "power3",
-    });
-    const yMoveContainer = gsap.quickTo(modalContainer.current, "top", {
-      duration: 0.8,
-      ease: "power3",
-    });
+    const moveX = (target, duration) =>
+      gsap.quickTo(target.current, "left", { duration, ease: "power3" });
+    const moveY = (target, duration) =>
+      gsap.quickTo(target.current, "top", { duration, ease: "power3" });
 
-    const xMoveCursor = gsap.quickTo(cursor.current, "left", {
-      duration: 0.5,
-      ease: "power3",
-    });
-    const yMoveCursor = gsap.quickTo(cursor.current, "top", {
-      duration: 0.5,
-      ease: "power3",
-    });
+    const xModal = moveX(modalContainer, 0.8);
+    const yModal = moveY(modalContainer, 0.8);
+    const xCursor = moveX(cursor, 0.5);
+    const yCursor = moveY(cursor, 0.5);
+    const xLabel = moveX(cursorLabel, 0.45);
+    const yLabel = moveY(cursorLabel, 0.45);
 
-    const xMoveCursorLabel = gsap.quickTo(cursorLabel.current, "left", {
-      duration: 0.45,
-      ease: "power3",
-    });
-    const yMoveCursorLabel = gsap.quickTo(cursorLabel.current, "top", {
-      duration: 0.45,
-      ease: "power3",
-    });
-
-    const handleMouseMove = (e) => {
+    const onMouseMove = (e) => {
       const { pageX, pageY } = e;
-      xMoveContainer(pageX);
-      yMoveContainer(pageY);
-      xMoveCursor(pageX);
-      yMoveCursor(pageY);
-      xMoveCursorLabel(pageX);
-      yMoveCursorLabel(pageY);
+      xModal(pageX);
+      yModal(pageY);
+      xCursor(pageX);
+      yCursor(pageY);
+      xLabel(pageX);
+      yLabel(pageY);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", onMouseMove);
+    return () => window.removeEventListener("mousemove", onMouseMove);
   }, []);
 
   return (
     <>
       <motion.div
         ref={modalContainer}
+        className="modal-container"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        className="modal-container"
+        style={{ width: 400, height: 350, overflow: "hidden" }}
       >
-        <div style={{ top: index * -100 + "%" }} className="modal-slider">
-          {projects.map((project, idx) => (
-            <div className="modal-slide" style={{ backgroundColor: project.color }} key={idx}>
-              <Image src={project.img} alt="image" width={300} height={300} className="modal-img" />
+        <div
+          style={{
+            top: `${index * -100}%`,
+            position: "absolute",
+            height: "100%",
+            width: "100%",
+            transition: "top 0.5s cubic-bezier(0.76, 0, 0.24, 1)",
+          }}
+        >
+          {projects.map((project, i) => (
+            <div
+              key={`modal_${i}`}
+              style={{
+                height: "100%",
+                width: "100%",
+                backgroundColor: project.color,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Image
+                src={project.img}
+                width={300}
+                height={0}
+                alt="modal"
+                style={{ height: "auto", width: "auto" }}
+              />
             </div>
           ))}
         </div>
@@ -78,10 +87,9 @@ export default function Modal({ modal, projects }) {
         initial="initial"
         animate={active ? "enter" : "closed"}
       />
-
       <motion.div
         ref={cursorLabel}
-        className="modal-cursor"
+        className="modal-label"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
