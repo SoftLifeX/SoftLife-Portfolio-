@@ -564,10 +564,9 @@ h1 {
   font-weight: 600;
   /*font-weight: normal*/
   color: var(--text-color);
-  line-height: 0.7em;
 }
 
-.lineParent {
+/*.lineParent {
   overflow: hidden;
   font-kerning: none;
   line-height: inherit;
@@ -580,6 +579,36 @@ h1 {
 .title{
   will-change: transform;
   opacity: 0;
+}*/
+
+.title {
+  line-height: normal;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.char-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 0.8em;
+  transition: line-height 0.4s ease;
+}
+
+.char-inner {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* This class will be added by GSAP via className += */
+.char-wrapper.char-visible {
+  line-height: 1.2em;
+}
+
+.char-visible .char-inner {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .subtitle{
@@ -986,7 +1015,6 @@ outline: none;
 .slidertext {
   position: relative;
   margin: 0;
-  line-height: 2.5em;
   /*background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
