@@ -21,11 +21,10 @@ function Contact() {
  useGSAP(() => {
  document.fonts.ready.then(() => {
     // Initial opacity reveal
-    gsap.set([".title"], { opacity: 1 });
+    gsap.set([".contact h1"], { opacity: 1 });
 
   const titleSplit = SplitText.create('.contact h1', {
     type: 'chars, words, lines',
-    mask: "lines",
     linesClass: 'lineParent',
     charsClass: 'char-inner',
   });
@@ -43,7 +42,7 @@ function Contact() {
   scrollTimeline
     .from(titleSplit.chars, {
       opacity: 0,
-      yPercent: 25,
+      yPercent: 40,
       duration: 0.4,
       ease: 'back',
       stagger,
@@ -124,6 +123,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
