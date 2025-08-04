@@ -987,7 +987,7 @@ outline: none;
 
 .btnContainer {
   position: absolute;
-  top: 55svh;
+  top: 56svh;
   width: fit-content;
   height: 6.5rem;
   left: 10svw;
@@ -995,7 +995,7 @@ outline: none;
 
 .btnContainer2 {
   position: absolute;
-  top: 55svh;
+  top: 56svh;
   width: fit-content;
   height: 6.5rem;
   left: 18svw;
@@ -1684,7 +1684,7 @@ outline: none;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 5rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 .project-item {
@@ -1703,6 +1703,11 @@ outline: none;
   .project-item {
     width: 100%;
   }
+
+  .project-grid {
+  padding-top: 4rem;
+}
+
 }
 
 /* Modal positioning fix */
