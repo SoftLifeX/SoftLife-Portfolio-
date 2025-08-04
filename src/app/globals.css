@@ -424,7 +424,6 @@ section {
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 2.5rem;
-  height: 120%;
   /*position: relative;
   top: -2.4rem;*/
 }
@@ -1365,6 +1364,10 @@ outline: none;
 }
 
 /*contact*/
+.contact{
+  overflow: hidden;
+}
+
 .contact h1 {
   padding: 3.12rem;
   line-height: 0.8em;
@@ -1665,8 +1668,12 @@ outline: none;
 }
 
 /*----projects---*/
-.projects h1{
-  padding: 3.12rem;
+.projectContainer{
+  overflow: hidden;
+}
+
+.projectContainer h1{
+  padding: 3rem;
 }
 
 .project-grid {
