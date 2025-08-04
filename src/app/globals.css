@@ -425,7 +425,7 @@ section {
   margin-top: 0;
   margin-bottom: 2.5rem;
   position: relative;
-  top: -1rem;
+  top: -2.3rem;
 }
 
 .top {
@@ -1673,7 +1673,7 @@ outline: none;
 }
 
 .projectContainer h1{
-  padding: 3rem;
+  padding: 3.12rem;
 }
 
 .project-grid {
@@ -1681,7 +1681,10 @@ outline: none;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  padding: 5rem 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5rem;
+  padding-top: 4rem;
 }
 
 .project-item {
