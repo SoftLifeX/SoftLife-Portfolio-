@@ -1929,6 +1929,8 @@ clip-path: circle(0% at 50% 50%);
   overflow: hidden;
   box-shadow: 0 0 0.10rem var(--accent-color);
   border: 0.06rem solid var(--border-color);
+  margin-top: 2.5rem;
+  margin-bottom: 0;
 }
 
 .martyQuote{
