@@ -69,6 +69,7 @@ export default function Project() {
 
   return (
     <section style={{ margin: "0" }} className="projects">
+     <div className="projectContainer">
       <h1 className="title">
         Selected  Projects
       </h1>
@@ -85,6 +86,7 @@ export default function Project() {
         ))}
         <Modal modal={modal} projects={project} />
       </div>
+     </div>
     </section>
   );
 }
