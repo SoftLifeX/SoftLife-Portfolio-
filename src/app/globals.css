@@ -1,4 +1,4 @@
-1@font-face {
+@font-face {
   font-family: 'time';
   src: url(assets/fonts/Timeless.ttf);
 }
@@ -15,10 +15,16 @@
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
-@font-face {
+/*@font-face {
   font-family: 'pop';
   font-weight: normal; 
   src: url(assets/fonts/Poppins-Regular.ttf);
+}*/
+
+@font-face {
+  font-family: 'pop';
+  font-weight: normal; 
+  src: url(assets/fonts/Syne-Regular.ttf);
 }
 
 @font-face {
