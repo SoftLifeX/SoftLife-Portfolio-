@@ -425,7 +425,7 @@ section {
   margin-top: 0;
   margin-bottom: 2.5rem;
   position: relative;
-  top: -1.5rem;
+  top: -1rem;
 }
 
 .top {
@@ -1704,9 +1704,9 @@ outline: none;
     width: 100%;
   }
 
-  /*.project-grid {
-  padding-top: 4rem;
-}*/
+.projects {
+  top: -1.5rem;
+}
 
 }
 
