@@ -127,7 +127,6 @@ function Contactform() {
   return (
       <section className="contactForm">
         <div className="contact">
-          <div className="container">
             <h5 className="subtitle">
               You've scrolled this far!
             </h5>
@@ -249,13 +248,13 @@ function Contactform() {
                 <span id="msg"></span>
               </div>
             </div>
-          </div>
         </div>
       </section>
   );
 }
 
 export default Contactform
+
 
 
 
