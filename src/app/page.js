@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import Home1 from "./components/home1";
-import Home2 from "./components/home2";
+import Creativity from "./components/creativity";
 import Stacks from "./components/stacks";
 import Contact from "./components/contact";
 import { useRevealer } from "./components/hooks/useRevealer";
@@ -28,7 +28,7 @@ const Home = () => {
    <div>
       <div className="revealer" />
       <Home1 />
-      <Home2 />
+      <Creativity />
      <Stacks />
      <Contact />
    </div>
