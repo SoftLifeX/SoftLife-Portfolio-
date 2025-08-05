@@ -53,7 +53,7 @@ function Creativity() {
     scaleTl.from(".creative", {
       duration: 1,
       scaleX: 0.85,
-      ease: "circ.inOut",
+      ease: "expo",
     });
     
     gsap.from(firstMsgSplit.words, {
@@ -183,5 +183,6 @@ function Creativity() {
 }
 
 export default Creativity 
+
 
 
