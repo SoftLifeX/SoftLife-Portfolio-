@@ -182,5 +182,6 @@ function Creativity() {
   );
 }
 
-export default Home2
+export default Creativity 
+
 
