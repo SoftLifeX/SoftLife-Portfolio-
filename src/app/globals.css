@@ -86,7 +86,7 @@
   height: 2rem;
   padding: 0;
   border-radius: 50%;
-  border: 0.06rem solid var(--theme-switch);
+  /*border: 0.06rem solid var(--theme-switch);*/
 }
 
 .themeg{
@@ -562,6 +562,7 @@ h2 {
   position:relative;
   color: var(--text-color);
   margin: 1.87rem 1rem;
+  font-family: 'pop', serif;
 }
 
 .marker-highlighter::after {
@@ -1021,7 +1022,7 @@ outline: none;
 
 .slidertext {
   position: relative;
-  margin: 0;
+  margin: 0 2rem;
   /*background: -webkit-linear-gradient(var(--text-color), #ababab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
@@ -1042,7 +1043,7 @@ outline: none;
 }
 
 .homepage h2 {
-  font-family: 'play', serif;
+  font-family: 'pop', serif;
   font-weight: normal;
   color: var(--text-color);
   font-size: 2rem;
@@ -1052,7 +1053,7 @@ outline: none;
 }
 
 .homepage div h2 span {
-  font-family: 'play', serif;
+  font-family: 'tan', serif;
   font-weight: normal;
   margin-top: 0;
   position: relative;
