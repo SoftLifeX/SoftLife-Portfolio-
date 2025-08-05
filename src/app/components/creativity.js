@@ -32,7 +32,7 @@ const pageAnimation = () => {
   );
 }
 
-function Home2() {
+function Creativity() {
   //reveal text
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".quota", {
@@ -40,6 +40,20 @@ function Home2() {
     });
     const secMsgSplit = SplitText.create(".quota2", {
       type: "words",
+    });
+    
+     const scaleTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".creative",
+        start: "top bottom",
+        end: "top 85%",
+        scrub: true,
+      },
+    });
+    scaleTl.from(".creative", {
+      duration: 1,
+      scaleX: 0.85,
+      ease: "circ.inOut",
     });
     
     gsap.from(firstMsgSplit.words, {
@@ -53,6 +67,7 @@ function Home2() {
         scrub: true,
       },
     });
+    
     gsap.from(secMsgSplit.words, {
       opacity: 0.4,
       ease: "power1.in",
@@ -88,7 +103,7 @@ function Home2() {
 
 
   return (
-      <section className="home2">
+      <section className="creative">
         <div className="portfolio">
           <div className="container">
             <h1 className="quota">
@@ -168,3 +183,4 @@ function Home2() {
 }
 
 export default Home2
+
