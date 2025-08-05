@@ -166,9 +166,7 @@ const router = useTransitionRouter();
     <div className="marker">
      <h2>
       <span className="marker-wrap">
-      <span className="marker-highlight"> 
-        ‎  ‎ Software Engineer  ‎ ‎
-      </span>
+      <span className="marker-highlight"> ‎Software Engineer ‎‎‎‎‎</span>
       </span>
      </h2>
     </div>
@@ -181,8 +179,8 @@ const router = useTransitionRouter();
       
         <div className="sliderContainer">
         <div ref={slider} className="slider">
-          <h1 className="slidertext" ref={firstText}>SoftLife X • Software Engineer & Designer</h1>
-          <h1 className="slidertext" ref={secondText}>SoftLife X • Software Engineer & Designer</h1>
+          <h1 className="slidertext" ref={firstText}>SoftLife X • Software Engineer & Designer ‎ ‎ ‎ ‎ ‎ ‎</h1>
+          <h1 className="slidertext" ref={secondText}>SoftLife X • Software Engineer & Designer ‎ ‎ ‎ ‎ ‎</h1>
         </div>
       </div>
         <div className="btnContainer scale">
@@ -213,6 +211,7 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
 
