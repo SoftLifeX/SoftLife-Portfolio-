@@ -217,7 +217,7 @@ function Contactform() {
            }}>
               HomePage
             </Link>
-                <a href="./Daniel c. Daniel's Resume.pdf" download className="btn2">
+                <a href="./Daniel-C-Daniel_resume.pdf" download className="btn2">
                  Resume
                 </a>
               </div>
@@ -254,6 +254,7 @@ function Contactform() {
 }
 
 export default Contactform
+
 
 
 
