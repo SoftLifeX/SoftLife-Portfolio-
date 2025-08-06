@@ -870,7 +870,7 @@ outline: none;
 .pointer {
   position: fixed;
   top: 15svh;
-  left: 18rem;
+  left: 19.2rem;
   rotate: 45deg;
   margin: 1.87rem auto;
   justify-content: center;
@@ -893,7 +893,8 @@ outline: none;
   width: 19rem;
   height: 6rem;
   top: 13svh;
-  left: 10svw;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .statusBar1{
@@ -1031,7 +1032,7 @@ outline: none;
   line-height: 2.5em;
   font-weight: 600;
   font-family: 'pop' , serif;
-  padding-right: 3.12rem;
+  padding-right: 6rem;
   cursor: text;
 }
 
@@ -1058,11 +1059,11 @@ outline: none;
   margin-top: 0;
   position: relative;
   color: var(--base-color);
-  line-height: 1.2em;
 }
 
 .introtext{
   perspective: 500px;
+  padding-top: 1rem;
 }
 
 .typed {
@@ -1127,7 +1128,7 @@ outline: none;
   position: relative;
   width: fit-content;
   height: fit-content;
-  top: -0.5rem;
+  top: -0.6rem;
 }
 
 .marker-wrap{
