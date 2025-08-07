@@ -908,6 +908,10 @@ outline: none;
   text-decoration: none;
 }
 
+.statusBar1 p {
+  text-align: center;
+} 
+
 .indicator{
   position: absolute;
   left: 0;
@@ -2319,6 +2323,10 @@ form textarea {
     top: 40svh;
     left: 15rem;
   }
+
+  .statusBar1 p {
+  text-align: left;
+} 
 
   .homepage {
     height: 100svh;
