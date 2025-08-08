@@ -916,7 +916,7 @@ outline: none;
 
 .indicator{
   position: absolute;
-  left: 21%;
+  left: 19%;
   top: 20%;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5rem;
