@@ -15,11 +15,11 @@
   src: url(assets/fonts/PlayfairDisplay-Regular.ttf);
 }
 
-/*@font-face {
-  font-family: 'pop';
+@font-face {
+  font-family: 'pops';
   font-weight: normal; 
   src: url(assets/fonts/Poppins-Regular.ttf);
-}*/
+}
 
 @font-face {
   font-family: 'pop';
@@ -739,6 +739,7 @@ height: fit-content;
 position: relative;
   z-index: 1;
   font-size: 0.9rem;
+  font-family: 'pops', serif;
 }
 
 .btn2:hover {
@@ -821,6 +822,7 @@ outline: none;
   z-index: 5;
   position: relative;
   font-size: 0.9rem;
+  font-family: 'pops', serif;
 }
 
 .btn4:hover {
@@ -914,7 +916,7 @@ outline: none;
 
 .indicator{
   position: absolute;
-  left: 10%;
+  left: 95%;
   top: 20%;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5rem;
@@ -1419,6 +1421,15 @@ outline: none;
   padding: 1.56rem 0;
   color: var(--tertiary-text);
 }
+
+.copyright p {
+  align-items: center;
+  justify-content: center;
+} 
+
+.copyright p a {
+  text-decoration: none;
+} 
 
 
 /*about page*/
