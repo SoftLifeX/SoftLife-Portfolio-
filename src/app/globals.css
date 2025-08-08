@@ -914,7 +914,7 @@ outline: none;
 
 .indicator{
   position: absolute;
-  left: 0;
+  left: 10%;
   top: 20%;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5rem;
@@ -1413,7 +1413,9 @@ outline: none;
 
 .copyright {
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
   padding: 1.56rem 0;
   color: var(--tertiary-text);
 }
@@ -2326,6 +2328,10 @@ form textarea {
 
   .statusBar1 p {
   text-align: left;
+} 
+
+.indicator{
+  left: 0;
 } 
 
   .homepage {
