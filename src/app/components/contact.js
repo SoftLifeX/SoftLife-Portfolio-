@@ -80,7 +80,7 @@ function Contact() {
             </a>
             </Magnetic>
           </div>
-          <div className="socials">
+    {/*<div className="socials">
                   <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                    <Lottie
                   id="lottie3"
@@ -116,12 +116,31 @@ function Contact() {
                   animationData={Github} 
                     hover/>
                   </a>
-          </div>
+          </div>*/} 
         </div>
         <div className="copyright">
           <p>
-            Copyright <i className="bx bx-copyright"></i> SoFTLife. All Rights
-            Reserved 2025
+            <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
+                     <Lottie
+                  id="lottie3"
+                  loop={false} 
+                  animationData={LinkedIn}
+                    hover/> LinkedIn 
+            </a>
+          </p>  
+                        
+          <p>
+            <i className="bx bx-copyright"></i> SoftLifeX 2025
+          </p>
+          
+          <p>
+            <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
+                    <Lottie
+                  id="lottie3"
+                  loop={false} 
+                  animationData={Github} 
+                    hover/> GitHub 
+                  </a>
           </p>
         </div>
       </section>
@@ -129,6 +148,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
