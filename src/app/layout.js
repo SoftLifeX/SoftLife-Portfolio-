@@ -18,14 +18,14 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: { 
-    default: 'SoftlifeX • Software Engineer | Designer',
-    template: "%s - SoftlifeX • Software Engineer | Designer"
+    default: 'Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer',
+    template: "%s - Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer"
   },
-  description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
-  keywords: ['Software Engineer', 'Web Development', 'App Development', 'Robotics', 'Cloud Computing', 'Game Development', 'Full Stack Developer', 'softlifex'],
-  authors: [{ name: 'Daniel Daniel c' }],
-  creator: 'SoftlifeX',
-  publisher: 'SoftlifeX',
+  description: 'Award-winning Software Engineer & Designer, helping brands thrive in our digital era.',
+  keywords: ['Software Engineer', 'Full-stack Developer', 'softlifex', 'Daniel c Daniel' ],
+  authors: [{ name: 'Daniel c Daniel ' }, { name: 'SoftlifeX', url: 'https://softlifex.vercel.app/' }],
+  creator: 'Daniel c Daniel',
+  publisher: 'Daniel c Daniel ',
   formatDetection: {
     email: false,
     address: false,
@@ -35,9 +35,9 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://softlifex.vercel.app',
-    siteName: 'softlifex Portfolio',
-    title: 'SoftlifeX • Software Engineer | Designer',
-    description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
+    siteName: 'Daniel c Daniel | softlifex Portfolio',
+    title: 'Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer',
+    description: 'Award-winning Software Engineer & Designer, helping brands thrive in our digital era.',
     /*images: [
       {
         url: '/og.png',
@@ -49,9 +49,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SoftlifeX • Software Engineer | Designer',
-    description: 'Award-winning Software engineer, helping brands thrive in our digital era.',
-    creator: '@SoftLife_Dev',
+    title: 'Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer',
+    description: 'Award-winning Software Engineer & Designer, helping brands thrive in our digital era.',
+    creator: '@SoftLifeX',
   },
   robots: {
     index: true,
@@ -71,7 +71,7 @@ export const metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'SoftlifeX',
+    title: 'Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer',
   },
 };
   
