@@ -15,6 +15,7 @@ import { usePathname } from "next/navigation";
 
 
 
+
 //page transition....
 const pageAnimation = () => {
   document.documentElement.animate(
@@ -211,6 +212,7 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
 
