@@ -121,11 +121,7 @@ function Contact() {
         <div className="copyright">
           <p>
             <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
-                     <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={LinkedIn}
-                    hover/> LinkedIn 
+              LinkedIn 
             </a>
           </p>  
                         
@@ -135,12 +131,8 @@ function Contact() {
           
           <p>
             <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
-                    <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={Github} 
-                    hover/> GitHub 
-                  </a>
+             GitHub 
+            </a>
           </p>
         </div>
       </section>
@@ -148,6 +140,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
