@@ -7,7 +7,7 @@ export const project = [
         title: "Ochi",
         img: images.ochi,
         color: "#cdea68",
-        href: "https://ochi-website-clone.vercel.app/"
+        href: "https://ochi-website-clone-bysoft.vercel.app/"
 
     },
     {
@@ -15,7 +15,7 @@ export const project = [
         title: "Github",
         img: images.github,
         color: "#0C1015",
-        href: "https://github-landing-page-nu.vercel.app/"
+        href: "https://github-clone-bysoft.vercel.app/"
 
     },
     {
@@ -23,28 +23,28 @@ export const project = [
         title: "SupaDupa",
         img: images.supadupa,
         color: "#163200",
-        href: "https://supadupa-website-clone-by-devwithzain.vercel.app/"
+        href: "https://supadupa-website-bysoft.vercel.app/"
     },
     {
         id: 4,
         title: "Flow Party",
         img: images.flow,
         color: "#B3EB16",
-        href: "https://flowparty-website-clone-by-devwithzain.vercel.app/"
+        href: "https://flow-website-bysoft.vercel.app/"
     },
     {
         id: 5,
         title: "Metaverse",
         img: images.metaverse,
         color: "#1A232E",
-        href: "https://metaverse-landings-page.vercel.app/"
+        href: "https://metaverse-website-bysoft.vercel.app/"
     },
     {
         id: 6,
         title: "LightSass",
         img: images.lightsass,
         color: "#0D1EA2",
-        href: "https://light-sass-landing-page-devwithzain.vercel.app/"
+        href: "https://light-website-bysoft.vercel.app/"
     },
 ];
 
