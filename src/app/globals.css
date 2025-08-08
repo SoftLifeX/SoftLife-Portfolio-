@@ -916,7 +916,7 @@ outline: none;
 
 .indicator{
   position: absolute;
-  left: 95%;
+  left: 30%;
   top: 20%;
   transform: translateX(-50%) translateY(-50%);
   width: 0.5rem;
@@ -1424,11 +1424,11 @@ outline: none;
 
 .copyright p {
   align-items: center;
-  justify-content: center;
 } 
 
 .copyright p a {
   text-decoration: none;
+  color: var(--tertiary-text);
 } 
 
 
