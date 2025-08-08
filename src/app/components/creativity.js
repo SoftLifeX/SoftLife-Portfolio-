@@ -36,27 +36,27 @@ function Creativity() {
   //reveal text
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".quota", {
-      type: "words",
+      type: "chars, words",
     });
     const secMsgSplit = SplitText.create(".quota2", {
-      type: "words",
+      type: "chars, words",
     });
     
      const scaleTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".creative",
         start: "top bottom",
-        end: "top 85%",
+        end: "top 75%",
         scrub: true,
       },
     });
     scaleTl.from(".creative", {
       duration: 1,
-      scaleX: 0.85,
+      scaleX: 0.80,
       ease: "expo",
     });
     
-    gsap.from(firstMsgSplit.words, {
+    gsap.from(firstMsgSplit.chars, {
       opacity: 0.4,
       ease: "power1.in",
       stagger: 1,
@@ -68,7 +68,7 @@ function Creativity() {
       },
     });
     
-    gsap.from(secMsgSplit.words, {
+    gsap.from(secMsgSplit.chars, {
       opacity: 0.4,
       ease: "power1.in",
       stagger: 1,
@@ -85,7 +85,7 @@ function Creativity() {
       scrollTrigger: {
         trigger: ".marker-wrap2",
         start: "top 90%",
-        end: "bottom 90%",
+        end: "bottom 88%",
         scrub: true,
       },
     });
@@ -183,6 +183,7 @@ function Creativity() {
 }
 
 export default Creativity 
+
 
 
 
