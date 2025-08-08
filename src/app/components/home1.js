@@ -61,7 +61,7 @@ const router = useTransitionRouter();
          ease: "power3",
          delay: 1.8,
          stagger: {
-         amount: 2.8,
+         amount: 2.7,
           from: "random"
          }
       });
@@ -84,7 +84,7 @@ const router = useTransitionRouter();
         duration: 0.6, 
         ease: "power3",
         stagger: 0.25,
-        delay: 2.7,
+        delay: 2.5,
       });
     }
   });
@@ -106,7 +106,7 @@ const router = useTransitionRouter();
          scale: 0,
          duration: 0.4,
          ease: "circ.out",
-         delay: 3.1,
+         delay: 2.9,
         });
    }, []);
 
@@ -211,6 +211,7 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
 
