@@ -62,7 +62,7 @@ function Stacks() {
               </div>
               <div className="cert_cv">
                 <a
-                  href="./daniel-daniel-resume.pdf"
+                  href="./Daniel-C-Daniel_Resume.pdf"
                   download
                   className="btn4"
                   title="Download Resume"
@@ -117,3 +117,4 @@ function Stacks() {
 }
 
 export default Stacks;
+
