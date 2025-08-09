@@ -186,7 +186,7 @@ const router = useTransitionRouter();
       </div>
         <div className="btnContainer scale">
             <Magnetic>
-                <a href="./Daniel-C-Daniel_resume.pdf" download className="btn4">
+                <a href="./Daniel-C-Daniel_Resume.pdf" download className="btn4">
                   Resume
                 </a>
             </Magnetic>
@@ -212,6 +212,7 @@ const router = useTransitionRouter();
 }
 
 export default Home1
+
 
 
 
