@@ -163,20 +163,15 @@ function Contactform() {
                   animationData={Email} 
                     />
                   </a>
-                  <a href="https://web.facebook.com/SoftLife.dev" target="_blank" data-title="Facebook">
-                    <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={Facebook} 
-                    />
-                  </a>
-                  <a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
+              
+{/*<a href="https://x.com/SoftLife_Dev" target="_blank" data-title="X">
                     <Lottie
                   id="lottie3"
                   loop={false} 
                   animationData={X} 
                     />
-                  </a>
+                  </a>*/} 
+                    
                   <a href="https://wa.link/wjns9h" target="_blank" data-title="WhatsApp">
                     <Lottie
                   id="lottie3"
@@ -184,13 +179,7 @@ function Contactform() {
                   animationData={Whatsapp}
                     />
                   </a>
-                  <a href="https://www.instagram.com/softlifekid/" target="_blank" data-title="Instagram">
-                    <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={Instagram} 
-                    />
-                  </a>
+                  
                   <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
                      <Lottie
                   id="lottie3"
@@ -198,7 +187,8 @@ function Contactform() {
                   animationData={LinkedIn}
                     />
                   </a>
-                  <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
+                    
+                  <a href="https://github.com/SoftLifeX" target="_blank" data-title="Github">
                     <Lottie
                   id="lottie3"
                   loop={false}  
@@ -217,7 +207,7 @@ function Contactform() {
            }}>
               HomePage
             </Link>
-                <a href="./Daniel-C-Daniel_resume.pdf" download className="btn2">
+                <a href="./Daniel-C-Daniel_Resume.pdf" download className="btn2">
                  Resume
                 </a>
               </div>
@@ -254,6 +244,7 @@ function Contactform() {
 }
 
 export default Contactform
+
 
 
 
