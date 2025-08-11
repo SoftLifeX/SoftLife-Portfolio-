@@ -126,7 +126,7 @@ function Contact() {
           </p>  
                         
           <p>
-            <i className="bx bx-copyright"></i> SoftLifeX 2025
+            <i className="bx bx-copyright"></i> SoftLifeX {new Date().getFullYear()}
           </p>
           
           <p>
@@ -140,6 +140,7 @@ function Contact() {
 }
 
 export default Contact
+
 
 
 
