@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata = {
   title: { 
     default: 'Daniel c Daniel | SoftlifeX • Full-stack | Mobile Developer & Designer',
@@ -81,7 +82,21 @@ export default function RootLayout({ children }) {
    <ViewTransitions>
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link
+
+       <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://softlifex.vercel.app",
+              "@type": "WebSite",
+              name: "Daniel C. Daniel", // ← Your new site name here
+              alternateName: ["SoftLifeX", "softlifex.vercel.app"],
+              url: "https://softlifex.vercel.app"
+            }),
+          }}
+        />
+
+      <link
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
       />
