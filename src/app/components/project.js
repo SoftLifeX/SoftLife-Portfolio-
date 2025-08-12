@@ -6,6 +6,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { project } from "./constants";
 import ProjectCard from "./projectCard";
 import Modal from "./modal";
+import CurveArrow from "./svg/curveArrow"
+import Lottie from "lottie-react";
+import Case from "@/app/assets/Case.json";
 
 export default function Project() {
   
