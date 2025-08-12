@@ -33,12 +33,13 @@ useRevealer();
       <div className="revealer" />
       <About1 />
       <About3 />
-       <Project />
+      <Reviews />
        <Contact />
     </div>
   );
 };
 
 export default About;
+
 
 
