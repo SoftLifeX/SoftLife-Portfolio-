@@ -11,6 +11,8 @@ import Creativity from "./components/creativity";
 import Stacks from "./components/stacks";
 import Contact from "./components/contact";
 import { useRevealer } from "./components/hooks/useRevealer";
+import Project from "./components/project";
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const Home = () => {
@@ -28,7 +30,7 @@ const Home = () => {
    <div>
       <div className="revealer" />
       <Home1 />
-      <Creativity />
+      <Project />
      <Stacks />
      <Contact />
    </div>
