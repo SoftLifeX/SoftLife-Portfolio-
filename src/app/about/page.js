@@ -10,6 +10,7 @@ import gsap from "gsap";
 import About1 from "../components/about1";
 import Contact from "../components/contact";
 import About3 from "../components/about3";
+import Reviews from "../components/reviews";
 import { useRevealer } from "../components/hooks/useRevealer";
 
 
@@ -32,10 +33,12 @@ useRevealer();
       <div className="revealer" />
       <About1 />
       <About3 />
+       <Project />
        <Contact />
     </div>
   );
 };
 
 export default About;
+
 
