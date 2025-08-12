@@ -166,23 +166,6 @@ useGSAP(() => {
          </h2>
            <div className="curveCon">
              <CurveArrow />
-           </div><h2 className="quota">
-              Creativity Isn't Just A Skill <br /> 
-            </h2>
-        <h2 className="markerbound2">
-          <div className="marker2">
-           <span className="marker-wrap2">
-             <span className="marker-highlight2"> 
-               ‎‎ It's A Lifestyle  ‎‎
-             </span>
-           </span>
-           </div>
-         </h2>
-         <h2 className="quota2">
-           We Live It!
-         </h2>
-           <div className="curveCon">
-             <CurveArrow />
            </div>
 
       <div className="project-grid" ref={container}>
