@@ -75,43 +75,46 @@ useGSAP(() => {
   }, []);
   
   //splitText
-  useGSAP(() => {
+useGSAP(() => {
   document.fonts.ready.then(() => {
-    // Initial reveal for both
-    gsap.set([".title"], { opacity: 1, lineHeight: "0.8em" });
-
-    // === Title Animation ===
-    const heroSplit = new SplitText(".title", {
-      type: "chars, words, lines",
-      mask: "lines",
-      linesClass: "lineParent",
-      charsClass: "char-inner",
-      autoSplit: true,
-      onSplit: (self) => {
-        const stagger = 0.025;
-        const delay = 1.6;
-        const duration = 0.4;
-        const totalDuration = self.chars.length * stagger;
-
-        // Animate chars
-        gsap.from(self.chars, {
-          opacity: 0,
-          yPercent: 40,
-          duration,
-          ease: "back",
-          stagger,
-          delay,
-        });
-
-        // Animate line-height globally in sync
-        gsap.to(".title", {
-          lineHeight: "1.2em",
-          duration: totalDuration,
-          ease: "power1.out",
-          delay,
-        });
-      },
+    const titleSplit = SplitText.create('.projectContainer h1', {
+      type: 'chars, words, lines',
+      mask: 'lines',
+      linesClass: 'lineParent',
+      charsClass: 'char-inner',
     });
+
+    const stagger = 0.025;
+    const totalDuration = titleSplit.chars.length * stagger;
+
+    // Make sure initial state is clean
+    gsap.set('.projectContainer h1', {
+      opacity: 1,
+      lineHeight: '0.8em',
+    });
+
+    const tl = gsap.timeline(
+        {
+         scrollTrigger: {
+         trigger: '.projectContainer',
+         start: 'top 72%',
+         }
+        }
+    );
+
+    tl.from(titleSplit.chars, {
+      opacity: 0,
+      yPercent: 40,
+      duration: 0.4,
+      ease: 'back.out',
+      stagger,
+    });
+
+    tl.to('.projectContainer h1', {
+      lineHeight: '1.2em',
+      duration: totalDuration,
+      ease: 'power1.out',
+    }, '<'); // Starts at the same time as the char animation
   });
 }, []);
   
@@ -135,24 +138,6 @@ useGSAP(() => {
   return (
     <section className="projects">
      <div className="projectContainer">
-     <h1 className="quota">
-              Creativity Isn't Just A Skill <br /> 
-            </h1>
-        <h1 className="markerbound2">
-          <div className="marker2">
-           <span className="marker-wrap2">
-             <span className="marker-highlight2"> 
-               ‎‎ It's A Lifestyle  ‎‎
-             </span>
-           </span>
-           </div>
-         </h1>
-         <h1 className="quota2">
-           We Live It!
-         </h1>
-           <div className="curveCon">
-             <CurveArrow />
-           </div>
             <h5>
              Case Studies
              <Lottie
@@ -164,6 +149,41 @@ useGSAP(() => {
       <h1 className="title">
         Selected  Projects
       </h1>
+          <h2 className="quota">
+              Creativity Isn't Just A Skill <br /> 
+            </h2>
+        <h2 className="markerbound2">
+          <div className="marker2">
+           <span className="marker-wrap2">
+             <span className="marker-highlight2"> 
+               ‎‎ It's A Lifestyle  ‎‎
+             </span>
+           </span>
+           </div>
+         </h2>
+         <h2 className="quota2">
+           We Live It!
+         </h2>
+           <div className="curveCon">
+             <CurveArrow />
+           </div><h2 className="quota">
+              Creativity Isn't Just A Skill <br /> 
+            </h2>
+        <h2 className="markerbound2">
+          <div className="marker2">
+           <span className="marker-wrap2">
+             <span className="marker-highlight2"> 
+               ‎‎ It's A Lifestyle  ‎‎
+             </span>
+           </span>
+           </div>
+         </h2>
+         <h2 className="quota2">
+           We Live It!
+         </h2>
+           <div className="curveCon">
+             <CurveArrow />
+           </div>
 
       <div className="project-grid" ref={container}>
         {project.map((proj, idx) => (
