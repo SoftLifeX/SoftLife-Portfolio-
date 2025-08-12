@@ -8,7 +8,69 @@ import ProjectCard from "./projectCard";
 import Modal from "./modal";
 
 export default function Project() {
+  
+useGSAP(() => {
+    const firstMsgSplit = SplitText.create(".quota", {
+      type: "chars, words",
+    });
+    const secMsgSplit = SplitText.create(".quota2", {
+      type: "chars, words",
+    });
+    
+     const scaleTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".creative",
+        start: "top bottom",
+        end: "top 75%",
+        scrub: true,
+      },
+    });
+    scaleTl.from(".creative", {
+      duration: 1,
+      scaleX: 0.80,
+      ease: "expo",
+    });
+    
+    gsap.from(firstMsgSplit.chars, {
+      opacity: 0.4,
+      ease: "power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".quota",
+        start: "top 90%",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
+    
+    gsap.from(secMsgSplit.chars, {
+      opacity: 0.4,
+      ease: "power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".quota2",
+        start: "top bottom",
+        end: "bottom 90%",
+        scrub: true,
+      },
+    });
 
+    const revealTl = gsap.timeline({
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".marker-wrap2",
+        start: "top 90%",
+        end: "bottom 88%",
+        scrub: true,
+      },
+    });
+    revealTl.from(".marker-wrap2", {
+      duration: 1,
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+      ease: "circ.inOut",
+    });
+  }, []);
+  
   //splitText
   useGSAP(() => {
   document.fonts.ready.then(() => {
@@ -70,6 +132,32 @@ export default function Project() {
   return (
     <section className="projects">
      <div className="projectContainer">
+     <h1 className="quota">
+              Creativity Isn't Just A Skill <br /> 
+            </h1>
+        <h1 className="markerbound2">
+          <div className="marker2">
+           <span className="marker-wrap2">
+             <span className="marker-highlight2"> 
+               ‎‎ It's A Lifestyle  ‎‎
+             </span>
+           </span>
+           </div>
+         </h1>
+         <h1 className="quota2">
+           We Live It!
+         </h1>
+           <div className="curveCon">
+             <CurveArrow />
+           </div>
+            <h5>
+             Case Studies
+             <Lottie
+                  id="lottie3"
+                  loop={false} 
+                  animationData={Case}
+                  hover/>
+            </h5>
       <h1 className="title">
         Selected  Projects
       </h1>
