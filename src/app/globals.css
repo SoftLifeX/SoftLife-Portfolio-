@@ -1154,7 +1154,6 @@ outline: none;
 
 .marker2 {
   padding-top: 0;
-  rotate: 5deg;
   position: relative;
   width: fit-content;
   height: fit-content;
@@ -1173,7 +1172,7 @@ outline: none;
   background-color: var(--text-color);
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
-  left: -1rem;
+  left: 2rem;
   font-family: 'pop';
   margin-top: 2rem;
   line-height: 1.2em;
@@ -1217,7 +1216,7 @@ outline: none;
 }
 
 .quota{
-  padding-top: 3rem;
+  padding-top: 0;
   margin-top: 2rem;
   color: var(--text-color);
   opacity: 1;
@@ -1631,8 +1630,8 @@ outline: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 0.25rem;
+  gap: 0.2rem;
+  padding: 0.1rem;
 }
 
 .techstack {
@@ -1640,8 +1639,8 @@ outline: none;
   flex-direction: column;
   align-items: center;   /* horizontally center icon and text */
   justify-content: center;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   transition: transform 0.3s ease-in-out;
   text-align: center;
   cursor: pointer;
