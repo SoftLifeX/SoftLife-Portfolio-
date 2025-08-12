@@ -109,10 +109,6 @@ function Header() {
       url: "/about",
     },
     {
-      label: "Craft",
-      url: "/craft",
-    },
-    {
       label: "Contact",
       url: "/contact",
     },
