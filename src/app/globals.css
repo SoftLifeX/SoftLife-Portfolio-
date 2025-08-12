@@ -1172,7 +1172,6 @@ outline: none;
   background-color: var(--text-color);
   border-radius: 1px;
   padding: 0.5rem 0.5rem;
-  left: 2rem;
   font-family: 'pop';
   margin-top: 2rem;
   line-height: 1.2em;
@@ -1239,7 +1238,7 @@ outline: none;
 
 .markerbound2{
   padding-bottom: 0;
-  padding-left: 1.5rem;
+  padding-left: 3rem;
   padding-top: 0;
   font-family: 'pop';
   margin: 0;
@@ -1629,9 +1628,9 @@ outline: none;
 .tools {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   gap: 0.2rem;
-  padding: 0.1rem;
+  padding: 0.1rem;  
 }
 
 .techstack {
@@ -1639,8 +1638,8 @@ outline: none;
   flex-direction: column;
   align-items: center;   /* horizontally center icon and text */
   justify-content: center;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   transition: transform 0.3s ease-in-out;
   text-align: center;
   cursor: pointer;
