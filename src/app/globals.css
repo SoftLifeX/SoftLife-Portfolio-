@@ -439,7 +439,10 @@ section {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
+  height: 100%;
   padding: 0 10%;
   display: flex;
   justify-content: center;
@@ -451,8 +454,11 @@ section {
 .sticky {
   position: fixed;
   width: 100%;
-    background-color: transparent;
-     backdrop-filter: blur(5px);
+   /* background-color: transparent;
+     backdrop-filter: blur(5px); */
+  transition: scale 0.5s ease-in-out;
+  scale: 0;
+  will-change: transform;
 }
 
 .navbar {
@@ -474,6 +480,9 @@ section {
   border: 0.06rem solid var(--border-color);
   background-color: transparent;
   backdrop-filter: blur(5px);
+  transition: scale 0.5s ease-in-out;
+  scale: 1;
+  will-change: transform;
   }
 
 .navbar ul li {
@@ -491,7 +500,7 @@ section {
   font-size: 0.9rem;
 }
 
-.navbar a span {
+.navbar a .icon{
   display: none;
 }
 
@@ -509,6 +518,62 @@ section {
   scale: 1.01;
 }
 
+.navbar2 {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 1.7rem;
+  padding: 0.5rem 1rem;
+  padding-right: 2.5rem;
+  border: 0.06rem solid var(--border-color);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: scale 0.5s ease-in-out;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 0.10rem var(--accent-color);
+  border: 0.06rem solid var(--border-color);
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  transition: scale 0.5s ease-in-out;
+  scale: 1;
+  will-change: transform;
+  }
+
+.navbar2 ul li {
+  list-style: none;
+}
+
+.navbar2 a {
+  display: inline;
+  color: var(--tertiary-text);
+  border-radius: 50%;
+  text-decoration: none;
+  margin-left: 2.5rem;
+  list-style: none;
+  transition: padding 0.5s ease-in-out, box-shadow 0.5s, scale 0.5s ease-in-out;
+  font-size: 0.9rem;
+}
+
+.navbar2 a .label{
+  display: none;
+}
+
+.navbar2 a:hover {
+  background: transparent;
+  padding: 0.25rem 1rem;
+  box-shadow: 0 0 0.10rem var(--tertiary-text);
+}
+
+.navbar2 a.active {
+  border-radius: 50%;
+  color: var(--base-color);
+  background-color: var(--text-color);
+  padding: 0.25rem 1rem;
+  scale: 1.01;
+}
 
 .menuButton {
   left: 5svh;
@@ -523,6 +588,7 @@ section {
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .stickymenuButton{
@@ -530,6 +596,8 @@ section {
   background-color: var(--text-color);
   scale: 1.6;
   padding: 0.3rem;
+  transition: scale 0.5s ease-in-out;
+  will-change: transform;
 }
 
 
@@ -1175,6 +1243,7 @@ outline: none;
   padding: 0.5rem 0.5rem;
   left: -1rem;
   font-family: 'pop';
+  font-size: 2rem;
   margin-top: 2rem;
   line-height: 1.2em;
 }
@@ -1224,6 +1293,7 @@ outline: none;
   padding-bottom: 0;
   padding-left: 1.5rem;
   font-family: 'pop', serif;
+  font-size: 2rem;
   line-height: 1.2em;
 }
 
@@ -1235,6 +1305,7 @@ outline: none;
   padding-top: 0;
   margin-top: 2rem;
   font-family: 'pop', serif;
+  font-size: 2rem;
   line-height: 1.2em;
 }
 
@@ -1243,6 +1314,7 @@ outline: none;
   padding-left: 1.5rem;
   padding-top: 0;
   font-family: 'pop';
+  font-size: 2rem;
   margin: 0;
 }
 
@@ -1268,7 +1340,7 @@ outline: none;
 
 .curveCon {
   position: absolute;
-  right: 2rem;
+  right: 5rem;
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -2100,6 +2172,10 @@ form textarea {
 }
 
 @media (max-width: 768px) {
+.navbar2{
+  display: none;
+}
+  
   .homepage {
     padding: 1.3rem 5%;
   }
@@ -2165,7 +2241,7 @@ form textarea {
     position: fixed;
     right: 2rem;
     width: 15rem;
-    height: 17.7rem;
+    height: 20rem;
     background: var(--text-color);
     overflow: hidden;
     text-shadow: none;
