@@ -1,6 +1,29 @@
 import { Icons } from "../svg"; 
 import { images } from "@/app/images/images";
 
+export const routes = [
+    {
+      label: "Home",
+      url: "/",
+    },
+    {
+      label: "About",
+      url: "/about",
+    },
+	{
+      label: "Contact",
+      url: "/contact",
+    },
+	{
+      label: "LinkedIn",
+      url: "https://linkedin.com/in/daniel-c-daniel-dev",
+    },
+	{
+      label: "GitHub",
+      url: "https://github.com/SoftLifeDev",
+    },
+  ];
+
 export const project = [
     {
         id: 1,
