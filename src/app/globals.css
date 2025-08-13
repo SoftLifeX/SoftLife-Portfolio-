@@ -79,7 +79,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 1.7rem;
+  top: 2rem;
   right: 5svw;
   cursor: pointer;
   width: 2rem;
@@ -459,7 +459,7 @@ section {
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  top: 1.7rem;
+  top: 2rem;
   padding: 0.5rem 1rem;
   padding-right: 2.5rem;
   border: 0.06rem solid var(--border-color);
@@ -519,7 +519,7 @@ section {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
-  top: 1.7rem;
+  top: 2rem;
   justify-content: space-between;
   flex-direction: column;
   transition: scale 0.5s ease-in-out;
@@ -2009,6 +2009,7 @@ clip-path: circle(0% at 50% 50%);
   left: 100%;
   border-radius: 10px;
   width: 25rem;
+  height: 25rem;
   padding: 0 1.2rem;
   will-change: transform;
   transform: translateY(-12rem);
