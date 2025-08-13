@@ -14,6 +14,8 @@ import { usePathname } from "next/navigation";
 
 import { motion as m } from "motion/react";
 
+import { routes } from "./constants";
+
 
 function Header() {
 
@@ -98,21 +100,6 @@ function Header() {
 
   });
 
-
-  const routes = [
-    {
-      label: "Home",
-      url: "/",
-    },
-    {
-      label: "About",
-      url: "/about",
-    },
-    {
-      label: "Contact",
-      url: "/contact",
-    },
-  ];
 
    //theme switch
 
