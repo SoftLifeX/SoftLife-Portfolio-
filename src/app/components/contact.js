@@ -118,7 +118,7 @@ function Contact() {
                   </a>
           </div>*/} 
         </div>
-        <div className="copyright">
+        <footer className="copyright">
           <p>
             <a href="https://linkedin.com/in/daniel-c-daniel-dev" target="_blank" data-title="linkedin">
               LinkedIn 
@@ -130,16 +130,17 @@ function Contact() {
           </p>
           
           <p>
-            <a href="https://github.com/SoftLifeDev" target="_blank" data-title="Github">
+            <a href="https://github.com/SoftLifeX" target="_blank" data-title="Github">
              GitHub 
             </a>
           </p>
-        </div>
+        </footer>
       </section>
   );
 }
 
 export default Contact
+
 
 
 
