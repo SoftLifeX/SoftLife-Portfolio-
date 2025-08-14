@@ -20,7 +20,7 @@ export const routes = [
     },
 	{
       label: "GitHub",
-      url: "https://github.com/SoftLifeDev",
+      url: "https://github.com/SoftLifeX",
     },
   ];
 
