@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
 import { techStack } from "./constants";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function Stacks() {
   const [isTools, setIsTools] = useState(true);
+
+  useGSAP(() => {
+  const scaleTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about2",
+        start: "top bottom",
+        end: "top 75%",
+        scrub: true,
+      },
+    });
+    scaleTl.from(".marker-highlighter::after", {
+      duration: 1,
+      width: 0,
+      ease: "expo",
+    });
+}, []);
 
   
   return (
@@ -117,4 +135,5 @@ function Stacks() {
 }
 
 export default Stacks;
+
 
