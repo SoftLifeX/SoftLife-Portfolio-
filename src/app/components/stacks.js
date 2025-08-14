@@ -11,11 +11,11 @@ function Stacks() {
       scrollTrigger: {
         trigger: ".about2",
         start: "top bottom",
-        end: "top 75%",
+        end: "top 60%",
         scrub: true,
       },
     });
-    scaleTl.from(".marker-highlighter::after", {
+    scaleTl.from(".marker-highlighter:after", {
       duration: 1,
       width: 0,
       ease: "expo",
@@ -135,5 +135,6 @@ function Stacks() {
 }
 
 export default Stacks;
+
 
 
