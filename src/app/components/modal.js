@@ -24,9 +24,10 @@ export default function Modal({ modal, projects }) {
     const yLabel = moveY(cursorLabel, 0.45);
 
     const onMouseMove = (e) => {
-      const { clientX, clientY } = e; // viewport-based coords
-      xModal(clientX);
-      yModal(clientY);
+      const { clientX, clientY } = e;
+      // subtract half width/height to center modal
+      xModal(clientX - 200); 
+      yModal(clientY - 175); 
       xCursor(clientX);
       yCursor(clientY);
       xLabel(clientX);
@@ -45,37 +46,16 @@ export default function Modal({ modal, projects }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        style={{
-          width: 400,
-          height: 350,
-          overflow: "hidden",
-          position: "fixed",
-          top: "50%",
-          left: "50%",
-          pointerEvents: "none",
-          zIndex: 999,
-        }}
       >
         <div
-          style={{
-            top: `${index * -100}%`,
-            position: "absolute",
-            height: "100%",
-            width: "100%",
-            transition: "top 0.5s cubic-bezier(0.76, 0, 0.24, 1)",
-          }}
+          className="modal-slider"
+          style={{ top: `${index * -100}%` }}
         >
           {projects.map((project, i) => (
             <div
               key={`modal_${i}`}
-              style={{
-                height: "100%",
-                width: "100%",
-                backgroundColor: project.color,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
+              className="modal-slide"
+              style={{ backgroundColor: project.color }}
             >
               <Image
                 src={project.img}
