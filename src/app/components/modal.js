@@ -25,8 +25,8 @@ export default function Modal({ modal, projects }) {
 
     const onMouseMove = (e) => {
       const { pageX, pageY } = e;
-      xModal(pageX);
-      yModal(pageY);
+      xModal(pageX - 200); // 200 = half of modal width (400 / 2)
+      yModal(pageY - 175); // 175 = half of modal height (350 / 2)
       xCursor(pageX);
       yCursor(pageY);
       xLabel(pageX);
