@@ -11,7 +11,7 @@ export default function Modal({ modal, projects }) {
   const cursorLabel = useRef(null);
 
   useEffect(() => {
-    // use gsap.quickTo with transforms instead of left/top
+    // Animate x/y transforms (faster + less buggy than left/top)
     const moveX = (target, duration) =>
       gsap.quickTo(target.current, "x", { duration, ease: "power3" });
     const moveY = (target, duration) =>
@@ -25,11 +25,13 @@ export default function Modal({ modal, projects }) {
     const yLabel = moveY(cursorLabel, 0.45);
 
     const onMouseMove = (e) => {
-      const { clientX, clientY } = e; // viewport-relative
-      // center modal on cursor
-      xModal(clientX - 200); // 400 / 2
-      yModal(clientY - 175); // 350 / 2
-      // cursor and label follow exactly
+      const { clientX, clientY } = e; // viewport-relative coords
+
+      // Center modal on cursor (modal is 400x350)
+      xModal(clientX - 200);
+      yModal(clientY - 175);
+
+      // Cursor + label follow exactly
       xCursor(clientX);
       yCursor(clientY);
       xLabel(clientX);
@@ -42,6 +44,7 @@ export default function Modal({ modal, projects }) {
 
   return (
     <>
+      {/* Modal preview */}
       <motion.div
         ref={modalContainer}
         className="modal-container"
@@ -49,13 +52,13 @@ export default function Modal({ modal, projects }) {
         initial="initial"
         animate={active ? "enter" : "closed"}
         style={{
-          position: "fixed", // fixed to viewport
+          position: "fixed", // key: fixed to viewport
           top: 0,
           left: 0,
           width: 400,
           height: 350,
           overflow: "hidden",
-          pointerEvents: "none", // don’t block clicks
+          pointerEvents: "none", // doesn’t block mouse
           zIndex: 9999,
         }}
       >
@@ -92,6 +95,7 @@ export default function Modal({ modal, projects }) {
         </div>
       </motion.div>
 
+      {/* Cursor dot */}
       <motion.div
         ref={cursor}
         className="modal-cursor"
@@ -106,6 +110,8 @@ export default function Modal({ modal, projects }) {
           zIndex: 10000,
         }}
       />
+
+      {/* Cursor label */}
       <motion.div
         ref={cursorLabel}
         className="modal-label"
