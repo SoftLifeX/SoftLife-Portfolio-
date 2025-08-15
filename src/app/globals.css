@@ -1738,10 +1738,29 @@ outline: none;
   position: fixed;
   top: 0;
   left: 0;
+  width: 400px;
+  height: 350px;
+  overflow: hidden;
   pointer-events: none;
-  z-index: 999;
+  z-index: 9999;
 }
 
+.modal-slider {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.modal-slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cursor styles */
 .modal-cursor,
 .modal-label {
   width: 5rem;
@@ -1758,7 +1777,6 @@ outline: none;
   font-weight: 300;
   z-index: 1000;
 }
-
 
 /*services*/
 .services-list {
