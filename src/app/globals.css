@@ -1736,7 +1736,7 @@ outline: none;
 
 /* Modal positioning fix */
 .modal-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
@@ -1751,7 +1751,7 @@ outline: none;
   border-radius: 50%;
   background-color: var(--text-color);
   color: var(--base-color);
-  position: absolute;
+  position: fixed;
   pointer-events: none;
   display: flex;
   align-items: center;
