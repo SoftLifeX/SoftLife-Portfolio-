@@ -11,10 +11,11 @@ export default function Modal({ modal, projects }) {
   const cursorLabel = useRef(null);
 
   useEffect(() => {
+    // use gsap.quickTo with transforms instead of left/top
     const moveX = (target, duration) =>
-      gsap.quickTo(target.current, "left", { duration, ease: "power3" });
+      gsap.quickTo(target.current, "x", { duration, ease: "power3" });
     const moveY = (target, duration) =>
-      gsap.quickTo(target.current, "top", { duration, ease: "power3" });
+      gsap.quickTo(target.current, "y", { duration, ease: "power3" });
 
     const xModal = moveX(modalContainer, 0.8);
     const yModal = moveY(modalContainer, 0.8);
@@ -24,13 +25,15 @@ export default function Modal({ modal, projects }) {
     const yLabel = moveY(cursorLabel, 0.45);
 
     const onMouseMove = (e) => {
-      const { pageX, pageY } = e;
-      xModal(pageX);
-      yModal(pageY); 
-      xCursor(pageX);
-      yCursor(pageY);
-      xLabel(pageX);
-      yLabel(pageY);
+      const { clientX, clientY } = e; // viewport-relative
+      // center modal on cursor
+      xModal(clientX - 200); // 400 / 2
+      yModal(clientY - 175); // 350 / 2
+      // cursor and label follow exactly
+      xCursor(clientX);
+      yCursor(clientY);
+      xLabel(clientX);
+      yLabel(clientY);
     };
 
     window.addEventListener("mousemove", onMouseMove);
@@ -45,7 +48,16 @@ export default function Modal({ modal, projects }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        style={{ width: 400, height: 350, overflow: "hidden" }}
+        style={{
+          position: "fixed", // fixed to viewport
+          top: 0,
+          left: 0,
+          width: 400,
+          height: 350,
+          overflow: "hidden",
+          pointerEvents: "none", // don’t block clicks
+          zIndex: 9999,
+        }}
       >
         <div
           style={{
@@ -86,6 +98,13 @@ export default function Modal({ modal, projects }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          pointerEvents: "none",
+          zIndex: 10000,
+        }}
       />
       <motion.div
         ref={cursorLabel}
@@ -93,6 +112,13 @@ export default function Modal({ modal, projects }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          pointerEvents: "none",
+          zIndex: 10001,
+        }}
       >
         View
       </motion.div>
