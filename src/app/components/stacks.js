@@ -7,7 +7,7 @@ function Stacks() {
   const [isTools, setIsTools] = useState(true);
 
   useGSAP(() => {
-  const scaleTl = gsap.timeline({
+  const widthTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".about2",
         start: "top bottom",
@@ -15,9 +15,9 @@ function Stacks() {
         scrub: true,
       },
     });
-    scaleTl.from(".marker-highlighter:after", {
+    widthTl.from(".marker-highlighter:after", {
       duration: 1,
-      width: 0,
+      scaleX: 0, 
       ease: "expo",
     });
 }, []);
@@ -135,6 +135,7 @@ function Stacks() {
 }
 
 export default Stacks;
+
 
 
 
