@@ -12,9 +12,9 @@ export default function Modal({ modal, projects }) {
 
   useEffect(() => {
     const moveX = (target, duration) =>
-      gsap.quickTo(target.current, "left", { duration, ease: "power3" });
+      gsap.quickTo(target.current, "x", { duration, ease: "power3" });
     const moveY = (target, duration) =>
-      gsap.quickTo(target.current, "top", { duration, ease: "power3" });
+      gsap.quickTo(target.current, "y", { duration, ease: "power3" });
 
     const xModal = moveX(modalContainer, 0.8);
     const yModal = moveY(modalContainer, 0.8);
@@ -24,14 +24,13 @@ export default function Modal({ modal, projects }) {
     const yLabel = moveY(cursorLabel, 0.45);
 
     const onMouseMove = (e) => {
-      const { pageX, pageY } = e;
-      // center modal on cursor
-      xModal(pageX - 200); // half modal width
-      yModal(pageY - 175); // half modal height
-      xCursor(pageX);
-      yCursor(pageY);
-      xLabel(pageX);
-      yLabel(pageY);
+      const { clientX, clientY } = e; // viewport-based coords
+      xModal(clientX);
+      yModal(clientY);
+      xCursor(clientX);
+      yCursor(clientY);
+      xLabel(clientX);
+      yLabel(clientY);
     };
 
     window.addEventListener("mousemove", onMouseMove);
@@ -46,7 +45,16 @@ export default function Modal({ modal, projects }) {
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-        style={{ width: 400, height: 350, overflow: "hidden" }}
+        style={{
+          width: 400,
+          height: 350,
+          overflow: "hidden",
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          pointerEvents: "none",
+          zIndex: 999,
+        }}
       >
         <div
           style={{
