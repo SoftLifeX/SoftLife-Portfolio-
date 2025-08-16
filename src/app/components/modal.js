@@ -11,18 +11,21 @@ export default function Modal({ modal, projects }) {
 
   // Position modal over the hovered card
   useEffect(() => {
-    if (!cardRect || !modalRef.current) return;
+  if (!cardRect || !modalRef.current) return;
 
-    const x = cardRect.left + cardRect.width / 2;
-    const y = cardRect.top + cardRect.height / 2;
+  const cardCenterX = cardRect.left + cardRect.width / 2;
 
-    gsap.to(modalRef.current, {
-      left: x,
-      top: y,
-      duration: 0.4,
-      ease: "power3.out",
-    });
-  }, [cardRect]);
+  // Align modal top with card top
+  const modalTop = cardRect.top + window.scrollY; // include scroll offset
+
+  gsap.to(modalRef.current, {
+    left: cardCenterX,
+    top: modalTop,
+    duration: 0.4,
+    ease: "power3.out",
+  });
+}, [cardRect]);
+
 
   // Cursor follow
   useEffect(() => {
