@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -94,7 +95,7 @@ export default function Modal({ modal, projects }) {
     pointerEvents: "none",
   }}
 >
-  {projects[index]?.title || "View"}
+View
 </motion.div>
 
 
