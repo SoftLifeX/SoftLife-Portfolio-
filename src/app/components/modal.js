@@ -27,15 +27,11 @@ export default function Modal({ modal, projects }) {
 
     const xCursor = moveX(cursorRef, 0.5);
     const yCursor = moveY(cursorRef, 0.5);
-    const xLabel = moveX(labelRef, 0.45);
-    const yLabel = moveY(labelRef, 0.45);
 
     const onMouseMove = (e) => {
       const { pageX, pageY } = e;
       xCursor(pageX);
       yCursor(pageY);
-      xLabel(pageX);
-      yLabel(pageY);
     };
 
     window.addEventListener("mousemove", onMouseMove);
@@ -69,7 +65,7 @@ export default function Modal({ modal, projects }) {
             justifyContent: "center",
           }}
         >
-          <img
+          <Image
             src={projects[index].img}
             alt={projects[index].title}
             style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -98,8 +94,9 @@ export default function Modal({ modal, projects }) {
     pointerEvents: "none",
   }}
 >
-  View
+  {projects[index]?.title || "View"}
 </motion.div>
+
 
     </>
   );
