@@ -1,30 +1,39 @@
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import Image from "next/image";
 import { scaleAnimation } from "./motion/scaleAnimation";
 
 export default function Modal({ modal, projects }) {
   const { active, cardRect, index } = modal;
   const modalRef = useRef(null);
   const cursorRef = useRef(null);
-  const labelRef = useRef(null);
 
+  // Position modal over the hovered card
   useEffect(() => {
-    if (!cardRect) return;
+    if (!cardRect || !modalRef.current) return;
 
-    // center modal over card
     const x = cardRect.left + cardRect.width / 2;
     const y = cardRect.top + cardRect.height / 2;
 
-    gsap.to(modalRef.current, { left: x, top: y, duration: 0.4, ease: "power3.out" });
+    gsap.to(modalRef.current, {
+      left: x,
+      top: y,
+      duration: 0.4,
+      ease: "power3.out",
+    });
   }, [cardRect]);
 
+  // Cursor follow
   useEffect(() => {
     const moveX = (target, duration) =>
-      gsap.quickTo(target.current, "left", { duration, ease: "power3" });
+      target.current
+        ? gsap.quickTo(target.current, "left", { duration, ease: "power3" })
+        : () => {};
     const moveY = (target, duration) =>
-      gsap.quickTo(target.current, "top", { duration, ease: "power3" });
+      target.current
+        ? gsap.quickTo(target.current, "top", { duration, ease: "power3" })
+        : () => {};
 
     const xCursor = moveX(cursorRef, 0.5);
     const yCursor = moveY(cursorRef, 0.5);
@@ -43,6 +52,7 @@ export default function Modal({ modal, projects }) {
 
   return (
     <>
+      {/* Modal */}
       <motion.div
         ref={modalRef}
         className="modal-container"
@@ -64,16 +74,38 @@ export default function Modal({ modal, projects }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            position: "relative", // for label positioning
           }}
         >
+          {/* Next.js Image */}
           <Image
-            src={projects[index].img}
+            src={projects[index].img}      // must be string path or imported
             alt={projects[index].title}
-            style={{ maxWidth: "100%", maxHeight: "100%" }}
+            width={300}                    // fixed width
+            height={200}                   // fixed height
+            style={{ objectFit: "contain" }}
           />
+
+          {/* Label inside modal */}
+          <motion.div
+            className="modal-label"
+            variants={scaleAnimation}
+            initial="initial"
+            animate={active ? "enter" : "closed"}
+            style={{
+              position: "absolute",
+              bottom: "10px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              pointerEvents: "none",
+            }}
+          >
+            View
+          </motion.div>
         </div>
       </motion.div>
 
+      {/* Cursor follow */}
       <motion.div
         ref={cursorRef}
         className="modal-cursor"
@@ -81,24 +113,6 @@ export default function Modal({ modal, projects }) {
         initial="initial"
         animate={active ? "enter" : "closed"}
       />
-
-      <motion.div
-  className="modal-label"
-  variants={scaleAnimation}
-  initial="initial"
-  animate={active ? "enter" : "closed"}
-  style={{
-    position: "absolute",
-    bottom: "10px",
-    left: "50%",
-    transform: "translateX(-50%)",
-    pointerEvents: "none",
-  }}
->
-View
-</motion.div>
-
-
     </>
   );
 }
