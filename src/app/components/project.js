@@ -11,7 +11,7 @@ import Lottie from "lottie-react";
 import Case from "@/app/assets/Case.json";
 
 export default function Project() {
-  // --- GSAP Animations ---
+  // GSAP intro animations (unchanged)
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".quota", { type: "chars, words" });
     const secMsgSplit = SplitText.create(".quota2", { type: "chars, words" });
@@ -24,11 +24,7 @@ export default function Project() {
         scrub: true,
       },
     });
-    scaleTl.from(".creative", {
-      duration: 1,
-      scaleX: 0.8,
-      ease: "expo",
-    });
+    scaleTl.from(".creative", { duration: 1, scaleX: 0.8, ease: "expo" });
 
     gsap.from(firstMsgSplit.chars, {
       opacity: 0.4,
@@ -70,7 +66,7 @@ export default function Project() {
     });
   }, []);
 
-  // Split text animation for heading
+  // Split text animation
   useGSAP(() => {
     document.fonts.ready.then(() => {
       const titleSplit = SplitText.create(".projectContainer h1", {
@@ -89,10 +85,7 @@ export default function Project() {
       });
 
       const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".projectContainer",
-          start: "top 72%",
-        },
+        scrollTrigger: { trigger: ".projectContainer", start: "top 72%" },
       });
 
       tl.from(titleSplit.chars, {
@@ -105,11 +98,7 @@ export default function Project() {
 
       tl.to(
         ".projectContainer h1",
-        {
-          lineHeight: "1.2em",
-          duration: totalDuration,
-          ease: "power1.out",
-        },
+        { lineHeight: "1.2em", duration: totalDuration, ease: "power1.out" },
         "<"
       );
     });
@@ -130,8 +119,12 @@ export default function Project() {
     useTransform(scrollYProgress, [0, 1], [0, 100]),
   ];
 
-  // --- MODAL STATE ---
-  const [modal, setModal] = useState({ active: false, index: null });
+  // MODAL STATE (now includes position)
+  const [modal, setModal] = useState({
+    active: false,
+    index: null,
+    position: { x: 0, y: 0 },
+  });
 
   return (
     <section className="projects">
@@ -169,7 +162,7 @@ export default function Project() {
             </motion.div>
           ))}
 
-          {/* Pass state into Modal */}
+          {/* Modal with per-project positioning */}
           <Modal modal={modal} projects={project} />
         </div>
       </div>
