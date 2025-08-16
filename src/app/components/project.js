@@ -6,21 +6,17 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { project } from "./constants";
 import ProjectCard from "./projectCard";
 import Modal from "./modal";
-import CurveArrow from "./svg/curveArrow"
+import CurveArrow from "./svg/curveArrow";
 import Lottie from "lottie-react";
 import Case from "@/app/assets/Case.json";
 
 export default function Project() {
-  
-useGSAP(() => {
-    const firstMsgSplit = SplitText.create(".quota", {
-      type: "chars, words",
-    });
-    const secMsgSplit = SplitText.create(".quota2", {
-      type: "chars, words",
-    });
-    
-     const scaleTl = gsap.timeline({
+  // --- GSAP Animations ---
+  useGSAP(() => {
+    const firstMsgSplit = SplitText.create(".quota", { type: "chars, words" });
+    const secMsgSplit = SplitText.create(".quota2", { type: "chars, words" });
+
+    const scaleTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".creative",
         start: "top bottom",
@@ -30,10 +26,10 @@ useGSAP(() => {
     });
     scaleTl.from(".creative", {
       duration: 1,
-      scaleX: 0.80,
+      scaleX: 0.8,
       ease: "expo",
     });
-    
+
     gsap.from(firstMsgSplit.chars, {
       opacity: 0.4,
       ease: "power1.in",
@@ -45,7 +41,7 @@ useGSAP(() => {
         scrub: true,
       },
     });
-    
+
     gsap.from(secMsgSplit.chars, {
       opacity: 0.4,
       ease: "power1.in",
@@ -73,51 +69,52 @@ useGSAP(() => {
       ease: "circ.inOut",
     });
   }, []);
-  
-  //splitText
-useGSAP(() => {
-  document.fonts.ready.then(() => {
-    const titleSplit = SplitText.create('.projectContainer h1', {
-      type: 'chars, words, lines',
-      mask: 'lines',
-      linesClass: 'lineParent',
-      charsClass: 'char-inner',
-    });
 
-    const stagger = 0.025;
-    const totalDuration = titleSplit.chars.length * stagger;
+  // Split text animation for heading
+  useGSAP(() => {
+    document.fonts.ready.then(() => {
+      const titleSplit = SplitText.create(".projectContainer h1", {
+        type: "chars, words, lines",
+        mask: "lines",
+        linesClass: "lineParent",
+        charsClass: "char-inner",
+      });
 
-    // Make sure initial state is clean
-    gsap.set('.projectContainer h1', {
-      opacity: 1,
-      lineHeight: '0.8em',
-    });
+      const stagger = 0.025;
+      const totalDuration = titleSplit.chars.length * stagger;
 
-    const tl = gsap.timeline(
+      gsap.set(".projectContainer h1", {
+        opacity: 1,
+        lineHeight: "0.8em",
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".projectContainer",
+          start: "top 72%",
+        },
+      });
+
+      tl.from(titleSplit.chars, {
+        opacity: 0,
+        yPercent: 40,
+        duration: 0.4,
+        ease: "back.out",
+        stagger,
+      });
+
+      tl.to(
+        ".projectContainer h1",
         {
-         scrollTrigger: {
-         trigger: '.projectContainer',
-         start: 'top 72%',
-         }
-        }
-    );
-
-    tl.from(titleSplit.chars, {
-      opacity: 0,
-      yPercent: 40,
-      duration: 0.4,
-      ease: 'back.out',
-      stagger,
+          lineHeight: "1.2em",
+          duration: totalDuration,
+          ease: "power1.out",
+        },
+        "<"
+      );
     });
+  }, []);
 
-    tl.to('.projectContainer h1', {
-      lineHeight: '1.2em',
-      duration: totalDuration,
-      ease: 'power1.out',
-    }, '<'); // Starts at the same time as the char animation
-  });
-}, []);
-  
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -133,54 +130,49 @@ useGSAP(() => {
     useTransform(scrollYProgress, [0, 1], [0, 100]),
   ];
 
-  const [modal, setModal] = useState({ active: false, index: 0 });
+  // --- MODAL STATE ---
+  const [modal, setModal] = useState({ active: false, index: null });
 
   return (
     <section className="projects">
-     <div className="projectContainer">
-            <h5>
-             Case Studies
-             <Lottie
-                  id="lottie3"
-                  loop={false} 
-                  animationData={Case}
-                  hover/>
-            </h5>
-      <h1 className="title">
-        Selected  Projects
-      </h1>
-          <h2 className="quota">
-              Creativity Isn't Just A Skill <br /> 
-            </h2>
+      <div className="projectContainer">
+        <h5>
+          Case Studies
+          <Lottie id="lottie3" loop={false} animationData={Case} hover />
+        </h5>
+        <h1 className="title">Selected Projects</h1>
+
+        <h2 className="quota">Creativity Isn't Just A Skill <br /></h2>
+
         <h2 className="markerbound2">
           <div className="marker2">
-           <span className="marker-wrap2">
-             <span className="marker-highlight2"> 
-               ‎‎ It's A Lifestyle  ‎‎
-             </span>
-           </span>
-           </div>
-         </h2>
-         <h2 className="quota2">
-           We Live It!
-         </h2>
-           <div className="curveCon">
-             <CurveArrow />
-           </div>
+            <span className="marker-wrap2">
+              <span className="marker-highlight2"> It's A Lifestyle </span>
+            </span>
+          </div>
+        </h2>
 
-      <div className="project-grid" ref={container}>
-        {project.map((proj, idx) => (
-          <motion.div
-            className="project-item"
-            key={proj.id}
-            style={{ y: transforms[idx % transforms.length] }}
-          >
-            <ProjectCard item={proj} index={idx} setModal={setModal} />
-          </motion.div>
-        ))}
-        <Modal modal={modal} projects={project} />
+        <h2 className="quota2">We Live It!</h2>
+
+        <div className="curveCon">
+          <CurveArrow />
+        </div>
+
+        <div className="project-grid" ref={container}>
+          {project.map((proj, idx) => (
+            <motion.div
+              className="project-item"
+              key={proj.id}
+              style={{ y: transforms[idx % transforms.length] }}
+            >
+              <ProjectCard item={proj} index={idx} setModal={setModal} />
+            </motion.div>
+          ))}
+
+          {/* Pass state into Modal */}
+          <Modal modal={modal} projects={project} />
+        </div>
       </div>
-     </div>
     </section>
   );
 }
