@@ -1,20 +1,39 @@
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import { scaleAnimation } from "./motion/scaleAnimation";
 
-export default function ProjectCard({ item, index, setModal }) {
+export default function ProjectCard({ item }) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <div
       className="project-card"
-      onMouseEnter={() => setModal({ active: true, index })}
-      onMouseLeave={() => setModal({ active: false, index: null })}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <Link href={item.href} target="_blank" className="image-wrapper">
-        <Image
-          src={item.img}
-          alt={`${item.title} Image`}
-          className="image"
-        />
-      </Link>
+      <Image src={item.img} alt={item.title} width={600} height={400} />
+
+      <AnimatePresence>
+        {hovered && (
+          <motion.div
+            className="project-modal"
+            variants={scaleAnimation}
+            initial="initial"
+            animate="enter"
+            exit="closed"
+          >
+            <Image
+              src={item.img}
+              alt={item.title}
+              width={300}
+              height={200}
+              className="modal-image"
+            />
+            <button className="view-btn">View</button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
