@@ -52,7 +52,9 @@ export default function ProjectCard({ item }) {
             animate="enter"
             exit="closed"
               >
+              <div className="modal-button-text">
                 View
+              </div>
               </Link>
             </div>
           </motion.div>
