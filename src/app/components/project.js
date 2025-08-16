@@ -8,8 +8,26 @@ import ProjectCard from "./projectCard";
 import Lottie from "lottie-react";
 import Case from "@/app/assets/Case.json";
 import CurveArrow from "./svg/curveArrow";
+import Modal from "./modal";
 
 export default function Project() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end start"],
+  });
+
+  const transforms = [
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
+    useTransform(scrollYProgress, [0, 1], [0, 100]),
+  ];
+  
+  const [modal, setModal] = useState({ active: false, cardRect: null, index: 0 });
+
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".quota", { type: "chars, words" });
     const secMsgSplit = SplitText.create(".quota2", { type: "chars, words" });
@@ -108,20 +126,6 @@ export default function Project() {
     });
   }, []);
 
-  const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  });
-
-  const transforms = [
-    useTransform(scrollYProgress, [0, 1], [0, -100]),
-    useTransform(scrollYProgress, [0, 1], [0, 100]),
-    useTransform(scrollYProgress, [0, 1], [0, -100]),
-    useTransform(scrollYProgress, [0, 1], [0, 100]),
-    useTransform(scrollYProgress, [0, 1], [0, -100]),
-    useTransform(scrollYProgress, [0, 1], [0, 100]),
-  ];
 
   return (
     <section className="projects">
@@ -147,14 +151,21 @@ export default function Project() {
         <div className="project-grid" ref={container}>
           {project.map((proj, idx) => (
             <motion.div
-              className="project-item"
               key={proj.id}
+              className="project-item"
               style={{ y: transforms[idx % transforms.length] }}
             >
-              <ProjectCard item={proj} />
+              <ProjectCard
+                item={proj}
+                index={idx}
+                setModal={setModal}
+              />
             </motion.div>
           ))}
         </div>
+
+        {/* Modal */}
+        <Modal modal={modal} projects={project} />
       </div>
     </section>
   );
