@@ -1736,31 +1736,13 @@ outline: none;
 
 .modal-container {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: 350px;
-  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999;
 }
 
-.modal-slider {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.modal-slide {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Cursor styles */
 .modal-cursor,
 .modal-label {
   width: 5rem;
@@ -1768,7 +1750,7 @@ outline: none;
   border-radius: 50%;
   background-color: var(--text-color);
   color: var(--base-color);
-  position: fixed;
+  position: relative;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -1777,6 +1759,7 @@ outline: none;
   font-weight: 300;
   z-index: 1000;
 }
+
 
 /*services*/
 .services-list {
