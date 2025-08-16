@@ -1691,54 +1691,98 @@ outline: none;
   }
 }
 
-/*----projects---*/
+.projectContainer {
+  overflow: hidden;
+}
+
+.projectContainer h1 {
+  padding: 3.12rem;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+}
+
+.project-item {
+  width: 48%;
+  margin-bottom: 3.12rem;
+  position: relative; /* needed for overlay */
+}
+
 .project-card {
   position: relative;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0.625rem;
 }
 
-.project-img {
+.project-card img {
   width: 100%;
+  max-height: 25rem; /* 400px → rem */
+  object-fit: cover;
+  border-radius: 0.625rem;
+  display: block;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 80%;
   height: auto;
-  display: block;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
-.modal-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  pointer-events: none;
+.project-card:hover .project-overlay {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-content {
-  position: relative;
-  background: #fff;
-  border-radius: 1rem;
-  overflow: hidden;
-  pointer-events: auto;
-  max-width: 20rem;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+.project-overlay img {
+  max-width: 80%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.modal-image {
-  width: 100%;
-  display: block;
-}
-
-.modal-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--text-color);
+.view-btn {
+  background: var(--text-color);
   color: var(--base-color);
-  padding: 0.8rem 1.5rem;
-  border-radius: 50%;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
   font-size: 0.9rem;
-  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
   font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+  background: var(--base-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 48rem) {
+  .project-item {
+    width: 100%;
+  }
+
+  .projects {
+    top: -1.5rem;
+  }
 }
 
 
