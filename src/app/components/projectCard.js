@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -27,7 +29,7 @@ export default function ProjectCard({ item }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <img src={item.img} alt={item.title} className="project-img" />
+      <Image src={item.img} alt={item.title} className="project-img" />
 
       <AnimatePresence>
         {hovered && (
@@ -39,15 +41,15 @@ export default function ProjectCard({ item }) {
             exit="closed"
           >
             <div className="modal-content">
-              <img src={item.img} alt={item.title} className="modal-image" />
-              <a
+              <Image src={item.img} alt={item.title} className="modal-image" />
+              <Link
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal-button"
               >
                 View
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
