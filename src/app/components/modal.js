@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { scaleAnimation } from "./scaleAnimation";
+import { scaleAnimation } from "./motion/scaleAnimation";
 
 export default function Modal({ modal, projects }) {
   const currentProject = modal.index !== null ? projects[modal.index] : null;
