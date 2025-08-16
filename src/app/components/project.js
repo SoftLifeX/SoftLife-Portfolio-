@@ -119,6 +119,7 @@ export default function Project() {
     useTransform(scrollYProgress, [0, 1], [0, 100]),
     useTransform(scrollYProgress, [0, 1], [0, -100]),
     useTransform(scrollYProgress, [0, 1], [0, 100]),
+    useTransform(scrollYProgress, [0, 1], [0, -100]),
     useTransform(scrollYProgress, [0, 1], [0, 100]),
   ];
 
