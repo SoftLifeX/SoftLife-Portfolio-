@@ -106,13 +106,13 @@ export default function Modal({ modal, projects }) {
       </motion.div>
 
       {/* Cursor follow */}
-      <motion.div
+{ /*<motion.div
         ref={cursorRef}
         className="modal-cursor"
         variants={scaleAnimation}
         initial="initial"
         animate={active ? "enter" : "closed"}
-      />
+      />*/} 
     </>
   );
 }
