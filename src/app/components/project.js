@@ -5,13 +5,11 @@ import { SplitText } from "gsap/all";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { project } from "./constants";
 import ProjectCard from "./projectCard";
-import Modal from "./modal";
-import CurveArrow from "./svg/curveArrow";
 import Lottie from "lottie-react";
 import Case from "@/app/assets/Case.json";
+import CurveArrow from "./svg/curveArrow";
 
 export default function Project() {
-  // GSAP intro animations (unchanged)
   useGSAP(() => {
     const firstMsgSplit = SplitText.create(".quota", { type: "chars, words" });
     const secMsgSplit = SplitText.create(".quota2", { type: "chars, words" });
@@ -66,7 +64,6 @@ export default function Project() {
     });
   }, []);
 
-  // Split text animation
   useGSAP(() => {
     document.fonts.ready.then(() => {
       const titleSplit = SplitText.create(".projectContainer h1", {
@@ -85,7 +82,10 @@ export default function Project() {
       });
 
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: ".projectContainer", start: "top 72%" },
+        scrollTrigger: {
+          trigger: ".projectContainer",
+          start: "top 72%",
+        },
       });
 
       tl.from(titleSplit.chars, {
@@ -98,7 +98,11 @@ export default function Project() {
 
       tl.to(
         ".projectContainer h1",
-        { lineHeight: "1.2em", duration: totalDuration, ease: "power1.out" },
+        {
+          lineHeight: "1.2em",
+          duration: totalDuration,
+          ease: "power1.out",
+        },
         "<"
       );
     });
@@ -115,16 +119,8 @@ export default function Project() {
     useTransform(scrollYProgress, [0, 1], [0, 100]),
     useTransform(scrollYProgress, [0, 1], [0, -100]),
     useTransform(scrollYProgress, [0, 1], [0, 100]),
-    useTransform(scrollYProgress, [0, 1], [0, -100]),
     useTransform(scrollYProgress, [0, 1], [0, 100]),
   ];
-
-  // MODAL STATE (now includes position)
-  const [modal, setModal] = useState({
-    active: false,
-    index: null,
-    position: { x: 0, y: 0 },
-  });
 
   return (
     <section className="projects">
@@ -134,19 +130,15 @@ export default function Project() {
           <Lottie id="lottie3" loop={false} animationData={Case} hover />
         </h5>
         <h1 className="title">Selected Projects</h1>
-
-        <h2 className="quota">Creativity Isn't Just A Skill <br /></h2>
-
+        <h2 className="quota">Creativity Isn't Just A Skill</h2>
         <h2 className="markerbound2">
           <div className="marker2">
             <span className="marker-wrap2">
-              <span className="marker-highlight2"> It's A Lifestyle </span>
+              <span className="marker-highlight2">It's A Lifestyle</span>
             </span>
           </div>
         </h2>
-
         <h2 className="quota2">We Live It!</h2>
-
         <div className="curveCon">
           <CurveArrow />
         </div>
@@ -158,12 +150,9 @@ export default function Project() {
               key={proj.id}
               style={{ y: transforms[idx % transforms.length] }}
             >
-              <ProjectCard item={proj} index={idx} setModal={setModal} />
+              <ProjectCard item={proj} />
             </motion.div>
           ))}
-
-          {/* Modal with per-project positioning */}
-          <Modal modal={modal} projects={project} />
         </div>
       </div>
     </section>
