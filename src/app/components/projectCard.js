@@ -1,7 +1,22 @@
+"use client";
 import { useState } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { scaleAnimation } from "./motion/scaleAnimation";
+
+const scaleAnimation = {
+  initial: { scale: 0, x: "-50%", y: "-50%" },
+  enter: {
+    scale: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.35, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    scale: 0,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.35, ease: [0.32, 0, 0.67, 0] },
+  },
+};
 
 export default function ProjectCard({ item }) {
   const [hovered, setHovered] = useState(false);
@@ -12,25 +27,28 @@ export default function ProjectCard({ item }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Image src={item.img} alt={item.title} width={600} height={400} />
+      <img src={item.img} alt={item.title} className="project-img" />
 
       <AnimatePresence>
         {hovered && (
           <motion.div
-            className="project-modal"
+            className="modal-container"
             variants={scaleAnimation}
             initial="initial"
             animate="enter"
             exit="closed"
           >
-            <Image
-              src={item.img}
-              alt={item.title}
-              width={300}
-              height={200}
-              className="modal-image"
-            />
-            <button className="view-btn">View</button>
+            <div className="modal-content">
+              <img src={item.img} alt={item.title} className="modal-image" />
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-button"
+              >
+                View
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
