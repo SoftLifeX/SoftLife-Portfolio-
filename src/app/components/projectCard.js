@@ -6,7 +6,7 @@ export default function ProjectCard({ item, index, setModal }) {
     <div
       className="project-card"
       onMouseEnter={() => setModal({ active: true, index })}
-      onMouseLeave={() => setModal({ active: false, index })}
+      onMouseLeave={() => setModal({ active: false, index: null })}
     >
       <Link href={item.href} target="_blank" className="image-wrapper">
         <Image
