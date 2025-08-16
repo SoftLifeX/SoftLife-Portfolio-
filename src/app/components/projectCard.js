@@ -40,13 +40,17 @@ export default function ProjectCard({ item }) {
             animate="enter"
             exit="closed"
           >
-            <div className="modal-content">
+            <div className="modal-content" style={{ backgroundColor: item.color}} >
               <Image src={item.img} alt={item.title} className="modal-image" />
               <Link
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal-button"
+                variants={scaleAnimation}
+            initial="initial"
+            animate="enter"
+            exit="closed"
               >
                 View
               </Link>
